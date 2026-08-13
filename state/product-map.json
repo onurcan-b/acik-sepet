@@ -1,0 +1,1243 @@
+{
+  "un_1kg": {
+    "product_key": "id:0HLD",
+    "title": "City Farm Organik Tam Buğday Unu 1 Kg",
+    "first_seen": "2026-08-13",
+    "group": "bread_cereals",
+    "source_ids": [
+      "carrefour-1012"
+    ]
+  },
+  "misir_unu_500g": {
+    "product_key": "id:0A7B",
+    "title": "Sinangil Mısır Unu 500 Gr",
+    "first_seen": "2026-08-13",
+    "group": "bread_cereals",
+    "source_ids": [
+      "carrefour-1012"
+    ]
+  },
+  "pirinc_baldo_1kg": {
+    "product_key": "id:0K8J",
+    "title": "Tarım Kredi Anadolu Baldo Pirinç 1 Kg",
+    "first_seen": "2026-08-13",
+    "group": "bread_cereals",
+    "source_ids": [
+      "tarim_kredi-7488"
+    ]
+  },
+  "pirinc_osmancik_1kg": {
+    "product_key": "id:06SE",
+    "title": "Tarım Kredi Anadolu Osmancık Pirinç 1 Kg",
+    "first_seen": "2026-08-13",
+    "group": "bread_cereals",
+    "source_ids": [
+      "tarim_kredi-7488"
+    ]
+  },
+  "bulgur_pilavlik_1kg": {
+    "product_key": "id:1AX4",
+    "title": "Anadolu Lezzetleri Mardin Pilavlık Bulgur 1 Kg",
+    "first_seen": "2026-08-13",
+    "group": "bread_cereals",
+    "source_ids": [
+      "migros-1991"
+    ]
+  },
+  "bulgur_ince_1kg": {
+    "product_key": "id:1ZRK",
+    "title": "Duru Köftelik İnce Bulgur 1 Kg",
+    "first_seen": "2026-08-13",
+    "group": "bread_cereals",
+    "source_ids": [
+      "carrefour-1012"
+    ]
+  },
+  "makarna_spagetti_500g": {
+    "product_key": "id:0XHH",
+    "title": "Nuh'un Ankara Vitaminli Spagetti Makarna 500 Gr",
+    "first_seen": "2026-08-13",
+    "group": "bread_cereals",
+    "source_ids": [
+      "a101-6815"
+    ]
+  },
+  "makarna_burgu_500g": {
+    "product_key": "id:1C7R",
+    "title": "La Molisana Fusilli N28 Sade Burgu Makarna 500 Gr",
+    "first_seen": "2026-08-13",
+    "group": "bread_cereals",
+    "source_ids": [
+      "migros-1991"
+    ]
+  },
+  "arpa_sehriye_500g": {
+    "product_key": "id:0ZVZ",
+    "title": "Nuh'un Ankara Vitaminli Arpa Şehriye Makarna 500 Gr",
+    "first_seen": "2026-08-13",
+    "group": "bread_cereals",
+    "source_ids": [
+      "a101-6815"
+    ]
+  },
+  "eriste_500g": {
+    "product_key": "id:0236",
+    "title": "Yufkacı Kemal Usta Kavrulmuş Erişte 500 Gr",
+    "first_seen": "2026-08-13",
+    "group": "bread_cereals",
+    "source_ids": [
+      "hakmar-5521"
+    ]
+  },
+  "yulaf_500g": {
+    "product_key": "id:3WBQ",
+    "title": "Yulaf Ezmesi 500 Gr/İnce Öğütülmüş 350 Gr",
+    "first_seen": "2026-08-13",
+    "group": "bread_cereals",
+    "source_ids": [
+      "bim-5712"
+    ]
+  },
+  "misir_gevregi_500g": {
+    "product_key": "id:1Z8I",
+    "title": "Nestlé Gold Corn Flakes Tam Tahıllı Mısır Gevreği 400 Gr",
+    "first_seen": "2026-08-13",
+    "group": "bread_cereals",
+    "source_ids": [
+      "carrefour-1012"
+    ]
+  },
+  "irmik_500g": {
+    "product_key": "id:00KD",
+    "title": "Pastavilla Vakumlu İrmik 500 Gr",
+    "first_seen": "2026-08-13",
+    "group": "bread_cereals",
+    "source_ids": [
+      "carrefour-1012"
+    ]
+  },
+  "kuskus_500g": {
+    "product_key": "id:1ZX3",
+    "title": "Filiz Kuskus Makarna 500 Gr",
+    "first_seen": "2026-08-13",
+    "group": "bread_cereals",
+    "source_ids": [
+      "migros-4479"
+    ]
+  },
+  "galeta_unu_250g": {
+    "product_key": "id:1Z7B",
+    "title": "Uno Denge Tam Buğdaylı Çiya Tohumlu Galeta 150 Gr",
+    "first_seen": "2026-08-13",
+    "group": "bread_cereals",
+    "source_ids": [
+      "carrefour-1012",
+      "migros-564"
+    ]
+  },
+  "dana_kiyma_500g": {
+    "product_key": "id:18TW",
+    "title": "Bonfilet Dondurulmuş Dana Kuzu Kıyma 500 Gr",
+    "first_seen": "2026-08-13",
+    "group": "meat",
+    "source_ids": [
+      "bim-5712"
+    ]
+  },
+  "dana_kusbasi_500g": {
+    "product_key": "id:0PB2",
+    "title": "Uzman Kasap Dana Kuşbaşı 300 Gr",
+    "first_seen": "2026-08-13",
+    "group": "meat",
+    "source_ids": [
+      "migros-564"
+    ]
+  },
+  "dana_sote_500g": {
+    "product_key": "id:0A1H",
+    "title": "Uzman Kasap Dana Sote 300 Gr",
+    "first_seen": "2026-08-13",
+    "group": "meat",
+    "source_ids": [
+      "migros-3296"
+    ]
+  },
+  "dana_antrikot_500g": {
+    "product_key": "id:1H5Y",
+    "title": "TK Birlik Gurme Dana Antrikot Pastırma 100 Gr",
+    "first_seen": "2026-08-13",
+    "group": "meat",
+    "source_ids": [
+      "tarim_kredi-5022"
+    ]
+  },
+  "tavuk_gogus_kg": {
+    "product_key": "id:03XY",
+    "title": "Şenpiliç Lezita Tavuk Göğüs 1 Kg",
+    "first_seen": "2026-08-13",
+    "group": "meat",
+    "source_ids": [
+      "hakmar-5521"
+    ]
+  },
+  "tavuk_but_kg": {
+    "product_key": "id:04XI",
+    "title": "Şenpiliç Lezita Kemiksiz Tavuk But 1 Kg",
+    "first_seen": "2026-08-13",
+    "group": "meat",
+    "source_ids": [
+      "hakmar-5521"
+    ]
+  },
+  "tavuk_baget_kg": {
+    "product_key": "id:00S1",
+    "title": "Şenpiliç Lezita Tavuk Baget 1 Kg",
+    "first_seen": "2026-08-13",
+    "group": "meat",
+    "source_ids": [
+      "hakmar-5521"
+    ]
+  },
+  "butun_pilic_kg": {
+    "product_key": "id:10GD",
+    "title": "Hastavuk Dondurulmuş Poşetli Bütün Piliç 1 Kg",
+    "first_seen": "2026-08-13",
+    "group": "meat",
+    "source_ids": [
+      "a101-9324"
+    ]
+  },
+  "hindi_fileto_kg": {
+    "product_key": "id:0OGF",
+    "title": "Ant Bahar Fit Hindi Fileto Konservesi 165 Gr",
+    "first_seen": "2026-08-13",
+    "group": "meat",
+    "source_ids": [
+      "migros-564"
+    ]
+  },
+  "sucuk_200g": {
+    "product_key": "id:1SNW",
+    "title": "Maret Dana Isıl İşlem Görmüş Afiyetle Sucuk 200 Gr",
+    "first_seen": "2026-08-13",
+    "group": "meat",
+    "source_ids": [
+      "migros-1991"
+    ]
+  },
+  "salam_100g": {
+    "product_key": "id:1BJ6",
+    "title": "Namet Dana Macar Salam 100 Gr",
+    "first_seen": "2026-08-13",
+    "group": "meat",
+    "source_ids": [
+      "bim-5712"
+    ]
+  },
+  "sosis_250g": {
+    "product_key": "id:1Z1X",
+    "title": "Aytaç Çiftlik Dana Kokteyl Sosis 250 Gr",
+    "first_seen": "2026-08-13",
+    "group": "meat",
+    "source_ids": [
+      "sok-4707"
+    ]
+  },
+  "pastirma_100g": {
+    "product_key": "id:104X",
+    "title": "Müslümoğlu Dana Pastırma Çemeni Sıyrılmış 100 Gr",
+    "first_seen": "2026-08-13",
+    "group": "meat",
+    "source_ids": [
+      "sok-4707"
+    ]
+  },
+  "kofte_dondurulmus_500g": {
+    "product_key": "id:3X04",
+    "title": "Aytaç Dondurulmuş Maydanozlu Dana Köfte 500 Gr",
+    "first_seen": "2026-08-13",
+    "group": "meat",
+    "source_ids": [
+      "sok-4707"
+    ]
+  },
+  "ton_baligi_160g": {
+    "product_key": "id:0ASX",
+    "title": "Carrefour Ton Balığı 160 Gr",
+    "first_seen": "2026-08-13",
+    "group": "fish",
+    "source_ids": [
+      "carrefour-5254"
+    ]
+  },
+  "ton_baligi_2x160g": {
+    "product_key": "id:1XE9",
+    "title": "Migros Zeytinyağlı İri Parçalı Ton Balığı 2x160 Gr",
+    "first_seen": "2026-08-13",
+    "group": "fish",
+    "source_ids": [
+      "migros-1991"
+    ]
+  },
+  "somon_fume_100g": {
+    "product_key": "id:0XYE",
+    "title": "Admirals Norveç Somon Füme 100 Gr",
+    "first_seen": "2026-08-13",
+    "group": "fish",
+    "source_ids": [
+      "migros-1991"
+    ]
+  },
+  "somon_fileto_500g": {
+    "product_key": "id:05T0",
+    "title": "Kuzuoğlu Vakumlu Somon Dilim Fileto 400 Gr",
+    "first_seen": "2026-08-13",
+    "group": "fish",
+    "source_ids": [
+      "tarim_kredi-7488"
+    ]
+  },
+  "dondurulmus_hamsi_500g": {
+    "product_key": "id:1LWQ",
+    "title": "Balık Dünyası Dondurulmuş Hamsi 500 Gr",
+    "first_seen": "2026-08-13",
+    "group": "fish",
+    "source_ids": [
+      "carrefour-1012"
+    ]
+  },
+  "sut_tam_1l": {
+    "product_key": "id:1AL4",
+    "title": "Ömer Matlı Süt Çiftliği Tam Yağlı Ekşi Maya Ayran 1 Lt",
+    "first_seen": "2026-08-13",
+    "group": "dairy_eggs",
+    "source_ids": [
+      "migros-564"
+    ]
+  },
+  "sut_yarim_1l": {
+    "product_key": "id:134D",
+    "title": "Migros Yarım Yağlı Laktozsuz UHT İçme Sütü 1 Lt",
+    "first_seen": "2026-08-13",
+    "group": "dairy_eggs",
+    "source_ids": [
+      "migros-1991"
+    ]
+  },
+  "sut_laktozsuz_1l": {
+    "product_key": "id:134D",
+    "title": "Migros Yarım Yağlı Laktozsuz UHT İçme Sütü 1 Lt",
+    "first_seen": "2026-08-13",
+    "group": "dairy_eggs",
+    "source_ids": [
+      "migros-1991"
+    ]
+  },
+  "yogurt_1kg": {
+    "product_key": "id:0Y51",
+    "title": "Yörsan Tam Yağlı Kaymaklı Tava Yoğurt 1 Kg",
+    "first_seen": "2026-08-13",
+    "group": "dairy_eggs",
+    "source_ids": [
+      "migros-564"
+    ]
+  },
+  "suzme_yogurt_500g": {
+    "product_key": "id:2AWC",
+    "title": "Eker Süzme Yoğurt Kase 500 Gr",
+    "first_seen": "2026-08-13",
+    "group": "dairy_eggs",
+    "source_ids": [
+      "hakmar-5521"
+    ]
+  },
+  "ayran_1l": {
+    "product_key": "id:1AL4",
+    "title": "Ömer Matlı Süt Çiftliği Tam Yağlı Ekşi Maya Ayran 1 Lt",
+    "first_seen": "2026-08-13",
+    "group": "dairy_eggs",
+    "source_ids": [
+      "migros-564"
+    ]
+  },
+  "kefir_1l": {
+    "product_key": "id:0ZWQ",
+    "title": "Altınkılıç Kefirim Çilekli Kefir 1 Lt",
+    "first_seen": "2026-08-13",
+    "group": "dairy_eggs",
+    "source_ids": [
+      "a101-4102"
+    ]
+  },
+  "beyaz_peynir_500g": {
+    "product_key": "id:1OE0",
+    "title": "Bahçıvan Tam Yağlı Probiyotik Süzme Beyaz Peynir 500 Gr",
+    "first_seen": "2026-08-13",
+    "group": "dairy_eggs",
+    "source_ids": [
+      "migros-1991"
+    ]
+  },
+  "kasar_500g": {
+    "product_key": "id:1JMK",
+    "title": "Muratbey Tam Yağlı Taze Kaşar Peyniri 500 Gr",
+    "first_seen": "2026-08-13",
+    "group": "dairy_eggs",
+    "source_ids": [
+      "carrefour-1012",
+      "migros-1991"
+    ]
+  },
+  "lor_500g": {
+    "product_key": "id:0XZ1",
+    "title": "Muratbey Yarım Yağlı Taze Lor Peyniri 500 Gr",
+    "first_seen": "2026-08-13",
+    "group": "dairy_eggs",
+    "source_ids": [
+      "a101-6815",
+      "carrefour-1012",
+      "migros-564"
+    ]
+  },
+  "labne_200g": {
+    "product_key": "id:0U7F",
+    "title": "Migros Tam Yağlı Taze Labne Peynir 200 Gr",
+    "first_seen": "2026-08-13",
+    "group": "dairy_eggs",
+    "source_ids": [
+      "migros-4479"
+    ]
+  },
+  "krem_peynir_200g": {
+    "product_key": "id:1DFI",
+    "title": "İçim Peynirli Kremalı Yemek Sosu 200 Ml",
+    "first_seen": "2026-08-13",
+    "group": "dairy_eggs",
+    "source_ids": [
+      "carrefour-1012"
+    ]
+  },
+  "mozzarella_125g": {
+    "product_key": "id:1XZN",
+    "title": "Mr. No Gurme Mozzarella Jambon Sandviç 145 Gr",
+    "first_seen": "2026-08-13",
+    "group": "dairy_eggs",
+    "source_ids": [
+      "migros-6679",
+      "tarim_kredi-5022"
+    ]
+  },
+  "yumurta_10_m": {
+    "product_key": "id:1586",
+    "title": "Atatürk Orman Çiftliği Organik Yumurta M Boy 53-63 Gr 10 Adet",
+    "first_seen": "2026-08-13",
+    "group": "dairy_eggs",
+    "source_ids": [
+      "migros-564"
+    ]
+  },
+  "yumurta_15": {
+    "product_key": "id:1VSS",
+    "title": "Ali Babanın Bahçesi Gezen Tavuk Yumurtası 15 Adet",
+    "first_seen": "2026-08-13",
+    "group": "dairy_eggs",
+    "source_ids": [
+      "carrefour-1012"
+    ]
+  },
+  "krema_200ml": {
+    "product_key": "id:20P3",
+    "title": "Schlagfix Çikolatalı Sprey Krema 200 Ml",
+    "first_seen": "2026-08-13",
+    "group": "dairy_eggs",
+    "source_ids": [
+      "carrefour-1012"
+    ]
+  },
+  "kaymak_200g": {
+    "product_key": "id:1NZO",
+    "title": "Teremyağ Gurme Kaymaklı Paket Margarin 200 Gr",
+    "first_seen": "2026-08-13",
+    "group": "dairy_eggs",
+    "source_ids": [
+      "migros-1991"
+    ]
+  },
+  "gunluk_sut_1l": {
+    "product_key": "id:1I58",
+    "title": "Sek Günlük Pastörize Şişe Süt 1 Lt",
+    "first_seen": "2026-08-13",
+    "group": "dairy_eggs",
+    "source_ids": [
+      "carrefour-5036",
+      "migros-6679"
+    ]
+  },
+  "aycicek_1l": {
+    "product_key": "id:0FXI",
+    "title": "Tarım Kredi Anadolu Ayçiçek Yağı 1 Lt",
+    "first_seen": "2026-08-13",
+    "group": "oils_fats",
+    "source_ids": [
+      "tarim_kredi-7488"
+    ]
+  },
+  "aycicek_2l": {
+    "product_key": "id:0JR6",
+    "title": "Tarım Kredi Anadolu Ayçiçek Yağı 2 Lt",
+    "first_seen": "2026-08-13",
+    "group": "oils_fats",
+    "source_ids": [
+      "tarim_kredi-7488"
+    ]
+  },
+  "zeytinyagi_1l": {
+    "product_key": "id:18DX",
+    "title": "Carrefour Selection Erken Hasat Naturel Sızma Zeytinyağı 1 Lt",
+    "first_seen": "2026-08-13",
+    "group": "oils_fats",
+    "source_ids": [
+      "carrefour-1012"
+    ]
+  },
+  "zeytinyagi_500ml": {
+    "product_key": "id:1F83",
+    "title": "Carrefour Bio Organik Naturel Sızma Zeytinyağı 500 Ml",
+    "first_seen": "2026-08-13",
+    "group": "oils_fats",
+    "source_ids": [
+      "carrefour-5254"
+    ]
+  },
+  "tereyagi_250g": {
+    "product_key": "id:1NN3",
+    "title": "Becel Klasik Tereyağı Keyfi Margarin 250 Gr",
+    "first_seen": "2026-08-13",
+    "group": "oils_fats",
+    "source_ids": [
+      "bim-5712"
+    ]
+  },
+  "margarin_250g": {
+    "product_key": "id:1NN3",
+    "title": "Becel Klasik Tereyağı Keyfi Margarin 250 Gr",
+    "first_seen": "2026-08-13",
+    "group": "oils_fats",
+    "source_ids": [
+      "bim-5712"
+    ]
+  },
+  "margarin_500g": {
+    "product_key": "id:01EP",
+    "title": "Ülker Gurme Kaymaklı Tereyağlı Kase Margarin 500 Gr",
+    "first_seen": "2026-08-13",
+    "group": "oils_fats",
+    "source_ids": [
+      "bim-5712"
+    ]
+  },
+  "misirozu_1l": {
+    "product_key": "id:19GB",
+    "title": "Sırma Mısırözü Yağı 2 Lt",
+    "first_seen": "2026-08-13",
+    "group": "oils_fats",
+    "source_ids": [
+      "a101-6815"
+    ]
+  },
+  "muz_kg": {
+    "product_key": "id:1XZC",
+    "title": "Carte d'Or İsviçre Çikolata Karamel Çikolata Parçacıklı Muz Dondurma 1.105 Lt",
+    "first_seen": "2026-08-13",
+    "group": "fruit",
+    "source_ids": [
+      "bim-5712",
+      "carrefour-5254",
+      "migros-1991"
+    ]
+  },
+  "elma_kg": {
+    "product_key": "id:20VH",
+    "title": "Sizzle-Pop Stay Funny Havuç & Kırmızı Elma & Çilek 200 Ml",
+    "first_seen": "2026-08-13",
+    "group": "fruit",
+    "source_ids": [
+      "carrefour-5254",
+      "migros-6679"
+    ]
+  },
+  "portakal_kg": {
+    "product_key": "id:210L",
+    "title": "Migros Sütlü Çikolata Kaplı Portakal Kabuğu Şekerleme Draje 60 Gr",
+    "first_seen": "2026-08-13",
+    "group": "fruit",
+    "source_ids": [
+      "migros-3296"
+    ]
+  },
+  "mandalina_kg": {
+    "product_key": "id:19H4",
+    "title": "Algida Magnum Mandalinalı Çikolata Karadut Kremalı 6x57.345 Ml",
+    "first_seen": "2026-08-13",
+    "group": "fruit",
+    "source_ids": [
+      "a101-6815"
+    ]
+  },
+  "limon_kg": {
+    "product_key": "id:0NA3",
+    "title": "Avoya Limon/Limon Çiçeği Aromalı Maden Suyu 200 Ml",
+    "first_seen": "2026-08-13",
+    "group": "fruit",
+    "source_ids": [
+      "migros-1991"
+    ]
+  },
+  "armut_kg": {
+    "product_key": "id:1SG9",
+    "title": "Sırma C+ Mango Ananas Armut Aromalı Mineralli İçecek 6x200 Ml",
+    "first_seen": "2026-08-13",
+    "group": "fruit",
+    "source_ids": [
+      "migros-1991"
+    ]
+  },
+  "seftali_kg": {
+    "product_key": "id:1TJ6",
+    "title": "Lipton Ice Tea Şekersiz Şeftali Aromalı İçecek 1 Lt",
+    "first_seen": "2026-08-13",
+    "group": "fruit",
+    "source_ids": [
+      "migros-1991"
+    ]
+  },
+  "nektarin_kg": {
+    "product_key": "id:2LV8",
+    "title": "Le Petit Marseillais Beyaz Şeftali & Nektarin Duş Jeli 650 Gr",
+    "first_seen": "2026-08-13",
+    "group": "fruit",
+    "source_ids": [
+      "sok-7238"
+    ]
+  },
+  "uzum_kg": {
+    "product_key": "id:1IQD",
+    "title": "Eti Lifalif Granola Yer Fıstığı Üzüm Fındık Badem 200 Gr",
+    "first_seen": "2026-08-13",
+    "group": "fruit",
+    "source_ids": [
+      "migros-1991"
+    ]
+  },
+  "karpuz_kg": {
+    "product_key": "id:1KU8",
+    "title": "Kızılay Karpuz Ve Çilek Aromalı Maden Suyu 6x200 Ml",
+    "first_seen": "2026-08-13",
+    "group": "fruit",
+    "source_ids": [
+      "tarim_kredi-5022"
+    ]
+  },
+  "kavun_kg": {
+    "product_key": "id:1NO6",
+    "title": "Royal Gourmet Sorbe Kavun Şeftali Karadut 850 Ml",
+    "first_seen": "2026-08-13",
+    "group": "fruit",
+    "source_ids": [
+      "sok-7017"
+    ]
+  },
+  "cilek_500g": {
+    "product_key": "id:0N6K",
+    "title": "Kahve Dünyası Frutibon Bitter Çikolatalı Çilek Draje 50 Gr",
+    "first_seen": "2026-08-13",
+    "group": "fruit",
+    "source_ids": [
+      "carrefour-5036"
+    ]
+  },
+  "kivi_kg": {
+    "product_key": "id:1Q4E",
+    "title": "Hipp Organik Kivili Muzlu Armut Püresi 100 Gr",
+    "first_seen": "2026-08-13",
+    "group": "fruit",
+    "source_ids": [
+      "carrefour-1012"
+    ]
+  },
+  "avokado_adet": {
+    "product_key": "id:0IH7",
+    "title": "İthal Avokado 1 Adet",
+    "first_seen": "2026-08-13",
+    "group": "fruit",
+    "source_ids": [
+      "carrefour-5254"
+    ]
+  },
+  "domates_kg": {
+    "product_key": "id:035J",
+    "title": "Çokça Domates Salçası 28-30 Brix 830 Gr",
+    "first_seen": "2026-08-13",
+    "group": "vegetables",
+    "source_ids": [
+      "a101-6815"
+    ]
+  },
+  "salatalik_kg": {
+    "product_key": "id:0C8R",
+    "title": "Kühne Alman Tipi Barbekü Salatalık Turşusu 670 Gr",
+    "first_seen": "2026-08-13",
+    "group": "vegetables",
+    "source_ids": [
+      "migros-564"
+    ]
+  },
+  "sivri_biber_kg": {
+    "product_key": "id:1PRJ",
+    "title": "Kıl Sivri Biber 1 Kg",
+    "first_seen": "2026-08-13",
+    "group": "vegetables",
+    "source_ids": [
+      "carrefour-1012"
+    ]
+  },
+  "kapya_biber_kg": {
+    "product_key": "id:0AIR",
+    "title": "Kapya Biber 1 Kg",
+    "first_seen": "2026-08-13",
+    "group": "vegetables",
+    "source_ids": [
+      "bim-5712",
+      "carrefour-5254",
+      "tarim_kredi-5022"
+    ]
+  },
+  "patates_kg": {
+    "product_key": "id:1Z0K",
+    "title": "Cipso Yoğurt & Mevsim Yeşillikli Aromalı Patates Cipsi 125 Gr",
+    "first_seen": "2026-08-13",
+    "group": "vegetables",
+    "source_ids": [
+      "sok-4707"
+    ]
+  },
+  "kuru_sogan_kg": {
+    "product_key": "id:1YYM",
+    "title": "Kuru Soğan 1 Kg",
+    "first_seen": "2026-08-13",
+    "group": "vegetables",
+    "source_ids": [
+      "carrefour-5254",
+      "sok-1017",
+      "tarim_kredi-7488"
+    ]
+  },
+  "sarimsak_250g": {
+    "product_key": "id:06ZY",
+    "title": "Monini Sarımsaklı Ve Acı Biberli Zeytinyağı 250 Ml",
+    "first_seen": "2026-08-13",
+    "group": "vegetables",
+    "source_ids": [
+      "carrefour-1012"
+    ]
+  },
+  "patlican_kg": {
+    "product_key": "id:1TBY",
+    "title": "Annemin Mutfağı Kuru Patlıcan ve Biber Dolma 200 Gr",
+    "first_seen": "2026-08-13",
+    "group": "vegetables",
+    "source_ids": [
+      "migros-3296"
+    ]
+  },
+  "kabak_kg": {
+    "product_key": "id:021T",
+    "title": "Tarım Kredi Meyve Bar Turna Yemişi Ve Kabak Çekirdeği 32 Gr",
+    "first_seen": "2026-08-13",
+    "group": "vegetables",
+    "source_ids": [
+      "tarim_kredi-7488"
+    ]
+  },
+  "havuc_kg": {
+    "product_key": "id:1ZE8",
+    "title": "Gerber Organik Yulaflı Havuçlu Elmalı Balkabağı Püresi 110 Gr",
+    "first_seen": "2026-08-13",
+    "group": "vegetables",
+    "source_ids": [
+      "carrefour-1012"
+    ]
+  },
+  "marul_adet": {
+    "product_key": "id:0VOA",
+    "title": "Göbek Marul 1 Adet",
+    "first_seen": "2026-08-13",
+    "group": "vegetables",
+    "source_ids": [
+      "a101-9324"
+    ]
+  },
+  "ispanak_500g": {
+    "product_key": "id:11HI",
+    "title": "Nimet Dondurulmuş Ispanaklı Peynirli Mini Börek 500 Gr",
+    "first_seen": "2026-08-13",
+    "group": "vegetables",
+    "source_ids": [
+      "a101-6815"
+    ]
+  },
+  "maydanoz_demet": {
+    "product_key": "id:1OU1",
+    "title": "Maydanoz Demet 1 Adet",
+    "first_seen": "2026-08-13",
+    "group": "vegetables",
+    "source_ids": [
+      "sok-1017"
+    ]
+  },
+  "brokoli_500g": {
+    "product_key": "id:1LAZ",
+    "title": "Feast Brokoli 500 Gr",
+    "first_seen": "2026-08-13",
+    "group": "vegetables",
+    "source_ids": [
+      "carrefour-1012"
+    ]
+  },
+  "mantar_400g": {
+    "product_key": "id:1C21",
+    "title": "Gurmepack Kremalı Mantarlı Fusilli 400 Gr",
+    "first_seen": "2026-08-13",
+    "group": "vegetables",
+    "source_ids": [
+      "migros-1991"
+    ]
+  },
+  "taze_fasulye_kg": {
+    "product_key": "id:1ZPP",
+    "title": "Tada Vegan Zeytinyağlı Taze Fasulye 250 Gr",
+    "first_seen": "2026-08-13",
+    "group": "vegetables",
+    "source_ids": [
+      "carrefour-1012"
+    ]
+  },
+  "toz_seker_1kg": {
+    "product_key": "id:07CD",
+    "title": "Safi Beyaz Toz Şeker 1 Kg",
+    "first_seen": "2026-08-13",
+    "group": "sugar_snacks",
+    "source_ids": [
+      "bim-5712"
+    ]
+  },
+  "bal_500g": {
+    "product_key": "id:1B9A",
+    "title": "Balıkdünyası Dondurulmuş Kalamar %50 Glaze 500 Gr",
+    "first_seen": "2026-08-13",
+    "group": "sugar_snacks",
+    "source_ids": [
+      "a101-6815"
+    ]
+  },
+  "cilek_recel_380g": {
+    "product_key": "id:02NL",
+    "title": "Tarım Kredi Ekstra Geleneksel Çilek Reçeli 380 Gr",
+    "first_seen": "2026-08-13",
+    "group": "sugar_snacks",
+    "source_ids": [
+      "tarim_kredi-7488"
+    ]
+  },
+  "cikolata_sutlu_60g": {
+    "product_key": "id:1XDB",
+    "title": "Kahve Dünyası Tambol Badem Krokan Dolgulu Sütlü Çikolata 100 Gr",
+    "first_seen": "2026-08-13",
+    "group": "sugar_snacks",
+    "source_ids": [
+      "carrefour-1012"
+    ]
+  },
+  "cikolata_bitter_80g": {
+    "product_key": "id:1CSB",
+    "title": "Migros Chocomori Kakaolu Krem Dolgulu Bitter Çikolata 100 Gr",
+    "first_seen": "2026-08-13",
+    "group": "sugar_snacks",
+    "source_ids": [
+      "migros-1991"
+    ]
+  },
+  "gofret_100g": {
+    "product_key": "id:1Z53",
+    "title": "Eti Karam Gurme Bitter Çikolatalı Kremalı Gofret 3'lü 150 Gr",
+    "first_seen": "2026-08-13",
+    "group": "sugar_snacks",
+    "source_ids": [
+      "carrefour-5254",
+      "migros-564"
+    ]
+  },
+  "biskuvi_100g": {
+    "product_key": "id:1N7W",
+    "title": "Eti Burçak Hindistan Cevizli Kremalı Yulaflı Bisküvi 100 Gr",
+    "first_seen": "2026-08-13",
+    "group": "sugar_snacks",
+    "source_ids": [
+      "carrefour-1012"
+    ]
+  },
+  "kurabiye_100g": {
+    "product_key": "id:02KA",
+    "title": "Züber Glutensiz Kakao & Fındıklı Karabuğdaylı Kurabiye 180 Gr",
+    "first_seen": "2026-08-13",
+    "group": "sugar_snacks",
+    "source_ids": [
+      "carrefour-1012"
+    ]
+  },
+  "cips_150g": {
+    "product_key": "id:1YNM",
+    "title": "Cipso Yoğurt Ve Mevsim Yeşillikleri Aromalı Patates Cipsi 160 Gr",
+    "first_seen": "2026-08-13",
+    "group": "sugar_snacks",
+    "source_ids": [
+      "tarim_kredi-7488"
+    ]
+  },
+  "dondurma_500ml": {
+    "product_key": "id:1CN6",
+    "title": "Özsüt Gelato Brownie Karamelli/Cookie Dondurma 500 Ml",
+    "first_seen": "2026-08-13",
+    "group": "sugar_snacks",
+    "source_ids": [
+      "a101-4141"
+    ]
+  },
+  "lokum_200g": {
+    "product_key": "id:1BYK",
+    "title": "Koska Karışık Çerezli Hindistan Cevizli Lokum 250 Gr",
+    "first_seen": "2026-08-13",
+    "group": "sugar_snacks",
+    "source_ids": [
+      "a101-6815"
+    ]
+  },
+  "tahin_helva_500g": {
+    "product_key": "id:081J",
+    "title": "Tarım Kredi Antep Fıstıklı Tahin Helvası 500 Gr",
+    "first_seen": "2026-08-13",
+    "group": "sugar_snacks",
+    "source_ids": [
+      "tarim_kredi-7488"
+    ]
+  },
+  "kakao_100g": {
+    "product_key": "id:050D",
+    "title": "Süsse Kakao Kremalı Dolgulu Bisküvi 100 Gr",
+    "first_seen": "2026-08-13",
+    "group": "sugar_snacks",
+    "source_ids": [
+      "bim-5712"
+    ]
+  },
+  "findik_kremasi_400g": {
+    "product_key": "id:3X2H",
+    "title": "Fiskobirlik Nuga Kakaolu Fındık Kreması 700 Gr",
+    "first_seen": "2026-08-13",
+    "group": "sugar_snacks",
+    "source_ids": [
+      "carrefour-1012",
+      "migros-1991"
+    ]
+  },
+  "tuz_750g": {
+    "product_key": "id:08DR",
+    "title": "Carrefour İyotlu Sofra Tuzu 750 Gr",
+    "first_seen": "2026-08-13",
+    "group": "other_food",
+    "source_ids": [
+      "carrefour-5254"
+    ]
+  },
+  "domates_salca_700g": {
+    "product_key": "id:083Z",
+    "title": "Tarım Kredi Domates Salçası 28 Brix Cam 700 Gr",
+    "first_seen": "2026-08-13",
+    "group": "other_food",
+    "source_ids": [
+      "tarim_kredi-7488"
+    ]
+  },
+  "ketcap_600g": {
+    "product_key": "id:2B98",
+    "title": "Pattes Mevsim Yeşillikleri Ve Ketçaplı Patates Cipsi 100 Gr",
+    "first_seen": "2026-08-13",
+    "group": "other_food",
+    "source_ids": [
+      "hakmar-5521"
+    ]
+  },
+  "mayonez_500g": {
+    "product_key": "id:0OOV",
+    "title": "Pınar Ketçap Ve Mayonez %50 Daha Az Yağlı İkili Set 770 Gr",
+    "first_seen": "2026-08-13",
+    "group": "other_food",
+    "source_ids": [
+      "migros-1991"
+    ]
+  },
+  "sirke_1l": {
+    "product_key": "id:2121",
+    "title": "Rinso Beyaz Sirke & Çamaşır Sodası Toz Deterjan 10 Kg",
+    "first_seen": "2026-08-13",
+    "group": "other_food",
+    "source_ids": [
+      "carrefour-1012"
+    ]
+  },
+  "zeytin_500g": {
+    "product_key": "id:1K14",
+    "title": "Marmarabirlik Yağlı Salamura Siyah Zeytin 261-290 Kalibre M 500 Gr",
+    "first_seen": "2026-08-13",
+    "group": "other_food",
+    "source_ids": [
+      "tarim_kredi-7488"
+    ]
+  },
+  "tursu_680g": {
+    "product_key": "id:1ZOZ",
+    "title": "Kühne Türk Tipi Karışık Turşu 680 Gr",
+    "first_seen": "2026-08-13",
+    "group": "other_food",
+    "source_ids": [
+      "carrefour-5036",
+      "migros-564"
+    ]
+  },
+  "kuru_maya_30g": {
+    "product_key": "id:2CH2",
+    "title": "Dr. Oetker Instant Kuru Hamur Mayası 5x10 Gr",
+    "first_seen": "2026-08-13",
+    "group": "other_food",
+    "source_ids": [
+      "hakmar-5521"
+    ]
+  },
+  "cay_500g": {
+    "product_key": "id:0AN9",
+    "title": "Güzelçay Bergamot Aromalı Siyah Çay 500 Gr",
+    "first_seen": "2026-08-13",
+    "group": "drinks",
+    "source_ids": [
+      "hakmar-5521"
+    ]
+  },
+  "turk_kahvesi_100g": {
+    "product_key": "id:0AVQ",
+    "title": "Tarım Kredi Damla Sakızı Aromalı Türk Kahvesi 100 Gr",
+    "first_seen": "2026-08-13",
+    "group": "drinks",
+    "source_ids": [
+      "tarim_kredi-7488"
+    ]
+  },
+  "granul_kahve_100g": {
+    "product_key": "id:20YL",
+    "title": "Nescafé Gold Kavanoz Granül Kahve 100 Gr",
+    "first_seen": "2026-08-13",
+    "group": "drinks",
+    "source_ids": [
+      "a101-4217"
+    ]
+  },
+  "maden_suyu_6li": {
+    "product_key": "id:1RE4",
+    "title": "Frutti Karpuz Çilek Aromalı Maden Suyu 6x200 Ml",
+    "first_seen": "2026-08-13",
+    "group": "drinks",
+    "source_ids": [
+      "migros-1991"
+    ]
+  },
+  "kola_1l": {
+    "product_key": "id:05A9",
+    "title": "Coca-Cola Gazlı İçecek Kola Zero 1.5 Lt",
+    "first_seen": "2026-08-13",
+    "group": "drinks",
+    "source_ids": [
+      "a101-6815"
+    ]
+  },
+  "kola_2_5l": {
+    "product_key": "id:20X2",
+    "title": "Kristal Şekersiz Kola Gazlı İçecek 2.5 Lt",
+    "first_seen": "2026-08-13",
+    "group": "drinks",
+    "source_ids": [
+      "bim-5712"
+    ]
+  },
+  "portakal_suyu_1l": {
+    "product_key": "id:1FSF",
+    "title": "Naren %100 Sıkma Mango Muz Ananas Portakal Suyu 250 Ml",
+    "first_seen": "2026-08-13",
+    "group": "drinks",
+    "source_ids": [
+      "carrefour-5036"
+    ]
+  },
+  "ice_tea_1l": {
+    "product_key": "id:16RE",
+    "title": "Tarım Kredi Karışık Kırmızı Meyve Aromalı Soğuk Çay 1 Lt",
+    "first_seen": "2026-08-13",
+    "group": "drinks",
+    "source_ids": [
+      "tarim_kredi-7488"
+    ]
+  },
+  "limonata_1l": {
+    "product_key": "id:0CX7",
+    "title": "Tarım Kredi Karadut Aromalı Limonata 1 Lt",
+    "first_seen": "2026-08-13",
+    "group": "drinks",
+    "source_ids": [
+      "tarim_kredi-7488"
+    ]
+  },
+  "gazoz_1l": {
+    "product_key": "id:1TVD",
+    "title": "Çamlıca Limon Aromalı Sade Gazoz 1 Lt",
+    "first_seen": "2026-08-13",
+    "group": "drinks",
+    "source_ids": [
+      "migros-6679"
+    ]
+  },
+  "bulasik_750ml": {
+    "product_key": "id:0HEB",
+    "title": "Carrefour Eco Planet Aloe Vera Bitkisel Sıvı Bulaşık Deterjanı 750 Ml",
+    "first_seen": "2026-08-13",
+    "group": "household_cleaning",
+    "source_ids": [
+      "carrefour-1012"
+    ]
+  },
+  "camasir_toz_4kg": {
+    "product_key": "id:3WV8",
+    "title": "Bingo Konsantre Ultra Beyaz Toz Çamaşır Deterjanı 1.5 Kg",
+    "first_seen": "2026-08-13",
+    "group": "household_cleaning",
+    "source_ids": [
+      "hakmar-5521"
+    ]
+  },
+  "camasir_sivi_2_5l": {
+    "product_key": "id:0GF4",
+    "title": "Carrefour Eco Planet Bitkisel Konsantre Sıvı Çamaşır Deterjanı 750 Ml",
+    "first_seen": "2026-08-13",
+    "group": "household_cleaning",
+    "source_ids": [
+      "carrefour-5254"
+    ]
+  },
+  "yumusatici_1_4l": {
+    "product_key": "id:0JH5",
+    "title": "Carrefour Eco Planet Bitkisel Çamaşır Yumuşatıcı 750 Ml",
+    "first_seen": "2026-08-13",
+    "group": "household_cleaning",
+    "source_ids": [
+      "carrefour-5254"
+    ]
+  },
+  "camasir_suyu_750ml": {
+    "product_key": "id:1XFA",
+    "title": "Ace Ultra Dağ Tazeliği Kıvamlı Çamaşır Suyu 750 Ml",
+    "first_seen": "2026-08-13",
+    "group": "household_cleaning",
+    "source_ids": [
+      "migros-1991"
+    ]
+  },
+  "yuzey_temizleyici_1l": {
+    "product_key": "id:1D9H",
+    "title": "Silen Beyaz Sabun Kokulu Yüzey Temizleyici Havlu 100 Adet",
+    "first_seen": "2026-08-13",
+    "group": "household_cleaning",
+    "source_ids": [
+      "tarim_kredi-5022"
+    ]
+  },
+  "cam_temizleyici_500ml": {
+    "product_key": "id:04SW",
+    "title": "Porçöz Cam Temizleyici Sprey 500 Ml",
+    "first_seen": "2026-08-13",
+    "group": "household_cleaning",
+    "source_ids": [
+      "carrefour-5254"
+    ]
+  },
+  "bulasik_tableti_30": {
+    "product_key": "id:0UVE",
+    "title": "Just Green Organic Bulaşık Makinesi Tableti 30 Adet",
+    "first_seen": "2026-08-13",
+    "group": "household_cleaning",
+    "source_ids": [
+      "migros-1991"
+    ]
+  },
+  "tuvalet_12": {
+    "product_key": "id:07Q1",
+    "title": "Selis Parfümlü 3 Katlı Tuvalet Kağıdı 12'li 12 Adet",
+    "first_seen": "2026-08-13",
+    "group": "personal_paper",
+    "source_ids": [
+      "hakmar-5521"
+    ]
+  },
+  "kagit_havlu_6": {
+    "product_key": "id:0U09",
+    "title": "Mistral 2 Kat Doğal Dostu Kağıt Havlu 6 Adet",
+    "first_seen": "2026-08-13",
+    "group": "personal_paper",
+    "source_ids": [
+      "a101-6815"
+    ]
+  },
+  "mendil_10": {
+    "product_key": "id:109B",
+    "title": "Mistral 3 Katlı Kağıt Mendil 10 Adet",
+    "first_seen": "2026-08-13",
+    "group": "personal_paper",
+    "source_ids": [
+      "a101-6815"
+    ]
+  },
+  "sampuan_400ml": {
+    "product_key": "id:1NZ2",
+    "title": "Elidor Superblend Güçlü Ve Parlak Şampuan 400 Ml",
+    "first_seen": "2026-08-13",
+    "group": "personal_paper",
+    "source_ids": [
+      "migros-1991"
+    ]
+  },
+  "dis_macunu_75ml": {
+    "product_key": "id:1I77",
+    "title": "Colgate Optik Beyaz Anında Beyazlık Diş Macunu 75 Ml",
+    "first_seen": "2026-08-13",
+    "group": "personal_paper",
+    "source_ids": [
+      "migros-1991"
+    ]
+  },
+  "sabun_4lu": {
+    "product_key": "id:1N5T",
+    "title": "Dove Original Cream Bar Katı Sabun 4x90 Gr",
+    "first_seen": "2026-08-13",
+    "group": "personal_paper",
+    "source_ids": [
+      "carrefour-1012",
+      "migros-1991"
+    ]
+  }
+}

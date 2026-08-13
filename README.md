@@ -7,8 +7,12 @@
 ![Açık Sepet günlük endeksi](charts/index.svg)
 
 <!-- STATS_START -->
-- **Durum:** Yeni 150 ürünlük sepet için ilk yeterli snapshot bekleniyor.
-- **Yayın eşiği:** ağırlıklı kapsama en az %60.
+- **Son değer:** 100.00
+- **Son güncelleme:** 2026-08-13
+- **Kapsama:** %92 (136 ürün)
+- **7 günlük değişim:** —
+- **30 günlük değişim:** —
+- **Baz tarihi:** 2026-08-13 = 100
 <!-- STATS_END -->
 
 ## v0.2
