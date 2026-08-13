@@ -22,6 +22,7 @@
 - sabit SKU eşleştirmesi
 - sabit temsilci mağaza/depot takibi
 - iki aşamalı grup ağırlıklandırması
+- 12 grup + birleşik **Gıda ve alkolsüz içecekler** alt endeksi
 - günlük GitHub Actions güncellemesi
 
 | Grup | Ürün | Araştırma ağırlığı |
@@ -46,7 +47,7 @@ Grup içinde ürünler eşit pay alır; gruplar yukarıdaki araştırma ağırl�
 
 ```text
 Market Fiyatı → 150 sabit ürün → SKU/depot sabitleme → günlük snapshot
-→ grup-ağırlıklı endeks → README grafiği → bot commit
+→ grup-ağırlıklı ana endeks → README grafiği → 12 alt endeks + gıda endeksi
 ```
 
 ## Dosyalar
@@ -57,12 +58,15 @@ config/categories.json
 state/product-map.json
 data/snapshots/YYYY-MM-DD.json
 data/index.csv
+data/subindices.csv
 charts/index.svg
 ```
 
+`data/subindices.csv`, 12 tüketim grubunun yanında `food_total` satırıyla birleşik gıda ve alkolsüz içecekler serisini de içerir.
+
 ## Otomasyon
 
-`.github/workflows/daily.yml` her gün çalışır. Ayrıca **Actions → Daily Açık Sepet → Run workflow** ile elle tetiklenebilir.
+`.github/workflows/daily.yml` günlük fiyat snapshot'ını ve ana endeksi üretir. Başarılı daily run sonrasında `.github/workflows/subindices.yml` alt endeksleri otomatik yeniler. İki workflow da GitHub Actions üzerinden elle tetiklenebilir.
 
 ## Veri kaynağı
 
