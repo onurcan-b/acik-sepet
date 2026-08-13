@@ -5,7 +5,8 @@ import json
 from pathlib import Path
 from typing import Any
 
-from .basket import load_basket
+from .basket import load_basket, load_categories
+from .grouping import allocate
 
 ROOT = Path(__file__).resolve().parents[1]
 SNAPSHOT_DIR = ROOT / "data" / "snapshots"
@@ -45,7 +46,7 @@ def compute_series(snapshots: list[dict[str, Any]], basket: list[dict[str, Any]]
 
 
 def rebuild_index() -> list[dict[str, Any]]:
-    basket = load_basket()
+    basket = allocate(load_basket(), load_categories())
     snapshots = [json.loads(path.read_text(encoding="utf-8")) for path in sorted(SNAPSHOT_DIR.glob("*.json"))]
     rows = compute_series(snapshots, basket)
     INDEX_PATH.parent.mkdir(parents=True, exist_ok=True)
