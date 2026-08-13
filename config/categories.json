@@ -1,0 +1,18 @@
+{
+  "version": "v0.2",
+  "description": "Açık Sepet araştırma ağırlıkları. TÜİK resmi ağırlıkları değildir; sabit market sepetinde grup kompozisyonunu dengeler.",
+  "categories": [
+    {"id": "bread_cereals", "label": "Ekmek, tahıllar ve makarna", "coicop": "01.1.1", "weight": 0.14, "scope": "food"},
+    {"id": "meat", "label": "Et ve et ürünleri", "coicop": "01.1.2", "weight": 0.15, "scope": "food"},
+    {"id": "fish", "label": "Balık ve deniz ürünleri", "coicop": "01.1.3", "weight": 0.04, "scope": "food"},
+    {"id": "dairy_eggs", "label": "Süt ürünleri ve yumurta", "coicop": "01.1.4", "weight": 0.14, "scope": "food"},
+    {"id": "oils_fats", "label": "Yağlar", "coicop": "01.1.5", "weight": 0.06, "scope": "food"},
+    {"id": "fruit", "label": "Meyve", "coicop": "01.1.6", "weight": 0.08, "scope": "food"},
+    {"id": "vegetables", "label": "Sebze", "coicop": "01.1.7", "weight": 0.11, "scope": "food"},
+    {"id": "sugar_snacks", "label": "Şeker, tatlı ve atıştırmalık", "coicop": "01.1.8", "weight": 0.08, "scope": "food"},
+    {"id": "other_food", "label": "Diğer gıda", "coicop": "01.1.9", "weight": 0.04, "scope": "food"},
+    {"id": "drinks", "label": "Alkolsüz içecekler", "coicop": "01.2", "weight": 0.05, "scope": "food"},
+    {"id": "household_cleaning", "label": "Ev temizlik sarf malzemeleri", "coicop": null, "weight": 0.07, "scope": "nonfood"},
+    {"id": "personal_paper", "label": "Kişisel bakım ve kağıt ürünleri", "coicop": null, "weight": 0.04, "scope": "nonfood"}
+  ]
+}
