@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import random
 import time
-from dataclasses import dataclass
 from typing import Any
 
 import requests
@@ -27,18 +26,8 @@ class MarketFiyatiError(RuntimeError):
     pass
 
 
-@dataclass(frozen=True)
-class Location:
-    id: str
-    name: str
-    latitude: float
-    longitude: float
-    distance_km: float = 5.0
-
-
 def search_products(
     keywords: str,
-    location: Location,
     *,
     size: int = 24,
     timeout: int = 30,
@@ -54,9 +43,6 @@ def search_products(
         "keywords": keywords,
         "pages": 0,
         "size": size,
-        "latitude": location.latitude,
-        "longitude": location.longitude,
-        "distance": location.distance_km,
     }
 
     last_error: Exception | None = None
