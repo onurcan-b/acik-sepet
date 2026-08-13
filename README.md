@@ -7,8 +7,12 @@
 ![Açık Sepet günlük endeksi](charts/index.svg)
 
 <!-- STATS_START -->
-- **Durum:** İlk gerçek snapshot bekleniyor.
-- **Grafik:** İlk başarılı GitHub Actions koşusundan sonra otomatik güncellenecek.
+- **Son değer:** 100.00
+- **Son güncelleme:** 2026-08-13
+- **Kapsama:** %100 (12 ürün)
+- **7 günlük değişim:** —
+- **30 günlük değişim:** —
+- **Baz tarihi:** 2026-08-13 = 100
 <!-- STATS_END -->
 
 ## MVP ne yapıyor?

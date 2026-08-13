@@ -1,1 +1,62 @@
-{}
+{
+  "sut_1l": {
+    "product_key": "id:1FJ0",
+    "title": "Aytaç %0.5 Yağlı Süt 1 Lt",
+    "first_seen": "2026-08-13"
+  },
+  "yogurt_1kg": {
+    "product_key": "id:1S75",
+    "title": "Yörsan Tam Yağlı Homojenize Yoğurt 1 Kg",
+    "first_seen": "2026-08-13"
+  },
+  "yumurta_10": {
+    "product_key": "id:0OCL",
+    "title": "Anadolu Çiftliği Omega 3 Yumurta M Boy 53-62 Gr 10 Adet",
+    "first_seen": "2026-08-13"
+  },
+  "makarna_500g": {
+    "product_key": "id:0QCP",
+    "title": "Oba Burgu Makarna 500 Gr",
+    "first_seen": "2026-08-13"
+  },
+  "pirinc_1kg": {
+    "product_key": "id:12PI",
+    "title": "Migros Kırık Pirinç 1 Kg",
+    "first_seen": "2026-08-13"
+  },
+  "aycicek_1l": {
+    "product_key": "id:0FXI",
+    "title": "Tarım Kredi Anadolu Ayçiçek Yağı 1 Lt",
+    "first_seen": "2026-08-13"
+  },
+  "toz_seker_1kg": {
+    "product_key": "id:11Q2",
+    "title": "Türkşeker Toz Şeker 1 Kg",
+    "first_seen": "2026-08-13"
+  },
+  "un_1kg": {
+    "product_key": "id:0AKI",
+    "title": "Carrefour Buğday Unu 1 Kg",
+    "first_seen": "2026-08-13"
+  },
+  "cay_500g": {
+    "product_key": "id:0BHO",
+    "title": "Efor Harman Siyah Çay 500 Gr",
+    "first_seen": "2026-08-13"
+  },
+  "kola_1l": {
+    "product_key": "id:06D7",
+    "title": "Sarıyer Kola 1 Lt",
+    "first_seen": "2026-08-13"
+  },
+  "bulasik_750ml": {
+    "product_key": "id:02A1",
+    "title": "Sır New Sıvı Bulaşık Deterjanı 750 Ml",
+    "first_seen": "2026-08-13"
+  },
+  "tuvalet_12": {
+    "product_key": "id:135M",
+    "title": "Selis 3 Katlı Tuvalet Kağıdı 12'li Adet",
+    "first_seen": "2026-08-13"
+  }
+}
