@@ -2,6 +2,15 @@ name: Daily Açık Sepet
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "acik_sepet/**"
+      - "config/**"
+      - "tests/**"
+      - "requirements.txt"
+      - "pyproject.toml"
+      - ".github/workflows/daily.yml"
   schedule:
     - cron: "45 5 * * *"
 
@@ -10,15 +19,41 @@ permissions:
 
 concurrency:
   group: acik-sepet-daily
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: echo "v0.2 migration in progress"
+          cache: pip
+      - name: Install
+        run: pip install -r requirements.txt
+      - name: Tests
+        run: pytest -q
+      - name: Collect 150-item basket
+        run: python -m acik_sepet.collect
+      - name: Validate coverage
+        run: python -m acik_sepet.validate --min-coverage 0.60
+      - name: Rebuild indices and README chart
+        run: |
+          python -m acik_sepet.index
+          python -m acik_sepet.report
+      - name: Commit updated observations
+        run: |
+          git config user.name "acik-sepet-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/ state/product-map.json charts/ README.md
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "data: günlük Açık Sepet güncellemesi"
+          git pull --rebase origin main
+          git push origin main
