@@ -13,6 +13,7 @@ from zoneinfo import ZoneInfo
 import requests
 
 from .api import MarketFiyatiError, search_products
+from .stability import keep_same_sources
 
 ROOT = Path(__file__).resolve().parents[1]
 BASKET_PATH = ROOT / "config" / "basket.json"
@@ -99,11 +100,15 @@ def collect() -> Path:
             if not offers:
                 snapshot["errors"].append({"item": spec["id"], "error": "no_valid_offers"})
                 continue
-            product_map.setdefault(spec["id"], {
+            state = product_map.setdefault(spec["id"], {
                 "product_key": _product_key(selected),
                 "title": selected.get("title"),
                 "first_seen": today,
             })
+            offers = keep_same_sources(offers, state)
+            if not offers:
+                snapshot["errors"].append({"item": spec["id"], "error": "stable_source_not_found"})
+                continue
             row = {
                 "basket_label": spec["label"],
                 "selected_title": selected.get("title"),
