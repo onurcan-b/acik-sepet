@@ -13,12 +13,11 @@
 
 ## v0.2
 
-- 150 ürün
-- 12 tüketim grubu
+- **150 ürün**
+- **12 tüketim grubu**
 - sabit SKU eşleştirmesi
 - sabit temsilci mağaza/depot takibi
-- ayrı Market ve Gıda endeksleri
-- 12 grup için `data/subindices.csv`
+- iki aşamalı grup ağırlıklandırması
 - günlük GitHub Actions güncellemesi
 
 | Grup | Ürün | Araştırma ağırlığı |
@@ -37,13 +36,13 @@
 | Kişisel bakım ve kağıt ürünleri | 6 | %4 |
 | **Toplam** | **150** | **%100** |
 
-Ağırlıklar TÜİK'in resmi TÜFE ağırlıkları değildir. Ayrıntılar [METHOD.md](METHOD.md) içinde.
+Grup içinde ürünler eşit pay alır; gruplar yukarıdaki araştırma ağırlıklarıyla birleştirilir. Bu ağırlıklar **TÜİK'in resmi TÜFE ağırlıkları değildir**. Ayrıntılar [METHOD.md](METHOD.md) içinde.
 
 ## Veri akışı
 
 ```text
 Market Fiyatı → 150 sabit ürün → SKU/depot sabitleme → günlük snapshot
-→ 12 alt endeks → Market + Gıda endeksi → README grafiği → bot commit
+→ grup-ağırlıklı endeks → README grafiği → bot commit
 ```
 
 ## Dosyalar
@@ -54,7 +53,6 @@ config/categories.json
 state/product-map.json
 data/snapshots/YYYY-MM-DD.json
 data/index.csv
-data/subindices.csv
 charts/index.svg
 ```
 
