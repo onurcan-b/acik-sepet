@@ -1,29 +1,30 @@
-# Metodoloji — MVP v0.1
+# Metodoloji — v0.2
 
-Açık Sepet şu aşamada **deneysel bir teknik MVP**'dir; resmi TÜFE değildir ve TÜİK TÜFE'sinin yerine geçmez.
+Açık Sepet, market ürünlerinin günlük fiyat hareketini izleyen deneysel bir sabit-sepet endeksidir.
 
-## Veri akışı
+## Sepet
 
-1. Küçük ve sabit bir ürün sepeti için Market Fiyatı araması yapılır.
-2. Bir ürün ilk kez eşleştiğinde dönen gerçek ürün/SKU başlığı `state/product-map.json` içinde sabitlenir.
-3. Sonraki günlerde sabitlenmiş ürün bulunamazsa sessizce başka ürüne geçilmez; o gözlem eksik sayılır.
-4. Her ürün için dönen zincir market tekliflerinin medyanı günlük MVP fiyatı olarak alınır.
-5. İlk yeterli snapshot baz gün = 100 olur.
-6. Endeks, baz güne göre ürün fiyat relatiflerinin eşit ağırlıklı ortalamasıdır. Eksik ürünlerde ağırlıklar kalan ürünler üzerinde yeniden normalize edilir.
-7. Kapsama %50'nin altına düşerse o gün için endeks değeri yayımlanmaz.
+- 150 ürün
+- 12 grup
+- grup ağırlıkları `config/categories.json`
+- ürün tanımları `config/basket.tsv`
 
-## Bilinen sınırlamalar
+Grup ağırlıkları araştırma amaçlıdır ve resmi kurum ağırlıkları değildir.
 
-- Sepet küçük ve eşit ağırlıklıdır; tüketim harcaması ağırlıkları kullanılmıyor.
-- SKU eşleştirme ilk koşuda otomatik yapılır ve manuel denetim gerektirebilir.
-- Market Fiyatı API'si dokümante edilmiş, garanti edilmiş bir kamusal API değildir; endpoint değişebilir veya bot koruması devreye girebilir.
-- API'nin döndürdüğü temsilci mağaza/şube zaman içinde değişebilir. Bu nedenle `depot_id` ve `depot_name` snapshot içinde saklanır.
-- Bu MVP ham Market Fiyatı verisinin toplu bir aynası değildir; yalnızca küçük, sabit bir sepet için gerekli gözlemleri tutar.
+## Süreklilik
 
-## Sonraki metodoloji adımları
+İlk başarılı eşleşmede ürün kimliği sabitlenir. Mümkün olduğunda temsilci mağaza/depot kimliği de sabitlenir. Sonraki gün başka bir SKU veya kaynak dönerse seri sessizce değiştirilmez; gözlem eksik sayılır.
 
-- Barkod/SKU kimliklerini doğrulayıp ilk sepeti elle dondurmak.
-- Tüketim ağırlıkları için açık ve savunulabilir bir kaynak belirlemek.
-- Coğrafi/şehir bazlı örneklemeyi güvenilir biçimde eklemek.
-- Zincir/şube sabitlemesini güçlendirmek.
-- TÜİK aylık gıda TÜFE serisiyle karşılaştırmalı grafik üretmek.
+## Hesap
+
+Her ürünün günlük fiyatı, mevcut sabit kaynak fiyatlarının medyanıdır. Baz gündeki fiyat 100 kabul edilir. Grup içinde ürünler eşit ağırlıklandırılır; gruplar daha sonra yapılandırılmış araştırma ağırlıklarıyla birleştirilir.
+
+Ana Market Endeksi ve yalnızca gıda gruplarını içeren Gıda Endeksi üretilir. Ayrıca 12 alt grup `data/subindices.csv` içinde saklanır.
+
+Ana seri için en az %60 ağırlıklı kapsama, alt gruplar için en az %40 ürün kapsamı gerekir. Eksik fiyatlara şu aşamada model tabanlı imputasyon yapılmaz.
+
+## Sınırlamalar
+
+Bu çalışma genel tüketici fiyat endeksi değildir. Kira, konut, ulaşım, sağlık, eğitim ve hizmetleri kapsamaz. Şehir ve mağaza örneklemesi ileriki sürümlerde genişletilecektir.
+
+Sepet veya ağırlık metodolojisi anlamlı biçimde değiştiğinde yeni bir sepet versiyonu ve yeni baz dönemi başlatılır.
