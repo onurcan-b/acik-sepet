@@ -17,11 +17,11 @@ Grup ağırlıkları araştırma amaçlıdır ve resmi kurum ağırlıkları de�
 
 ## Hesap
 
-Her ürünün günlük fiyatı, mevcut sabit kaynak fiyatlarının medyanıdır. Baz gündeki fiyat 100 kabul edilir. Grup içinde ürünler eşit ağırlıklandırılır; gruplar daha sonra yapılandırılmış araştırma ağırlıklarıyla birleştirilir.
+Her ürünün günlük fiyatı, mevcut sabit kaynak fiyatlarının medyanıdır. Baz gündeki fiyat 100 kabul edilir. Grup içinde ürünler eşit pay alır; gruplar daha sonra `config/categories.json` içindeki araştırma ağırlıklarıyla birleştirilir.
 
-Ana Market Endeksi ve yalnızca gıda gruplarını içeren Gıda Endeksi üretilir. Ayrıca 12 alt grup `data/subindices.csv` içinde saklanır.
+Günlük ana endeks, hem baz hem güncel günde fiyatı bulunan ürünlerin ağırlıklı fiyat relatiflerinin ortalamasıdır. Eksik ürünlerin payı yeniden normalize edilir ve kapsama ayrıca yayımlanır.
 
-Ana seri için en az %60 ağırlıklı kapsama, alt gruplar için en az %40 ürün kapsamı gerekir. Eksik fiyatlara şu aşamada model tabanlı imputasyon yapılmaz.
+Ana seri için en az **%60 ağırlıklı kapsama** gerekir. Eksik fiyatlara şu aşamada model tabanlı imputasyon yapılmaz.
 
 ## Sınırlamalar
 
