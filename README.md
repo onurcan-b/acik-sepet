@@ -13,9 +13,10 @@
 
 ## MVP ne yapıyor?
 
-- Market Fiyatı üzerinden küçük bir sabit sepet için fiyat gözlemi alır.
-- İstanbul, Ankara ve İzmir'i ayrı sabit koordinatlarla izler.
+- Market Fiyatı üzerinden küçük ve sabit bir ürün sepeti için günlük fiyat gözlemleri alır.
 - İlk bulunan ürünü/SKU'yu sabitler; sonraki gün başka ürüne sessizce geçmez.
+- Her SKU için dönen zincir market tekliflerinin medyanını günlük fiyat olarak kullanır.
+- Depot/mağaza kimliklerini snapshot içinde saklar.
 - Günlük snapshot'ı `data/snapshots/` altında saklar.
 - `data/index.csv` içinde baz=100 günlük deneysel endeks üretir.
 - `charts/index.svg` ve yukarıdaki README istatistiklerini otomatik yeniler.
@@ -26,14 +27,14 @@
 `.github/workflows/daily.yml` her gün çalışır ve elle de tetiklenebilir:
 
 ```text
-Market Fiyatı → küçük sepet snapshot'ı → endeks.csv → SVG grafik → README → commit
+Market Fiyatı → sabit sepet snapshot'ı → index.csv → SVG grafik → README → commit
 ```
 
 ## Sepet
 
 İlk MVP'de 12 temel ürün sorgusu var: süt, yoğurt, yumurta, makarna, pirinç, ayçiçek yağı, şeker, un, çay, kola, bulaşık deterjanı ve tuvalet kağıdı.
 
-Sepet ve ağırlıklar `config/basket.json`, şehirler `config/locations.json` içinde sürümlenir.
+Sepet ve ağırlıklar `config/basket.json` içinde sürümlenir.
 
 ## Yerelde çalıştırma
 
