@@ -1,61 +1,67 @@
 # Açık Sepet
 
-**Türkiye'deki zincir market fiyatlarının günlük hareketini küçük, sabit ve sürümlenebilir bir sepet üzerinden ölçen deneysel açık endeks altyapısı.**
+**Türkiye'deki zincir market fiyatlarının günlük hareketini 150 ürünlük sabit bir sepet üzerinden izleyen deneysel açık fiyat endeksi.**
 
-> MVP aşamasındadır. Resmi TÜFE değildir; TÜİK TÜFE'sinin alternatifi veya ikamesi olarak sunulmaz.
+> Açık Sepet resmi TÜFE değildir. Konut, kira, ulaştırma, sağlık, eğitim ve hizmetleri kapsamaz; market malları için yüksek frekanslı bir göstergedir.
 
 ![Açık Sepet günlük endeksi](charts/index.svg)
 
 <!-- STATS_START -->
-- **Son değer:** 100.00
-- **Son güncelleme:** 2026-08-13
-- **Kapsama:** %100 (12 ürün)
-- **7 günlük değişim:** —
-- **30 günlük değişim:** —
-- **Baz tarihi:** 2026-08-13 = 100
+- **Durum:** Yeni 150 ürünlük sepet için ilk yeterli snapshot bekleniyor.
+- **Yayın eşiği:** ağırlıklı kapsama en az %60.
 <!-- STATS_END -->
 
-## MVP ne yapıyor?
+## v0.2
 
-- Market Fiyatı üzerinden küçük ve sabit bir ürün sepeti için günlük fiyat gözlemleri alır.
-- İlk bulunan ürünü/SKU'yu sabitler; sonraki gün başka ürüne sessizce geçmez.
-- Her SKU için dönen zincir market tekliflerinin medyanını günlük fiyat olarak kullanır.
-- Depot/mağaza kimliklerini snapshot içinde saklar.
-- Günlük snapshot'ı `data/snapshots/` altında saklar.
-- `data/index.csv` içinde baz=100 günlük deneysel endeks üretir.
-- `charts/index.svg` ve yukarıdaki README istatistiklerini otomatik yeniler.
-- Her gün GitHub Actions ile çalışabilecek şekilde hazırlanmıştır.
+- 150 ürün
+- 12 tüketim grubu
+- sabit SKU eşleştirmesi
+- sabit temsilci mağaza/depot takibi
+- ayrı Market ve Gıda endeksleri
+- 12 grup için `data/subindices.csv`
+- günlük GitHub Actions güncellemesi
+
+| Grup | Ürün | Araştırma ağırlığı |
+|---|---:|---:|
+| Ekmek, tahıllar ve makarna | 18 | %14 |
+| Et ve et ürünleri | 15 | %15 |
+| Balık ve deniz ürünleri | 8 | %4 |
+| Süt ürünleri ve yumurta | 18 | %14 |
+| Yağlar | 8 | %6 |
+| Meyve | 14 | %8 |
+| Sebze | 18 | %11 |
+| Şeker, tatlı ve atıştırmalık | 14 | %8 |
+| Diğer gıda | 10 | %4 |
+| Alkolsüz içecekler | 12 | %5 |
+| Ev temizlik sarf malzemeleri | 9 | %7 |
+| Kişisel bakım ve kağıt ürünleri | 6 | %4 |
+| **Toplam** | **150** | **%100** |
+
+Ağırlıklar TÜİK'in resmi TÜFE ağırlıkları değildir. Ayrıntılar [METHOD.md](METHOD.md) içinde.
+
+## Veri akışı
+
+```text
+Market Fiyatı → 150 sabit ürün → SKU/depot sabitleme → günlük snapshot
+→ 12 alt endeks → Market + Gıda endeksi → README grafiği → bot commit
+```
+
+## Dosyalar
+
+```text
+config/basket.tsv
+config/categories.json
+state/product-map.json
+data/snapshots/YYYY-MM-DD.json
+data/index.csv
+data/subindices.csv
+charts/index.svg
+```
 
 ## Otomasyon
 
-`.github/workflows/daily.yml` her gün çalışır ve elle de tetiklenebilir:
+`.github/workflows/daily.yml` her gün çalışır. Ayrıca **Actions → Daily Açık Sepet → Run workflow** ile elle tetiklenebilir.
 
-```text
-Market Fiyatı → sabit sepet snapshot'ı → index.csv → SVG grafik → README → commit
-```
+## Veri kaynağı
 
-## Sepet
-
-İlk MVP'de 12 temel ürün sorgusu var: süt, yoğurt, yumurta, makarna, pirinç, ayçiçek yağı, şeker, un, çay, kola, bulaşık deterjanı ve tuvalet kağıdı.
-
-Sepet ve ağırlıklar `config/basket.json` içinde sürümlenir.
-
-## Yerelde çalıştırma
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python -m acik_sepet.collect
-python -m acik_sepet.index
-python -m acik_sepet.report
-pytest
-```
-
-## Metodoloji
-
-Detaylar ve sınırlamalar: [METHOD.md](METHOD.md)
-
-## Veri kaynağı ve kullanım notu
-
-MVP, `marketfiyati.org.tr` arayüzünün kullandığı veri servisine düşük hacimli sorgular gönderir. Bu repo bir toplu veri aynası olarak tasarlanmamıştır. Proje kamuya açılmadan veya kapsam büyütülmeden önce veri yeniden kullanım koşulları ayrıca netleştirilmelidir.
+MVP, `marketfiyati.org.tr` arayüzünün kullandığı veri servisine düşük hacimli sorgular gönderir. Repo ham servisin toplu aynası değildir. Proje kamuya açılmadan veya kapsam büyütülmeden önce veri yeniden kullanım koşulları ayrıca netleştirilmelidir.
