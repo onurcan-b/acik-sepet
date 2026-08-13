@@ -1,0 +1,14 @@
+[
+  {"id": "sut_1l", "label": "Süt 1 L", "query": "süt 1 litre", "include_tokens": ["süt", "1 l"], "min_match": 0.5, "weight": 1.0},
+  {"id": "yogurt_1kg", "label": "Yoğurt 1 kg", "query": "yoğurt 1 kg", "include_tokens": ["yoğurt", "1 kg"], "min_match": 0.5, "weight": 1.0},
+  {"id": "yumurta_10", "label": "Yumurta 10'lu", "query": "yumurta 10 lu", "include_tokens": ["yumurta", "10"], "min_match": 0.5, "weight": 1.0},
+  {"id": "makarna_500g", "label": "Makarna 500 g", "query": "makarna 500 g", "include_tokens": ["makarna", "500"], "min_match": 0.5, "weight": 1.0},
+  {"id": "pirinc_1kg", "label": "Pirinç 1 kg", "query": "pirinç 1 kg", "include_tokens": ["pirinç", "1 kg"], "min_match": 0.5, "weight": 1.0},
+  {"id": "aycicek_1l", "label": "Ayçiçek yağı 1 L", "query": "ayçiçek yağı 1 litre", "include_tokens": ["ayçiçek", "1 l"], "min_match": 0.5, "weight": 1.0},
+  {"id": "toz_seker_1kg", "label": "Toz şeker 1 kg", "query": "toz şeker 1 kg", "include_tokens": ["şeker", "1 kg"], "min_match": 0.5, "weight": 1.0},
+  {"id": "un_1kg", "label": "Un 1 kg", "query": "un 1 kg", "include_tokens": ["un", "1 kg"], "min_match": 0.5, "weight": 1.0},
+  {"id": "cay_500g", "label": "Siyah çay 500 g", "query": "siyah çay 500 g", "include_tokens": ["çay", "500"], "min_match": 0.5, "weight": 1.0},
+  {"id": "kola_1l", "label": "Kola 1 L", "query": "kola 1 litre", "include_tokens": ["kola", "1 l"], "min_match": 0.5, "weight": 1.0},
+  {"id": "bulasik_750ml", "label": "Bulaşık deterjanı ~750 ml", "query": "bulaşık deterjanı 750 ml", "include_tokens": ["bulaşık", "750"], "min_match": 0.5, "weight": 1.0},
+  {"id": "tuvalet_12", "label": "Tuvalet kağıdı 12'li", "query": "tuvalet kağıdı 12 li", "include_tokens": ["tuvalet", "12"], "min_match": 0.5, "weight": 1.0}
+]
