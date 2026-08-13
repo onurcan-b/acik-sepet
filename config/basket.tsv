@@ -1,0 +1,151 @@
+group	id	label	query	include_tokens	min_match	exclude_tokens	preferred_tokens
+bread_cereals	ekmek_beyaz_400g	Beyaz ekmek ~400 g	beyaz ekmek 400 g	ekmek,400	0.5		
+bread_cereals	tost_ekmegi_500g	Tost ekmeği ~500 g	tost ekmeği 500 g	tost,ekmek,500	0.67		
+bread_cereals	tam_bugday_ekmek_400g	Tam buğday ekmeği ~400 g	tam buğday ekmeği 400 g	tam,buğday,ekmek	0.67		
+bread_cereals	un_1kg	Buğday unu 1 kg	buğday unu 1 kg	un,1 kg	0.5		
+bread_cereals	misir_unu_500g	Mısır unu 500 g	mısır unu 500 g	mısır,un,500	0.67		
+bread_cereals	pirinc_baldo_1kg	Baldo pirinç 1 kg	baldo pirinç 1 kg	baldo,pirinç,1 kg	0.67		
+bread_cereals	pirinc_osmancik_1kg	Osmancık pirinç 1 kg	osmancık pirinç 1 kg	osmancık,pirinç,1 kg	0.67		
+bread_cereals	bulgur_pilavlik_1kg	Pilavlık bulgur 1 kg	pilavlık bulgur 1 kg	pilavlık,bulgur,1 kg	0.67		
+bread_cereals	bulgur_ince_1kg	İnce bulgur 1 kg	ince bulgur 1 kg	ince,bulgur,1 kg	0.67		
+bread_cereals	makarna_spagetti_500g	Spagetti makarna 500 g	spagetti makarna 500 g	spagetti,500	0.5		
+bread_cereals	makarna_burgu_500g	Burgu makarna 500 g	burgu makarna 500 g	burgu,500	0.5		
+bread_cereals	arpa_sehriye_500g	Arpa şehriye 500 g	arpa şehriye 500 g	arpa,şehriye,500	0.67		
+bread_cereals	eriste_500g	Erişte 500 g	erişte 500 g	erişte,500	0.5		
+bread_cereals	yulaf_500g	Yulaf ezmesi 500 g	yulaf ezmesi 500 g	yulaf,500	0.5		
+bread_cereals	misir_gevregi_500g	Mısır gevreği ~500 g	mısır gevreği 500 g	mısır,gevrek	0.5		
+bread_cereals	irmik_500g	İrmik 500 g	irmik 500 g	irmik,500	0.5		
+bread_cereals	kuskus_500g	Kuskus 500 g	kuskus 500 g	kuskus,500	0.5		
+bread_cereals	galeta_unu_250g	Galeta unu ~250 g	galeta unu 250 g	galeta,un	0.5		
+meat	dana_kiyma_500g	Dana kıyma ~500 g	dana kıyma 500 g	dana,kıyma	0.5		
+meat	dana_kusbasi_500g	Dana kuşbaşı ~500 g	dana kuşbaşı 500 g	dana,kuşbaşı	0.5		
+meat	dana_sote_500g	Dana sotelik ~500 g	dana sote 500 g	dana,sote	0.5		
+meat	dana_antrikot_500g	Dana antrikot ~500 g	dana antrikot 500 g	dana,antrikot	0.5		
+meat	tavuk_gogus_kg	Tavuk göğüs kg	tavuk göğüs kg	tavuk,göğüs	0.5		
+meat	tavuk_but_kg	Tavuk but kg	tavuk but kg	tavuk,but	0.5		
+meat	tavuk_baget_kg	Tavuk baget kg	tavuk baget kg	tavuk,baget	0.5		
+meat	butun_pilic_kg	Bütün piliç kg	bütün piliç kg	bütün,piliç	0.5		
+meat	hindi_fileto_kg	Hindi fileto kg	hindi fileto kg	hindi,fileto	0.5		
+meat	sucuk_200g	Sucuk ~200 g	sucuk 200 g	sucuk,200	0.5		
+meat	salam_100g	Salam ~100 g	salam 100 g	salam,100	0.5		
+meat	sosis_250g	Sosis ~250 g	sosis 250 g	sosis,250	0.5		
+meat	pastirma_100g	Pastırma ~100 g	pastırma 100 g	pastırma,100	0.5		
+meat	kofte_dondurulmus_500g	Dondurulmuş köfte ~500 g	dondurulmuş köfte 500 g	köfte,500	0.5		
+meat	tavuk_doner_200g	Tavuk döner ~200 g	tavuk döner 200 g	tavuk,döner	0.5		
+fish	ton_baligi_160g	Ton balığı ~160 g	ton balığı 160 g	ton,balığı,160	0.67		
+fish	ton_baligi_2x160g	Ton balığı 2x160 g	ton balığı 2x160 g	ton,balığı,160	0.67		
+fish	sardalya_konserve_160g	Konserve sardalya ~160 g	sardalya konserve 160 g	sardalya,160	0.5		
+fish	somon_fume_100g	Somon füme ~100 g	somon füme 100 g	somon,füme	0.5		
+fish	somon_fileto_500g	Somon fileto ~500 g	somon fileto 500 g	somon,fileto	0.5		
+fish	levrek_fileto_400g	Levrek fileto ~400 g	levrek fileto 400 g	levrek,fileto	0.5		
+fish	balik_parmak_400g	Balık parmak ~400 g	balık parmak 400 g	balık,parmak	0.5		
+fish	dondurulmus_hamsi_500g	Dondurulmuş hamsi ~500 g	dondurulmuş hamsi 500 g	hamsi	0.5		
+dairy_eggs	sut_tam_1l	Tam yağlı süt 1 L	tam yağlı süt 1 litre	süt,1	0.5	%0.5,yarım yağlı,laktozsuz	tam yağlı
+dairy_eggs	sut_yarim_1l	Yarım yağlı süt 1 L	yarım yağlı süt 1 litre	süt,1	0.5		yarım yağlı
+dairy_eggs	sut_laktozsuz_1l	Laktozsuz süt 1 L	laktozsuz süt 1 litre	laktozsuz,süt	0.5		
+dairy_eggs	yogurt_1kg	Yoğurt 1 kg	yoğurt 1 kg	yoğurt,1 kg	0.5		
+dairy_eggs	suzme_yogurt_500g	Süzme yoğurt 500 g	süzme yoğurt 500 g	süzme,yoğurt,500	0.67		
+dairy_eggs	ayran_1l	Ayran 1 L	ayran 1 litre	ayran,1	0.5		
+dairy_eggs	kefir_1l	Kefir 1 L	kefir 1 litre	kefir,1	0.5		
+dairy_eggs	beyaz_peynir_500g	Beyaz peynir 500 g	beyaz peynir 500 g	beyaz,peynir,500	0.67		
+dairy_eggs	kasar_500g	Kaşar peyniri 500 g	kaşar peyniri 500 g	kaşar,500	0.5		
+dairy_eggs	lor_500g	Lor peyniri 500 g	lor peyniri 500 g	lor,500	0.5		
+dairy_eggs	labne_200g	Labne 200 g	labne 200 g	labne,200	0.5		
+dairy_eggs	krem_peynir_200g	Krem peynir 200 g	krem peynir 200 g	krem,peynir,200	0.67		
+dairy_eggs	mozzarella_125g	Mozzarella ~125 g	mozzarella 125 g	mozzarella	0.5		
+dairy_eggs	yumurta_10_m	Yumurta 10'lu M	yumurta 10 adet M boy	yumurta,10	0.5		
+dairy_eggs	yumurta_15	Yumurta 15'li	yumurta 15 adet	yumurta,15	0.5		
+dairy_eggs	krema_200ml	Krema 200 ml	krema 200 ml	krema,200	0.5		
+dairy_eggs	kaymak_200g	Kaymak 200 g	kaymak 200 g	kaymak,200	0.5		
+dairy_eggs	gunluk_sut_1l	Günlük süt 1 L	günlük süt 1 litre	süt,1	0.5		günlük
+oils_fats	aycicek_1l	Ayçiçek yağı 1 L	ayçiçek yağı 1 litre	ayçiçek,1	0.5		
+oils_fats	aycicek_2l	Ayçiçek yağı 2 L	ayçiçek yağı 2 litre	ayçiçek,2	0.5		
+oils_fats	zeytinyagi_1l	Zeytinyağı 1 L	zeytinyağı 1 litre	zeytinyağı,1	0.5		
+oils_fats	zeytinyagi_500ml	Zeytinyağı 500 ml	zeytinyağı 500 ml	zeytinyağı,500	0.5		
+oils_fats	tereyagi_250g	Tereyağı 250 g	tereyağı 250 g	tereyağı,250	0.5		
+oils_fats	margarin_250g	Margarin 250 g	margarin 250 g	margarin,250	0.5		
+oils_fats	margarin_500g	Margarin 500 g	margarin 500 g	margarin,500	0.5		
+oils_fats	misirozu_1l	Mısırözü yağı 1 L	mısırözü yağı 1 litre	mısırözü,1	0.5		
+fruit	muz_kg	Muz kg	muz kg	muz	0.5		
+fruit	elma_kg	Elma kg	elma kg	elma	0.5		
+fruit	portakal_kg	Portakal kg	portakal kg	portakal	0.5		
+fruit	mandalina_kg	Mandalina kg	mandalina kg	mandalina	0.5		
+fruit	limon_kg	Limon kg	limon kg	limon	0.5		
+fruit	armut_kg	Armut kg	armut kg	armut	0.5		
+fruit	seftali_kg	Şeftali kg	şeftali kg	şeftali	0.5		
+fruit	nektarin_kg	Nektarin kg	nektarin kg	nektarin	0.5		
+fruit	uzum_kg	Üzüm kg	üzüm kg	üzüm	0.5		
+fruit	karpuz_kg	Karpuz kg	karpuz kg	karpuz	0.5		
+fruit	kavun_kg	Kavun kg	kavun kg	kavun	0.5		
+fruit	cilek_500g	Çilek ~500 g	çilek 500 g	çilek	0.5		
+fruit	kivi_kg	Kivi kg	kivi kg	kivi	0.5		
+fruit	avokado_adet	Avokado adet	avokado adet	avokado	0.5		
+vegetables	domates_kg	Domates kg	domates kg	domates	0.5		
+vegetables	cherry_domates_500g	Cherry domates ~500 g	cherry domates 500 g	cherry,domates	0.5		
+vegetables	salatalik_kg	Salatalık kg	salatalık kg	salatalık	0.5		
+vegetables	sivri_biber_kg	Sivri biber kg	sivri biber kg	sivri,biber	0.5		
+vegetables	kapya_biber_kg	Kapya biber kg	kapya biber kg	kapya,biber	0.5		
+vegetables	patates_kg	Patates kg	patates kg	patates	0.5		
+vegetables	kuru_sogan_kg	Kuru soğan kg	kuru soğan kg	soğan	0.5		
+vegetables	sarimsak_250g	Sarımsak ~250 g	sarımsak 250 g	sarımsak	0.5		
+vegetables	patlican_kg	Patlıcan kg	patlıcan kg	patlıcan	0.5		
+vegetables	kabak_kg	Kabak kg	kabak kg	kabak	0.5		
+vegetables	havuc_kg	Havuç kg	havuç kg	havuç	0.5		
+vegetables	marul_adet	Marul adet	marul adet	marul	0.5		
+vegetables	ispanak_500g	Ispanak ~500 g	ıspanak 500 g	ıspanak	0.5		
+vegetables	maydanoz_demet	Maydanoz demet	maydanoz demet	maydanoz	0.5		
+vegetables	brokoli_500g	Brokoli ~500 g	brokoli 500 g	brokoli	0.5		
+vegetables	karnabahar_adet	Karnabahar adet	karnabahar adet	karnabahar	0.5		
+vegetables	mantar_400g	Kültür mantarı ~400 g	kültür mantarı 400 g	mantar	0.5		
+vegetables	taze_fasulye_kg	Taze fasulye kg	taze fasulye kg	taze,fasulye	0.5		
+sugar_snacks	toz_seker_1kg	Toz şeker 1 kg	toz şeker 1 kg	şeker,1 kg	0.5		
+sugar_snacks	bal_500g	Bal 500 g	bal 500 g	bal,500	0.5		
+sugar_snacks	cilek_recel_380g	Çilek reçeli ~380 g	çilek reçeli 380 g	çilek,reçel	0.5		
+sugar_snacks	cikolata_sutlu_60g	Sütlü çikolata ~60 g	sütlü çikolata 60 g	çikolata	0.5		sütlü
+sugar_snacks	cikolata_bitter_80g	Bitter çikolata ~80 g	bitter çikolata 80 g	bitter,çikolata	0.5		
+sugar_snacks	gofret_100g	Gofret ~100 g	gofret 100 g	gofret	0.5		
+sugar_snacks	biskuvi_100g	Bisküvi ~100 g	bisküvi 100 g	bisküvi	0.5		
+sugar_snacks	kurabiye_100g	Kurabiye ~100 g	kurabiye 100 g	kurabiye	0.5		
+sugar_snacks	cips_150g	Patates cipsi ~150 g	patates cipsi 150 g	cips	0.5		
+sugar_snacks	dondurma_500ml	Dondurma ~500 ml	dondurma 500 ml	dondurma	0.5		
+sugar_snacks	lokum_200g	Lokum ~200 g	lokum 200 g	lokum	0.5		
+sugar_snacks	tahin_helva_500g	Tahin helvası 500 g	tahin helvası 500 g	tahin,helva,500	0.67		
+sugar_snacks	kakao_100g	Kakao 100 g	kakao 100 g	kakao,100	0.5		
+sugar_snacks	findik_kremasi_400g	Fındık kreması ~400 g	fındık kreması 400 g	fındık,krema	0.5		
+other_food	tuz_750g	Sofra tuzu ~750 g	sofra tuzu 750 g	tuz	0.5		
+other_food	domates_salca_700g	Domates salçası ~700 g	domates salçası 700 g	domates,salça	0.5		
+other_food	ketcap_600g	Ketçap ~600 g	ketçap 600 g	ketçap	0.5		
+other_food	mayonez_500g	Mayonez ~500 g	mayonez 500 g	mayonez	0.5		
+other_food	sirke_1l	Sirke 1 L	sirke 1 litre	sirke,1	0.5		
+other_food	zeytin_500g	Sofralık zeytin ~500 g	zeytin 500 g	zeytin,500	0.5		
+other_food	tursu_680g	Karışık turşu ~680 g	karışık turşu 680 g	turşu	0.5		
+other_food	konserve_domates_400g	Konserve domates ~400 g	konserve domates 400 g	domates,400	0.5		
+other_food	hazir_corba_paket	Hazır çorba paket	hazır çorba paket	çorba	0.5		
+other_food	kuru_maya_30g	Kuru maya ~30 g	kuru maya 30 g	maya	0.5		
+drinks	cay_500g	Siyah çay 500 g	siyah çay 500 g	çay,500	0.5		
+drinks	turk_kahvesi_100g	Türk kahvesi 100 g	türk kahvesi 100 g	türk,kahve,100	0.67		
+drinks	granul_kahve_100g	Granül kahve 100 g	granül kahve 100 g	kahve,100	0.5		granül
+drinks	maden_suyu_6li	Maden suyu 6'lı	maden suyu 6 lı	maden,suyu,6	0.67		
+drinks	su_1_5l	Su 1.5 L	su 1.5 litre	su,1.5	0.5		
+drinks	kola_1l	Kola 1 L	kola 1 litre	kola,1	0.5		
+drinks	kola_2_5l	Kola 2.5 L	kola 2.5 litre	kola,2.5	0.5		
+drinks	portakal_suyu_1l	Portakal suyu 1 L	portakal suyu 1 litre	portakal,suyu,1	0.67		
+drinks	seftali_meyve_suyu_1l	Şeftali meyve suyu 1 L	şeftali meyve suyu 1 litre	şeftali,suyu,1	0.67		
+drinks	ice_tea_1l	Soğuk çay 1 L	soğuk çay 1 litre	çay,1	0.5		soğuk
+drinks	limonata_1l	Limonata 1 L	limonata 1 litre	limonata,1	0.5		
+drinks	gazoz_1l	Gazoz 1 L	gazoz 1 litre	gazoz,1	0.5		
+household_cleaning	bulasik_750ml	Bulaşık deterjanı ~750 ml	bulaşık deterjanı 750 ml	bulaşık,750	0.5		
+household_cleaning	camasir_toz_4kg	Toz çamaşır deterjanı ~4 kg	toz çamaşır deterjanı 4 kg	çamaşır,deterjan	0.5		toz
+household_cleaning	camasir_sivi_2_5l	Sıvı çamaşır deterjanı ~2.5 L	sıvı çamaşır deterjanı 2.5 litre	çamaşır,deterjan	0.5		sıvı
+household_cleaning	yumusatici_1_4l	Çamaşır yumuşatıcı ~1.4 L	çamaşır yumuşatıcı 1.4 litre	yumuşatıcı	0.5		
+household_cleaning	camasir_suyu_750ml	Çamaşır suyu ~750 ml	çamaşır suyu 750 ml	çamaşır,suyu	0.5		
+household_cleaning	yuzey_temizleyici_1l	Yüzey temizleyici 1 L	yüzey temizleyici 1 litre	yüzey,temiz	0.5		
+household_cleaning	cam_temizleyici_500ml	Cam temizleyici 500 ml	cam temizleyici 500 ml	cam,temiz	0.5		
+household_cleaning	bulasik_tableti_30	Bulaşık makinesi tableti ~30'lu	bulaşık makinesi tableti 30	bulaşık,tablet,30	0.67		
+household_cleaning	cop_poseti_10	Çöp poşeti ~10'lu	çöp poşeti 10	çöp,poşet	0.5		
+personal_paper	tuvalet_12	Tuvalet kağıdı 12'li	tuvalet kağıdı 12 li	tuvalet,12	0.5		
+personal_paper	kagit_havlu_6	Kağıt havlu 6'lı	kağıt havlu 6 lı	kağıt,havlu,6	0.67		
+personal_paper	mendil_10	Kağıt mendil 10'lu	kağıt mendil 10 lu	mendil,10	0.5		
+personal_paper	sampuan_400ml	Şampuan ~400 ml	şampuan 400 ml	şampuan,400	0.5		
+personal_paper	dis_macunu_75ml	Diş macunu ~75 ml	diş macunu 75 ml	diş,macunu,75	0.67		
+personal_paper	sabun_4lu	Katı sabun 4'lü	katı sabun 4 lü	sabun,4	0.5		
