@@ -1,0 +1,20 @@
+# Lisans ve Veri Hakları
+
+Bu depoda iki farklı içerik türü bulunmaktadır:
+
+1. **Özgün proje kodu, yapılandırma, testler ve otomasyon**
+   - `acik_sepet/`
+   - `.github/`
+   - `tests/`
+   - proje tarafından özgün olarak oluşturulan yapılandırma ve dokümantasyon
+
+   Bu içerik `LICENSE-CODE` dosyasındaki MIT License koşullarıyla lisanslanır.
+
+2. **Üçüncü taraf kaynaklardan elde edilen fiyat gözlemleri**
+   - özellikle `data/` ve bunlardan türetilen seri çıktıları
+
+   Açık Sepet bu kaynak veriler üzerinde ayrıca telif hakkı veya yeniden lisanslama hakkı iddia etmez. Kaynak verinin kullanım, yeniden kullanım ve yeniden dağıtımına ilişkin hak ve yükümlülükler ilgili veri sağlayıcısının koşullarına tabidir.
+
+Bu depoda bir fiyat gözleminin bulunması, söz konusu ham verinin MIT lisansı altında olduğu anlamına gelmez.
+
+Kaynak ve kullanım notları için `NOTICE.md` dosyasına bakın.
