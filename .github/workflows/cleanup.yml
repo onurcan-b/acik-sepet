@@ -1,0 +1,27 @@
+name: One-off cleanup
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/cleanup.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Remove migration leftovers
+        run: |
+          git config user.name "acik-sepet-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git push origin --delete agent/v0.2-final || true
+          git rm -f config/categories.v0.2.json acik_sepet/stability.py .github/workflows/cleanup.yml
+          git commit -m "chore: clean v0.2 migration leftovers"
+          git pull --rebase origin main
+          git push origin main
