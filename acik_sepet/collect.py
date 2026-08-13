@@ -83,6 +83,7 @@ def collect() -> Path:
         "generated_at": datetime.now(TR_TZ).isoformat(timespec="seconds"),
         "source": "https://marketfiyati.org.tr/",
         "items": {},
+        "locations": {"national": {"name": "MVP", "items": {}}},
         "errors": [],
     }
 
@@ -103,12 +104,14 @@ def collect() -> Path:
                 "title": selected.get("title"),
                 "first_seen": today,
             })
-            snapshot["items"][spec["id"]] = {
+            row = {
                 "basket_label": spec["label"],
                 "selected_title": selected.get("title"),
                 "price_median": round(float(median([offer["price"] for offer in offers])), 2),
                 "offers": offers,
             }
+            snapshot["items"][spec["id"]] = row
+            snapshot["locations"]["national"]["items"][spec["id"]] = row
         except MarketFiyatiError as exc:
             snapshot["errors"].append({"item": spec["id"], "error": str(exc)})
 
