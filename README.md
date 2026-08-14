@@ -12,7 +12,7 @@ Türkiye'deki zincir market fiyatlarının günlük hareketini **150 ürünlük 
 
 <!-- STATS_START -->
 - **Son değer:** 100.00
-- **Son güncelleme:** 2026-08-13
+- **Son güncelleme:** 2026-08-14
 - **Kapsama:** %92 (136 ürün)
 - **7 günlük değişim:** —
 - **30 günlük değişim:** —
