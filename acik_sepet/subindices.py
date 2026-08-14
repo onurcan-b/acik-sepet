@@ -12,7 +12,7 @@ SNAPSHOT_DIR = ROOT / "data" / "snapshots"
 OUTPUT = ROOT / "data" / "subindices.csv"
 
 
-def build_subindices(snapshots, basket, categories, min_group_coverage=0.40):
+def build_subindices(snapshots, basket, categories, min_group_coverage=0.60):
     if not snapshots:
         return []
     snapshots = sorted(snapshots, key=lambda row: row["date"])
