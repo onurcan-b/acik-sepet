@@ -11,9 +11,9 @@ Türkiye'deki zincir market fiyatlarının günlük hareketini **150 ürünlük 
 ![Açık Sepet günlük endeksi](charts/index.svg)
 
 <!-- STATS_START -->
-- **Son değer:** 100.00
+- **Son değer:** 99.38
 - **Son güncelleme:** 2026-08-14
-- **Kapsama:** %92 (136 ürün)
+- **Kapsama:** %86 (127 ürün)
 - **7 günlük değişim:** —
 - **30 günlük değişim:** —
 - **Baz tarihi:** 2026-08-13 = 100
@@ -23,11 +23,20 @@ Türkiye'deki zincir market fiyatlarının günlük hareketini **150 ürünlük 
 
 <!-- MOVERS_START -->
 - **Dönem:** 2026-08-13 → 2026-08-14
-- **↑ Zamlanan:** 0 · **↓ Ucuzlayan:** 0 · **= Değişmeyen:** 136
-- **Karşılaştırılan:** 136/150 ürün · **Bugün gözlem dışı:** 14
-- **Yeni kaybolan:** 0 · **Geri dönen/yeni eşleşen:** 0
+- **↑ Zamlanan:** 3 · **↓ Ucuzlayan:** 5 · **= Değişmeyen:** 119
+- **Karşılaştırılan:** 127/150 ürün · **Bugün gözlem dışı:** 23
+- **Yeni kaybolan:** 9 · **Geri dönen/yeni eşleşen:** 0
 
-Karşılaştırılabilen ürünlerde son 24 saatte fiyat değişimi gözlenmedi.
+| Ürün | Önceki | Son | Değişim |
+|---|---:|---:|---:|
+| Çilek ~500 g | 81.90 TL | 95.90 TL | +17.09% |
+| Sütlü çikolata ~60 g | 99.95 TL | 109.50 TL | +9.55% |
+| Armut kg | 82.00 TL | 88.75 TL | +8.23% |
+| Şampuan ~400 ml | 224.95 TL | 134.95 TL | -40.01% |
+| Patates kg | 64.00 TL | 49.90 TL | -22.03% |
+| Dana sotelik ~500 g | 319.95 TL | 255.96 TL | -20.00% |
+| Kapya biber kg | 99.00 TL | 84.45 TL | -14.70% |
+| Mozzarella ~125 g | 252.00 TL | 239.00 TL | -5.16% |
 <!-- MOVERS_END -->
 
 Bu bölüm her günlük çalışmada otomatik güncellenir. `Yeni kaybolan`, bir önceki gün gözlenip bugün bulunamayan ürünleri; `geri dönen/yeni eşleşen` ise bugün yeniden karşılaştırmaya giren ürünleri gösterir. Böylece kalıcı olarak eşleşmeyen ürünlerle günlük veri kaybı birbirinden ayrılabilir.

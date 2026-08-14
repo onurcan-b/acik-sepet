@@ -2,7 +2,7 @@
   "schema_version": 2,
   "basket_version": "v0.2-150",
   "date": "2026-08-14",
-  "generated_at": "2026-08-14T09:59:20+03:00",
+  "generated_at": "2026-08-14T18:25:47+03:00",
   "source": "https://marketfiyati.org.tr/",
   "target_items": 150,
   "items": {
@@ -252,31 +252,16 @@
         }
       ]
     },
-    "dana_kusbasi_500g": {
-      "group": "meat",
-      "basket_label": "Dana kuşbaşı ~500 g",
-      "selected_title": "Uzman Kasap Dana Kuşbaşı 300 Gr",
-      "product_key": "id:0PB2",
-      "price_median": 295.0,
-      "offers": [
-        {
-          "market": "migros",
-          "price": 295.0,
-          "depot_id": "migros-564",
-          "depot_name": "Kadıköy Çarşı M Migros"
-        }
-      ]
-    },
     "dana_sote_500g": {
       "group": "meat",
       "basket_label": "Dana sotelik ~500 g",
       "selected_title": "Uzman Kasap Dana Sote 300 Gr",
       "product_key": "id:0A1H",
-      "price_median": 319.95,
+      "price_median": 255.96,
       "offers": [
         {
           "market": "migros",
-          "price": 319.95,
+          "price": 255.96,
           "depot_id": "migros-3296",
           "depot_name": "Kadıköy Caferağa M Migros"
         }
@@ -725,19 +710,13 @@
       "basket_label": "Mozzarella ~125 g",
       "selected_title": "Mr. No Gurme Mozzarella Jambon Sandviç 145 Gr",
       "product_key": "id:1XZN",
-      "price_median": 252.0,
+      "price_median": 239.0,
       "offers": [
         {
           "market": "tarim_kredi",
           "price": 239.0,
           "depot_id": "tarim_kredi-5022",
           "depot_name": "Istanbul Kadıköy Market"
-        },
-        {
-          "market": "migros",
-          "price": 265.0,
-          "depot_id": "migros-6679",
-          "depot_name": "Mjet Kadıköy Rasımpaşa Istanbu"
         }
       ]
     },
@@ -852,21 +831,6 @@
         }
       ]
     },
-    "zeytinyagi_1l": {
-      "group": "oils_fats",
-      "basket_label": "Zeytinyağı 1 L",
-      "selected_title": "Carrefour Selection Erken Hasat Naturel Sızma Zeytinyağı 1 Lt",
-      "product_key": "id:18DX",
-      "price_median": 545.0,
-      "offers": [
-        {
-          "market": "carrefour",
-          "price": 545.0,
-          "depot_id": "carrefour-1012",
-          "depot_name": "Istanbul Acıbadem Hıper"
-        }
-      ]
-    },
     "zeytinyagi_500ml": {
       "group": "oils_fats",
       "basket_label": "Zeytinyağı 500 ml",
@@ -950,22 +914,10 @@
       "price_median": 275.0,
       "offers": [
         {
-          "market": "migros",
-          "price": 229.0,
-          "depot_id": "migros-1991",
-          "depot_name": "Çiçekçi M Migros"
-        },
-        {
           "market": "bim",
           "price": 275.0,
           "depot_id": "bim-5712",
           "depot_name": "Çiçekçi  Üsküdar"
-        },
-        {
-          "market": "carrefour",
-          "price": 275.0,
-          "depot_id": "carrefour-5254",
-          "depot_name": "Istanbul Üsküdar Salacak Mını"
         }
       ]
     },
@@ -1040,11 +992,11 @@
       "basket_label": "Armut kg",
       "selected_title": "Sırma C+ Mango Ananas Armut Aromalı Mineralli İçecek 6x200 Ml",
       "product_key": "id:1SG9",
-      "price_median": 82.0,
+      "price_median": 88.75,
       "offers": [
         {
           "market": "migros",
-          "price": 82.0,
+          "price": 88.75,
           "depot_id": "migros-1991",
           "depot_name": "Çiçekçi M Migros"
         }
@@ -1130,11 +1082,11 @@
       "basket_label": "Çilek ~500 g",
       "selected_title": "Kahve Dünyası Frutibon Bitter Çikolatalı Çilek Draje 50 Gr",
       "product_key": "id:0N6K",
-      "price_median": 81.9,
+      "price_median": 95.9,
       "offers": [
         {
           "market": "carrefour",
-          "price": 81.9,
+          "price": 95.9,
           "depot_id": "carrefour-5036",
           "depot_name": "Istanbul Moda Caddesı Mını"
         }
@@ -1152,21 +1104,6 @@
           "price": 95.9,
           "depot_id": "carrefour-1012",
           "depot_name": "Istanbul Acıbadem Hıper"
-        }
-      ]
-    },
-    "avokado_adet": {
-      "group": "fruit",
-      "basket_label": "Avokado adet",
-      "selected_title": "İthal Avokado 1 Adet",
-      "product_key": "id:0IH7",
-      "price_median": 49.9,
-      "offers": [
-        {
-          "market": "carrefour",
-          "price": 49.9,
-          "depot_id": "carrefour-5254",
-          "depot_name": "Istanbul Üsküdar Salacak Mını"
         }
       ]
     },
@@ -1220,7 +1157,7 @@
       "basket_label": "Kapya biber kg",
       "selected_title": "Kapya Biber 1 Kg",
       "product_key": "id:0AIR",
-      "price_median": 99.0,
+      "price_median": 84.45,
       "offers": [
         {
           "market": "carrefour",
@@ -1233,12 +1170,6 @@
           "price": 99.0,
           "depot_id": "bim-5712",
           "depot_name": "Çiçekçi  Üsküdar"
-        },
-        {
-          "market": "tarim_kredi",
-          "price": 99.0,
-          "depot_id": "tarim_kredi-5022",
-          "depot_name": "Istanbul Kadıköy Market"
         }
       ]
     },
@@ -1247,11 +1178,11 @@
       "basket_label": "Patates kg",
       "selected_title": "Cipso Yoğurt & Mevsim Yeşillikli Aromalı Patates Cipsi 125 Gr",
       "product_key": "id:1Z0K",
-      "price_median": 64.0,
+      "price_median": 49.9,
       "offers": [
         {
           "market": "sok",
-          "price": 64.0,
+          "price": 49.9,
           "depot_id": "sok-4707",
           "depot_name": "Şok Minifevziçakmak"
         }
@@ -1419,21 +1350,6 @@
         }
       ]
     },
-    "taze_fasulye_kg": {
-      "group": "vegetables",
-      "basket_label": "Taze fasulye kg",
-      "selected_title": "Tada Vegan Zeytinyağlı Taze Fasulye 250 Gr",
-      "product_key": "id:1ZPP",
-      "price_median": 149.95,
-      "offers": [
-        {
-          "market": "carrefour",
-          "price": 149.95,
-          "depot_id": "carrefour-1012",
-          "depot_name": "Istanbul Acıbadem Hıper"
-        }
-      ]
-    },
     "toz_seker_1kg": {
       "group": "sugar_snacks",
       "basket_label": "Toz şeker 1 kg",
@@ -1484,11 +1400,11 @@
       "basket_label": "Sütlü çikolata ~60 g",
       "selected_title": "Kahve Dünyası Tambol Badem Krokan Dolgulu Sütlü Çikolata 100 Gr",
       "product_key": "id:1XDB",
-      "price_median": 99.95,
+      "price_median": 109.5,
       "offers": [
         {
           "market": "carrefour",
-          "price": 99.95,
+          "price": 109.5,
           "depot_id": "carrefour-1012",
           "depot_name": "Istanbul Acıbadem Hıper"
         }
@@ -1572,21 +1488,6 @@
           "price": 86.9,
           "depot_id": "tarim_kredi-7488",
           "depot_name": "Istanbul Kadıköy Kızıltoprak"
-        }
-      ]
-    },
-    "dondurma_500ml": {
-      "group": "sugar_snacks",
-      "basket_label": "Dondurma ~500 ml",
-      "selected_title": "Özsüt Gelato Brownie Karamelli/Cookie Dondurma 500 Ml",
-      "product_key": "id:1CN6",
-      "price_median": 219.0,
-      "offers": [
-        {
-          "market": "a101",
-          "price": 219.0,
-          "depot_id": "a101-4141",
-          "depot_name": "Doğanevler Ümraniye Istanbul"
         }
       ]
     },
@@ -1716,21 +1617,6 @@
         }
       ]
     },
-    "sirke_1l": {
-      "group": "other_food",
-      "basket_label": "Sirke 1 L",
-      "selected_title": "Rinso Beyaz Sirke & Çamaşır Sodası Toz Deterjan 10 Kg",
-      "product_key": "id:2121",
-      "price_median": 545.0,
-      "offers": [
-        {
-          "market": "carrefour",
-          "price": 545.0,
-          "depot_id": "carrefour-1012",
-          "depot_name": "Istanbul Acıbadem Hıper"
-        }
-      ]
-    },
     "zeytin_500g": {
       "group": "other_food",
       "basket_label": "Sofralık zeytin ~500 g",
@@ -1827,21 +1713,6 @@
         }
       ]
     },
-    "maden_suyu_6li": {
-      "group": "drinks",
-      "basket_label": "Maden suyu 6'lı",
-      "selected_title": "Frutti Karpuz Çilek Aromalı Maden Suyu 6x200 Ml",
-      "product_key": "id:1RE4",
-      "price_median": 94.95,
-      "offers": [
-        {
-          "market": "migros",
-          "price": 94.95,
-          "depot_id": "migros-1991",
-          "depot_name": "Çiçekçi M Migros"
-        }
-      ]
-    },
     "kola_1l": {
       "group": "drinks",
       "basket_label": "Kola 1 L",
@@ -1914,21 +1785,6 @@
           "price": 38.5,
           "depot_id": "tarim_kredi-7488",
           "depot_name": "Istanbul Kadıköy Kızıltoprak"
-        }
-      ]
-    },
-    "gazoz_1l": {
-      "group": "drinks",
-      "basket_label": "Gazoz 1 L",
-      "selected_title": "Çamlıca Limon Aromalı Sade Gazoz 1 Lt",
-      "product_key": "id:1TVD",
-      "price_median": 39.9,
-      "offers": [
-        {
-          "market": "migros",
-          "price": 39.9,
-          "depot_id": "migros-6679",
-          "depot_name": "Mjet Kadıköy Rasımpaşa Istanbu"
         }
       ]
     },
@@ -2102,26 +1958,11 @@
       "basket_label": "Şampuan ~400 ml",
       "selected_title": "Elidor Superblend Güçlü Ve Parlak Şampuan 400 Ml",
       "product_key": "id:1NZ2",
-      "price_median": 224.95,
+      "price_median": 134.95,
       "offers": [
         {
           "market": "migros",
-          "price": 224.95,
-          "depot_id": "migros-1991",
-          "depot_name": "Çiçekçi M Migros"
-        }
-      ]
-    },
-    "dis_macunu_75ml": {
-      "group": "personal_paper",
-      "basket_label": "Diş macunu ~75 ml",
-      "selected_title": "Colgate Optik Beyaz Anında Beyazlık Diş Macunu 75 Ml",
-      "product_key": "id:1I77",
-      "price_median": 314.95,
-      "offers": [
-        {
-          "market": "migros",
-          "price": 314.95,
+          "price": 134.95,
           "depot_id": "migros-1991",
           "depot_name": "Çiçekçi M Migros"
         }
@@ -2166,6 +2007,11 @@
       "error": "matching_product_not_found"
     },
     {
+      "item": "dana_kusbasi_500g",
+      "group": "meat",
+      "error": "matching_product_not_found"
+    },
+    {
       "item": "tavuk_doner_200g",
       "group": "meat",
       "error": "matching_product_not_found"
@@ -2186,6 +2032,16 @@
       "error": "matching_product_not_found"
     },
     {
+      "item": "zeytinyagi_1l",
+      "group": "oils_fats",
+      "error": "matching_product_not_found"
+    },
+    {
+      "item": "avokado_adet",
+      "group": "fruit",
+      "error": "stable_source_not_found"
+    },
+    {
       "item": "cherry_domates_500g",
       "group": "vegetables",
       "error": "matching_product_not_found"
@@ -2193,6 +2049,21 @@
     {
       "item": "karnabahar_adet",
       "group": "vegetables",
+      "error": "matching_product_not_found"
+    },
+    {
+      "item": "taze_fasulye_kg",
+      "group": "vegetables",
+      "error": "matching_product_not_found"
+    },
+    {
+      "item": "dondurma_500ml",
+      "group": "sugar_snacks",
+      "error": "matching_product_not_found"
+    },
+    {
+      "item": "sirke_1l",
+      "group": "other_food",
       "error": "matching_product_not_found"
     },
     {
@@ -2206,6 +2077,11 @@
       "error": "matching_product_not_found"
     },
     {
+      "item": "maden_suyu_6li",
+      "group": "drinks",
+      "error": "matching_product_not_found"
+    },
+    {
       "item": "su_1_5l",
       "group": "drinks",
       "error": "matching_product_not_found"
@@ -2216,8 +2092,18 @@
       "error": "matching_product_not_found"
     },
     {
+      "item": "gazoz_1l",
+      "group": "drinks",
+      "error": "stable_source_not_found"
+    },
+    {
       "item": "cop_poseti_10",
       "group": "household_cleaning",
+      "error": "matching_product_not_found"
+    },
+    {
+      "item": "dis_macunu_75ml",
+      "group": "personal_paper",
       "error": "matching_product_not_found"
     }
   ]
