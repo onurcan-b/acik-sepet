@@ -19,6 +19,19 @@ Türkiye'deki zincir market fiyatlarının günlük hareketini **150 ürünlük 
 - **Baz tarihi:** 2026-08-13 = 100
 <!-- STATS_END -->
 
+## Son 24 saatte
+
+<!-- MOVERS_START -->
+- **Dönem:** 2026-08-13 → 2026-08-14
+- **↑ Zamlanan:** 0 · **↓ Ucuzlayan:** 0 · **= Değişmeyen:** 136
+- **Karşılaştırılan:** 136/150 ürün · **Bugün gözlem dışı:** 14
+- **Yeni kaybolan:** 0 · **Geri dönen/yeni eşleşen:** 0
+
+Karşılaştırılabilen ürünlerde son 24 saatte fiyat değişimi gözlenmedi.
+<!-- MOVERS_END -->
+
+Bu bölüm her günlük çalışmada otomatik güncellenir. `Yeni kaybolan`, bir önceki gün gözlenip bugün bulunamayan ürünleri; `geri dönen/yeni eşleşen` ise bugün yeniden karşılaştırmaya giren ürünleri gösterir. Böylece kalıcı olarak eşleşmeyen ürünlerle günlük veri kaybı birbirinden ayrılabilir.
+
 ## Neden Açık Sepet?
 
 Günlük market fiyatları kamuoyunun en sık gözlemlediği fiyatlardan biri olmasına rağmen, ürün eşleştirmesi ve zaman içindeki değişimleri yeniden üretilebilir biçimde takip etmek kolay değildir.
@@ -30,7 +43,8 @@ Açık Sepet bu problemi küçük ama disiplinli bir veri ürünü olarak ele al
 - ham günlük gözlemleri Git içinde sürümler,
 - sepet ve kategori ağırlıklarını açık dosyalarda tutar,
 - ana endeks ve alt endeksleri otomatik yeniden hesaplar,
-- veri kalitesi yeterli değilse gözlemi sessizce başka ürünle değiştirmek yerine eksik bırakır.
+- veri kalitesi yeterli değilse gözlemi sessizce başka ürünle değiştirmek yerine eksik bırakır,
+- tek bir SKU'nun kaybolmasını bütün kategoriye mal etmez; kategoride yeterli karşılaştırılabilir ürün kaldığı sürece alt endeksi mevcut gözlemlerle yeniden normalize eder.
 
 Böylece endeksin yalnızca bugünkü değeri değil, **hangi ürünlerden ve hangi kurallarla üretildiği** de incelenebilir.
 
@@ -46,8 +60,9 @@ Her günlük çalışmada GitHub Actions:
 6. Minimum kapsama eşiğini doğrular.
 7. Grup ağırlıklı ana **Açık Sepet Market Endeksi**ni üretir.
 8. 12 tüketim grubu ile birleşik **Gıda ve alkolsüz içecekler** alt endeksini hesaplar.
-9. README grafiğini ve istatistiklerini günceller.
-10. Gerçek bir veri değişikliği varsa bot commit'i oluşturup `main` branch'ine gönderir.
+9. Önceki snapshot ile bugünü karşılaştırıp zamlanan, ucuzlayan, değişmeyen ve gözlemden düşen ürünleri çıkarır.
+10. README grafiğini ve istatistiklerini günceller.
+11. Gerçek bir veri değişikliği varsa bot commit'i oluşturup `main` branch'ine gönderir.
 
 ```text
 Market Fiyatı
@@ -63,6 +78,8 @@ Kapsama kontrolü
 Ana Market Endeksi
     ↓
 12 kategori endeksi + Gıda Endeksi
+    ↓
+24 saatlik fiyat hareketleri
     ↓
 Grafik + Git geçmişi
 ```
@@ -115,6 +132,8 @@ date,index,coverage,items,baseline_date
 - `personal_paper`
 - `food_total`
 
+Kategori endeksleri, baz ve güncel günde karşılaştırılabilen ürünlerin fiyat relatiflerinden hesaplanır. Bir ürün geçici olarak bulunamazsa kategori tamamen düşmez; yeterli kategori kapsamı kaldığında mevcut ürünler kendi içinde yeniden normalize edilir. Bu yaklaşım **sessiz SKU ikamesi yapmadan eksik gözlemi tolere eder**.
+
 ## Veri yapısı
 
 ```text
@@ -161,7 +180,7 @@ Bu saat:
 - Berlin'de yaz saatinde **07:45 CEST**,
 - Berlin'de kış saatinde **06:45 CET**
 
-anlamına gelir. GitHub Actions zamanlanmış işleri yoğunluk durumuna göre birkaç dakika gecikmeli başlatabilir.
+anlamına gelir. GitHub Actions zamanlanmış işleri yoğunluk durumuna göre gecikmeli başlatabilir.
 
 Ana workflow başarılı olduktan sonra `.github/workflows/subindices.yml` alt endeksleri günceller.
 
@@ -210,6 +229,8 @@ Açık Sepet'in temel tasarım tercihi **karşılaştırılabilirliği ürün sa
 - Ürün kimliği ilk güvenilir eşleşmeden sonra sabitlenir.
 - Temsilci kaynak kaybolursa mümkün olduğunca seri başka bir mağazaya sessizce taşınmaz.
 - Ürün bulunamazsa gözlem eksik kalabilir.
+- Eksik ürünler aynı kategoride yeterli karşılaştırılabilir gözlem kaldığı sürece kategori endeksini bozmaz; kalan ürünlerin ağırlıkları yeniden normalize edilir.
+- Bir kategorinin yayımlanması için yeterli kapsama gerekir; tekil ürün eksiklikleri kategori içindeki diğer gözlemlerle telafi edilir, fakat farklı SKU'ya sessiz ikame yapılmaz.
 - Ana seri yalnızca yeterli ağırlıklı kapsama olduğunda yayımlanır.
 - Mevcut sürümde model tabanlı fiyat imputasyonu yapılmaz.
 - Sepet veya ağırlık metodolojisi anlamlı biçimde değişirse yeni sepet versiyonu ve yeni baz dönemi açılmalıdır.
