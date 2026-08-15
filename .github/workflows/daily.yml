@@ -38,13 +38,13 @@ jobs:
       - name: Tests
         run: pytest -q
       - name: Collect multi-SKU panels
-        run: python -m acik_sepet.collect_v03
+        run: python -m acik_sepet.collect
       - name: Validate panel quality
-        run: python -m acik_sepet.validate_v03 --min-type-coverage 0.60 --min-skus 300
+        run: python -m acik_sepet.validate --min-type-coverage 0.60 --min-skus 300
       - name: Rebuild indices and README
         run: |
-          python -m acik_sepet.index_v03
-          python -m acik_sepet.report_v03
+          python -m acik_sepet.index
+          python -m acik_sepet.report
       - name: Commit updated observations
         run: |
           git config user.name "acik-sepet-bot"
