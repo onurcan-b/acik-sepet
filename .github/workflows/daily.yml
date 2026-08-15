@@ -24,7 +24,7 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
         with:
@@ -37,23 +37,23 @@ jobs:
         run: pip install -r requirements.txt
       - name: Tests
         run: pytest -q
-      - name: Collect 150-item basket
-        run: python -m acik_sepet.collect
-      - name: Validate coverage
-        run: python -m acik_sepet.validate --min-coverage 0.60
-      - name: Rebuild indices and README chart
+      - name: Collect multi-SKU panels
+        run: python -m acik_sepet.collect_v03
+      - name: Validate panel quality
+        run: python -m acik_sepet.validate_v03 --min-type-coverage 0.60 --min-skus 300
+      - name: Rebuild indices and README
         run: |
-          python -m acik_sepet.index
-          python -m acik_sepet.report
+          python -m acik_sepet.index_v03
+          python -m acik_sepet.report_v03
       - name: Commit updated observations
         run: |
           git config user.name "acik-sepet-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/ state/product-map.json charts/ README.md
+          git add data/v0.3/ state/v0.3-panels.json charts/index.svg README.md
           if git diff --cached --quiet; then
             echo "No changes"
             exit 0
           fi
-          git commit -m "data: günlük Açık Sepet güncellemesi"
+          git commit -m "data: günlük Açık Sepet v0.3 güncellemesi"
           git pull --rebase origin main
           git push origin main
