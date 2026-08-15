@@ -227,10 +227,10 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 pytest -q
-python -m acik_sepet.collect_v03
-python -m acik_sepet.validate_v03
-python -m acik_sepet.index_v03
-python -m acik_sepet.report_v03
+python -m acik_sepet.collect
+python -m acik_sepet.validate
+python -m acik_sepet.index
+python -m acik_sepet.report
 ```
 
 Windows PowerShell:
