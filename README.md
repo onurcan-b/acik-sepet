@@ -1,164 +1,171 @@
 # Açık Sepet
 
-Türkiye'deki zincir market fiyatlarının günlük hareketini **150 ürünlük sabit bir tüketim sepeti** üzerinden izleyen, yeniden üretilebilir deneysel fiyat endeksi.
+Türkiye'deki zincir market fiyatlarını **ürün tipi → çoklu SKU → kategori → ana endeks** hiyerarşisiyle günlük izleyen açık ve yeniden üretilebilir deneysel fiyat endeksi.
 
 [![Daily Açık Sepet](https://github.com/onurcan-b/acik-sepet/actions/workflows/daily.yml/badge.svg)](https://github.com/onurcan-b/acik-sepet/actions/workflows/daily.yml)
 ![Python](https://img.shields.io/badge/Python-3.12+-blue)
 ![Data](https://img.shields.io/badge/data-daily-informational)
 
-> **Açık Sepet resmî TÜFE değildir.** Kira, konut, ulaştırma, sağlık, eğitim ve hizmetler gibi tüketim kalemlerini kapsamaz. Amaç, zincir marketlerde satılan malların fiyat hareketini yüksek frekansta, şeffaf ve sürümlenebilir bir veri hattıyla izlemektir.
+> **Açık Sepet resmî TÜFE değildir.** Kira, konut, ulaşım, sağlık, eğitim ve hizmetleri kapsamaz. Amaç, markette satılan malların fiyat hareketini yüksek frekansta, şeffaf bir metodolojiyle ölçmektir.
 
 ![Açık Sepet günlük endeksi](charts/index.svg)
 
 <!-- STATS_START -->
-- **Son değer:** 99.38
-- **Son güncelleme:** 2026-08-15
-- **Kapsama:** %86 (127 ürün)
-- **7 günlük değişim:** —
-- **30 günlük değişim:** —
-- **Baz tarihi:** 2026-08-13 = 100
+- **Durum:** İlk v0.3 gözlemi bekleniyor.
 <!-- STATS_END -->
 
 ## Son 24 saatte
 
 <!-- MOVERS_START -->
-- **Dönem:** 2026-08-14 → 2026-08-15
-- **↑ Zamlanan:** 0 · **↓ Ucuzlayan:** 0 · **= Değişmeyen:** 127
-- **Karşılaştırılan:** 127/150 ürün · **Bugün gözlem dışı:** 23
-- **Yeni kaybolan:** 0 · **Geri dönen/yeni eşleşen:** 0
-
-Karşılaştırılabilen ürünlerde son 24 saatte fiyat değişimi gözlenmedi.
+İkinci v0.3 gözlemi geldikten sonra ürün tipi hareketleri burada gösterilecek.
 <!-- MOVERS_END -->
 
-Bu bölüm her günlük çalışmada otomatik güncellenir. `Yeni kaybolan`, bir önceki gün gözlenip bugün bulunamayan ürünleri; `geri dönen/yeni eşleşen` ise bugün yeniden karşılaştırmaya giren ürünleri gösterir. Böylece kalıcı olarak eşleşmeyen ürünlerle günlük veri kaybı birbirinden ayrılabilir.
+## Veri kalitesi
 
-## Neden Açık Sepet?
+<!-- QUALITY_START -->
+İlk kalite ölçümü bekleniyor.
+<!-- QUALITY_END -->
 
-Günlük market fiyatları kamuoyunun en sık gözlemlediği fiyatlardan biri olmasına rağmen, ürün eşleştirmesi ve zaman içindeki değişimleri yeniden üretilebilir biçimde takip etmek kolay değildir.
+## Neden v0.3?
 
-Açık Sepet bu problemi küçük ama disiplinli bir veri ürünü olarak ele alır:
+Açık Sepet'in ilk sürümleri yaklaşık 150 sabit SKU izliyordu. Bu yaklaşım teknik olarak basitti ancak tek bir markadaki kampanya, stok kaybı veya paket değişimi bir ürün grubunu gereğinden fazla oynatabiliyordu.
 
-- aynı ürünleri günler arasında mümkün olduğunca **aynı SKU** üzerinden izler,
-- mümkün olduğunda aynı **temsilci mağaza/depot** kaynaklarını korur,
-- ham günlük gözlemleri Git içinde sürümler,
-- sepet ve kategori ağırlıklarını açık dosyalarda tutar,
-- ana endeks ve alt endeksleri otomatik yeniden hesaplar,
-- veri kalitesi yeterli değilse gözlemi sessizce başka ürünle değiştirmek yerine eksik bırakır,
-- tek bir SKU'nun kaybolmasını bütün kategoriye mal etmez; kategoride yeterli karşılaştırılabilir ürün kaldığı sürece alt endeksi mevcut gözlemlerle yeniden normalize eder.
-
-Böylece endeksin yalnızca bugünkü değeri değil, **hangi ürünlerden ve hangi kurallarla üretildiği** de incelenebilir.
-
-## Nasıl çalışıyor?
-
-Her günlük çalışmada GitHub Actions:
-
-1. `config/basket.tsv` içindeki 150 ürün tanımını okur.
-2. Market Fiyatı servisinde her ürün için adayları arar.
-3. İlk başarılı eşleşmede ürün kimliğini `state/product-map.json` içinde sabitler.
-4. Mümkün olduğunda temsilci mağaza/depot kaynaklarını da sabit tutar.
-5. Geçerli fiyat gözlemlerini `data/snapshots/YYYY-MM-DD.json` dosyasına yazar.
-6. Minimum kapsama eşiğini doğrular.
-7. Grup ağırlıklı ana **Açık Sepet Market Endeksi**ni üretir.
-8. 12 tüketim grubu ile birleşik **Gıda ve alkolsüz içecekler** alt endeksini hesaplar.
-9. Önceki snapshot ile bugünü karşılaştırıp zamlanan, ucuzlayan, değişmeyen ve gözlemden düşen ürünleri çıkarır.
-10. README grafiğini ve istatistiklerini günceller.
-11. Gerçek bir veri değişikliği varsa bot commit'i oluşturup `main` branch'ine gönderir.
+v0.3'te gözlem birimi artık tek ürün değil **ürün tipi panelidir**. Örneğin `şampuan`, `spagetti makarna`, `yoğurt` veya `pirinç` için birden fazla marka ve paket ayrı SKU olarak izlenir. Panel hedefi ürün tipine göre değişir; geniş kategorilerde 20–30 veya daha fazla SKU bulunabilir. Toplam panel kapasitesi birkaç bin SKU düzeyindedir.
 
 ```text
 Market Fiyatı
     ↓
-150 sabit ürün
+100+ ürün tipi
     ↓
-SKU + temsilci depot sabitleme
+Her tip için sabit çoklu-SKU paneli
     ↓
-Günlük snapshot
+Gramaj / litre / adet normalizasyonu
     ↓
-Kapsama kontrolü
+Aynı SKU'nun zaman içindeki birim-fiyat relatifi
     ↓
-Ana Market Endeksi
+Ürün tipi elementary endeksi
     ↓
-12 kategori endeksi + Gıda Endeksi
+12 ana market kategorisi
     ↓
-24 saatlik fiyat hareketleri
-    ↓
-Grafik + Git geçmişi
+Açık Sepet Market Endeksi
 ```
 
-## Sepet — v0.2
+## Temel metodoloji
 
-| Grup | Ürün | Araştırma ağırlığı |
-|---|---:|---:|
-| Ekmek, tahıllar ve makarna | 18 | %14 |
-| Et ve et ürünleri | 15 | %15 |
-| Balık ve deniz ürünleri | 8 | %4 |
-| Süt ürünleri ve yumurta | 18 | %14 |
-| Yağlar | 8 | %6 |
-| Meyve | 14 | %8 |
-| Sebze | 18 | %11 |
-| Şeker, tatlı ve atıştırmalık | 14 | %8 |
-| Diğer gıda | 10 | %4 |
-| Alkolsüz içecekler | 12 | %5 |
-| Ev temizlik sarf malzemeleri | 9 | %7 |
-| Kişisel bakım ve kağıt ürünleri | 6 | %4 |
-| **Toplam** | **150** | **%100** |
+### 1. Ürün tipi paneli
 
-Grup içinde ürünler eşit pay alır; gruplar yukarıdaki araştırma ağırlıklarıyla birleştirilir.
+Ürün tipleri `config/product_types.tsv` dosyasında tanımlanır. Her ürün tipi için:
 
-**Bu ağırlıklar TÜİK'in resmî TÜFE ağırlıkları değildir.** Endeksin amacı resmî TÜFE'yi yeniden üretmek değil, market malları için açık ve yüksek frekanslı bir gösterge oluşturmaktır. Ayrıntılı hesaplama kuralları için [`METHOD.md`](METHOD.md) dosyasına bakın.
+- arama sorgusu,
+- beklenen ölçü birimi (`mass`, `volume`, `count`),
+- hedef SKU sayısı,
+- minimum SKU sayısı,
+- dahil / hariç kelime kuralları
 
-## Üretilen seriler
+saklanır.
 
-### Ana seri
+İlk başarılı v0.3 çalışmasında her ürün tipi için bir SKU paneli oluşturulur ve `state/v0.3-panels.json` içinde sabitlenir. Günlük çalışmalarda panel başka ürünlerle sessizce doldurulmaz. Panel değişikliği bilinçli bir metodoloji güncellemesi gerektirir.
 
-`data/index.csv`
+### 2. Birim fiyat
+
+Paket bilgileri başlıktan normalize edilir:
 
 ```text
-date,index,coverage,items,baseline_date
-2026-08-13,100.0,0.92,136,2026-08-13
+500 g       → 0.5 kg
+2 x 160 g   → 0.32 kg
+750 ml      → 0.75 L
+6 x 200 ml  → 1.2 L
+12'li       → 12 adet
 ```
 
-### Alt endeksler
+Böylece aynı SKU'nun paket boyutu değişirse bu değişim fiyat sinyaline yansıyabilir.
 
-`data/subindices.csv`, 12 tüketim grubuna ek olarak birleşik `food_total` serisini içerir.
+**Farklı markaların TL/kg veya TL/L seviyeleri doğrudan ortalanmaz.** Birim fiyat, aynı SKU'nun baz döneme göre fiyat relatifini hesaplamak için kullanılır.
 
-Örnek grup kimlikleri:
+### 3. Ürün tipi endeksi
 
-- `bread_cereals`
-- `meat`
-- `dairy_eggs`
-- `fruit`
-- `vegetables`
-- `household_cleaning`
-- `personal_paper`
-- `food_total`
-
-Kategori endeksleri, baz ve güncel günde karşılaştırılabilen ürünlerin fiyat relatiflerinden hesaplanır. Bir ürün geçici olarak bulunamazsa kategori tamamen düşmez; yeterli kategori kapsamı kaldığında mevcut ürünler kendi içinde yeniden normalize edilir. Bu yaklaşım **sessiz SKU ikamesi yapmadan eksik gözlemi tolere eder**.
-
-## Veri yapısı
+Bir SKU için:
 
 ```text
-acik-sepet/
-├── acik_sepet/                 # veri toplama ve endeks kodu
-├── config/
-│   ├── basket.tsv              # 150 ürünlük sepet
-│   └── categories.json         # kategori ağırlıkları
-├── data/
-│   ├── snapshots/
-│   │   └── YYYY-MM-DD.json     # günlük ham gözlem
-│   ├── index.csv               # ana market endeksi
-│   └── subindices.csv          # kategori + gıda endeksleri
-├── state/
-│   └── product-map.json        # sabit SKU/depot eşleştirmeleri
-├── charts/
-│   └── index.svg               # README grafiği
-├── tests/
-├── METHOD.md
-└── .github/workflows/
+relative(i,t) = unit_price(i,t) / unit_price(i,base)
 ```
 
-### Günlük snapshot
+Ürün tipi endeksi, hem bazda hem güncel günde bulunan sabit panel SKU'larının fiyat relatiflerinin geometrik ortalamasıdır:
 
-Her ürün gözlemi, seçilen ürün başlığını, hesaplanan medyan fiyatı ve kullanılan kaynak tekliflerini saklar. Eşleşmeyen ürünler `errors` alanında açıkça raporlanır; başka bir ürüne sessiz fallback yapılmaz.
+```text
+I(type,t) = 100 × geometric_mean(relative(i,t))
+```
+
+Bu sayede tek bir şampuandaki `%40` kampanya, şampuan kategorisini tek başına `%40` aşağı çekmez; çoklu-SKU panelindeki bir gözlem olur.
+
+Bir ürün tipinin yayımlanabilmesi için:
+
+- kendi `min_skus` eşiğini karşılaması,
+- baz panelinin en az `%50`'sinin güncel günde karşılaştırılabilir olması
+
+gerekir.
+
+### 4. Kategori ve ana endeks
+
+Ürün tipi endeksleri önce 12 ana market kategorisine toplanır. Kategori içinde ürün tipleri şimdilik eşit araştırma payına sahiptir. Ana kategoriler `config/categories.json` içindeki araştırma ağırlıklarıyla birleştirilir.
+
+Ana endeks ve kategori endeksleri en az `%60` ağırlık kapsamasıyla yayımlanır. Eksik gözlemlerin ağırlıkları mevcut karşılaştırılabilir panel üzerinde yeniden normalize edilir; model tabanlı fiyat imputasyonu yapılmaz.
+
+Ağırlıklar **TÜİK'in resmî tüketim ağırlıkları değildir**.
+
+Ayrıntılar: [`METHOD.md`](METHOD.md).
+
+## Üretilen veriler
+
+v0.3 verileri ayrı bir namespace altında tutulur:
+
+```text
+data/v0.3/
+├── snapshots/
+│   └── YYYY-MM-DD.csv
+├── type_indices.csv
+├── category_indices.csv
+├── index.csv
+└── latest-errors.json
+```
+
+### Günlük SKU snapshot
+
+Her satır yaklaşık olarak şunları içerir:
+
+```text
+date, group, type_id, product_key, title,
+quantity, unit, price, unit_price, offer_count
+```
+
+### Ürün tipi endeksleri
+
+`data/v0.3/type_indices.csv`
+
+```text
+date,type_id,label,group,index,coverage,skus,baseline_skus,baseline_date
+```
+
+### Kategori endeksleri
+
+`data/v0.3/category_indices.csv`
+
+### Ana endeks
+
+`data/v0.3/index.csv`
+
+## Panel sürekliliği ve eksik ürünler
+
+Açık Sepet karşılaştırılabilirliği ham SKU sayısından önce tutar.
+
+Bir panel SKU'su bir gün bulunamazsa:
+
+1. başka marka otomatik olarak onun yerine geçirilmez,
+2. ürün tipi yeterli sayıda aynı-SKU gözlemine sahipse kalan panelle hesaplanır,
+3. panel kapsaması ayrıca yayımlanır,
+4. minimum eşik altına düşerse ürün tipi o gün endekse girmez.
+
+Bu yaklaşım katalog değişimini fiyat değişimi sanma riskini azaltırken tekil stok kayıplarına karşı paneli dayanıklı tutar.
 
 ## Otomasyon
 
@@ -168,25 +175,35 @@ Ana workflow:
 .github/workflows/daily.yml
 ```
 
-Zamanlama:
+Her gün:
 
 ```text
-05:45 UTC — her gün
+05:45 UTC
 ```
 
-Bu saat:
+çalışır. Bu saat Türkiye'de **08:45**, Berlin'de yaz saatinde **07:45 CEST**, kış saatinde **06:45 CET**'tir. GitHub Actions planlanan işleri yoğunluk nedeniyle gecikmeli başlatabilir.
 
-- Türkiye'de **08:45**,
-- Berlin'de yaz saatinde **07:45 CEST**,
-- Berlin'de kış saatinde **06:45 CET**
+Pipeline sırası:
 
-anlamına gelir. GitHub Actions zamanlanmış işleri yoğunluk durumuna göre gecikmeli başlatabilir.
+```text
+pytest
+  ↓
+ürün tipi aramaları + sabit panel gözlemi
+  ↓
+kalite doğrulama
+  ↓
+ürün tipi endeksleri
+  ↓
+kategori + ana endeks
+  ↓
+README + grafik
+  ↓
+bot commit
+```
 
-Ana workflow başarılı olduktan sonra `.github/workflows/subindices.yml` alt endeksleri günceller.
+Workflow ayrıca GitHub arayüzünden manuel tetiklenebilir:
 
-Her iki akış da GitHub arayüzünden manuel olarak tetiklenebilir:
-
-**Actions → ilgili workflow → Run workflow**
+**Actions → Daily Açık Sepet → Run workflow**
 
 ## Yerelde çalıştırma
 
@@ -198,6 +215,11 @@ cd acik-sepet
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+pytest -q
+python -m acik_sepet.collect_v03
+python -m acik_sepet.validate_v03
+python -m acik_sepet.index_v03
+python -m acik_sepet.report_v03
 ```
 
 Windows PowerShell:
@@ -206,71 +228,43 @@ Windows PowerShell:
 .\.venv\Scripts\Activate.ps1
 ```
 
-Testler:
+## v0.2 geçmişi
 
-```bash
-pytest -q
-```
-
-Günlük fiyat toplama:
-
-```bash
-python -m acik_sepet.collect
-python -m acik_sepet.validate --min-coverage 0.60
-python -m acik_sepet.index
-python -m acik_sepet.subindices
-python -m acik_sepet.report
-```
-
-## Metodoloji ilkeleri
-
-Açık Sepet'in temel tasarım tercihi **karşılaştırılabilirliği ürün sayısından önce tutmaktır**.
-
-- Ürün kimliği ilk güvenilir eşleşmeden sonra sabitlenir.
-- Temsilci kaynak kaybolursa mümkün olduğunca seri başka bir mağazaya sessizce taşınmaz.
-- Ürün bulunamazsa gözlem eksik kalabilir.
-- Eksik ürünler aynı kategoride yeterli karşılaştırılabilir gözlem kaldığı sürece kategori endeksini bozmaz; kalan ürünlerin ağırlıkları yeniden normalize edilir.
-- Bir kategorinin yayımlanması için yeterli kapsama gerekir; tekil ürün eksiklikleri kategori içindeki diğer gözlemlerle telafi edilir, fakat farklı SKU'ya sessiz ikame yapılmaz.
-- Ana seri yalnızca yeterli ağırlıklı kapsama olduğunda yayımlanır.
-- Mevcut sürümde model tabanlı fiyat imputasyonu yapılmaz.
-- Sepet veya ağırlık metodolojisi anlamlı biçimde değişirse yeni sepet versiyonu ve yeni baz dönemi açılmalıdır.
-
-Detaylar: [`METHOD.md`](METHOD.md).
+v0.3 yeni bir metodoloji ve yeni baz dönemidir. Eski 150-SKU serisi yeni metodolojiyle geriye dönük yeniden yazılmaz. v0.2 gözlemleri Git geçmişinde korunur; v0.3 serisi kendi `data/v0.3/` dizininde başlar.
 
 ## Sınırlamalar
 
 Açık Sepet şu anda:
 
-- yalnızca markette satılan mal kategorilerine odaklanır,
+- yalnızca markette satılan mallara odaklanır,
 - resmî TÜFE kapsamını temsil etmez,
-- şehir ve mağaza örneklemesini tam nüfus ağırlıklı bir tasarımla modellemez,
-- promosyon, stok durumu ve ürün ambalaj değişikliklerinden etkilenebilir,
-- veri kaynağındaki ürün katalog değişikliklerine bağımlıdır,
-- henüz mevsimsellik veya kalite değişimi düzeltmesi uygulamaz.
+- şehir ve mağaza örneklemesini nüfus ağırlıklı ulusal bir tasarımla modellemez,
+- ürün başlığından gramaj/hacim/adet ayrıştırdığı için hatalı katalog başlıklarından etkilenebilir,
+- promosyonları gerçek tüketici fiyatı olarak gözlemler,
+- kategori içindeki ürün tipi ağırlıklarını henüz tüketim harcaması verisiyle kalibre etmez,
+- mevsimsellik ve kalite değişimi için hedonik düzeltme uygulamaz.
 
-Bu nedenle seri **araştırma ve yüksek frekanslı izleme göstergesi** olarak değerlendirilmelidir.
+Bu nedenle seri **araştırma ve yüksek frekanslı market fiyatı göstergesi** olarak değerlendirilmelidir.
 
 ## Veri kaynağı
 
-MVP, [`marketfiyati.org.tr`](https://marketfiyati.org.tr/) arayüzünün kullandığı veri servisine düşük hacimli sorgular gönderir.
+MVP, [`marketfiyati.org.tr`](https://marketfiyati.org.tr/) arayüzünün kullandığı veri servisine düşük ve kontrollü hacimde ürün-tipi sorguları gönderir. Repo kaynağın toplu aynasını oluşturmaz; yalnızca sabit paneller için gerekli günlük gözlemleri saklar.
 
-Repo, kaynağın toplu aynasını oluşturmaz. Yalnızca endeks için seçilen ürünlere ilişkin gerekli günlük gözlemleri saklar. Kaynak verinin kullanım ve yeniden dağıtım koşulları için [`NOTICE.md`](NOTICE.md) dosyasına bakın.
+Kaynak ve yeniden kullanım notları: [`NOTICE.md`](NOTICE.md).
 
 ## Katkı
 
-Kod, ürün eşleştirme mantığı, testler ve metodoloji geliştirmeleri pull request ile yapılabilir.
+Kod, ürün tipi sınıflandırması, parser testleri ve metodoloji geliştirmeleri pull request ile yapılabilir.
 
-Otomatik üretilen `data/` ve `state/` dosyalarının elle değiştirilmesi yerine problemi üreten toplama/eşleştirme katmanının düzeltilmesi tercih edilir.
+Otomatik üretilen `data/` ve `state/` dosyalarının elle değiştirilmesi yerine problemi üreten toplama veya sınıflandırma katmanının düzeltilmesi tercih edilir.
 
 Katkı rehberi: [`CONTRIBUTING.md`](CONTRIBUTING.md)
 
 ## Lisans ve veri hakları
 
-Bu depo özgün proje kodu ile üçüncü taraf kaynaklardan elde edilen fiyat gözlemlerini ayrı değerlendirir.
-
 - Özgün Python kodu, otomasyon ve proje yapılandırması MIT lisansı altındadır: [`LICENSE-CODE`](LICENSE-CODE).
 - Kaynak fiyat verileri üzerinde proje ayrıca bir telif veya yeniden lisanslama iddiasında bulunmaz.
-- Veri kaynağı ve kullanım notları: [`LICENSE`](LICENSE) ve [`NOTICE.md`](NOTICE.md).
+- Ayrıntılar: [`LICENSE`](LICENSE) ve [`NOTICE.md`](NOTICE.md).
 
 ## Proje sahibi
 
