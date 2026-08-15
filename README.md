@@ -11,7 +11,14 @@ Türkiye'deki zincir market fiyatlarını **ürün tipi → çoklu SKU → kateg
 ![Açık Sepet günlük endeksi](charts/index.svg)
 
 <!-- STATS_START -->
-- **Durum:** İlk v0.3 gözlemi bekleniyor.
+- **Son değer:** 100.00
+- **Son güncelleme:** 2026-08-16
+- **Aktif ürün tipi:** 110
+- **Karşılaştırılabilir SKU:** 2096
+- **Kategori ağırlık kapsaması:** %100
+- **7 günlük değişim:** —
+- **30 günlük değişim:** —
+- **Baz tarihi:** 2026-08-16 = 100
 <!-- STATS_END -->
 
 ## Son 24 saatte
@@ -23,7 +30,11 @@ Türkiye'deki zincir market fiyatlarını **ürün tipi → çoklu SKU → kateg
 ## Veri kalitesi
 
 <!-- QUALITY_START -->
-İlk kalite ölçümü bekleniyor.
+- **Aktif ürün tipi:** 110/130
+- **SKU panel kapsaması:** 2096/2096 (100.0%)
+- **%70'in altında panel kapsaması olan tip:** 0
+- **Yayımlanan ana kategori:** 12
+- Tek bir SKU kaybolduğunda başka markaya sessiz ikame yapılmaz; ürün tipi yeterli paneli koruyorsa kalan aynı-SKU relatifleriyle devam eder.
 <!-- QUALITY_END -->
 
 ## Neden v0.3?

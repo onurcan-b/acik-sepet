@@ -1,0 +1,13 @@
+date,group_id,label,scope,weight,index,coverage,types,baseline_types
+2026-08-16,bread_cereals,"Ekmek, tahıllar ve makarna",food,0.14,100.0,1.0,10,10
+2026-08-16,meat,Et ve et ürünleri,food,0.15,100.0,1.0,10,10
+2026-08-16,fish,Balık ve deniz ürünleri,food,0.04,100.0,1.0,2,2
+2026-08-16,dairy_eggs,Süt ürünleri ve yumurta,food,0.14,100.0,1.0,13,13
+2026-08-16,oils_fats,Yağlar,food,0.06,100.0,1.0,4,4
+2026-08-16,fruit,Meyve,food,0.08,100.0,1.0,10,10
+2026-08-16,vegetables,Sebze,food,0.11,100.0,1.0,10,10
+2026-08-16,sugar_snacks,"Şeker, tatlı ve atıştırmalık",food,0.08,100.0,1.0,11,11
+2026-08-16,other_food,Diğer gıda,food,0.04,100.0,1.0,10,10
+2026-08-16,drinks,Alkolsüz içecekler,food,0.05,100.0,1.0,10,10
+2026-08-16,household_cleaning,Ev temizlik sarf malzemeleri,nonfood,0.07,100.0,1.0,9,9
+2026-08-16,personal_paper,Kişisel bakım ve kağıt ürünleri,nonfood,0.04,100.0,1.0,11,11
