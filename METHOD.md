@@ -1,63 +1,151 @@
-# Metodoloji — v0.2
+# Metodoloji — v0.3
 
-Açık Sepet, market ürünlerinin günlük fiyat hareketini izleyen deneysel bir sabit-sepet endeksidir.
+Açık Sepet, zincir marketlerde satılan malların günlük fiyat hareketini izleyen deneysel bir çoklu-SKU panel endeksidir.
 
-## Sepet
+## 1. Ölçüm birimi
 
-- 150 ürün
-- 12 grup
-- grup ağırlıkları `config/categories.json`
-- ürün tanımları `config/basket.tsv`
+v0.2'de temel gözlem birimi tek bir sabit SKU idi. v0.3'te temel ekonomik ölçüm birimi **ürün tipi**dir.
 
-Grup ağırlıkları araştırma amaçlıdır ve resmi kurum ağırlıkları değildir.
+Örnekler:
 
-## Süreklilik
+- şampuan,
+- spagetti makarna,
+- pirinç,
+- yoğurt,
+- ayçiçek yağı,
+- domates.
 
-İlk başarılı eşleşmede ürün kimliği sabitlenir. Mümkün olduğunda temsilci mağaza/depot kimliği de sabitlenir. Sonraki gün başka bir SKU veya kaynak dönerse seri sessizce değiştirilmez; gözlem eksik sayılır.
+Her ürün tipi birden fazla sabit SKU'dan oluşur. Ürün tipleri `config/product_types.tsv` içinde tanımlanır.
 
-Bu, tek tek ürünlerde eksik gözlem olabileceği anlamına gelir. Ancak endeks tasarımı tek bir SKU'nun varlığına bağlı değildir: aynı kategori içinde yeterli sayıda karşılaştırılabilir ürün kaldığında kategori endeksi mevcut ürünlerin fiyat relatifleri üzerinden hesaplanmaya devam eder.
+## 2. Sabit SKU paneli
 
-Bu yaklaşımın amacı iki riski aynı anda azaltmaktır:
+İlk başarılı v0.3 toplamasında her ürün tipi için arama sonuçlarından uygun SKU'lar seçilir. Seçim sırasında:
 
-1. farklı bir SKU'ya geçip ürün kalitesi/gramaj farkını yanlışlıkla fiyat değişimi sanmamak,
-2. tek bir ürün geçici olarak bulunamadı diye bütün kategoriyi kaybetmemek.
+- dahil / hariç kelime kuralları,
+- beklenen ölçü biriminin parse edilebilmesi,
+- geçerli fiyat teklifi bulunması,
+- aynı SKU'nun başka bir ürün tipinde daha önce sahiplenilmemiş olması
 
-## Hesap
+kontrol edilir.
 
-Her ürünün günlük fiyatı, mevcut sabit kaynak fiyatlarının medyanıdır. Baz gündeki fiyat 100 kabul edilir. Grup içinde ürünler eşit pay alır; gruplar daha sonra `config/categories.json` içindeki araştırma ağırlıklarıyla birleştirilir.
+Panel `state/v0.3-panels.json` içinde sabitlenir. Günlük çalışmalarda yeni bir SKU otomatik olarak kayıp SKU'nun yerine geçirilmez. Panel kompozisyonu ancak açık bir metodoloji/panel güncellemesiyle değiştirilmelidir.
 
-Günlük ana endeks, hem baz hem güncel günde fiyatı bulunan ürünlerin ağırlıklı fiyat relatiflerinin ortalamasıdır. Eksik ürünlerin payı yeniden normalize edilir ve kapsama ayrıca yayımlanır.
+Bu kural, ürün kalitesi veya marka değişimini yanlışlıkla fiyat değişimi olarak ölçme riskini azaltır.
 
-### Kategori kapsaması
+## 3. Birim normalizasyonu
 
-Her kategori alt endeksi için baz ve güncel günde birlikte gözlenebilen ürünlerin oranı hesaplanır.
+Ürün başlığındaki paket miktarı ortak birime çevrilir:
 
-- kategori endeksi için minimum kapsama: **%60**,
-- ana seri için minimum ağırlıklı kapsama: **%60**,
-- birleşik gıda endeksi yalnızca yeterli kapsamalı gıda gruplarını kullanır ve kalan grup ağırlıklarını yeniden normalize eder.
+- kütle → kg,
+- hacim → litre,
+- adetli ürün → count.
 
-Örneğin 18 ürünlük bir kategoride 15 ürün karşılaştırılabiliyorsa kategori endeksi bu 15 ürünün fiyat relatiflerinden hesaplanır. Bir SKU'nun eksikliği otomatik olarak başka bir SKU ile doldurulmaz.
+Desteklenen örnekler:
 
-Bu nedenle günlük `136/150` gibi bir toplam kapsama değeri tek başına veri kalitesi sorunu anlamına gelmez. Daha önemli sinyaller şunlardır:
+```text
+500 g       → 0.5 kg
+2 x 160 g   → 0.32 kg
+750 ml      → 0.75 L
+6 x 200 ml  → 1.2 L
+12'li       → 12 count
+10 adet     → 10 count
+```
 
-- kategori bazında kapsamanın eşik altına düşmesi,
-- bir önceki güne göre yeni kaybolan ürün sayısının yükselmesi,
-- sabit SKU/depot eşleşmelerinin değişmesi.
+SKU birim fiyatı:
 
-README'deki **Son 24 saatte** bölümü bu günlük kayıp/geri dönüş hareketlerini ayrıca raporlar.
+```text
+u(i,t) = package_price(i,t) / package_quantity(i,t)
+```
 
-## Birim fiyat ve ikame
+olarak hesaplanır.
 
-Mevcut v0.2 sürümünde farklı SKU'lar arasında otomatik birim-fiyat ikamesi yapılmaz. Aynı SKU'nun zaman içindeki fiyat relatifi izlendiği için paket boyutu sabit kaldığı sürece endeks karşılaştırması doğrudan yapılabilir.
+Birim fiyat seviyeleri farklı markalar arasında doğrudan ortalanmaz. Normalizasyonun temel amacı aynı SKU'nun zaman içindeki relatifi ile paket küçülmesi/büyümesinin fiyat sinyaline yansıyabilmesidir.
 
-İleride güvenilir gramaj/adet/litre normalizasyonu eklendiğinde, aynı dar ürün sınıfı içinde birim fiyat temelli daha geniş bir elementary-index yaklaşımı uygulanabilir. Böyle bir değişiklik metodoloji ve sepet versiyonu güncellemesi gerektirir.
+## 4. SKU fiyatı
 
-## Eksik gözlem
+Bir SKU için aynı gün Market Fiyatı sonucunda bulunan geçerli mağaza/depot fiyatlarının medyanı alınır. Günlük snapshot'ta tekliflerin tamamı yerine yalnızca medyan paket fiyatı, birim fiyat ve teklif sayısı saklanır.
 
-Eksik fiyatlara şu aşamada model tabanlı imputasyon yapılmaz. Kategori ve ana endeks, yayımlanan kapsama değerleriyle birlikte yalnızca mevcut karşılaştırılabilir gözlemlerden hesaplanır.
+Bu tercih günlük veri boyutunu sınırlarken tek bir mağaza fiyatına bağımlılığı azaltır.
 
-## Sınırlamalar
+## 5. Elementary ürün tipi endeksi
 
-Bu çalışma genel tüketici fiyat endeksi değildir. Kira, konut, ulaşım, sağlık, eğitim ve hizmetleri kapsamaz. Şehir ve mağaza örneklemesi ileriki sürümlerde genişletilecektir.
+Baz gününde ve güncel günde birlikte gözlenen aynı panel SKU'ları için:
 
-Sepet veya ağırlık metodolojisi anlamlı biçimde değiştiğinde yeni bir sepet versiyonu ve yeni baz dönemi başlatılır.
+```text
+r(i,t) = u(i,t) / u(i,0)
+```
+
+hesaplanır.
+
+Ürün tipi endeksi fiyat relatiflerinin geometrik ortalamasıdır:
+
+```text
+I(k,t) = 100 × exp(mean(log(r(i,t))))
+```
+
+Bu Jevons-benzeri elementary yaklaşım, tek bir SKU'daki büyük kampanyanın bütün ürün tipini tek başına belirlemesini engeller.
+
+Bir ürün tipinin yayımlanması için:
+
+- baz gününde en az kendi `min_skus` sayısı kadar SKU bulunması,
+- güncel günde en az `min_skus` aynı SKU'nun bulunması,
+- baz panel SKU'larının en az %50'sinin güncel günde karşılaştırılabilmesi
+
+gerekir.
+
+## 6. Kategori endeksi
+
+Ürün tipleri 12 market grubuna ayrılır. Aynı kategori içindeki uygun ürün tipleri v0.3'te eşit araştırma payıyla birleştirilir.
+
+Kategori endeksi, mevcut ürün tipi relatiflerinin ağırlıklı aritmetik ortalamasıdır. Kategori en az %60 ürün-tipi ağırlık kapsamasıyla yayımlanır.
+
+Bu kategori-içi ağırlıklar tüketim harcaması ağırlıkları değildir; ileriki sürümlerde ampirik harcama verisiyle kalibre edilmesi planlanmaktadır.
+
+## 7. Ana Açık Sepet endeksi
+
+12 ana grup `config/categories.json` içindeki araştırma ağırlıklarıyla birleştirilir.
+
+Ana endeks için en az %60 kategori ağırlık kapsaması gerekir. Eksik kategori/ürün tipi payları mevcut karşılaştırılabilir panel üzerinde yeniden normalize edilir.
+
+Model tabanlı fiyat imputasyonu yapılmaz.
+
+## 8. Eksik gözlem
+
+Bir SKU geçici olarak bulunamazsa başka bir SKU ile günlük ikame yapılmaz. Ürün tipi yeterli paneli koruyorsa kalan aynı-SKU relatifleriyle hesaplanmaya devam eder. Eşik altına düşerse o ürün tipi ilgili gün yayımlanmaz.
+
+Bu nedenle veri kalitesinde izlenen temel göstergeler:
+
+- aktif ürün tipi sayısı,
+- karşılaştırılabilir SKU sayısı,
+- ürün tipi panel kapsaması,
+- kategori ağırlık kapsaması,
+- parser veya API hatalarıdır.
+
+## 9. Panel yenileme
+
+Yeni ürünler, tamamen kaybolan SKU'lar veya katalog yapısındaki kalıcı değişiklikler zamanla panel yenilemesini gerektirebilir. Panel yenilemesi günlük collector içinde otomatik yapılmaz.
+
+Anlamlı panel/metodoloji değişikliği:
+
+1. yeni sürüm numarası,
+2. yeni baz dönemi,
+3. değişiklik notu
+
+gerektirir.
+
+## 10. v0.2 ile karşılaştırılabilirlik
+
+v0.3 farklı bir elementary endeks metodolojisine sahiptir. v0.2'nin 150-SKU serisi v0.3 ile geriye dönük yeniden hesaplanmaz. Eski seri Git geçmişinde korunur; v0.3 kendi `data/v0.3/` namespace'inde yeni bazla başlar.
+
+## 11. Sınırlamalar
+
+Açık Sepet genel tüketici fiyat endeksi değildir. Özellikle:
+
+- kira, konut, ulaştırma, sağlık, eğitim ve hizmetleri kapsamaz,
+- şehir/mağaza örneklemesi nüfus ağırlıklı ulusal örneklem değildir,
+- ürün başlığındaki gramaj/hacim/adet bilgisinin doğruluğuna bağlıdır,
+- promosyon fiyatlarını gözlenen tüketici fiyatı olarak kabul eder,
+- kategori içindeki ürün tipi ağırlıkları henüz gerçek harcama paylarına dayanmaz,
+- kalite değişimi ve mevsimsellik için resmî istatistiklerdeki düzeyde düzeltme uygulamaz.
+
+Seri araştırma ve yüksek frekanslı market fiyatı göstergesi olarak yorumlanmalıdır.
