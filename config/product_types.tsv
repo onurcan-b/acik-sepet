@@ -1,0 +1,131 @@
+group	id	label	query	unit	target_skus	min_skus	include_tokens	exclude_tokens
+bread_cereals	bread_white	Beyaz ekmek	beyaz ekmek	mass	18	5	ekmek	tost,tam buğday
+bread_cereals	bread_toast	Tost ekmeği	tost ekmeği	mass	20	5	tost,ekmek	
+bread_cereals	bread_wholewheat	Tam buğday ekmeği	tam buğday ekmeği	mass	18	5	tam,buğday,ekmek	tost
+bread_cereals	flour_wheat	Buğday unu	buğday unu	mass	24	6	un	mısır,galeta
+bread_cereals	rice	Pirinç	pirinç	mass	30	8	pirinç	
+bread_cereals	bulgur	Bulgur	bulgur	mass	26	7	bulgur	
+bread_cereals	pasta_spaghetti	Spagetti makarna	spagetti makarna	mass	24	6	spagetti	
+bread_cereals	pasta_other	Diğer makarna	makarna	mass	30	8	makarna	spagetti,şehriye,kuskus
+bread_cereals	vermicelli	Şehriye	şehriye	mass	20	5	şehriye	
+bread_cereals	oats	Yulaf ezmesi	yulaf ezmesi	mass	24	6	yulaf	
+bread_cereals	breakfast_cereal	Kahvaltılık gevrek	mısır gevreği	mass	24	6	gevrek	
+bread_cereals	semolina	İrmik	irmik	mass	18	5	irmik	
+meat	beef_mince	Dana kıyma	dana kıyma	mass	20	5	dana,kıyma	kuzu
+meat	beef_cubes	Dana kuşbaşı / sote	dana kuşbaşı	mass	20	5	dana	pastırma,sucuk
+meat	chicken_breast	Tavuk göğüs	tavuk göğüs	mass	20	5	tavuk,göğüs	
+meat	chicken_thigh	Tavuk but / baget	tavuk but	mass	20	5	tavuk,but	
+meat	whole_chicken	Bütün piliç	bütün piliç	mass	16	4	piliç	
+meat	turkey	Hindi eti	hindi fileto	mass	16	4	hindi	konserve
+meat	sucuk	Sucuk	sucuk	mass	28	7	sucuk	
+meat	salami	Salam	salam	mass	24	6	salam	
+meat	sausage	Sosis	sosis	mass	24	6	sosis	
+meat	meatballs	Köfte	dondurulmuş köfte	mass	20	5	köfte	
+fish	tuna	Ton balığı	ton balığı	mass	30	8	ton,balığı	
+fish	sardine	Konserve sardalya	sardalya konserve	mass	16	4	sardalya	
+fish	smoked_salmon	Somon füme	somon füme	mass	18	5	somon,füme	
+fish	salmon	Somon fileto	somon fileto	mass	16	4	somon	füme
+fish	frozen_fish	Dondurulmuş balık	dondurulmuş balık	mass	20	5	balık	parmak
+fish	fish_fingers	Balık parmak	balık parmak	mass	16	4	balık,parmak	
+dairy_eggs	milk	İçme sütü	süt 1 litre	volume	30	8	süt	ayran,kefir,krema
+dairy_eggs	milk_lactosefree	Laktozsuz süt	laktozsuz süt	volume	20	5	laktozsuz,süt	
+dairy_eggs	yogurt	Yoğurt	yoğurt	mass	30	8	yoğurt	süzme
+dairy_eggs	strained_yogurt	Süzme yoğurt	süzme yoğurt	mass	22	6	süzme,yoğurt	
+dairy_eggs	ayran	Ayran	ayran	volume	24	6	ayran	
+dairy_eggs	kefir	Kefir	kefir	volume	20	5	kefir	
+dairy_eggs	white_cheese	Beyaz peynir	beyaz peynir	mass	30	8	beyaz,peynir	
+dairy_eggs	kasar	Kaşar peyniri	kaşar peyniri	mass	30	8	kaşar	
+dairy_eggs	labneh	Labne	labne	mass	24	6	labne	
+dairy_eggs	cream_cheese	Krem peynir	krem peynir	mass	24	6	krem,peynir	
+dairy_eggs	mozzarella	Mozzarella	mozzarella	mass	18	5	mozzarella	
+dairy_eggs	eggs	Yumurta	yumurta	count	30	8	yumurta	
+dairy_eggs	cream	Krema	krema	volume	20	5	krema	
+oils_fats	sunflower_oil	Ayçiçek yağı	ayçiçek yağı	volume	30	8	ayçiçek	
+oils_fats	olive_oil	Zeytinyağı	zeytinyağı	volume	30	8	zeytinyağı	
+oils_fats	butter	Tereyağı	tereyağı	mass	30	8	tereyağı	
+oils_fats	margarine	Margarin	margarin	mass	22	6	margarin	
+oils_fats	corn_oil	Mısırözü yağı	mısırözü yağı	volume	18	5	mısırözü	
+fruit	banana	Muz	muz kg	mass	16	4	muz	
+fruit	apple	Elma	elma kg	mass	18	5	elma	
+fruit	orange	Portakal	portakal kg	mass	16	4	portakal	
+fruit	mandarin	Mandalina	mandalina kg	mass	16	4	mandalina	
+fruit	lemon	Limon	limon kg	mass	16	4	limon	
+fruit	pear	Armut	armut kg	mass	16	4	armut	
+fruit	peach	Şeftali	şeftali kg	mass	16	4	şeftali	
+fruit	grape	Üzüm	üzüm kg	mass	16	4	üzüm	
+fruit	watermelon	Karpuz	karpuz kg	mass	14	4	karpuz	
+fruit	melon	Kavun	kavun kg	mass	14	4	kavun	
+fruit	strawberry	Çilek	çilek	mass	16	4	çilek	
+fruit	kiwi	Kivi	kivi kg	mass	14	4	kivi	
+fruit	avocado	Avokado	avokado adet	count	14	4	avokado	
+vegetables	tomato	Domates	domates kg	mass	18	5	domates	cherry
+vegetables	cherry_tomato	Cherry domates	cherry domates	mass	16	4	cherry,domates	
+vegetables	cucumber	Salatalık	salatalık kg	mass	16	4	salatalık	
+vegetables	pepper	Biber	biber kg	mass	20	5	biber	
+vegetables	potato	Patates	patates kg	mass	18	5	patates	cips
+vegetables	onion	Kuru soğan	kuru soğan kg	mass	18	5	soğan	
+vegetables	garlic	Sarımsak	sarımsak	mass	14	4	sarımsak	
+vegetables	eggplant	Patlıcan	patlıcan kg	mass	16	4	patlıcan	
+vegetables	zucchini	Kabak	kabak kg	mass	16	4	kabak	çekirdek
+vegetables	carrot	Havuç	havuç kg	mass	16	4	havuç	
+vegetables	lettuce	Marul	marul adet	count	14	4	marul	
+vegetables	spinach	Ispanak	ıspanak	mass	14	4	ıspanak	
+vegetables	parsley	Maydanoz	maydanoz demet	count	12	3	maydanoz	
+vegetables	broccoli	Brokoli	brokoli	mass	14	4	brokoli	
+vegetables	cauliflower	Karnabahar	karnabahar	count	12	3	karnabahar	
+vegetables	mushroom	Kültür mantarı	kültür mantarı	mass	16	4	mantar	
+vegetables	green_beans	Taze fasulye	taze fasulye kg	mass	14	4	taze,fasulye	
+sugar_snacks	sugar	Toz şeker	toz şeker	mass	24	6	şeker	pudra
+sugar_snacks	honey	Bal	bal	mass	28	7	bal	balık
+sugar_snacks	jam	Reçel	reçel	mass	28	7	reçel	
+sugar_snacks	chocolate	Çikolata	sütlü çikolata	mass	30	8	çikolata	
+sugar_snacks	biscuits	Bisküvi	bisküvi	mass	30	8	bisküvi	
+sugar_snacks	wafer	Gofret	gofret	mass	26	7	gofret	
+sugar_snacks	chips	Patates cipsi	patates cipsi	mass	28	7	cips	
+sugar_snacks	nuts	Kuruyemiş	karışık kuruyemiş	mass	24	6	kuruyemiş	
+sugar_snacks	icecream	Dondurma	dondurma	mass	26	7	dondurma	
+sugar_snacks	halva	Helva	tahin helvası	mass	22	6	helva	
+sugar_snacks	spread	Kakaolu fındık kreması	fındık kreması	mass	24	6	fındık,krema	
+sugar_snacks	candy	Şekerleme	şekerleme	mass	22	6	şekerleme	
+other_food	tomato_paste	Salça	domates salçası	mass	26	7	salça	
+other_food	lentils	Mercimek	mercimek	mass	26	7	mercimek	çorba
+other_food	beans	Kuru fasulye	kuru fasulye	mass	24	6	fasulye	konserve,taze
+other_food	chickpeas	Nohut	nohut	mass	24	6	nohut	
+other_food	canned_veg	Konserve sebze	konserve mısır	mass	20	5	konserve,mısır	
+other_food	soup	Hazır çorba	hazır çorba	mass	24	6	çorba	
+other_food	ketchup	Ketçap	ketçap	mass	24	6	ketçap	
+other_food	mayonnaise	Mayonez	mayonez	mass	24	6	mayonez	
+other_food	salt	Tuz	tuz	mass	22	6	tuz	
+other_food	vinegar	Sirke	sirke	volume	22	6	sirke	
+drinks	black_tea	Siyah çay	siyah çay	mass	30	8	çay	soğuk,ice
+ drinks	turkish_coffee	Türk kahvesi	türk kahvesi	mass	28	7	türk,kahvesi	
+ drinks	instant_coffee	Çözünebilir kahve	granül kahve	mass	24	6	kahve	türk,filtre
+ drinks	filter_coffee	Filtre kahve	filtre kahve	mass	24	6	filtre,kahve	
+ drinks	cola	Kola	kola	volume	30	8	kola	
+ drinks	fruit_juice	Meyve suyu	meyve suyu	volume	30	8	meyve,suyu	
+ drinks	iced_tea	Soğuk çay	soğuk çay	volume	24	6	soğuk,çay	
+ drinks	mineral_water	Maden suyu	maden suyu	volume	24	6	maden,suyu	
+ drinks	water	İçme suyu	su 1.5 litre	volume	24	6	su	maden
+ drinks	energy_drink	Enerji içeceği	enerji içeceği	volume	22	6	enerji	
+ drinks	soda	Gazoz	gazoz	volume	22	6	gazoz	
+household_cleaning	dish_liquid	Elde bulaşık deterjanı	bulaşık deterjanı sıvı	volume	28	7	bulaşık	makine,tablet
+household_cleaning	dishwasher_tabs	Bulaşık makinesi tableti	bulaşık makinesi tableti	count	28	7	bulaşık,tablet	
+household_cleaning	laundry_powder	Toz çamaşır deterjanı	toz çamaşır deterjanı	mass	28	7	çamaşır,deterjan	sıvı
+household_cleaning	laundry_liquid	Sıvı çamaşır deterjanı	sıvı çamaşır deterjanı	volume	28	7	çamaşır,deterjan	toz
+household_cleaning	softener	Yumuşatıcı	çamaşır yumuşatıcı	volume	26	7	yumuşatıcı	
+household_cleaning	bleach	Çamaşır suyu	çamaşır suyu	volume	24	6	çamaşır,suyu	
+household_cleaning	surface_cleaner	Yüzey temizleyici	yüzey temizleyici	volume	26	7	yüzey	
+household_cleaning	garbage_bags	Çöp torbası	çöp torbası	count	24	6	çöp,torba	
+household_cleaning	sponge	Bulaşık süngeri	bulaşık süngeri	count	20	5	sünger	
+household_cleaning	cleaning_cloth	Temizlik bezi	temizlik bezi	count	20	5	bez	ıslak,mendil
+personal_paper	shampoo	Şampuan	şampuan	volume	32	8	şampuan	saç kremi,serum
+personal_paper	shower_gel	Duş jeli	duş jeli	volume	28	7	duş,jel	
+personal_paper	soap_liquid	Sıvı sabun	sıvı sabun	volume	28	7	sıvı,sabun	
+personal_paper	soap_bar	Kalıp sabun	katı sabun	mass	24	6	sabun	sıvı
+personal_paper	toothpaste	Diş macunu	diş macunu	volume	28	7	diş,macunu	
+personal_paper	toothbrush	Diş fırçası	diş fırçası	count	24	6	diş,fırça	
+personal_paper	deodorant	Deodorant	deodorant	volume	28	7	deodorant	
+personal_paper	toilet_paper	Tuvalet kağıdı	tuvalet kağıdı	count	30	8	tuvalet,kağıdı	
+personal_paper	paper_towel	Kağıt havlu	kağıt havlu	count	28	7	kağıt,havlu	
+personal_paper	wet_wipes	Islak mendil	ıslak mendil	count	26	7	ıslak,mendil	
+personal_paper	tissues	Kağıt mendil	kağıt mendil	count	22	6	mendil	ıslak
