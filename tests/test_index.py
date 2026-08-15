@@ -1,4 +1,4 @@
-from acik_sepet.index_v03 import build_type_indices, geometric_mean
+from acik_sepet.index import build_type_indices, geometric_mean
 
 
 def test_geometric_mean():
