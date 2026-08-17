@@ -10,7 +10,7 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v7
         with:
@@ -52,5 +52,9 @@ jobs:
               raise SystemExit("inflation chart was not generated correctly")
           print("published history and chart are stable")
           PY
+      - name: Live source-aware collector smoke
+        run: |
+          python -m acik_sepet.collect
+          python -m acik_sepet.validate --min-type-coverage 0.60 --min-skus 300
       - name: Working tree sanity
         run: git diff --check
