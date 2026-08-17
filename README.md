@@ -11,10 +11,10 @@ Türkiye'deki zincir market fiyatlarını **ürün tipi → çoklu SKU → kateg
 ![Açık Sepet günlük endeksi](charts/index.svg)
 
 <!-- STATS_START -->
-- **Son değer:** 100.00
-- **Son güncelleme:** 2026-08-16
+- **Son değer:** 100.13
+- **Son güncelleme:** 2026-08-17
 - **Aktif ürün tipi:** 110
-- **Karşılaştırılabilir SKU:** 2096
+- **Karşılaştırılabilir SKU:** 2033
 - **Kategori ağırlık kapsaması:** %100
 - **7 günlük değişim:** —
 - **30 günlük değişim:** —
@@ -24,14 +24,29 @@ Türkiye'deki zincir market fiyatlarını **ürün tipi → çoklu SKU → kateg
 ## Son 24 saatte
 
 <!-- MOVERS_START -->
-İkinci v0.3 gözlemi geldikten sonra ürün tipi hareketleri burada gösterilecek.
+- **Dönem:** 2026-08-16 → 2026-08-17
+- **↑ Yükselen ürün tipi:** 16 · **↓ Düşen:** 14 · **= Yatay:** 80
+- **Karşılaştırılan ürün tipi:** 110
+
+| Ürün tipi | SKU | Değişim |
+|---|---:|---:|
+| Duş jeli | 25 | +19.64% |
+| Karpuz | 11 | +6.50% |
+| Şampuan | 23 | +5.38% |
+| Bal | 19 | +4.67% |
+| Kalıp sabun | 22 | -4.30% |
+| Sıvı sabun | 24 | +4.21% |
+| Çamaşır suyu | 18 | -4.12% |
+| Yumuşatıcı | 10 | -3.61% |
+| Kabak | 15 | +3.13% |
+| Havuç | 12 | -2.90% |
 <!-- MOVERS_END -->
 
 ## Veri kalitesi
 
 <!-- QUALITY_START -->
 - **Aktif ürün tipi:** 110/130
-- **SKU panel kapsaması:** 2096/2096 (100.0%)
+- **SKU panel kapsaması:** 2033/2096 (97.0%)
 - **%70'in altında panel kapsaması olan tip:** 0
 - **Yayımlanan ana kategori:** 12
 - Tek bir SKU kaybolduğunda başka markaya sessiz ikame yapılmaz; ürün tipi yeterli paneli koruyorsa kalan aynı-SKU relatifleriyle devam eder.
