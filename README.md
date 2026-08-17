@@ -3,6 +3,7 @@
 Türkiye'deki zincir market fiyatlarını **ürün tipi → çoklu SKU → kategori → ana endeks** hiyerarşisiyle günlük izleyen açık ve yeniden üretilebilir deneysel fiyat endeksi.
 
 [![Daily Açık Sepet](https://github.com/onurcan-b/acik-sepet/actions/workflows/daily.yml/badge.svg)](https://github.com/onurcan-b/acik-sepet/actions/workflows/daily.yml)
+[![Validate Açık Sepet](https://github.com/onurcan-b/acik-sepet/actions/workflows/validate.yml/badge.svg)](https://github.com/onurcan-b/acik-sepet/actions/workflows/validate.yml)
 ![Python](https://img.shields.io/badge/Python-3.12+-blue)
 ![Data](https://img.shields.io/badge/data-daily-informational)
 
@@ -49,7 +50,9 @@ Türkiye'deki zincir market fiyatlarını **ürün tipi → çoklu SKU → kateg
 - **SKU panel kapsaması:** 2033/2096 (97.0%)
 - **%70'in altında panel kapsaması olan tip:** 0
 - **Yayımlanan ana kategori:** 12
-- Tek bir SKU kaybolduğunda başka markaya sessiz ikame yapılmaz; ürün tipi yeterli paneli koruyorsa kalan aynı-SKU relatifleriyle devam eder.
+- **Kaynak sabitleme:** legacy snapshot; source-aware toplama bir sonraki çalışmada başlayacak.
+- **Köprülenmiş otomatik SKU yenilemesi:** 0
+- Kaynak/depo değişimi sessiz fiyat değişimi sayılmaz; kaynaklar SKU bazında sabitlenir. Panel yenilemesi ancak kalıcı kapsama kaybında ve bridge factor ile yapılır.
 <!-- QUALITY_END -->
 
 ## Neden v0.3?
@@ -65,9 +68,11 @@ Market Fiyatı
     ↓
 Her tip için sabit çoklu-SKU paneli
     ↓
+SKU bazında sabit market/depot kaynakları
+    ↓
 Gramaj / litre / adet normalizasyonu
     ↓
-Aynı SKU'nun zaman içindeki birim-fiyat relatifi
+Aynı panel slotunun zaman içindeki birim-fiyat relatifi
     ↓
 Ürün tipi elementary endeksi
     ↓
@@ -78,21 +83,19 @@ Açık Sepet Market Endeksi
 
 ## Temel metodoloji
 
-### 1. Ürün tipi paneli
+### 1. Ürün tipi ve panel slotları
 
-Ürün tipleri `config/product_types.tsv` dosyasında tanımlanır. Her ürün tipi için:
+Ürün tipleri `config/product_types.tsv` dosyasında tanımlanır. Her ürün tipi için arama sorgusu, beklenen ölçü birimi (`mass`, `volume`, `count`), hedef/minimum SKU sayısı ve dahil/hariç kelime kuralları saklanır.
 
-- arama sorgusu,
-- beklenen ölçü birimi (`mass`, `volume`, `count`),
-- hedef SKU sayısı,
-- minimum SKU sayısı,
-- dahil / hariç kelime kuralları
+İlk başarılı v0.3 çalışmasında her ürün tipi için bir SKU paneli oluşturulur ve `state/v0.3-panels.json` içinde sabitlenir. Her SKU aynı zamanda kalıcı bir **panel slotuna** sahiptir. Normal günlük çalışmada panel başka ürünlerle doldurulmaz.
 
-saklanır.
+### 2. Kaynak/depot sürekliliği
 
-İlk başarılı v0.3 çalışmasında her ürün tipi için bir SKU paneli oluşturulur ve `state/v0.3-panels.json` içinde sabitlenir. Günlük çalışmalarda panel başka ürünlerle sessizce doldurulmaz. Panel değişikliği bilinçli bir metodoloji güncellemesi gerektirir.
+Bir SKU'nun Market Fiyatı sonucunda birden fazla market/depot teklifi bulunabilir. Source-aware collector ilk gözlemde bu kaynak kimliklerini SKU'ya sabitler. Sonraki günlerde yeni veya farklı bir depot aynı SKU için görünse bile otomatik olarak fiyat hesabına sokulmaz.
 
-### 2. Birim fiyat
+Kaynak sabitlemenin devreye girdiği gün eski tüm-teklif fiyat seviyesi ile yeni sabit-kaynak seviyesi arasında bir **source bridge factor** hesaplanır. Böylece yalnızca veri kaynağı kompozisyonu değişti diye endekste yapay bir seviye sıçraması oluşmaz.
+
+### 3. Birim fiyat
 
 Paket bilgileri başlıktan normalize edilir:
 
@@ -104,36 +107,41 @@ Paket bilgileri başlıktan normalize edilir:
 12'li       → 12 adet
 ```
 
-Böylece aynı SKU'nun paket boyutu değişirse bu değişim fiyat sinyaline yansıyabilir.
+**Farklı markaların TL/kg veya TL/L seviyeleri doğrudan ortalanmaz.** Birim fiyat, aynı panel slotunun zaman içindeki fiyat relatifini hesaplamak için kullanılır. Paket küçülmesi/büyümesi de böylece sinyale yansıyabilir.
 
-**Farklı markaların TL/kg veya TL/L seviyeleri doğrudan ortalanmaz.** Birim fiyat, aynı SKU'nun baz döneme göre fiyat relatifini hesaplamak için kullanılır.
+### 4. Ürün tipi endeksi
 
-### 3. Ürün tipi endeksi
-
-Bir SKU için:
+Bir panel slotu için:
 
 ```text
-relative(i,t) = unit_price(i,t) / unit_price(i,base)
+relative(i,t) = linked_unit_price(i,t) / linked_unit_price(i,base)
 ```
 
-Ürün tipi endeksi, hem bazda hem güncel günde bulunan sabit panel SKU'larının fiyat relatiflerinin geometrik ortalamasıdır:
+Legacy v0.3 snapshot'larında `linked_unit_price` yoktur; bu satırlarda mevcut `unit_price` aynen kullanılır. Bu geriye uyumluluk, **2026-08-16 = 100** bazını ve yayımlanmış endeks geçmişini korur.
+
+Ürün tipi endeksi fiyat relatiflerinin geometrik ortalamasıdır:
 
 ```text
 I(type,t) = 100 × geometric_mean(relative(i,t))
 ```
 
-Bu sayede tek bir şampuandaki `%40` kampanya, şampuan kategorisini tek başına `%40` aşağı çekmez; çoklu-SKU panelindeki bir gözlem olur.
+Bir ürün tipinin yayımlanabilmesi için kendi `min_skus` eşiğini ve baz panelinin en az `%50` karşılaştırılabilir kapsamasını koruması gerekir.
 
-Bir ürün tipinin yayımlanabilmesi için:
+### 5. Kontrollü panel yenileme
 
-- kendi `min_skus` eşiğini karşılaması,
-- baz panelinin en az `%50`'sinin güncel günde karşılaştırılabilir olması
+Geçici stok kaybı günlük SKU ikamesine yol açmaz. Bir ürün tipi:
 
-gerekir.
+- panelinin `%80`'inden azını **7 gün üst üste** gözlemliyorsa,
+- ilgili eski slot en az 7 gündür kayıpsa,
+- yeni aday SKU en az 3 ardışık gün görünmüşse,
 
-### 4. Kategori ve ana endeks
+collector paneli kontrollü biçimde yenileyebilir. Bir günde panelin en fazla `%20`'si yenilenir.
 
-Ürün tipi endeksleri önce 12 ana market kategorisine toplanır. Kategori içinde ürün tipleri şimdilik eşit araştırma payına sahiptir. Ana kategoriler `config/categories.json` içindeki araştırma ağırlıklarıyla birleştirilir.
+Yeni SKU eski slot kimliğini devralır. Aktivasyon gününde yeni SKU'nun birim fiyatı eski slotun son karşılaştırılabilir seviyesine bir **bridge factor** ile bağlanır. Böylece marka/SKU değişiminin kendisi fiyat artışı veya düşüşü olarak yazılmaz; bundan sonraki gerçek fiyat hareketi izlenir.
+
+### 6. Kategori ve ana endeks
+
+Ürün tipi endeksleri 12 ana market kategorisine toplanır. Kategori içinde ürün tipleri şimdilik eşit araştırma payına sahiptir. Ana kategoriler `config/categories.json` içindeki araştırma ağırlıklarıyla birleştirilir.
 
 Ana endeks ve kategori endeksleri en az `%60` ağırlık kapsamasıyla yayımlanır. Eksik gözlemlerin ağırlıkları mevcut karşılaştırılabilir panel üzerinde yeniden normalize edilir; model tabanlı fiyat imputasyonu yapılmaz.
 
@@ -142,8 +150,6 @@ Ağırlıklar **TÜİK'in resmî tüketim ağırlıkları değildir**.
 Ayrıntılar: [`METHOD.md`](METHOD.md).
 
 ## Üretilen veriler
-
-v0.3 verileri ayrı bir namespace altında tutulur:
 
 ```text
 data/v0.3/
@@ -155,43 +161,16 @@ data/v0.3/
 └── latest-errors.json
 ```
 
-### Günlük SKU snapshot
-
-Her satır yaklaşık olarak şunları içerir:
+Yeni source-aware günlük snapshot satırları yaklaşık olarak şunları içerir:
 
 ```text
-date, group, type_id, product_key, title,
-quantity, unit, price, unit_price, offer_count
+date, group, type_id, slot_id, product_key, title,
+quantity, unit, price, unit_price, linked_unit_price,
+offer_count, raw_offer_count, source_count, source_ids,
+markets, source_mode, generation
 ```
 
-### Ürün tipi endeksleri
-
-`data/v0.3/type_indices.csv`
-
-```text
-date,type_id,label,group,index,coverage,skus,baseline_skus,baseline_date
-```
-
-### Kategori endeksleri
-
-`data/v0.3/category_indices.csv`
-
-### Ana endeks
-
-`data/v0.3/index.csv`
-
-## Panel sürekliliği ve eksik ürünler
-
-Açık Sepet karşılaştırılabilirliği ham SKU sayısından önce tutar.
-
-Bir panel SKU'su bir gün bulunamazsa:
-
-1. başka marka otomatik olarak onun yerine geçirilmez,
-2. ürün tipi yeterli sayıda aynı-SKU gözlemine sahipse kalan panelle hesaplanır,
-3. panel kapsaması ayrıca yayımlanır,
-4. minimum eşik altına düşerse ürün tipi o gün endekse girmez.
-
-Bu yaklaşım katalog değişimini fiyat değişimi sanma riskini azaltırken tekil stok kayıplarına karşı paneli dayanıklı tutar.
+`product_key` gerçek SKU'yu, `slot_id` ise endeks sürekliliğini sağlayan panel kimliğini temsil eder.
 
 ## Otomasyon
 
@@ -209,25 +188,27 @@ Her gün:
 
 çalışır. Bu saat Türkiye'de **08:45**, Berlin'de yaz saatinde **07:45 CEST**, kış saatinde **06:45 CET**'tir. GitHub Actions planlanan işleri yoğunluk nedeniyle gecikmeli başlatabilir.
 
-Pipeline sırası:
+Pipeline:
 
 ```text
 pytest
   ↓
-ürün tipi aramaları + sabit panel gözlemi
+source-aware ürün tipi / SKU toplama
   ↓
-kalite doğrulama
+panel kalite doğrulaması
   ↓
-ürün tipi endeksleri
+ürün tipi + kategori + ana endeks
   ↓
-kategori + ana endeks
+README + enflasyon grafiği
   ↓
-README + grafik
+yayımlanmış tarih ve grafik regression guard
   ↓
 bot commit
 ```
 
-Workflow ayrıca GitHub arayüzünden manuel tetiklenebilir:
+Kod değişikliklerinde ayrıca `.github/workflows/validate.yml` çalışır. Bu workflow internete çıkmadan yayımlanmış seriyi ve `charts/index.svg` dosyasını yeniden üretir, ilk iki v0.3 tarihini regression anchor olarak doğrular ve ardından gerçek Market Fiyatı API'siyle **commit atmayan canlı collector smoke testi** yapar.
+
+Workflow GitHub arayüzünden manuel de tetiklenebilir:
 
 **Actions → Daily Açık Sepet → Run workflow**
 
@@ -254,9 +235,11 @@ Windows PowerShell:
 .\.venv\Scripts\Activate.ps1
 ```
 
-## v0.2 geçmişi
+## v0.2 geçmişi ve v0.3 sürekliliği
 
-v0.3 yeni bir metodoloji ve yeni baz dönemidir. Eski 150-SKU serisi yeni metodolojiyle geriye dönük yeniden yazılmaz. v0.2 gözlemleri Git geçmişinde korunur; v0.3 serisi kendi `data/v0.3/` dizininde başlar.
+v0.3 yeni bir metodoloji ve yeni baz dönemidir. Eski 150-SKU serisi geriye dönük yeniden yazılmaz. v0.2 gözlemleri Git geçmişinde korunur.
+
+v0.3 içinde source-aware toplama ve kontrollü panel yenileme **aynı seri içinde bridge edilerek** uygulanır; başlangıç baz tarihi değişmez. CI regression guard yayımlanmış ilk değerlerin değişmesini engeller.
 
 ## Sınırlamalar
 
@@ -274,15 +257,13 @@ Bu nedenle seri **araştırma ve yüksek frekanslı market fiyatı göstergesi**
 
 ## Veri kaynağı
 
-MVP, [`marketfiyati.org.tr`](https://marketfiyati.org.tr/) arayüzünün kullandığı veri servisine düşük ve kontrollü hacimde ürün-tipi sorguları gönderir. Repo kaynağın toplu aynasını oluşturmaz; yalnızca sabit paneller için gerekli günlük gözlemleri saklar.
+Proje [`marketfiyati.org.tr`](https://marketfiyati.org.tr/) arayüzünün kullandığı veri servisine düşük ve kontrollü hacimde ürün-tipi sorguları gönderir. Repo kaynağın toplu aynasını oluşturmaz; yalnızca sabit/bridge edilmiş paneller için gerekli günlük gözlemleri saklar.
 
 Kaynak ve yeniden kullanım notları: [`NOTICE.md`](NOTICE.md).
 
 ## Katkı
 
-Kod, ürün tipi sınıflandırması, parser testleri ve metodoloji geliştirmeleri pull request ile yapılabilir.
-
-Otomatik üretilen `data/` ve `state/` dosyalarının elle değiştirilmesi yerine problemi üreten toplama veya sınıflandırma katmanının düzeltilmesi tercih edilir.
+Kod, ürün tipi sınıflandırması, parser testleri ve metodoloji geliştirmeleri pull request ile yapılabilir. Otomatik üretilen `data/` ve `state/` dosyalarını elle değiştirmek yerine problemi üreten toplama veya sınıflandırma katmanının düzeltilmesi tercih edilir.
 
 Katkı rehberi: [`CONTRIBUTING.md`](CONTRIBUTING.md)
 
