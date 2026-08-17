@@ -56,5 +56,5 @@ jobs:
         run: |
           python -m acik_sepet.collect
           python -m acik_sepet.validate --min-type-coverage 0.60 --min-skus 300
-      - name: Working tree sanity
-        run: git diff --check
+      - name: Source-file whitespace sanity
+        run: git diff --check -- acik_sepet tests .github config README.md METHOD.md
