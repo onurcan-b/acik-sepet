@@ -50,9 +50,9 @@ Türkiye'deki zincir market fiyatlarını **ürün tipi → çoklu SKU → kateg
 - **SKU panel kapsaması:** 2033/2096 (97.0%)
 - **%70'in altında panel kapsaması olan tip:** 0
 - **Yayımlanan ana kategori:** 12
-- **Kaynak sabitleme:** legacy snapshot; source-aware toplama bir sonraki çalışmada başlayacak.
+- **Kaynak takibi:** legacy snapshot; source-aware toplama bir sonraki çalışmada başlayacak.
 - **Köprülenmiş otomatik SKU yenilemesi:** 0
-- Kaynak/depo değişimi sessiz fiyat değişimi sayılmaz; kaynaklar SKU bazında sabitlenir. Panel yenilemesi ancak kalıcı kapsama kaybında ve bridge factor ile yapılır.
+- Yeni depotlar sessizce panele girmez; mevcut depotların fiyat relatifleri ayrı izlenir. Bir depot geçici kaybolduğunda yalnızca kaynak kompozisyonu değişti diye seviye sıçraması oluşmaz.
 <!-- QUALITY_END -->
 
 ## Neden v0.3?
@@ -68,11 +68,11 @@ Market Fiyatı
     ↓
 Her tip için sabit çoklu-SKU paneli
     ↓
-SKU bazında sabit market/depot kaynakları
+SKU içinde sabit market/depot relatifleri
     ↓
 Gramaj / litre / adet normalizasyonu
     ↓
-Aynı panel slotunun zaman içindeki birim-fiyat relatifi
+Kalıcı panel slotunun bağlı birim fiyat relatifi
     ↓
 Ürün tipi elementary endeksi
     ↓
@@ -91,9 +91,17 @@ Açık Sepet Market Endeksi
 
 ### 2. Kaynak/depot sürekliliği
 
-Bir SKU'nun Market Fiyatı sonucunda birden fazla market/depot teklifi bulunabilir. Source-aware collector ilk gözlemde bu kaynak kimliklerini SKU'ya sabitler. Sonraki günlerde yeni veya farklı bir depot aynı SKU için görünse bile otomatik olarak fiyat hesabına sokulmaz.
+Bir SKU'nun Market Fiyatı sonucunda birden fazla market/depot teklifi bulunabilir. Source-aware collector ilk gözlemde mevcut kaynak kimliklerini SKU'ya sabitler ve her depot için başlangıç fiyatını kaydeder. Sonraki günlerde yeni görünen depotlar otomatik olarak fiyat hesabına girmez.
 
-Kaynak sabitlemenin devreye girdiği gün eski tüm-teklif fiyat seviyesi ile yeni sabit-kaynak seviyesi arasında bir **source bridge factor** hesaplanır. Böylece yalnızca veri kaynağı kompozisyonu değişti diye endekste yapay bir seviye sıçraması oluşmaz.
+SKU'nun kaynak-ayarlı paket fiyatı, o gün mevcut olan **aynı sabit depotların kendi başlangıç fiyatlarına göre relatiflerinin geometrik ortalaması** ile ilerletilir:
+
+```text
+source_relative(s,t) = price(s,t) / price(s,anchor)
+linked_package_price(t)
+    = adoption_day_all_offer_median × geometric_mean(source_relative(s,t))
+```
+
+Böylece sabit depotlardan biri geçici olarak kaybolursa diğer depotların fiyatı değişmediği sürece SKU seviyesi sırf kaynak kompozisyonu değişti diye oynamaz. Yeni bir depot da sessizce panele giremez. Aynı depotlarda gerçek fiyat hareketi olduğunda ise relatif doğrudan ölçülür.
 
 ### 3. Birim fiyat
 
@@ -137,7 +145,7 @@ Geçici stok kaybı günlük SKU ikamesine yol açmaz. Bir ürün tipi:
 
 collector paneli kontrollü biçimde yenileyebilir. Bir günde panelin en fazla `%20`'si yenilenir.
 
-Yeni SKU eski slot kimliğini devralır. Aktivasyon gününde yeni SKU'nun birim fiyatı eski slotun son karşılaştırılabilir seviyesine bir **bridge factor** ile bağlanır. Böylece marka/SKU değişiminin kendisi fiyat artışı veya düşüşü olarak yazılmaz; bundan sonraki gerçek fiyat hareketi izlenir.
+Yeni SKU eski slot kimliğini devralır. Aktivasyon gününde yeni SKU'nun bağlı birim fiyatı eski slotun **son bilinen bağlı fiyat seviyesine** bir bridge factor ile bağlanır. Bu son seviye, legacy snapshot'lar dahil geçmiş snapshot'lardan seed edilir; güvenilir eski seviye yoksa otomatik ikame yapılmaz. Böylece marka/SKU değişiminin kendisi fiyat artışı veya düşüşü olarak yazılmaz; bundan sonraki gerçek fiyat hareketi izlenir.
 
 ### 6. Kategori ve ana endeks
 
@@ -170,7 +178,7 @@ offer_count, raw_offer_count, source_count, source_ids,
 markets, source_mode, generation
 ```
 
-`product_key` gerçek SKU'yu, `slot_id` ise endeks sürekliliğini sağlayan panel kimliğini temsil eder.
+`product_key` gerçek SKU'yu, `slot_id` ise endeks sürekliliğini sağlayan panel kimliğini temsil eder. `unit_price` gözlenen sabit-depot fiyat seviyesini, `linked_unit_price` ise endekste kullanılan kaynak/panel sürekliliği ayarlı seviyeyi tutar.
 
 ## Otomasyon
 
@@ -206,7 +214,7 @@ yayımlanmış tarih ve grafik regression guard
 bot commit
 ```
 
-Kod değişikliklerinde ayrıca `.github/workflows/validate.yml` çalışır. Bu workflow internete çıkmadan yayımlanmış seriyi ve `charts/index.svg` dosyasını yeniden üretir, ilk iki v0.3 tarihini regression anchor olarak doğrular ve ardından gerçek Market Fiyatı API'siyle **commit atmayan canlı collector smoke testi** yapar.
+Kod değişikliklerinde ayrıca `.github/workflows/validate.yml` çalışır. Bu workflow önce mevcut snapshot'lardan seriyi ve `charts/index.svg` dosyasını yeniden üretir, **2026-08-16 = 100.0000** ve **2026-08-17 = 100.1338** değerlerini regression anchor olarak doğrular; ardından gerçek Market Fiyatı API'siyle **commit atmayan canlı collector smoke testi** yapar.
 
 Workflow GitHub arayüzünden manuel de tetiklenebilir:
 
