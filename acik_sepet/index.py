@@ -27,6 +27,9 @@ def load_snapshot(path: Path) -> list[dict[str, Any]]:
         rows = list(csv.DictReader(handle))
     for row in rows:
         row["unit_price"] = float(row["unit_price"])
+        linked = row.get("linked_unit_price")
+        row["linked_unit_price"] = float(linked) if linked not in (None, "") else row["unit_price"]
+        row["slot_id"] = row.get("slot_id") or row["product_key"]
         row["price"] = float(row["price"])
         row["quantity"] = float(row["quantity"])
         row["offer_count"] = int(row["offer_count"])
@@ -34,10 +37,20 @@ def load_snapshot(path: Path) -> list[dict[str, Any]]:
 
 
 def _by_type(rows: list[dict[str, Any]]) -> dict[str, dict[str, float]]:
+    """Map stable panel slots to continuity-adjusted unit prices.
+
+    Legacy v0.3 snapshots have no slot_id/linked_unit_price. load_snapshot maps
+    those rows to product_key/unit_price, so the original 2026-08-16 baseline
+    and all already-published history remain byte-for-byte reproducible at the
+    index level. A renewed SKU inherits the old slot_id and receives a bridge
+    factor in the collector, avoiding a level jump caused only by substitution.
+    """
     output: dict[str, dict[str, float]] = defaultdict(dict)
     for row in rows:
-        if row["unit_price"] > 0:
-            output[row["type_id"]][row["product_key"]] = row["unit_price"]
+        price = float(row.get("linked_unit_price", row["unit_price"]))
+        slot_id = str(row.get("slot_id") or row["product_key"])
+        if price > 0:
+            output[row["type_id"]][slot_id] = price
     return output
 
 
