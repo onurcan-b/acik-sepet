@@ -120,7 +120,7 @@ def _movers(type_rows: list[dict[str, str]]) -> str:
 def _source_and_renewal_stats() -> tuple[int, int, int]:
     latest_paths = sorted(SNAPSHOT_DIR.glob("*.csv"))
     rows = _read(latest_paths[-1]) if latest_paths else []
-    pinned = sum(row.get("source_mode") == "pinned" for row in rows)
+    pinned = sum(row.get("source_mode") == "pinned-relative" for row in rows)
     source_aware = sum(bool(row.get("source_mode")) for row in rows)
     renewals = 0
     if PANEL_PATH.exists():
@@ -141,9 +141,9 @@ def _quality(type_rows: list[dict[str, str]], category_rows: list[dict[str, str]
     category_latest = [row for row in category_rows if row["date"] == latest_date and row.get("index")]
     pinned, source_aware, renewals = _source_and_renewal_stats()
     source_line = (
-        f"- **Sabit kaynak kimliği olan gözlem:** {pinned}/{source_aware}"
+        f"- **Depot-relative kaynak takibi olan gözlem:** {pinned}/{source_aware}"
         if source_aware else
-        "- **Kaynak sabitleme:** legacy snapshot; source-aware toplama bir sonraki çalışmada başlayacak."
+        "- **Kaynak takibi:** legacy snapshot; source-aware toplama bir sonraki çalışmada başlayacak."
     )
     return "\n".join([
         f"- **Aktif ürün tipi:** {len(active)}/{len(latest_types)}",
@@ -152,7 +152,7 @@ def _quality(type_rows: list[dict[str, str]], category_rows: list[dict[str, str]
         f"- **Yayımlanan ana kategori:** {len(category_latest)}",
         source_line,
         f"- **Köprülenmiş otomatik SKU yenilemesi:** {renewals}",
-        "- Kaynak/depo değişimi sessiz fiyat değişimi sayılmaz; kaynaklar SKU bazında sabitlenir. Panel yenilemesi ancak kalıcı kapsama kaybında ve bridge factor ile yapılır.",
+        "- Yeni depotlar sessizce panele girmez; mevcut depotların fiyat relatifleri ayrı izlenir. Bir depot geçici kaybolduğunda yalnızca kaynak kompozisyonu değişti diye seviye sıçraması oluşmaz.",
     ])
 
 
