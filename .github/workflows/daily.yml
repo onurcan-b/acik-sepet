@@ -2,15 +2,6 @@ name: Daily Açık Sepet
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - "acik_sepet/**"
-      - "config/**"
-      - "tests/**"
-      - "requirements.txt"
-      - "pyproject.toml"
-      - ".github/workflows/daily.yml"
   schedule:
     - cron: "45 5 * * *"
 
@@ -37,7 +28,7 @@ jobs:
         run: pip install -r requirements.txt
       - name: Tests
         run: pytest -q
-      - name: Collect multi-SKU panels
+      - name: Collect source-aware multi-SKU panels
         run: python -m acik_sepet.collect
       - name: Validate panel quality
         run: python -m acik_sepet.validate --min-type-coverage 0.60 --min-skus 300
@@ -45,6 +36,29 @@ jobs:
         run: |
           python -m acik_sepet.index
           python -m acik_sepet.report
+      - name: Guard published history and inflation chart
+        shell: bash
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+
+          with Path("data/v0.3/index.csv").open(encoding="utf-8", newline="") as handle:
+              rows = {row["date"]: row for row in csv.DictReader(handle)}
+
+          anchors = {"2026-08-16": 100.0000, "2026-08-17": 100.1338}
+          for day, expected in anchors.items():
+              actual = float(rows[day]["index"])
+              if abs(actual - expected) > 1e-4:
+                  raise SystemExit(f"published history changed on {day}: {actual} != {expected}")
+
+          chart = Path("charts/index.svg")
+          if not chart.exists() or chart.stat().st_size < 1000:
+              raise SystemExit("inflation chart was not generated correctly")
+          print("published history and chart are stable")
+          PY
+      - name: Source-file whitespace sanity
+        run: git diff --check -- acik_sepet tests .github config README.md METHOD.md
       - name: Commit updated observations
         run: |
           git config user.name "acik-sepet-bot"
