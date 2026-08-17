@@ -90,6 +90,12 @@ def _median_price(offers: list[dict[str, Any]]) -> float:
     return float(median(float(row["price"]) for row in offers))
 
 
+def _geomean(values: list[float]) -> float:
+    if not values or any(value <= 0 for value in values):
+        raise ValueError("geometric mean requires positive values")
+    return math.exp(sum(math.log(value) for value in values) / len(values))
+
+
 def _base_candidate(item: dict[str, Any], spec: dict[str, Any]) -> dict[str, Any] | None:
     score = _score(item, spec)
     if score < 0.5:
@@ -115,48 +121,77 @@ def _base_candidate(item: dict[str, Any], spec: dict[str, Any]) -> dict[str, Any
     }
 
 
-def _pin_sources(sku_state: dict[str, Any], offers: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    saved = [str(value) for value in sku_state.get("source_ids") or [] if value]
-    keyed = [row for row in offers if row.get("source_id")]
+def _prices_by_source(offers: list[dict[str, Any]]) -> dict[str, float]:
+    grouped: dict[str, list[float]] = {}
+    for row in offers:
+        source_id = row.get("source_id")
+        if source_id:
+            grouped.setdefault(str(source_id), []).append(float(row["price"]))
+    return {key: float(median(values)) for key, values in grouped.items()}
 
-    if not saved:
-        source_ids = sorted({str(row["source_id"]) for row in keyed})
-        if source_ids:
-            sku_state["source_ids"] = source_ids
-            sku_state["source_mode"] = "pinned"
-            saved = source_ids
-        else:
-            sku_state["source_mode"] = "unkeyed"
-            sku_state.setdefault("source_bridge_factor", 1.0)
-            return offers
 
-    saved_set = set(saved)
-    stable = [row for row in offers if row.get("source_id") in saved_set]
-    if not stable:
-        return []
+def _initialize_sources(sku_state: dict[str, Any], offers: list[dict[str, Any]]) -> None:
+    by_source = _prices_by_source(offers)
+    if by_source:
+        sku_state["source_mode"] = "pinned-relative"
+        sku_state["source_ids"] = sorted(by_source)
+        sku_state["source_anchor_prices"] = {key: round(value, 6) for key, value in sorted(by_source.items())}
+        # Preserve the pre-migration all-offer price level on the adoption day.
+        sku_state["source_anchor_level"] = round(_median_price(offers), 6)
+    else:
+        sku_state["source_mode"] = "unkeyed"
 
-    if "source_bridge_factor" not in sku_state:
-        # Keep the old all-offer level continuous when source pinning is adopted.
-        sku_state["source_bridge_factor"] = _median_price(offers) / _median_price(stable)
-    return stable
+
+def _source_linked_package_price(
+    sku_state: dict[str, Any], offers: list[dict[str, Any]]
+) -> tuple[float, list[dict[str, Any]]] | None:
+    if not sku_state.get("source_mode"):
+        _initialize_sources(sku_state, offers)
+
+    if sku_state.get("source_mode") == "unkeyed":
+        return _median_price(offers), offers
+
+    anchors = {
+        str(key): float(value)
+        for key, value in (sku_state.get("source_anchor_prices") or {}).items()
+        if float(value) > 0
+    }
+    if not anchors:
+        _initialize_sources(sku_state, offers)
+        anchors = {
+            str(key): float(value)
+            for key, value in (sku_state.get("source_anchor_prices") or {}).items()
+            if float(value) > 0
+        }
+    current = _prices_by_source(offers)
+    common = sorted(set(anchors) & set(current))
+    if not common:
+        return None
+
+    ratios = [current[key] / anchors[key] for key in common]
+    anchor_level = float(sku_state.get("source_anchor_level") or _median_price(offers))
+    linked_package = anchor_level * _geomean(ratios)
+    common_set = set(common)
+    stable_offers = [row for row in offers if row.get("source_id") in common_set]
+    return linked_package, stable_offers
 
 
 def _row_for_state(item: dict[str, Any], spec: dict[str, Any], sku_state: dict[str, Any]) -> dict[str, Any] | None:
     base = _base_candidate(item, spec)
     if base is None:
         return None
-    stable_offers = _pin_sources(sku_state, base["offers"])
-    if not stable_offers:
+    linked_result = _source_linked_package_price(sku_state, base["offers"])
+    if linked_result is None:
         return None
-
+    linked_package, stable_offers = linked_result
     quantity = parse_quantity(base["title"], spec["unit"])
     if quantity is None:
         return None
-    stable_price = _median_price(stable_offers)
-    stable_unit_price = unit_price(stable_price, quantity)
-    source_bridge = float(sku_state.get("source_bridge_factor", 1.0))
+
+    observed_package = _median_price(stable_offers)
+    observed_unit = unit_price(observed_package, quantity)
     link_factor = float(sku_state.get("link_factor", 1.0))
-    linked = stable_unit_price * source_bridge * link_factor
+    linked_unit = unit_price(linked_package, quantity) * link_factor
     used_source_ids = sorted({str(row["source_id"]) for row in stable_offers if row.get("source_id")})
     markets = sorted({str(row["market"]) for row in stable_offers if row.get("market")})
 
@@ -166,9 +201,9 @@ def _row_for_state(item: dict[str, Any], spec: dict[str, Any], sku_state: dict[s
         "title": base["title"],
         "quantity": quantity.amount,
         "unit": quantity.unit,
-        "price": round(stable_price, 4),
-        "unit_price": round(stable_unit_price, 6),
-        "linked_unit_price": round(linked, 6),
+        "price": round(observed_package, 4),
+        "unit_price": round(observed_unit, 6),
+        "linked_unit_price": round(linked_unit, 6),
         "offer_count": len(stable_offers),
         "raw_offer_count": len(base["offers"]),
         "source_count": len(used_source_ids),
@@ -187,11 +222,6 @@ def _load_panel() -> dict[str, Any]:
 
 
 def _historical_levels() -> dict[str, float]:
-    """Return the most recent linked level for every known SKU/slot.
-
-    This seeds legacy panel state before automatic renewal is allowed, including
-    SKUs that are already missing on the first source-aware run.
-    """
     levels: dict[str, float] = {}
     for path in reversed(sorted(SNAPSHOT_DIR.glob("*.csv"))):
         with path.open(encoding="utf-8", newline="") as handle:
@@ -226,12 +256,7 @@ def _migrate_sku_state(sku: dict[str, Any], historical_levels: dict[str, float] 
 
 
 def _new_sku_state(
-    row: dict[str, Any],
-    today: str,
-    *,
-    slot_id: str | None = None,
-    generation: int = 0,
-    link_factor: float = 1.0,
+    row: dict[str, Any], today: str, *, slot_id: str | None = None, generation: int = 0
 ) -> dict[str, Any]:
     state: dict[str, Any] = {
         "slot_id": slot_id or row["product_key"],
@@ -243,17 +268,14 @@ def _new_sku_state(
         "last_seen": today,
         "missing_streak": 0,
         "generation": generation,
-        "link_factor": link_factor,
+        "link_factor": 1.0,
     }
-    _pin_sources(state, row["offers"])
+    _initialize_sources(state, row["offers"])
     return state
 
 
 def _initialize_type(
-    candidates: list[dict[str, Any]],
-    spec: dict[str, Any],
-    claimed: set[str],
-    today: str,
+    candidates: list[dict[str, Any]], spec: dict[str, Any], claimed: set[str], today: str
 ) -> tuple[dict[str, Any], list[dict[str, Any]]]:
     rows: list[dict[str, Any]] = []
     items_by_key: dict[str, dict[str, Any]] = {}
@@ -263,12 +285,11 @@ def _initialize_type(
             continue
         rows.append(row)
         items_by_key[row["product_key"]] = item
-
     rows.sort(key=lambda row: (row["score"], row["offer_count"]), reverse=True)
+
     selected = rows[: spec["target_skus"]]
     states: list[dict[str, Any]] = []
     observed: list[dict[str, Any]] = []
-
     for row in selected:
         claimed.add(row["product_key"])
         sku_state = _new_sku_state(row, today)
@@ -290,16 +311,11 @@ def _initialize_type(
 
 
 def _update_shadow_candidates(
-    state: dict[str, Any],
-    rows: list[dict[str, Any]],
-    active_keys: set[str],
-    claimed: set[str],
-    today: str,
+    state: dict[str, Any], rows: list[dict[str, Any]], active_keys: set[str], claimed: set[str], today: str
 ) -> dict[str, dict[str, Any]]:
     shadows = state.setdefault("candidates", {})
     yesterday = (date.fromisoformat(today) - timedelta(days=1)).isoformat()
     current: dict[str, dict[str, Any]] = {}
-
     for row in rows:
         key = row["product_key"]
         if key in active_keys or key in claimed:
@@ -363,8 +379,7 @@ def _observe_type(
     coverage = len(observed_slots) / len(active) if active else 0.0
     state["low_coverage_streak"] = (
         int(state.get("low_coverage_streak", 0)) + 1
-        if active and coverage < LOW_COVERAGE_THRESHOLD
-        else 0
+        if active and coverage < LOW_COVERAGE_THRESHOLD else 0
     )
     if int(state.get("low_coverage_streak", 0)) < RENEWAL_AFTER_DAYS:
         return observed
@@ -374,26 +389,24 @@ def _observe_type(
         key=lambda sku: int(sku.get("missing_streak", 0)),
         reverse=True,
     )
-    eligible_candidates = [
+    eligible = [
         shadow for shadow in state.get("candidates", {}).values()
         if shadow.get("last_seen") == today
         and int(shadow.get("seen_streak", 0)) >= CANDIDATE_MIN_STREAK
         and shadow.get("product_key") in shadow_rows
     ]
-    eligible_candidates.sort(
-        key=lambda row: (float(row.get("score", 0)), int(row.get("offer_count", 0))),
-        reverse=True,
+    eligible.sort(
+        key=lambda row: (float(row.get("score", 0)), int(row.get("offer_count", 0))), reverse=True
     )
     max_replacements = max(1, math.ceil(len(active) * MAX_REPLACEMENT_SHARE)) if active else 0
 
     replacements = 0
-    for old, candidate_meta in zip(missing, eligible_candidates):
+    for old, candidate_meta in zip(missing, eligible):
         if replacements >= max_replacements:
             break
         old_level = old.get("last_linked_unit_price")
         if old_level in (None, ""):
-            # Never perform an unbridged substitution.
-            continue
+            continue  # Never perform an unbridged substitution.
 
         candidate = shadow_rows[str(candidate_meta["product_key"])]
         old_key = str(old.get("product_key") or "")
@@ -409,13 +422,10 @@ def _observe_type(
         )
         item = items_by_key.get(new_key)
         replacement_row = _row_for_state(item, spec, provisional) if item is not None else None
-        if replacement_row is None:
+        if replacement_row is None or float(replacement_row["linked_unit_price"]) <= 0:
             continue
 
-        source_adjusted = float(replacement_row["unit_price"]) * float(provisional.get("source_bridge_factor", 1.0))
-        if source_adjusted <= 0:
-            continue
-        provisional["link_factor"] = float(old_level) / source_adjusted
+        provisional["link_factor"] = float(old_level) / float(replacement_row["linked_unit_price"])
         replacement_row = _row_for_state(item, spec, provisional)
         if replacement_row is None:
             continue
@@ -439,7 +449,7 @@ def _observe_type(
 def collect() -> Path:
     specs = load_product_types()
     panel_state = _load_panel()
-    panel_state["source_policy"] = "pinned-with-bridge"
+    panel_state["source_policy"] = "pinned-source-relatives"
     panel_state["renewal_policy"] = {
         "low_coverage_threshold": LOW_COVERAGE_THRESHOLD,
         "renewal_after_days": RENEWAL_AFTER_DAYS,
@@ -520,7 +530,7 @@ def collect() -> Path:
 
     panel_skus = sum(len(state.get("skus") or []) for state in types_state.values())
     observed_types = len({row["type_id"] for row in output_rows})
-    source_pinned = sum(row.get("source_mode") == "pinned" for row in output_rows)
+    source_pinned = sum(row.get("source_mode") == "pinned-relative" for row in output_rows)
     renewals = sum(int(state.get("renewals", 0)) for state in types_state.values())
     print(
         f"snapshot={out.relative_to(ROOT)} observed_skus={len(output_rows)} panel_skus={panel_skus} "
