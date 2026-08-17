@@ -22,6 +22,7 @@ DATA_DIR = ROOT / "data" / "v0.3"
 SNAPSHOT_DIR = DATA_DIR / "snapshots"
 PANEL_PATH = ROOT / "state" / "v0.3-panels.json"
 TR_TZ = ZoneInfo("Europe/Istanbul")
+
 LOW_COVERAGE_THRESHOLD = 0.80
 RENEWAL_AFTER_DAYS = 7
 CANDIDATE_MIN_STREAK = 3
@@ -86,7 +87,7 @@ def _offer_rows(item: dict[str, Any]) -> list[dict[str, Any]]:
 
 
 def _median_price(offers: list[dict[str, Any]]) -> float:
-    return float(median([float(row["price"]) for row in offers]))
+    return float(median(float(row["price"]) for row in offers))
 
 
 def _base_candidate(item: dict[str, Any], spec: dict[str, Any]) -> dict[str, Any] | None:
@@ -122,19 +123,20 @@ def _pin_sources(sku_state: dict[str, Any], offers: list[dict[str, Any]]) -> lis
         source_ids = sorted({str(row["source_id"]) for row in keyed})
         if source_ids:
             sku_state["source_ids"] = source_ids
-            saved = source_ids
             sku_state["source_mode"] = "pinned"
+            saved = source_ids
         else:
             sku_state["source_mode"] = "unkeyed"
             sku_state.setdefault("source_bridge_factor", 1.0)
             return offers
 
-    stable = [row for row in offers if row.get("source_id") in set(saved)]
+    saved_set = set(saved)
+    stable = [row for row in offers if row.get("source_id") in saved_set]
     if not stable:
         return []
 
     if "source_bridge_factor" not in sku_state:
-        # Preserve the old all-offer price level on the day source pinning is adopted.
+        # Keep the old all-offer level continuous when source pinning is adopted.
         sku_state["source_bridge_factor"] = _median_price(offers) / _median_price(stable)
     return stable
 
@@ -146,16 +148,18 @@ def _row_for_state(item: dict[str, Any], spec: dict[str, Any], sku_state: dict[s
     stable_offers = _pin_sources(sku_state, base["offers"])
     if not stable_offers:
         return None
-    stable_price = _median_price(stable_offers)
+
     quantity = parse_quantity(base["title"], spec["unit"])
     if quantity is None:
         return None
+    stable_price = _median_price(stable_offers)
     stable_unit_price = unit_price(stable_price, quantity)
     source_bridge = float(sku_state.get("source_bridge_factor", 1.0))
     link_factor = float(sku_state.get("link_factor", 1.0))
     linked = stable_unit_price * source_bridge * link_factor
     used_source_ids = sorted({str(row["source_id"]) for row in stable_offers if row.get("source_id")})
     markets = sorted({str(row["market"]) for row in stable_offers if row.get("market")})
+
     return {
         "product_key": base["product_key"],
         "slot_id": str(sku_state.get("slot_id") or base["product_key"]),
@@ -182,15 +186,53 @@ def _load_panel() -> dict[str, Any]:
     return {"version": "v0.3", "types": {}}
 
 
-def _migrate_sku_state(sku: dict[str, Any]) -> None:
+def _historical_levels() -> dict[str, float]:
+    """Return the most recent linked level for every known SKU/slot.
+
+    This seeds legacy panel state before automatic renewal is allowed, including
+    SKUs that are already missing on the first source-aware run.
+    """
+    levels: dict[str, float] = {}
+    for path in reversed(sorted(SNAPSHOT_DIR.glob("*.csv"))):
+        with path.open(encoding="utf-8", newline="") as handle:
+            for row in csv.DictReader(handle):
+                raw = row.get("linked_unit_price") or row.get("unit_price")
+                try:
+                    value = float(raw)
+                except (TypeError, ValueError):
+                    continue
+                if not math.isfinite(value) or value <= 0:
+                    continue
+                product_key = str(row.get("product_key") or "")
+                slot_id = str(row.get("slot_id") or product_key)
+                if product_key:
+                    levels.setdefault(product_key, value)
+                if slot_id:
+                    levels.setdefault(slot_id, value)
+    return levels
+
+
+def _migrate_sku_state(sku: dict[str, Any], historical_levels: dict[str, float] | None = None) -> None:
     product_key = str(sku.get("product_key") or "")
-    sku.setdefault("slot_id", product_key)
+    slot_id = str(sku.get("slot_id") or product_key)
+    sku.setdefault("slot_id", slot_id)
     sku.setdefault("generation", 0)
     sku.setdefault("link_factor", 1.0)
     sku.setdefault("missing_streak", 0)
+    if sku.get("last_linked_unit_price") in (None, "") and historical_levels:
+        level = historical_levels.get(slot_id) or historical_levels.get(product_key)
+        if level is not None:
+            sku["last_linked_unit_price"] = level
 
 
-def _new_sku_state(row: dict[str, Any], today: str, *, slot_id: str | None = None, generation: int = 0, link_factor: float = 1.0) -> dict[str, Any]:
+def _new_sku_state(
+    row: dict[str, Any],
+    today: str,
+    *,
+    slot_id: str | None = None,
+    generation: int = 0,
+    link_factor: float = 1.0,
+) -> dict[str, Any]:
     state: dict[str, Any] = {
         "slot_id": slot_id or row["product_key"],
         "product_key": row["product_key"],
@@ -207,28 +249,36 @@ def _new_sku_state(row: dict[str, Any], today: str, *, slot_id: str | None = Non
     return state
 
 
-def _initialize_type(candidates: list[dict[str, Any]], spec: dict[str, Any], claimed: set[str], today: str) -> tuple[dict[str, Any], list[dict[str, Any]]]:
+def _initialize_type(
+    candidates: list[dict[str, Any]],
+    spec: dict[str, Any],
+    claimed: set[str],
+    today: str,
+) -> tuple[dict[str, Any], list[dict[str, Any]]]:
     rows: list[dict[str, Any]] = []
-    candidate_items: dict[str, dict[str, Any]] = {}
+    items_by_key: dict[str, dict[str, Any]] = {}
     for item in candidates:
         row = _base_candidate(item, spec)
         if row is None or row["product_key"] in claimed:
             continue
         rows.append(row)
-        candidate_items[row["product_key"]] = item
+        items_by_key[row["product_key"]] = item
+
     rows.sort(key=lambda row: (row["score"], row["offer_count"]), reverse=True)
     selected = rows[: spec["target_skus"]]
     states: list[dict[str, Any]] = []
     observed: list[dict[str, Any]] = []
+
     for row in selected:
         claimed.add(row["product_key"])
         sku_state = _new_sku_state(row, today)
         states.append(sku_state)
-        obs = _row_for_state(candidate_items[row["product_key"]], spec, sku_state)
+        obs = _row_for_state(items_by_key[row["product_key"]], spec, sku_state)
         if obs is not None:
             sku_state["last_linked_unit_price"] = obs["linked_unit_price"]
             observed.append(obs)
-    panel = {
+
+    return {
         "initialized": today,
         "label": spec["label"],
         "group": spec["group"],
@@ -236,14 +286,20 @@ def _initialize_type(candidates: list[dict[str, Any]], spec: dict[str, Any], cla
         "low_coverage_streak": 0,
         "skus": states,
         "candidates": {},
-    }
-    return panel, observed
+    }, observed
 
 
-def _update_shadow_candidates(state: dict[str, Any], rows: list[dict[str, Any]], active_keys: set[str], claimed: set[str], today: str) -> dict[str, dict[str, Any]]:
+def _update_shadow_candidates(
+    state: dict[str, Any],
+    rows: list[dict[str, Any]],
+    active_keys: set[str],
+    claimed: set[str],
+    today: str,
+) -> dict[str, dict[str, Any]]:
     shadows = state.setdefault("candidates", {})
     yesterday = (date.fromisoformat(today) - timedelta(days=1)).isoformat()
     current: dict[str, dict[str, Any]] = {}
+
     for row in rows:
         key = row["product_key"]
         if key in active_keys or key in claimed:
@@ -273,9 +329,17 @@ def _update_shadow_candidates(state: dict[str, Any], rows: list[dict[str, Any]],
     return current
 
 
-def _observe_type(candidates: list[dict[str, Any]], spec: dict[str, Any], state: dict[str, Any], claimed: set[str], today: str) -> list[dict[str, Any]]:
+def _observe_type(
+    candidates: list[dict[str, Any]],
+    spec: dict[str, Any],
+    state: dict[str, Any],
+    claimed: set[str],
+    today: str,
+    historical_levels: dict[str, float],
+) -> list[dict[str, Any]]:
     for sku in state.get("skus") or []:
-        _migrate_sku_state(sku)
+        _migrate_sku_state(sku, historical_levels)
+
     items_by_key = {_product_key(item): item for item in candidates}
     candidate_rows = [row for item in candidates if (row := _base_candidate(item, spec)) is not None]
     active = state.get("skus") or []
@@ -297,11 +361,11 @@ def _observe_type(candidates: list[dict[str, Any]], spec: dict[str, Any], state:
         observed_slots.add(row["slot_id"])
 
     coverage = len(observed_slots) / len(active) if active else 0.0
-    if active and coverage < LOW_COVERAGE_THRESHOLD:
-        state["low_coverage_streak"] = int(state.get("low_coverage_streak", 0)) + 1
-    else:
-        state["low_coverage_streak"] = 0
-
+    state["low_coverage_streak"] = (
+        int(state.get("low_coverage_streak", 0)) + 1
+        if active and coverage < LOW_COVERAGE_THRESHOLD
+        else 0
+    )
     if int(state.get("low_coverage_streak", 0)) < RENEWAL_AFTER_DAYS:
         return observed
 
@@ -316,13 +380,21 @@ def _observe_type(candidates: list[dict[str, Any]], spec: dict[str, Any], state:
         and int(shadow.get("seen_streak", 0)) >= CANDIDATE_MIN_STREAK
         and shadow.get("product_key") in shadow_rows
     ]
-    eligible_candidates.sort(key=lambda row: (float(row.get("score", 0)), int(row.get("offer_count", 0))), reverse=True)
+    eligible_candidates.sort(
+        key=lambda row: (float(row.get("score", 0)), int(row.get("offer_count", 0))),
+        reverse=True,
+    )
     max_replacements = max(1, math.ceil(len(active) * MAX_REPLACEMENT_SHARE)) if active else 0
 
     replacements = 0
     for old, candidate_meta in zip(missing, eligible_candidates):
         if replacements >= max_replacements:
             break
+        old_level = old.get("last_linked_unit_price")
+        if old_level in (None, ""):
+            # Never perform an unbridged substitution.
+            continue
+
         candidate = shadow_rows[str(candidate_meta["product_key"])]
         old_key = str(old.get("product_key") or "")
         new_key = str(candidate["product_key"])
@@ -339,19 +411,19 @@ def _observe_type(candidates: list[dict[str, Any]], spec: dict[str, Any], state:
         replacement_row = _row_for_state(item, spec, provisional) if item is not None else None
         if replacement_row is None:
             continue
-        old_level = old.get("last_linked_unit_price")
-        if old_level not in (None, "") and float(replacement_row["linked_unit_price"]) > 0:
-            provisional["link_factor"] = float(old_level) / (
-                float(replacement_row["unit_price"]) * float(provisional.get("source_bridge_factor", 1.0))
-            )
-            replacement_row = _row_for_state(item, spec, provisional)
-            if replacement_row is None:
-                continue
+
+        source_adjusted = float(replacement_row["unit_price"]) * float(provisional.get("source_bridge_factor", 1.0))
+        if source_adjusted <= 0:
+            continue
+        provisional["link_factor"] = float(old_level) / source_adjusted
+        replacement_row = _row_for_state(item, spec, provisional)
+        if replacement_row is None:
+            continue
+
         provisional["previous_product_key"] = old_key
         provisional["replaced_on"] = today
         provisional["last_linked_unit_price"] = replacement_row["linked_unit_price"]
-        idx = active.index(old)
-        active[idx] = provisional
+        active[active.index(old)] = provisional
         claimed.discard(old_key)
         claimed.add(new_key)
         state.get("candidates", {}).pop(new_key, None)
@@ -376,12 +448,14 @@ def collect() -> Path:
     }
     types_state = panel_state.setdefault("types", {})
     today = datetime.now(TR_TZ).date().isoformat()
+    historical_levels = _historical_levels()
     claimed = {
         str(sku.get("product_key"))
         for state in types_state.values()
         for sku in (state.get("skus") or [])
         if sku.get("product_key")
     }
+
     session = requests.Session()
     output_rows: list[dict[str, Any]] = []
     errors: list[dict[str, str]] = []
@@ -394,7 +468,7 @@ def collect() -> Path:
                 state, observed = _initialize_type(candidates, spec, claimed, today)
                 types_state[spec["id"]] = state
             else:
-                observed = _observe_type(candidates, spec, state, claimed, today)
+                observed = _observe_type(candidates, spec, state, claimed, today, historical_levels)
 
             for row in observed:
                 output_rows.append({
@@ -439,8 +513,10 @@ def collect() -> Path:
 
     PANEL_PATH.parent.mkdir(parents=True, exist_ok=True)
     PANEL_PATH.write_text(json.dumps(panel_state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    error_path = DATA_DIR / "latest-errors.json"
-    error_path.write_text(json.dumps({"date": today, "errors": errors}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (DATA_DIR / "latest-errors.json").write_text(
+        json.dumps({"date": today, "errors": errors}, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
 
     panel_skus = sum(len(state.get("skus") or []) for state in types_state.values())
     observed_types = len({row["type_id"] for row in output_rows})
