@@ -24,7 +24,7 @@ def validate(min_type_coverage: float = 0.60, min_skus: int = 300) -> None:
     key_types: dict[str, set[str]] = defaultdict(set)
     slot_types: dict[str, set[str]] = defaultdict(set)
     bad_prices = 0
-    source_pinned = 0
+    source_relative = 0
     for row in rows:
         by_type[row["type_id"]] += 1
         key_types[row["product_key"]].add(row["type_id"])
@@ -36,8 +36,8 @@ def validate(min_type_coverage: float = 0.60, min_skus: int = 300) -> None:
                 bad_prices += 1
         except (TypeError, ValueError):
             bad_prices += 1
-        if row.get("source_mode") == "pinned":
-            source_pinned += 1
+        if row.get("source_mode") == "pinned-relative":
+            source_relative += 1
 
     spec_by_id = {row["id"]: row for row in specs}
     viable = [
@@ -53,7 +53,7 @@ def validate(min_type_coverage: float = 0.60, min_skus: int = 300) -> None:
         f"snapshot={latest.name} rows={len(rows)} observed_types={len(by_type)}/{len(specs)} "
         f"viable_types={len(viable)}/{len(specs)} viable_coverage={type_coverage:.1%} "
         f"duplicate_products={len(duplicate_products)} duplicate_slots={len(duplicate_slots)} "
-        f"bad_prices={bad_prices} source_pinned={source_pinned}"
+        f"bad_prices={bad_prices} source_relative={source_relative}"
     )
     if len(rows) < min_skus:
         raise SystemExit(f"SKU sayısı düşük: {len(rows)} < {min_skus}")
