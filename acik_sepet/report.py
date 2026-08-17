@@ -1,15 +1,18 @@
 from __future__ import annotations
 
 import csv
+import json
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data" / "v0.3"
+SNAPSHOT_DIR = DATA_DIR / "snapshots"
 INDEX_PATH = DATA_DIR / "index.csv"
 TYPE_PATH = DATA_DIR / "type_indices.csv"
 CATEGORY_PATH = DATA_DIR / "category_indices.csv"
+PANEL_PATH = ROOT / "state" / "v0.3-panels.json"
 CHART_PATH = ROOT / "charts" / "index.svg"
 README_PATH = ROOT / "README.md"
 
@@ -114,6 +117,18 @@ def _movers(type_rows: list[dict[str, str]]) -> str:
     return "\n".join(lines)
 
 
+def _source_and_renewal_stats() -> tuple[int, int, int]:
+    latest_paths = sorted(SNAPSHOT_DIR.glob("*.csv"))
+    rows = _read(latest_paths[-1]) if latest_paths else []
+    pinned = sum(row.get("source_mode") == "pinned" for row in rows)
+    source_aware = sum(bool(row.get("source_mode")) for row in rows)
+    renewals = 0
+    if PANEL_PATH.exists():
+        state = json.loads(PANEL_PATH.read_text(encoding="utf-8"))
+        renewals = sum(int(item.get("renewals", 0)) for item in (state.get("types") or {}).values())
+    return pinned, source_aware, renewals
+
+
 def _quality(type_rows: list[dict[str, str]], category_rows: list[dict[str, str]]) -> str:
     if not type_rows:
         return "İlk kalite ölçümü bekleniyor."
@@ -124,12 +139,20 @@ def _quality(type_rows: list[dict[str, str]], category_rows: list[dict[str, str]
     total_baseline_skus = sum(int(row["baseline_skus"]) for row in active)
     current_skus = sum(int(row["skus"]) for row in active)
     category_latest = [row for row in category_rows if row["date"] == latest_date and row.get("index")]
+    pinned, source_aware, renewals = _source_and_renewal_stats()
+    source_line = (
+        f"- **Sabit kaynak kimliği olan gözlem:** {pinned}/{source_aware}"
+        if source_aware else
+        "- **Kaynak sabitleme:** legacy snapshot; source-aware toplama bir sonraki çalışmada başlayacak."
+    )
     return "\n".join([
         f"- **Aktif ürün tipi:** {len(active)}/{len(latest_types)}",
         f"- **SKU panel kapsaması:** {current_skus}/{total_baseline_skus} ({(current_skus / total_baseline_skus * 100 if total_baseline_skus else 0):.1f}%)",
         f"- **%70'in altında panel kapsaması olan tip:** {len(low)}",
         f"- **Yayımlanan ana kategori:** {len(category_latest)}",
-        "- Tek bir SKU kaybolduğunda başka markaya sessiz ikame yapılmaz; ürün tipi yeterli paneli koruyorsa kalan aynı-SKU relatifleriyle devam eder.",
+        source_line,
+        f"- **Köprülenmiş otomatik SKU yenilemesi:** {renewals}",
+        "- Kaynak/depo değişimi sessiz fiyat değişimi sayılmaz; kaynaklar SKU bazında sabitlenir. Panel yenilemesi ancak kalıcı kapsama kaybında ve bridge factor ile yapılır.",
     ])
 
 
