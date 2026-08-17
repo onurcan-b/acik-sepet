@@ -34,21 +34,32 @@ Panel `state/v0.3-panels.json` içinde saklanır. Her başlangıç SKU'su aynı 
 
 Bir SKU için aynı gün birden fazla market/depot fiyatı bulunabilir. Collector her teklif için mümkünse `depotId`; bu yoksa market/depot adından türetilen kararlı bir kaynak kimliği kullanır.
 
-Source-aware toplama devreye girdiğinde SKU'nun mevcut kaynak kümesi sabitlenir. Sonraki günlerde:
+Source-aware toplama devreye girdiğinde SKU'nun mevcut kaynak kümesi sabitlenir. Her sabit kaynak için o günün fiyatı anchor olarak tutulur. Sonraki günlerde:
 
 - yeni görünen kaynaklar otomatik olarak fiyat hesabına eklenmez,
-- sabit kaynakların mevcut olanları kullanılır,
-- sabit kaynaklardan hiçbiri görünmezse SKU o gün eksik sayılır.
+- yalnızca başlangıçta sabitlenmiş ve o gün yeniden görülen kaynaklar karşılaştırılır,
+- hiçbir sabit kaynak görünmezse SKU o gün eksik sayılır.
 
-Bu, temsilci mağaza/depot rotasyonunun fiyat değişimi sanılması riskini azaltır.
-
-Kaynak sabitlemenin ilk gününde eski tüm-teklif medyanı ile sabit-kaynak medyanı arasında:
+Tek başına sabit kaynak kümesinin medyanını almak yeterli değildir: sabit kaynaklardan bir kısmı geçici olarak kaybolursa kaynak kompozisyonu yine fiyat seviyesini oynatabilir. Bu nedenle her kaynak kendi anchor fiyatına göre relative olarak izlenir:
 
 ```text
-source_bridge = old_all_offer_price / pinned_source_price
+r(s,t) = p(s,t) / p(s,anchor)
 ```
 
-hesaplanır. Endekste kullanılan bağlı fiyat seviyesi bu katsayıyla ölçeklenir. Böylece yalnızca kaynak politikası değiştiği için seri sıçramaz.
+SKU'nun kaynak-ayarlı paket fiyatı:
+
+```text
+P_linked(t)
+  = P_all_offers(anchor)
+    × geometric_mean(r(s,t) for currently observed pinned sources)
+```
+
+olarak hesaplanır. `P_all_offers(anchor)` source-aware metodolojinin devreye girdiği gün eski metodolojiyle gözlenen tüm-teklif medyanıdır.
+
+Bu yapı iki şeyi birlikte sağlar:
+
+1. kaynak metodolojisi devreye girdiği anda eski fiyat seviyesinden yapay bir kopuş oluşmaz,
+2. sabit kaynaklardan biri kaybolup diğerlerinin fiyatı değişmezse sırf kaynak kompozisyonu değişti diye SKU seviyesi oynamaz.
 
 ## 4. Birim normalizasyonu
 
@@ -79,9 +90,12 @@ olarak hesaplanır.
 
 Birim fiyat seviyeleri farklı markalar arasında doğrudan ortalanmaz. Normalizasyonun amacı aynı panel slotunun zaman içindeki fiyat relatifini ve paket küçülmesi/büyümesini ölçmektir.
 
-## 5. Günlük SKU fiyatı
+## 5. Günlük SKU fiyatı ve bağlı fiyat
 
-Bir SKU için sabitlenmiş kaynaklardan gelen geçerli fiyatların medyanı alınır. Snapshot'ta hem gerçek sabit-kaynak birim fiyatı (`unit_price`) hem de metodoloji sürekliliği için bridge edilmiş değer (`linked_unit_price`) tutulur.
+Snapshot'ta iki fiyat seviyesi tutulur:
+
+- `unit_price`: o gün yeniden görülen sabit kaynaklardaki gözlenen fiyat seviyesinin medyanından türetilen birim fiyat,
+- `linked_unit_price`: kaynak-relative sürekliliği ve varsa panel ikame bridge'i uygulanmış, endekste kullanılan birim fiyat.
 
 Legacy v0.3 snapshot'larında `slot_id` ve `linked_unit_price` alanları yoktur. Index loader bu satırlarda:
 
@@ -144,7 +158,7 @@ Bir SKU geçici olarak bulunamazsa başka bir SKU ile günlük ikame yapılmaz. 
 - karşılaştırılabilir panel slotu/SKU sayısı,
 - ürün tipi panel kapsaması,
 - kategori ağırlık kapsaması,
-- sabit kaynak kimliği bulunan gözlemler,
+- source-relative takip edilen SKU sayısı,
 - parser/API hataları,
 - yapılan bridge edilmiş panel yenilemeleri.
 
@@ -162,17 +176,21 @@ başlar.
 
 Bir çalışmada panelin en fazla `%20`'si yenilenebilir.
 
-Yeni SKU, kaybolan SKU'nun **slot_id** değerini devralır. Aktivasyon gününde:
+Yeni SKU, kaybolan SKU'nun **slot_id** değerini devralır. Eski slotun son bağlı fiyat seviyesi önce mevcut state'ten, yoksa geçmiş v0.3 snapshot'larından seed edilir. Bu seviye bulunamazsa otomatik ikame **yapılmaz**.
+
+Güvenilir eski seviye varsa aktivasyon gününde:
 
 ```text
-replacement_bridge = old_slot_last_linked_price / new_sku_source_adjusted_unit_price
+replacement_bridge
+  = old_slot_last_linked_price
+    / new_sku_initial_linked_unit_price
 ```
 
-hesaplanır. Böylece yeni ürünün farklı fiyat seviyesi endekste tek seferlik artış/düşüş oluşturmaz. Yeni SKU'nun sonraki fiyat hareketleri aynı slot üzerinden ölçülür.
+hesaplanır. Böylece yeni ürünün farklı fiyat seviyesi endekste tek seferlik artış/düşüş oluşturmaz. Yeni SKU'nun bundan sonraki fiyat hareketleri aynı slot üzerinden ölçülür.
 
-Bu yenileme gerçek SKU kimliğini gizlemez: snapshot'ta `product_key` güncel SKU'yu, `slot_id` ise zincirlenmiş endeks kimliğini gösterir; panel state önceki SKU kimliğini ve yenileme tarihini saklar.
+Bu yenileme gerçek SKU kimliğini gizlemez: snapshot'ta `product_key` güncel SKU'yu, `slot_id` ise zincirlenmiş endeks kimliğini gösterir; panel state önceki SKU kimliğini, generation ve yenileme tarihini saklar.
 
-## 11. Yayın geçmişi koruması
+## 11. Yayın geçmişi ve grafik koruması
 
 Source-aware toplama ve bridge edilmiş panel yenileme mevcut v0.3 serisini sıfırlamaz. İlk yayımlanmış değerler CI içinde regression anchor olarak kilitlenmiştir:
 
@@ -181,7 +199,9 @@ Source-aware toplama ve bridge edilmiş panel yenileme mevcut v0.3 serisini sıf
 2026-08-17 = 100.1338
 ```
 
-Pull request validation ve günlük workflow endeksi/`charts/index.svg` grafiğini yeniden üretir; bu anchor'lar değişirse job başarısız olur ve bot commit atmaz.
+Pull request validation ve günlük workflow mevcut snapshot'lardan endeksi ve `charts/index.svg` grafiğini yeniden üretir. Bu anchor'lar değişirse veya grafik üretilemezse job başarısız olur; günlük bot veri commit'ine geçmez.
+
+Pull request validation ayrıca gerçek Market Fiyatı API'siyle commit atmayan source-aware collector smoke testi çalıştırır.
 
 ## 12. v0.2 ile karşılaştırılabilirlik
 
