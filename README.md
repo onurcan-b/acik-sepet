@@ -12,10 +12,10 @@ Türkiye'deki zincir market fiyatlarını **ürün tipi → çoklu SKU → kateg
 ![Açık Sepet günlük endeksi](charts/index.svg)
 
 <!-- STATS_START -->
-- **Son değer:** 100.13
-- **Son güncelleme:** 2026-08-17
+- **Son değer:** 100.44
+- **Son güncelleme:** 2026-08-18
 - **Aktif ürün tipi:** 110
-- **Karşılaştırılabilir SKU:** 2033
+- **Karşılaştırılabilir SKU:** 2015
 - **Kategori ağırlık kapsaması:** %100
 - **7 günlük değişim:** —
 - **30 günlük değişim:** —
@@ -25,32 +25,32 @@ Türkiye'deki zincir market fiyatlarını **ürün tipi → çoklu SKU → kateg
 ## Son 24 saatte
 
 <!-- MOVERS_START -->
-- **Dönem:** 2026-08-16 → 2026-08-17
-- **↑ Yükselen ürün tipi:** 16 · **↓ Düşen:** 14 · **= Yatay:** 80
+- **Dönem:** 2026-08-17 → 2026-08-18
+- **↑ Yükselen ürün tipi:** 14 · **↓ Düşen:** 11 · **= Yatay:** 85
 - **Karşılaştırılan ürün tipi:** 110
 
 | Ürün tipi | SKU | Değişim |
 |---|---:|---:|
-| Duş jeli | 25 | +19.64% |
-| Karpuz | 11 | +6.50% |
-| Şampuan | 23 | +5.38% |
-| Bal | 19 | +4.67% |
-| Kalıp sabun | 22 | -4.30% |
-| Sıvı sabun | 24 | +4.21% |
-| Çamaşır suyu | 18 | -4.12% |
-| Yumuşatıcı | 10 | -3.61% |
-| Kabak | 15 | +3.13% |
-| Havuç | 12 | -2.90% |
+| Hindi eti | 4 | +13.86% |
+| Elma | 10 | +3.63% |
+| Tavuk but / baget | 9 | +3.11% |
+| Labne | 24 | -2.40% |
+| Dana kıyma | 10 | +2.13% |
+| Biber | 20 | -2.01% |
+| Şeftali | 5 | +1.86% |
+| Üzüm | 15 | +1.62% |
+| Dana kuşbaşı / sote | 10 | +1.59% |
+| Krem peynir | 23 | -1.10% |
 <!-- MOVERS_END -->
 
 ## Veri kalitesi
 
 <!-- QUALITY_START -->
 - **Aktif ürün tipi:** 110/130
-- **SKU panel kapsaması:** 2033/2096 (97.0%)
+- **SKU panel kapsaması:** 2015/2096 (96.1%)
 - **%70'in altında panel kapsaması olan tip:** 0
 - **Yayımlanan ana kategori:** 12
-- **Kaynak takibi:** legacy snapshot; source-aware toplama bir sonraki çalışmada başlayacak.
+- **Depot-relative kaynak takibi olan gözlem:** 2035/2035
 - **Köprülenmiş otomatik SKU yenilemesi:** 0
 - Yeni depotlar sessizce panele girmez; mevcut depotların fiyat relatifleri ayrı izlenir. Bir depot geçici kaybolduğunda yalnızca kaynak kompozisyonu değişti diye seviye sıçraması oluşmaz.
 <!-- QUALITY_END -->
