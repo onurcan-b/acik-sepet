@@ -12,10 +12,10 @@ Türkiye'deki zincir market fiyatlarını **ürün tipi → çoklu SKU → kateg
 ![Açık Sepet günlük endeksi](charts/index.svg)
 
 <!-- STATS_START -->
-- **Son değer:** 100.44
-- **Son güncelleme:** 2026-08-18
-- **Aktif ürün tipi:** 110
-- **Karşılaştırılabilir SKU:** 2015
+- **Son değer:** 100.82
+- **Son güncelleme:** 2026-08-19
+- **Aktif ürün tipi:** 108
+- **Karşılaştırılabilir SKU:** 1896
 - **Kategori ağırlık kapsaması:** %100
 - **7 günlük değişim:** —
 - **30 günlük değişim:** —
@@ -25,32 +25,32 @@ Türkiye'deki zincir market fiyatlarını **ürün tipi → çoklu SKU → kateg
 ## Son 24 saatte
 
 <!-- MOVERS_START -->
-- **Dönem:** 2026-08-17 → 2026-08-18
-- **↑ Yükselen ürün tipi:** 14 · **↓ Düşen:** 11 · **= Yatay:** 85
-- **Karşılaştırılan ürün tipi:** 110
+- **Dönem:** 2026-08-18 → 2026-08-19
+- **↑ Yükselen ürün tipi:** 42 · **↓ Düşen:** 27 · **= Yatay:** 39
+- **Karşılaştırılan ürün tipi:** 108
 
 | Ürün tipi | SKU | Değişim |
 |---|---:|---:|
-| Hindi eti | 4 | +13.86% |
-| Elma | 10 | +3.63% |
-| Tavuk but / baget | 9 | +3.11% |
-| Labne | 24 | -2.40% |
-| Dana kıyma | 10 | +2.13% |
-| Biber | 20 | -2.01% |
-| Şeftali | 5 | +1.86% |
-| Üzüm | 15 | +1.62% |
-| Dana kuşbaşı / sote | 10 | +1.59% |
-| Krem peynir | 23 | -1.10% |
+| Kavun | 9 | +10.28% |
+| Deodorant | 20 | +9.19% |
+| Şampuan | 21 | +7.22% |
+| Limon | 6 | +6.51% |
+| Dana kuşbaşı / sote | 8 | +4.71% |
+| Kalıp sabun | 15 | +4.53% |
+| Köfte | 13 | +4.35% |
+| Bisküvi | 23 | +4.16% |
+| Gofret | 16 | -3.74% |
+| Dana kıyma | 8 | +3.59% |
 <!-- MOVERS_END -->
 
 ## Veri kalitesi
 
 <!-- QUALITY_START -->
-- **Aktif ürün tipi:** 110/130
-- **SKU panel kapsaması:** 2015/2096 (96.1%)
-- **%70'in altında panel kapsaması olan tip:** 0
+- **Aktif ürün tipi:** 108/130
+- **SKU panel kapsaması:** 1896/2086 (90.9%)
+- **%70'in altında panel kapsaması olan tip:** 3
 - **Yayımlanan ana kategori:** 12
-- **Depot-relative kaynak takibi olan gözlem:** 2035/2035
+- **Depot-relative kaynak takibi olan gözlem:** 1919/1919
 - **Köprülenmiş otomatik SKU yenilemesi:** 0
 - Yeni depotlar sessizce panele girmez; mevcut depotların fiyat relatifleri ayrı izlenir. Bir depot geçici kaybolduğunda yalnızca kaynak kompozisyonu değişti diye seviye sıçraması oluşmaz.
 <!-- QUALITY_END -->
