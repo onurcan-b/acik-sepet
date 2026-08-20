@@ -13,7 +13,7 @@ Türkiye'deki zincir market fiyatlarını **ürün tipi → çoklu SKU → kateg
 
 <!-- STATS_START -->
 - **Son değer:** 100.82
-- **Son güncelleme:** 2026-08-19
+- **Son güncelleme:** 2026-08-20
 - **Aktif ürün tipi:** 108
 - **Karşılaştırılabilir SKU:** 1896
 - **Kategori ağırlık kapsaması:** %100
@@ -25,22 +25,11 @@ Türkiye'deki zincir market fiyatlarını **ürün tipi → çoklu SKU → kateg
 ## Son 24 saatte
 
 <!-- MOVERS_START -->
-- **Dönem:** 2026-08-18 → 2026-08-19
-- **↑ Yükselen ürün tipi:** 42 · **↓ Düşen:** 27 · **= Yatay:** 39
+- **Dönem:** 2026-08-19 → 2026-08-20
+- **↑ Yükselen ürün tipi:** 0 · **↓ Düşen:** 0 · **= Yatay:** 108
 - **Karşılaştırılan ürün tipi:** 108
 
-| Ürün tipi | SKU | Değişim |
-|---|---:|---:|
-| Kavun | 9 | +10.28% |
-| Deodorant | 20 | +9.19% |
-| Şampuan | 21 | +7.22% |
-| Limon | 6 | +6.51% |
-| Dana kuşbaşı / sote | 8 | +4.71% |
-| Kalıp sabun | 15 | +4.53% |
-| Köfte | 13 | +4.35% |
-| Bisküvi | 23 | +4.16% |
-| Gofret | 16 | -3.74% |
-| Dana kıyma | 8 | +3.59% |
+Karşılaştırılabilir ürün tiplerinde anlamlı günlük hareket gözlenmedi.
 <!-- MOVERS_END -->
 
 ## Veri kalitesi
