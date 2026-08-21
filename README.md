@@ -12,10 +12,10 @@ Türkiye'deki zincir market fiyatlarını **ürün tipi → çoklu SKU → kateg
 ![Açık Sepet günlük endeksi](charts/index.svg)
 
 <!-- STATS_START -->
-- **Son değer:** 100.82
-- **Son güncelleme:** 2026-08-20
+- **Son değer:** 100.89
+- **Son güncelleme:** 2026-08-21
 - **Aktif ürün tipi:** 108
-- **Karşılaştırılabilir SKU:** 1896
+- **Karşılaştırılabilir SKU:** 1872
 - **Kategori ağırlık kapsaması:** %100
 - **7 günlük değişim:** —
 - **30 günlük değişim:** —
@@ -25,21 +25,32 @@ Türkiye'deki zincir market fiyatlarını **ürün tipi → çoklu SKU → kateg
 ## Son 24 saatte
 
 <!-- MOVERS_START -->
-- **Dönem:** 2026-08-19 → 2026-08-20
-- **↑ Yükselen ürün tipi:** 0 · **↓ Düşen:** 0 · **= Yatay:** 108
-- **Karşılaştırılan ürün tipi:** 108
+- **Dönem:** 2026-08-20 → 2026-08-21
+- **↑ Yükselen ürün tipi:** 46 · **↓ Düşen:** 45 · **= Yatay:** 16
+- **Karşılaştırılan ürün tipi:** 107
 
-Karşılaştırılabilir ürün tiplerinde anlamlı günlük hareket gözlenmedi.
+| Ürün tipi | SKU | Değişim |
+|---|---:|---:|
+| Islak mendil | 18 | +9.98% |
+| Duş jeli | 25 | +8.95% |
+| Taze fasulye | 4 | +7.46% |
+| Margarin | 22 | +7.09% |
+| Kavun | 9 | -6.92% |
+| Patlıcan | 16 | +6.53% |
+| Salça | 14 | +6.45% |
+| Kalıp sabun | 15 | +6.37% |
+| Şekerleme | 18 | +6.37% |
+| Çözünebilir kahve | 9 | -6.33% |
 <!-- MOVERS_END -->
 
 ## Veri kalitesi
 
 <!-- QUALITY_START -->
 - **Aktif ürün tipi:** 108/130
-- **SKU panel kapsaması:** 1896/2086 (90.9%)
-- **%70'in altında panel kapsaması olan tip:** 3
+- **SKU panel kapsaması:** 1872/2087 (89.7%)
+- **%70'in altında panel kapsaması olan tip:** 4
 - **Yayımlanan ana kategori:** 12
-- **Depot-relative kaynak takibi olan gözlem:** 1919/1919
+- **Depot-relative kaynak takibi olan gözlem:** 1894/1894
 - **Köprülenmiş otomatik SKU yenilemesi:** 0
 - Yeni depotlar sessizce panele girmez; mevcut depotların fiyat relatifleri ayrı izlenir. Bir depot geçici kaybolduğunda yalnızca kaynak kompozisyonu değişti diye seviye sıçraması oluşmaz.
 <!-- QUALITY_END -->
