@@ -12,10 +12,10 @@ Türkiye'deki zincir market fiyatlarını **ürün tipi → çoklu SKU → kateg
 ![Açık Sepet günlük endeksi](charts/index.svg)
 
 <!-- STATS_START -->
-- **Son değer:** 100.89
-- **Son güncelleme:** 2026-08-21
-- **Aktif ürün tipi:** 108
-- **Karşılaştırılabilir SKU:** 1872
+- **Son değer:** 100.20
+- **Son güncelleme:** 2026-08-22
+- **Aktif ürün tipi:** 109
+- **Karşılaştırılabilir SKU:** 1836
 - **Kategori ağırlık kapsaması:** %100
 - **7 günlük değişim:** —
 - **30 günlük değişim:** —
@@ -25,32 +25,32 @@ Türkiye'deki zincir market fiyatlarını **ürün tipi → çoklu SKU → kateg
 ## Son 24 saatte
 
 <!-- MOVERS_START -->
-- **Dönem:** 2026-08-20 → 2026-08-21
-- **↑ Yükselen ürün tipi:** 46 · **↓ Düşen:** 45 · **= Yatay:** 16
-- **Karşılaştırılan ürün tipi:** 107
+- **Dönem:** 2026-08-21 → 2026-08-22
+- **↑ Yükselen ürün tipi:** 41 · **↓ Düşen:** 55 · **= Yatay:** 12
+- **Karşılaştırılan ürün tipi:** 108
 
 | Ürün tipi | SKU | Değişim |
 |---|---:|---:|
-| Islak mendil | 18 | +9.98% |
-| Duş jeli | 25 | +8.95% |
-| Taze fasulye | 4 | +7.46% |
-| Margarin | 22 | +7.09% |
-| Kavun | 9 | -6.92% |
-| Patlıcan | 16 | +6.53% |
-| Salça | 14 | +6.45% |
-| Kalıp sabun | 15 | +6.37% |
-| Şekerleme | 18 | +6.37% |
-| Çözünebilir kahve | 9 | -6.33% |
+| Kavun | 9 | -16.43% |
+| Sıvı çamaşır deterjanı | 23 | -8.30% |
+| Diş macunu | 23 | -7.80% |
+| Filtre kahve | 21 | +6.33% |
+| Köfte | 13 | -5.47% |
+| Portakal | 11 | +4.73% |
+| Şampuan | 21 | -4.67% |
+| Tavuk göğüs | 5 | -4.55% |
+| Kabak | 14 | -4.09% |
+| Şehriye | 18 | -4.03% |
 <!-- MOVERS_END -->
 
 ## Veri kalitesi
 
 <!-- QUALITY_START -->
-- **Aktif ürün tipi:** 108/130
-- **SKU panel kapsaması:** 1872/2087 (89.7%)
+- **Aktif ürün tipi:** 109/130
+- **SKU panel kapsaması:** 1836/2092 (87.8%)
 - **%70'in altında panel kapsaması olan tip:** 4
 - **Yayımlanan ana kategori:** 12
-- **Depot-relative kaynak takibi olan gözlem:** 1894/1894
+- **Depot-relative kaynak takibi olan gözlem:** 1856/1856
 - **Köprülenmiş otomatik SKU yenilemesi:** 0
 - Yeni depotlar sessizce panele girmez; mevcut depotların fiyat relatifleri ayrı izlenir. Bir depot geçici kaybolduğunda yalnızca kaynak kompozisyonu değişti diye seviye sıçraması oluşmaz.
 <!-- QUALITY_END -->
