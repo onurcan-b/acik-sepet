@@ -12,12 +12,12 @@ Türkiye'deki zincir market fiyatlarını **ürün tipi → çoklu SKU → kateg
 ![Açık Sepet günlük endeksi](charts/index.svg)
 
 <!-- STATS_START -->
-- **Son değer:** 100.80
-- **Son güncelleme:** 2026-08-24
+- **Son değer:** 101.15
+- **Son güncelleme:** 2026-08-25
 - **Aktif ürün tipi:** 109
-- **Karşılaştırılabilir SKU:** 1778
+- **Karşılaştırılabilir SKU:** 1774
 - **Kategori ağırlık kapsaması:** %100
-- **7 günlük değişim:** +0.67%
+- **7 günlük değişim:** +0.70%
 - **30 günlük değişim:** —
 - **Baz tarihi:** 2026-08-16 = 100
 <!-- STATS_END -->
@@ -25,33 +25,33 @@ Türkiye'deki zincir market fiyatlarını **ürün tipi → çoklu SKU → kateg
 ## Son 24 saatte
 
 <!-- MOVERS_START -->
-- **Dönem:** 2026-08-23 → 2026-08-24
-- **↑ Yükselen ürün tipi:** 38 · **↓ Düşen:** 25 · **= Yatay:** 46
+- **Dönem:** 2026-08-24 → 2026-08-25
+- **↑ Yükselen ürün tipi:** 49 · **↓ Düşen:** 31 · **= Yatay:** 29
 - **Karşılaştırılan ürün tipi:** 109
 
 | Ürün tipi | SKU | Değişim |
 |---|---:|---:|
-| Sıvı sabun | 21 | -10.45% |
-| Diş fırçası | 23 | +9.54% |
-| Sıvı çamaşır deterjanı | 20 | -9.12% |
-| Kalıp sabun | 15 | -6.03% |
-| Kültür mantarı | 14 | +4.55% |
-| Kavun | 8 | +4.51% |
-| Kağıt havlu | 14 | -4.36% |
-| Şekerleme | 15 | -4.15% |
-| Mayonez | 24 | +3.81% |
-| Karpuz | 11 | +3.47% |
+| Kavun | 8 | +9.72% |
+| Limon | 4 | -9.02% |
+| Filtre kahve | 17 | -5.77% |
+| Dana kuşbaşı / sote | 7 | +5.22% |
+| Deodorant | 18 | -5.19% |
+| Köfte | 13 | +4.79% |
+| Şeftali | 5 | +4.38% |
+| Kağıt havlu | 14 | +3.94% |
+| Sıvı çamaşır deterjanı | 20 | +3.82% |
+| Ton balığı | 22 | -3.60% |
 <!-- MOVERS_END -->
 
 ## Veri kalitesi
 
 <!-- QUALITY_START -->
 - **Aktif ürün tipi:** 109/130
-- **SKU panel kapsaması:** 1778/2092 (85.0%)
-- **%70'in altında panel kapsaması olan tip:** 10
+- **SKU panel kapsaması:** 1774/2092 (84.8%)
+- **%70'in altında panel kapsaması olan tip:** 8
 - **Yayımlanan ana kategori:** 12
-- **Depot-relative kaynak takibi olan gözlem:** 1798/1798
-- **Köprülenmiş otomatik SKU yenilemesi:** 8
+- **Depot-relative kaynak takibi olan gözlem:** 1794/1794
+- **Köprülenmiş otomatik SKU yenilemesi:** 11
 - Yeni depotlar sessizce panele girmez; mevcut depotların fiyat relatifleri ayrı izlenir. Bir depot geçici kaybolduğunda yalnızca kaynak kompozisyonu değişti diye seviye sıçraması oluşmaz.
 <!-- QUALITY_END -->
 
