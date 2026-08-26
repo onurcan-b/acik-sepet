@@ -12,12 +12,12 @@ Türkiye'deki zincir market fiyatlarını **ürün tipi → çoklu SKU → kateg
 ![Açık Sepet günlük endeksi](charts/index.svg)
 
 <!-- STATS_START -->
-- **Son değer:** 101.15
-- **Son güncelleme:** 2026-08-25
+- **Son değer:** 101.70
+- **Son güncelleme:** 2026-08-26
 - **Aktif ürün tipi:** 109
-- **Karşılaştırılabilir SKU:** 1774
+- **Karşılaştırılabilir SKU:** 1758
 - **Kategori ağırlık kapsaması:** %100
-- **7 günlük değişim:** +0.70%
+- **7 günlük değişim:** +0.87%
 - **30 günlük değişim:** —
 - **Baz tarihi:** 2026-08-16 = 100
 <!-- STATS_END -->
@@ -25,32 +25,32 @@ Türkiye'deki zincir market fiyatlarını **ürün tipi → çoklu SKU → kateg
 ## Son 24 saatte
 
 <!-- MOVERS_START -->
-- **Dönem:** 2026-08-24 → 2026-08-25
-- **↑ Yükselen ürün tipi:** 49 · **↓ Düşen:** 31 · **= Yatay:** 29
+- **Dönem:** 2026-08-25 → 2026-08-26
+- **↑ Yükselen ürün tipi:** 55 · **↓ Düşen:** 28 · **= Yatay:** 26
 - **Karşılaştırılan ürün tipi:** 109
 
 | Ürün tipi | SKU | Değişim |
 |---|---:|---:|
-| Kavun | 8 | +9.72% |
-| Limon | 4 | -9.02% |
-| Filtre kahve | 17 | -5.77% |
-| Dana kuşbaşı / sote | 7 | +5.22% |
-| Deodorant | 18 | -5.19% |
-| Köfte | 13 | +4.79% |
-| Şeftali | 5 | +4.38% |
-| Kağıt havlu | 14 | +3.94% |
-| Sıvı çamaşır deterjanı | 20 | +3.82% |
-| Ton balığı | 22 | -3.60% |
+| Havuç | 12 | +6.22% |
+| Muz | 13 | +5.73% |
+| Tavuk göğüs | 5 | +5.48% |
+| Armut | 7 | +5.38% |
+| Zeytinyağı | 13 | +4.80% |
+| Sıvı sabun | 19 | +4.22% |
+| Kabak | 12 | -3.53% |
+| Hazır çorba | 14 | -3.50% |
+| Diş fırçası | 23 | +3.42% |
+| Üzüm | 12 | +3.14% |
 <!-- MOVERS_END -->
 
 ## Veri kalitesi
 
 <!-- QUALITY_START -->
 - **Aktif ürün tipi:** 109/130
-- **SKU panel kapsaması:** 1774/2092 (84.8%)
-- **%70'in altında panel kapsaması olan tip:** 8
+- **SKU panel kapsaması:** 1758/2092 (84.0%)
+- **%70'in altında panel kapsaması olan tip:** 12
 - **Yayımlanan ana kategori:** 12
-- **Depot-relative kaynak takibi olan gözlem:** 1794/1794
+- **Depot-relative kaynak takibi olan gözlem:** 1778/1778
 - **Köprülenmiş otomatik SKU yenilemesi:** 11
 - Yeni depotlar sessizce panele girmez; mevcut depotların fiyat relatifleri ayrı izlenir. Bir depot geçici kaybolduğunda yalnızca kaynak kompozisyonu değişti diye seviye sıçraması oluşmaz.
 <!-- QUALITY_END -->
