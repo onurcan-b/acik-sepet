@@ -37,7 +37,6 @@ FRESH_REJECT_STEMS = {
     "recel",
     "rende",
     "sabun",
-    "sakiz",
     "salca",
     "sampuan",
     "seker",
