@@ -11,7 +11,7 @@ from .product_types import load_product_types
 from .units import parse_quantity
 
 FRESH_GROUPS = {"fruit", "vegetables"}
-FRESH_REJECT_PHRASES = {
+FRESH_REJECT_STEMS = {
     "baby",
     "bebek",
     "cips",
@@ -40,6 +40,8 @@ FRESH_REJECT_PHRASES = {
     "temizleyici",
     "toz",
     "yogurtlu",
+    # Turkish consonant softening: çekirdek -> çekirdeği.
+    "cekirdeg",
 }
 
 
@@ -61,6 +63,23 @@ def contains_phrase(title_tokens: tuple[str, ...], phrase: str) -> bool:
     return any(title_tokens[i : i + width] == wanted for i in range(len(title_tokens) - width + 1))
 
 
+def contains_reject_stem(title_tokens: tuple[str, ...], stem: str) -> bool:
+    """Reject-context matching may follow Turkish suffixes; commodity matching may not.
+
+    This asymmetry is intentional: `muz` must not match `muzlu`, while reject
+    contexts such as `püre` should still reject `püresi` and `cips` should
+    reject `cipsi`.
+    """
+    normalized = norm(stem)
+    if not normalized:
+        return False
+    if " " in normalized:
+        return contains_phrase(title_tokens, normalized)
+    if len(normalized) < 4:
+        return normalized in title_tokens
+    return any(token.startswith(normalized) for token in title_tokens)
+
+
 def legacy_score(title: str, spec: dict[str, Any]) -> float:
     normalized = norm(title)
     if not normalized:
@@ -80,7 +99,7 @@ def strict_decision(title: str, spec: dict[str, Any]) -> tuple[bool, str, float]
         return False, "empty-title", -1.0
 
     for phrase in spec.get("exclude_tokens") or []:
-        if contains_phrase(title_tokens, phrase):
+        if contains_reject_stem(title_tokens, phrase):
             return False, f"excluded:{norm(phrase)}", -1.0
 
     includes = list(spec.get("include_tokens") or [])
@@ -90,9 +109,9 @@ def strict_decision(title: str, spec: dict[str, Any]) -> tuple[bool, str, float]
     if spec.get("group") in FRESH_GROUPS:
         if includes and len(matched) != len(includes):
             return False, "fresh-missing-required-exact-token", score
-        for phrase in FRESH_REJECT_PHRASES:
-            if contains_phrase(title_tokens, phrase):
-                return False, f"fresh-context:{phrase}", score
+        for stem in FRESH_REJECT_STEMS:
+            if contains_reject_stem(title_tokens, stem):
+                return False, f"fresh-context:{stem}", score
         return True, "fresh-exact-match", score
 
     if score < 0.5:
