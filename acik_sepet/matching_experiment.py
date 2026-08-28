@@ -12,6 +12,17 @@ from .units import parse_quantity
 
 FRESH_GROUPS = {"fruit", "vegetables"}
 FRESH_MIN_MASS_KG = 0.25
+
+# Experiment only: broaden candidate discovery without weakening eligibility.
+EXPANDED_QUERIES: dict[str, list[str]] = {
+    "banana": ["yerli muz", "ithal muz", "muz 1 kg", "muz paket"],
+    "carrot": ["havuç paket", "taze havuç", "havuç 1 kg"],
+    "lemon": ["taze limon", "lamas limon", "limon 1 kg"],
+    "zucchini": ["sakız kabak", "dolmalık kabak", "kabak 1 kg"],
+    "tomato": ["domates 1 kg", "salkım domates", "kokteyl domates"],
+    "pear": ["deveci armut", "santa maria armut", "armut 1 kg", "naşi armut"],
+}
+
 FRESH_REJECT_STEMS = {
     "baby",
     "bebek",
@@ -59,6 +70,14 @@ def norm(value: str | None) -> str:
 
 def tokens(value: str | None) -> tuple[str, ...]:
     return tuple(norm(value).split())
+
+
+def product_key(item: dict[str, Any]) -> str:
+    for field in ("id", "productId", "product_id", "barcode"):
+        value = item.get(field)
+        if value not in (None, ""):
+            return f"{field}:{value}"
+    return f"title:{norm(str(item.get('title') or ''))}"
 
 
 def contains_phrase(title_tokens: tuple[str, ...], phrase: str) -> bool:
@@ -140,13 +159,41 @@ def strict_candidate(title: str, spec: dict[str, Any]) -> tuple[bool, str]:
     return True, reason
 
 
+def expanded_pool(spec: dict[str, Any], base_products: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[str]]:
+    output = list(base_products)
+    seen = {product_key(item) for item in output}
+    queries = EXPANDED_QUERIES.get(spec["id"], [])
+    for query in queries:
+        for item in search_products(query, page_size=50, max_pages=1):
+            key = product_key(item)
+            if not key or key in seen:
+                continue
+            seen.add(key)
+            output.append(item)
+    return output, queries
+
+
+def strict_titles(products: list[dict[str, Any]], spec: dict[str, Any]) -> list[str]:
+    accepted: list[str] = []
+    for item in products:
+        title = str(item.get("title") or "").strip()
+        if not title:
+            continue
+        ok, _ = strict_candidate(title, spec)
+        if ok:
+            accepted.append(title)
+    return accepted
+
+
 def audit_type(spec: dict[str, Any]) -> dict[str, Any]:
-    products = search_products(spec["query"], page_size=50, max_pages=2)
+    base_products = search_products(spec["query"], page_size=50, max_pages=2)
+    expanded_products, extra_queries = expanded_pool(spec, base_products)
+
     legacy: list[str] = []
-    strict: list[str] = []
+    strict_single: list[str] = []
     legacy_only: list[dict[str, str]] = []
 
-    for item in products:
+    for item in base_products:
         title = str(item.get("title") or "").strip()
         if not title:
             continue
@@ -155,24 +202,31 @@ def audit_type(spec: dict[str, Any]) -> dict[str, Any]:
         if old_ok:
             legacy.append(title)
         if new_ok:
-            strict.append(title)
+            strict_single.append(title)
         if old_ok and not new_ok:
             legacy_only.append({"title": title, "reason": reason})
+
+    strict_expanded = strict_titles(expanded_products, spec)
+    added_by_expansion = [title for title in strict_expanded if title not in set(strict_single)]
 
     return {
         "type_id": spec["id"],
         "label": spec["label"],
-        "query": spec["query"],
-        "raw_candidates": len(products),
+        "base_query": spec["query"],
+        "extra_queries": extra_queries,
+        "base_raw_candidates": len(base_products),
+        "expanded_raw_candidates": len(expanded_products),
         "legacy_accepts": len(legacy),
-        "strict_accepts": len(strict),
+        "strict_single_accepts": len(strict_single),
+        "strict_expanded_accepts": len(strict_expanded),
         "legacy_only_rejected": legacy_only[:20],
-        "strict_examples": strict[:12],
+        "strict_expanded_examples": strict_expanded[:20],
+        "added_by_expansion": added_by_expansion[:20],
     }
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Compare current substring matching with strict exact-token matching")
+    parser = argparse.ArgumentParser(description="Compare substring matching with strict matching and expanded discovery")
     parser.add_argument(
         "--types",
         nargs="*",
@@ -182,7 +236,7 @@ def main() -> None:
 
     specs = {spec["id"]: spec for spec in load_product_types()}
     reports = [audit_type(specs[type_id]) for type_id in args.types]
-    print(json.dumps({"matcher": "strict-exact-token-v1", "reports": reports}, ensure_ascii=False, indent=2))
+    print(json.dumps({"matcher": "strict-exact-token-v2", "reports": reports}, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":
