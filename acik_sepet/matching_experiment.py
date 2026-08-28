@@ -11,13 +11,16 @@ from .product_types import load_product_types
 from .units import parse_quantity
 
 FRESH_GROUPS = {"fruit", "vegetables"}
+FRESH_MIN_MASS_KG = 0.25
 FRESH_REJECT_STEMS = {
     "baby",
     "bebek",
     "cips",
     "corba",
     "deterjan",
+    "dogranmis",
     "dondurulmus",
+    "dolgulu",
     "gofret",
     "hazir",
     "icecek",
@@ -28,12 +31,16 @@ FRESH_REJECT_STEMS = {
     "kurutulmus",
     "mucver",
     "pril",
+    "protein",
     "puding",
     "pure",
     "recel",
+    "rende",
     "sabun",
+    "sakiz",
     "salca",
     "sampuan",
+    "seker",
     "sos",
     "suyu",
     "tarator",
@@ -64,11 +71,10 @@ def contains_phrase(title_tokens: tuple[str, ...], phrase: str) -> bool:
 
 
 def contains_reject_stem(title_tokens: tuple[str, ...], stem: str) -> bool:
-    """Reject-context matching may follow Turkish suffixes; commodity matching may not.
+    """Reject context may follow Turkish suffixes; commodity matching may not.
 
-    This asymmetry is intentional: `muz` must not match `muzlu`, while reject
-    contexts such as `püre` should still reject `püresi` and `cips` should
-    reject `cipsi`.
+    `muz` must not match `muzlu`, while reject contexts such as `püre` should
+    still reject `püresi` and `cips` should reject `cipsi`.
     """
     normalized = norm(stem)
     if not normalized:
@@ -127,8 +133,11 @@ def strict_candidate(title: str, spec: dict[str, Any]) -> tuple[bool, str]:
     accepted, reason, _ = strict_decision(title, spec)
     if not accepted:
         return False, reason
-    if parse_quantity(title, spec["unit"]) is None:
+    quantity = parse_quantity(title, spec["unit"])
+    if quantity is None:
         return False, "quantity-parse-failed"
+    if spec.get("group") in FRESH_GROUPS and quantity.unit == "kg" and quantity.amount < FRESH_MIN_MASS_KG:
+        return False, f"fresh-too-small:{quantity.amount:g}kg"
     return True, reason
 
 
@@ -174,7 +183,7 @@ def main() -> None:
 
     specs = {spec["id"]: spec for spec in load_product_types()}
     reports = [audit_type(specs[type_id]) for type_id in args.types]
-    print(json.dumps({"matcher": "strict-exact-token-v0", "reports": reports}, ensure_ascii=False, indent=2))
+    print(json.dumps({"matcher": "strict-exact-token-v1", "reports": reports}, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":
