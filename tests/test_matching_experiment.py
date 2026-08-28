@@ -24,6 +24,8 @@ def test_banana_rejects_processed_products_but_keeps_real_fruit():
         "Eti Hoşbeş Muz Kremalı Gofret 120 Gr",
         "Ülker Dankek Muz Kremalı Rulo Kek 28 Gr",
         "Gerber Organik Muz Yaban Mersini Elma Püre 90 Gr",
+        "Oneo Bubble Dev Çilek Muz Süt Sakız 76 Gr",
+        "Fellas Yüksek Protein Bar Muz 45 Gr",
     ]
     for title in bad:
         assert legacy_candidate(title, banana) is True
@@ -54,6 +56,8 @@ def test_lemon_rejects_cleaning_and_snack_context():
     bad = [
         "Pril Klasik Limon 4 Kg",
         "Doritos Acı Biber & Limon Mısır Cipsi 125 Gr",
+        "Ülker 9 Kat Tat İnce İnce Limon 114 Gr",
+        "Cavendish & Harvey Misket Limon Dolgulu Vişneli Şeker 175 Gr",
     ]
     for title in bad:
         assert legacy_candidate(title, lemon) is True
@@ -63,6 +67,7 @@ def test_lemon_rejects_cleaning_and_snack_context():
 def test_zucchini_rejects_seed_and_prepared_food():
     zucchini = spec("vegetables", ["kabak"], exclude=["çekirdek"])
     assert_strict("Kabak 1 Kg", zucchini, True)
+    assert_strict("Sakız Kabak 1 Kg", zucchini, True)
 
     bad = [
         "Gurmepack Fırında Kabak Mücver 250 Gr",
@@ -71,6 +76,22 @@ def test_zucchini_rejects_seed_and_prepared_food():
     for title in bad:
         assert legacy_candidate(title, zucchini) is True
         assert_strict(title, zucchini, False)
+
+
+def test_tomato_rejects_paste_puree_and_renditions():
+    tomato = spec("vegetables", ["domates"], exclude=["cherry"])
+    assert_strict("Domates 1 Kg", tomato, True)
+    assert_strict("Kokteyl Domates 1 Kg", tomato, True)
+
+    bad = [
+        "Tat Domates Salçası 170 Gr",
+        "Migros Domates Püresi 700 Gr",
+        "Merko Gusdo Rendelenmiş Domates 700 Gr",
+        "Tat Doğranmış Domates 400 Gr",
+    ]
+    for title in bad:
+        assert legacy_candidate(title, tomato) is True
+        assert_strict(title, tomato, False)
 
 
 def test_exact_tokens_fix_morphological_false_positives_outside_fresh_produce():
