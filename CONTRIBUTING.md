@@ -35,7 +35,7 @@ Windows PowerShell:
 
 `data/` ve `state/` altındaki dosyalar otomasyon tarafından üretilir. Bu dosyalarda görülen bir problemi doğrudan çıktıyı elle düzenleyerek çözmek yerine, mümkünse problemi üreten kod veya yapılandırmayı düzeltin.
 
-Örneğin bir ürün yanlış eşleşiyorsa `data/snapshots/...` dosyasını elle değiştirmek yerine `config/basket.tsv` veya eşleştirme mantığı düzeltilmelidir.
+Örneğin bir ürün yanlış eşleşiyorsa `data/v0.4/snapshots/...` dosyasını elle değiştirmek yerine `config/product_types.tsv`, `config/api_categories.json` veya eşleştirme mantığı düzeltilmelidir.
 
 ## Pull request öncesi
 

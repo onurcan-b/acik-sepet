@@ -9,7 +9,7 @@ from typing import Any
 from .product_types import load_categories, load_product_types
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA_DIR = ROOT / "data" / "v0.3"
+DATA_DIR = ROOT / "data" / "v0.4"
 SNAPSHOT_DIR = DATA_DIR / "snapshots"
 TYPE_PATH = DATA_DIR / "type_indices.csv"
 CATEGORY_PATH = DATA_DIR / "category_indices.csv"
@@ -37,14 +37,7 @@ def load_snapshot(path: Path) -> list[dict[str, Any]]:
 
 
 def _by_type(rows: list[dict[str, Any]]) -> dict[str, dict[str, float]]:
-    """Map stable panel slots to continuity-adjusted unit prices.
-
-    Legacy v0.3 snapshots have no slot_id/linked_unit_price. load_snapshot maps
-    those rows to product_key/unit_price, so the original 2026-08-16 baseline
-    and all already-published history remain byte-for-byte reproducible at the
-    index level. A renewed SKU inherits the old slot_id and receives a bridge
-    factor in the collector, avoiding a level jump caused only by substitution.
-    """
+    """Map stable panel slots to continuity-adjusted unit prices."""
     output: dict[str, dict[str, float]] = defaultdict(dict)
     for row in rows:
         price = float(row.get("linked_unit_price", row["unit_price"]))
@@ -90,16 +83,14 @@ def build_type_indices(snapshots: list[tuple[str, list[dict[str, Any]]]], specs:
 def build_category_indices(type_rows: list[dict[str, Any]], specs: list[dict[str, Any]], categories: list[dict[str, Any]], min_coverage: float = 0.60) -> list[dict[str, Any]]:
     dates = sorted({row["date"] for row in type_rows})
     by_date_type = {(row["date"], row["type_id"]): row for row in type_rows}
-    eligible = {
-        spec["id"]
-        for spec in specs
-        if any(row["type_id"] == spec["id"] and row["index"] is not None and row["date"] == dates[0] for row in type_rows)
-    } if dates else set()
     output: list[dict[str, Any]] = []
 
     for date in dates:
         for category in categories:
-            members = [spec for spec in specs if spec["group"] == category["id"] and spec["id"] in eligible]
+            # The denominator is the configured basket, not merely the types
+            # that happened to survive on baseline day. Missing types must be
+            # visible as missing coverage.
+            members = [spec for spec in specs if spec["group"] == category["id"]]
             total_weight = sum(float(spec.get("type_weight", 1.0)) for spec in members)
             available = []
             for spec in members:
@@ -163,7 +154,7 @@ def build_main_index(type_rows: list[dict[str, Any]], category_rows: list[dict[s
 def _write(path: Path, rows: list[dict[str, Any]], fields: list[str]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields)
+        writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         for row in rows:
             writer.writerow({key: "" if row.get(key) is None else row.get(key, "") for key in fields})

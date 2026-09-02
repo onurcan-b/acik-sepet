@@ -27,3 +27,14 @@ def test_count_adet():
     q = parse_quantity("Yumurta 10 Adet", "count")
     assert q is not None
     assert q.amount == 10
+
+
+def test_count_roll_and_bunch():
+    assert parse_quantity("Kağıt Havlu 6 Rulo", "count").amount == 6
+    assert parse_quantity("Maydanoz 1 Demet", "count").amount == 1
+
+
+def test_centilitre():
+    q = parse_quantity("Deodorant 15 cl", "volume")
+    assert q is not None
+    assert round(q.amount, 6) == 0.15

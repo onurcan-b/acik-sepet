@@ -1,69 +1,36 @@
-# Metodoloji — v0.3
+# Metodoloji — v0.4
 
-Açık Sepet, zincir marketlerde satılan malların günlük fiyat hareketini izleyen deneysel bir çoklu-SKU panel endeksidir.
+Açık Sepet, zincir marketlerde satılan malların günlük fiyat hareketini izleyen deneysel bir çoklu-SKU panel endeksidir. v0.4, ürün sınıflandırmasını sıkılaştırdığı için **2026-09-02 = 100** ile yeni seri başlatır. v0.3 geçmişi değiştirilmez.
 
-## 1. Ölçüm birimi
+## 1. Ürün tipi ve sınıflandırma
 
-v0.2'de temel gözlem birimi tek bir sabit SKU idi. v0.3'te temel ekonomik ölçüm birimi **ürün tipi**dir.
+Temel ekonomik gözlem birimi ürün tipidir: pirinç, yoğurt, domates, şampuan gibi. Her ürün tipi birden fazla gerçek SKU ile temsil edilir.
 
-Örnekler:
+Kurallar iki açık dosyada tutulur:
 
-- şampuan,
-- spagetti makarna,
-- pirinç,
-- yoğurt,
-- ayçiçek yağı,
-- domates.
+- `config/product_types.tsv`: sorgu, beklenen birim, hedef/minimum SKU, zorunlu ve hariç başlık kuralları,
+- `config/api_categories.json`: Market Fiyatı kategori ağacındaki `menu_category`, `main_category` veya `sub_category` filtresi.
 
-Her ürün tipi birden fazla SKU'dan oluşan panel ile ölçülür. Ürün tipleri `config/product_types.tsv` içinde tanımlanır.
+Bir adayın kabul edilmesi için sırasıyla:
 
-## 2. Sabit panel slotları
+1. API isteğinin tanımlı kategori filtresiyle yapılması,
+2. dönen ürünün kategori alanlarının filtreyi gerçekten doğrulaması,
+3. başlıktaki **bütün** zorunlu kuralların eşleşmesi,
+4. hiçbir hariç kuralın eşleşmemesi,
+5. beklenen miktar/birim bilgisinin çözülebilmesi,
+6. en az bir pozitif fiyat teklifinin bulunması
 
-İlk başarılı v0.3 toplamasında her ürün tipi için arama sonuçlarından uygun SKU'lar seçilir. Seçim sırasında:
+gerekir.
 
-- dahil / hariç kelime kuralları,
-- beklenen ölçü biriminin parse edilebilmesi,
-- geçerli fiyat teklifi bulunması,
-- aynı SKU'nun başka bir ürün tipinde sahiplenilmemiş olması
+Zorunlu kuralların yarısını geçmek gibi bir eşik yoktur. Alternatifler `|` ile yazılabilir; örneğin `cherry|çeri|kokteyl,domates`. Kısa kelimeler tam kelime olarak eşleşir; böylece `bal`, `balık` kelimesine eşleşmez. Dört veya daha uzun köklerde Türkçe ekler için önek eşleşmesine izin verilir.
 
-kontrol edilir.
+Kategori ağacı da hatasız kabul edilmez. Kategori, başlık ve birim kontrolleri birbirinin yerine geçmez; birlikte uygulanır.
 
-Panel `state/v0.3-panels.json` içinde saklanır. Her başlangıç SKU'su aynı zamanda kalıcı bir **slot_id** oluşturur. Endeks kimliği gerçek SKU kimliğinden ayrıdır; bu ayrım daha sonra kalıcı ürün kaybında kontrollü ikame yapılırken serinin kopmamasını sağlar.
+## 2. Miktar ve birim fiyat
 
-## 3. Kaynak/depot sürekliliği
+Paket miktarında öncelik API'nin normalize `refinedVolumeOrWeight` alanındadır. Bu alan kullanılamazsa ürün başlığı parse edilir.
 
-Bir SKU için aynı gün birden fazla market/depot fiyatı bulunabilir. Collector her teklif için mümkünse `depotId`; bu yoksa market/depot adından türetilen kararlı bir kaynak kimliği kullanır.
-
-Source-aware toplama devreye girdiğinde SKU'nun mevcut kaynak kümesi sabitlenir. Her sabit kaynak için o günün fiyatı anchor olarak tutulur. Sonraki günlerde:
-
-- yeni görünen kaynaklar otomatik olarak fiyat hesabına eklenmez,
-- yalnızca başlangıçta sabitlenmiş ve o gün yeniden görülen kaynaklar karşılaştırılır,
-- hiçbir sabit kaynak görünmezse SKU o gün eksik sayılır.
-
-Tek başına sabit kaynak kümesinin medyanını almak yeterli değildir: sabit kaynaklardan bir kısmı geçici olarak kaybolursa kaynak kompozisyonu yine fiyat seviyesini oynatabilir. Bu nedenle her kaynak kendi anchor fiyatına göre relative olarak izlenir:
-
-```text
-r(s,t) = p(s,t) / p(s,anchor)
-```
-
-SKU'nun kaynak-ayarlı paket fiyatı:
-
-```text
-P_linked(t)
-  = P_all_offers(anchor)
-    × geometric_mean(r(s,t) for currently observed pinned sources)
-```
-
-olarak hesaplanır. `P_all_offers(anchor)` source-aware metodolojinin devreye girdiği gün eski metodolojiyle gözlenen tüm-teklif medyanıdır.
-
-Bu yapı iki şeyi birlikte sağlar:
-
-1. kaynak metodolojisi devreye girdiği anda eski fiyat seviyesinden yapay bir kopuş oluşmaz,
-2. sabit kaynaklardan biri kaybolup diğerlerinin fiyatı değişmezse sırf kaynak kompozisyonu değişti diye SKU seviyesi oynamaz.
-
-## 4. Birim normalizasyonu
-
-Ürün başlığındaki paket miktarı ortak birime çevrilir:
+Ortak birimler:
 
 - kütle → kg,
 - hacim → litre,
@@ -77,145 +44,110 @@ Bu yapı iki şeyi birlikte sağlar:
 750 ml      → 0.75 L
 6 x 200 ml  → 1.2 L
 12'li       → 12 count
-10 adet     → 10 count
 ```
 
-SKU birim fiyatı:
+Paket fiyatından hesaplanan birim fiyat:
 
 ```text
-u(i,t) = package_price(i,t) / package_quantity(i,t)
+unit_price = package_price / package_quantity
 ```
 
-olarak hesaplanır.
+Her teklif için API'nin `unitPriceValue` alanı varsa hesaplanan değerle karşılaştırılır. Medyan düzeyinde fark `%5` sınırını aşarsa aday panele alınmaz. Snapshot'ta miktarın kaynağı, API birim fiyatı ve fark ayrıca saklanır.
 
-Birim fiyat seviyeleri farklı markalar arasında doğrudan ortalanmaz. Normalizasyonun amacı aynı panel slotunun zaman içindeki fiyat relatifini ve paket küçülmesi/büyümesini ölçmektir.
+## 3. Sabit panel ve SKU sahipliği
 
-## 5. Günlük SKU fiyatı ve bağlı fiyat
+İlk başarılı v0.4 toplamasında ürün tipi panelleri oluşturulur ve `state/v0.4-panels.json` içinde sabitlenir. Aynı gerçek SKU iki ürün tipine ait olamaz.
 
-Snapshot'ta iki fiyat seviyesi tutulur:
+Gerçek ürün kimliği `product_key`, endeks sürekliliği kimliği `slot_id` alanıdır. Başlangıçta ikisi aynıdır. Kontrollü ikamede ürün değişebilir ama slot devam eder.
 
-- `unit_price`: o gün yeniden görülen sabit kaynaklardaki gözlenen fiyat seviyesinin medyanından türetilen birim fiyat,
-- `linked_unit_price`: kaynak-relative sürekliliği ve varsa panel ikame bridge'i uygulanmış, endekste kullanılan birim fiyat.
+Minimum SKU eşiği ürün tipine göre değişir. Kaynakta yeterli ürün yoksa tip yayımlanmaz; hedefi doldurmak amacıyla daha düşük kaliteli eşleşme alınmaz.
 
-Legacy v0.3 snapshot'larında `slot_id` ve `linked_unit_price` alanları yoktur. Index loader bu satırlarda:
+## 4. Depot/kaynak sürekliliği
+
+Bir SKU için birden fazla market/depot teklifi bulunabilir. İlk gözlemde kararlı `depotId` değerleri sabitlenir ve her kaynak için anchor fiyatı tutulur.
 
 ```text
-slot_id = product_key
-linked_unit_price = unit_price
+r(s,t) = p(s,t) / p(s,anchor)
+
+P_linked(t)
+  = P_all_offers(anchor)
+    × geometric_mean(r(s,t) for observed pinned sources)
 ```
 
-kabul eder. Böylece daha önce yayımlanmış v0.3 geçmişi yeniden yorumlanmaz.
+Sonraki günlerde yeni depotlar otomatik olarak fiyat seviyesine girmez. Sabit depolardan biri geçici kaybolduğunda, kalan depoların kendi fiyat relatifleri değişmediyse SKU seviyesi yalnızca kaynak kompozisyonu nedeniyle oynamaz.
 
-## 6. Elementary ürün tipi endeksi
+Hiçbir sabit kaynak yeniden görünmezse SKU o gün eksik sayılır.
 
-Baz gününde ve güncel günde birlikte gözlenen aynı panel slotları için:
+## 5. Ürün tipi endeksi
+
+Aynı panel slotunun bağlı birim fiyat relatifi:
 
 ```text
-r(i,t) = linked_unit_price(i,t) / linked_unit_price(i,0)
+r(i,t) = linked_unit_price(i,t) / linked_unit_price(i,base)
 ```
 
-hesaplanır.
-
-Ürün tipi endeksi fiyat relatiflerinin geometrik ortalamasıdır:
+Ürün tipi endeksi Jevons-benzeri geometrik ortalamadır:
 
 ```text
 I(k,t) = 100 × exp(mean(log(r(i,t))))
 ```
 
-Bu Jevons-benzeri elementary yaklaşım, tek bir SKU'daki büyük kampanyanın bütün ürün tipini tek başına belirlemesini engeller.
+Yayın için:
 
-Bir ürün tipinin yayımlanması için:
-
-- baz gününde en az kendi `min_skus` sayısı kadar slot bulunması,
-- güncel günde en az `min_skus` slotun karşılaştırılabilmesi,
-- baz panel slotlarının en az %50'sinin güncel günde karşılaştırılabilir olması
+- bazda ve güncel günde en az `min_skus` ortak slot,
+- baz slotlarının en az `%50` güncel kapsaması
 
 gerekir.
 
-## 7. Kategori endeksi
+## 6. Kategori ve ana endeks
 
-Ürün tipleri 12 market grubuna ayrılır. Aynı kategori içindeki uygun ürün tipleri v0.3'te eşit araştırma payıyla birleştirilir.
+130 ürün tipi 12 araştırma kategorisine ayrılır. Kategori içinde uygun ürün tipleri eşit payla birleştirilir. Ana kategoriler `config/categories.json` içindeki araştırma ağırlıklarıyla toplanır.
 
-Kategori endeksi mevcut ürün tipi relatiflerinin ağırlıklı aritmetik ortalamasıdır. Kategori en az %60 ürün-tipi ağırlık kapsamasıyla yayımlanır.
+Önemli v0.4 değişikliği: kategori kapsamasının paydası yalnızca baseline'da yayımlanabilen tipler değil, o kategori için **konfigüre edilmiş bütün ürün tipleridir**.
 
-Kategori-içi ağırlıklar tüketim harcaması ağırlıkları değildir.
+```text
+category_coverage
+  = sufficient_configured_types / all_configured_types
+```
 
-## 8. Ana Açık Sepet endeksi
+Kategori en az `%60` tip ağırlık kapsamasıyla yayımlanır. Ana endeks de en az `%60` kategori ağırlık kapsaması ister. Eksik paylar mevcut gözlemler üzerinde yeniden normalize edilir; model tabanlı imputasyon yapılmaz.
 
-12 ana grup `config/categories.json` içindeki araştırma ağırlıklarıyla birleştirilir.
+Bu ağırlıklar TÜİK tüketim harcaması ağırlıkları değildir.
 
-Ana endeks için en az %60 kategori ağırlık kapsaması gerekir. Eksik kategori/ürün tipi payları mevcut karşılaştırılabilir panel üzerinde yeniden normalize edilir.
+## 7. Kontrollü panel yenileme
 
-Model tabanlı fiyat imputasyonu yapılmaz.
+Geçici stok kaybı günlük ikameye yol açmaz. Otomatik yenileme ancak:
 
-## 9. Eksik gözlem
+1. aktif panel kapsaması `%80` altına 7 gün üst üste düşerse,
+2. eski slot en az 7 gündür kayıpsa,
+3. yeni aday en az 3 ardışık gün görünmüşse
 
-Bir SKU geçici olarak bulunamazsa başka bir SKU ile günlük ikame yapılmaz. Ürün tipi yeterli paneli koruyorsa kalan slotlarla hesaplanmaya devam eder. Eşik altına düşerse ürün tipi ilgili gün yayımlanmaz.
+başlayabilir. Bir çalışmada panelin en fazla `%20`'si yenilenir.
 
-İzlenen kalite göstergeleri:
-
-- aktif ürün tipi sayısı,
-- karşılaştırılabilir panel slotu/SKU sayısı,
-- ürün tipi panel kapsaması,
-- kategori ağırlık kapsaması,
-- source-relative takip edilen SKU sayısı,
-- parser/API hataları,
-- yapılan bridge edilmiş panel yenilemeleri.
-
-## 10. Otomatik ama bridge edilmiş panel yenileme
-
-Panelin doğal olarak yaşlanması beklenir. Kalıcı olarak kaybolan SKU'lar hiçbir zaman yenilenmezse coverage zaman içinde tek yönlü azalır. Buna karşılık günlük serbest ikame de kompozisyon değişimini fiyat değişimi sanabilir.
-
-v0.3 bu ikisi arasında kontrollü bir kural kullanır. Bir ürün tipi için otomatik yenileme ancak:
-
-1. aktif panel kapsaması `%80` altına **7 ardışık gün** düşerse,
-2. yenilenecek eski slot en az 7 gündür gözlenmiyorsa,
-3. yeni aday SKU en az 3 ardışık gün görünmüşse
-
-başlar.
-
-Bir çalışmada panelin en fazla `%20`'si yenilenebilir.
-
-Yeni SKU, kaybolan SKU'nun **slot_id** değerini devralır. Eski slotun son bağlı fiyat seviyesi önce mevcut state'ten, yoksa geçmiş v0.3 snapshot'larından seed edilir. Bu seviye bulunamazsa otomatik ikame **yapılmaz**.
-
-Güvenilir eski seviye varsa aktivasyon gününde:
+Yeni SKU eski slotun son bağlı birim fiyat seviyesine bridge edilir:
 
 ```text
 replacement_bridge
-  = old_slot_last_linked_price
-    / new_sku_initial_linked_unit_price
+  = old_slot_last_linked_price / new_sku_initial_linked_unit_price
 ```
 
-hesaplanır. Böylece yeni ürünün farklı fiyat seviyesi endekste tek seferlik artış/düşüş oluşturmaz. Yeni SKU'nun bundan sonraki fiyat hareketleri aynı slot üzerinden ölçülür.
+Güvenilir eski seviye yoksa ikame yapılmaz.
 
-Bu yenileme gerçek SKU kimliğini gizlemez: snapshot'ta `product_key` güncel SKU'yu, `slot_id` ise zincirlenmiş endeks kimliğini gösterir; panel state önceki SKU kimliğini, generation ve yenileme tarihini saklar.
+## 8. Doğrulama ve yayın
 
-## 11. Yayın geçmişi ve grafik koruması
+Günlük doğrulama şunları sert hata olarak kabul eder:
 
-Source-aware toplama ve bridge edilmiş panel yenileme mevcut v0.3 serisini sıfırlamaz. İlk yayımlanmış değerler CI içinde regression anchor olarak kilitlenmiştir:
+- aynı SKU veya slotun birden fazla tipe yazılması,
+- pozitif/sonlu olmayan fiyat,
+- `price / quantity` formülünün snapshot birim fiyatıyla uyuşmaması,
+- API birim fiyat farkının `%5` sınırını aşması,
+- başlık veya kategori kuralını artık geçmeyen ürün,
+- minimum toplam SKU veya ürün tipi kapsamasının altına düşülmesi.
 
-```text
-2026-08-16 = 100.0000
-2026-08-17 = 100.1338
-```
+CI, v0.4 baseline değerini ve üç README grafiğinin üretilebildiğini de kilitler.
 
-Pull request validation ve günlük workflow mevcut snapshot'lardan endeksi ve `charts/index.svg` grafiğini yeniden üretir. Bu anchor'lar değişirse veya grafik üretilemezse job başarısız olur; günlük bot veri commit'ine geçmez.
+## 9. Kapsam ve yorum
 
-Pull request validation ayrıca gerçek Market Fiyatı API'siyle commit atmayan source-aware collector smoke testi çalıştırır.
+Açık Sepet genel tüketici fiyat endeksi değildir. Kira, konut, ulaşım, sağlık, eğitim ve hizmetleri kapsamaz. Şehir/mağaza örneklemi nüfus ağırlıklı değildir; kategori ağırlıkları gerçek tüketim payı değildir; kampanyalar gözlenen fiyat sayılır; resmî istatistik düzeyinde mevsimsellik veya kalite düzeltmesi yapılmaz.
 
-## 12. v0.2 ile karşılaştırılabilirlik
-
-v0.3 farklı bir elementary endeks metodolojisine sahiptir. v0.2'nin 150-SKU serisi v0.3 ile geriye dönük yeniden hesaplanmaz. Eski seri Git geçmişinde korunur; v0.3 kendi `data/v0.3/` namespace'inde 2026-08-16 baz tarihiyle başlar.
-
-## 13. Sınırlamalar
-
-Açık Sepet genel tüketici fiyat endeksi değildir. Özellikle:
-
-- kira, konut, ulaştırma, sağlık, eğitim ve hizmetleri kapsamaz,
-- şehir/mağaza örneklemesi nüfus ağırlıklı ulusal örneklem değildir,
-- ürün başlığındaki gramaj/hacim/adet bilgisinin doğruluğuna bağlıdır,
-- promosyon fiyatlarını gözlenen tüketici fiyatı olarak kabul eder,
-- kategori içindeki ürün tipi ağırlıkları henüz gerçek harcama paylarına dayanmaz,
-- kalite değişimi ve mevsimsellik için resmî istatistiklerdeki düzeyde düzeltme uygulamaz.
-
-Seri araştırma ve yüksek frekanslı market fiyatı göstergesi olarak yorumlanmalıdır.
+Bu seri yüksek frekanslı, açık ve deneysel bir market fiyat göstergesi olarak yorumlanmalıdır.

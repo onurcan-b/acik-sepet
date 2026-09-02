@@ -7,6 +7,8 @@ from typing import Any
 import requests
 
 API_URL = "https://api.marketfiyati.org.tr/api/v2/search"
+CATEGORIES_URL = "https://api.marketfiyati.org.tr/api/v3/info/categories"
+CATEGORY_FIELDS = {"menu_category", "main_category", "sub_category"}
 
 HEADERS = {
     "Accept": "application/json, text/plain, */*",
@@ -26,9 +28,24 @@ class MarketFiyatiError(RuntimeError):
     pass
 
 
-def _fetch_page(client: requests.Session, keywords: str, page: int, size: int, timeout: int, attempts: int) -> list[dict[str, Any]]:
+def _fetch_page(
+    client: requests.Session,
+    keywords: str,
+    page: int,
+    size: int,
+    timeout: int,
+    attempts: int,
+    category_level: str | None,
+    category_values: list[str] | None,
+) -> list[dict[str, Any]]:
     last_error: Exception | None = None
     payload = {"keywords": keywords, "pages": page, "size": size}
+    if category_level:
+        if category_level not in CATEGORY_FIELDS:
+            raise ValueError(f"unknown Market Fiyatı category field: {category_level}")
+        if not category_values:
+            raise ValueError("category_values cannot be empty when category_level is set")
+        payload[category_level] = category_values
     for attempt in range(1, attempts + 1):
         try:
             response = client.post(API_URL, headers=HEADERS, json=payload, timeout=timeout)
@@ -50,26 +67,44 @@ def _fetch_page(client: requests.Session, keywords: str, page: int, size: int, t
 def search_products(
     keywords: str,
     *,
-    page_size: int = 50,
-    max_pages: int = 2,
+    category_level: str | None = None,
+    category_values: list[str] | None = None,
+    page_size: int = 25,
+    max_pages: int = 1,
     timeout: int = 30,
     attempts: int = 3,
     session: requests.Session | None = None,
 ) -> list[dict[str, Any]]:
-    """Return a deduplicated search pool for one product type.
+    """Return a deduplicated, category-filtered pool for one product type.
 
-    v0.3 makes one paginated search per product type, then builds a fixed SKU
-    panel locally. This keeps request volume proportional to product types,
-    not to the thousands of SKUs observed inside those types.
+    Market Fiyatı's own category filter narrows the pool first. The collector
+    still verifies every returned product locally; API taxonomy is evidence,
+    not an instruction to accept the product blindly.
     """
     client = session or requests.Session()
     output: list[dict[str, Any]] = []
     seen: set[str] = set()
 
     for page in range(max_pages):
-        content = _fetch_page(client, keywords, page, page_size, timeout, attempts)
+        content = _fetch_page(
+            client,
+            keywords,
+            page,
+            page_size,
+            timeout,
+            attempts,
+            category_level,
+            category_values,
+        )
         new_count = 0
         for item in content:
+            item = dict(item)
+            if category_level and category_values:
+                # Keep provenance of the server-side filter. Market Fiyatı's
+                # free-form categories[] does not consistently echo the
+                # canonical sub-category label used by the search endpoint.
+                item["_query_category_level"] = category_level
+                item["_query_category_values"] = list(category_values)
             key = str(item.get("id") or item.get("productId") or item.get("product_id") or item.get("barcode") or item.get("title") or "")
             if not key or key in seen:
                 continue

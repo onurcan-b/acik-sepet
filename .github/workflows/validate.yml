@@ -10,7 +10,7 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v7
         with:
@@ -27,32 +27,30 @@ jobs:
         run: |
           python -m acik_sepet.index
           python -m acik_sepet.report
-      - name: Lock published v0.3 history
+      - name: Lock published v0.4 baseline
         shell: bash
         run: |
           python - <<'PY'
           import csv
           from pathlib import Path
 
-          path = Path("data/v0.3/index.csv")
+          path = Path("data/v0.4/index.csv")
           with path.open(encoding="utf-8", newline="") as handle:
               rows = {row["date"]: row for row in csv.DictReader(handle)}
 
-          anchors = {
-              "2026-08-16": 100.0000,
-              "2026-08-17": 100.1338,
-          }
+          anchors = {"2026-09-02": 100.0000}
           for day, expected in anchors.items():
               actual = float(rows[day]["index"])
               if abs(actual - expected) > 1e-4:
                   raise SystemExit(f"historical index changed on {day}: {actual} != {expected}")
 
-          chart = Path("charts/index.svg")
-          if not chart.exists() or chart.stat().st_size < 1000:
-              raise SystemExit("inflation chart was not generated correctly")
-          print("published history and chart are stable")
+          for name in ("index.svg", "coverage.svg", "basket.svg"):
+              chart = Path("charts") / name
+              if not chart.exists() or chart.stat().st_size < 1000:
+                  raise SystemExit(f"analytics chart was not generated correctly: {name}")
+          print("v0.4 baseline and charts are stable")
           PY
-      - name: Live source-aware collector smoke
+      - name: Live strict-matching collector smoke
         run: |
           python -m acik_sepet.collect
           python -m acik_sepet.validate --min-type-coverage 0.60 --min-skus 300

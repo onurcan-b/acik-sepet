@@ -1,4 +1,4 @@
-from acik_sepet.index import build_type_indices, geometric_mean
+from acik_sepet.index import build_category_indices, build_type_indices, geometric_mean
 
 
 def test_geometric_mean():
@@ -81,3 +81,19 @@ def test_linked_price_falls_back_to_legacy_unit_price():
     rows = build_type_indices([("2026-08-16", baseline), ("2026-08-17", current)], specs)
     assert rows[0]["index"] == 100.0
     assert rows[1]["index"] == 105.0
+
+
+def test_category_coverage_uses_all_configured_types():
+    specs = [
+        {"id": "present", "label": "Var", "group": "g", "min_skus": 1, "target_skus": 1, "type_weight": 1.0},
+        {"id": "missing", "label": "Yok", "group": "g", "min_skus": 1, "target_skus": 1, "type_weight": 1.0},
+    ]
+    type_rows = build_type_indices(
+        [("2026-09-01", [{"type_id": "present", "product_key": "a", "unit_price": 10.0}])],
+        specs,
+    )
+    categories = [{"id": "g", "label": "Grup", "scope": "food", "weight": 1.0}]
+    rows = build_category_indices(type_rows, specs, categories, min_coverage=0.60)
+    assert rows[0]["coverage"] == 0.5
+    assert rows[0]["baseline_types"] == 2
+    assert rows[0]["index"] is None

@@ -1,6 +1,6 @@
 {
-  "version": "v0.3",
-  "description": "Açık Sepet araştırma ağırlıkları. TÜİK resmî ağırlıkları değildir; çoklu-SKU market endeksinde ana grup kompozisyonunu dengeler.",
+  "version": "v0.4",
+  "description": "Açık Sepet araştırma ağırlıkları. TÜİK resmî ağırlıkları değildir; sıkı eşleşmiş çoklu-SKU market endeksinde ana grup kompozisyonunu dengeler.",
   "categories": [
     {"id": "bread_cereals", "label": "Ekmek, tahıllar ve makarna", "coicop": "01.1.1", "weight": 0.14, "scope": "food"},
     {"id": "meat", "label": "Et ve et ürünleri", "coicop": "01.1.2", "weight": 0.15, "scope": "food"},

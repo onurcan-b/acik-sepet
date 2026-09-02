@@ -1,6 +1,6 @@
 [project]
 name = "acik-sepet"
-version = "0.1.0"
+version = "0.4.0"
 description = "Experimental open daily grocery price index for Turkey"
 requires-python = ">=3.11"
 
