@@ -14,7 +14,7 @@ Markette fiyatlar gerçekten ne kadar oynuyor? “Bana öyle geliyor” kısmın
 <!-- STATS_START -->
 | Endeks | Tarih | Aktif tip | Endeks SKU | Kategori kapsaması | 7 gün | 30 gün | Baz |
 |---:|---|---:|---:|---:|---:|---:|---|
-| **100.00** | 2026-09-02 | 106 | 1816 | %100 | — | — | 2026-09-02 = 100 |
+| **100.00** | 2026-09-03 | 106 | 1816 | %100 | — | — | 2026-09-02 = 100 |
 <!-- STATS_END -->
 
 ## Kısaca ne yapıyor?
@@ -106,7 +106,20 @@ Tabloda en zayıf 18 tip var; toplam eksik tip sayısı 24.
 ## Bugün ne oynadı?
 
 <!-- MOVERS_START -->
-İkinci gözlemden sonra günlük hareketler burada belirecek. Baseline gününde dramatik hikâye çıkarmıyoruz.
+2026-09-02 → 2026-09-03: **0 yukarı**, **0 aşağı**, **106 yatay**. Karşılaştırılan tip: 106.
+
+| Ürün tipi | SKU | Değişim |
+|---|---:|---:|
+| Elma | 5 | +0.00% |
+| Ayran | 24 | +0.00% |
+| Muz | 2 | +0.00% |
+| Kuru fasulye | 24 | +0.00% |
+| Dana kuşbaşı / sote | 10 | +0.00% |
+| Dana kıyma | 9 | +0.00% |
+| Bisküvi | 25 | +0.00% |
+| Siyah çay | 25 | +0.00% |
+| Çamaşır suyu | 21 | +0.00% |
+| Beyaz ekmek | 8 | +0.00% |
 <!-- MOVERS_END -->
 
 ## Veri kalitesi
