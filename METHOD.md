@@ -130,3 +130,9 @@ Bu seri yüksek frekanslı, açık ve deneysel bir market fiyat göstergesi olar
 7/30 günlük değişim tam takvim tarihindeki ölçümü gerektirir. Aynı gün normal tekrar mevcut snapshot'ı korur; `--refresh` eski snapshot'ı `data/v0.4/revisions/` altında arşivleyip yeniden tarar. İlk baseline günü değiştirilemez. Aynı gün tekrarları aday/eksik gün sayaçlarını ilerletmez. Başlangıçta minimuma ulaşamamış paneller üç ardışık günde görülen adaylarla tamamlanabilir.
 
 Arama en fazla 8 × 25 sonucu tarar; bu bütün katalogun eksiksiz tarandığı anlamına gelmez. Ürün başlığı kuralları ve birim doğrulaması bütün sayfalarda korunur. Sorgu ve kategori taksonomisi kaynak tarafında değişebilir.
+
+## 11. 5 Eylül sıfırlaması ve sekiz saatlik tarama
+
+Aktif serinin baz tarihi `config/series.json` içindedir: **2026-09-05 = 100**. Daha eski snapshot'lar saklanır, aktif grafiğe alınmaz. Eksik baz snapshot'ı hata verir; sessizce başka tarihten başlanmaz. Baz günü yeniden taramayla değiştirilmez.
+
+Tarama UTC 05:17, 13:17, 21:17 (Türkiye 08:17, 16:17, 00:17) için planlanır. GitHub Actions planlanan saatten geç başlayabilir. Günlük seri aynı günün son başarılı taramasını kullanır; önceki sürümü arşivlenir. Son gerçek tarama zamanı `latest-errors.json` içindeki `checked_at` alanında tutulur. Kaynak güncelleme tarihi tarama zamanından ayrı değerlendirilir.

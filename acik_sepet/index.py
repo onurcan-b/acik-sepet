@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import json
 import math
 from collections import defaultdict
 from pathlib import Path
@@ -195,7 +196,11 @@ def _write(path: Path, rows: list[dict[str, Any]], fields: list[str]) -> None:
 def rebuild() -> list[dict[str, Any]]:
     specs = load_product_types()
     categories = load_categories()
-    snapshots = [(path.stem, load_snapshot(path)) for path in sorted(SNAPSHOT_DIR.glob("*.csv"))]
+    baseline_date = json.loads((ROOT / "config" / "series.json").read_text())["baseline_date"]
+    paths = [path for path in sorted(SNAPSHOT_DIR.glob("*.csv")) if path.stem >= baseline_date]
+    if not paths or paths[0].stem != baseline_date:
+        raise ValueError(f"Configured baseline snapshot is missing: {baseline_date}")
+    snapshots = [(path.stem, load_snapshot(path)) for path in paths]
     type_rows = build_type_indices(snapshots, specs)
     category_rows = build_category_indices(type_rows, specs, categories)
     index_rows = build_main_index(type_rows, category_rows, categories)
@@ -208,4 +213,3 @@ def rebuild() -> list[dict[str, Any]]:
 
 if __name__ == "__main__":
     rebuild()
-

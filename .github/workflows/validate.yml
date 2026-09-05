@@ -35,13 +35,15 @@ jobs:
         run: |
           python - <<'PY'
           import csv
+          import json
           from pathlib import Path
 
           path = Path("data/v0.4/index.csv")
           with path.open(encoding="utf-8", newline="") as handle:
               rows = {row["date"]: row for row in csv.DictReader(handle)}
 
-          anchors = {"2026-09-02": 100.0000}
+          baseline = json.loads(Path("config/series.json").read_text())["baseline_date"]
+          anchors = {baseline: 100.0000}
           for day, expected in anchors.items():
               actual = float(rows[day]["index"])
               if abs(actual - expected) > 1e-4:
@@ -59,4 +61,3 @@ jobs:
           python -m acik_sepet.health
       - name: Source-file whitespace sanity
         run: git diff --check -- acik_sepet tests .github config README.md METHOD.md
-

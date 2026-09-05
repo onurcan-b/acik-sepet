@@ -14,7 +14,7 @@ Markette fiyatlar gerçekten ne kadar oynuyor? “Bana öyle geliyor” kısmın
 <!-- STATS_START -->
 | Endeks | Tarih | Aktif tip | Endeks SKU | Kategori kapsaması | 7 gün | 30 gün | Baz |
 |---:|---|---:|---:|---:|---:|---:|---|
-| **99.97** | 2026-09-05 | 109 | 1544 | %100 | — | — | 2026-09-02 = 100 |
+| **100.00** | 2026-09-05 | 109 | 1643 | %100 | — | — | 2026-09-05 = 100 |
 <!-- STATS_END -->
 
 ## Kısaca ne yapıyor?
@@ -36,7 +36,7 @@ Modelin hoşumuza gitmeyen ürünü dışarı atmasını ummuyoruz: eşleştirme
 
 v0.3’te başlık eşleştirmesi fazla cömertti. “Muz” ararken muzlu gofret, “çilek” ararken reçel, “salatalık” ararken turşu panele girebiliyordu. Paket fiyatı ve matematik doğru olsa bile ölçülen ürün yanlışsa sonuç da yanlış olur.
 
-v0.4 bu yüzden eski seriyi makyajlamıyor. **2026-09-02 = 100** ile temiz bir baseline açıyor; v0.3 verileri `data/v0.3/` altında olduğu gibi kalıyor.
+v0.4 bu yüzden eski seriyi makyajlamıyor. ilk olarak 2 Eylül’de temiz bir baseline açtı; 5 Eylül sıfırlamasıyla **2026-09-05 = 100** üzerinden devam ediyor; v0.3 verileri `data/v0.3/` altında olduğu gibi kalıyor.
 
 Yeni eşleştirme sırası:
 
@@ -56,18 +56,18 @@ Kategori eşlemeleri açıkça [`config/api_categories.json`](config/api_categor
 <!-- CATEGORY_TABLE_START -->
 | Kategori | Endeks | Yeterli tip | Kapsama | SKU |
 |---|---:|---:|---:|---:|
-| Ekmek, tahıllar ve makarna | 100.42 | 10/12 | %83 | 164 |
-| Et ve et ürünleri | 98.92 | 8/10 | %80 | 118 |
-| Balık ve deniz ürünleri | 100.85 | 4/6 | %67 | 27 |
-| Süt ürünleri ve yumurta | 100.06 | 13/13 | %100 | 229 |
-| Yağlar | 101.88 | 4/5 | %80 | 84 |
-| Meyve | 96.55 | 8/13 | %62 | 34 |
-| Sebze | 98.40 | 11/17 | %65 | 51 |
-| Şeker, tatlı ve atıştırmalık | 99.68 | 11/12 | %92 | 214 |
-| Diğer gıda | 100.69 | 10/10 | %100 | 194 |
-| Alkolsüz içecekler | 102.27 | 10/11 | %91 | 181 |
-| Ev temizlik sarf malzemeleri | 101.44 | 9/10 | %90 | 152 |
-| Kişisel bakım ve kağıt ürünleri | 99.39 | 11/11 | %100 | 218 |
+| Ekmek, tahıllar ve makarna | 100.00 | 10/12 | %83 | 164 |
+| Et ve et ürünleri | 100.00 | 8/10 | %80 | 118 |
+| Balık ve deniz ürünleri | 100.00 | 4/6 | %67 | 27 |
+| Süt ürünleri ve yumurta | 100.00 | 13/13 | %100 | 229 |
+| Yağlar | 100.00 | 4/5 | %80 | 84 |
+| Meyve | 100.00 | 8/13 | %62 | 34 |
+| Sebze | 100.00 | 11/17 | %65 | 51 |
+| Şeker, tatlı ve atıştırmalık | 100.00 | 11/12 | %92 | 214 |
+| Diğer gıda | 100.00 | 10/10 | %100 | 194 |
+| Alkolsüz içecekler | 100.00 | 10/11 | %91 | 181 |
+| Ev temizlik sarf malzemeleri | 100.00 | 9/10 | %90 | 152 |
+| Kişisel bakım ve kağıt ürünleri | 100.00 | 11/11 | %100 | 218 |
 <!-- CATEGORY_TABLE_END -->
 
 ## Kapsama dürüstlüğü
@@ -106,20 +106,7 @@ Tabloda en zayıf 18 tip var; toplam eksik tip sayısı 21.
 ## Bugün ne oynadı?
 
 <!-- MOVERS_START -->
-2026-09-04 → 2026-09-05: **25 yukarı**, **25 aşağı**, **54 yatay**. Karşılaştırılan tip: 104.
-
-| Ürün tipi | SKU | Değişim |
-|---|---:|---:|
-| Çöp torbası | 22 | +24.17% |
-| Çözünebilir kahve | 7 | +13.99% |
-| Üzüm | 6 | -4.71% |
-| Limon | 3 | -4.12% |
-| Dana kuşbaşı / sote | 8 | +3.88% |
-| Margarin | 21 | +3.46% |
-| Sarımsak | 3 | -3.20% |
-| Kola | 19 | +3.06% |
-| Enerji içeceği | 18 | +2.94% |
-| Karpuz | 3 | -2.78% |
+İkinci gözlemden sonra günlük hareketler burada belirecek. Baseline gününde dramatik hikâye çıkarmıyoruz.
 <!-- MOVERS_END -->
 
 ## Veri kalitesi
@@ -156,7 +143,7 @@ Kategori / ana endeks(t) = önceki endeks × ağırlıklı_mean(ortak üyelerin 
 
 Bir ürünün veya kategorinin kaybolması, önceki zamlarını geri almaz. Yeni gelen ürün ilk bağlantıda fiyat değişimi üretmez. Yeterli ortak gözlem yoksa o nokta yayımlanmaz; eksik fiyatı tahmin edip gerçek gözlem diye yazmıyoruz. Bunun bedeli: ürünün kayıp olduğu aralıktaki hareketi kaçırabiliriz.
 
-**2 Eylül = 100 korunuyor.** Ham günlük gözlemler silinmedi. Önceki hesaplar [`revisions/pre-2026-09-05-method/`](data/v0.4/revisions/pre-2026-09-05-method/) altında. Eski snapshot'lar depot bazında tüm fiyatları saklamadığından geçmiş depot kompozisyon hatası tam olarak yeniden hesaplanamaz; depot düzeltmesi yeni ölçümlerle devreye giriyor.
+**5 Eylül = 100:** Grafik 5 Eylül’de yeniden başlatıldı; daha eski gözlemler saklanıyor. Ham günlük gözlemler silinmedi. Önceki hesaplar [`revisions/pre-2026-09-05-method/`](data/v0.4/revisions/pre-2026-09-05-method/) altında. Eski snapshot'lar depot bazında tüm fiyatları saklamadığından geçmiş depot kompozisyon hatası tam olarak yeniden hesaplanamaz; depot düzeltmesi yeni ölçümlerle devreye giriyor.
 
 Kaynak güncellenmemişse rapor bunu açıkça gösterir. “7 gün” ve “30 gün” gerçekten takvim günüdür; ilgili günün ölçümü yoksa oran da yoktur. Aynı gün yeniden taramada önceki snapshot arşivlenir; baseline üzerine yazılmaz.
 
@@ -207,7 +194,7 @@ Windows PowerShell aktivasyonu:
 .\.venv\Scripts\Activate.ps1
 ```
 
-Kod değişiklikleri de test ve yeni tarama başlatır. GitHub Actions her gün `05:45 UTC` için planlı. GitHub yoğun olduğunda cron’un geç başlaması mümkün; veri tarihi Türkiye saatine göre yazılıyor.
+Kod değişiklikleri de test ve tarama akışını başlatır. GitHub Actions **8 saatte bir**, `05:17 / 13:17 / 21:17 UTC` için planlı (**Türkiye: 08:17 / 16:17 / 00:17**). Kaynak fiyatlar değişmediyse yeni bir fiyat hareketi üretilmez. Günlük grafikte her günün son başarılı taraması kullanılır; baz günü sabit tutulur. GitHub yoğun olduğunda cron’un geç başlaması mümkün; veri tarihi Türkiye saatine göre yazılıyor.
 
 ## Sınırlar
 
@@ -228,4 +215,3 @@ Proje, kod ve metodoloji: **Onurcan Büyükkalkan** — [buyukkalkan.net](https:
 Daha net hukuk/veri notu: [`NOTICE.md`](NOTICE.md). Kod MIT lisanslı: [`LICENSE-CODE`](LICENSE-CODE).
 
 Katkı için [`CONTRIBUTING.md`](CONTRIBUTING.md) açık. Özellikle yanlış kategori, eksik ürün tipi ve parser vakaları makbule geçer.
-

@@ -634,8 +634,10 @@ def collect(refresh: bool = False) -> Path:
         if not refresh:
             print(f"snapshot={existing.name} already published; preserving daily close")
             return existing
-        if existing == min(SNAPSHOT_DIR.glob("*.csv")):
-            raise SystemExit("Baseline gününün snapshot'ı yeniden yazılamaz")
+        baseline_date = json.loads((ROOT / "config" / "series.json").read_text())["baseline_date"]
+        if today == baseline_date or existing == min(SNAPSHOT_DIR.glob("*.csv")):
+            print(f"snapshot={existing.name} is the frozen baseline; next date will be collected")
+            return existing
         for state in types_state.values():
             state.setdefault("last_observed_date", today)
     historical_levels = _historical_levels()
@@ -728,7 +730,7 @@ def collect(refresh: bool = False) -> Path:
         encoding="utf-8",
     )
     (DATA_DIR / "latest-errors.json").write_text(
-        json.dumps({"date": today, "errors": errors}, ensure_ascii=False, indent=2) + "\n",
+        json.dumps({"date": today, "checked_at": datetime.now(TR_TZ).isoformat(), "errors": errors}, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
 

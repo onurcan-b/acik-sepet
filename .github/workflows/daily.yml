@@ -11,7 +11,7 @@ on:
       - '.github/workflows/daily.yml'
   workflow_dispatch:
   schedule:
-    - cron: "45 5 * * *"
+    - cron: "17 5,13,21 * * *"
 
 permissions:
   contents: write
@@ -52,12 +52,14 @@ jobs:
         run: |
           python - <<'PY'
           import csv
+          import json
           from pathlib import Path
 
           with Path("data/v0.4/index.csv").open(encoding="utf-8", newline="") as handle:
               rows = {row["date"]: row for row in csv.DictReader(handle)}
 
-          anchors = {"2026-09-02": 100.0000}
+          baseline = json.loads(Path("config/series.json").read_text())["baseline_date"]
+          anchors = {baseline: 100.0000}
           for day, expected in anchors.items():
               actual = float(rows[day]["index"])
               if abs(actual - expected) > 1e-4:
@@ -88,4 +90,3 @@ jobs:
             exit 1
           }
           git push origin main
-
