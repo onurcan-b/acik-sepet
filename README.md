@@ -14,7 +14,7 @@ Markette fiyatlar gerçekten ne kadar oynuyor? “Bana öyle geliyor” kısmın
 <!-- STATS_START -->
 | Endeks | Tarih | Aktif tip | Endeks SKU | Kategori kapsaması | 7 gün | 30 gün | Baz |
 |---:|---|---:|---:|---:|---:|---:|---|
-| **100.00** | 2026-09-05 | 109 | 1643 | %100 | — | — | 2026-09-05 = 100 |
+| **100.00** | 2026-09-06 | 110 | 1645 | %100 | — | — | 2026-09-05 = 100 |
 <!-- STATS_END -->
 
 ## Kısaca ne yapıyor?
@@ -56,12 +56,12 @@ Kategori eşlemeleri açıkça [`config/api_categories.json`](config/api_categor
 <!-- CATEGORY_TABLE_START -->
 | Kategori | Endeks | Yeterli tip | Kapsama | SKU |
 |---|---:|---:|---:|---:|
-| Ekmek, tahıllar ve makarna | 100.00 | 10/12 | %83 | 164 |
+| Ekmek, tahıllar ve makarna | 100.00 | 10/12 | %83 | 165 |
 | Et ve et ürünleri | 100.00 | 8/10 | %80 | 118 |
 | Balık ve deniz ürünleri | 100.00 | 4/6 | %67 | 27 |
 | Süt ürünleri ve yumurta | 100.00 | 13/13 | %100 | 229 |
 | Yağlar | 100.00 | 4/5 | %80 | 84 |
-| Meyve | 100.00 | 8/13 | %62 | 34 |
+| Meyve | 100.00 | 9/13 | %69 | 35 |
 | Sebze | 100.00 | 11/17 | %65 | 51 |
 | Şeker, tatlı ve atıştırmalık | 100.00 | 11/12 | %92 | 214 |
 | Diğer gıda | 100.00 | 10/10 | %100 | 194 |
@@ -77,7 +77,7 @@ v0.3 kategori kapsamasını yalnızca baseline’da hayatta kalan ürün tipleri
 ![Kategori ürün tipi kapsaması](charts/coverage.svg)
 
 <!-- GAPS_START -->
-**21 ürün tipi** minimum eşiğin altında. Yanlış ürünle doldurulmadılar; endekse girmiyorlar.
+**20 ürün tipi** minimum eşiğin altında. Yanlış ürünle doldurulmadılar; endekse girmiyorlar.
 
 | Ürün tipi | Gözlenen | Minimum | API kategori filtresi |
 |---|---:|---:|---|
@@ -88,35 +88,49 @@ v0.3 kategori kapsamasını yalnızca baseline’da hayatta kalan ürün tipleri
 | Tost ekmeği | 1 | 5 | Tost Ekmeği |
 | Balık parmak | 0 | 2 | Balık Kroket |
 | Brokoli | 0 | 2 | Karnabahar ve Brokoli |
-| Buğday unu | 4 | 6 | Buğday Unu |
 | Cherry domates | 0 | 2 | Domates |
 | Ispanak | 0 | 2 | Yeşillikler |
 | Karnabahar | 0 | 2 | Karnabahar ve Brokoli |
 | Kivi | 0 | 2 | Kivi |
 | Çilek | 0 | 2 | Çilek |
-| Avokado | 1 | 2 | Avokado |
+| Buğday unu | 5 | 6 | Buğday Unu |
 | Konserve sardalya | 1 | 2 | Deniz Ürünleri |
 | Mandalina | 1 | 2 | Narenciye |
 | Marul | 1 | 2 | Yeşillikler |
 | Mısırözü yağı | 1 | 2 | Mısırözü Yağı |
+| Tavuk but / baget | 4 | 5 | Tavuk But |
 
-Tabloda en zayıf 18 tip var; toplam eksik tip sayısı 21.
+Tabloda en zayıf 18 tip var; toplam eksik tip sayısı 20.
 <!-- GAPS_END -->
 
 ## Bugün ne oynadı?
 
 <!-- MOVERS_START -->
-İkinci gözlemden sonra günlük hareketler burada belirecek. Baseline gününde dramatik hikâye çıkarmıyoruz.
+2026-09-05 → 2026-09-06: **0 yukarı**, **0 aşağı**, **109 yatay**. Karşılaştırılan tip: 109.
+
+| Ürün tipi | SKU | Değişim |
+|---|---:|---:|
+| Elma | 5 | +0.00% |
+| Ayran | 22 | +0.00% |
+| Muz | 2 | +0.00% |
+| Kuru fasulye | 24 | +0.00% |
+| Dana kuşbaşı / sote | 8 | +0.00% |
+| Dana kıyma | 7 | +0.00% |
+| Bisküvi | 21 | +0.00% |
+| Siyah çay | 22 | +0.00% |
+| Çamaşır suyu | 18 | +0.00% |
+| Beyaz ekmek | 6 | +0.00% |
 <!-- MOVERS_END -->
 
 ## Veri kalitesi
 
 <!-- QUALITY_START -->
-- **1666/1666** SKU için en yeni kaynak tarihi gözlem günüyle aynı; ayrıntı: [health.json](data/v0.4/health.json)
-- **1666** sıkı eşleşmiş SKU, **7** market etiketi
-- **1500/1666** miktar doğrudan API'nin normalize alanından
-- **1666/1666** satırda birim fiyat API değeriyle ayrıca kontrol edildi
-- **1666/1666** gözlem sabit depot relatifleriyle bağlı
+- **Güncellik uyarısı:** Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor.
+- **0/1668** SKU için en yeni kaynak tarihi gözlem günüyle aynı; ayrıntı: [health.json](data/v0.4/health.json)
+- **1668** sıkı eşleşmiş SKU, **7** market etiketi
+- **1501/1668** miktar doğrudan API'nin normalize alanından
+- **1668/1668** satırda birim fiyat API değeriyle ayrıca kontrol edildi
+- **1668/1668** gözlem sabit depot relatifleriyle bağlı
 - **0** bridge edilmiş panel yenilemesi (yeni baseline'da doğal olarak sıfır)
 <!-- QUALITY_END -->
 
