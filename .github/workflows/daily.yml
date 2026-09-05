@@ -1,6 +1,14 @@
 name: Daily Açık Sepet
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'acik_sepet/**'
+      - 'config/**'
+      - 'tests/**'
+      - 'requirements.txt'
+      - '.github/workflows/daily.yml'
   workflow_dispatch:
   schedule:
     - cron: "45 5 * * *"
@@ -10,10 +18,11 @@ permissions:
 
 concurrency:
   group: acik-sepet-daily
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   collect:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 50
     steps:
@@ -29,9 +38,11 @@ jobs:
       - name: Tests
         run: pytest -q
       - name: Collect strict category-aware multi-SKU panels
-        run: python -m acik_sepet.collect
+        run: python -m acik_sepet.collect --refresh
       - name: Validate panel quality
         run: python -m acik_sepet.validate --min-type-coverage 0.60 --min-skus 300
+      - name: Check source freshness and write diagnostics
+        run: python -m acik_sepet.health
       - name: Rebuild indices and README
         run: |
           python -m acik_sepet.index
@@ -70,5 +81,11 @@ jobs:
             exit 0
           fi
           git commit -m "data: günlük Açık Sepet v0.4 güncellemesi"
-          git pull --rebase origin main
+          # Never rebase generated state across a concurrent methodology edit.
+          git fetch origin main
+          test "$(git rev-parse HEAD^)" = "$(git rev-parse origin/main)" || {
+            echo "main changed during collection; rerun against current code"
+            exit 1
+          }
           git push origin main
+

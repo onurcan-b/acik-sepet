@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 import csv
 import math
-from collections import defaultdict
+from collections import defaultdict, Counter
 from pathlib import Path
 
 from .collect import _title_matches
@@ -23,6 +23,12 @@ def validate(min_type_coverage: float = 0.60, min_skus: int = 300) -> None:
         rows = list(csv.DictReader(handle))
 
     by_type: dict[str, int] = defaultdict(int)
+    keys = Counter(row["product_key"] for row in rows)
+    slots = Counter(row.get("slot_id") or row["product_key"] for row in rows)
+    if any(n > 1 for n in keys.values()) or any(n > 1 for n in slots.values()):
+        raise SystemExit("Tekrarlanan SKU/panel slotu")
+    if any(row["date"] != latest.stem for row in rows):
+        raise SystemExit("Snapshot tarihi ile satır tarihi uyuşmuyor")
     key_types: dict[str, set[str]] = defaultdict(set)
     slot_types: dict[str, set[str]] = defaultdict(set)
     bad_prices = 0
@@ -43,7 +49,7 @@ def validate(min_type_coverage: float = 0.60, min_skus: int = 300) -> None:
             price = float(row["price"])
             quantity = float(row["quantity"])
             observed_unit = float(row["unit_price"])
-            if observed_unit <= 0 or float(linked) <= 0 or price <= 0 or quantity <= 0:
+            if any(not math.isfinite(v) or v <= 0 for v in (observed_unit, float(linked), price, quantity)):
                 bad_prices += 1
             elif not math.isclose(observed_unit, price / quantity, rel_tol=1e-6, abs_tol=1e-6):
                 bad_formulas += 1
@@ -54,7 +60,7 @@ def validate(min_type_coverage: float = 0.60, min_skus: int = 300) -> None:
             api_unit_checks += 1
             try:
                 gap = abs(float(row["unit_price"]) / float(api_unit) - 1.0)
-                if gap > 0.0501:
+                if not math.isfinite(gap) or gap > 0.0501:
                     bad_api_units += 1
             except (TypeError, ValueError, ZeroDivisionError):
                 bad_api_units += 1
@@ -122,3 +128,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

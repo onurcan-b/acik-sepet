@@ -1,6 +1,9 @@
 name: Validate Açık Sepet
 
 on:
+  push:
+    branches: [main]
+    paths: ['acik_sepet/**', 'tests/**', 'config/**', '.github/workflows/**']
   pull_request:
   workflow_dispatch:
 
@@ -50,9 +53,10 @@ jobs:
                   raise SystemExit(f"analytics chart was not generated correctly: {name}")
           print("v0.4 baseline and charts are stable")
           PY
-      - name: Live strict-matching collector smoke
+      - name: Validate published observations and freshness diagnostics
         run: |
-          python -m acik_sepet.collect
           python -m acik_sepet.validate --min-type-coverage 0.60 --min-skus 300
+          python -m acik_sepet.health
       - name: Source-file whitespace sanity
         run: git diff --check -- acik_sepet tests .github config README.md METHOD.md
+

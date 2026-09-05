@@ -53,7 +53,9 @@ def _fetch_page(
                 raise MarketFiyatiError("Market Fiyatı bot koruması HTTP 418 döndürdü")
             response.raise_for_status()
             body = response.json()
-            content = body.get("content") or []
+            if not isinstance(body, dict) or "content" not in body:
+                raise MarketFiyatiError("Beklenmeyen API yanıtı: content yok")
+            content = body["content"]
             if not isinstance(content, list):
                 raise MarketFiyatiError("Beklenmeyen API yanıtı: content liste değil")
             return content
@@ -70,7 +72,7 @@ def search_products(
     category_level: str | None = None,
     category_values: list[str] | None = None,
     page_size: int = 25,
-    max_pages: int = 1,
+    max_pages: int = 8,
     timeout: int = 30,
     attempts: int = 3,
     session: requests.Session | None = None,
@@ -115,3 +117,4 @@ def search_products(
             break
         time.sleep(random.uniform(0.05, 0.15))
     return output
+

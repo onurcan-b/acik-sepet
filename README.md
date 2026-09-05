@@ -14,7 +14,7 @@ Markette fiyatlar gerçekten ne kadar oynuyor? “Bana öyle geliyor” kısmın
 <!-- STATS_START -->
 | Endeks | Tarih | Aktif tip | Endeks SKU | Kategori kapsaması | 7 gün | 30 gün | Baz |
 |---:|---|---:|---:|---:|---:|---:|---|
-| **99.82** | 2026-09-05 | 106 | 1524 | %100 | — | — | 2026-09-02 = 100 |
+| **99.97** | 2026-09-05 | 106 | 1467 | %100 | — | — | 2026-09-02 = 100 |
 <!-- STATS_END -->
 
 ## Kısaca ne yapıyor?
@@ -56,18 +56,18 @@ Kategori eşlemeleri açıkça [`config/api_categories.json`](config/api_categor
 <!-- CATEGORY_TABLE_START -->
 | Kategori | Endeks | Yeterli tip | Kapsama | SKU |
 |---|---:|---:|---:|---:|
-| Ekmek, tahıllar ve makarna | 100.49 | 9/12 | %75 | 134 |
-| Et ve et ürünleri | 98.95 | 8/10 | %80 | 115 |
-| Balık ve deniz ürünleri | 100.97 | 4/6 | %67 | 27 |
-| Süt ürünleri ve yumurta | 99.94 | 13/13 | %100 | 220 |
-| Yağlar | 101.95 | 4/5 | %80 | 84 |
-| Meyve | 96.59 | 8/13 | %62 | 34 |
-| Sebze | 98.54 | 11/17 | %65 | 51 |
-| Şeker, tatlı ve atıştırmalık | 99.58 | 11/12 | %92 | 206 |
-| Diğer gıda | 100.73 | 10/10 | %100 | 185 |
-| Alkolsüz içecekler | 102.34 | 10/11 | %91 | 174 |
-| Ev temizlik sarf malzemeleri | 101.71 | 8/10 | %80 | 140 |
-| Kişisel bakım ve kağıt ürünleri | 99.11 | 10/11 | %91 | 174 |
+| Ekmek, tahıllar ve makarna | 100.43 | 9/12 | %75 | 134 |
+| Et ve et ürünleri | 98.92 | 8/10 | %80 | 115 |
+| Balık ve deniz ürünleri | 100.85 | 4/6 | %67 | 27 |
+| Süt ürünleri ve yumurta | 100.05 | 13/13 | %100 | 220 |
+| Yağlar | 101.88 | 4/5 | %80 | 84 |
+| Meyve | 96.55 | 8/13 | %62 | 34 |
+| Sebze | 98.40 | 11/17 | %65 | 51 |
+| Şeker, tatlı ve atıştırmalık | 99.68 | 11/12 | %92 | 206 |
+| Diğer gıda | 100.71 | 10/10 | %100 | 185 |
+| Alkolsüz içecekler | 102.27 | 10/11 | %91 | 174 |
+| Ev temizlik sarf malzemeleri | 101.44 | 8/10 | %80 | 140 |
+| Kişisel bakım ve kağıt ürünleri | 99.38 | 10/11 | %91 | 174 |
 <!-- CATEGORY_TABLE_END -->
 
 ## Kapsama dürüstlüğü
@@ -106,25 +106,26 @@ Tabloda en zayıf 18 tip var; toplam eksik tip sayısı 24.
 ## Bugün ne oynadı?
 
 <!-- MOVERS_START -->
-2026-09-04 → 2026-09-05: **36 yukarı**, **34 aşağı**, **34 yatay**. Karşılaştırılan tip: 104.
+2026-09-04 → 2026-09-05: **25 yukarı**, **25 aşağı**, **54 yatay**. Karşılaştırılan tip: 104.
 
 | Ürün tipi | SKU | Değişim |
 |---|---:|---:|
-| Çöp torbası | 23 | +23.01% |
-| Çözünebilir kahve | 7 | +14.37% |
+| Çöp torbası | 22 | +24.17% |
+| Çözünebilir kahve | 7 | +13.99% |
 | Üzüm | 6 | -4.71% |
 | Limon | 3 | -4.12% |
 | Dana kuşbaşı / sote | 8 | +3.88% |
-| Margarin | 21 | +3.62% |
-| Sıvı çamaşır deterjanı | 21 | +3.17% |
-| Tuvalet kağıdı | 19 | -2.99% |
+| Margarin | 21 | +3.46% |
+| Sarımsak | 3 | -3.20% |
+| Kola | 19 | +3.06% |
+| Enerji içeceği | 18 | +2.94% |
 | Nohut | 18 | +2.85% |
-| Kola | 20 | +2.81% |
 <!-- MOVERS_END -->
 
 ## Veri kalitesi
 
 <!-- QUALITY_START -->
+- **1544/1544** SKU için en yeni kaynak tarihi gözlem günüyle aynı; ayrıntı: [health.json](data/v0.4/health.json)
 - **1544** sıkı eşleşmiş SKU, **7** market etiketi
 - **1395/1544** miktar doğrudan API'nin normalize alanından
 - **1544/1544** satırda birim fiyat API değeriyle ayrıca kontrol edildi
@@ -143,18 +144,23 @@ Her günlük çalışmada şunlar da kontrol ediliyor:
 
 ## Endeksin kısa matematiği
 
-Bir SKU’nun aynı depotları zaman içinde izlenir. Yeni bir depot sessizce fiyat seviyesine eklenmez; geçici kaybolan bir depot da sırf kompozisyon değişti diye sıçrama üretmez.
+**5 Eylül düzeltmesi:** İlk 25 sonuç sınırı 200'e çıktı. “Ekmeği”, “unu”, “jeli” gibi Türkçe çekimler artık gerçek ürünü elemek için sebep değil. Eksilen SKU/depotların geçmiş fiyat farkını endeksten silen kompozisyon hatası da düzeltildi.
+
+Her adım iki ölçümde ortak kalan kimlikleri karşılaştırır:
 
 ```text
-depot_relative(s,t) = price(s,t) / price(s,anchor)
-linked_package_price(t) = anchor_median × geometric_mean(depot_relative)
-unit_price(t) = linked_package_price(t) / package_quantity(t)
-type_index(t) = 100 × geometric_mean(unit_price(t) / unit_price(base))
+SKU fiyatı(t) = önceki bağlı fiyat × geo_mean(ortak depot fiyat değişimleri)
+Tip endeksi(t) = önceki endeks × geo_mean(ortak slot birim fiyat değişimleri)
+Kategori / ana endeks(t) = önceki endeks × ağırlıklı_mean(ortak üyelerin endeks değişimleri)
 ```
 
-Kalıcı kaybolan SKU’lar günlük rastgele ikame edilmez. Panel uzun süre zayıf kalırsa, birkaç gün üst üste görülen yeni aday eski slotun son fiyat seviyesine bridge edilerek alınabilir. Marka değişimi fiyat değişimi diye yazılmaz.
+Bir ürünün veya kategorinin kaybolması, önceki zamlarını geri almaz. Yeni gelen ürün ilk bağlantıda fiyat değişimi üretmez. Yeterli ortak gözlem yoksa o nokta yayımlanmaz; eksik fiyatı tahmin edip gerçek gözlem diye yazmıyoruz. Bunun bedeli: ürünün kayıp olduğu aralıktaki hareketi kaçırabiliriz.
 
-Ayrıntılı ve daha sıkıcı tarafı: [`METHOD.md`](METHOD.md).
+**2 Eylül = 100 korunuyor.** Ham günlük gözlemler silinmedi. Önceki hesaplar [`revisions/pre-2026-09-05-method/`](data/v0.4/revisions/pre-2026-09-05-method/) altında. Eski snapshot'lar depot bazında tüm fiyatları saklamadığından geçmiş depot kompozisyon hatası tam olarak yeniden hesaplanamaz; depot düzeltmesi yeni ölçümlerle devreye giriyor.
+
+Kaynak güncellenmemişse rapor bunu açıkça gösterir. “7 gün” ve “30 gün” gerçekten takvim günüdür; ilgili günün ölçümü yoksa oran da yoktur. Aynı gün yeniden taramada önceki snapshot arşivlenir; baseline üzerine yazılmaz.
+
+Ayrıntı: [`METHOD.md`](METHOD.md).
 
 ## Dosyalar
 
@@ -190,6 +196,7 @@ pip install -r requirements.txt
 pytest -q
 python -m acik_sepet.collect
 python -m acik_sepet.validate
+python -m acik_sepet.health
 python -m acik_sepet.index
 python -m acik_sepet.report
 ```
@@ -200,7 +207,7 @@ Windows PowerShell aktivasyonu:
 .\.venv\Scripts\Activate.ps1
 ```
 
-GitHub Actions her gün `05:45 UTC` için planlı. GitHub yoğun olduğunda cron’un geç başlaması mümkün; veri tarihi Türkiye saatine göre yazılıyor.
+Kod değişiklikleri de test ve yeni tarama başlatır. GitHub Actions her gün `05:45 UTC` için planlı. GitHub yoğun olduğunda cron’un geç başlaması mümkün; veri tarihi Türkiye saatine göre yazılıyor.
 
 ## Sınırlar
 
@@ -221,3 +228,4 @@ Proje, kod ve metodoloji: **Onurcan Büyükkalkan** — [buyukkalkan.net](https:
 Daha net hukuk/veri notu: [`NOTICE.md`](NOTICE.md). Kod MIT lisanslı: [`LICENSE-CODE`](LICENSE-CODE).
 
 Katkı için [`CONTRIBUTING.md`](CONTRIBUTING.md) açık. Özellikle yanlış kategori, eksik ürün tipi ve parser vakaları makbule geçer.
+

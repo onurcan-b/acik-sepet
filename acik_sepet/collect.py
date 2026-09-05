@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 import csv
 import json
 import math
@@ -47,7 +48,16 @@ def _product_key(item: dict[str, Any]) -> str:
 
 def _word_matches(actual: str, expected: str) -> bool:
     """Match exact short words and safe Turkish suffix variants for longer words."""
-    return actual == expected or (len(expected) >= 4 and actual.startswith(expected))
+    inflections = {
+        "ekmek": {"ekmegi", "ekmegini"},
+        "gevrek": {"gevregi", "gevregini"},
+        "un": {"unu", "unlari"},
+        "jel": {"jeli", "jeller", "jelleri"},
+        "bal": {"bali", "ballari"},
+        "su": {"suyu", "sulari"},
+    }
+    return (actual == expected or actual in inflections.get(expected, set())
+            or (len(expected) >= 4 and actual.startswith(expected)))
 
 
 def _phrase_matches(text: str, phrase: str) -> bool:
@@ -279,9 +289,21 @@ def _source_linked_package_price(
     if not common:
         return None
 
-    ratios = [current[key] / anchors[key] for key in common]
-    anchor_level = float(sku_state.get("source_anchor_level") or _median_price(offers))
-    linked_package = anchor_level * _geomean(ratios)
+    last_prices = sku_state.get("source_last_prices")
+    if last_prices:
+        overlap = sorted(set(last_prices) & set(common))
+        if not overlap:
+            return None
+        ratios = [current[key] / float(last_prices[key]) for key in overlap]
+        linked_package = float(sku_state["source_last_level"]) * _geomean(ratios)
+    else:
+        # One-time adoption of legacy state; historical per-depot prices were
+        # not persisted. Preserve its existing anchor calculation on adoption.
+        ratios = [current[key] / anchors[key] for key in common]
+        anchor_level = float(sku_state.get("source_anchor_level") or _median_price(offers))
+        linked_package = anchor_level * _geomean(ratios)
+    sku_state["source_last_prices"] = {key: current[key] for key in common}
+    sku_state["source_last_level"] = linked_package
     common_set = set(common)
     stable_offers = [row for row in offers if row.get("source_id") in common_set]
     return linked_package, stable_offers
@@ -423,6 +445,7 @@ def _initialize_type(
 
     return {
         "initialized": today,
+        "last_observed_date": today,
         "label": spec["label"],
         "group": spec["group"],
         "target_skus": spec["target_skus"],
@@ -443,7 +466,10 @@ def _update_shadow_candidates(
         if key in active_keys or key in claimed:
             continue
         previous = shadows.get(key) or {}
-        streak = int(previous.get("seen_streak", 0)) + 1 if previous.get("last_seen") == yesterday else 1
+        if previous.get("last_seen") == today:
+            streak = int(previous.get("seen_streak", 1))
+        else:
+            streak = int(previous.get("seen_streak", 0)) + 1 if previous.get("last_seen") == yesterday else 1
         shadows[key] = {
             "product_key": key,
             "title": row["title"],
@@ -475,6 +501,8 @@ def _observe_type(
     today: str,
     historical_levels: dict[str, float],
 ) -> list[dict[str, Any]]:
+    new_day = state.get("last_observed_date") != today
+    state["last_observed_date"] = today
     for sku in state.get("skus") or []:
         _migrate_sku_state(sku, historical_levels)
 
@@ -490,7 +518,7 @@ def _observe_type(
         item = items_by_key.get(str(sku.get("product_key") or ""))
         row = _row_for_state(item, spec, sku) if item is not None else None
         if row is None:
-            sku["missing_streak"] = int(sku.get("missing_streak", 0)) + 1
+            sku["missing_streak"] = int(sku.get("missing_streak", 0)) + int(new_day)
             continue
         sku["missing_streak"] = 0
         sku["last_seen"] = today
@@ -498,9 +526,28 @@ def _observe_type(
         observed.append(row)
         observed_slots.add(row["slot_id"])
 
+    if len(active) < spec["min_skus"]:
+        eligible_new = sorted(shadow_rows.values(), key=lambda r: (-r["score"], -r["offer_count"], r["product_key"]))
+        for candidate in eligible_new:
+            key = candidate["product_key"]
+            if len(active) >= spec["target_skus"]:
+                break
+            if key in claimed or state["candidates"][key]["seen_streak"] < CANDIDATE_MIN_STREAK:
+                continue
+            sku = _new_sku_state(candidate, today)
+            row = _row_for_state(items_by_key[key], spec, sku)
+            if row is None:
+                continue
+            sku["last_linked_unit_price"] = row["linked_unit_price"]
+            active.append(sku)
+            claimed.add(key)
+            observed.append(row)
+            observed_slots.add(row["slot_id"])
+            state["candidates"].pop(key, None)
+
     coverage = len(observed_slots) / len(active) if active else 0.0
     state["low_coverage_streak"] = (
-        int(state.get("low_coverage_streak", 0)) + 1
+        int(state.get("low_coverage_streak", 0)) + int(new_day)
         if active and coverage < LOW_COVERAGE_THRESHOLD else 0
     )
     if int(state.get("low_coverage_streak", 0)) < RENEWAL_AFTER_DAYS:
@@ -568,12 +615,12 @@ def _observe_type(
     return observed
 
 
-def collect() -> Path:
+def collect(refresh: bool = False) -> Path:
     specs = load_product_types()
     panel_state = _load_panel()
     panel_state["version"] = "v0.4"
     panel_state["matching_policy"] = "market-category + all-required-title-rules + unit-price-check"
-    panel_state["source_policy"] = "pinned-source-relatives"
+    panel_state["source_policy"] = "pinned-source-matched-chain"
     panel_state["renewal_policy"] = {
         "low_coverage_threshold": LOW_COVERAGE_THRESHOLD,
         "renewal_after_days": RENEWAL_AFTER_DAYS,
@@ -582,6 +629,15 @@ def collect() -> Path:
     }
     types_state = panel_state.setdefault("types", {})
     today = datetime.now(TR_TZ).date().isoformat()
+    existing = SNAPSHOT_DIR / f"{today}.csv"
+    if existing.exists():
+        if not refresh:
+            print(f"snapshot={existing.name} already published; preserving daily close")
+            return existing
+        if existing == min(SNAPSHOT_DIR.glob("*.csv")):
+            raise SystemExit("Baseline gününün snapshot'ı yeniden yazılamaz")
+        for state in types_state.values():
+            state.setdefault("last_observed_date", today)
     historical_levels = _historical_levels()
     claimed = {
         str(sku.get("product_key"))
@@ -656,6 +712,11 @@ def collect() -> Path:
         "category_level", "raw_offer_count", "source_count", "source_ids", "markets",
         "source_mode", "source_updated_at", "generation", "match_score",
     ]
+    if out.exists():
+        revisions = DATA_DIR / "revisions"
+        revisions.mkdir(exist_ok=True)
+        stamp = datetime.now(TR_TZ).strftime("%Y%m%dT%H%M%S%f")
+        (revisions / f"{today}-before-{stamp}.csv").write_bytes(out.read_bytes())
     with out.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
@@ -684,4 +745,6 @@ def collect() -> Path:
 
 
 if __name__ == "__main__":
-    collect()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--refresh", action="store_true", help="Refresh today, archiving its previous snapshot; never rewrite baseline")
+    collect(refresh=parser.parse_args().refresh)

@@ -3,6 +3,7 @@ from __future__ import annotations
 import csv
 import json
 from collections import Counter
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -49,10 +50,14 @@ def _replace(text: str, start: str, end: str, body: str) -> str:
 
 
 def _change(rows: list[dict[str, str]], days: int) -> float | None:
-    valid = [row for row in rows if row.get("index")]
-    if len(valid) <= days:
+    if not rows or not rows[-1].get("index"):
         return None
-    return (float(valid[-1]["index"]) / float(valid[-1 - days]["index"]) - 1.0) * 100.0
+    latest = rows[-1]
+    target = (date.fromisoformat(latest["date"]) - timedelta(days=days)).isoformat()
+    baseline = next((row for row in rows if row["date"] == target and row.get("index")), None)
+    if baseline is None:
+        return None
+    return (float(latest["index"]) / float(baseline["index"]) - 1.0) * 100.0
 
 
 def _save(fig: plt.Figure, name: str) -> None:
@@ -133,7 +138,9 @@ def _stats(index_rows: list[dict[str, str]]) -> str:
     valid = [row for row in index_rows if row.get("index")]
     if not valid:
         return "İlk v0.4 gözlemi bekleniyor."
-    latest = valid[-1]
+    if not index_rows[-1].get("index"):
+        return f"{index_rows[-1]['date']}: kapsama yetersiz; güncel endeks yayımlanmadı. Son geçerli ölçüm: {valid[-1]['date']}."
+    latest = index_rows[-1]
     change_7 = _change(index_rows, 7)
     change_30 = _change(index_rows, 30)
     return "\n".join([
@@ -239,7 +246,11 @@ def _quality(snapshot_rows: list[dict[str, str]]) -> str:
     if PANEL_PATH.exists():
         state = json.loads(PANEL_PATH.read_text(encoding="utf-8"))
         renewals = sum(int(item.get("renewals", 0)) for item in (state.get("types") or {}).values())
-    return "\n".join([
+    from .health import summarize
+    health = summarize(snapshot_rows)
+    warnings = [f"- **Güncellik uyarısı:** {warning}" for warning in health["warnings"]]
+    return "\n".join(warnings + [
+        f"- **{health['source_updated_today']}/{len(snapshot_rows)}** SKU için en yeni kaynak tarihi gözlem günüyle aynı; ayrıntı: [health.json](data/v0.4/health.json)",
         f"- **{len(snapshot_rows)}** sıkı eşleşmiş SKU, **{len(markets)}** market etiketi",
         f"- **{refined}/{len(snapshot_rows)}** miktar doğrudan API'nin normalize alanından",
         f"- **{api_units}/{len(snapshot_rows)}** satırda birim fiyat API değeriyle ayrıca kontrol edildi",
@@ -271,3 +282,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

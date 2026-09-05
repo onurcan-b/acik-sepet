@@ -1,0 +1,413 @@
+[
+  {
+    "date": "2026-09-02",
+    "rows": 1839,
+    "source_updated_today": 1839,
+    "source_within_3_days": 1839,
+    "source_date_unknown": 0,
+    "source_date_future": 0,
+    "source_age_days": {
+      "0": 1839
+    },
+    "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
+    "previous_date": null,
+    "matched_slots": 0,
+    "missing_slots": 0,
+    "new_slots": 1839,
+    "large_price_moves": [],
+    "warnings": []
+  },
+  {
+    "date": "2026-09-03",
+    "rows": 1839,
+    "source_updated_today": 0,
+    "source_within_3_days": 1839,
+    "source_date_unknown": 0,
+    "source_date_future": 0,
+    "source_age_days": {
+      "1": 1839
+    },
+    "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
+    "previous_date": "2026-09-02",
+    "matched_slots": 1839,
+    "missing_slots": 0,
+    "new_slots": 0,
+    "large_price_moves": [],
+    "warnings": [
+      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
+    ]
+  },
+  {
+    "date": "2026-09-04",
+    "rows": 1613,
+    "source_updated_today": 1613,
+    "source_within_3_days": 1613,
+    "source_date_unknown": 0,
+    "source_date_future": 0,
+    "source_age_days": {
+      "0": 1613
+    },
+    "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
+    "previous_date": "2026-09-03",
+    "matched_slots": 1611,
+    "missing_slots": 228,
+    "new_slots": 2,
+    "large_price_moves": [
+      {
+        "slot_id": "id:14HR",
+        "title": "Saban Yerli Kırmızı Mercimek 2.5 Kg",
+        "change_pct": 74.63
+      },
+      {
+        "slot_id": "id:1Z93",
+        "title": "Ekici Krem Peynir 400 Gr",
+        "change_pct": 71.54
+      },
+      {
+        "slot_id": "id:1Z9I",
+        "title": "Pınar Mangal Keyfi Sucuk 300 Gr",
+        "change_pct": 61.81
+      },
+      {
+        "slot_id": "id:1T7L",
+        "title": "Superfresh Klasik Ton Balığı 3x75 Gr",
+        "change_pct": 53.22
+      },
+      {
+        "slot_id": "id:1VXX",
+        "title": "Papia Tuvalet Kağıdı 4 Katlı 16 Adet",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:1XAK",
+        "title": "Familia Kokulu Tuvalet Kağıdı 32 Adet",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:02JE",
+        "title": "Polonez Dana Fermente Kangal Sucuk 1 Kg",
+        "change_pct": 46.88
+      },
+      {
+        "slot_id": "id:07OT",
+        "title": "U Green Clean Sıvı Çamaşır Deterjanı 2.7 Lt",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:1GEW",
+        "title": "Ariel Oxi Sıvı Çamaşır Deterjanı 24 Yıkama 1.08 Lt",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:3WRZ",
+        "title": "Ariel Renkliler Sıvı Çamaşır Deterjanı 21 Yıkama 945 Ml",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:3WS0",
+        "title": "Ariel Dağ Esintisi Sıvı Çamaşır Deterjanı 21 Yıkama 945 Ml",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:3WS1",
+        "title": "Ariel Renkliler Sıvı Çamaşır Deterjanı 32 Yıkama 1.44 Lt",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:1PEK",
+        "title": "Ülker Kakaolu Kremalı Bisküvi 244 Gr",
+        "change_pct": -35.0
+      },
+      {
+        "slot_id": "id:1SDY",
+        "title": "Wafer Master Çikolatalı Küp Gofret 280 Gr",
+        "change_pct": -35.0
+      },
+      {
+        "slot_id": "id:0DF8",
+        "title": "Reis Esmer Çiğköftelik Bulgur 1 Kg",
+        "change_pct": 33.36
+      },
+      {
+        "slot_id": "id:0JC4",
+        "title": "Reis İnce Pilavlık Bulgur 1 Kg",
+        "change_pct": 33.36
+      },
+      {
+        "slot_id": "id:1ZSW",
+        "title": "Tamek Mayonez 540 Gr",
+        "change_pct": 33.34
+      },
+      {
+        "slot_id": "id:1WQD",
+        "title": "Kühne Beyaz Sirke 1 Lt",
+        "change_pct": 33.32
+      },
+      {
+        "slot_id": "id:201N",
+        "title": "Mutlu Arpa Şehriye 500 Gr",
+        "change_pct": -33.05
+      },
+      {
+        "slot_id": "id:1T9Q",
+        "title": "Bahçıvan Tam Yağlı Krem Peynir 300 Gr",
+        "change_pct": -26.71
+      },
+      {
+        "slot_id": "id:1MTA",
+        "title": "Didi Şeftali Aromalı Soğuk Çay Kutu 500 Ml",
+        "change_pct": 26.25
+      },
+      {
+        "slot_id": "id:1PGN",
+        "title": "Didi Bergamot Aromalı Soğuk Çay 500 Ml",
+        "change_pct": 26.25
+      },
+      {
+        "slot_id": "id:1EOI",
+        "title": "Sarı Kavun 1 Kg",
+        "change_pct": -25.64
+      },
+      {
+        "slot_id": "id:0OBP",
+        "title": "Çengelköy Salatalık 500 Gr",
+        "change_pct": -25.32
+      },
+      {
+        "slot_id": "id:1W9H",
+        "title": "Finish Quantum Özel Seri Bulaşık Makinesi Tableti 50 Adet",
+        "change_pct": -24.75
+      },
+      {
+        "slot_id": "id:0T9G",
+        "title": "Naturaköy Organik Yumurta 53-62 Gr 10 Adet",
+        "change_pct": -24.15
+      },
+      {
+        "slot_id": "id:1T54",
+        "title": "Calve Ketçap 430 Gr",
+        "change_pct": 24.08
+      },
+      {
+        "slot_id": "id:0G6D",
+        "title": "Lezita Taze Poşetli Bütün Piliç 1 Kg",
+        "change_pct": -23.09
+      },
+      {
+        "slot_id": "id:0GD5",
+        "title": "Carrefour Kaşar Peyniri 500 Gr",
+        "change_pct": 23.03
+      },
+      {
+        "slot_id": "id:0N0H",
+        "title": "Çatal Sucuk İlikli Dana Kangal Sucuk 450 Gr",
+        "change_pct": -21.11
+      },
+      {
+        "slot_id": "id:1M20",
+        "title": "Dana Fermente Mangal Sucuk 400 Gr",
+        "change_pct": -21.11
+      },
+      {
+        "slot_id": "id:1J0K",
+        "title": "Ruffles Orijinal Peynirli Soğan Ketçap Patates Cipsi 125 Gr",
+        "change_pct": -20.93
+      },
+      {
+        "slot_id": "id:056A",
+        "title": "Taze Bütün Poşet Piliç 1 Kg",
+        "change_pct": -20.8
+      },
+      {
+        "slot_id": "id:2CPH",
+        "title": "Jacobs Gold Yoğun 3'ü 1 Arada Granül Kahve 18 Gr",
+        "change_pct": 20.69
+      },
+      {
+        "slot_id": "id:1WRN",
+        "title": "Erikli Su 6x1 Lt",
+        "change_pct": 20.4
+      },
+      {
+        "slot_id": "id:18M0",
+        "title": "Karpuz 1 Kg",
+        "change_pct": -20.36
+      },
+      {
+        "slot_id": "id:034L",
+        "title": "Sivri Domates 1 Kg",
+        "change_pct": -20.04
+      },
+      {
+        "slot_id": "id:05MI",
+        "title": "Kırmızı Biber 1 Kg",
+        "change_pct": -20.02
+      },
+      {
+        "slot_id": "id:0O22",
+        "title": "Uzman Kasap Dondurulmuş Mangal Köfte 500 Gr",
+        "change_pct": -20.0
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "date": "2026-09-05",
+    "rows": 1544,
+    "source_updated_today": 1544,
+    "source_within_3_days": 1544,
+    "source_date_unknown": 0,
+    "source_date_future": 0,
+    "source_age_days": {
+      "0": 1544
+    },
+    "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
+    "previous_date": "2026-09-04",
+    "matched_slots": 1483,
+    "missing_slots": 130,
+    "new_slots": 61,
+    "large_price_moves": [
+      {
+        "slot_id": "id:09LV",
+        "title": "Parex Büzgülü Çöp Torbası Orta Boy Limon Kokulu 15 Adet",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:0GJW",
+        "title": "Parex Güçlü Çöp Torbası Battal 10 Adet",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:0JGT",
+        "title": "Parex Ekstra Dayanıklı Çöp Torbası Battal 7 Adet",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:0Q71",
+        "title": "Sana Klasik Margarin 250 Gr",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:17W4",
+        "title": "Parex Güçlü Çöp Torbası Mini 30 Adet",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:17X8",
+        "title": "Parex Güçlü Çöp Torbası Büyük Boy 10 Adet",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:1BCK",
+        "title": "Parex Natura Büzgülü Çöp Torbası Büyük Boy 10 Adet",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:1SOA",
+        "title": "Nescafé Instant Mocha Kahve 17 Gr",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:1ISZ",
+        "title": "Emotion Deodorant 150 Ml",
+        "change_pct": 41.75
+      },
+      {
+        "slot_id": "id:1POY",
+        "title": "Koroplast Trend Çöp Torbası Orta Boy 10 Adet",
+        "change_pct": 41.42
+      },
+      {
+        "slot_id": "id:1RYC",
+        "title": "Koroplast Küçük Boy Mandarin Kokulu Çöp Torbası 30 Adet",
+        "change_pct": 41.42
+      },
+      {
+        "slot_id": "id:1QVB",
+        "title": "Yayla Haşlanmış Nohut 700 Gr",
+        "change_pct": 33.08
+      },
+      {
+        "slot_id": "id:06TO",
+        "title": "Black Eagle Enerji İçeceği 500 Ml",
+        "change_pct": 29.85
+      },
+      {
+        "slot_id": "id:1C7T",
+        "title": "Hotline Enerji İçeceği 500 Ml",
+        "change_pct": 29.85
+      },
+      {
+        "slot_id": "id:21GA",
+        "title": "Barilla Kalem Makarna 500 Gr",
+        "change_pct": -28.57
+      },
+      {
+        "slot_id": "id:1STO",
+        "title": "Pepsi Max Gazlı İçecek Kola 1 Lt",
+        "change_pct": 26.67
+      },
+      {
+        "slot_id": "id:1SVD",
+        "title": "Blade Deodorant 150 Ml",
+        "change_pct": 26.18
+      },
+      {
+        "slot_id": "id:1ZWL",
+        "title": "Lay's Klasik Patates Cipsi 125 Gr",
+        "change_pct": 25.24
+      },
+      {
+        "slot_id": "id:023K",
+        "title": "Fruko Gazlı İçecek Gazoz 2.5 Lt",
+        "change_pct": 25.23
+      },
+      {
+        "slot_id": "id:0QBX",
+        "title": "Pepsi Kola 1.5 Lt",
+        "change_pct": 25.23
+      },
+      {
+        "slot_id": "id:034L",
+        "title": "Sivri Domates 1 Kg",
+        "change_pct": 25.06
+      },
+      {
+        "slot_id": "id:05MI",
+        "title": "Kırmızı Biber 1 Kg",
+        "change_pct": 25.03
+      },
+      {
+        "slot_id": "id:0A1H",
+        "title": "Uzman Kasap Dana Sote 300 Gr",
+        "change_pct": 25.0
+      },
+      {
+        "slot_id": "id:0O22",
+        "title": "Uzman Kasap Dondurulmuş Mangal Köfte 500 Gr",
+        "change_pct": 25.0
+      },
+      {
+        "slot_id": "id:0TN2",
+        "title": "Nescafé 3'ü 1 Arada Sütlü Köpüklü Hazır Kahve 17 Gr",
+        "change_pct": 25.0
+      },
+      {
+        "slot_id": "id:1DED",
+        "title": "Banvit Jumbo Piliç Sosis 330 Gr",
+        "change_pct": 22.49
+      },
+      {
+        "slot_id": "id:1P6M",
+        "title": "Saka Su 10 Lt",
+        "change_pct": -21.57
+      },
+      {
+        "slot_id": "id:0415",
+        "title": "Bolbol Mayonez 840 Gr",
+        "change_pct": -20.13
+      }
+    ],
+    "warnings": []
+  }
+]

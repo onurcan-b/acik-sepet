@@ -17,7 +17,7 @@ INDEX_PATH = DATA_DIR / "index.csv"
 
 
 def geometric_mean(values: list[float]) -> float:
-    if not values or any(value <= 0 for value in values):
+    if not values or any(not math.isfinite(value) or value <= 0 for value in values):
         raise ValueError("geometric mean requires positive values")
     return math.exp(sum(math.log(value) for value in values) / len(values))
 
@@ -50,34 +50,58 @@ def _by_type(rows: list[dict[str, Any]]) -> dict[str, dict[str, float]]:
 def build_type_indices(snapshots: list[tuple[str, list[dict[str, Any]]]], specs: list[dict[str, Any]], min_coverage: float = 0.50) -> list[dict[str, Any]]:
     if not snapshots:
         return []
-    baseline_date, baseline_rows = snapshots[0]
-    baseline = _by_type(baseline_rows)
     output: list[dict[str, Any]] = []
-
-    for date, rows in snapshots:
+    # Compare the same slots at both ends of each link. Dropping an expensive
+    # or previously inflated SKU must not undo its earlier contribution.
+    previous: dict[str, dict[str, float]] = {}
+    levels: dict[str, float] = {}
+    anchors: dict[str, str] = {}
+    baseline_sizes: dict[str, int] = {}
+    for date, rows in sorted(snapshots):
         current = _by_type(rows)
         for spec in specs:
-            base_prices = baseline.get(spec["id"], {})
-            current_prices = current.get(spec["id"], {})
-            common = sorted(set(base_prices) & set(current_prices))
-            base_n = len(base_prices)
-            coverage = len(common) / base_n if base_n else 0.0
+            key = spec["id"]
+            prices = current.get(key, {})
+            old = previous.get(key, {})
+            common = sorted(set(old) & set(prices))
+            coverage = len(common) / len(old) if old else 0.0
             value = None
-            if base_n >= spec["min_skus"] and len(common) >= spec["min_skus"] and coverage >= min_coverage:
-                relatives = [current_prices[key] / base_prices[key] for key in common]
-                value = round(100.0 * geometric_mean(relatives), 4)
+            if not old and len(prices) >= spec["min_skus"]:
+                levels[key] = 100.0
+                anchors[key] = date
+                baseline_sizes[key] = len(prices)
+                value = 100.0
+                coverage = 1.0
+                common = sorted(prices)
+            elif len(common) >= spec["min_skus"] and coverage >= min_coverage:
+                value = levels[key] * geometric_mean([prices[k] / old[k] for k in common])
+                levels[key] = value
+            if value is not None:
+                previous[key] = prices
             output.append({
-                "date": date,
-                "type_id": spec["id"],
-                "label": spec["label"],
-                "group": spec["group"],
-                "index": value,
-                "coverage": round(coverage, 4),
-                "skus": len(common),
-                "baseline_skus": base_n,
-                "baseline_date": baseline_date,
+                "date": date, "type_id": key, "label": spec["label"],
+                "group": spec["group"], "index": round(value, 4) if value is not None else None,
+                "coverage": round(coverage, 4), "skus": len(common),
+                "baseline_skus": baseline_sizes.get(key, len(prices)),
+                "baseline_date": anchors.get(key, ""),
             })
     return output
+
+
+def _chain_link(key, prices, weights, previous, levels, min_coverage):
+    old = previous.get(key)
+    if old is None:
+        value = 100.0
+    else:
+        common = set(old) & set(prices)
+        weight = sum(weights[k] for k in common)
+        if not common or weight / sum(weights.values()) < min_coverage:
+            return None
+        change = sum(weights[k] * prices[k] / old[k] for k in common) / weight
+        value = levels[key] * change
+    previous[key] = prices
+    levels[key] = value
+    return value
 
 
 def build_category_indices(type_rows: list[dict[str, Any]], specs: list[dict[str, Any]], categories: list[dict[str, Any]], min_coverage: float = 0.60) -> list[dict[str, Any]]:
@@ -85,6 +109,8 @@ def build_category_indices(type_rows: list[dict[str, Any]], specs: list[dict[str
     by_date_type = {(row["date"], row["type_id"]): row for row in type_rows}
     output: list[dict[str, Any]] = []
 
+    previous = {}
+    levels = {}
     for date in dates:
         for category in categories:
             # The denominator is the configured basket, not merely the types
@@ -101,8 +127,10 @@ def build_category_indices(type_rows: list[dict[str, Any]], specs: list[dict[str
             coverage = available_weight / total_weight if total_weight else 0.0
             value = None
             if available and coverage >= min_coverage:
-                relative = sum(float(spec.get("type_weight", 1.0)) * (float(row["index"]) / 100.0) for spec, row in available) / available_weight
-                value = round(100.0 * relative, 4)
+                prices = {spec["id"]: float(row["index"]) for spec, row in available}
+                weights = {spec["id"]: float(spec.get("type_weight", 1.0)) for spec in members}
+                value = _chain_link(category["id"], prices, weights, previous, levels, min_coverage)
+                value = round(value, 4) if value is not None else None
             output.append({
                 "date": date,
                 "group_id": category["id"],
@@ -126,6 +154,8 @@ def build_main_index(type_rows: list[dict[str, Any]], category_rows: list[dict[s
     baseline_date = dates[0] if dates else None
     output = []
 
+    previous = {}
+    levels = {}
     for date in dates:
         available = []
         total_weight = sum(float(category["weight"]) for category in categories)
@@ -137,8 +167,10 @@ def build_main_index(type_rows: list[dict[str, Any]], category_rows: list[dict[s
         coverage = available_weight / total_weight if total_weight else 0.0
         value = None
         if available and coverage >= min_coverage:
-            relative = sum(float(category["weight"]) * (float(row["index"]) / 100.0) for category, row in available) / available_weight
-            value = round(100.0 * relative, 4)
+            prices = {category["id"]: float(row["index"]) for category, row in available}
+            weights = {category["id"]: float(category["weight"]) for category in categories}
+            value = _chain_link("all", prices, weights, previous, levels, min_coverage)
+            value = round(value, 4) if value is not None else None
         active_types = [row for row in type_by_date[date] if row["index"] is not None]
         output.append({
             "date": date,
@@ -176,3 +208,4 @@ def rebuild() -> list[dict[str, Any]]:
 
 if __name__ == "__main__":
     rebuild()
+

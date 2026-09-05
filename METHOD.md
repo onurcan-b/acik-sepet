@@ -1,4 +1,4 @@
-# Metodoloji — v0.4
+# Metodoloji — v0.4, 5 Eylül 2026 düzeltmesi
 
 Açık Sepet, zincir marketlerde satılan malların günlük fiyat hareketini izleyen deneysel bir çoklu-SKU panel endeksidir. v0.4, ürün sınıflandırmasını sıkılaştırdığı için **2026-09-02 = 100** ile yeni seri başlatır. v0.3 geçmişi değiştirilmez.
 
@@ -14,7 +14,7 @@ Kurallar iki açık dosyada tutulur:
 Bir adayın kabul edilmesi için sırasıyla:
 
 1. API isteğinin tanımlı kategori filtresiyle yapılması,
-2. dönen ürünün kategori alanlarının filtreyi gerçekten doğrulaması,
+2. dönen kategori etiketi veya server-side filtre isteğinin kaydedilmiş provenance alanının eşleşmesi,
 3. başlıktaki **bütün** zorunlu kuralların eşleşmesi,
 4. hiçbir hariç kuralın eşleşmemesi,
 5. beklenen miktar/birim bilgisinin çözülebilmesi,
@@ -64,55 +64,25 @@ Minimum SKU eşiği ürün tipine göre değişir. Kaynakta yeterli ürün yoksa
 
 ## 4. Depot/kaynak sürekliliği
 
-Bir SKU için birden fazla market/depot teklifi bulunabilir. İlk gözlemde kararlı `depotId` değerleri sabitlenir ve her kaynak için anchor fiyatı tutulur.
+İlk gözlemde kararlı depot kimlikleri sabitlenir. Yeni depotlar otomatik alınmaz. Son kabul edilen ölçümle ortak depotların fiyat oranları geometrik ortalanır ve önceki bağlı paket fiyatına uygulanır. Bir depoyu düşürmek geçmişteki katkısını geri almaz. Ortak depot yoksa SKU o gün eksiktir. Geri gelen depot ancak karşılaştırılabilir iki ölçümle harekete katılır; kayıp aralıktaki fiyat hareketi yakalanmayabilir.
 
-```text
-r(s,t) = p(s,t) / p(s,anchor)
-
-P_linked(t)
-  = P_all_offers(anchor)
-    × geometric_mean(r(s,t) for observed pinned sources)
-```
-
-Sonraki günlerde yeni depotlar otomatik olarak fiyat seviyesine girmez. Sabit depolardan biri geçici kaybolduğunda, kalan depoların kendi fiyat relatifleri değişmediyse SKU seviyesi yalnızca kaynak kompozisyonu nedeniyle oynamaz.
-
-Hiçbir sabit kaynak yeniden görünmezse SKU o gün eksik sayılır.
+Eski panel state'i yalnızca anchor fiyatları tutuyordu. İlk geçiş ölçümünde eski anchor formülü kullanılır; sonraki ölçümler `source_last_prices` ve `source_last_level` üzerinden zincirlenir. Eski snapshot'lar tek tek depot fiyatlarını içermediğinden geriye dönük depot düzeltmesi iddia edilmez.
 
 ## 5. Ürün tipi endeksi
 
-Aynı panel slotunun bağlı birim fiyat relatifi:
-
 ```text
-r(i,t) = linked_unit_price(i,t) / linked_unit_price(i,base)
+I(k,t) = I(k,previous) × geometric_mean(P(i,t) / P(i,previous))
 ```
 
-Ürün tipi endeksi Jevons-benzeri geometrik ortalamadır:
-
-```text
-I(k,t) = 100 × exp(mean(log(r(i,t))))
-```
-
-Yayın için:
-
-- bazda ve güncel günde en az `min_skus` ortak slot,
-- baz slotlarının en az `%50` güncel kapsaması
-
-gerekir.
+`previous`, tipin son yayımlanabilir ölçümüdür. Yalnızca iki ölçümde ortak slotlar kullanılır. En az `min_skus` ortak slot ve önceki panelin en az %50'si gerekir. Eşik geçilmezse endeks boş kalır; eski seviye güncel veri olarak sunulmaz. İlk yeterli örneklem o tip için 100'dür; başlangıçta yetersiz tip sonsuza dek dışarıda kalmaz.
 
 ## 6. Kategori ve ana endeks
 
-130 ürün tipi 12 araştırma kategorisine ayrılır. Kategori içinde uygun ürün tipleri eşit payla birleştirilir. Ana kategoriler `config/categories.json` içindeki araştırma ağırlıklarıyla toplanır.
+Kategori ve ana endeksler de son yayımlanabilir ölçümle ortak üyelerin **değişim oranlarını** ağırlıklı aritmetik ortalar ve önceki seviyeye uygular. Farklı bir üye setinin bazdan beri seviyelerini yeniden ortalamaz. Yeni üye ilk girdiği gün seviye sıçraması yaratmaz. Yeterli ortak üye kalmazsa bağlantı yayımlanmaz.
 
-Önemli v0.4 değişikliği: kategori kapsamasının paydası yalnızca baseline'da yayımlanabilen tipler değil, o kategori için **konfigüre edilmiş bütün ürün tipleridir**.
+Kategori içi ağırlıklar varsayılan olarak eşittir; ana kategori ağırlıkları `config/categories.json` içindedir. Hem güncel kapsam hem iki ölçümün ortak kapsamı, konfigüre edilmiş toplam ağırlığın en az %60'ı olmalıdır. Rapordaki kapsama alanı güncel kullanılabilir üyeleri gösterir; zincir bağının da yeterli olması ayrıca gerekir.
 
-```text
-category_coverage
-  = sufficient_configured_types / all_configured_types
-```
-
-Kategori en az `%60` tip ağırlık kapsamasıyla yayımlanır. Ana endeks de en az `%60` kategori ağırlık kapsaması ister. Eksik paylar mevcut gözlemler üzerinde yeniden normalize edilir; model tabanlı imputasyon yapılmaz.
-
-Bu ağırlıklar TÜİK tüketim harcaması ağırlıkları değildir.
+Bunlar TÜİK tüketim ağırlıkları değildir. Değişen örneklemde zincir endeksin sapma ve zincir sürüklenmesi riski vardır; kayıp fiyat hareketleri tahmin edilmez.
 
 ## 7. Kontrollü panel yenileme
 
@@ -151,3 +121,12 @@ CI, v0.4 baseline değerini ve üç README grafiğinin üretilebildiğini de kil
 Açık Sepet genel tüketici fiyat endeksi değildir. Kira, konut, ulaşım, sağlık, eğitim ve hizmetleri kapsamaz. Şehir/mağaza örneklemi nüfus ağırlıklı değildir; kategori ağırlıkları gerçek tüketim payı değildir; kampanyalar gözlenen fiyat sayılır; resmî istatistik düzeyinde mevsimsellik veya kalite düzeltmesi yapılmaz.
 
 Bu seri yüksek frekanslı, açık ve deneysel bir market fiyat göstergesi olarak yorumlanmalıdır.
+
+
+## 10. Güncellik, yeniden çalıştırma ve denetim
+
+`health.json` her snapshot için kaynak tarihi dağılımını, kayıp/yeni/ortak slotları ve %20 üzeri birim fiyat hareketlerini kaydeder. Büyük hareketler inceleme sinyalidir; otomatik olarak yanlış kabul edilip silinmez. Kaynak tarihi her SKU'nun kullanılan depotları arasındaki **en yeni** tarihtir; her deponun güncel olduğunu kanıtlamaz. SKU'ların en az %60'ında bu tarih gözlem gününden en fazla 3 gün eski olmalıdır; gelecek tarih de yayın hatasıdır. Bugün güncellenmiş SKU payı %50 altındaysa rapor uyarı verir.
+
+7/30 günlük değişim tam takvim tarihindeki ölçümü gerektirir. Aynı gün normal tekrar mevcut snapshot'ı korur; `--refresh` eski snapshot'ı `data/v0.4/revisions/` altında arşivleyip yeniden tarar. İlk baseline günü değiştirilemez. Aynı gün tekrarları aday/eksik gün sayaçlarını ilerletmez. Başlangıçta minimuma ulaşamamış paneller üç ardışık günde görülen adaylarla tamamlanabilir.
+
+Arama en fazla 8 × 25 sonucu tarar; bu bütün katalogun eksiksiz tarandığı anlamına gelmez. Ürün başlığı kuralları ve birim doğrulaması bütün sayfalarda korunur. Sorgu ve kategori taksonomisi kaynak tarafında değişebilir.
