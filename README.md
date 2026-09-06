@@ -14,7 +14,7 @@ Markette fiyatlar gerçekten ne kadar oynuyor? “Bana öyle geliyor” kısmın
 <!-- STATS_START -->
 | Endeks | Tarih | Aktif tip | Endeks SKU | Kategori kapsaması | 7 gün | 30 gün | Baz |
 |---:|---|---:|---:|---:|---:|---:|---|
-| **100.00** | 2026-09-06 | 110 | 1645 | %100 | — | — | 2026-09-05 = 100 |
+| **100.00** | 2026-09-07 | 114 | 1706 | %100 | — | — | 2026-09-05 = 100 |
 <!-- STATS_END -->
 
 ## Kısaca ne yapıyor?
@@ -56,14 +56,14 @@ Kategori eşlemeleri açıkça [`config/api_categories.json`](config/api_categor
 <!-- CATEGORY_TABLE_START -->
 | Kategori | Endeks | Yeterli tip | Kapsama | SKU |
 |---|---:|---:|---:|---:|
-| Ekmek, tahıllar ve makarna | 100.00 | 10/12 | %83 | 165 |
-| Et ve et ürünleri | 100.00 | 8/10 | %80 | 118 |
+| Ekmek, tahıllar ve makarna | 100.00 | 12/12 | %100 | 195 |
+| Et ve et ürünleri | 100.00 | 9/10 | %90 | 119 |
 | Balık ve deniz ürünleri | 100.00 | 4/6 | %67 | 27 |
 | Süt ürünleri ve yumurta | 100.00 | 13/13 | %100 | 229 |
 | Yağlar | 100.00 | 4/5 | %80 | 84 |
 | Meyve | 100.00 | 9/13 | %69 | 35 |
 | Sebze | 100.00 | 11/17 | %65 | 51 |
-| Şeker, tatlı ve atıştırmalık | 100.00 | 11/12 | %92 | 214 |
+| Şeker, tatlı ve atıştırmalık | 100.00 | 12/12 | %100 | 232 |
 | Diğer gıda | 100.00 | 10/10 | %100 | 194 |
 | Alkolsüz içecekler | 100.00 | 10/11 | %91 | 181 |
 | Ev temizlik sarf malzemeleri | 100.00 | 9/10 | %90 | 152 |
@@ -77,15 +77,13 @@ v0.3 kategori kapsamasını yalnızca baseline’da hayatta kalan ürün tipleri
 ![Kategori ürün tipi kapsaması](charts/coverage.svg)
 
 <!-- GAPS_START -->
-**20 ürün tipi** minimum eşiğin altında. Yanlış ürünle doldurulmadılar; endekse girmiyorlar.
+**16 ürün tipi** minimum eşiğin altında. Yanlış ürünle doldurulmadılar; endekse girmiyorlar.
 
 | Ürün tipi | Gözlenen | Minimum | API kategori filtresi |
 |---|---:|---:|---|
 | Meyve suyu | 2 | 8 | Meyve Suyu |
-| Dondurma | 2 | 7 | Dondurmalar |
 | Toz çamaşır deterjanı | 2 | 7 | Toz Deterjanlar |
 | Tavuk göğüs | 1 | 5 | Tavuk Göğüs |
-| Tost ekmeği | 1 | 5 | Tost Ekmeği |
 | Balık parmak | 0 | 2 | Balık Kroket |
 | Brokoli | 0 | 2 | Karnabahar ve Brokoli |
 | Cherry domates | 0 | 2 | Domates |
@@ -93,24 +91,23 @@ v0.3 kategori kapsamasını yalnızca baseline’da hayatta kalan ürün tipleri
 | Karnabahar | 0 | 2 | Karnabahar ve Brokoli |
 | Kivi | 0 | 2 | Kivi |
 | Çilek | 0 | 2 | Çilek |
-| Buğday unu | 5 | 6 | Buğday Unu |
 | Konserve sardalya | 1 | 2 | Deniz Ürünleri |
 | Mandalina | 1 | 2 | Narenciye |
 | Marul | 1 | 2 | Yeşillikler |
 | Mısırözü yağı | 1 | 2 | Mısırözü Yağı |
-| Tavuk but / baget | 4 | 5 | Tavuk But |
-
-Tabloda en zayıf 18 tip var; toplam eksik tip sayısı 20.
+| Taze fasulye | 1 | 2 | Taze Fasulye ve Börülce |
+| Şeftali | 1 | 2 | Şeftali ve Nektarin |
 <!-- GAPS_END -->
 
 ## Bugün ne oynadı?
 
 <!-- MOVERS_START -->
-2026-09-05 → 2026-09-06: **0 yukarı**, **0 aşağı**, **109 yatay**. Karşılaştırılan tip: 109.
+2026-09-06 → 2026-09-07: **0 yukarı**, **0 aşağı**, **110 yatay**. Karşılaştırılan tip: 110.
 
 | Ürün tipi | SKU | Değişim |
 |---|---:|---:|
 | Elma | 5 | +0.00% |
+| Avokado | 2 | +0.00% |
 | Ayran | 22 | +0.00% |
 | Muz | 2 | +0.00% |
 | Kuru fasulye | 24 | +0.00% |
@@ -119,18 +116,17 @@ Tabloda en zayıf 18 tip var; toplam eksik tip sayısı 20.
 | Bisküvi | 21 | +0.00% |
 | Siyah çay | 22 | +0.00% |
 | Çamaşır suyu | 18 | +0.00% |
-| Beyaz ekmek | 6 | +0.00% |
 <!-- MOVERS_END -->
 
 ## Veri kalitesi
 
 <!-- QUALITY_START -->
 - **Güncellik uyarısı:** Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor.
-- **0/1668** SKU için en yeni kaynak tarihi gözlem günüyle aynı; ayrıntı: [health.json](data/v0.4/health.json)
-- **1668** sıkı eşleşmiş SKU, **7** market etiketi
-- **1501/1668** miktar doğrudan API'nin normalize alanından
-- **1668/1668** satırda birim fiyat API değeriyle ayrıca kontrol edildi
-- **1668/1668** gözlem sabit depot relatifleriyle bağlı
+- **0/1717** SKU için en yeni kaynak tarihi gözlem günüyle aynı; ayrıntı: [health.json](data/v0.4/health.json)
+- **1717** sıkı eşleşmiş SKU, **7** market etiketi
+- **1550/1717** miktar doğrudan API'nin normalize alanından
+- **1717/1717** satırda birim fiyat API değeriyle ayrıca kontrol edildi
+- **1717/1717** gözlem sabit depot relatifleriyle bağlı
 - **0** bridge edilmiş panel yenilemesi (yeni baseline'da doğal olarak sıfır)
 <!-- QUALITY_END -->
 
