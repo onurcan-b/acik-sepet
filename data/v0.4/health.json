@@ -432,22 +432,86 @@
   },
   {
     "date": "2026-09-07",
-    "rows": 1717,
-    "source_updated_today": 0,
-    "source_within_3_days": 1717,
+    "rows": 1636,
+    "source_updated_today": 1636,
+    "source_within_3_days": 1636,
     "source_date_unknown": 0,
     "source_date_future": 0,
     "source_age_days": {
-      "2": 1717
+      "0": 1636
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-09-06",
-    "matched_slots": 1668,
-    "missing_slots": 0,
-    "new_slots": 49,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1569,
+    "missing_slots": 99,
+    "new_slots": 67,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1S7U",
+        "title": "Jacobs Monarch Filtre Kahve 500 Gr",
+        "change_pct": -60.32
+      },
+      {
+        "slot_id": "id:06QE",
+        "title": "Protex Sıvı Sabun Ultra 1.5 Lt",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:0FNZ",
+        "title": "Hacı Şakir Kalıp Sabun Leylak 4x150 Gr",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:1KWR",
+        "title": "Activex Hassas Sıvı Sabun 500 Ml",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:1P11",
+        "title": "Savon De Royal Bordo İnci Sıvı Sabun 500 Ml",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:1YVA",
+        "title": "Duru Sıvı Sabun Avokado 500 Ml",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:1ZAG",
+        "title": "Duru Sıvı Sabun Kiraz Çiçeği 500 Ml",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:0UDI",
+        "title": "Protex Cream Sıvı Sabun 300 Ml",
+        "change_pct": 42.85
+      },
+      {
+        "slot_id": "id:0F9A",
+        "title": "Parex Mega Comfort Oluklu Sünger 2 Adet",
+        "change_pct": -41.7
+      },
+      {
+        "slot_id": "id:1ZGN",
+        "title": "Parex Klasik Yeşil Düz Sünger 5 Adet",
+        "change_pct": -38.49
+      },
+      {
+        "slot_id": "id:0OBP",
+        "title": "Çengelköy Salatalık 500 Gr",
+        "change_pct": 33.9
+      },
+      {
+        "slot_id": "id:0KTF",
+        "title": "Köy Biberi 1 Kg",
+        "change_pct": 33.37
+      },
+      {
+        "slot_id": "id:3W9R",
+        "title": "Üzüm 1 Kg",
+        "change_pct": 23.66
+      }
+    ],
+    "warnings": []
   }
 ]
