@@ -14,7 +14,7 @@ Markette fiyatlar gerçekten ne kadar oynuyor? “Bana öyle geliyor” kısmın
 <!-- STATS_START -->
 | Endeks | Tarih | Aktif tip | Endeks SKU | Kategori kapsaması | 7 gün | 30 gün | Baz |
 |---:|---|---:|---:|---:|---:|---:|---|
-| **100.39** | 2026-09-07 | 108 | 1589 | %89 | — | — | 2026-09-05 = 100 |
+| **100.39** | 2026-09-08 | 108 | 1610 | %89 | — | — | 2026-09-05 = 100 |
 <!-- STATS_END -->
 
 ## Kısaca ne yapıyor?
@@ -106,26 +106,27 @@ Tabloda en zayıf 18 tip var; toplam eksik tip sayısı 22.
 ## Bugün ne oynadı?
 
 <!-- MOVERS_START -->
-2026-09-06 → 2026-09-07: **18 yukarı**, **4 aşağı**, **82 yatay**. Karşılaştırılan tip: 104.
+2026-09-07 → 2026-09-08: **0 yukarı**, **0 aşağı**, **108 yatay**. Karşılaştırılan tip: 108.
 
 | Ürün tipi | SKU | Değişim |
 |---|---:|---:|
-| Sıvı sabun | 18 | +13.75% |
-| Salatalık | 3 | +11.36% |
-| Bulaşık süngeri | 16 | -6.21% |
-| Karpuz | 3 | +5.92% |
-| Filtre kahve | 16 | -5.61% |
-| Dana kuşbaşı / sote | 6 | +5.12% |
-| Üzüm | 6 | +4.38% |
-| Yumurta | 15 | +4.36% |
-| Biber | 8 | +4.30% |
-| Kalıp sabun | 22 | +3.30% |
+| Elma | 5 | +0.00% |
+| Avokado | 2 | +0.00% |
+| Ayran | 21 | +0.00% |
+| Muz | 2 | +0.00% |
+| Kuru fasulye | 22 | +0.00% |
+| Dana kuşbaşı / sote | 6 | +0.00% |
+| Bisküvi | 18 | +0.00% |
+| Siyah çay | 20 | +0.00% |
+| Çamaşır suyu | 18 | +0.00% |
+| Tost ekmeği | 9 | +0.00% |
 <!-- MOVERS_END -->
 
 ## Veri kalitesi
 
 <!-- QUALITY_START -->
-- **1636/1636** SKU için en yeni kaynak tarihi gözlem günüyle aynı; ayrıntı: [health.json](data/v0.4/health.json)
+- **Güncellik uyarısı:** Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor.
+- **0/1636** SKU için en yeni kaynak tarihi gözlem günüyle aynı; ayrıntı: [health.json](data/v0.4/health.json)
 - **1636** sıkı eşleşmiş SKU, **7** market etiketi
 - **1476/1636** miktar doğrudan API'nin normalize alanından
 - **1636/1636** satırda birim fiyat API değeriyle ayrıca kontrol edildi
