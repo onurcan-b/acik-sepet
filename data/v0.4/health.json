@@ -516,22 +516,141 @@
   },
   {
     "date": "2026-09-08",
-    "rows": 1636,
-    "source_updated_today": 0,
-    "source_within_3_days": 1636,
+    "rows": 1621,
+    "source_updated_today": 1621,
+    "source_within_3_days": 1621,
     "source_date_unknown": 0,
     "source_date_future": 0,
     "source_age_days": {
-      "1": 1636
+      "0": 1621
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-09-07",
-    "matched_slots": 1636,
-    "missing_slots": 0,
-    "new_slots": 0,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1612,
+    "missing_slots": 24,
+    "new_slots": 9,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1S4D",
+        "title": "Reis Royal Battal Fasulye 500 Gr",
+        "change_pct": 74.68
+      },
+      {
+        "slot_id": "id:1PEK",
+        "title": "Ülker Kakaolu Kremalı Bisküvi 244 Gr",
+        "change_pct": 53.84
+      },
+      {
+        "slot_id": "id:1C4E",
+        "title": "Mini Karpuz 1 Kg",
+        "change_pct": -51.28
+      },
+      {
+        "slot_id": "id:1GID",
+        "title": "Nestlé Nesquik Mısır Gevreği 450 Gr",
+        "change_pct": 51.09
+      },
+      {
+        "slot_id": "id:0QLG",
+        "title": "Colgate 360 Gelişmiş Diş Fırçası 1 Adet",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:1R49",
+        "title": "Colgate Neo Diş Fırçası 1 Adet",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:056A",
+        "title": "Taze Bütün Poşet Piliç 1 Kg",
+        "change_pct": 36.36
+      },
+      {
+        "slot_id": "id:1EOI",
+        "title": "Sarı Kavun 1 Kg",
+        "change_pct": 34.48
+      },
+      {
+        "slot_id": "id:1Z93",
+        "title": "Ekici Krem Peynir 400 Gr",
+        "change_pct": -31.47
+      },
+      {
+        "slot_id": "id:0G6D",
+        "title": "Lezita Taze Poşetli Bütün Piliç 1 Kg",
+        "change_pct": 30.03
+      },
+      {
+        "slot_id": "id:1R0P",
+        "title": "Colgate Optik Beyaz Diş Macunu 75 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1Y7O",
+        "title": "Colgate Mikro İnce Siyah Diş Fırçası 2 Adet",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:002E",
+        "title": "Emin %20 Yağlı Dana Kıyma 400 Gr",
+        "change_pct": -27.88
+      },
+      {
+        "slot_id": "id:0N0H",
+        "title": "Çatal Sucuk İlikli Dana Kangal Sucuk 450 Gr",
+        "change_pct": 26.76
+      },
+      {
+        "slot_id": "id:1M20",
+        "title": "Dana Fermente Mangal Sucuk 400 Gr",
+        "change_pct": 26.76
+      },
+      {
+        "slot_id": "id:1J0K",
+        "title": "Ruffles Orijinal Peynirli Soğan Ketçap Patates Cipsi 125 Gr",
+        "change_pct": 26.47
+      },
+      {
+        "slot_id": "id:0CWM",
+        "title": "Erşan Vakumlu Kangal Sucuk 200 Gr",
+        "change_pct": -25.66
+      },
+      {
+        "slot_id": "id:1O4A",
+        "title": "Clear Şampuan 350 Ml",
+        "change_pct": 25.14
+      },
+      {
+        "slot_id": "id:1YWA",
+        "title": "Eti Bumbo Portakal Aromalı Kakaolu Bisküvi 42 Gr",
+        "change_pct": 24.05
+      },
+      {
+        "slot_id": "id:1R6U",
+        "title": "Oreo Classic Bisküvi 95 Gr",
+        "change_pct": 24.03
+      },
+      {
+        "slot_id": "id:0TUB",
+        "title": "Flipperz Paw Patrol Meyve Aromalı Şekerleme 10 Gr",
+        "change_pct": 23.61
+      },
+      {
+        "slot_id": "id:0U3W",
+        "title": "Flipperz SpongeBob Meyve Aromalı Şekerleme 10 Gr",
+        "change_pct": 23.61
+      },
+      {
+        "slot_id": "id:0WJ4",
+        "title": "Flipperz Hello Kitty Meyve Aromalı Şekerleme 10 Gr",
+        "change_pct": 23.61
+      },
+      {
+        "slot_id": "id:0O22",
+        "title": "Uzman Kasap Dondurulmuş Mangal Köfte 500 Gr",
+        "change_pct": -20.0
+      }
+    ],
+    "warnings": []
   }
 ]
