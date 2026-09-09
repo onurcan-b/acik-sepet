@@ -655,22 +655,111 @@
   },
   {
     "date": "2026-09-09",
-    "rows": 1621,
-    "source_updated_today": 0,
-    "source_within_3_days": 1621,
+    "rows": 1606,
+    "source_updated_today": 1606,
+    "source_within_3_days": 1606,
     "source_date_unknown": 0,
     "source_date_future": 0,
     "source_age_days": {
-      "1": 1621
+      "0": 1606
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-09-08",
-    "matched_slots": 1621,
-    "missing_slots": 0,
-    "new_slots": 0,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1573,
+    "missing_slots": 48,
+    "new_slots": 33,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1VXX",
+        "title": "Papia Tuvalet Kağıdı 4 Katlı 16 Adet",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:1XAK",
+        "title": "Familia Kokulu Tuvalet Kağıdı 32 Adet",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:1GEW",
+        "title": "Ariel Oxi Sıvı Çamaşır Deterjanı 24 Yıkama 1.08 Lt",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:3WRZ",
+        "title": "Ariel Renkliler Sıvı Çamaşır Deterjanı 21 Yıkama 945 Ml",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:3WS0",
+        "title": "Ariel Dağ Esintisi Sıvı Çamaşır Deterjanı 21 Yıkama 945 Ml",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:3WS1",
+        "title": "Ariel Renkliler Sıvı Çamaşır Deterjanı 32 Yıkama 1.44 Lt",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:1YTT",
+        "title": "Gliss Ultimate Repair Şampuan 400 Ml",
+        "change_pct": -50.01
+      },
+      {
+        "slot_id": "id:1AFH",
+        "title": "Bonheur Colombia Filtre Kahve 250 Gr",
+        "change_pct": 42.8
+      },
+      {
+        "slot_id": "id:1Q7V",
+        "title": "Papia Biocare Tuvalet Kağıdı 12 Adet",
+        "change_pct": 41.42
+      },
+      {
+        "slot_id": "id:20I3",
+        "title": "Torku Sütlü Çikolata 60 Gr",
+        "change_pct": 41.42
+      },
+      {
+        "slot_id": "id:20AX",
+        "title": "Fairy Platinum Bulaşık Makinesi Tableti 50 Adet",
+        "change_pct": -39.25
+      },
+      {
+        "slot_id": "id:113U",
+        "title": "Xroll Kakaolu Gofret 350 Gr",
+        "change_pct": 33.33
+      },
+      {
+        "slot_id": "id:12EN",
+        "title": "Xroll Muzlu Gofret 350 Gr",
+        "change_pct": 33.33
+      },
+      {
+        "slot_id": "id:114S",
+        "title": "Yudum Egemden Yalın Sızma Zeytinyağı 1 Lt",
+        "change_pct": 30.82
+      },
+      {
+        "slot_id": "id:1OMF",
+        "title": "Domates 1 Kg",
+        "change_pct": 25.64
+      },
+      {
+        "slot_id": "id:0O22",
+        "title": "Uzman Kasap Dondurulmuş Mangal Köfte 500 Gr",
+        "change_pct": 25.0
+      },
+      {
+        "slot_id": "id:1KXE",
+        "title": "Bingo Ferah Evim Yüzey Temizleyici 2.5 Lt",
+        "change_pct": -24.43
+      },
+      {
+        "slot_id": "id:1RS3",
+        "title": "Tadelle Sütlü Çikolata 52 Gr",
+        "change_pct": -20.16
+      }
+    ],
+    "warnings": []
   }
 ]
