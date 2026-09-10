@@ -14,7 +14,7 @@ Markette fiyatlar gerçekten ne kadar oynuyor? “Bana öyle geliyor” kısmın
 <!-- STATS_START -->
 | Endeks | Tarih | Aktif tip | Endeks SKU | Kategori kapsaması | 7 gün | 30 gün | Baz |
 |---:|---|---:|---:|---:|---:|---:|---|
-| **100.85** | 2026-09-10 | 107 | 1578 | %96 | — | — | 2026-09-05 = 100 |
+| **100.79** | 2026-09-10 | 107 | 1561 | %96 | — | — | 2026-09-05 = 100 |
 <!-- STATS_END -->
 
 ## Kısaca ne yapıyor?
@@ -56,18 +56,18 @@ Kategori eşlemeleri açıkça [`config/api_categories.json`](config/api_categor
 <!-- CATEGORY_TABLE_START -->
 | Kategori | Endeks | Yeterli tip | Kapsama | SKU |
 |---|---:|---:|---:|---:|
-| Ekmek, tahıllar ve makarna | 100.48 | 10/12 | %83 | 177 |
-| Et ve et ürünleri | 102.61 | 6/10 | %60 | 100 |
-| Balık ve deniz ürünleri | — | 3/6 | %50 | 25 |
-| Süt ürünleri ve yumurta | 100.06 | 13/13 | %100 | 210 |
+| Ekmek, tahıllar ve makarna | 100.55 | 10/12 | %83 | 176 |
+| Et ve et ürünleri | 102.61 | 6/10 | %60 | 99 |
+| Balık ve deniz ürünleri | — | 3/6 | %50 | 24 |
+| Süt ürünleri ve yumurta | 99.97 | 13/13 | %100 | 211 |
 | Yağlar | 101.30 | 4/5 | %80 | 83 |
-| Meyve | 100.69 | 9/13 | %69 | 33 |
-| Sebze | 103.31 | 11/17 | %65 | 54 |
+| Meyve | 100.25 | 9/13 | %69 | 33 |
+| Sebze | 103.08 | 11/17 | %65 | 53 |
 | Şeker, tatlı ve atıştırmalık | 101.26 | 12/12 | %100 | 213 |
-| Diğer gıda | 100.26 | 9/10 | %90 | 193 |
-| Alkolsüz içecekler | 99.82 | 10/11 | %91 | 169 |
-| Ev temizlik sarf malzemeleri | 99.53 | 9/10 | %90 | 144 |
-| Kişisel bakım ve kağıt ürünleri | 101.78 | 11/11 | %100 | 210 |
+| Diğer gıda | 100.33 | 9/10 | %90 | 191 |
+| Alkolsüz içecekler | 99.83 | 10/11 | %91 | 171 |
+| Ev temizlik sarf malzemeleri | 99.56 | 9/10 | %90 | 142 |
+| Kişisel bakım ve kağıt ürünleri | 101.62 | 11/11 | %100 | 209 |
 <!-- CATEGORY_TABLE_END -->
 
 ## Kapsama dürüstlüğü
@@ -106,31 +106,30 @@ Tabloda en zayıf 18 tip var; toplam eksik tip sayısı 23.
 ## Bugün ne oynadı?
 
 <!-- MOVERS_START -->
-2026-09-09 → 2026-09-10: **0 yukarı**, **0 aşağı**, **107 yatay**. Karşılaştırılan tip: 107.
+2026-09-09 → 2026-09-10: **10 yukarı**, **10 aşağı**, **87 yatay**. Karşılaştırılan tip: 107.
 
 | Ürün tipi | SKU | Değişim |
 |---|---:|---:|
-| Elma | 5 | +0.00% |
-| Avokado | 2 | +0.00% |
-| Ayran | 21 | +0.00% |
-| Muz | 2 | +0.00% |
-| Kuru fasulye | 22 | +0.00% |
-| Bisküvi | 19 | +0.00% |
-| Siyah çay | 19 | +0.00% |
-| Çamaşır suyu | 17 | +0.00% |
-| Tost ekmeği | 8 | +0.00% |
-| Kahvaltılık gevrek | 21 | +0.00% |
+| Limon | 3 | -3.17% |
+| Domates | 9 | +1.87% |
+| Duş jeli | 28 | -1.81% |
+| Patates | 4 | -1.60% |
+| Yumurta | 11 | -1.38% |
+| Biber | 10 | -1.23% |
+| Salatalık | 3 | -1.03% |
+| Ketçap | 20 | +0.88% |
+| Muz | 2 | -0.71% |
+| Kuru soğan | 6 | -0.48% |
 <!-- MOVERS_END -->
 
 ## Veri kalitesi
 
 <!-- QUALITY_START -->
-- **Güncellik uyarısı:** Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor.
-- **0/1611** SKU için en yeni kaynak tarihi gözlem günüyle aynı; ayrıntı: [health.json](data/v0.4/health.json)
-- **1611** sıkı eşleşmiş SKU, **7** market etiketi
-- **1461/1611** miktar doğrudan API'nin normalize alanından
-- **1611/1611** satırda birim fiyat API değeriyle ayrıca kontrol edildi
-- **1611/1611** gözlem sabit depot relatifleriyle bağlı
+- **1605/1605** SKU için en yeni kaynak tarihi gözlem günüyle aynı; ayrıntı: [health.json](data/v0.4/health.json)
+- **1605** sıkı eşleşmiş SKU, **7** market etiketi
+- **1456/1605** miktar doğrudan API'nin normalize alanından
+- **1605/1605** satırda birim fiyat API değeriyle ayrıca kontrol edildi
+- **1605/1605** gözlem sabit depot relatifleriyle bağlı
 - **5** bridge edilmiş panel yenilemesi (yeni baseline'da doğal olarak sıfır)
 <!-- QUALITY_END -->
 

@@ -764,22 +764,31 @@
   },
   {
     "date": "2026-09-10",
-    "rows": 1611,
-    "source_updated_today": 0,
-    "source_within_3_days": 1611,
+    "rows": 1605,
+    "source_updated_today": 1605,
+    "source_within_3_days": 1605,
     "source_date_unknown": 0,
     "source_date_future": 0,
     "source_age_days": {
-      "1": 1611
+      "0": 1605
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-09-09",
-    "matched_slots": 1606,
-    "missing_slots": 0,
-    "new_slots": 5,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1589,
+    "missing_slots": 17,
+    "new_slots": 16,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1NS9",
+        "title": "Le Petit Marseillais Duş Jeli Vanilya Sütü 650 Ml",
+        "change_pct": -22.54
+      },
+      {
+        "slot_id": "id:1T73",
+        "title": "Le Petit Marseillais Duş Jeli Beyaz Şeftali & Nektarin 650 Ml",
+        "change_pct": -22.54
+      }
+    ],
+    "warnings": []
   }
 ]
