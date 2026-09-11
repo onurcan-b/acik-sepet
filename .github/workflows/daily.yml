@@ -39,6 +39,8 @@ jobs:
         run: pytest -q
       - name: Collect strict category-aware multi-SKU panels
         run: python -m acik_sepet.collect --refresh
+      - name: Semantic audit (review-only)
+        run: python -m acik_sepet.semantic_audit
       - name: Validate panel quality
         run: python -m acik_sepet.validate --min-type-coverage 0.60 --min-skus 300
       - name: Check source freshness and write diagnostics
@@ -72,7 +74,7 @@ jobs:
           print("v0.4 baseline and charts are stable")
           PY
       - name: Source-file whitespace sanity
-        run: git diff --check -- acik_sepet tests .github config README.md METHOD.md
+        run: git diff --check -- acik_sepet tests .github config README.md METHOD.md SEMANTIC_AUDIT.md
       - name: Commit updated observations
         run: |
           git config user.name "acik-sepet-bot"
