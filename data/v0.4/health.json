@@ -793,22 +793,156 @@
   },
   {
     "date": "2026-09-11",
-    "rows": 1634,
-    "source_updated_today": 0,
-    "source_within_3_days": 1634,
+    "rows": 1623,
+    "source_updated_today": 1623,
+    "source_within_3_days": 1623,
     "source_date_unknown": 0,
     "source_date_future": 0,
     "source_age_days": {
-      "1": 1634
+      "0": 1623
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-09-10",
-    "matched_slots": 1605,
-    "missing_slots": 0,
-    "new_slots": 29,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1579,
+    "missing_slots": 26,
+    "new_slots": 44,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1OPU",
+        "title": "Tikveşli %18 Yağlı Krema 200 Ml",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:0NZJ",
+        "title": "Bostan Patlıcan 1 Kg",
+        "change_pct": 69.34
+      },
+      {
+        "slot_id": "id:0H1E",
+        "title": "Somon Dilim Hazır 1 Kg",
+        "change_pct": 53.93
+      },
+      {
+        "slot_id": "id:102P",
+        "title": "Kabak 1 Kg",
+        "change_pct": -50.06
+      },
+      {
+        "slot_id": "id:1IL3",
+        "title": "Nestlé Gold Flakes Kahvaltılık Gevrek 225 Gr",
+        "change_pct": 41.68
+      },
+      {
+        "slot_id": "id:07G3",
+        "title": "Piliç Salam 1 Kg",
+        "change_pct": -36.97
+      },
+      {
+        "slot_id": "id:06QE",
+        "title": "Protex Sıvı Sabun Ultra 1.5 Lt",
+        "change_pct": -35.0
+      },
+      {
+        "slot_id": "id:0FNZ",
+        "title": "Hacı Şakir Kalıp Sabun Leylak 4x150 Gr",
+        "change_pct": -35.0
+      },
+      {
+        "slot_id": "id:0UDI",
+        "title": "Protex Cream Sıvı Sabun 300 Ml",
+        "change_pct": -35.0
+      },
+      {
+        "slot_id": "id:1P11",
+        "title": "Savon De Royal Bordo İnci Sıvı Sabun 500 Ml",
+        "change_pct": -35.0
+      },
+      {
+        "slot_id": "id:1YVA",
+        "title": "Duru Sıvı Sabun Avokado 500 Ml",
+        "change_pct": -35.0
+      },
+      {
+        "slot_id": "id:1ZAG",
+        "title": "Duru Sıvı Sabun Kiraz Çiçeği 500 Ml",
+        "change_pct": -35.0
+      },
+      {
+        "slot_id": "id:1J2Q",
+        "title": "Dondurulmuş Piliç Kasap Köfte 1 Kg",
+        "change_pct": -33.49
+      },
+      {
+        "slot_id": "id:1JCY",
+        "title": "Ace Klasik Çamaşır Suyu 4.3 Lt",
+        "change_pct": -32.83
+      },
+      {
+        "slot_id": "id:239B",
+        "title": "Tat Domates Salçası 710 Gr",
+        "change_pct": -29.1
+      },
+      {
+        "slot_id": "id:1EOA",
+        "title": "Çekirdeksiz Üzüm 1 Kg",
+        "change_pct": -28.57
+      },
+      {
+        "slot_id": "id:1VKH",
+        "title": "Danone Bitkisel Krema 500 Ml",
+        "change_pct": -26.97
+      },
+      {
+        "slot_id": "id:0G6D",
+        "title": "Lezita Taze Poşetli Bütün Piliç 1 Kg",
+        "change_pct": -26.94
+      },
+      {
+        "slot_id": "id:1EOI",
+        "title": "Sarı Kavun 1 Kg",
+        "change_pct": -25.64
+      },
+      {
+        "slot_id": "id:1J28",
+        "title": "Atıştırmalık Domates 1 Kg",
+        "change_pct": -25.64
+      },
+      {
+        "slot_id": "id:1H8T",
+        "title": "Omo Sıvı Çamaşır Deterjanı 1.5 Lt",
+        "change_pct": 25.13
+      },
+      {
+        "slot_id": "id:02JP",
+        "title": "Limon Taze 1 Kg",
+        "change_pct": -25.02
+      },
+      {
+        "slot_id": "id:0X2N",
+        "title": "Nestlé Corn Flakes Kahvaltılık Gevrek 650 Gr",
+        "change_pct": -23.45
+      },
+      {
+        "slot_id": "id:05L8",
+        "title": "Emin Dondurulmuş Hamburger Köftesi 225 Gr",
+        "change_pct": -22.86
+      },
+      {
+        "slot_id": "id:059W",
+        "title": "Işıl Doğal Katı Sabun 800 Gr",
+        "change_pct": -22.02
+      },
+      {
+        "slot_id": "id:05VT",
+        "title": "Işıl Güzellik Katı Sabun 375 Gr",
+        "change_pct": -21.43
+      },
+      {
+        "slot_id": "id:1I0Y",
+        "title": "Eko Domates 1 Kg",
+        "change_pct": 20.04
+      }
+    ],
+    "warnings": []
   }
 ]
