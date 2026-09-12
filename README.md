@@ -14,7 +14,7 @@ Markette fiyatlar gerçekten ne kadar oynuyor? “Bana öyle geliyor” kısmın
 <!-- STATS_START -->
 | Endeks | Tarih | Aktif tip | Endeks SKU | Kategori kapsaması | 7 gün | 30 gün | Baz |
 |---:|---|---:|---:|---:|---:|---:|---|
-| **99.78** | 2026-09-12 | 105 | 1575 | %85 | -0.22% | — | 2026-09-05 = 100 |
+| **99.78** | 2026-09-13 | 105 | 1583 | %85 | -0.22% | — | 2026-09-05 = 100 |
 <!-- STATS_END -->
 
 ## Kısaca ne yapıyor?
@@ -58,7 +58,7 @@ Kategori eşlemeleri açıkça [`config/api_categories.json`](config/api_categor
 |---|---:|---:|---:|---:|
 | Ekmek, tahıllar ve makarna | 101.25 | 10/12 | %83 | 173 |
 | Et ve et ürünleri | 99.63 | 6/10 | %60 | 102 |
-| Balık ve deniz ürünleri | — | 3/6 | %50 | 29 |
+| Balık ve deniz ürünleri | — | 3/6 | %50 | 30 |
 | Süt ürünleri ve yumurta | 99.22 | 13/13 | %100 | 219 |
 | Yağlar | 101.40 | 4/5 | %80 | 83 |
 | Meyve | 98.42 | 8/13 | %62 | 32 |
@@ -106,31 +106,32 @@ Tabloda en zayıf 18 tip var; toplam eksik tip sayısı 25.
 ## Bugün ne oynadı?
 
 <!-- MOVERS_START -->
-2026-09-11 → 2026-09-12: **9 yukarı**, **24 aşağı**, **72 yatay**. Karşılaştırılan tip: 105.
+2026-09-12 → 2026-09-13: **0 yukarı**, **0 aşağı**, **105 yatay**. Karşılaştırılan tip: 105.
 
 | Ürün tipi | SKU | Değişim |
 |---|---:|---:|
-| Kabak | 3 | +26.04% |
-| Deodorant | 22 | -18.60% |
-| Bütün piliç | 12 | -5.95% |
-| Şampuan | 21 | -4.69% |
-| Diş macunu | 22 | -3.32% |
-| Bulaşık makinesi tableti | 11 | -3.10% |
-| Üzüm | 6 | -2.64% |
-| Sıvı çamaşır deterjanı | 22 | -2.19% |
-| Kuru fasulye | 22 | -2.12% |
-| Kuru soğan | 6 | -2.08% |
+| Elma | 5 | +0.00% |
+| Avokado | 2 | +0.00% |
+| Ayran | 19 | +0.00% |
+| Muz | 2 | +0.00% |
+| Kuru fasulye | 22 | +0.00% |
+| Bisküvi | 19 | +0.00% |
+| Siyah çay | 19 | +0.00% |
+| Çamaşır suyu | 17 | +0.00% |
+| Tost ekmeği | 7 | +0.00% |
+| Kahvaltılık gevrek | 21 | +0.00% |
 <!-- MOVERS_END -->
 
 ## Veri kalitesi
 
 <!-- QUALITY_START -->
-- **1620/1620** SKU için en yeni kaynak tarihi gözlem günüyle aynı; ayrıntı: [health.json](data/v0.4/health.json)
-- **1620** sıkı eşleşmiş SKU, **7** market etiketi
-- **1466/1620** miktar doğrudan API'nin normalize alanından
-- **1620/1620** satırda birim fiyat API değeriyle ayrıca kontrol edildi
-- **1620/1620** gözlem sabit depot relatifleriyle bağlı
-- **35** bridge edilmiş panel yenilemesi (yeni baseline'da doğal olarak sıfır)
+- **Güncellik uyarısı:** Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor.
+- **0/1621** SKU için en yeni kaynak tarihi gözlem günüyle aynı; ayrıntı: [health.json](data/v0.4/health.json)
+- **1621** sıkı eşleşmiş SKU, **7** market etiketi
+- **1467/1621** miktar doğrudan API'nin normalize alanından
+- **1621/1621** satırda birim fiyat API değeriyle ayrıca kontrol edildi
+- **1621/1621** gözlem sabit depot relatifleriyle bağlı
+- **36** bridge edilmiş panel yenilemesi (yeni baseline'da doğal olarak sıfır)
 <!-- QUALITY_END -->
 
 Her günlük çalışmada şunlar da kontrol ediliyor:
