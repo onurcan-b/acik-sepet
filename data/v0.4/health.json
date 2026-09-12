@@ -947,22 +947,176 @@
   },
   {
     "date": "2026-09-12",
-    "rows": 1481,
-    "source_updated_today": 0,
-    "source_within_3_days": 1481,
+    "rows": 1620,
+    "source_updated_today": 1620,
+    "source_within_3_days": 1620,
     "source_date_unknown": 0,
     "source_date_future": 0,
     "source_age_days": {
-      "1": 1481
+      "0": 1620
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-09-11",
-    "matched_slots": 1481,
-    "missing_slots": 142,
-    "new_slots": 0,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1612,
+    "missing_slots": 11,
+    "new_slots": 8,
+    "large_price_moves": [
+      {
+        "slot_id": "id:102P",
+        "title": "Kabak 1 Kg",
+        "change_pct": 100.25
+      },
+      {
+        "slot_id": "id:1389",
+        "title": "Öncü Domates Salçası 4.3 Kg",
+        "change_pct": 58.44
+      },
+      {
+        "slot_id": "id:1NF1",
+        "title": "Nivea Kadın Deodorant Çeşitleri 150 Ml",
+        "change_pct": -55.52
+      },
+      {
+        "slot_id": "id:1ISZ",
+        "title": "Emotion Deodorant 150 Ml",
+        "change_pct": -50.23
+      },
+      {
+        "slot_id": "id:1SVD",
+        "title": "Blade Deodorant 150 Ml",
+        "change_pct": -50.23
+      },
+      {
+        "slot_id": "id:198H",
+        "title": "Rexona Kadın Deodorant Şeftali & Limon Otu 150 Ml",
+        "change_pct": -50.17
+      },
+      {
+        "slot_id": "id:1UHP",
+        "title": "Rexona Kadın Deodorant 150 Ml",
+        "change_pct": -50.17
+      },
+      {
+        "slot_id": "id:1XY4",
+        "title": "Knorr Mercimek Çorbası 76 Gr",
+        "change_pct": 41.83
+      },
+      {
+        "slot_id": "id:21GA",
+        "title": "Barilla Kalem Makarna 500 Gr",
+        "change_pct": 40.0
+      },
+      {
+        "slot_id": "id:11HO",
+        "title": "Abc Renkliler Sıvı Çamaşır Deterjanı 3 Lt",
+        "change_pct": -38.61
+      },
+      {
+        "slot_id": "id:0ZLF",
+        "title": "Duru Duş Jeli Deniz Esintisi 450 Ml",
+        "change_pct": -33.61
+      },
+      {
+        "slot_id": "id:1839",
+        "title": "Gedik Bütün Piliç 1 Kg",
+        "change_pct": -33.41
+      },
+      {
+        "slot_id": "id:1YZV",
+        "title": "Keskinoğlu Bütün Piliç 1 Kg",
+        "change_pct": -33.41
+      },
+      {
+        "slot_id": "id:02JP",
+        "title": "Limon Taze 1 Kg",
+        "change_pct": 33.36
+      },
+      {
+        "slot_id": "id:1L60",
+        "title": "Elidor Şampuan Çeşitleri 400 Ml",
+        "change_pct": -31.96
+      },
+      {
+        "slot_id": "id:0WHH",
+        "title": "Colgate Gentle Clean Diş Fırçası 2 Adet",
+        "change_pct": -31.43
+      },
+      {
+        "slot_id": "id:20X1",
+        "title": "Eker Çırpılmış Yoğurt 500 Gr",
+        "change_pct": -30.77
+      },
+      {
+        "slot_id": "id:1PEG",
+        "title": "İpek Yağ Hazinesi Şampuan 480 Ml",
+        "change_pct": -30.65
+      },
+      {
+        "slot_id": "id:1VRZ",
+        "title": "Emotion Ocean Fresh Deodorant 150 Ml",
+        "change_pct": -29.45
+      },
+      {
+        "slot_id": "id:1YHN",
+        "title": "Axe Dark Temptation Deodorant 150 Ml",
+        "change_pct": -29.4
+      },
+      {
+        "slot_id": "id:20QW",
+        "title": "Finish Quantum Bulaşık Makinesi Tableti 40 Adet",
+        "change_pct": -29.24
+      },
+      {
+        "slot_id": "id:10H8",
+        "title": "Ülker Sütlü Çikolata 60 Gr",
+        "change_pct": 25.45
+      },
+      {
+        "slot_id": "id:0415",
+        "title": "Bolbol Mayonez 840 Gr",
+        "change_pct": 25.21
+      },
+      {
+        "slot_id": "id:07FQ",
+        "title": "Carrefour Bio Organik Dermason Fasulye 1 Kg",
+        "change_pct": -25.01
+      },
+      {
+        "slot_id": "id:0ZEQ",
+        "title": "Parodontax Diş Macunu 50 Ml",
+        "change_pct": -24.89
+      },
+      {
+        "slot_id": "id:0KFH",
+        "title": "Sensodyne Komple Koruma Diş Macunu 75 Ml",
+        "change_pct": -24.62
+      },
+      {
+        "slot_id": "id:1MLB",
+        "title": "Duru Duş Katı Sabun 600 Gr",
+        "change_pct": -23.59
+      },
+      {
+        "slot_id": "id:14LU",
+        "title": "Carrefour Bio Organik Nohut 1 Kg",
+        "change_pct": -23.54
+      },
+      {
+        "slot_id": "id:20BV",
+        "title": "Kahve Dünyası Tambol Fındıklı Sütlü Çikolata 77 Gr",
+        "change_pct": -22.68
+      },
+      {
+        "slot_id": "id:1O4A",
+        "title": "Clear Şampuan 350 Ml",
+        "change_pct": -22.64
+      },
+      {
+        "slot_id": "id:21DO",
+        "title": "Axe Erkek Deodorant 150 Ml",
+        "change_pct": -20.71
+      }
+    ],
+    "warnings": []
   }
 ]
