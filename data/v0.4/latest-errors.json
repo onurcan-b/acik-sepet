@@ -1,5 +1,26 @@
 {
-  "date": "2026-09-13",
-  "checked_at": "2026-09-13T20:03:50.733882+03:00",
-  "errors": []
+  "date": "2026-09-14",
+  "checked_at": "2026-09-14T02:17:04.038259+03:00",
+  "errors": [
+    {
+      "type_id": "deodorant",
+      "error": "'deodorant' sayfa 4 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "toilet_paper",
+      "error": "'tuvalet kağıdı' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "paper_towel",
+      "error": "'kağıt havlu' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "wet_wipes",
+      "error": "'ıslak mendil' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "tissues",
+      "error": "'kağıt mendil' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    }
+  ]
 }
