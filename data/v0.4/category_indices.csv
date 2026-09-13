@@ -106,4 +106,4 @@ date,group_id,label,scope,weight,index,coverage,types,baseline_types
 2026-09-13,other_food,Diğer gıda,food,0.04,100.2224,0.9,9,10
 2026-09-13,drinks,Alkolsüz içecekler,food,0.05,99.5689,0.9091,10,11
 2026-09-13,household_cleaning,Ev temizlik sarf malzemeleri,nonfood,0.07,98.5907,0.9,9,10
-2026-09-13,personal_paper,Kişisel bakım ve kağıt ürünleri,nonfood,0.04,,0.1818,2,11
+2026-09-13,personal_paper,Kişisel bakım ve kağıt ürünleri,nonfood,0.04,97.3399,1.0,11,11
