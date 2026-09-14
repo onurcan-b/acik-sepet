@@ -14,7 +14,7 @@ Markette fiyatlar gerçekten ne kadar oynuyor? “Bana öyle geliyor” kısmın
 <!-- STATS_START -->
 | Endeks | Tarih | Aktif tip | Endeks SKU | Kategori kapsaması | 7 gün | 30 gün | Baz |
 |---:|---|---:|---:|---:|---:|---:|---|
-| **99.73** | 2026-09-14 | 103 | 1521 | %77 | -0.66% | — | 2026-09-05 = 100 |
+| **99.73** | 2026-09-14 | 97 | 1385 | %77 | -0.66% | — | 2026-09-05 = 100 |
 <!-- STATS_END -->
 
 ## Kısaca ne yapıyor?
@@ -57,7 +57,7 @@ Kategori eşlemeleri açıkça [`config/api_categories.json`](config/api_categor
 | Kategori | Endeks | Yeterli tip | Kapsama | SKU |
 |---|---:|---:|---:|---:|
 | Ekmek, tahıllar ve makarna | 101.25 | 12/12 | %100 | 180 |
-| Et ve et ürünleri | — | 6/10 | %60 | 104 |
+| Et ve et ürünleri | — | 6/10 | %60 | 105 |
 | Balık ve deniz ürünleri | — | 3/6 | %50 | 30 |
 | Süt ürünleri ve yumurta | 99.22 | 13/13 | %100 | 225 |
 | Yağlar | 101.40 | 4/5 | %80 | 81 |
@@ -67,7 +67,7 @@ Kategori eşlemeleri açıkça [`config/api_categories.json`](config/api_categor
 | Diğer gıda | 100.22 | 9/10 | %90 | 193 |
 | Alkolsüz içecekler | 99.57 | 10/11 | %91 | 180 |
 | Ev temizlik sarf malzemeleri | 98.59 | 9/10 | %90 | 141 |
-| Kişisel bakım ve kağıt ürünleri | — | 6/11 | %55 | 142 |
+| Kişisel bakım ve kağıt ürünleri | — | 0/11 | %0 | 0 |
 <!-- CATEGORY_TABLE_END -->
 
 ## Kapsama dürüstlüğü
@@ -77,15 +77,21 @@ v0.3 kategori kapsamasını yalnızca baseline’da hayatta kalan ürün tipleri
 ![Kategori ürün tipi kapsaması](charts/coverage.svg)
 
 <!-- GAPS_START -->
-**27 ürün tipi** minimum eşiğin altında. Yanlış ürünle doldurulmadılar; endekse girmiyorlar.
+**33 ürün tipi** minimum eşiğin altında. Yanlış ürünle doldurulmadılar; endekse girmiyorlar.
 
 | Ürün tipi | Gözlenen | Minimum | API kategori filtresi |
 |---|---:|---:|---|
 | Tuvalet kağıdı | 0 | 8 | Tuvalet Kağıdı |
+| Şampuan | 0 | 8 | Şampuanlar |
 | Deodorant | 0 | 7 | Deodorant |
+| Diş macunu | 0 | 7 | Diş Macunları |
+| Duş jeli | 0 | 7 | Duş Jelleri |
 | Islak mendil | 0 | 7 | Islak Mendil |
 | Kağıt havlu | 0 | 7 | Rulo Kağıt Havlu, Dev Rulo Havlu |
 | Meyve suyu | 1 | 8 | Meyve Suyu |
+| Sıvı sabun | 0 | 7 | Sıvı Sabunlar |
+| Diş fırçası | 0 | 6 | Diş Fırçaları |
+| Kalıp sabun | 0 | 6 | Katı Sabunlar |
 | Kağıt mendil | 0 | 6 | Kağıt Mendil, Kutu Mendil |
 | Tavuk göğüs | 0 | 5 | Tavuk Göğüs |
 | Toz çamaşır deterjanı | 2 | 7 | Toz Deterjanlar |
@@ -93,20 +99,14 @@ v0.3 kategori kapsamasını yalnızca baseline’da hayatta kalan ürün tipleri
 | Balık parmak | 0 | 2 | Balık Kroket |
 | Brokoli | 0 | 2 | Karnabahar ve Brokoli |
 | Cherry domates | 0 | 2 | Domates |
-| Ispanak | 0 | 2 | Yeşillikler |
-| Karnabahar | 0 | 2 | Karnabahar ve Brokoli |
-| Kivi | 0 | 2 | Kivi |
-| Konserve sebze | 3 | 5 | Mısır Konservesi |
-| Marul | 0 | 2 | Yeşillikler |
-| Çilek | 0 | 2 | Çilek |
 
-Tabloda en zayıf 18 tip var; toplam eksik tip sayısı 27.
+Tabloda en zayıf 18 tip var; toplam eksik tip sayısı 33.
 <!-- GAPS_END -->
 
 ## Bugün ne oynadı?
 
 <!-- MOVERS_START -->
-2026-09-13 → 2026-09-14: **0 yukarı**, **0 aşağı**, **100 yatay**. Karşılaştırılan tip: 100.
+2026-09-13 → 2026-09-14: **0 yukarı**, **0 aşağı**, **94 yatay**. Karşılaştırılan tip: 94.
 
 | Ürün tipi | SKU | Değişim |
 |---|---:|---:|
@@ -126,12 +126,12 @@ Tabloda en zayıf 18 tip var; toplam eksik tip sayısı 27.
 
 <!-- QUALITY_START -->
 - **Güncellik uyarısı:** Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor.
-- **0/1584** SKU için en yeni kaynak tarihi gözlem günüyle aynı; ayrıntı: [health.json](data/v0.4/health.json)
-- **1584** sıkı eşleşmiş SKU, **7** market etiketi
-- **1480/1584** miktar doğrudan API'nin normalize alanından
-- **1584/1584** satırda birim fiyat API değeriyle ayrıca kontrol edildi
-- **1584/1584** gözlem sabit depot relatifleriyle bağlı
-- **77** bridge edilmiş panel yenilemesi (yeni baseline'da doğal olarak sıfır)
+- **0/1443** SKU için en yeni kaynak tarihi gözlem günüyle aynı; ayrıntı: [health.json](data/v0.4/health.json)
+- **1443** sıkı eşleşmiş SKU, **7** market etiketi
+- **1363/1443** miktar doğrudan API'nin normalize alanından
+- **1443/1443** satırda birim fiyat API değeriyle ayrıca kontrol edildi
+- **1443/1443** gözlem sabit depot relatifleriyle bağlı
+- **78** bridge edilmiş panel yenilemesi (yeni baseline'da doğal olarak sıfır)
 <!-- QUALITY_END -->
 
 Her günlük çalışmada şunlar da kontrol ediliyor:

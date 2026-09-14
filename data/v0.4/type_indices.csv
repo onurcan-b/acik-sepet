@@ -1181,7 +1181,7 @@ date,type_id,label,group,index,coverage,skus,baseline_skus,baseline_date
 2026-09-14,oats,Yulaf ezmesi,bread_cereals,100.441,1.0,13,14,2026-09-05
 2026-09-14,breakfast_cereal,Kahvaltılık gevrek,bread_cereals,101.258,1.0,21,24,2026-09-05
 2026-09-14,semolina,İrmik,bread_cereals,101.1064,1.0,12,13,2026-09-05
-2026-09-14,beef_mince,Dana kıyma,meat,94.6987,0.8571,6,7,2026-09-05
+2026-09-14,beef_mince,Dana kıyma,meat,95.4384,1.0,7,7,2026-09-05
 2026-09-14,beef_cubes,Dana kuşbaşı / sote,meat,,0.6667,4,8,2026-09-05
 2026-09-14,chicken_breast,Tavuk göğüs,meat,,0.0,0,0,
 2026-09-14,chicken_thigh,Tavuk but / baget,meat,,0.8,4,5,2026-09-07
@@ -1288,12 +1288,12 @@ date,type_id,label,group,index,coverage,skus,baseline_skus,baseline_date
 2026-09-14,garbage_bags,Çöp torbası,household_cleaning,100.0,1.0,20,23,2026-09-05
 2026-09-14,sponge,Bulaşık süngeri,household_cleaning,93.7912,1.0,17,18,2026-09-05
 2026-09-14,cleaning_cloth,Temizlik bezi,household_cleaning,100.0,1.0,8,9,2026-09-05
-2026-09-14,shampoo,Şampuan,personal_paper,92.9892,1.0,21,21,2026-09-05
-2026-09-14,shower_gel,Duş jeli,personal_paper,96.7659,1.0,28,28,2026-09-05
-2026-09-14,soap_liquid,Sıvı sabun,personal_paper,98.0833,1.0,19,20,2026-09-05
-2026-09-14,soap_bar,Kalıp sabun,personal_paper,95.3166,1.0,22,22,2026-09-05
-2026-09-14,toothpaste,Diş macunu,personal_paper,95.1135,1.0,23,21,2026-09-05
-2026-09-14,toothbrush,Diş fırçası,personal_paper,91.5831,1.0,24,24,2026-09-05
+2026-09-14,shampoo,Şampuan,personal_paper,,0.0,0,21,2026-09-05
+2026-09-14,shower_gel,Duş jeli,personal_paper,,0.0,0,28,2026-09-05
+2026-09-14,soap_liquid,Sıvı sabun,personal_paper,,0.0,0,20,2026-09-05
+2026-09-14,soap_bar,Kalıp sabun,personal_paper,,0.0,0,22,2026-09-05
+2026-09-14,toothpaste,Diş macunu,personal_paper,,0.0,0,21,2026-09-05
+2026-09-14,toothbrush,Diş fırçası,personal_paper,,0.0,0,24,2026-09-05
 2026-09-14,deodorant,Deodorant,personal_paper,,0.0,0,22,2026-09-05
 2026-09-14,toilet_paper,Tuvalet kağıdı,personal_paper,,0.0,0,21,2026-09-05
 2026-09-14,paper_towel,Kağıt havlu,personal_paper,,0.0,0,20,2026-09-05
