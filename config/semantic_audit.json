@@ -1,0 +1,63 @@
+{
+  "version": "v0.4",
+  "mode": "review-only",
+  "description": "Semantic audit rules flag economically questionable matches without changing collection, panel membership, indices, charts, or the README diagram.",
+  "rules": [
+    {
+      "id": "bread-white-specialty",
+      "type_id": "bread_white",
+      "severity": "high",
+      "patterns": ["kepekli", "çok tahıllı", "glutensiz", "fındıklı", "üzümlü", "çavdar", "siyez", "karabuğday"],
+      "reason": "The published label is Beyaz ekmek, while these modifiers describe specialty/non-white breads.",
+      "suggestion": "Either tighten the type to ordinary white bread or explicitly rename its scope to Somun ekmek before changing the index methodology."
+    },
+    {
+      "id": "plain-milk-specialty",
+      "type_id": "milk",
+      "severity": "high",
+      "patterns": ["laktozsuz", "karamel", "kakaolu", "çikolata", "muzlu", "çilekli", "vanilya"],
+      "reason": "İçme sütü is intended as the plain-milk basket; lactose-free has its own type and flavored milk behaves as a different product.",
+      "suggestion": "Add sibling/flavor exclusions only after checking coverage impact."
+    },
+    {
+      "id": "instant-coffee-premix",
+      "type_id": "instant_coffee",
+      "severity": "high",
+      "patterns": ["3'ü 1", "2'si 1", "mocha", "cappuccino", "latte", "macchiato", "kahve karışımı"],
+      "reason": "Premixed coffee drinks are not equivalent to plain soluble/granulated coffee even when the source category says Granül Kahve.",
+      "suggestion": "Separate plain granulated coffee from premixes; do not tighten until enough plain SKUs are available."
+    },
+    {
+      "id": "vinegar-specialty-mix",
+      "type_id": "vinegar",
+      "severity": "review",
+      "patterns": ["balsamik", "malt", "detox", "analı"],
+      "reason": "These are valid vinegars but represent materially different submarkets and price levels.",
+      "suggestion": "Keep if the intended scope is all vinegar; otherwise split or narrow later."
+    },
+    {
+      "id": "turkish-coffee-specialty",
+      "type_id": "turkish_coffee",
+      "severity": "review",
+      "patterns": ["damla sakız", "dibek", "aromalı"],
+      "reason": "Flavored/dibek variants can have different pricing dynamics from ordinary Turkish coffee.",
+      "suggestion": "Review only; no automatic exclusion."
+    },
+    {
+      "id": "olive-oil-spray",
+      "type_id": "olive_oil",
+      "severity": "review",
+      "patterns": ["sprey"],
+      "reason": "Spray packaging is a distinct format with a large packaging premium per litre.",
+      "suggestion": "Review only; fixed-SKU relatives reduce the immediate bias."
+    },
+    {
+      "id": "meatball-species-mix",
+      "type_id": "meatballs",
+      "severity": "review",
+      "patterns": ["piliç"],
+      "reason": "The generic Köfte type currently mixes poultry and red-meat products.",
+      "suggestion": "Keep only if Köfte is intentionally species-agnostic."
+    }
+  ]
+}

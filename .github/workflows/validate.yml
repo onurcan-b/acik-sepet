@@ -26,6 +26,8 @@ jobs:
         run: pip install -r requirements.txt
       - name: Unit tests
         run: pytest -q
+      - name: Semantic audit (review-only)
+        run: python -m acik_sepet.semantic_audit
       - name: Rebuild published series and chart offline
         run: |
           python -m acik_sepet.index
@@ -60,4 +62,4 @@ jobs:
           python -m acik_sepet.validate --min-type-coverage 0.60 --min-skus 300
           python -m acik_sepet.health
       - name: Source-file whitespace sanity
-        run: git diff --check -- acik_sepet tests .github config README.md METHOD.md
+        run: git diff --check -- acik_sepet tests .github config README.md METHOD.md SEMANTIC_AUDIT.md
