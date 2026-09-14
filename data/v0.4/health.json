@@ -1227,5 +1227,121 @@
     "warnings": [
       "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
     ]
+  },
+  {
+    "date": "2026-09-15",
+    "rows": 1633,
+    "source_updated_today": 0,
+    "source_within_3_days": 1633,
+    "source_date_unknown": 0,
+    "source_date_future": 0,
+    "depot_observations": 2030,
+    "depot_source_updated_today": 0,
+    "depot_source_date_unknown": 0,
+    "single_source_skus": 1357,
+    "auditable_skus": 1633,
+    "source_age_days": {
+      "1": 1633
+    },
+    "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
+    "previous_date": "2026-09-14",
+    "matched_slots": 1385,
+    "missing_slots": 58,
+    "new_slots": 248,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1S7U",
+        "title": "Jacobs Monarch Filtre Kahve 500 Gr",
+        "change_pct": 152.03
+      },
+      {
+        "slot_id": "id:1839",
+        "title": "Gedik Bütün Piliç 1 Kg",
+        "change_pct": 50.17
+      },
+      {
+        "slot_id": "id:1YZV",
+        "title": "Keskinoğlu Bütün Piliç 1 Kg",
+        "change_pct": 50.17
+      },
+      {
+        "slot_id": "id:1M8O",
+        "title": "Nesfit Ballı Bademli Gevrek 480 Gr",
+        "change_pct": -34.9
+      },
+      {
+        "slot_id": "id:0MJW",
+        "title": "Pol's Gurme Şeker İlavesiz Vişne Reçeli 285 Gr",
+        "change_pct": -33.59
+      },
+      {
+        "slot_id": "id:1YQN",
+        "title": "Tat Yoğun Lezzet Mayonez 550 Gr",
+        "change_pct": 32.8
+      },
+      {
+        "slot_id": "id:0SGA",
+        "title": "Peros Limon Sıvı Bulaşık Deterjanı 3.88 Lt",
+        "change_pct": -26.32
+      },
+      {
+        "slot_id": "id:1RS3",
+        "title": "Tadelle Sütlü Çikolata 52 Gr",
+        "change_pct": 25.25
+      },
+      {
+        "slot_id": "id:12W5",
+        "title": "Mlife Bio Organik Nohut 1 Kg",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:1YCC",
+        "title": "Fersan Detox Doğal Sirke Analı Elma Sirkesi 500 Ml",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:20P2",
+        "title": "Fersan Detox Doğal Sirke Analı Üzüm Sirkesi 500 Ml",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:3W9R",
+        "title": "Üzüm 1 Kg",
+        "change_pct": 23.66
+      },
+      {
+        "slot_id": "id:20JZ",
+        "title": "Pınar Labne Peyniri 400 Gr",
+        "change_pct": 23.37
+      },
+      {
+        "slot_id": "id:217T",
+        "title": "Domestos Bahar Çiçekleri Yüzey Temizleyici 1.5 Lt",
+        "change_pct": -23.31
+      },
+      {
+        "slot_id": "id:1YWA",
+        "title": "Eti Bumbo Portakal Aromalı Kakaolu Bisküvi 42 Gr",
+        "change_pct": 21.27
+      },
+      {
+        "slot_id": "id:1NDA",
+        "title": "Kurukahveci Mehmet Efendi Colombian Filtre Kahve 250 Gr",
+        "change_pct": 20.84
+      },
+      {
+        "slot_id": "id:1NNM",
+        "title": "Becel Tereyağı Keyfi Kase Margarin 500 Gr",
+        "change_pct": -20.27
+      },
+      {
+        "slot_id": "id:1B1G",
+        "title": "Anadolu Lezzetleri İspir Kuru Fasulye 500 Gr",
+        "change_pct": 20.0
+      }
+    ],
+    "warnings": [
+      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
+    ]
   }
 ]
