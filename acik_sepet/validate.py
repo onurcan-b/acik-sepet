@@ -2,32 +2,40 @@ from __future__ import annotations
 
 import argparse
 import csv
+import json
 import math
 from collections import defaultdict, Counter
 from pathlib import Path
 
 from .collect import _title_matches
-from .product_types import load_product_types
+from .product_types import load_product_types_for_date
 
 ROOT = Path(__file__).resolve().parents[1]
 SNAPSHOT_DIR = ROOT / "data" / "v0.4" / "snapshots"
 
 
 def validate(min_type_coverage: float = 0.60, min_skus: int = 300) -> None:
-    specs = load_product_types()
     paths = sorted(SNAPSHOT_DIR.glob("*.csv"))
     if not paths:
         raise SystemExit("v0.4 snapshot bulunamadı")
     latest = paths[-1]
     with latest.open(encoding="utf-8", newline="") as handle:
         rows = list(csv.DictReader(handle))
+    validate_rows(rows, latest.stem, min_type_coverage, min_skus)
+
+
+def validate_rows(rows: list[dict], day: str, min_type_coverage: float = 0.60,
+                  min_skus: int = 300, specs: list[dict] | None = None) -> None:
+    specs = specs if specs is not None else load_product_types_for_date(day)
+    effective = json.loads((ROOT / "config/series.json").read_text()).get("matching_effective_from")
+    require_evidence = bool(effective and day >= effective)
 
     by_type: dict[str, int] = defaultdict(int)
     keys = Counter(row["product_key"] for row in rows)
     slots = Counter(row.get("slot_id") or row["product_key"] for row in rows)
     if any(n > 1 for n in keys.values()) or any(n > 1 for n in slots.values()):
         raise SystemExit("Tekrarlanan SKU/panel slotu")
-    if any(row["date"] != latest.stem for row in rows):
+    if any(row["date"] != day for row in rows):
         raise SystemExit("Snapshot tarihi ile satır tarihi uyuşmuyor")
     key_types: dict[str, set[str]] = defaultdict(set)
     slot_types: dict[str, set[str]] = defaultdict(set)
@@ -40,6 +48,10 @@ def validate(min_type_coverage: float = 0.60, min_skus: int = 300) -> None:
     source_relative = 0
     spec_by_id = {row["id"]: row for row in specs}
     for row in rows:
+        if require_evidence and not all(row.get(key) for key in ("collected_at", "source_observations", "source_link")):
+            raise SystemExit("Yeni gözlemde depot kanıtı veya tarama zamanı eksik")
+        if row.get("source_observations"):
+            validate_source_evidence(row)
         by_type[row["type_id"]] += 1
         key_types[row["product_key"]].add(row["type_id"])
         slot_id = row.get("slot_id") or row["product_key"]
@@ -90,7 +102,7 @@ def validate(min_type_coverage: float = 0.60, min_skus: int = 300) -> None:
     }
 
     print(
-        f"snapshot={latest.name} rows={len(rows)} observed_types={len(by_type)}/{len(specs)} "
+        f"snapshot={day}.csv rows={len(rows)} observed_types={len(by_type)}/{len(specs)} "
         f"viable_types={len(viable)}/{len(specs)} viable_coverage={type_coverage:.1%} "
         f"duplicate_products={len(duplicate_products)} duplicate_slots={len(duplicate_slots)} "
         f"bad_prices={bad_prices} bad_formulas={bad_formulas} bad_matches={len(bad_matches)} "
@@ -118,6 +130,33 @@ def validate(min_type_coverage: float = 0.60, min_skus: int = 300) -> None:
         raise SystemExit(f"Market Fiyatı birim fiyatıyla uyuşmayan satır sayısı: {bad_api_units}")
 
 
+def validate_source_evidence(row: dict) -> None:
+    """Recompute the linked price from stored depot observations and link inputs."""
+    import json
+    from statistics import median
+    observations = json.loads(row["source_observations"])
+    link = json.loads(row["source_link"])
+    prices: dict[str, list[float]] = defaultdict(list)
+    for offer in observations:
+        price = float(offer["price"])
+        if not math.isfinite(price) or price <= 0:
+            raise SystemExit("Geçersiz depot fiyatı")
+        prices[offer["source_id"]].append(price)
+    current = {key: median(values) for key, values in prices.items()}
+    if link["mode"] == "pinned-relative":
+        basis = link["previous_prices"]
+        common = sorted(set(basis) & set(current))
+        if not common:
+            raise SystemExit("Depot bağlantısında ortak gözlem yok")
+        ratios = [current[key] / float(basis[key]) for key in common]
+        package = float(link["previous_level"]) * math.exp(sum(math.log(r) for r in ratios) / len(ratios))
+    else:
+        package = median(float(offer["price"]) for offer in observations)
+    expected = package / float(row["quantity"]) * float(link["link_factor"])
+    if not math.isclose(expected, float(row["linked_unit_price"]), rel_tol=1e-6, abs_tol=1e-6):
+        raise SystemExit(f"Depot kanıtıyla bağlı fiyat uyuşmuyor: {row['product_key']}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--min-type-coverage", type=float, default=0.60)
@@ -128,4 +167,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

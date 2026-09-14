@@ -1,0 +1,121 @@
+date,group_id,label,scope,weight,index,coverage,types,baseline_types
+2026-09-05,bread_cereals,"Ekmek, tahıllar ve makarna",food,0.14,100.0,0.8333,10,12
+2026-09-05,meat,Et ve et ürünleri,food,0.15,100.0,0.8,8,10
+2026-09-05,fish,Balık ve deniz ürünleri,food,0.04,100.0,0.6667,4,6
+2026-09-05,dairy_eggs,Süt ürünleri ve yumurta,food,0.14,100.0,1.0,13,13
+2026-09-05,oils_fats,Yağlar,food,0.06,100.0,0.8,4,5
+2026-09-05,fruit,Meyve,food,0.08,100.0,0.6154,8,13
+2026-09-05,vegetables,Sebze,food,0.11,100.0,0.6471,11,17
+2026-09-05,sugar_snacks,"Şeker, tatlı ve atıştırmalık",food,0.08,100.0,0.9167,11,12
+2026-09-05,other_food,Diğer gıda,food,0.04,100.0,1.0,10,10
+2026-09-05,drinks,Alkolsüz içecekler,food,0.05,100.0,0.9091,10,11
+2026-09-05,household_cleaning,Ev temizlik sarf malzemeleri,nonfood,0.07,100.0,0.9,9,10
+2026-09-05,personal_paper,Kişisel bakım ve kağıt ürünleri,nonfood,0.04,100.0,1.0,11,11
+2026-09-06,bread_cereals,"Ekmek, tahıllar ve makarna",food,0.14,100.0,0.8333,10,12
+2026-09-06,meat,Et ve et ürünleri,food,0.15,100.0,0.8,8,10
+2026-09-06,fish,Balık ve deniz ürünleri,food,0.04,100.0,0.6667,4,6
+2026-09-06,dairy_eggs,Süt ürünleri ve yumurta,food,0.14,100.0,1.0,13,13
+2026-09-06,oils_fats,Yağlar,food,0.06,100.0,0.8,4,5
+2026-09-06,fruit,Meyve,food,0.08,100.0,0.6923,9,13
+2026-09-06,vegetables,Sebze,food,0.11,100.0,0.6471,11,17
+2026-09-06,sugar_snacks,"Şeker, tatlı ve atıştırmalık",food,0.08,100.0,0.9167,11,12
+2026-09-06,other_food,Diğer gıda,food,0.04,100.0,1.0,10,10
+2026-09-06,drinks,Alkolsüz içecekler,food,0.05,100.0,0.9091,10,11
+2026-09-06,household_cleaning,Ev temizlik sarf malzemeleri,nonfood,0.07,100.0,0.9,9,10
+2026-09-06,personal_paper,Kişisel bakım ve kağıt ürünleri,nonfood,0.04,100.0,1.0,11,11
+2026-09-07,bread_cereals,"Ekmek, tahıllar ve makarna",food,0.14,100.0,0.8333,10,12
+2026-09-07,meat,Et ve et ürünleri,food,0.15,100.8529,0.7,7,10
+2026-09-07,fish,Balık ve deniz ürünleri,food,0.04,100.0,0.6667,4,6
+2026-09-07,dairy_eggs,Süt ürünleri ve yumurta,food,0.14,100.4906,1.0,13,13
+2026-09-07,oils_fats,Yağlar,food,0.06,100.5928,0.8,4,5
+2026-09-07,fruit,Meyve,food,0.08,101.7783,0.6923,9,13
+2026-09-07,vegetables,Sebze,food,0.11,,0.5882,10,17
+2026-09-07,sugar_snacks,"Şeker, tatlı ve atıştırmalık",food,0.08,100.0,1.0,12,12
+2026-09-07,other_food,Diğer gıda,food,0.04,99.9913,0.9,9,10
+2026-09-07,drinks,Alkolsüz içecekler,food,0.05,99.4387,0.9091,10,11
+2026-09-07,household_cleaning,Ev temizlik sarf malzemeleri,nonfood,0.07,99.1095,0.9,9,10
+2026-09-07,personal_paper,Kişisel bakım ve kağıt ürünleri,nonfood,0.04,101.5492,1.0,11,11
+2026-09-08,bread_cereals,"Ekmek, tahıllar ve makarna",food,0.14,100.0723,0.8333,10,12
+2026-09-08,meat,Et ve et ürünleri,food,0.15,101.6369,0.6,6,10
+2026-09-08,fish,Balık ve deniz ürünleri,food,0.04,,0.5,3,6
+2026-09-08,dairy_eggs,Süt ürünleri ve yumurta,food,0.14,100.1338,1.0,13,13
+2026-09-08,oils_fats,Yağlar,food,0.06,100.4158,0.8,4,5
+2026-09-08,fruit,Meyve,food,0.08,100.5369,0.6923,9,13
+2026-09-08,vegetables,Sebze,food,0.11,,0.5882,10,17
+2026-09-08,sugar_snacks,"Şeker, tatlı ve atıştırmalık",food,0.08,100.8975,1.0,12,12
+2026-09-08,other_food,Diğer gıda,food,0.04,100.2289,0.9,9,10
+2026-09-08,drinks,Alkolsüz içecekler,food,0.05,99.6795,0.9091,10,11
+2026-09-08,household_cleaning,Ev temizlik sarf malzemeleri,nonfood,0.07,99.1095,0.9,9,10
+2026-09-08,personal_paper,Kişisel bakım ve kağıt ürünleri,nonfood,0.04,100.9455,1.0,11,11
+2026-09-09,bread_cereals,"Ekmek, tahıllar ve makarna",food,0.14,100.4799,0.8333,10,12
+2026-09-09,meat,Et ve et ürünleri,food,0.15,102.6145,0.6,6,10
+2026-09-09,fish,Balık ve deniz ürünleri,food,0.04,,0.5,3,6
+2026-09-09,dairy_eggs,Süt ürünleri ve yumurta,food,0.14,100.0619,1.0,13,13
+2026-09-09,oils_fats,Yağlar,food,0.06,101.2971,0.8,4,5
+2026-09-09,fruit,Meyve,food,0.08,100.6885,0.6923,9,13
+2026-09-09,vegetables,Sebze,food,0.11,103.3073,0.6471,11,17
+2026-09-09,sugar_snacks,"Şeker, tatlı ve atıştırmalık",food,0.08,101.2618,1.0,12,12
+2026-09-09,other_food,Diğer gıda,food,0.04,100.2597,0.9,9,10
+2026-09-09,drinks,Alkolsüz içecekler,food,0.05,99.817,0.9091,10,11
+2026-09-09,household_cleaning,Ev temizlik sarf malzemeleri,nonfood,0.07,99.5295,0.9,9,10
+2026-09-09,personal_paper,Kişisel bakım ve kağıt ürünleri,nonfood,0.04,101.7755,1.0,11,11
+2026-09-10,bread_cereals,"Ekmek, tahıllar ve makarna",food,0.14,100.5547,0.8333,10,12
+2026-09-10,meat,Et ve et ürünleri,food,0.15,102.6145,0.6,6,10
+2026-09-10,fish,Balık ve deniz ürünleri,food,0.04,,0.5,3,6
+2026-09-10,dairy_eggs,Süt ürünleri ve yumurta,food,0.14,99.9676,1.0,13,13
+2026-09-10,oils_fats,Yağlar,food,0.06,101.2971,0.8,4,5
+2026-09-10,fruit,Meyve,food,0.08,100.2499,0.6923,9,13
+2026-09-10,vegetables,Sebze,food,0.11,103.0752,0.6471,11,17
+2026-09-10,sugar_snacks,"Şeker, tatlı ve atıştırmalık",food,0.08,101.2618,1.0,12,12
+2026-09-10,other_food,Diğer gıda,food,0.04,100.3281,0.9,9,10
+2026-09-10,drinks,Alkolsüz içecekler,food,0.05,99.8343,0.9091,10,11
+2026-09-10,household_cleaning,Ev temizlik sarf malzemeleri,nonfood,0.07,99.5579,0.9,9,10
+2026-09-10,personal_paper,Kişisel bakım ve kağıt ürünleri,nonfood,0.04,101.6231,1.0,11,11
+2026-09-11,bread_cereals,"Ekmek, tahıllar ve makarna",food,0.14,100.9986,0.8333,10,12
+2026-09-11,meat,Et ve et ürünleri,food,0.15,100.6328,0.6,6,10
+2026-09-11,fish,Balık ve deniz ürünleri,food,0.04,,0.5,3,6
+2026-09-11,dairy_eggs,Süt ürünleri ve yumurta,food,0.14,99.6469,1.0,13,13
+2026-09-11,oils_fats,Yağlar,food,0.06,101.3555,0.8,4,5
+2026-09-11,fruit,Meyve,food,0.08,98.7456,0.6154,8,13
+2026-09-11,vegetables,Sebze,food,0.11,,0.5882,10,17
+2026-09-11,sugar_snacks,"Şeker, tatlı ve atıştırmalık",food,0.08,101.3432,1.0,12,12
+2026-09-11,other_food,Diğer gıda,food,0.04,100.1601,0.9,9,10
+2026-09-11,drinks,Alkolsüz içecekler,food,0.05,99.8269,0.9091,10,11
+2026-09-11,household_cleaning,Ev temizlik sarf malzemeleri,nonfood,0.07,99.3283,0.9,9,10
+2026-09-11,personal_paper,Kişisel bakım ve kağıt ürünleri,nonfood,0.04,99.855,1.0,11,11
+2026-09-12,bread_cereals,"Ekmek, tahıllar ve makarna",food,0.14,101.2523,0.8333,10,12
+2026-09-12,meat,Et ve et ürünleri,food,0.15,99.6342,0.6,6,10
+2026-09-12,fish,Balık ve deniz ürünleri,food,0.04,,0.5,3,6
+2026-09-12,dairy_eggs,Süt ürünleri ve yumurta,food,0.14,99.2158,1.0,13,13
+2026-09-12,oils_fats,Yağlar,food,0.06,101.3963,0.8,4,5
+2026-09-12,fruit,Meyve,food,0.08,98.4195,0.6154,8,13
+2026-09-12,vegetables,Sebze,food,0.11,,0.5882,10,17
+2026-09-12,sugar_snacks,"Şeker, tatlı ve atıştırmalık",food,0.08,101.2717,1.0,12,12
+2026-09-12,other_food,Diğer gıda,food,0.04,100.2224,0.9,9,10
+2026-09-12,drinks,Alkolsüz içecekler,food,0.05,99.5689,0.9091,10,11
+2026-09-12,household_cleaning,Ev temizlik sarf malzemeleri,nonfood,0.07,98.5907,0.9,9,10
+2026-09-12,personal_paper,Kişisel bakım ve kağıt ürünleri,nonfood,0.04,97.0561,1.0,11,11
+2026-09-13,bread_cereals,"Ekmek, tahıllar ve makarna",food,0.14,101.2523,0.8333,10,12
+2026-09-13,meat,Et ve et ürünleri,food,0.15,,0.5,5,10
+2026-09-13,fish,Balık ve deniz ürünleri,food,0.04,,0.5,3,6
+2026-09-13,dairy_eggs,Süt ürünleri ve yumurta,food,0.14,99.2158,1.0,13,13
+2026-09-13,oils_fats,Yağlar,food,0.06,101.3963,0.8,4,5
+2026-09-13,fruit,Meyve,food,0.08,97.8337,0.6154,8,13
+2026-09-13,vegetables,Sebze,food,0.11,102.2185,0.6471,11,17
+2026-09-13,sugar_snacks,"Şeker, tatlı ve atıştırmalık",food,0.08,101.2717,1.0,12,12
+2026-09-13,other_food,Diğer gıda,food,0.04,100.2224,0.9,9,10
+2026-09-13,drinks,Alkolsüz içecekler,food,0.05,99.5689,0.9091,10,11
+2026-09-13,household_cleaning,Ev temizlik sarf malzemeleri,nonfood,0.07,98.5907,0.9,9,10
+2026-09-13,personal_paper,Kişisel bakım ve kağıt ürünleri,nonfood,0.04,97.3399,1.0,11,11
+2026-09-14,bread_cereals,"Ekmek, tahıllar ve makarna",food,0.14,101.2523,1.0,12,12
+2026-09-14,meat,Et ve et ürünleri,food,0.15,,0.6,6,10
+2026-09-14,fish,Balık ve deniz ürünleri,food,0.04,,0.5,3,6
+2026-09-14,dairy_eggs,Süt ürünleri ve yumurta,food,0.14,99.2158,1.0,13,13
+2026-09-14,oils_fats,Yağlar,food,0.06,101.3963,0.8,4,5
+2026-09-14,fruit,Meyve,food,0.08,97.8337,0.6154,8,13
+2026-09-14,vegetables,Sebze,food,0.11,102.2185,0.6471,11,17
+2026-09-14,sugar_snacks,"Şeker, tatlı ve atıştırmalık",food,0.08,101.2717,1.0,12,12
+2026-09-14,other_food,Diğer gıda,food,0.04,100.2224,0.9,9,10
+2026-09-14,drinks,Alkolsüz içecekler,food,0.05,99.5689,0.9091,10,11
+2026-09-14,household_cleaning,Ev temizlik sarf malzemeleri,nonfood,0.07,98.5907,0.9,9,10
+2026-09-14,personal_paper,Kişisel bakım ve kağıt ürünleri,nonfood,0.04,,0.0,0,11

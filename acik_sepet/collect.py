@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import csv
 import json
 import math
@@ -16,7 +17,7 @@ from zoneinfo import ZoneInfo
 import requests
 
 from .api import MarketFiyatiError, search_products
-from .product_types import load_product_types
+from .product_types import load_product_types_for_date
 from .units import Quantity, parse_quantity, unit_price
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -313,6 +314,7 @@ def _row_for_state(item: dict[str, Any], spec: dict[str, Any], sku_state: dict[s
     base = _base_candidate(item, spec)
     if base is None:
         return None
+    before = copy.deepcopy(sku_state)
     linked_result = _source_linked_package_price(sku_state, base["offers"])
     if linked_result is None:
         return None
@@ -330,6 +332,12 @@ def _row_for_state(item: dict[str, Any], spec: dict[str, Any], sku_state: dict[s
     linked_unit = unit_price(linked_package, quantity) * link_factor
     used_source_ids = sorted({str(row["source_id"]) for row in stable_offers if row.get("source_id")})
     markets = sorted({str(row["market"]) for row in stable_offers if row.get("market")})
+    # Capture the exact pre-link inputs, including the first legacy adoption.
+    basis = before.get("source_last_prices") or before.get("source_anchor_prices") or sku_state.get("source_anchor_prices", {})
+    level = (before.get("source_last_level") if before.get("source_last_prices") else
+             before.get("source_anchor_level", sku_state.get("source_anchor_level")))
+    source_link = {"mode": sku_state.get("source_mode"), "previous_prices": basis,
+                   "previous_level": level, "link_factor": link_factor}
 
     return {
         "product_key": base["product_key"],
@@ -346,6 +354,8 @@ def _row_for_state(item: dict[str, Any], spec: dict[str, Any], sku_state: dict[s
         "matched_category": base["matched_category"],
         "category_level": spec["api_category_level"],
         "source_updated_at": _source_updated_at(stable_offers),
+        "source_observations": json.dumps(stable_offers, ensure_ascii=False, separators=(",", ":")),
+        "source_link": json.dumps(source_link, ensure_ascii=False, separators=(",", ":")),
         "offer_count": len(stable_offers),
         "raw_offer_count": len(base["offers"]),
         "source_count": len(used_source_ids),
@@ -516,12 +526,18 @@ def _observe_type(
     observed_slots: set[str] = set()
     for sku in active:
         item = items_by_key.get(str(sku.get("product_key") or ""))
+        title = str(item.get("title") or "") if item is not None else str(sku.get("title") or "")
+        if not _title_matches(title, spec):
+            sku["retired_reason"] = "definition_mismatch"
+        elif sku.get("retired_reason") == "definition_mismatch":
+            sku.pop("retired_reason")
         row = _row_for_state(item, spec, sku) if item is not None else None
         if row is None:
             sku["missing_streak"] = int(sku.get("missing_streak", 0)) + int(new_day)
             continue
         sku["missing_streak"] = 0
         sku["last_seen"] = today
+        sku["title"] = row["title"]
         sku["last_linked_unit_price"] = row["linked_unit_price"]
         observed.append(row)
         observed_slots.add(row["slot_id"])
@@ -550,11 +566,14 @@ def _observe_type(
         int(state.get("low_coverage_streak", 0)) + int(new_day)
         if active and coverage < LOW_COVERAGE_THRESHOLD else 0
     )
-    if int(state.get("low_coverage_streak", 0)) < RENEWAL_AFTER_DAYS:
+    needs_correction = any(sku.get("retired_reason") == "definition_mismatch" for sku in active)
+    if int(state.get("low_coverage_streak", 0)) < RENEWAL_AFTER_DAYS and not needs_correction:
         return observed
 
     missing = sorted(
-        [sku for sku in active if int(sku.get("missing_streak", 0)) >= RENEWAL_AFTER_DAYS],
+        [sku for sku in active if (sku.get("retired_reason") == "definition_mismatch" or
+          (int(state.get("low_coverage_streak", 0)) >= RENEWAL_AFTER_DAYS and
+           int(sku.get("missing_streak", 0)) >= RENEWAL_AFTER_DAYS))],
         key=lambda sku: int(sku.get("missing_streak", 0)),
         reverse=True,
     )
@@ -600,6 +619,7 @@ def _observe_type(
             continue
 
         provisional["previous_product_key"] = old_key
+        provisional["replacement_reason"] = old.get("retired_reason", "prolonged_absence")
         provisional["replaced_on"] = today
         provisional["last_linked_unit_price"] = replacement_row["linked_unit_price"]
         active[active.index(old)] = provisional
@@ -615,12 +635,55 @@ def _observe_type(
     return observed
 
 
+def _record_attempt(today: str, errors: list[dict], status: str, **details) -> None:
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    result = {"date": today, "checked_at": datetime.now(TR_TZ).isoformat(),
+              "status": status, "errors": errors, **details}
+    (DATA_DIR / "latest-errors.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
+    (DATA_DIR / "collection-status.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
+    attempts = DATA_DIR / "attempts"
+    attempts.mkdir(exist_ok=True)
+    stamp = datetime.now(TR_TZ).strftime("%Y%m%dT%H%M%S%f")
+    (attempts / f"{stamp}.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
+
+
+def _refresh_regression(previous: list[dict], current: list[dict], specs: list[dict]) -> str | None:
+    """A later scrape must not replace a better same-day observation with a gap."""
+    old = {spec["id"]: 0 for spec in specs}
+    new = dict(old)
+    for row in previous:
+        old[row["type_id"]] = old.get(row["type_id"], 0) + 1
+    for row in current:
+        new[row["type_id"]] = new.get(row["type_id"], 0) + 1
+    for spec in specs:
+        before, after = old[spec["id"]], new[spec["id"]]
+        if before >= spec["min_skus"] and (after < spec["min_skus"] or after < before * 0.8):
+            return f"Same-day coverage regression for {spec['id']}: {before} -> {after}"
+    return None
+
+
 def collect(refresh: bool = False) -> Path:
-    specs = load_product_types()
+    from .history import verify_files
+    from .health import summarize
+    from .validate import validate_rows
+
+    verify_files(ROOT)
+    today = datetime.now(TR_TZ).date().isoformat()
+    series = json.loads((ROOT / "config/series.json").read_text())
+    existing = SNAPSHOT_DIR / f"{today}.csv"
+    if today <= series.get("locked_through", ""):
+        print(f"snapshot={today}.csv belongs to protected history; collection starts after {series['locked_through']}")
+        return existing
+    if existing.exists() and (not refresh or today == series["baseline_date"] or existing == min(SNAPSHOT_DIR.glob("*.csv"))):
+        print(f"snapshot={existing.name} preserved")
+        return existing
+
+    specs = load_product_types_for_date(today)
     panel_state = _load_panel()
     panel_state["version"] = "v0.4"
     panel_state["matching_policy"] = "market-category + all-required-title-rules + unit-price-check"
-    panel_state["source_policy"] = "pinned-source-matched-chain"
+    panel_state["matching_effective_from"] = series.get("matching_effective_from")
+    panel_state["source_policy"] = "pinned-source-matched-chain-with-evidence"
     panel_state["renewal_policy"] = {
         "low_coverage_threshold": LOW_COVERAGE_THRESHOLD,
         "renewal_after_days": RENEWAL_AFTER_DAYS,
@@ -628,125 +691,108 @@ def collect(refresh: bool = False) -> Path:
         "max_replacement_share": MAX_REPLACEMENT_SHARE,
     }
     types_state = panel_state.setdefault("types", {})
-    today = datetime.now(TR_TZ).date().isoformat()
-    existing = SNAPSHOT_DIR / f"{today}.csv"
-    if existing.exists():
-        if not refresh:
-            print(f"snapshot={existing.name} already published; preserving daily close")
-            return existing
-        baseline_date = json.loads((ROOT / "config" / "series.json").read_text())["baseline_date"]
-        if today == baseline_date or existing == min(SNAPSHOT_DIR.glob("*.csv")):
-            print(f"snapshot={existing.name} is the frozen baseline; next date will be collected")
-            return existing
-        for state in types_state.values():
-            state.setdefault("last_observed_date", today)
     historical_levels = _historical_levels()
-    claimed = {
-        str(sku.get("product_key"))
-        for state in types_state.values()
-        for sku in (state.get("skus") or [])
-        if sku.get("product_key")
-    }
-
+    claimed = {str(sku["product_key"]) for state in types_state.values()
+               for sku in state.get("skus", []) if sku.get("product_key")}
     session = requests.Session()
-    output_rows: list[dict[str, Any]] = []
-    errors: list[dict[str, str]] = []
+    output_by_type: dict[str, list[dict]] = {}
+    errors: dict[str, dict] = {}
+    recovered: list[str] = []
 
-    for number, spec in enumerate(specs, start=1):
+    def scan(spec):
+        candidates = search_products(spec["query"], category_level=spec["api_category_level"],
+                                     category_values=spec["api_categories"], session=session)
+        state = types_state.get(spec["id"])
+        if not state or not state.get("skus"):
+            state, observed = _initialize_type(candidates, spec, claimed, today)
+            types_state[spec["id"]] = state
+        else:
+            observed = _observe_type(candidates, spec, state, claimed, today, historical_levels)
+        for row in observed:
+            row.update({"date": today, "group": spec["group"], "type_id": spec["id"],
+                        "type_label": spec["label"], "collected_at": datetime.now(TR_TZ).isoformat(),
+                        "match_score": row.pop("score")})
+        output_by_type[spec["id"]] = observed
+
+    for number, spec in enumerate(specs, 1):
         try:
-            candidates = search_products(
-                spec["query"],
-                category_level=spec["api_category_level"],
-                category_values=spec["api_categories"],
-                session=session,
-            )
-            state = types_state.get(spec["id"])
-            if not state or not state.get("skus"):
-                state, observed = _initialize_type(candidates, spec, claimed, today)
-                types_state[spec["id"]] = state
-            else:
-                observed = _observe_type(candidates, spec, state, claimed, today, historical_levels)
-
-            for row in observed:
-                output_rows.append({
-                    "date": today,
-                    "group": spec["group"],
-                    "type_id": spec["id"],
-                    "type_label": spec["label"],
-                    "slot_id": row["slot_id"],
-                    "product_key": row["product_key"],
-                    "title": row["title"],
-                    "quantity": row["quantity"],
-                    "unit": row["unit"],
-                    "price": row["price"],
-                    "unit_price": row["unit_price"],
-                    "linked_unit_price": row["linked_unit_price"],
-                    "api_unit_price": row["api_unit_price"],
-                    "unit_price_gap_pct": row["unit_price_gap_pct"],
-                    "quantity_source": row["quantity_source"],
-                    "matched_category": row["matched_category"],
-                    "category_level": row["category_level"],
-                    "offer_count": row["offer_count"],
-                    "raw_offer_count": row["raw_offer_count"],
-                    "source_count": row["source_count"],
-                    "source_ids": row["source_ids"],
-                    "markets": row["markets"],
-                    "source_mode": row["source_mode"],
-                    "source_updated_at": row["source_updated_at"],
-                    "generation": row["generation"],
-                    "match_score": row["score"],
-                })
+            scan(spec)
         except MarketFiyatiError as exc:
-            errors.append({"type_id": spec["id"], "error": str(exc)})
-
-        time.sleep(0.15)
-
+            errors[spec["id"]] = {"type_id": spec["id"], "error": str(exc)}
+        time.sleep(0.25)
         if number % 20 == 0 or number == len(specs):
-            observed_types = len({row["type_id"] for row in output_rows})
-            print(f"progress={number}/{len(specs)} skus={len(output_rows)} types={observed_types} errors={len(errors)}")
+            print(f"progress={number}/{len(specs)} skus={sum(map(len, output_by_type.values()))} errors={len(errors)}", flush=True)
+
+    # Retry failed types separately; never treat failed pagination as an empty category.
+    if errors:
+        session.close()
+        session = requests.Session()
+        time.sleep(2)
+        for spec in specs:
+            if spec["id"] not in errors:
+                continue
+            try:
+                scan(spec)
+                recovered.append(spec["id"])
+                del errors[spec["id"]]
+            except MarketFiyatiError as exc:
+                errors[spec["id"]] = {"type_id": spec["id"], "error": str(exc)}
+            time.sleep(0.5)
+    session.close()
+    output_rows = [row for spec in specs for row in output_by_type.get(spec["id"], [])]
+    details = {"observed_skus": len(output_rows), "recovered_types": recovered,
+               "observed_by_type": {s["id"]: len(output_by_type.get(s["id"], [])) for s in specs}}
+    if errors:
+        _record_attempt(today, list(errors.values()), "rejected", reason="Incomplete API collection; published observations and panel state preserved", **details)
+        raise SystemExit("Toplama eksik: eski gözlemler ve panel state korundu; yeni endeks yayımlanmadı")
+
+    try:
+        validate_rows(output_rows, today, specs=specs)
+        health = summarize(output_rows)
+        if health["source_date_future"] or health["source_within_3_days"] < len(output_rows) * 0.60:
+            raise ValueError("Kaynak güncelliği yayın eşiğini geçemedi")
+        if existing.exists():
+            with existing.open(newline="", encoding="utf-8") as handle:
+                reason = _refresh_regression(list(csv.DictReader(handle)), output_rows, specs)
+            if reason:
+                raise ValueError(reason)
+    except (ValueError, SystemExit) as exc:
+        _record_attempt(today, [], "rejected", reason=str(exc), **details)
+        raise SystemExit(f"Yayın kontrolü başarısız; eski gözlemler ve panel state korundu: {exc}") from exc
 
     SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
-    out = SNAPSHOT_DIR / f"{today}.csv"
-    fields = [
-        "date", "group", "type_id", "type_label", "slot_id", "product_key", "title",
-        "quantity", "unit", "price", "unit_price", "linked_unit_price", "offer_count",
-        "api_unit_price", "unit_price_gap_pct", "quantity_source", "matched_category",
-        "category_level", "raw_offer_count", "source_count", "source_ids", "markets",
-        "source_mode", "source_updated_at", "generation", "match_score",
-    ]
-    if out.exists():
+    fields = ["date", "group", "type_id", "type_label", "slot_id", "product_key", "title",
+              "quantity", "unit", "price", "unit_price", "linked_unit_price", "offer_count",
+              "api_unit_price", "unit_price_gap_pct", "quantity_source", "matched_category",
+              "category_level", "raw_offer_count", "source_count", "source_ids", "markets",
+              "source_mode", "source_updated_at", "generation", "match_score", "collected_at",
+              "source_observations", "source_link"]
+    if existing.exists():
         revisions = DATA_DIR / "revisions"
         revisions.mkdir(exist_ok=True)
         stamp = datetime.now(TR_TZ).strftime("%Y%m%dT%H%M%S%f")
-        (revisions / f"{today}-before-{stamp}.csv").write_bytes(out.read_bytes())
-    with out.open("w", encoding="utf-8", newline="") as handle:
+        (revisions / f"{today}-before-{stamp}.csv").write_bytes(existing.read_bytes())
+    staged = existing.with_suffix(".csv.tmp")
+    with staged.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         writer.writerows(output_rows)
-
+    staged_state = PANEL_PATH.with_suffix(".json.tmp")
     PANEL_PATH.parent.mkdir(parents=True, exist_ok=True)
-    PANEL_PATH.write_text(
-        json.dumps(panel_state, ensure_ascii=False, separators=(",", ":")) + "\n",
-        encoding="utf-8",
-    )
-    (DATA_DIR / "latest-errors.json").write_text(
-        json.dumps({"date": today, "checked_at": datetime.now(TR_TZ).isoformat(), "errors": errors}, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
-
-    panel_skus = sum(len(state.get("skus") or []) for state in types_state.values())
-    observed_types = len({row["type_id"] for row in output_rows})
-    source_pinned = sum(row.get("source_mode") == "pinned-relative" for row in output_rows)
-    renewals = sum(int(state.get("renewals", 0)) for state in types_state.values())
-    print(
-        f"snapshot={out.relative_to(ROOT)} observed_skus={len(output_rows)} panel_skus={panel_skus} "
-        f"observed_types={observed_types}/{len(specs)} source_pinned={source_pinned} "
-        f"renewals_total={renewals} errors={len(errors)}"
-    )
-    return out
+    staged_state.write_text(json.dumps(panel_state, ensure_ascii=False, separators=(",", ":")) + "\n")
+    staged.replace(existing)
+    staged_state.replace(PANEL_PATH)
+    _record_attempt(today, [], "published", source_updated_today=health["source_updated_today"], **details)
+    print(f"snapshot={existing.name} observed_skus={len(output_rows)} errors=0 recovered={len(recovered)}")
+    return existing
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--refresh", action="store_true", help="Refresh today, archiving its previous snapshot; never rewrite baseline")
-    collect(refresh=parser.parse_args().refresh)
+    try:
+        collect(refresh=parser.parse_args().refresh)
+    except Exception as exc:
+        _record_attempt(datetime.now(TR_TZ).date().isoformat(), [], "rejected",
+                        reason=f"{type(exc).__name__}: {exc}")
+        raise

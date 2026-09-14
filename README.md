@@ -9,10 +9,19 @@ Markette fiyatlar gerçekten ne kadar oynuyor? “Bana öyle geliyor” kısmın
 
 > Bu resmî TÜFE değil. Kira, ulaşım, sağlık, eğitim ve hizmetler yok. Burada yalnızca market rafındaki malların fiyat hareketini olabildiğince temiz ve denetlenebilir biçimde ölçüyoruz.
 
+<!-- STATUS_START -->
+> **Veri durumu: Eksik kapsam.** Son seri noktası: **2026-09-14**. Kategori ağırlığı kapsaması: **%77**.
+> Son tarama girişimi: 2026-09-14T13:49:42.998867+03:00.
+> **11 ürün tipinde API hatası** var; bu, ürünlerin katalogda bulunmadığı anlamına gelmez.
+> Yayımlanamayan kategoriler: Et ve et ürünleri; Balık ve deniz ürünleri; Kişisel bakım ve kağıt ürünleri.
+> Kaynak tarihi seri günüyle aynı olan SKU: **0/1443**. Yatay çizgi, raf fiyatlarının bugün yeniden teyit edildiğini göstermez.
+> Baz korunuyor: **2026-09-05 = 100**. 5–14 Eylül geçmişi kilitli; sınıflandırma düzeltmeleri 15 Eylül'den itibaren geçerli.
+<!-- STATUS_END -->
+
 ![Açık Sepet v0.4 günlük endeksi](charts/index.svg)
 
 <!-- STATS_START -->
-| Endeks | Tarih | Aktif tip | Endeks SKU | Kategori kapsaması | 7 gün | 30 gün | Baz |
+| Endeks | Tarih | Aktif tip | Aktif tiplerde SKU | Kategori ağırlığı kapsaması | 7 gün | 30 gün | Baz |
 |---:|---|---:|---:|---:|---:|---:|---|
 | **99.73** | 2026-09-14 | 97 | 1385 | %77 | -0.66% | — | 2026-09-05 = 100 |
 <!-- STATS_END -->
@@ -77,7 +86,7 @@ v0.3 kategori kapsamasını yalnızca baseline’da hayatta kalan ürün tipleri
 ![Kategori ürün tipi kapsaması](charts/coverage.svg)
 
 <!-- GAPS_START -->
-**33 ürün tipi** minimum eşiğin altında. Yanlış ürünle doldurulmadılar; endekse girmiyorlar.
+**33 ürün tipi** yeterli gözlem veya ortak panel bağlantısı olmadığı için yayımlanamadı. Tarama hataları ve kaynak güncelliği ayrıca raporlanır.
 
 | Ürün tipi | Gözlenen | Minimum | API kategori filtresi |
 |---|---:|---:|---|
@@ -106,7 +115,7 @@ Tabloda en zayıf 18 tip var; toplam eksik tip sayısı 33.
 ## Bugün ne oynadı?
 
 <!-- MOVERS_START -->
-2026-09-13 → 2026-09-14: **0 yukarı**, **0 aşağı**, **94 yatay**. Karşılaştırılan tip: 94.
+2026-09-13 → 2026-09-14: **0 yukarı**, **0 aşağı**, **94 değişim gözlenmedi**. Karşılaştırılan tip: 94. Kaynak güncelliği aşağıda ayrıca gösterilir.
 
 | Ürün tipi | SKU | Değişim |
 |---|---:|---:|
@@ -131,6 +140,8 @@ Tabloda en zayıf 18 tip var; toplam eksik tip sayısı 33.
 - **1363/1443** miktar doğrudan API'nin normalize alanından
 - **1443/1443** satırda birim fiyat API değeriyle ayrıca kontrol edildi
 - **1443/1443** gözlem sabit depot relatifleriyle bağlı
+- **1199/1443** SKU yalnızca bir depot üzerinden izleniyor; market etiketleri ulusal temsiliyet sağlamaz
+- **0/1443** SKU için depot fiyatları, kaynak tarihleri ve bağlantı girdileri saklanıyor (15 Eylül'den itibaren)
 - **78** bridge edilmiş panel yenilemesi (yeni baseline'da doğal olarak sıfır)
 <!-- QUALITY_END -->
 
@@ -144,6 +155,13 @@ Her günlük çalışmada şunlar da kontrol ediliyor:
 - ürün tipi ve toplam SKU kapsaması yayın eşiğini koruyor mu.
 
 ## Endeksin kısa matematiği
+
+**15 Eylül kalite düzeltmesi:** Baz yine **5 Eylül 2026 = 100**. 5–14 Eylül gözlemleri ve yayımlanan tip/kategori/ana endekslerin tamamı kilitlidir; eski grafik yeniden hesaplanıp değiştirilmez. Eski sınıflandırma kusurları geçmişte kalır ve bu dönem yeni kurallarla toplanmış gibi sunulmaz.
+
+- API hatası devam eden tarama yayımlanmaz; son başarılı snapshot ve panel state korunur. Aynı gün ciddi tip kapsaması kaybı da önceki gözlemi ezemez. Hata durumu grafiğin üzerinde görünür ve günlük workflow başarısız biter.
+- Beyaz ekmekte kepekli/çok tahıllı/aromalı ekmekler; genel süt panelinde laktozsuz ve aromalı sütler dışarıda bırakılır. Dana kuşbaşı, bütün piliç ve normal domates tanımları da daraltılır. Yanlış eşleşen slotlar üç günlük aday teyidinden sonra kontrollü ikameye alınabilir; ilk ikame fiyat farkı hareket üretmez.
+- Her yeni SKU gözleminde kullanılan depot fiyatları, kaynak tarihleri ve zincir hesabının önceki fiyat/seviye girdileri saklanır ve bağlı fiyat bunlardan yeniden doğrulanır.
+- Kategori ağırlığı kapsaması, ürün kapsamıyla aynı ölçü değildir. Eksik kategoriler ve tek depot üzerinden izlenen ürünlerin payı açıkça raporlanır.
 
 **5 Eylül düzeltmesi:** İlk 25 sonuç sınırı 200'e çıktı. “Ekmeği”, “unu”, “jeli” gibi Türkçe çekimler artık gerçek ürünü elemek için sebep değil. Eksilen SKU/depotların geçmiş fiyat farkını endeksten silen kompozisyon hatası da düzeltildi.
 

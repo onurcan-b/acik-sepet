@@ -1,6 +1,6 @@
 # Metodoloji — v0.4, 5 Eylül 2026 düzeltmesi
 
-Açık Sepet, zincir marketlerde satılan malların günlük fiyat hareketini izleyen deneysel bir çoklu-SKU panel endeksidir. v0.4, ürün sınıflandırmasını sıkılaştırdığı için **2026-09-02 = 100** ile yeni seri başlatır. v0.3 geçmişi değiştirilmez.
+Açık Sepet, zincir marketlerde satılan malların günlük fiyat hareketini izleyen deneysel bir çoklu-SKU panel endeksidir. Aktif serinin bazı **2026-09-05 = 100** olarak korunur. İlk v0.4 denemesi 2 Eylül'de başlamış, 5 Eylül'de sıfırlanmıştır. v0.3 geçmişi değiştirilmez.
 
 ## 1. Ürün tipi ve sınıflandırma
 
@@ -136,3 +136,44 @@ Arama en fazla 8 × 25 sonucu tarar; bu bütün katalogun eksiksiz tarandığı 
 Aktif serinin baz tarihi `config/series.json` içindedir: **2026-09-05 = 100**. Daha eski snapshot'lar saklanır, aktif grafiğe alınmaz. Eksik baz snapshot'ı hata verir; sessizce başka tarihten başlanmaz. Baz günü yeniden taramayla değiştirilmez.
 
 Tarama UTC 05:17, 13:17, 21:17 (Türkiye 08:17, 16:17, 00:17) için planlanır. GitHub Actions planlanan saatten geç başlayabilir. Günlük seri aynı günün son başarılı taramasını kullanır; önceki sürümü arşivlenir. Son gerçek tarama zamanı `latest-errors.json` içindeki `checked_at` alanında tutulur. Kaynak güncelleme tarihi tarama zamanından ayrı değerlendirilir.
+
+## 12. 15 Eylül 2026 kalite düzeltmesi — baz ve geçmiş korunarak
+
+`config/history-lock.json`, 14 Eylül dahil bütün eski snapshot'ların ve
+`data/v0.4/frozen-2026-09-14/` içindeki yayımlanmış üç endeks tablosunun SHA-256
+özetlerini tutar. Yeniden hesaplama ve CI, geçmiş satırların tamamını karşılaştırır;
+yalnızca ilk günün 100 olması yeterli sayılmaz. Baz tarihini, kilit tarihini veya
+korunan gözlemleri değiştirmek yayını durdurur. Yeni ölçümler eski seviyenin üzerine
+ortak slot/kategori değişimleriyle zincirlenir; yeni bir 100 başlangıcı yoktur.
+
+Sınıflandırma kuralları 15 Eylül'den itibaren sıkılaşır. Önceki kurallar
+`config/product_types.pre-2026-09-15.tsv` içinde saklanır; eski gözlemler kendi döneminin
+kurallarıyla doğrulanır. Bu, geçmiş sınıflandırma hatalarını düzelttiğimiz anlamına
+gelmez. Kuralları artık geçmeyen SKU gözlenmiş gibi kullanılmaz; üç ardışık günlük
+aday teyidi sonrası eski slotun son bağlı seviyesine kontrollü ikame yapılabilir.
+Bu özel durumda stok kaybı için kullanılan yedi günlük bekleme aranmaz. Bir anda
+panele farklı fiyatlı ürün sokmak yapay fiyat hareketi yaratmaz. Yeterli ortak slot
+yoksa tip eksik kalır; ana grafiğin çizgisini korumak için fiyat uydurulmaz.
+
+Toplama bir yayın işlemi olarak değerlendirilir: başarısız tipler bir kez daha
+ayrı oturumda denenir. Hata devam ederse yeni snapshot ve panel state yazılmaz.
+Bütün satırlar, minimum kapsama, fiyat kanıtı ve güncellik kontrollerinden geçmeden
+yayımlanmaz. Aynı gün tekrarında daha önce yeterli olan bir tip minimum altına veya
+önceki SKU sayısının %80'i altına düşerse önceki başarılı günlük gözlem korunur.
+Gerçek stok kaybı ertesi günün eksik kapsamında görülebilir; bu koruma önceki günün
+fiyatını bugüne taşımaz. Deneme sonucu `collection-status.json`, hata ayrıntıları
+`latest-errors.json`, tarihli deneme kayıtları `attempts/` içinde tutulur. GitHub
+Actions hatalı denemede durum raporunu korur, fakat başarısız sonuçla biter.
+
+15 Eylül sonrası snapshot'lardaki `collected_at`, gerçek tarama zamanıdır.
+`source_observations`, kullanılan her depotun kimliğini, paket/birim fiyatını ve
+kaynak tarihini saklar. `source_link`, önceki depot fiyatlarını, önceki bağlı paket
+seviyesini ve ikame katsayısını içerir. Validator bu girdilerden bağlı birim fiyatı
+tekrar üretir. Aynı günün önceki snapshot'ları kanıt alanlarıyla birlikte arşivlenir.
+Eski günlerde bu kanıtlar yoktur; geçmiş için tam depot doğrulaması iddia edilmez.
+
+Ürün tanımı değişimi ve yayın kesintileri görünürdür; bu bir ulusal örneklem tasarımı
+veya TÜFE ağırlıklandırması düzeltmesi değildir. Market/şehir kapsamının genişletilmesi
+ayrı bir örneklem tasarımı gerektirir. Güncellik uyarısı ve eksik kategoriler grafiğin
+üstündedir. Endeks CSV'si aynı kaldığında ana SVG aynen korunur; yeni verilerle çizilen
+seride yayımlanamayan tarihler çizgiyle doldurulmaz.

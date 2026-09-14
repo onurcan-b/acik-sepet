@@ -33,6 +33,7 @@ jobs:
       - name: Lock published v0.4 baseline
         shell: bash
         run: |
+          python -m acik_sepet.history
           python - <<'PY'
           import csv
           import json

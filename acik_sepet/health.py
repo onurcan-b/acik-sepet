@@ -33,6 +33,14 @@ def summarize(rows, previous=()):
     warnings = []
     today = sum(age == 0 for age in ages)
     recent = sum(0 <= age <= 3 for age in ages)
+    depot_ages = []
+    for row in rows:
+        for offer in json.loads(row.get("source_observations") or "[]"):
+            try:
+                stamp = datetime.strptime(offer["index_time"], "%d.%m.%Y %H:%M").date()
+                depot_ages.append((date.fromisoformat(day) - stamp).days)
+            except (ValueError, KeyError, TypeError):
+                depot_ages.append(None)
     if rows and today / len(rows) < 0.5:
         warnings.append("Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor.")
     if old and len(common) / len(old) < 0.8:
@@ -41,6 +49,11 @@ def summarize(rows, previous=()):
         "date": day, "rows": len(rows), "source_updated_today": today,
         "source_within_3_days": recent, "source_date_unknown": unknown,
         "source_date_future": sum(age < 0 for age in ages),
+        "depot_observations": len(depot_ages),
+        "depot_source_updated_today": sum(age == 0 for age in depot_ages),
+        "depot_source_date_unknown": sum(age is None for age in depot_ages),
+        "single_source_skus": sum(str(row.get("source_count", "")) == "1" for row in rows),
+        "auditable_skus": sum(bool(row.get("source_observations") and row.get("source_link")) for row in rows),
         "source_age_days": dict(sorted(Counter(ages).items())),
         "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
         "previous_date": max((row["date"] for row in previous), default=None),

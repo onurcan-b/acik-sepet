@@ -1,5 +1,5 @@
 group	id	label	query	unit	target_skus	min_skus	include_tokens	exclude_tokens
-bread_cereals	bread_white	Beyaz ekmek	somun ekmek	mass	18	5	ekmek,beyaz|somun|baget|normal	tost,tam buğday,kepek|kepekli,tahıl,çavdar,yulaf,glutensiz,fındık,üzüm,ceviz,çekirdek,zeytin,organik
+bread_cereals	bread_white	Beyaz ekmek	somun ekmek	mass	18	5	ekmek	tost,tam buğday
 bread_cereals	bread_toast	Tost ekmeği	tost ekmeği	mass	20	5	tost,ekmek
 bread_cereals	bread_wholewheat	Tam buğday ekmeği	tam buğday ekmeği	mass	18	5	tam,buğday,ekmek	tost
 bread_cereals	flour_wheat	Buğday unu	buğday unu	mass	24	6	un	mısır,galeta
@@ -12,10 +12,10 @@ bread_cereals	oats	Yulaf ezmesi	yulaf ezmesi	mass	24	6	yulaf
 bread_cereals	breakfast_cereal	Kahvaltılık gevrek	mısır gevreği	mass	24	6	gevrek
 bread_cereals	semolina	İrmik	irmik	mass	18	5	irmik
 meat	beef_mince	Dana kıyma	dana kıyma	mass	20	5	dana,kıyma	kuzu
-meat	beef_cubes	Dana kuşbaşı / sote	dana kuşbaşı	mass	20	5	dana,kuşbaşı|sote	pastırma,sucuk
+meat	beef_cubes	Dana kuşbaşı / sote	dana kuşbaşı	mass	20	5	dana	pastırma,sucuk
 meat	chicken_breast	Tavuk göğüs	tavuk göğüs	mass	20	5	tavuk,göğüs
 meat	chicken_thigh	Tavuk but / baget	tavuk but	mass	20	5	tavuk,but|baget
-meat	whole_chicken	Bütün piliç	bütün piliç	mass	16	4	piliç,bütün|poşet|fırınlık
+meat	whole_chicken	Bütün piliç	bütün piliç	mass	16	4	piliç
 meat	turkey	Hindi eti	hindi fileto	mass	16	4	hindi	konserve
 meat	sucuk	Sucuk	sucuk	mass	28	7	sucuk
 meat	salami	Salam	salam	mass	24	6	salam
@@ -27,7 +27,7 @@ fish	smoked_salmon	Somon füme	somon füme	mass	10	2	somon,füme
 fish	salmon	Somon fileto	somon	mass	10	2	somon	füme
 fish	frozen_fish	Dondurulmuş balık	dondurulmuş balık	mass	12	3	balık	parmak
 fish	fish_fingers	Balık parmak	balık parmak	mass	10	2	balık,parmak|kroket
-dairy_eggs	milk	İçme sütü	süt 1 litre	volume	30	8	süt	ayran,kefir,krema,laktozsuz,karamel,kakao,çikolata,çilek,muz,vanilya,aroma
+dairy_eggs	milk	İçme sütü	süt 1 litre	volume	30	8	süt	ayran,kefir,krema
 dairy_eggs	milk_lactosefree	Laktozsuz süt	laktozsuz süt	volume	20	5	laktozsuz,süt
 dairy_eggs	yogurt	Yoğurt	yoğurt	mass	30	8	yoğurt	süzme
 dairy_eggs	strained_yogurt	Süzme yoğurt	süzme yoğurt	mass	22	6	süzme,yoğurt
@@ -58,7 +58,7 @@ fruit	melon	Kavun	kavun kg	mass	8	2	kavun
 fruit	strawberry	Çilek	çilek	mass	8	2	çilek
 fruit	kiwi	Kivi	kivi	mass	6	2	kivi
 fruit	avocado	Avokado	avokado adet	count	6	2	avokado
-vegetables	tomato	Domates	domates kg	mass	12	3	domates	cherry,çeri,kokteyl,şeker
+vegetables	tomato	Domates	domates kg	mass	12	3	domates	cherry,çeri,kokteyl
 vegetables	cherry_tomato	Cherry domates	cherry domates	mass	8	2	cherry|çeri|kokteyl,domates
 vegetables	cucumber	Salatalık	salatalık kg	mass	8	2	salatalık
 vegetables	pepper	Biber	biber kg	mass	12	3	biber

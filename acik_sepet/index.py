@@ -194,6 +194,8 @@ def _write(path: Path, rows: list[dict[str, Any]], fields: list[str]) -> None:
 
 
 def rebuild() -> list[dict[str, Any]]:
+    from .history import verify_files, verify_rows
+    verify_files(ROOT)
     specs = load_product_types()
     categories = load_categories()
     baseline_date = json.loads((ROOT / "config" / "series.json").read_text())["baseline_date"]
@@ -204,6 +206,9 @@ def rebuild() -> list[dict[str, Any]]:
     type_rows = build_type_indices(snapshots, specs)
     category_rows = build_category_indices(type_rows, specs, categories)
     index_rows = build_main_index(type_rows, category_rows, categories)
+    # Check all levels before writing any output. Corrections are prospective.
+    for name, rows in (("type_indices.csv", type_rows), ("category_indices.csv", category_rows), ("index.csv", index_rows)):
+        verify_rows(name, rows, ROOT)
     _write(TYPE_PATH, type_rows, ["date", "type_id", "label", "group", "index", "coverage", "skus", "baseline_skus", "baseline_date"])
     _write(CATEGORY_PATH, category_rows, ["date", "group_id", "label", "scope", "weight", "index", "coverage", "types", "baseline_types"])
     _write(INDEX_PATH, index_rows, ["date", "index", "coverage", "types", "skus", "baseline_date"])

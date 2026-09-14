@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 from collections import Counter
 from datetime import date, datetime, timedelta
@@ -64,7 +65,7 @@ def _save(fig: plt.Figure, name: str) -> None:
     CHART_DIR.mkdir(parents=True, exist_ok=True)
     fig.tight_layout()
     path = CHART_DIR / name
-    fig.savefig(path, format="svg", bbox_inches="tight")
+    fig.savefig(path, format="svg", bbox_inches="tight", metadata={"Date": None})
     plt.close(fig)
     # Matplotlib's SVG paths contain harmless trailing spaces that make
     # `git diff --check` noisy. Normalize generated assets at the source.
@@ -77,13 +78,30 @@ def render_charts(
     category_rows: list[dict[str, str]],
     snapshot_rows: list[dict[str, str]],
 ) -> None:
-    plt.rcParams.update({"font.size": 10, "axes.titleweight": "bold", "axes.edgecolor": GRID})
+    plt.rcParams.update({"font.size": 10, "axes.titleweight": "bold", "axes.edgecolor": GRID,
+                         "svg.hashsalt": "acik-sepet-v0.4"})
 
+    fingerprint = hashlib.sha256(INDEX_PATH.read_bytes()).hexdigest() if INDEX_PATH.exists() else ""
+    stamp_path = CHART_DIR / "index-input.sha256"
+    preserve_chart = ((CHART_DIR / "index.svg").exists() and stamp_path.exists()
+                      and stamp_path.read_text().strip() == fingerprint)
+    if not preserve_chart:
+        _render_index_chart(index_rows)
+        stamp_path.write_text(fingerprint + "\n")
+
+    latest_date = max((row["date"] for row in category_rows), default="")
+    latest_categories = [row for row in category_rows if row["date"] == latest_date]
+    _render_coverage_charts(latest_categories, snapshot_rows)
+
+
+def _render_index_chart(index_rows: list[dict[str, str]]) -> None:
     valid = [row for row in index_rows if row.get("index")]
     fig, ax = plt.subplots(figsize=(9, 4.4))
     if valid:
-        dates = [row["date"] for row in valid]
-        values = [float(row["index"]) for row in valid]
+        by_date = {row["date"]: row for row in index_rows}
+        start, end = date.fromisoformat(index_rows[0]["date"]), date.fromisoformat(index_rows[-1]["date"])
+        dates = [(start + timedelta(days=offset)).isoformat() for offset in range((end - start).days + 1)]
+        values = [float(by_date[day]["index"]) if by_date.get(day, {}).get("index") else float("nan") for day in dates]
         ax.plot(dates, values, color=BLUE, linewidth=2.4, marker="o", markersize=5)
         ax.axhline(100, color=INK, linewidth=1, linestyle="--", alpha=0.55)
         ax.set_ylabel("Endeks (baz = 100)")
@@ -101,8 +119,8 @@ def render_charts(
         ax.set_axis_off()
     _save(fig, "index.svg")
 
-    latest_date = max((row["date"] for row in category_rows), default="")
-    latest_categories = [row for row in category_rows if row["date"] == latest_date]
+
+def _render_coverage_charts(latest_categories, snapshot_rows) -> None:
     labels = [row["label"] for row in latest_categories]
     coverage = [float(row["coverage"]) * 100 for row in latest_categories]
     colors = [TEAL if value >= 80 else BLUE if value >= 60 else ORANGE for value in coverage]
@@ -144,7 +162,7 @@ def _stats(index_rows: list[dict[str, str]]) -> str:
     change_7 = _change(index_rows, 7)
     change_30 = _change(index_rows, 30)
     return "\n".join([
-        "| Endeks | Tarih | Aktif tip | Endeks SKU | Kategori kapsaması | 7 gün | 30 gün | Baz |",
+        "| Endeks | Tarih | Aktif tip | Aktif tiplerde SKU | Kategori ağırlığı kapsaması | 7 gün | 30 gün | Baz |",
         "|---:|---|---:|---:|---:|---:|---:|---|",
         f"| **{float(latest['index']):.2f}** | {latest['date']} | {latest['types']} | {latest['skus']} | %{float(latest['coverage']) * 100:.0f} | "
         f"{'—' if change_7 is None else f'{change_7:+.2f}%'} | {'—' if change_30 is None else f'{change_30:+.2f}%'} | {latest['baseline_date']} = 100 |",
@@ -167,7 +185,7 @@ def _movers(type_rows: list[dict[str, str]]) -> str:
     down = sum(pct < -0.005 for pct, _ in changes)
     flat = len(changes) - up - down
     lines = [
-        f"{previous_date} → {latest_date}: **{up} yukarı**, **{down} aşağı**, **{flat} yatay**. Karşılaştırılan tip: {len(changes)}.",
+        f"{previous_date} → {latest_date}: **{up} yukarı**, **{down} aşağı**, **{flat} değişim gözlenmedi**. Karşılaştırılan tip: {len(changes)}. Kaynak güncelliği aşağıda ayrıca gösterilir.",
         "",
         "| Ürün tipi | SKU | Değişim |",
         "|---|---:|---:|",
@@ -217,7 +235,7 @@ def _gaps(type_rows: list[dict[str, str]], snapshot_rows: list[dict[str, str]]) 
     if not missing:
         return "Bütün ürün tipleri kendi minimum SKU eşiğini geçti."
     lines = [
-        f"**{len(missing)} ürün tipi** minimum eşiğin altında. Yanlış ürünle doldurulmadılar; endekse girmiyorlar.",
+        f"**{len(missing)} ürün tipi** yeterli gözlem veya ortak panel bağlantısı olmadığı için yayımlanamadı. Tarama hataları ve kaynak güncelliği ayrıca raporlanır.",
         "",
         "| Ürün tipi | Gözlenen | Minimum | API kategori filtresi |",
         "|---|---:|---:|---|",
@@ -255,8 +273,42 @@ def _quality(snapshot_rows: list[dict[str, str]]) -> str:
         f"- **{refined}/{len(snapshot_rows)}** miktar doğrudan API'nin normalize alanından",
         f"- **{api_units}/{len(snapshot_rows)}** satırda birim fiyat API değeriyle ayrıca kontrol edildi",
         f"- **{pinned}/{len(snapshot_rows)}** gözlem sabit depot relatifleriyle bağlı",
+        f"- **{health['single_source_skus']}/{len(snapshot_rows)}** SKU yalnızca bir depot üzerinden izleniyor; market etiketleri ulusal temsiliyet sağlamaz",
+        f"- **{health['auditable_skus']}/{len(snapshot_rows)}** SKU için depot fiyatları, kaynak tarihleri ve bağlantı girdileri saklanıyor (15 Eylül'den itibaren)",
         f"- **{renewals}** bridge edilmiş panel yenilemesi (yeni baseline'da doğal olarak sıfır)",
     ])
+
+
+def _status(index_rows, category_rows, snapshot_rows) -> str:
+    from .health import summarize
+    if not index_rows:
+        return "İlk gözlem bekleniyor."
+    latest = index_rows[-1]
+    health = summarize(snapshot_rows)
+    attempt_path = DATA_DIR / "collection-status.json"
+    if not attempt_path.exists():
+        attempt_path = DATA_DIR / "latest-errors.json"
+    attempt = json.loads(attempt_path.read_text()) if attempt_path.exists() else {}
+    rejected = attempt.get("status") == "rejected"
+    failed_types = [e["type_id"] for e in attempt.get("errors", [])]
+    missing = [r["label"] for r in category_rows if r["date"] == latest["date"] and not r.get("index")]
+    partial = bool(missing or failed_types)
+    label = "Tarama başarısız; önceki yayın korundu" if rejected else "Eksik kapsam" if partial else "Yayınlandı"
+    lines = [f"> **Veri durumu: {label}.** Son seri noktası: **{latest['date']}**. "
+             f"Kategori ağırlığı kapsaması: **%{float(latest['coverage']) * 100:.0f}**."]
+    if attempt.get("checked_at"):
+        lines.append(f"> Son tarama girişimi: {attempt['checked_at']}.")
+    if failed_types:
+        lines.append(f"> **{len(failed_types)} ürün tipinde API hatası** var; bu, ürünlerin katalogda bulunmadığı anlamına gelmez.")
+    if rejected and attempt.get("reason"):
+        lines.append("> Başarısız tarama gözlemleri endekse eklenmedi; ayrıntı: [tarama durumu](data/v0.4/collection-status.json).")
+    if missing:
+        lines.append("> Yayımlanamayan kategoriler: " + "; ".join(missing) + ".")
+    if health["source_updated_today"] < len(snapshot_rows) * 0.5:
+        lines.append(f"> Kaynak tarihi seri günüyle aynı olan SKU: **{health['source_updated_today']}/{len(snapshot_rows)}**. "
+                     "Yatay çizgi, raf fiyatlarının bugün yeniden teyit edildiğini göstermez.")
+    lines.append("> Baz korunuyor: **2026-09-05 = 100**. 5–14 Eylül geçmişi kilitli; sınıflandırma düzeltmeleri 15 Eylül'den itibaren geçerli.")
+    return "\n".join(lines)
 
 
 def main() -> None:
@@ -266,6 +318,7 @@ def main() -> None:
     snapshot_rows = _latest_snapshot()
     render_charts(index_rows, category_rows, snapshot_rows)
     text = README_PATH.read_text(encoding="utf-8")
+    text = _replace(text, "<!-- STATUS_START -->", "<!-- STATUS_END -->", _status(index_rows, category_rows, snapshot_rows))
     text = _replace(text, "<!-- STATS_START -->", "<!-- STATS_END -->", _stats(index_rows))
     text = _replace(text, "<!-- MOVERS_START -->", "<!-- MOVERS_END -->", _movers(type_rows))
     text = _replace(
@@ -282,4 +335,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

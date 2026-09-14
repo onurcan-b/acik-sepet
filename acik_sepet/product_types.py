@@ -55,3 +55,12 @@ def load_product_types(
 
 def load_categories(path: Path = CATEGORIES_PATH) -> list[dict[str, Any]]:
     return json.loads(path.read_text(encoding="utf-8"))["categories"]
+
+
+def load_product_types_for_date(day: str) -> list[dict[str, Any]]:
+    """Validate old observations under the rules that collected them."""
+    series = json.loads((ROOT / "config/series.json").read_text())
+    effective = series.get("matching_effective_from")
+    if effective and day < effective:
+        return load_product_types(ROOT / "config" / f"product_types.pre-{effective}.tsv")
+    return load_product_types()

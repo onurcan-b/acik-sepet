@@ -36,20 +36,37 @@ jobs:
       - name: Install
         run: pip install -r requirements.txt
       - name: Tests
+        id: tests
         run: pytest -q
       - name: Collect strict category-aware multi-SKU panels
+        id: collect
+        continue-on-error: true
         run: python -m acik_sepet.collect --refresh
+      - name: Restore published data after any collection failure
+        if: always() && steps.collect.outcome == 'failure'
+        run: |
+          git restore -- data/v0.4/snapshots/ state/v0.4-panels.json
+          git clean -f -- data/v0.4/snapshots/
       - name: Validate panel quality
+        if: steps.collect.outcome == 'success'
         run: python -m acik_sepet.validate --min-type-coverage 0.60 --min-skus 300
       - name: Check source freshness and write diagnostics
+        if: steps.collect.outcome == 'success'
         run: python -m acik_sepet.health
-      - name: Rebuild indices and README
-        run: |
-          python -m acik_sepet.index
-          python -m acik_sepet.report
+      - name: Rebuild indices
+        id: rebuild
+        if: steps.collect.outcome == 'success'
+        run: python -m acik_sepet.index
+      - name: Report publication and collection status
+        id: report
+        if: always() && steps.tests.outcome == 'success'
+        run: python -m acik_sepet.report
       - name: Guard v0.4 baseline and analytics charts
+        id: guard
+        if: always() && steps.tests.outcome == 'success'
         shell: bash
         run: |
+          python -m acik_sepet.history
           python - <<'PY'
           import csv
           import json
@@ -72,12 +89,21 @@ jobs:
           print("v0.4 baseline and charts are stable")
           PY
       - name: Source-file whitespace sanity
+        id: whitespace
         run: git diff --check -- acik_sepet tests .github config README.md METHOD.md
       - name: Commit updated observations
+        if: always() && steps.guard.outcome == 'success' && steps.report.outcome == 'success' && steps.whitespace.outcome == 'success' && (steps.collect.outcome == 'failure' || steps.rebuild.outcome == 'success')
+        env:
+          COLLECTION_OUTCOME: ${{ steps.collect.outcome }}
         run: |
           git config user.name "acik-sepet-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/v0.4/ state/v0.4-panels.json charts/*.svg README.md
+          if [ "$COLLECTION_OUTCOME" = "success" ]; then
+            git add data/v0.4/ state/v0.4-panels.json
+          else
+            git add --all -- data/v0.4/latest-errors.json data/v0.4/collection-status.json data/v0.4/attempts/
+          fi
+          git add charts/ README.md
           if git diff --cached --quiet; then
             echo "No changes"
             exit 0
@@ -90,3 +116,8 @@ jobs:
             exit 1
           }
           git push origin main
+      - name: Fail an incomplete collection
+        if: always() && steps.collect.outcome == 'failure'
+        run: |
+          echo "Collection rejected. Diagnostic status was retained; no failed scrape was published."
+          exit 1
