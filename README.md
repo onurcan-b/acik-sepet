@@ -11,7 +11,7 @@ Markette fiyatlar gerçekten ne kadar oynuyor? “Bana öyle geliyor” kısmın
 
 <!-- STATUS_START -->
 > **Veri durumu: Kısmi güncelleme; bazı tiplerde gün içindeki önceki ölçüm korundu.** Son seri noktası: **2026-09-15**. Kategori ağırlığı kapsaması: **%89**.
-> Son tarama girişimi: 2026-09-15T14:34:34.197612+03:00.
+> Son tarama girişimi: 2026-09-15T20:46:52.978277+03:00.
 > Aynı günün önceki ölçümü kullanılan tipler: Maydanoz (2026-09-15T02:55:54.015399+03:00, 2026-09-15T02:55:54.015413+03:00); Islak mendil (2026-09-15T02:58:59.682174+03:00, 2026-09-15T02:58:59.682187+03:00, 2026-09-15T02:58:59.682190+03:00, 2026-09-15T02:58:59.682192+03:00, 2026-09-15T02:58:59.682194+03:00, 2026-09-15T02:58:59.682196+03:00, 2026-09-15T02:58:59.682198+03:00). Diğer tipler son taramayla güncellendi.
 > Yayımlanamayan kategoriler: Sebze.
 > Baz korunuyor: **2026-09-05 = 100**. 5–14 Eylül geçmişi kilitli; sınıflandırma düzeltmeleri 15 Eylül'den itibaren geçerli.
