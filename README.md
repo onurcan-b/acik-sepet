@@ -10,8 +10,9 @@ Markette fiyatlar gerçekten ne kadar oynuyor? “Bana öyle geliyor” kısmın
 > Bu resmî TÜFE değil. Kira, ulaşım, sağlık, eğitim ve hizmetler yok. Burada yalnızca market rafındaki malların fiyat hareketini olabildiğince temiz ve denetlenebilir biçimde ölçüyoruz.
 
 <!-- STATUS_START -->
-> **Veri durumu: Eksik kapsam.** Son seri noktası: **2026-09-15**. Kategori ağırlığı kapsaması: **%74**.
-> Son tarama girişimi: 2026-09-15T02:59:00.958922+03:00.
+> **Veri durumu: Tarama başarısız; önceki yayın korundu.** Son seri noktası: **2026-09-15**. Kategori ağırlığı kapsaması: **%74**.
+> Son tarama girişimi: 2026-09-15T13:13:11.863399+03:00.
+> Başarısız tarama gözlemleri endekse eklenmedi; ayrıntı: [tarama durumu](data/v0.4/collection-status.json).
 > Yayımlanamayan kategoriler: Et ve et ürünleri; Sebze.
 > Kaynak tarihi seri günüyle aynı olan SKU: **0/1633**. Yatay çizgi, raf fiyatlarının bugün yeniden teyit edildiğini göstermez.
 > Baz korunuyor: **2026-09-05 = 100**. 5–14 Eylül geçmişi kilitli; sınıflandırma düzeltmeleri 15 Eylül'den itibaren geçerli.
