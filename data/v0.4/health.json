@@ -1230,29 +1230,45 @@
   },
   {
     "date": "2026-09-15",
-    "rows": 1633,
-    "source_updated_today": 0,
-    "source_within_3_days": 1633,
+    "rows": 1620,
+    "source_updated_today": 1611,
+    "source_within_3_days": 1620,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2030,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2007,
+    "depot_source_updated_today": 1997,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1357,
-    "auditable_skus": 1633,
+    "single_source_skus": 1351,
+    "auditable_skus": 1620,
     "source_age_days": {
-      "1": 1633
+      "0": 1611,
+      "1": 9
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-09-14",
-    "matched_slots": 1385,
-    "missing_slots": 58,
-    "new_slots": 248,
+    "matched_slots": 1367,
+    "missing_slots": 76,
+    "new_slots": 253,
     "large_price_moves": [
       {
-        "slot_id": "id:1S7U",
-        "title": "Jacobs Monarch Filtre Kahve 500 Gr",
-        "change_pct": 152.03
+        "slot_id": "id:08IT",
+        "title": "Fasulye Taze 1 Kg",
+        "change_pct": 66.78
+      },
+      {
+        "slot_id": "id:07G3",
+        "title": "Piliç Salam 1 Kg",
+        "change_pct": 58.67
+      },
+      {
+        "slot_id": "id:0PFE",
+        "title": "Biryağ Ayçiçek Yağı 2 Lt",
+        "change_pct": 54.48
+      },
+      {
+        "slot_id": "id:1J2Q",
+        "title": "Dondurulmuş Piliç Kasap Köfte 1 Kg",
+        "change_pct": 50.36
       },
       {
         "slot_id": "id:1839",
@@ -1265,19 +1281,99 @@
         "change_pct": 50.17
       },
       {
+        "slot_id": "id:1QHC",
+        "title": "Dardanel Soğutulmuş Somon Füme Balık 80 Gr",
+        "change_pct": 45.02
+      },
+      {
+        "slot_id": "id:0G6D",
+        "title": "Lezita Taze Poşetli Bütün Piliç 1 Kg",
+        "change_pct": 43.2
+      },
+      {
+        "slot_id": "id:203B",
+        "title": "Kühne Balsamik Sirke 500 Ml",
+        "change_pct": 42.85
+      },
+      {
+        "slot_id": "id:12DX",
+        "title": "Kemal Kükrer Beyaz Sirke 2 Lt",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:002E",
+        "title": "Emin %20 Yağlı Dana Kıyma 400 Gr",
+        "change_pct": 38.66
+      },
+      {
+        "slot_id": "id:0EVV",
+        "title": "Mandalina 1 Kg",
+        "change_pct": -37.55
+      },
+      {
+        "slot_id": "id:1RZO",
+        "title": "Koroplast Küçük Boy Çöp Torbası 30 Adet",
+        "change_pct": 36.89
+      },
+      {
+        "slot_id": "id:0GJW",
+        "title": "Parex Güçlü Çöp Torbası Battal 10 Adet",
+        "change_pct": -35.02
+      },
+      {
+        "slot_id": "id:0JGT",
+        "title": "Parex Ekstra Dayanıklı Çöp Torbası Battal 7 Adet",
+        "change_pct": -35.01
+      },
+      {
+        "slot_id": "id:09LV",
+        "title": "Parex Büzgülü Çöp Torbası Orta Boy Limon Kokulu 15 Adet",
+        "change_pct": -34.97
+      },
+      {
         "slot_id": "id:1M8O",
         "title": "Nesfit Ballı Bademli Gevrek 480 Gr",
         "change_pct": -34.9
       },
       {
-        "slot_id": "id:0MJW",
-        "title": "Pol's Gurme Şeker İlavesiz Vişne Reçeli 285 Gr",
-        "change_pct": -33.59
+        "slot_id": "id:1EOI",
+        "title": "Sarı Kavun 1 Kg",
+        "change_pct": 34.48
+      },
+      {
+        "slot_id": "id:1T29",
+        "title": "Knorr Çabuk Çorba Kıtır Kremalı Tavuk 18 Gr",
+        "change_pct": 33.35
+      },
+      {
+        "slot_id": "id:214J",
+        "title": "Ace Klasik Çamaşır Suyu 5 Lt",
+        "change_pct": -33.34
       },
       {
         "slot_id": "id:1YQN",
         "title": "Tat Yoğun Lezzet Mayonez 550 Gr",
         "change_pct": 32.8
+      },
+      {
+        "slot_id": "id:1EOA",
+        "title": "Çekirdeksiz Üzüm 1 Kg",
+        "change_pct": 32.32
+      },
+      {
+        "slot_id": "id:1OB8",
+        "title": "Cook Büzgülü Çöp Torbası Büyük Limon Kokulu 10 Adet",
+        "change_pct": -31.26
+      },
+      {
+        "slot_id": "id:05L8",
+        "title": "Emin Dondurulmuş Hamburger Köftesi 225 Gr",
+        "change_pct": 29.63
+      },
+      {
+        "slot_id": "id:1ISV",
+        "title": "Domates Pembe 1 Kg",
+        "change_pct": 26.42
       },
       {
         "slot_id": "id:0SGA",
@@ -1305,6 +1401,21 @@
         "change_pct": -25.0
       },
       {
+        "slot_id": "id:1OPU",
+        "title": "Tikveşli %18 Yağlı Krema 200 Ml",
+        "change_pct": -24.99
+      },
+      {
+        "slot_id": "id:1M71",
+        "title": "Şeftali 1 Kg",
+        "change_pct": 24.03
+      },
+      {
+        "slot_id": "id:1YPF",
+        "title": "Santa Maria Armut 1 Kg",
+        "change_pct": 23.98
+      },
+      {
         "slot_id": "id:3W9R",
         "title": "Üzüm 1 Kg",
         "change_pct": 23.66
@@ -1320,6 +1431,16 @@
         "change_pct": -23.31
       },
       {
+        "slot_id": "id:1W72",
+        "title": "Becel Zeytinyağlı Kase Margarin 250 Gr",
+        "change_pct": -22.51
+      },
+      {
+        "slot_id": "id:03FV",
+        "title": "Emin Dondurulmuş Kaşarlı Kasap Köfte 500 Gr",
+        "change_pct": 22.46
+      },
+      {
         "slot_id": "id:1YWA",
         "title": "Eti Bumbo Portakal Aromalı Kakaolu Bisküvi 42 Gr",
         "change_pct": 21.27
@@ -1330,9 +1451,29 @@
         "change_pct": 20.84
       },
       {
+        "slot_id": "id:0JDD",
+        "title": "Soğan 1 Kg",
+        "change_pct": 20.38
+      },
+      {
         "slot_id": "id:1NNM",
         "title": "Becel Tereyağı Keyfi Kase Margarin 500 Gr",
         "change_pct": -20.27
+      },
+      {
+        "slot_id": "id:01PV",
+        "title": "Bili Bili Yumurta 15 Adet",
+        "change_pct": 20.25
+      },
+      {
+        "slot_id": "id:034L",
+        "title": "Sivri Domates 1 Kg",
+        "change_pct": -20.04
+      },
+      {
+        "slot_id": "id:0O22",
+        "title": "Uzman Kasap Dondurulmuş Mangal Köfte 500 Gr",
+        "change_pct": -20.0
       },
       {
         "slot_id": "id:1B1G",
@@ -1340,8 +1481,6 @@
         "change_pct": 20.0
       }
     ],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "warnings": []
   }
 ]

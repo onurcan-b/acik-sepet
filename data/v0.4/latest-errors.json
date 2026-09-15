@@ -1,9 +1,9 @@
 {
   "date": "2026-09-15",
-  "checked_at": "2026-09-15T13:13:11.863399+03:00",
-  "status": "rejected",
+  "checked_at": "2026-09-15T14:34:34.197612+03:00",
+  "status": "published_with_retained_types",
   "errors": [],
-  "reason": "Same-day coverage regression for garlic: 4 -> 3",
+  "source_updated_today": 1611,
   "observed_skus": 1617,
   "recovered_types": [],
   "observed_by_type": {
@@ -137,5 +137,35 @@
     "paper_towel": 18,
     "wet_wipes": 5,
     "tissues": 11
-  }
+  },
+  "retained_same_day_types": [
+    {
+      "type_id": "parsley",
+      "label": "Maydanoz",
+      "reason": "Same-day coverage regression for parsley: 2 -> 1",
+      "new_observed_skus": 1,
+      "retained_skus": 2,
+      "collected_at": [
+        "2026-09-15T02:55:54.015399+03:00",
+        "2026-09-15T02:55:54.015413+03:00"
+      ]
+    },
+    {
+      "type_id": "wet_wipes",
+      "label": "Islak mendil",
+      "reason": "Same-day coverage regression for wet_wipes: 7 -> 5",
+      "new_observed_skus": 5,
+      "retained_skus": 7,
+      "collected_at": [
+        "2026-09-15T02:58:59.682174+03:00",
+        "2026-09-15T02:58:59.682187+03:00",
+        "2026-09-15T02:58:59.682190+03:00",
+        "2026-09-15T02:58:59.682192+03:00",
+        "2026-09-15T02:58:59.682194+03:00",
+        "2026-09-15T02:58:59.682196+03:00",
+        "2026-09-15T02:58:59.682198+03:00"
+      ]
+    }
+  ],
+  "published_skus": 1620
 }
