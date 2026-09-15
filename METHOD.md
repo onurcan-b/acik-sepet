@@ -158,8 +158,11 @@ yoksa tip eksik kalır; ana grafiğin çizgisini korumak için fiyat uydurulmaz.
 Toplama bir yayın işlemi olarak değerlendirilir: başarısız tipler bir kez daha
 ayrı oturumda denenir. Hata devam ederse yeni snapshot ve panel state yazılmaz.
 Bütün satırlar, minimum kapsama, fiyat kanıtı ve güncellik kontrollerinden geçmeden
-yayımlanmaz. Aynı gün tekrarında daha önce yeterli olan bir tip minimum altına veya
-önceki SKU sayısının %80'i altına düşerse önceki başarılı günlük gözlem korunur.
+yayımlanmaz. Aynı gün tekrarında daha önce yeterli olan bir tip minimum altına veya en az iki
+SKU kaybederek önceki sayısının %80'i altına düşerse yalnızca o tipin aynı günkü
+önceki gözlemleri ve panel state korunur. Tek SKU kaybı minimum eşiği bozmadıkça
+normal panel değişimi sayılır. Diğer tipler güncellenir; korunmuş tiplerin gerçek
+tarama zamanları raporda görünür. Fiyatlar farklı bir güne taşınmaz.
 Gerçek stok kaybı ertesi günün eksik kapsamında görülebilir; bu koruma önceki günün
 fiyatını bugüne taşımaz. Deneme sonucu `collection-status.json`, hata ayrıntıları
 `latest-errors.json`, tarihli deneme kayıtları `attempts/` içinde tutulur. GitHub
@@ -177,3 +180,14 @@ veya TÜFE ağırlıklandırması düzeltmesi değildir. Market/şehir kapsamın
 ayrı bir örneklem tasarımı gerektirir. Güncellik uyarısı ve eksik kategoriler grafiğin
 üstündedir. Endeks CSV'si aynı kaldığında ana SVG aynen korunur; yeni verilerle çizilen
 seride yayımlanamayan tarihler çizgiyle doldurulmaz.
+
+
+## 13. 15 Eylül tarama düzeltmesi
+
+İlk koruma kuralı, sarımsak panelinin 4 SKU’dan 3 SKU’ya düşmesini bütün taramayı
+reddetme sebebi sayıyordu. 15 Eylül’de 1617 geçerli gözlem ve sıfır API hatası olmasına
+rağmen bu nedenle gün içi güncelleme engellendi. Koruma artık ürün tipi düzeyindedir:
+normal tek-SKU kaybı kabul edilir; minimum veya ciddi kapsama kaybında aynı günün
+önceki başarılı tip ölçümü kendi tarama zamanı ve zincir state’iyle korunur.
+Bu kısmi güncelleme README ve Actions uyarısında açıkça görünür. API, fiyat kanıtı,
+güncellik ve tarihsel veri kontrolleri başarısız olduğunda tüm yayın hâlâ durur.

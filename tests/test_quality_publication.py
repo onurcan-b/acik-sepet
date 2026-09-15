@@ -231,3 +231,69 @@ def test_report_reveals_collection_failure_instead_of_fresh_flat_prices(tmp_path
         [{'date': '2026-09-14', 'slot_id': 'a', 'source_updated_at': '13.09.2026 08:00'}])
     assert 'Tarama başarısız; önceki yayın korundu' in text
     assert '0/1' in text and 'Kişisel bakım' in text
+
+
+def test_one_sku_loss_in_small_panel_is_not_a_publication_failure():
+    garlic = {**spec(), 'id': 'garlic', 'min_skus': 2}
+    before = [{'type_id': 'garlic'}] * 4
+    assert collect._refresh_regression(before, before[:3], [garlic]) is None
+    assert collect._refresh_regression(before, before[:1], [garlic]) is not None
+
+
+@pytest.mark.parametrize('remaining,retain', [(3, False), (1, True)])
+def test_same_day_drop_preserves_only_affected_type_and_its_state(collector, monkeypatch, remaining, retain):
+    snapshots, panel, _ = collector
+    specs = [{**spec(), 'min_skus': 2}, {**spec(), 'id': 'other', 'query': 'other', 'label': 'Other'}]
+    states = {}
+    previous_rows = []
+    for current_spec, items in [(specs[0], [item(str(i)) for i in range(4)]), (specs[1], [item('other', 200)])]:
+        state, rows = collect._initialize_type(items, current_spec, set(), '2026-09-15')
+        states[current_spec['id']] = state
+        for row in rows:
+            row.update(date='2026-09-15', type_id=current_spec['id'], type_label=current_spec['label'],
+                       group='g', collected_at='2026-09-15T09:00:00+03:00', match_score=row.pop('score'))
+        previous_rows.extend(rows)
+    panel.write_text(json.dumps({'types': states}))
+    original = copy.deepcopy(states)
+    (snapshots / '2026-09-14.csv').write_text('date,slot_id,product_key,linked_unit_price\n')
+    with (snapshots / '2026-09-15.csv').open('w') as handle:
+        writer = csv.DictWriter(handle, fieldnames=previous_rows[0].keys())
+        writer.writeheader(); writer.writerows(previous_rows)
+    monkeypatch.setattr(collect, 'load_product_types_for_date', lambda _: specs)
+    monkeypatch.setattr(collect, 'search_products', lambda query, **kwargs:
+                        [item('other', 220)] if query == 'other' else [item(str(i), 110) for i in range(remaining)])
+    published = collect.collect(refresh=True)
+    output = list(csv.DictReader(published.open()))
+    status = json.loads((snapshots.parent / 'collection-status.json').read_text())
+    saved_states = json.loads(panel.read_text())['types']
+    milk = [r for r in output if r['type_id'] == 'milk']
+    other = [r for r in output if r['type_id'] == 'other']
+    assert float(other[0]['linked_unit_price']) == 220
+    if retain:
+        assert saved_states['milk'] == original['milk']
+        assert len(milk) == 4
+        assert all(r['collected_at'] == '2026-09-15T09:00:00+03:00' and float(r['linked_unit_price']) == 100 for r in milk)
+        assert status['status'] == 'published_with_retained_types'
+        assert [r['type_id'] for r in status['retained_same_day_types']] == ['milk']
+    else:
+        assert len(milk) == 3
+        assert all(float(r['linked_unit_price']) == 110 for r in milk)
+        assert status['status'] == 'published'
+    for row in output: validate_source_evidence(row)
+
+
+def test_retention_never_carries_yesterdays_observations():
+    old = [{'type_id': 'milk', 'date': '2026-09-14', 'collected_at': '2026-09-14T09:00:00+03:00'}]
+    current, state = {'milk': []}, {'milk': {'value': 'new'}}
+    retained = collect._retain_same_day_types(old, current, state, {'milk': {'value': 'old'}}, [spec()], '2026-09-15')
+    assert retained == [] and current['milk'] == [] and state['milk']['value'] == 'new'
+
+
+def test_status_discloses_retained_measurement_time(tmp_path, monkeypatch):
+    from acik_sepet import report
+    monkeypatch.setattr(report, 'DATA_DIR', tmp_path)
+    (tmp_path / 'collection-status.json').write_text(json.dumps({
+        'status': 'published_with_retained_types', 'errors': [],
+        'retained_same_day_types': [{'label': 'Maydanoz', 'collected_at': ['2026-09-15T03:00:00+03:00']}]}))
+    text = report._status([{'date': '2026-09-15', 'coverage': '0.74'}], [], [])
+    assert 'Kısmi güncelleme' in text and 'Maydanoz' in text and '03:00:00' in text

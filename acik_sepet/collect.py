@@ -623,7 +623,8 @@ def _observe_type(
         provisional["replaced_on"] = today
         provisional["last_linked_unit_price"] = replacement_row["linked_unit_price"]
         active[active.index(old)] = provisional
-        claimed.discard(old_key)
+        # Keep original keys reserved until the entire run commits. A type may
+        # need to restore its earlier same-day panel after a coverage dropout.
         claimed.add(new_key)
         state.get("candidates", {}).pop(new_key, None)
         observed.append(replacement_row)
@@ -657,9 +658,37 @@ def _refresh_regression(previous: list[dict], current: list[dict], specs: list[d
         new[row["type_id"]] = new.get(row["type_id"], 0) + 1
     for spec in specs:
         before, after = old[spec["id"]], new[spec["id"]]
-        if before >= spec["min_skus"] and (after < spec["min_skus"] or after < before * 0.8):
+        large_drop = before - after >= 2 and after < before * 0.8
+        if before >= spec["min_skus"] and (after < spec["min_skus"] or large_drop):
             return f"Same-day coverage regression for {spec['id']}: {before} -> {after}"
     return None
+
+
+def _retain_same_day_types(previous, output_by_type, types_state, original_types, specs, today):
+    """Retain only an affected type, including its exact link state and timestamp."""
+    retained = []
+    for spec in specs:
+        key = spec["id"]
+        old = [row for row in previous if row["type_id"] == key]
+        current = output_by_type.get(key, [])
+        reason = _refresh_regression(old, current, [spec])
+        if not reason or key not in original_types:
+            continue
+        # Never relabel a previous day's prices as today's observations.
+        try:
+            same_day = all(row["date"] == today and
+                           datetime.fromisoformat(row["collected_at"]).astimezone(TR_TZ).date().isoformat() == today
+                           for row in old)
+        except (KeyError, ValueError, TypeError):
+            same_day = False
+        if not old or not same_day:
+            continue
+        output_by_type[key] = copy.deepcopy(old)
+        types_state[key] = copy.deepcopy(original_types[key])
+        retained.append({"type_id": key, "label": spec["label"], "reason": reason,
+                         "new_observed_skus": len(current), "retained_skus": len(old),
+                         "collected_at": sorted({row["collected_at"] for row in old})})
+    return retained
 
 
 def collect(refresh: bool = False) -> Path:
@@ -691,6 +720,7 @@ def collect(refresh: bool = False) -> Path:
         "max_replacement_share": MAX_REPLACEMENT_SHARE,
     }
     types_state = panel_state.setdefault("types", {})
+    original_types = copy.deepcopy(types_state)
     historical_levels = _historical_levels()
     claimed = {str(sku["product_key"]) for state in types_state.values()
                for sku in state.get("skus", []) if sku.get("product_key")}
@@ -747,6 +777,15 @@ def collect(refresh: bool = False) -> Path:
         raise SystemExit("Toplama eksik: eski gözlemler ve panel state korundu; yeni endeks yayımlanmadı")
 
     try:
+        retained = []
+        if existing.exists():
+            with existing.open(newline="", encoding="utf-8") as handle:
+                previous_rows = list(csv.DictReader(handle))
+            retained = _retain_same_day_types(previous_rows, output_by_type, types_state,
+                                             original_types, specs, today)
+            output_rows = [row for spec in specs for row in output_by_type.get(spec["id"], [])]
+            details["retained_same_day_types"] = retained
+            details["published_skus"] = len(output_rows)
         validate_rows(output_rows, today, specs=specs)
         health = summarize(output_rows)
         if health["source_date_future"] or health["source_within_3_days"] < len(output_rows) * 0.60:
@@ -782,7 +821,10 @@ def collect(refresh: bool = False) -> Path:
     staged_state.write_text(json.dumps(panel_state, ensure_ascii=False, separators=(",", ":")) + "\n")
     staged.replace(existing)
     staged_state.replace(PANEL_PATH)
-    _record_attempt(today, [], "published", source_updated_today=health["source_updated_today"], **details)
+    status = "published_with_retained_types" if retained else "published"
+    _record_attempt(today, [], status, source_updated_today=health["source_updated_today"], **details)
+    if retained:
+        print("::warning::Earlier same-day observations retained for: " + ", ".join(row["type_id"] for row in retained))
     print(f"snapshot={existing.name} observed_skus={len(output_rows)} errors=0 recovered={len(recovered)}")
     return existing
 

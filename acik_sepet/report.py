@@ -291,15 +291,21 @@ def _status(index_rows, category_rows, snapshot_rows) -> str:
     attempt = json.loads(attempt_path.read_text()) if attempt_path.exists() else {}
     rejected = attempt.get("status") == "rejected"
     failed_types = [e["type_id"] for e in attempt.get("errors", [])]
+    retained = attempt.get("retained_same_day_types", [])
     missing = [r["label"] for r in category_rows if r["date"] == latest["date"] and not r.get("index")]
     partial = bool(missing or failed_types)
-    label = "Tarama başarısız; önceki yayın korundu" if rejected else "Eksik kapsam" if partial else "Yayınlandı"
+    label = ("Tarama başarısız; önceki yayın korundu" if rejected else
+             "Kısmi güncelleme; bazı tiplerde gün içindeki önceki ölçüm korundu" if retained else
+             "Eksik kapsam" if partial else "Yayınlandı")
     lines = [f"> **Veri durumu: {label}.** Son seri noktası: **{latest['date']}**. "
              f"Kategori ağırlığı kapsaması: **%{float(latest['coverage']) * 100:.0f}**."]
     if attempt.get("checked_at"):
         lines.append(f"> Son tarama girişimi: {attempt['checked_at']}.")
     if failed_types:
         lines.append(f"> **{len(failed_types)} ürün tipinde API hatası** var; bu, ürünlerin katalogda bulunmadığı anlamına gelmez.")
+    if retained:
+        labels = "; ".join(f"{row['label']} ({', '.join(row['collected_at'])})" for row in retained)
+        lines.append("> Aynı günün önceki ölçümü kullanılan tipler: " + labels + ". Diğer tipler son taramayla güncellendi.")
     if rejected and attempt.get("reason"):
         lines.append("> Başarısız tarama gözlemleri endekse eklenmedi; ayrıntı: [tarama durumu](data/v0.4/collection-status.json).")
     if missing:
