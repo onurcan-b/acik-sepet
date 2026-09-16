@@ -1,139 +1,10 @@
 {
   "date": "2026-09-16",
-  "checked_at": "2026-09-16T02:41:45.543763+03:00",
-  "status": "rejected",
-  "errors": [
-    {
-      "type_id": "black_tea",
-      "error": "'siyah çay' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "turkish_coffee",
-      "error": "'türk kahvesi' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "instant_coffee",
-      "error": "'granül kahve' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "filter_coffee",
-      "error": "'filtre kahve' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "cola",
-      "error": "'kola' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "fruit_juice",
-      "error": "'meyve suyu' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "iced_tea",
-      "error": "'soğuk çay' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "mineral_water",
-      "error": "'maden suyu' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "water",
-      "error": "'su' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "energy_drink",
-      "error": "'enerji içeceği' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "soda",
-      "error": "'gazoz' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "dish_liquid",
-      "error": "'bulaşık deterjanı sıvı' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "dishwasher_tabs",
-      "error": "'bulaşık makinesi tableti' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "laundry_powder",
-      "error": "'toz çamaşır deterjanı' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "laundry_liquid",
-      "error": "'sıvı çamaşır deterjanı' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "softener",
-      "error": "'çamaşır yumuşatıcı' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "bleach",
-      "error": "'çamaşır suyu' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "surface_cleaner",
-      "error": "'yüzey temizleyici' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "garbage_bags",
-      "error": "'çöp torbası' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "sponge",
-      "error": "'bulaşık süngeri' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "cleaning_cloth",
-      "error": "'temizlik bezi' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "shampoo",
-      "error": "'şampuan' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "shower_gel",
-      "error": "'duş jeli' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "soap_liquid",
-      "error": "'sıvı sabun' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "soap_bar",
-      "error": "'katı sabun' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "toothpaste",
-      "error": "'diş macunu' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "toothbrush",
-      "error": "'diş fırçası' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "deodorant",
-      "error": "'deodorant' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "toilet_paper",
-      "error": "'tuvalet kağıdı' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "paper_towel",
-      "error": "'kağıt havlu' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "wet_wipes",
-      "error": "'ıslak mendil' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "type_id": "tissues",
-      "error": "'kağıt mendil' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    }
-  ],
-  "reason": "Incomplete API collection; published observations and panel state preserved",
-  "observed_skus": 1101,
+  "checked_at": "2026-09-16T13:04:40.135899+03:00",
+  "status": "published",
+  "errors": [],
+  "source_updated_today": 0,
+  "observed_skus": 1642,
   "recovered_types": [],
   "observed_by_type": {
     "bread_white": 1,
@@ -234,37 +105,37 @@
     "mayonnaise": 21,
     "salt": 20,
     "vinegar": 15,
-    "black_tea": 0,
-    "turkish_coffee": 0,
-    "instant_coffee": 0,
-    "filter_coffee": 0,
-    "cola": 0,
+    "black_tea": 24,
+    "turkish_coffee": 19,
+    "instant_coffee": 7,
+    "filter_coffee": 22,
+    "cola": 21,
     "fruit_juice": 0,
-    "iced_tea": 0,
-    "mineral_water": 0,
-    "water": 0,
-    "energy_drink": 0,
-    "soda": 0,
-    "dish_liquid": 0,
-    "dishwasher_tabs": 0,
-    "laundry_powder": 0,
-    "laundry_liquid": 0,
-    "softener": 0,
-    "bleach": 0,
-    "surface_cleaner": 0,
-    "garbage_bags": 0,
-    "sponge": 0,
-    "cleaning_cloth": 0,
-    "shampoo": 0,
-    "shower_gel": 0,
-    "soap_liquid": 0,
-    "soap_bar": 0,
-    "toothpaste": 0,
-    "toothbrush": 0,
-    "deodorant": 0,
-    "toilet_paper": 0,
-    "paper_towel": 0,
-    "wet_wipes": 0,
-    "tissues": 0
+    "iced_tea": 19,
+    "mineral_water": 17,
+    "water": 23,
+    "energy_drink": 20,
+    "soda": 18,
+    "dish_liquid": 16,
+    "dishwasher_tabs": 11,
+    "laundry_powder": 2,
+    "laundry_liquid": 22,
+    "softener": 10,
+    "bleach": 17,
+    "surface_cleaner": 16,
+    "garbage_bags": 21,
+    "sponge": 17,
+    "cleaning_cloth": 8,
+    "shampoo": 22,
+    "shower_gel": 28,
+    "soap_liquid": 23,
+    "soap_bar": 21,
+    "toothpaste": 22,
+    "toothbrush": 22,
+    "deodorant": 21,
+    "toilet_paper": 18,
+    "paper_towel": 18,
+    "wet_wipes": 5,
+    "tissues": 11
   }
 }
