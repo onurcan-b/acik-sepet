@@ -1,10 +1,127 @@
 {
-  "date": "2026-09-17",
-  "checked_at": "2026-09-17T20:43:38.060859+03:00",
-  "status": "published_with_retained_types",
-  "errors": [],
-  "source_updated_today": 1198,
-  "observed_skus": 1412,
+  "date": "2026-09-18",
+  "checked_at": "2026-09-18T02:42:41.463211+03:00",
+  "status": "rejected",
+  "errors": [
+    {
+      "type_id": "filter_coffee",
+      "error": "'filtre kahve' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "cola",
+      "error": "'kola' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "fruit_juice",
+      "error": "'meyve suyu' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "iced_tea",
+      "error": "'soğuk çay' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "mineral_water",
+      "error": "'maden suyu' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "water",
+      "error": "'su' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "energy_drink",
+      "error": "'enerji içeceği' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "soda",
+      "error": "'gazoz' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "dish_liquid",
+      "error": "'bulaşık deterjanı sıvı' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "dishwasher_tabs",
+      "error": "'bulaşık makinesi tableti' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "laundry_powder",
+      "error": "'toz çamaşır deterjanı' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "laundry_liquid",
+      "error": "'sıvı çamaşır deterjanı' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "softener",
+      "error": "'çamaşır yumuşatıcı' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "bleach",
+      "error": "'çamaşır suyu' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "surface_cleaner",
+      "error": "'yüzey temizleyici' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "garbage_bags",
+      "error": "'çöp torbası' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "sponge",
+      "error": "'bulaşık süngeri' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "cleaning_cloth",
+      "error": "'temizlik bezi' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "shampoo",
+      "error": "'şampuan' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "shower_gel",
+      "error": "'duş jeli' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "soap_liquid",
+      "error": "'sıvı sabun' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "soap_bar",
+      "error": "'katı sabun' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "toothpaste",
+      "error": "'diş macunu' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "toothbrush",
+      "error": "'diş fırçası' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "deodorant",
+      "error": "'deodorant' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "toilet_paper",
+      "error": "'tuvalet kağıdı' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "paper_towel",
+      "error": "'kağıt havlu' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "wet_wipes",
+      "error": "'ıslak mendil' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "type_id": "tissues",
+      "error": "'kağıt mendil' sayfa 0 başarısız: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    }
+  ],
+  "reason": "Incomplete API collection; published observations and panel state preserved",
+  "observed_skus": 997,
   "recovered_types": [],
   "observed_by_type": {
     "bread_white": 0,
@@ -106,537 +223,36 @@
     "salt": 19,
     "vinegar": 16,
     "black_tea": 23,
-    "turkish_coffee": 16,
+    "turkish_coffee": 17,
     "instant_coffee": 4,
-    "filter_coffee": 19,
-    "cola": 11,
+    "filter_coffee": 0,
+    "cola": 0,
     "fruit_juice": 0,
-    "iced_tea": 15,
-    "mineral_water": 19,
-    "water": 21,
-    "energy_drink": 15,
-    "soda": 13,
-    "dish_liquid": 14,
-    "dishwasher_tabs": 9,
-    "laundry_powder": 2,
-    "laundry_liquid": 21,
-    "softener": 10,
-    "bleach": 12,
-    "surface_cleaner": 16,
-    "garbage_bags": 18,
-    "sponge": 15,
-    "cleaning_cloth": 8,
-    "shampoo": 16,
-    "shower_gel": 26,
-    "soap_liquid": 21,
-    "soap_bar": 20,
-    "toothpaste": 18,
-    "toothbrush": 16,
-    "deodorant": 17,
-    "toilet_paper": 20,
-    "paper_towel": 13,
-    "wet_wipes": 5,
-    "tissues": 6
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "bread_toast",
-      "label": "Tost ekmeği",
-      "reason": "Same-day coverage regression for bread_toast: 8 -> 6",
-      "new_observed_skus": 6,
-      "retained_skus": 8,
-      "collected_at": [
-        "2026-09-17T08:20:24.040552+03:00",
-        "2026-09-17T08:20:24.040563+03:00",
-        "2026-09-17T08:20:24.040567+03:00",
-        "2026-09-17T08:20:24.040569+03:00",
-        "2026-09-17T08:20:24.040572+03:00",
-        "2026-09-17T08:20:24.040574+03:00",
-        "2026-09-17T08:20:24.040576+03:00",
-        "2026-09-17T08:20:24.040578+03:00"
-      ]
-    },
-    {
-      "type_id": "pasta_spaghetti",
-      "label": "Spagetti makarna",
-      "reason": "Same-day coverage regression for pasta_spaghetti: 9 -> 6",
-      "new_observed_skus": 6,
-      "retained_skus": 9,
-      "collected_at": [
-        "2026-09-17T08:20:51.222553+03:00",
-        "2026-09-17T08:20:51.222571+03:00",
-        "2026-09-17T08:20:51.222576+03:00",
-        "2026-09-17T08:20:51.222581+03:00",
-        "2026-09-17T08:20:51.222584+03:00",
-        "2026-09-17T08:20:51.222586+03:00",
-        "2026-09-17T08:20:51.222588+03:00",
-        "2026-09-17T08:20:51.222590+03:00",
-        "2026-09-17T08:20:51.222593+03:00"
-      ]
-    },
-    {
-      "type_id": "oats",
-      "label": "Yulaf ezmesi",
-      "reason": "Same-day coverage regression for oats: 12 -> 9",
-      "new_observed_skus": 9,
-      "retained_skus": 12,
-      "collected_at": [
-        "2026-09-17T08:21:03.113254+03:00",
-        "2026-09-17T08:21:03.113266+03:00",
-        "2026-09-17T08:21:03.113269+03:00",
-        "2026-09-17T08:21:03.113271+03:00",
-        "2026-09-17T08:21:03.113274+03:00",
-        "2026-09-17T08:21:03.113276+03:00",
-        "2026-09-17T08:21:03.113278+03:00",
-        "2026-09-17T08:21:03.113280+03:00",
-        "2026-09-17T08:21:03.113282+03:00",
-        "2026-09-17T08:21:03.113284+03:00",
-        "2026-09-17T08:21:03.113286+03:00",
-        "2026-09-17T08:21:03.113288+03:00"
-      ]
-    },
-    {
-      "type_id": "beef_mince",
-      "label": "Dana kıyma",
-      "reason": "Same-day coverage regression for beef_mince: 5 -> 4",
-      "new_observed_skus": 4,
-      "retained_skus": 5,
-      "collected_at": [
-        "2026-09-17T08:21:06.615834+03:00",
-        "2026-09-17T08:21:06.615845+03:00",
-        "2026-09-17T08:21:06.615848+03:00",
-        "2026-09-17T08:21:06.615851+03:00",
-        "2026-09-17T08:21:06.615853+03:00"
-      ]
-    },
-    {
-      "type_id": "chicken_thigh",
-      "label": "Tavuk but / baget",
-      "reason": "Same-day coverage regression for chicken_thigh: 5 -> 3",
-      "new_observed_skus": 3,
-      "retained_skus": 5,
-      "collected_at": [
-        "2026-09-17T08:21:11.764712+03:00",
-        "2026-09-17T08:21:11.764723+03:00",
-        "2026-09-17T08:21:11.764727+03:00",
-        "2026-09-17T08:21:11.764729+03:00",
-        "2026-09-17T08:21:11.764731+03:00"
-      ]
-    },
-    {
-      "type_id": "whole_chicken",
-      "label": "Bütün piliç",
-      "reason": "Same-day coverage regression for whole_chicken: 15 -> 11",
-      "new_observed_skus": 11,
-      "retained_skus": 15,
-      "collected_at": [
-        "2026-09-17T08:21:13.357691+03:00",
-        "2026-09-17T08:21:13.357703+03:00",
-        "2026-09-17T08:21:13.357706+03:00",
-        "2026-09-17T08:21:13.357709+03:00",
-        "2026-09-17T08:21:13.357711+03:00",
-        "2026-09-17T08:21:13.357713+03:00",
-        "2026-09-17T08:21:13.357715+03:00",
-        "2026-09-17T08:21:13.357718+03:00",
-        "2026-09-17T08:21:13.357720+03:00",
-        "2026-09-17T08:21:13.357721+03:00",
-        "2026-09-17T08:21:13.357723+03:00",
-        "2026-09-17T08:21:13.357725+03:00",
-        "2026-09-17T08:21:13.357728+03:00",
-        "2026-09-17T08:21:13.357730+03:00",
-        "2026-09-17T08:21:13.357732+03:00"
-      ]
-    },
-    {
-      "type_id": "meatballs",
-      "label": "Köfte",
-      "reason": "Same-day coverage regression for meatballs: 11 -> 7",
-      "new_observed_skus": 7,
-      "retained_skus": 11,
-      "collected_at": [
-        "2026-09-17T08:21:25.113125+03:00",
-        "2026-09-17T08:21:25.113136+03:00",
-        "2026-09-17T08:21:25.113139+03:00",
-        "2026-09-17T08:21:25.113142+03:00",
-        "2026-09-17T08:21:25.113144+03:00",
-        "2026-09-17T08:21:25.113146+03:00",
-        "2026-09-17T08:21:25.113149+03:00",
-        "2026-09-17T08:21:25.113151+03:00",
-        "2026-09-17T08:21:25.113153+03:00",
-        "2026-09-17T08:21:25.113155+03:00",
-        "2026-09-17T08:21:25.113157+03:00"
-      ]
-    },
-    {
-      "type_id": "kasar",
-      "label": "Kaşar peyniri",
-      "reason": "Same-day coverage regression for kasar: 23 -> 16",
-      "new_observed_skus": 16,
-      "retained_skus": 23,
-      "collected_at": [
-        "2026-09-17T08:22:03.589250+03:00",
-        "2026-09-17T08:22:03.589262+03:00",
-        "2026-09-17T08:22:03.589265+03:00",
-        "2026-09-17T08:22:03.589268+03:00",
-        "2026-09-17T08:22:03.589270+03:00",
-        "2026-09-17T08:22:03.589272+03:00",
-        "2026-09-17T08:22:03.589274+03:00",
-        "2026-09-17T08:22:03.589276+03:00",
-        "2026-09-17T08:22:03.589278+03:00",
-        "2026-09-17T08:22:03.589280+03:00",
-        "2026-09-17T08:22:03.589282+03:00",
-        "2026-09-17T08:22:03.589284+03:00",
-        "2026-09-17T08:22:03.589286+03:00",
-        "2026-09-17T08:22:03.589289+03:00",
-        "2026-09-17T08:22:03.589291+03:00",
-        "2026-09-17T08:22:03.589293+03:00",
-        "2026-09-17T08:22:03.589295+03:00",
-        "2026-09-17T08:22:03.589297+03:00",
-        "2026-09-17T08:22:03.589299+03:00",
-        "2026-09-17T08:22:03.589301+03:00",
-        "2026-09-17T08:22:03.589303+03:00",
-        "2026-09-17T08:22:03.589305+03:00",
-        "2026-09-17T08:22:03.589307+03:00"
-      ]
-    },
-    {
-      "type_id": "cream_cheese",
-      "label": "Krem peynir",
-      "reason": "Same-day coverage regression for cream_cheese: 14 -> 10",
-      "new_observed_skus": 10,
-      "retained_skus": 14,
-      "collected_at": [
-        "2026-09-17T08:22:07.061039+03:00",
-        "2026-09-17T08:22:07.061051+03:00",
-        "2026-09-17T08:22:07.061054+03:00",
-        "2026-09-17T08:22:07.061056+03:00",
-        "2026-09-17T08:22:07.061058+03:00",
-        "2026-09-17T08:22:07.061060+03:00",
-        "2026-09-17T08:22:07.061062+03:00",
-        "2026-09-17T08:22:07.061065+03:00",
-        "2026-09-17T08:22:07.061067+03:00",
-        "2026-09-17T08:22:07.061069+03:00",
-        "2026-09-17T08:22:07.061071+03:00",
-        "2026-09-17T08:22:07.061073+03:00",
-        "2026-09-17T08:22:07.061075+03:00",
-        "2026-09-17T08:22:07.061077+03:00"
-      ]
-    },
-    {
-      "type_id": "mozzarella",
-      "label": "Mozzarella",
-      "reason": "Same-day coverage regression for mozzarella: 5 -> 4",
-      "new_observed_skus": 4,
-      "retained_skus": 5,
-      "collected_at": [
-        "2026-09-17T08:22:07.800364+03:00",
-        "2026-09-17T08:22:07.800375+03:00",
-        "2026-09-17T08:22:07.800378+03:00",
-        "2026-09-17T08:22:07.800381+03:00",
-        "2026-09-17T08:22:07.800383+03:00"
-      ]
-    },
-    {
-      "type_id": "pepper",
-      "label": "Biber",
-      "reason": "Same-day coverage regression for pepper: 9 -> 7",
-      "new_observed_skus": 7,
-      "retained_skus": 9,
-      "collected_at": [
-        "2026-09-17T08:22:33.371245+03:00",
-        "2026-09-17T08:22:33.371257+03:00",
-        "2026-09-17T08:22:33.371260+03:00",
-        "2026-09-17T08:22:33.371263+03:00",
-        "2026-09-17T08:22:33.371265+03:00",
-        "2026-09-17T08:22:33.371267+03:00",
-        "2026-09-17T08:22:33.371269+03:00",
-        "2026-09-17T08:22:33.371271+03:00",
-        "2026-09-17T08:22:33.371273+03:00"
-      ]
-    },
-    {
-      "type_id": "sugar",
-      "label": "Toz şeker",
-      "reason": "Same-day coverage regression for sugar: 19 -> 14",
-      "new_observed_skus": 14,
-      "retained_skus": 19,
-      "collected_at": [
-        "2026-09-17T08:22:45.242783+03:00",
-        "2026-09-17T08:22:45.242794+03:00",
-        "2026-09-17T08:22:45.242797+03:00",
-        "2026-09-17T08:22:45.242799+03:00",
-        "2026-09-17T08:22:45.242801+03:00",
-        "2026-09-17T08:22:45.242804+03:00",
-        "2026-09-17T08:22:45.242806+03:00",
-        "2026-09-17T08:22:45.242808+03:00",
-        "2026-09-17T08:22:45.242810+03:00",
-        "2026-09-17T08:22:45.242812+03:00",
-        "2026-09-17T08:22:45.242814+03:00",
-        "2026-09-17T08:22:45.242816+03:00",
-        "2026-09-17T08:22:45.242818+03:00",
-        "2026-09-17T08:22:45.242820+03:00",
-        "2026-09-17T08:22:45.242822+03:00",
-        "2026-09-17T08:22:45.242824+03:00",
-        "2026-09-17T08:22:45.242826+03:00",
-        "2026-09-17T08:22:45.242828+03:00",
-        "2026-09-17T08:22:45.242830+03:00"
-      ]
-    },
-    {
-      "type_id": "nuts",
-      "label": "Kuruyemiş",
-      "reason": "Same-day coverage regression for nuts: 14 -> 11",
-      "new_observed_skus": 11,
-      "retained_skus": 14,
-      "collected_at": [
-        "2026-09-17T08:23:11.642738+03:00",
-        "2026-09-17T08:23:11.642749+03:00",
-        "2026-09-17T08:23:11.642752+03:00",
-        "2026-09-17T08:23:11.642755+03:00",
-        "2026-09-17T08:23:11.642757+03:00",
-        "2026-09-17T08:23:11.642759+03:00",
-        "2026-09-17T08:23:11.642761+03:00",
-        "2026-09-17T08:23:11.642763+03:00",
-        "2026-09-17T08:23:11.642765+03:00",
-        "2026-09-17T08:23:11.642767+03:00",
-        "2026-09-17T08:23:11.642769+03:00",
-        "2026-09-17T08:23:11.642771+03:00",
-        "2026-09-17T08:23:11.642773+03:00",
-        "2026-09-17T08:23:11.642775+03:00"
-      ]
-    },
-    {
-      "type_id": "instant_coffee",
-      "label": "Çözünebilir kahve",
-      "reason": "Same-day coverage regression for instant_coffee: 7 -> 4",
-      "new_observed_skus": 4,
-      "retained_skus": 7,
-      "collected_at": [
-        "2026-09-17T08:23:56.541769+03:00",
-        "2026-09-17T08:23:56.541780+03:00",
-        "2026-09-17T08:23:56.541784+03:00",
-        "2026-09-17T08:23:56.541786+03:00",
-        "2026-09-17T08:23:56.541788+03:00",
-        "2026-09-17T08:23:56.541791+03:00",
-        "2026-09-17T08:23:56.541793+03:00"
-      ]
-    },
-    {
-      "type_id": "cola",
-      "label": "Kola",
-      "reason": "Same-day coverage regression for cola: 21 -> 11",
-      "new_observed_skus": 11,
-      "retained_skus": 21,
-      "collected_at": [
-        "2026-09-17T08:24:05.269603+03:00",
-        "2026-09-17T08:24:05.269614+03:00",
-        "2026-09-17T08:24:05.269617+03:00",
-        "2026-09-17T08:24:05.269619+03:00",
-        "2026-09-17T08:24:05.269621+03:00",
-        "2026-09-17T08:24:05.269624+03:00",
-        "2026-09-17T08:24:05.269626+03:00",
-        "2026-09-17T08:24:05.269628+03:00",
-        "2026-09-17T08:24:05.269630+03:00",
-        "2026-09-17T08:24:05.269632+03:00",
-        "2026-09-17T08:24:05.269634+03:00",
-        "2026-09-17T08:24:05.269636+03:00",
-        "2026-09-17T08:24:05.269638+03:00",
-        "2026-09-17T08:24:05.269640+03:00",
-        "2026-09-17T08:24:05.269642+03:00",
-        "2026-09-17T08:24:05.269644+03:00",
-        "2026-09-17T08:24:05.269646+03:00",
-        "2026-09-17T08:24:05.269648+03:00",
-        "2026-09-17T08:24:05.269650+03:00",
-        "2026-09-17T08:24:05.269652+03:00",
-        "2026-09-17T08:24:05.269654+03:00"
-      ]
-    },
-    {
-      "type_id": "energy_drink",
-      "label": "Enerji içeceği",
-      "reason": "Same-day coverage regression for energy_drink: 20 -> 15",
-      "new_observed_skus": 15,
-      "retained_skus": 20,
-      "collected_at": [
-        "2026-09-17T08:24:40.276575+03:00",
-        "2026-09-17T08:24:40.276586+03:00",
-        "2026-09-17T08:24:40.276589+03:00",
-        "2026-09-17T08:24:40.276592+03:00",
-        "2026-09-17T08:24:40.276594+03:00",
-        "2026-09-17T08:24:40.276596+03:00",
-        "2026-09-17T08:24:40.276598+03:00",
-        "2026-09-17T08:24:40.276600+03:00",
-        "2026-09-17T08:24:40.276602+03:00",
-        "2026-09-17T08:24:40.276604+03:00",
-        "2026-09-17T08:24:40.276606+03:00",
-        "2026-09-17T08:24:40.276608+03:00",
-        "2026-09-17T08:24:40.276610+03:00",
-        "2026-09-17T08:24:40.276612+03:00",
-        "2026-09-17T08:24:40.276614+03:00",
-        "2026-09-17T08:24:40.276616+03:00",
-        "2026-09-17T08:24:40.276619+03:00",
-        "2026-09-17T08:24:40.276621+03:00",
-        "2026-09-17T08:24:40.276623+03:00",
-        "2026-09-17T08:24:40.276625+03:00"
-      ]
-    },
-    {
-      "type_id": "soda",
-      "label": "Gazoz",
-      "reason": "Same-day coverage regression for soda: 17 -> 13",
-      "new_observed_skus": 13,
-      "retained_skus": 17,
-      "collected_at": [
-        "2026-09-17T08:24:45.267464+03:00",
-        "2026-09-17T08:24:45.267475+03:00",
-        "2026-09-17T08:24:45.267479+03:00",
-        "2026-09-17T08:24:45.267481+03:00",
-        "2026-09-17T08:24:45.267483+03:00",
-        "2026-09-17T08:24:45.267485+03:00",
-        "2026-09-17T08:24:45.267487+03:00",
-        "2026-09-17T08:24:45.267489+03:00",
-        "2026-09-17T08:24:45.267491+03:00",
-        "2026-09-17T08:24:45.267493+03:00",
-        "2026-09-17T08:24:45.267495+03:00",
-        "2026-09-17T08:24:45.267497+03:00",
-        "2026-09-17T08:24:45.267499+03:00",
-        "2026-09-17T08:24:45.267501+03:00",
-        "2026-09-17T08:24:45.267503+03:00",
-        "2026-09-17T08:24:45.267505+03:00",
-        "2026-09-17T08:24:45.267508+03:00"
-      ]
-    },
-    {
-      "type_id": "bleach",
-      "label": "Çamaşır suyu",
-      "reason": "Same-day coverage regression for bleach: 17 -> 12",
-      "new_observed_skus": 12,
-      "retained_skus": 17,
-      "collected_at": [
-        "2026-09-17T08:24:54.718909+03:00",
-        "2026-09-17T08:24:54.718921+03:00",
-        "2026-09-17T08:24:54.718924+03:00",
-        "2026-09-17T08:24:54.718926+03:00",
-        "2026-09-17T08:24:54.718929+03:00",
-        "2026-09-17T08:24:54.718931+03:00",
-        "2026-09-17T08:24:54.718933+03:00",
-        "2026-09-17T08:24:54.718935+03:00",
-        "2026-09-17T08:24:54.718937+03:00",
-        "2026-09-17T08:24:54.718939+03:00",
-        "2026-09-17T08:24:54.718941+03:00",
-        "2026-09-17T08:24:54.718943+03:00",
-        "2026-09-17T08:24:54.718945+03:00",
-        "2026-09-17T08:24:54.718947+03:00",
-        "2026-09-17T08:24:54.718949+03:00",
-        "2026-09-17T08:24:54.718951+03:00",
-        "2026-09-17T08:24:54.718953+03:00"
-      ]
-    },
-    {
-      "type_id": "shampoo",
-      "label": "Şampuan",
-      "reason": "Same-day coverage regression for shampoo: 21 -> 16",
-      "new_observed_skus": 16,
-      "retained_skus": 21,
-      "collected_at": [
-        "2026-09-17T08:25:13.748113+03:00",
-        "2026-09-17T08:25:13.748125+03:00",
-        "2026-09-17T08:25:13.748128+03:00",
-        "2026-09-17T08:25:13.748130+03:00",
-        "2026-09-17T08:25:13.748132+03:00",
-        "2026-09-17T08:25:13.748134+03:00",
-        "2026-09-17T08:25:13.748136+03:00",
-        "2026-09-17T08:25:13.748138+03:00",
-        "2026-09-17T08:25:13.748140+03:00",
-        "2026-09-17T08:25:13.748142+03:00",
-        "2026-09-17T08:25:13.748144+03:00",
-        "2026-09-17T08:25:13.748146+03:00",
-        "2026-09-17T08:25:13.748148+03:00",
-        "2026-09-17T08:25:13.748150+03:00",
-        "2026-09-17T08:25:13.748152+03:00",
-        "2026-09-17T08:25:13.748154+03:00",
-        "2026-09-17T08:25:13.748156+03:00",
-        "2026-09-17T08:25:13.748158+03:00",
-        "2026-09-17T08:25:13.748160+03:00",
-        "2026-09-17T08:25:13.748162+03:00",
-        "2026-09-17T08:25:13.748164+03:00"
-      ]
-    },
-    {
-      "type_id": "toothbrush",
-      "label": "Diş fırçası",
-      "reason": "Same-day coverage regression for toothbrush: 21 -> 16",
-      "new_observed_skus": 16,
-      "retained_skus": 21,
-      "collected_at": [
-        "2026-09-17T08:25:29.714011+03:00",
-        "2026-09-17T08:25:29.714023+03:00",
-        "2026-09-17T08:25:29.714026+03:00",
-        "2026-09-17T08:25:29.714028+03:00",
-        "2026-09-17T08:25:29.714031+03:00",
-        "2026-09-17T08:25:29.714033+03:00",
-        "2026-09-17T08:25:29.714035+03:00",
-        "2026-09-17T08:25:29.714037+03:00",
-        "2026-09-17T08:25:29.714039+03:00",
-        "2026-09-17T08:25:29.714041+03:00",
-        "2026-09-17T08:25:29.714043+03:00",
-        "2026-09-17T08:25:29.714045+03:00",
-        "2026-09-17T08:25:29.714047+03:00",
-        "2026-09-17T08:25:29.714049+03:00",
-        "2026-09-17T08:25:29.714051+03:00",
-        "2026-09-17T08:25:29.714053+03:00",
-        "2026-09-17T08:25:29.714055+03:00",
-        "2026-09-17T08:25:29.714057+03:00",
-        "2026-09-17T08:25:29.714059+03:00",
-        "2026-09-17T08:25:29.714061+03:00",
-        "2026-09-17T08:25:29.714063+03:00"
-      ]
-    },
-    {
-      "type_id": "paper_towel",
-      "label": "Kağıt havlu",
-      "reason": "Same-day coverage regression for paper_towel: 18 -> 13",
-      "new_observed_skus": 13,
-      "retained_skus": 18,
-      "collected_at": [
-        "2026-09-17T08:25:36.225235+03:00",
-        "2026-09-17T08:25:36.225246+03:00",
-        "2026-09-17T08:25:36.225250+03:00",
-        "2026-09-17T08:25:36.225252+03:00",
-        "2026-09-17T08:25:36.225254+03:00",
-        "2026-09-17T08:25:36.225256+03:00",
-        "2026-09-17T08:25:36.225258+03:00",
-        "2026-09-17T08:25:36.225260+03:00",
-        "2026-09-17T08:25:36.225262+03:00",
-        "2026-09-17T08:25:36.225264+03:00",
-        "2026-09-17T08:25:36.225266+03:00",
-        "2026-09-17T08:25:36.225268+03:00",
-        "2026-09-17T08:25:36.225270+03:00",
-        "2026-09-17T08:25:36.225272+03:00",
-        "2026-09-17T08:25:36.225274+03:00",
-        "2026-09-17T08:25:36.225276+03:00",
-        "2026-09-17T08:25:36.225278+03:00",
-        "2026-09-17T08:25:36.225280+03:00"
-      ]
-    },
-    {
-      "type_id": "tissues",
-      "label": "Kağıt mendil",
-      "reason": "Same-day coverage regression for tissues: 9 -> 6",
-      "new_observed_skus": 6,
-      "retained_skus": 9,
-      "collected_at": [
-        "2026-09-17T08:25:38.350576+03:00",
-        "2026-09-17T08:25:38.350588+03:00",
-        "2026-09-17T08:25:38.350591+03:00",
-        "2026-09-17T08:25:38.350593+03:00",
-        "2026-09-17T08:25:38.350596+03:00",
-        "2026-09-17T08:25:38.350598+03:00",
-        "2026-09-17T08:25:38.350600+03:00",
-        "2026-09-17T08:25:38.350602+03:00",
-        "2026-09-17T08:25:38.350604+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1498
+    "iced_tea": 0,
+    "mineral_water": 0,
+    "water": 0,
+    "energy_drink": 0,
+    "soda": 0,
+    "dish_liquid": 0,
+    "dishwasher_tabs": 0,
+    "laundry_powder": 0,
+    "laundry_liquid": 0,
+    "softener": 0,
+    "bleach": 0,
+    "surface_cleaner": 0,
+    "garbage_bags": 0,
+    "sponge": 0,
+    "cleaning_cloth": 0,
+    "shampoo": 0,
+    "shower_gel": 0,
+    "soap_liquid": 0,
+    "soap_bar": 0,
+    "toothpaste": 0,
+    "toothbrush": 0,
+    "deodorant": 0,
+    "toilet_paper": 0,
+    "paper_towel": 0,
+    "wet_wipes": 0,
+    "tissues": 0
+  }
 }
