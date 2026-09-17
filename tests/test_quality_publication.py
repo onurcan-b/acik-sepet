@@ -3,7 +3,7 @@ import copy
 import csv
 import json
 import shutil
-from datetime import datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 import pytest
@@ -164,30 +164,44 @@ def test_definition_replacement_is_bridged_without_price_jump():
     validate_source_evidence(observations[0])
 
 
-def test_frozen_series_extends_from_original_level_and_cannot_be_rewritten(tmp_path, monkeypatch):
+@pytest.mark.parametrize('extra_days', [0, 1, 7])
+def test_frozen_series_extends_from_original_level_and_cannot_be_rewritten(tmp_path, monkeypatch, extra_days):
     repo = Path(__file__).resolve().parents[1]
     shutil.copytree(repo / 'config', tmp_path / 'config')
-    source = repo / 'data/v0.4'
     data = tmp_path / 'data/v0.4'
-    shutil.copytree(source / 'snapshots', data / 'snapshots')
-    shutil.copytree(source / 'frozen-2026-09-14', data / 'frozen-2026-09-14')
+    # Live snapshots keep growing. Only the immutable history belongs in this
+    # fixture; every day after the lock must be controlled by this test.
+    lock = json.loads((tmp_path / 'config/history-lock.json').read_text())
+    for name in lock['files']:
+        target = tmp_path / name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(repo / name, target)
     monkeypatch.setattr(index, 'ROOT', tmp_path)
     monkeypatch.setattr(index, 'SNAPSHOT_DIR', data / 'snapshots')
     for attr, name in [('INDEX_PATH', 'index.csv'), ('TYPE_PATH', 'type_indices.csv'), ('CATEGORY_PATH', 'category_indices.csv')]:
         monkeypatch.setattr(index, attr, data / name)
     rows = list(csv.DictReader((data / 'snapshots/2026-09-14.csv').open()))
     for row in rows:
-        row['date'] = '2026-09-15'
         for field in ['price', 'unit_price', 'linked_unit_price']:
             row[field] = str(float(row[field]) * 1.01)
-    target = data / 'snapshots/2026-09-15.csv'
-    with target.open('w') as handle:
-        writer = csv.DictWriter(handle, fieldnames=rows[0].keys(), lineterminator='\n')
-        writer.writeheader(); writer.writerows(rows)
+    first_new_day = date(2026, 9, 15)
+    for offset in range(extra_days + 1):
+        day = (first_new_day + timedelta(days=offset)).isoformat()
+        for row in rows:
+            row['date'] = day
+        target = data / 'snapshots' / f'{day}.csv'
+        with target.open('w') as handle:
+            writer = csv.DictWriter(handle, fieldnames=rows[0].keys(), lineterminator='\n')
+            writer.writeheader(); writer.writerows(rows)
     result = index.rebuild()
     assert result[0]['index'] == 100 and result[0]['date'] == '2026-09-05'
-    assert result[-1]['baseline_date'] == '2026-09-05'
-    assert result[-1]['index'] == pytest.approx(99.7265 * 1.01, abs=0.0002)
+    assert all(row['baseline_date'] == '2026-09-05' for row in result)
+    extension = [row for row in result if row['date'] >= first_new_day.isoformat()]
+    assert [row['date'] for row in extension] == [
+        (first_new_day + timedelta(days=offset)).isoformat() for offset in range(extra_days + 1)]
+    # A 1% move on the first new day, then unchanged prices on later days.
+    assert [row['index'] for row in extension] == pytest.approx(
+        [99.7265 * 1.01] * (extra_days + 1), abs=0.0002)
     for name in ['index.csv', 'type_indices.csv', 'category_indices.csv']:
         frozen = (data / 'frozen-2026-09-14' / name).read_text()
         assert (data / name).read_text().startswith(frozen)
@@ -213,7 +227,11 @@ def test_current_chart_bytes_are_preserved_but_new_data_extends_it(tmp_path, mon
     rows = list(csv.DictReader(data.open()))
     report.render_charts(rows, [], [])
     assert chart.read_bytes() == original
-    data.write_text(data.read_text() + '2026-09-15,100.7238,0.77,97,1385,2026-09-05\n')
+    new_row = dict(rows[-1])
+    new_row['date'] = (date.fromisoformat(new_row['date']) + timedelta(days=1)).isoformat()
+    new_row['index'] = str(float(new_row['index']) * 1.01)
+    with data.open('a', newline='') as handle:
+        csv.DictWriter(handle, fieldnames=rows[0].keys(), lineterminator='\n').writerow(new_row)
     rows = list(csv.DictReader(data.open()))
     report.render_charts(rows, [], [])
     assert chart.read_bytes() != original
