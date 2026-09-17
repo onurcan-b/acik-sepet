@@ -1507,5 +1507,111 @@
     "warnings": [
       "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
     ]
+  },
+  {
+    "date": "2026-09-17",
+    "rows": 1618,
+    "source_updated_today": 0,
+    "source_within_3_days": 1618,
+    "source_date_unknown": 0,
+    "source_date_future": 0,
+    "depot_observations": 2049,
+    "depot_source_updated_today": 0,
+    "depot_source_date_unknown": 0,
+    "single_source_skus": 1332,
+    "auditable_skus": 1618,
+    "source_age_days": {
+      "1": 1618
+    },
+    "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
+    "previous_date": "2026-09-16",
+    "matched_slots": 1585,
+    "missing_slots": 57,
+    "new_slots": 33,
+    "large_price_moves": [
+      {
+        "slot_id": "id:12CB",
+        "title": "Keyfe Hazır Orta Türk Kahvesi 9 Gr",
+        "change_pct": 64.29
+      },
+      {
+        "slot_id": "id:198H",
+        "title": "Rexona Kadın Deodorant Şeftali & Limon Otu 150 Ml",
+        "change_pct": -50.17
+      },
+      {
+        "slot_id": "id:0TGS",
+        "title": "Galaxy Diş Fırçası 2 Adet",
+        "change_pct": 50.08
+      },
+      {
+        "slot_id": "id:1YTT",
+        "title": "Gliss Ultimate Repair Şampuan 400 Ml",
+        "change_pct": -50.01
+      },
+      {
+        "slot_id": "id:1XP0",
+        "title": "Servet Şekerleme Antep Fıstıklı Tahin Helvası 200 Gr",
+        "change_pct": -44.14
+      },
+      {
+        "slot_id": "id:1QGK",
+        "title": "Jacobs Origins Fusion Brazil & Colombia Filtre Kahve 200 Gr",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:1YHN",
+        "title": "Axe Dark Temptation Deodorant 150 Ml",
+        "change_pct": 41.43
+      },
+      {
+        "slot_id": "id:1PPI",
+        "title": "Servet Şekerleme Sade Tahin Helvası 200 Gr",
+        "change_pct": -40.42
+      },
+      {
+        "slot_id": "id:1YWA",
+        "title": "Eti Bumbo Portakal Aromalı Kakaolu Bisküvi 42 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:1Z0L",
+        "title": "Tarla Domates 1 Kg",
+        "change_pct": -36.14
+      },
+      {
+        "slot_id": "id:1NNP",
+        "title": "Veg & Bones Brokoli Çorbası 190 Gr",
+        "change_pct": -30.12
+      },
+      {
+        "slot_id": "id:0O22",
+        "title": "Uzman Kasap Dondurulmuş Mangal Köfte 500 Gr",
+        "change_pct": 25.0
+      },
+      {
+        "slot_id": "id:1PQO",
+        "title": "Duru Body Scrub Duş Jeli Gold 450 Ml",
+        "change_pct": 22.48
+      },
+      {
+        "slot_id": "id:1Z8B",
+        "title": "Duru Body Scrub Pink Delight Duş Jeli 450 Ml",
+        "change_pct": 22.48
+      },
+      {
+        "slot_id": "id:1SL5",
+        "title": "Fairy Elma Sıvı Bulaşık Deterjanı 650 Ml",
+        "change_pct": -20.6
+      },
+      {
+        "slot_id": "id:1G5C",
+        "title": "Üstad Türk Kahvesi 100 Gr",
+        "change_pct": 20.13
+      }
+    ],
+    "warnings": [
+      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
+    ]
   }
 ]
