@@ -1510,29 +1510,30 @@
   },
   {
     "date": "2026-09-17",
-    "rows": 1618,
-    "source_updated_today": 0,
-    "source_within_3_days": 1618,
+    "rows": 1498,
+    "source_updated_today": 1198,
+    "source_within_3_days": 1498,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2049,
-    "depot_source_updated_today": 0,
+    "depot_observations": 1859,
+    "depot_source_updated_today": 1504,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1332,
-    "auditable_skus": 1618,
+    "single_source_skus": 1240,
+    "auditable_skus": 1498,
     "source_age_days": {
-      "1": 1618
+      "0": 1198,
+      "1": 300
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-09-16",
-    "matched_slots": 1585,
-    "missing_slots": 57,
-    "new_slots": 33,
+    "matched_slots": 1460,
+    "missing_slots": 182,
+    "new_slots": 38,
     "large_price_moves": [
       {
-        "slot_id": "id:12CB",
-        "title": "Keyfe Hazır Orta Türk Kahvesi 9 Gr",
-        "change_pct": 64.29
+        "slot_id": "id:20AX",
+        "title": "Fairy Platinum Bulaşık Makinesi Tableti 50 Adet",
+        "change_pct": 64.6
       },
       {
         "slot_id": "id:198H",
@@ -1575,9 +1576,19 @@
         "change_pct": -40.0
       },
       {
-        "slot_id": "id:1Z0L",
-        "title": "Tarla Domates 1 Kg",
-        "change_pct": -36.14
+        "slot_id": "id:20TC",
+        "title": "Nescafé Gold Filtre Kahve 250 Gr",
+        "change_pct": 39.65
+      },
+      {
+        "slot_id": "id:0SGA",
+        "title": "Peros Limon Sıvı Bulaşık Deterjanı 3.88 Lt",
+        "change_pct": 35.73
+      },
+      {
+        "slot_id": "id:1TV1",
+        "title": "Nesfit Çikolatalı Gevrek 480 Gr",
+        "change_pct": -34.9
       },
       {
         "slot_id": "id:1NNP",
@@ -1585,9 +1596,34 @@
         "change_pct": -30.12
       },
       {
+        "slot_id": "id:12MM",
+        "title": "Dalin Atopik Cilt Sıvı Çamaşır Deterjanı 1.5 Lt",
+        "change_pct": 30.01
+      },
+      {
+        "slot_id": "id:1W72",
+        "title": "Becel Zeytinyağlı Kase Margarin 250 Gr",
+        "change_pct": 29.05
+      },
+      {
+        "slot_id": "id:0AXI",
+        "title": "Kahve Dünyası Kolombiya Filtre Kahve 250 Gr",
+        "change_pct": -25.0
+      },
+      {
         "slot_id": "id:0O22",
         "title": "Uzman Kasap Dondurulmuş Mangal Köfte 500 Gr",
         "change_pct": 25.0
+      },
+      {
+        "slot_id": "id:1GYO",
+        "title": "Moliendo Breakfast Blend Filtre Kahve 250 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:1XXU",
+        "title": "Venado Stella Filtre Kahve 250 Gr",
+        "change_pct": -25.0
       },
       {
         "slot_id": "id:1PQO",
@@ -1600,18 +1636,11 @@
         "change_pct": 22.48
       },
       {
-        "slot_id": "id:1SL5",
-        "title": "Fairy Elma Sıvı Bulaşık Deterjanı 650 Ml",
-        "change_pct": -20.6
-      },
-      {
-        "slot_id": "id:1G5C",
-        "title": "Üstad Türk Kahvesi 100 Gr",
-        "change_pct": 20.13
+        "slot_id": "id:2167",
+        "title": "Humm Organic Tam Tahıllı Ballı Kahvaltılık Gevrek 80 Gr",
+        "change_pct": 20.07
       }
     ],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "warnings": []
   }
 ]
