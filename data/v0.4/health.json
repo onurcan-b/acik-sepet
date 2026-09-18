@@ -1645,34 +1645,272 @@
   },
   {
     "date": "2026-09-18",
-    "rows": 1413,
-    "source_updated_today": 11,
-    "source_within_3_days": 1413,
+    "rows": 1403,
+    "source_updated_today": 1397,
+    "source_within_3_days": 1403,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 1756,
-    "depot_source_updated_today": 11,
+    "depot_observations": 1733,
+    "depot_source_updated_today": 1726,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1164,
-    "auditable_skus": 1413,
+    "single_source_skus": 1163,
+    "auditable_skus": 1403,
     "source_age_days": {
-      "0": 11,
-      "1": 1402
+      "0": 1397,
+      "1": 6
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-09-17",
-    "matched_slots": 1411,
-    "missing_slots": 87,
-    "new_slots": 2,
+    "matched_slots": 1361,
+    "missing_slots": 137,
+    "new_slots": 42,
     "large_price_moves": [
+      {
+        "slot_id": "id:0N2H",
+        "title": "Karali Organik Siyah Çay 500 Gr",
+        "change_pct": 125.03
+      },
+      {
+        "slot_id": "id:1PLM",
+        "title": "Chupa Chups Fizzy Drinks Lolipop Şekerleme 15 Gr",
+        "change_pct": 105.56
+      },
+      {
+        "slot_id": "id:1Y5T",
+        "title": "Oral-B Çocuk Diş Macunu 75 Ml",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:20SM",
+        "title": "Scotch-Brite Renkli Bez 3 Adet",
+        "change_pct": 65.8
+      },
+      {
+        "slot_id": "id:1R6R",
+        "title": "Sarson's Malt Sirkesi 250 Ml",
+        "change_pct": -56.67
+      },
+      {
+        "slot_id": "id:02UP",
+        "title": "Weetabix Kepekli Gevrek 500 Gr",
+        "change_pct": -55.1
+      },
+      {
+        "slot_id": "id:1AQR",
+        "title": "Olips Şeftali Frambuaz ve Mentol Aromalı Şekerleme 28 Gr",
+        "change_pct": 53.11
+      },
+      {
+        "slot_id": "id:00CG",
+        "title": "Bağdat Tuz Değirmen Kapak 110 Gr",
+        "change_pct": -52.3
+      },
+      {
+        "slot_id": "id:0XRZ",
+        "title": "Nustil Yulaf Ezmesi 250 Gr",
+        "change_pct": -49.26
+      },
+      {
+        "slot_id": "id:06ZY",
+        "title": "Monini Sarımsaklı Ve Acı Biberli Zeytinyağı 250 Ml",
+        "change_pct": -45.36
+      },
+      {
+        "slot_id": "id:1NNM",
+        "title": "Becel Tereyağı Keyfi Kase Margarin 500 Gr",
+        "change_pct": -43.54
+      },
+      {
+        "slot_id": "id:1KCN",
+        "title": "Duru Haşlanmış Fasulye 400 Gr",
+        "change_pct": -42.04
+      },
+      {
+        "slot_id": "id:0W3A",
+        "title": "Kızartmalık Patates 1 Kg",
+        "change_pct": 41.82
+      },
+      {
+        "slot_id": "id:20PP",
+        "title": "Superfresh Ayçiçek Yağlı Ton Balığı 280 Gr",
+        "change_pct": -41.46
+      },
+      {
+        "slot_id": "id:1PQO",
+        "title": "Duru Body Scrub Duş Jeli Gold 450 Ml",
+        "change_pct": 39.06
+      },
+      {
+        "slot_id": "id:1QBI",
+        "title": "Duru Body Scrub Crystal Duş Jeli 450 Ml",
+        "change_pct": 39.06
+      },
+      {
+        "slot_id": "id:1UEY",
+        "title": "Duru Body Scrub Ice Light Duş Jeli 450 Ml",
+        "change_pct": 39.06
+      },
+      {
+        "slot_id": "id:1Z8B",
+        "title": "Duru Body Scrub Pink Delight Duş Jeli 450 Ml",
+        "change_pct": 39.06
+      },
+      {
+        "slot_id": "id:1O00",
+        "title": "Anna's Zencefilli Bisküvi 150 Gr",
+        "change_pct": -38.0
+      },
+      {
+        "slot_id": "id:20GM",
+        "title": "St. Dalfour Kayısı Reçeli 284 Gr",
+        "change_pct": -37.5
+      },
+      {
+        "slot_id": "id:00KD",
+        "title": "Pastavilla Vakumlu İrmik 500 Gr",
+        "change_pct": -37.25
+      },
+      {
+        "slot_id": "id:1WND",
+        "title": "Karaca Hatır Türk Kahvesi 250 Gr",
+        "change_pct": -36.66
+      },
+      {
+        "slot_id": "id:0DF8",
+        "title": "Reis Esmer Çiğköftelik Bulgur 1 Kg",
+        "change_pct": -35.31
+      },
+      {
+        "slot_id": "id:06FI",
+        "title": "Tat Sarımsaklı Mayonez 260 Gr",
+        "change_pct": -35.02
+      },
+      {
+        "slot_id": "id:1YSW",
+        "title": "Eti Keyfince Sütlü Çikolata 70 Gr",
+        "change_pct": -35.0
+      },
       {
         "slot_id": "id:1PBL",
         "title": "Tahsildaroğlu Taze Kaşar Peyniri 400 Gr",
         "change_pct": -33.8
+      },
+      {
+        "slot_id": "id:1MKC",
+        "title": "Starbucks Türk Kahvesi Veranda Blend 100 Gr",
+        "change_pct": -33.36
+      },
+      {
+        "slot_id": "id:17Q2",
+        "title": "City Farm Organik Domates Salçası 650 Gr",
+        "change_pct": -31.44
+      },
+      {
+        "slot_id": "id:0PFE",
+        "title": "Biryağ Ayçiçek Yağı 2 Lt",
+        "change_pct": -30.43
+      },
+      {
+        "slot_id": "id:1EOA",
+        "title": "Çekirdeksiz Üzüm 1 Kg",
+        "change_pct": -28.57
+      },
+      {
+        "slot_id": "id:059W",
+        "title": "Işıl Doğal Katı Sabun 800 Gr",
+        "change_pct": 28.24
+      },
+      {
+        "slot_id": "id:0IQ3",
+        "title": "Becel Zeytinyağlı Kase Margarin 500 Gr",
+        "change_pct": -27.56
+      },
+      {
+        "slot_id": "id:05VT",
+        "title": "Işıl Güzellik Katı Sabun 375 Gr",
+        "change_pct": 27.27
+      },
+      {
+        "slot_id": "id:1IB0",
+        "title": "Komili Riviera Zeytinyağı 500 Ml",
+        "change_pct": -26.82
+      },
+      {
+        "slot_id": "id:20BN",
+        "title": "Cf Organik Yulaf Ezmesi 500 Gr",
+        "change_pct": -26.79
+      },
+      {
+        "slot_id": "id:1T2H",
+        "title": "Fiskobirlik Nuga Kakaolu Fındık Kreması 350 Gr",
+        "change_pct": -26.02
+      },
+      {
+        "slot_id": "id:1TBA",
+        "title": "Filiz Fırın Makarna 500 Gr",
+        "change_pct": -25.7
+      },
+      {
+        "slot_id": "id:1P2Z",
+        "title": "Kurukahveci Colombian Filtre Kahve 250 Gr",
+        "change_pct": 25.45
+      },
+      {
+        "slot_id": "id:0BT1",
+        "title": "Bakpiliç Donuk Poşetli Bütün Piliç 1 Kg",
+        "change_pct": -25.02
+      },
+      {
+        "slot_id": "id:0ZLP",
+        "title": "Pepsi Kola 330 Ml",
+        "change_pct": 25.0
+      },
+      {
+        "slot_id": "id:1MU6",
+        "title": "Teremyağ Kase Margarin 500 Gr",
+        "change_pct": 24.72
+      },
+      {
+        "slot_id": "id:1SO9",
+        "title": "Ofçay Tiryaki Siyah Çay 1 Kg",
+        "change_pct": -24.05
+      },
+      {
+        "slot_id": "id:20AX",
+        "title": "Fairy Platinum Bulaşık Makinesi Tableti 50 Adet",
+        "change_pct": -24.05
+      },
+      {
+        "slot_id": "id:04HR",
+        "title": "Sarımsak 1 Kg",
+        "change_pct": -23.59
+      },
+      {
+        "slot_id": "id:0IPM",
+        "title": "Carrefour Bio Organik Yumurta 10 Adet",
+        "change_pct": -21.58
+      },
+      {
+        "slot_id": "id:0Y3L",
+        "title": "Söke Un 1 Kg",
+        "change_pct": -21.4
+      },
+      {
+        "slot_id": "id:1KOR",
+        "title": "Tat Yoğun Lezzet Mayonez 330 Gr",
+        "change_pct": -21.29
+      },
+      {
+        "slot_id": "id:0G6D",
+        "title": "Lezita Taze Poşetli Bütün Piliç 1 Kg",
+        "change_pct": -20.6
+      },
+      {
+        "slot_id": "id:0O22",
+        "title": "Uzman Kasap Dondurulmuş Mangal Köfte 500 Gr",
+        "change_pct": -20.0
       }
     ],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "warnings": []
   }
 ]
