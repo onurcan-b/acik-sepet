@@ -11,9 +11,9 @@ Markette fiyatlar gerçekten ne kadar oynuyor? “Bana öyle geliyor” kısmın
 
 <!-- STATUS_START -->
 > **Veri durumu: Eksik kapsam.** Son seri noktası: **2026-09-18**. Kategori ağırlığı kapsaması: **%74**.
-> Son tarama girişimi: 2026-09-18T08:41:36.890895+03:00.
+> Son tarama girişimi: 2026-09-18T12:58:07.527593+03:00.
 > Yayımlanamayan kategoriler: Et ve et ürünleri; Sebze.
-> Kaynak tarihi seri günüyle aynı olan SKU: **0/1413**. Yatay çizgi, raf fiyatlarının bugün yeniden teyit edildiğini göstermez.
+> Kaynak tarihi seri günüyle aynı olan SKU: **11/1413**. Yatay çizgi, raf fiyatlarının bugün yeniden teyit edildiğini göstermez.
 > Baz korunuyor: **2026-09-05 = 100**. 5–14 Eylül geçmişi kilitli; sınıflandırma düzeltmeleri 15 Eylül'den itibaren geçerli.
 <!-- STATUS_END -->
 
@@ -134,7 +134,7 @@ Tabloda en zayıf 18 tip var; toplam eksik tip sayısı 29.
 
 <!-- QUALITY_START -->
 - **Güncellik uyarısı:** Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor.
-- **0/1413** SKU için en yeni kaynak tarihi gözlem günüyle aynı; ayrıntı: [health.json](data/v0.4/health.json)
+- **11/1413** SKU için en yeni kaynak tarihi gözlem günüyle aynı; ayrıntı: [health.json](data/v0.4/health.json)
 - **1413** sıkı eşleşmiş SKU, **6** market etiketi
 - **1283/1413** miktar doğrudan API'nin normalize alanından
 - **1413/1413** satırda birim fiyat API değeriyle ayrıca kontrol edildi

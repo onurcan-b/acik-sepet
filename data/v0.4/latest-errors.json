@@ -1,9 +1,9 @@
 {
   "date": "2026-09-18",
-  "checked_at": "2026-09-18T08:41:36.890895+03:00",
+  "checked_at": "2026-09-18T12:58:07.527593+03:00",
   "status": "published",
   "errors": [],
-  "source_updated_today": 0,
+  "source_updated_today": 11,
   "observed_skus": 1413,
   "recovered_types": [],
   "recovery": [],
@@ -138,5 +138,7 @@
     "paper_towel": 13,
     "wet_wipes": 5,
     "tissues": 6
-  }
+  },
+  "retained_same_day_types": [],
+  "published_skus": 1413
 }
