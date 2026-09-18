@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-18",
-  "checked_at": "2026-09-18T20:13:37.679680+03:00",
-  "status": "published_with_retained_types",
+  "date": "2026-09-19",
+  "checked_at": "2026-09-19T02:28:04.250576+03:00",
+  "status": "published",
   "errors": [],
-  "source_updated_today": 1397,
-  "observed_skus": 1402,
+  "source_updated_today": 0,
+  "observed_skus": 1411,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -21,7 +21,7 @@
     "breakfast_cereal": 18,
     "semolina": 11,
     "beef_mince": 4,
-    "beef_cubes": 5,
+    "beef_cubes": 7,
     "chicken_breast": 0,
     "chicken_thigh": 3,
     "whole_chicken": 11,
@@ -51,7 +51,7 @@
     "cream": 15,
     "sunflower_oil": 15,
     "olive_oil": 17,
-    "butter": 15,
+    "butter": 20,
     "margarine": 16,
     "corn_oil": 0,
     "banana": 2,
@@ -100,7 +100,7 @@
     "lentils": 18,
     "beans": 18,
     "chickpeas": 14,
-    "canned_veg": 2,
+    "canned_veg": 4,
     "soup": 19,
     "ketchup": 15,
     "mayonnaise": 17,
@@ -138,23 +138,5 @@
     "paper_towel": 14,
     "wet_wipes": 5,
     "tissues": 6
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "pasta_spaghetti",
-      "label": "Spagetti makarna",
-      "reason": "Same-day coverage regression for pasta_spaghetti: 6 -> 5",
-      "new_observed_skus": 5,
-      "retained_skus": 6,
-      "collected_at": [
-        "2026-09-18T12:50:58.991988+03:00",
-        "2026-09-18T12:50:58.992000+03:00",
-        "2026-09-18T12:50:58.992004+03:00",
-        "2026-09-18T12:50:58.992006+03:00",
-        "2026-09-18T12:50:58.992008+03:00",
-        "2026-09-18T12:50:58.992010+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1403
+  }
 }

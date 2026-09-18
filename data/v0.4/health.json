@@ -1912,5 +1912,36 @@
       }
     ],
     "warnings": []
+  },
+  {
+    "date": "2026-09-19",
+    "rows": 1411,
+    "source_updated_today": 0,
+    "source_within_3_days": 1411,
+    "source_date_unknown": 0,
+    "source_date_future": 0,
+    "depot_observations": 1746,
+    "depot_source_updated_today": 0,
+    "depot_source_date_unknown": 0,
+    "single_source_skus": 1167,
+    "auditable_skus": 1411,
+    "source_age_days": {
+      "1": 1411
+    },
+    "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
+    "previous_date": "2026-09-18",
+    "matched_slots": 1402,
+    "missing_slots": 1,
+    "new_slots": 9,
+    "large_price_moves": [
+      {
+        "slot_id": "id:03VE",
+        "title": "Sade Organik Spagetti Makarna 500 Gr",
+        "change_pct": -35.26
+      }
+    ],
+    "warnings": [
+      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
+    ]
   }
 ]

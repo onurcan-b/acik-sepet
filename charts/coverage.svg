@@ -126,11 +126,11 @@ z
    </g>
    <g id="patch_14">
     <path d="M 164.96875 62.809923
-L 533.949455 62.809923
-L 533.949455 39.505291
+L 497.064668 62.809923
+L 497.064668 39.505291
 L 164.96875 39.505291
 z
-" clip-path="url(#p334cab308a)" style="fill: #0f766e"/>
+" clip-path="url(#p334cab308a)" style="fill: #2563eb"/>
    </g>
    <g id="matplotlib.axis_1">
     <g id="xtick_1">
@@ -1999,11 +1999,11 @@ z
     </g>
    </g>
    <g id="text_31">
-    <!-- %83 -->
-    <g transform="translate(539.26299 53.495498) scale(0.09 -0.09)">
+    <!-- %75 -->
+    <g transform="translate(502.378203 53.495498) scale(0.09 -0.09)">
      <use xlink:href="#DejaVuSans-8"/>
-     <use xlink:href="#DejaVuSans-1b" transform="translate(95.015625 0)"/>
-     <use xlink:href="#DejaVuSans-16" transform="translate(158.640625 0)"/>
+     <use xlink:href="#DejaVuSans-1a" transform="translate(95.015625 0)"/>
+     <use xlink:href="#DejaVuSans-18" transform="translate(158.640625 0)"/>
     </g>
    </g>
    <g id="text_32">
