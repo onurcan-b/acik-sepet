@@ -1,7 +1,10 @@
 from __future__ import annotations
 
+import math
 import random
 import time
+from datetime import timezone
+from email.utils import parsedate_to_datetime
 from typing import Any
 
 import requests
@@ -9,6 +12,8 @@ import requests
 API_URL = "https://api.marketfiyati.org.tr/api/v2/search"
 CATEGORIES_URL = "https://api.marketfiyati.org.tr/api/v3/info/categories"
 CATEGORY_FIELDS = {"menu_category", "main_category", "sub_category"}
+REQUEST_INTERVAL_SECONDS = 1.25
+MAX_PAGE_RETRY_WAIT_SECONDS = 30.0
 
 HEADERS = {
     "Accept": "application/json, text/plain, */*",
@@ -16,7 +21,8 @@ HEADERS = {
     "Content-Type": "application/json;charset=UTF-8",
     "Origin": "https://marketfiyati.org.tr",
     "Referer": "https://marketfiyati.org.tr/",
-    "Connection": "close",
+    # Use requests' normal connection pool instead of opening a TCP/TLS
+    # connection for every page. Pacing still applies to every HTTP request.
     "User-Agent": (
         "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
         "(KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
@@ -25,7 +31,46 @@ HEADERS = {
 
 
 class MarketFiyatiError(RuntimeError):
-    pass
+    def __init__(
+        self, message: str, *, retryable: bool = True, retry_after: float | None = None,
+    ):
+        super().__init__(message)
+        self.retryable = retryable
+        self.retry_after = retry_after
+
+
+def _retry_after_seconds(value: str | None) -> float | None:
+    if not value:
+        return None
+    try:
+        seconds = float(value)
+    except (TypeError, ValueError):
+        try:
+            deadline = parsedate_to_datetime(value)
+            if deadline.tzinfo is None:
+                deadline = deadline.replace(tzinfo=timezone.utc)
+            seconds = deadline.timestamp() - time.time()
+        except (TypeError, ValueError, OverflowError):
+            return None
+    return max(0.0, seconds) if math.isfinite(seconds) else None
+
+
+def _defer_request(client: requests.Session, delay: float) -> None:
+    client._marketfiyati_next_request_at = max(
+        getattr(client, "_marketfiyati_next_request_at", 0.0),
+        time.monotonic() + delay,
+    )
+
+
+def _pace_request(client: requests.Session) -> None:
+    delay = getattr(client, "_marketfiyati_next_request_at", 0.0) - time.monotonic()
+    if delay > MAX_PAGE_RETRY_WAIT_SECONDS:
+        # The collector owns long cooldowns and the overall run budget.
+        # Do not issue another query during a server-requested cooldown.
+        raise MarketFiyatiError("API yeniden deneme süresi bekleniyor", retry_after=delay)
+    if delay > 0:
+        time.sleep(delay)
+    _defer_request(client, REQUEST_INTERVAL_SECONDS)
 
 
 def _fetch_page(
@@ -38,7 +83,6 @@ def _fetch_page(
     category_level: str | None,
     category_values: list[str] | None,
 ) -> list[dict[str, Any]]:
-    last_error: Exception | None = None
     payload = {"keywords": keywords, "pages": page, "size": size}
     if category_level:
         if category_level not in CATEGORY_FIELDS:
@@ -48,22 +92,48 @@ def _fetch_page(
         payload[category_level] = category_values
     for attempt in range(1, attempts + 1):
         try:
+            _pace_request(client)
             response = client.post(API_URL, headers=HEADERS, json=payload, timeout=timeout)
-            if response.status_code == 418:
-                raise MarketFiyatiError("Market Fiyatı bot koruması HTTP 418 döndürdü")
-            response.raise_for_status()
-            body = response.json()
+            status = response.status_code
+            if status >= 400:
+                retryable = status == 429 or 500 <= status < 600
+                retry_after = _retry_after_seconds(getattr(response, "headers", {}).get("Retry-After"))
+                raise MarketFiyatiError(
+                    f"Market Fiyatı HTTP {status} döndürdü",
+                    retryable=retryable,
+                    retry_after=retry_after,
+                )
+            try:
+                body = response.json()
+            except ValueError as exc:
+                raise MarketFiyatiError("Beklenmeyen API yanıtı: geçersiz JSON", retryable=False) from exc
             if not isinstance(body, dict) or "content" not in body:
-                raise MarketFiyatiError("Beklenmeyen API yanıtı: content yok")
+                raise MarketFiyatiError("Beklenmeyen API yanıtı: content yok", retryable=False)
             content = body["content"]
-            if not isinstance(content, list):
-                raise MarketFiyatiError("Beklenmeyen API yanıtı: content liste değil")
+            if not isinstance(content, list) or any(not isinstance(item, dict) for item in content):
+                raise MarketFiyatiError("Beklenmeyen API yanıtı: content ürün listesi değil", retryable=False)
             return content
-        except (requests.RequestException, ValueError, MarketFiyatiError) as exc:
-            last_error = exc
-            if attempt < attempts:
-                time.sleep((2 ** (attempt - 1)) + random.uniform(0.2, 0.8))
-    raise MarketFiyatiError(f"{keywords!r} sayfa {page} başarısız: {last_error}")
+        except MarketFiyatiError as exc:
+            error = exc
+        except requests.RequestException as exc:
+            retryable = isinstance(exc, (
+                requests.ConnectionError, requests.Timeout, requests.exceptions.ChunkedEncodingError,
+            )) and not isinstance(exc, requests.exceptions.SSLError)
+            error = MarketFiyatiError(str(exc), retryable=retryable)
+
+        if error.retry_after is not None:
+            _defer_request(client, error.retry_after)
+        if not error.retryable or attempt == attempts or (error.retry_after or 0) > MAX_PAGE_RETRY_WAIT_SECONDS:
+            raise MarketFiyatiError(
+                f"{keywords!r} sayfa {page} başarısız: {error}",
+                retryable=error.retryable,
+                retry_after=error.retry_after,
+            ) from error
+        _defer_request(client, max(
+            (2 ** (attempt - 1)) + random.uniform(0.2, 0.8),
+            error.retry_after or 0.0,
+        ))
+    raise ValueError("attempts must be positive")
 
 
 def search_products(
@@ -77,44 +147,48 @@ def search_products(
     attempts: int = 3,
     session: requests.Session | None = None,
 ) -> list[dict[str, Any]]:
-    """Return a deduplicated, category-filtered pool for one product type.
+    """Return a complete, deduplicated, category-filtered pool for one type.
 
-    Market Fiyatı's own category filter narrows the pool first. The collector
-    still verifies every returned product locally; API taxonomy is evidence,
-    not an instruction to accept the product blindly.
+    A failed page raises instead of returning earlier pages as a partial pool.
+    Reusing a session shares request pacing across product types as well as
+    pages. Long Retry-After waits are handed to the collector via the error.
     """
-    client = session or requests.Session()
+    if attempts < 1:
+        raise ValueError("attempts must be positive")
+    client = session if session is not None else requests.Session()
     output: list[dict[str, Any]] = []
     seen: set[str] = set()
 
-    for page in range(max_pages):
-        content = _fetch_page(
-            client,
-            keywords,
-            page,
-            page_size,
-            timeout,
-            attempts,
-            category_level,
-            category_values,
-        )
-        new_count = 0
-        for item in content:
-            item = dict(item)
-            if category_level and category_values:
-                # Keep provenance of the server-side filter. Market Fiyatı's
-                # free-form categories[] does not consistently echo the
-                # canonical sub-category label used by the search endpoint.
-                item["_query_category_level"] = category_level
-                item["_query_category_values"] = list(category_values)
-            key = str(item.get("id") or item.get("productId") or item.get("product_id") or item.get("barcode") or item.get("title") or "")
-            if not key or key in seen:
-                continue
-            seen.add(key)
-            output.append(item)
-            new_count += 1
-        if len(content) < page_size or new_count == 0:
-            break
-        time.sleep(random.uniform(0.05, 0.15))
-    return output
-
+    try:
+        for page in range(max_pages):
+            content = _fetch_page(
+                client,
+                keywords,
+                page,
+                page_size,
+                timeout,
+                attempts,
+                category_level,
+                category_values,
+            )
+            new_count = 0
+            for item in content:
+                item = dict(item)
+                if category_level and category_values:
+                    # Keep provenance of the server-side filter. Market Fiyatı's
+                    # free-form categories[] does not consistently echo the
+                    # canonical sub-category label used by the search endpoint.
+                    item["_query_category_level"] = category_level
+                    item["_query_category_values"] = list(category_values)
+                key = str(item.get("id") or item.get("productId") or item.get("product_id") or item.get("barcode") or item.get("title") or "")
+                if not key or key in seen:
+                    continue
+                seen.add(key)
+                output.append(item)
+                new_count += 1
+            if len(content) < page_size or new_count == 0:
+                break
+        return output
+    finally:
+        if session is None:
+            client.close()

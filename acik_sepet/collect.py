@@ -31,6 +31,9 @@ RENEWAL_AFTER_DAYS = 7
 CANDIDATE_MIN_STREAK = 3
 CANDIDATE_RETENTION_DAYS = 14
 MAX_REPLACEMENT_SHARE = 0.20
+RECOVERY_DELAYS = (60, 180, 300)
+MAX_CONSECUTIVE_FAILURES = 3
+MAX_COLLECTION_SECONDS = 25 * 60
 
 
 def _norm(value: str | None) -> str:
@@ -691,6 +694,71 @@ def _retain_same_day_types(previous, output_by_type, types_state, original_types
     return retained
 
 
+def _scan_with_recovery(specs, scan):
+    """Pause an unhealthy source and retry only unfinished, complete searches.
+
+    Successful types stay in memory until *every* search and publication gate
+    passes. A missing response is never treated as an empty product category.
+    """
+    deadline = time.monotonic() + MAX_COLLECTION_SECONDS
+    completed, failed = set(), set()
+    errors, recovered, recovery = {}, [], []
+    pending = list(specs)
+    retry_at = 0.0
+    stop_reason = "Recovery attempts exhausted"
+    for round_number in range(len(RECOVERY_DELAYS) + 1):
+        if round_number:
+            delay = max(RECOVERY_DELAYS[round_number - 1], retry_at - time.monotonic())
+            if time.monotonic() + delay >= deadline:
+                stop_reason = "Recovery delay exceeds collection time budget"
+                break
+            recovery.append({"round": round_number, "wait_seconds": round(delay, 3),
+                             "remaining_types": [spec["id"] for spec in pending]})
+            print(f"source recovery={round_number} wait_seconds={delay:.1f} pending_types={len(pending)}", flush=True)
+            time.sleep(delay)
+
+        consecutive = 0
+        permanent_failure = False
+        for spec in pending:
+            if time.monotonic() >= deadline:
+                stop_reason = "Collection time budget exhausted"
+                break
+            key = spec["id"]
+            try:
+                scan(spec)
+            except MarketFiyatiError as exc:
+                failed.add(key)
+                retryable = exc.retryable
+                errors[key] = {"type_id": key, "error": str(exc), "retryable": retryable}
+                consecutive += 1
+                if not retryable:
+                    stop_reason = "Non-retryable API response; collection stopped"
+                    permanent_failure = True
+                    break
+                if exc.retry_after is not None:
+                    retry_at = max(retry_at, time.monotonic() + exc.retry_after)
+                    errors[key]["retry_after_seconds"] = exc.retry_after
+                if exc.retry_after is not None or consecutive >= MAX_CONSECUTIVE_FAILURES:
+                    print(f"source unavailable: pausing after {consecutive} consecutive failed types", flush=True)
+                    break
+            else:
+                completed.add(key)
+                errors.pop(key, None)
+                consecutive = 0
+                if key in failed:
+                    recovered.append(key)
+                if len(completed) % 20 == 0 or len(completed) == len(specs):
+                    print(f"progress={len(completed)}/{len(specs)} errors={len(errors)}", flush=True)
+        pending = [spec for spec in specs if spec["id"] not in completed]
+        if not pending or permanent_failure or time.monotonic() >= deadline:
+            break
+
+    for spec in pending:
+        errors.setdefault(spec["id"], {"type_id": spec["id"], "error": stop_reason,
+                                       "not_scanned": True})
+    return list(errors.values()), recovered, recovery
+
+
 def collect(refresh: bool = False) -> Path:
     from .history import verify_files
     from .health import summarize
@@ -726,8 +794,6 @@ def collect(refresh: bool = False) -> Path:
                for sku in state.get("skus", []) if sku.get("product_key")}
     session = requests.Session()
     output_by_type: dict[str, list[dict]] = {}
-    errors: dict[str, dict] = {}
-    recovered: list[str] = []
 
     def scan(spec):
         candidates = search_products(spec["query"], category_level=spec["api_category_level"],
@@ -744,39 +810,20 @@ def collect(refresh: bool = False) -> Path:
                         "match_score": row.pop("score")})
         output_by_type[spec["id"]] = observed
 
-    for number, spec in enumerate(specs, 1):
-        try:
-            scan(spec)
-        except MarketFiyatiError as exc:
-            errors[spec["id"]] = {"type_id": spec["id"], "error": str(exc)}
-        time.sleep(0.25)
-        if number % 20 == 0 or number == len(specs):
-            print(f"progress={number}/{len(specs)} skus={sum(map(len, output_by_type.values()))} errors={len(errors)}", flush=True)
-
-    # Retry failed types separately; never treat failed pagination as an empty category.
-    if errors:
+    try:
+        errors, recovered, recovery = _scan_with_recovery(specs, scan)
+    finally:
         session.close()
-        session = requests.Session()
-        time.sleep(2)
-        for spec in specs:
-            if spec["id"] not in errors:
-                continue
-            try:
-                scan(spec)
-                recovered.append(spec["id"])
-                del errors[spec["id"]]
-            except MarketFiyatiError as exc:
-                errors[spec["id"]] = {"type_id": spec["id"], "error": str(exc)}
-            time.sleep(0.5)
-    session.close()
     output_rows = [row for spec in specs for row in output_by_type.get(spec["id"], [])]
-    details = {"observed_skus": len(output_rows), "recovered_types": recovered,
+    details = {"observed_skus": len(output_rows), "recovered_types": recovered, "recovery": recovery,
                "observed_by_type": {s["id"]: len(output_by_type.get(s["id"], [])) for s in specs}}
     if errors:
-        _record_attempt(today, list(errors.values()), "rejected", reason="Incomplete API collection; published observations and panel state preserved", **details)
+        _record_attempt(today, errors, "rejected", reason="Incomplete API collection; published observations and panel state preserved", **details)
         raise SystemExit("Toplama eksik: eski gözlemler ve panel state korundu; yeni endeks yayımlanmadı")
 
     try:
+        if datetime.now(TR_TZ).date().isoformat() != today:
+            raise ValueError("Collection crossed midnight; observations must belong to one calendar day")
         retained = []
         if existing.exists():
             with existing.open(newline="", encoding="utf-8") as handle:

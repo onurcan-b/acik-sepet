@@ -155,8 +155,9 @@ Bu özel durumda stok kaybı için kullanılan yedi günlük bekleme aranmaz. Bi
 panele farklı fiyatlı ürün sokmak yapay fiyat hareketi yaratmaz. Yeterli ortak slot
 yoksa tip eksik kalır; ana grafiğin çizgisini korumak için fiyat uydurulmaz.
 
-Toplama bir yayın işlemi olarak değerlendirilir: başarısız tipler bir kez daha
-ayrı oturumda denenir. Hata devam ederse yeni snapshot ve panel state yazılmaz.
+Toplama bir yayın işlemi olarak değerlendirilir: geçici kaynak hatalarında sorgular
+yavaşlatılır; yalnızca tamamlanmayan tipler, artan beklemelerden sonra yeniden denenir.
+Hata devam ederse yeni snapshot ve panel state yazılmaz.
 Bütün satırlar, minimum kapsama, fiyat kanıtı ve güncellik kontrollerinden geçmeden
 yayımlanmaz. Aynı gün tekrarında daha önce yeterli olan bir tip minimum altına veya en az iki
 SKU kaybederek önceki sayısının %80'i altına düşerse yalnızca o tipin aynı günkü
@@ -191,3 +192,28 @@ normal tek-SKU kaybı kabul edilir; minimum veya ciddi kapsama kaybında aynı g
 önceki başarılı tip ölçümü kendi tarama zamanı ve zincir state’iyle korunur.
 Bu kısmi güncelleme README ve Actions uyarısında açıkça görünür. API, fiyat kanıtı,
 güncellik ve tarihsel veri kontrolleri başarısız olduğunda tüm yayın hâlâ durur.
+
+## 14. Kaynak kesintilerinden toparlanma
+
+16 ve 18 Eylül gece taramalarında kaynak yaklaşık 100 ürün tipinden sonra bağlantıları
+kapatmaya başladı; sonraki kısa aralıklı denemeler de başarısız oldu. Bu kayıtlar
+kesintiyi gösterir, kaynağın bakımda olduğunu veya kesin bir istek sınırını kanıtlamaz.
+
+Tüm sayfa ve ürün sorguları aynı oturumun bağlantı havuzunu ve en az 1,25 saniyelik
+istek başlangıç aralığını kullanır. Geçici bağlantı hataları, HTTP 429 ve 5xx yanıtları
+bir sayfada en fazla üç kez denenir; `Retry-After` varsa bu süreye uyulur. Eksik
+sayfalarla ürün listesi döndürülmez. Yetki/bot koruması ve veri şeması hatalarında
+yeniden deneme yapılmaz.
+
+Üç ardışık tip hatasında bütün tarama duraklatılır. En fazla üç toparlanma turu,
+60, 180 ve 300 saniyelik beklemelerle yalnızca hatalı ve henüz taranmamış tipleri
+yeniden dener. Kaynağın istediği bekleme daha uzunsa o süre geçmeden sorgu gönderilmez.
+Başarılı tipler bellekte tutulur ve zincir state'i ikinci kez ilerletilmez. Yeni tip
+taramaları ve beklemeler 25 dakikalık bütçeyle sınırlıdır. Türkiye saatine göre
+gece yarısını aşan tarama yayımlanmaz; farklı günler tek gözlem gibi etiketlenmez.
+
+Bütün tip sorguları ve yayın kontrolleri geçmeden veri yazılmaz. Toparlanma turları,
+gerçek sorgu hataları ve kesinti nedeniyle hiç taranamayan tipler deneme kaydında
+ayrı görünür. Kalıcı kesinti hâlâ başarısız Actions sonucu üretir; fiyatlar uydurulmaz,
+önceki başarılı yayın korunur. Ayrıca testler yeni günlük veri üretildikten sonra,
+commit öncesinde yeniden çalıştırılır. İlk gün **2026-09-05 = 100** olarak kalır.

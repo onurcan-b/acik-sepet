@@ -290,10 +290,11 @@ def _status(index_rows, category_rows, snapshot_rows) -> str:
         attempt_path = DATA_DIR / "latest-errors.json"
     attempt = json.loads(attempt_path.read_text()) if attempt_path.exists() else {}
     rejected = attempt.get("status") == "rejected"
-    failed_types = [e["type_id"] for e in attempt.get("errors", [])]
+    failed_types = [e["type_id"] for e in attempt.get("errors", []) if not e.get("not_scanned")]
+    deferred_types = [e["type_id"] for e in attempt.get("errors", []) if e.get("not_scanned")]
     retained = attempt.get("retained_same_day_types", [])
     missing = [r["label"] for r in category_rows if r["date"] == latest["date"] and not r.get("index")]
-    partial = bool(missing or failed_types)
+    partial = bool(missing or failed_types or deferred_types)
     label = ("Tarama başarısız; önceki yayın korundu" if rejected else
              "Kısmi güncelleme; bazı tiplerde gün içindeki önceki ölçüm korundu" if retained else
              "Eksik kapsam" if partial else "Yayınlandı")
@@ -303,6 +304,8 @@ def _status(index_rows, category_rows, snapshot_rows) -> str:
         lines.append(f"> Son tarama girişimi: {attempt['checked_at']}.")
     if failed_types:
         lines.append(f"> **{len(failed_types)} ürün tipinde API hatası** var; bu, ürünlerin katalogda bulunmadığı anlamına gelmez.")
+    if deferred_types:
+        lines.append(f"> **{len(deferred_types)} ürün tipi taranamadı**: kaynak hatası veya süre sınırı nedeniyle kalan sorgular durduruldu.")
     if retained:
         labels = "; ".join(f"{row['label']} ({', '.join(row['collected_at'])})" for row in retained)
         lines.append("> Aynı günün önceki ölçümü kullanılan tipler: " + labels + ". Diğer tipler son taramayla güncellendi.")

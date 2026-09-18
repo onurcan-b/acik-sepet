@@ -65,7 +65,7 @@ def test_failed_api_cannot_overwrite_existing_snapshot_or_panel(collector, monke
     monkeypatch.setattr(collect, 'search_products', failed)
     with pytest.raises(SystemExit, match='Toplama eksik'):
         collect.collect(refresh=True)
-    assert len(calls) == 2
+    assert len(calls) == 4
     assert (target.read_bytes(), panel.read_bytes()) == before
     status = json.loads((snapshots.parent / 'collection-status.json').read_text())
     assert status['status'] == 'rejected' and len(status['errors']) == 1
@@ -113,6 +113,55 @@ def test_invalid_freshness_cannot_write_snapshot_or_state(collector, monkeypatch
         collect.collect()
     assert not (snapshots / '2026-09-15.csv').exists()
     assert panel.read_bytes() == old_state
+
+
+def test_recovery_exhaustion_preserves_state_even_with_successful_types(collector, monkeypatch):
+    snapshots, panel, _ = collector
+    old_state = panel.read_bytes()
+    specs = [spec(), {**spec(), 'id': 'other', 'query': 'other'}]
+    monkeypatch.setattr(collect, 'load_product_types_for_date', lambda _: specs)
+    calls = []
+
+    def fetch(query, **kwargs):
+        calls.append(query)
+        if query == 'other':
+            raise collect.MarketFiyatiError('remote disconnected')
+        return [item(price=110)]
+
+    monkeypatch.setattr(collect, 'search_products', fetch)
+    with pytest.raises(SystemExit, match='Toplama eksik'):
+        collect.collect()
+    assert calls.count('süt') == 1 and calls.count('other') == 4
+    assert panel.read_bytes() == old_state
+    assert not (snapshots / '2026-09-15.csv').exists()
+    status = json.loads((snapshots.parent / 'collection-status.json').read_text())
+    assert status['status'] == 'rejected' and status['observed_skus'] == 1
+    assert [row['type_id'] for row in status['errors']] == ['other']
+
+
+def test_crossing_midnight_cannot_publish_misdated_observations(collector, monkeypatch):
+    snapshots, panel, _ = collector
+    old_state = panel.read_bytes()
+
+    class Clock(datetime):
+        day = 15
+
+        @classmethod
+        def now(cls, tz):
+            return datetime(2026, 9, cls.day, 0, tzinfo=tz)
+
+    def fetch(*args, **kwargs):
+        Clock.day = 16
+        return [item(price=110)]
+
+    monkeypatch.setattr(collect, 'datetime', Clock)
+    monkeypatch.setattr(collect, 'search_products', fetch)
+    with pytest.raises(SystemExit, match='crossed midnight'):
+        collect.collect()
+    assert panel.read_bytes() == old_state
+    assert not list(snapshots.glob('*.csv'))
+    status = json.loads((snapshots.parent / 'collection-status.json').read_text())
+    assert status['status'] == 'rejected'
 
 
 def test_same_day_refresh_cannot_silently_erase_category():
@@ -229,7 +278,8 @@ def test_current_chart_bytes_are_preserved_but_new_data_extends_it(tmp_path, mon
     assert chart.read_bytes() == original
     new_row = dict(rows[-1])
     new_row['date'] = (date.fromisoformat(new_row['date']) + timedelta(days=1)).isoformat()
-    new_row['index'] = str(float(new_row['index']) * 1.01)
+    # The latest real index can be blank when category coverage is insufficient.
+    new_row['index'] = '101.0'
     with data.open('a', newline='') as handle:
         csv.DictWriter(handle, fieldnames=rows[0].keys(), lineterminator='\n').writerow(new_row)
     rows = list(csv.DictReader(data.open()))
@@ -256,6 +306,19 @@ def test_one_sku_loss_in_small_panel_is_not_a_publication_failure():
     before = [{'type_id': 'garlic'}] * 4
     assert collect._refresh_regression(before, before[:3], [garlic]) is None
     assert collect._refresh_regression(before, before[:1], [garlic]) is not None
+
+
+def test_report_distinguishes_failed_requests_from_unattempted_types(tmp_path, monkeypatch):
+    from acik_sepet import report
+    monkeypatch.setattr(report, 'DATA_DIR', tmp_path)
+    (tmp_path / 'collection-status.json').write_text(json.dumps({
+        'status': 'rejected', 'errors': [
+            {'type_id': 'milk', 'error': 'remote disconnected'},
+            {'type_id': 'other', 'error': 'budget exhausted', 'not_scanned': True}]}))
+    text = report._status([{'date': '2026-09-15', 'coverage': '0.74'}], [], [])
+    assert '1 ürün tipinde API hatası' in text
+    assert '1 ürün tipi taranamadı' in text
+    assert 'Tarama başarısız; önceki yayın korundu' in text
 
 
 @pytest.mark.parametrize('remaining,retain', [(3, False), (1, True)])
