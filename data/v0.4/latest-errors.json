@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-19",
-  "checked_at": "2026-09-19T19:39:35.329065+03:00",
-  "status": "published_with_retained_types",
+  "date": "2026-09-20",
+  "checked_at": "2026-09-20T02:17:57.564729+03:00",
+  "status": "published",
   "errors": [],
-  "source_updated_today": 1381,
-  "observed_skus": 1404,
+  "source_updated_today": 0,
+  "observed_skus": 1406,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -107,12 +107,12 @@
     "salt": 18,
     "vinegar": 15,
     "black_tea": 21,
-    "turkish_coffee": 18,
+    "turkish_coffee": 19,
     "instant_coffee": 4,
     "filter_coffee": 17,
     "cola": 9,
     "fruit_juice": 0,
-    "iced_tea": 15,
+    "iced_tea": 16,
     "mineral_water": 15,
     "water": 19,
     "energy_drink": 13,
@@ -138,75 +138,5 @@
     "paper_towel": 14,
     "wet_wipes": 5,
     "tissues": 6
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "bread_toast",
-      "label": "Tost ekmeği",
-      "reason": "Same-day coverage regression for bread_toast: 7 -> 5",
-      "new_observed_skus": 5,
-      "retained_skus": 7,
-      "collected_at": [
-        "2026-09-19T02:20:42.808308+03:00",
-        "2026-09-19T02:20:42.808321+03:00",
-        "2026-09-19T02:20:42.808324+03:00",
-        "2026-09-19T02:20:42.808327+03:00",
-        "2026-09-19T02:20:42.808329+03:00",
-        "2026-09-19T02:20:42.808331+03:00",
-        "2026-09-19T02:20:42.808333+03:00"
-      ]
-    },
-    {
-      "type_id": "beef_cubes",
-      "label": "Dana kuşbaşı / sote",
-      "reason": "Same-day coverage regression for beef_cubes: 7 -> 5",
-      "new_observed_skus": 5,
-      "retained_skus": 7,
-      "collected_at": [
-        "2026-09-19T02:21:20.297663+03:00",
-        "2026-09-19T02:21:20.297674+03:00",
-        "2026-09-19T02:21:20.297678+03:00",
-        "2026-09-19T02:21:20.297680+03:00",
-        "2026-09-19T02:21:20.297683+03:00",
-        "2026-09-19T02:21:20.297685+03:00",
-        "2026-09-19T02:21:20.297687+03:00"
-      ]
-    },
-    {
-      "type_id": "frozen_fish",
-      "label": "Dondurulmuş balık",
-      "reason": "Same-day coverage regression for frozen_fish: 8 -> 6",
-      "new_observed_skus": 6,
-      "retained_skus": 8,
-      "collected_at": [
-        "2026-09-19T02:21:51.603507+03:00",
-        "2026-09-19T02:21:51.603519+03:00",
-        "2026-09-19T02:21:51.603522+03:00",
-        "2026-09-19T02:21:51.603524+03:00",
-        "2026-09-19T02:21:51.603527+03:00",
-        "2026-09-19T02:21:51.603529+03:00",
-        "2026-09-19T02:21:51.603531+03:00",
-        "2026-09-19T02:21:51.603533+03:00"
-      ]
-    },
-    {
-      "type_id": "tomato",
-      "label": "Domates",
-      "reason": "Same-day coverage regression for tomato: 9 -> 7",
-      "new_observed_skus": 7,
-      "retained_skus": 9,
-      "collected_at": [
-        "2026-09-19T02:23:26.618789+03:00",
-        "2026-09-19T02:23:26.618801+03:00",
-        "2026-09-19T02:23:26.618805+03:00",
-        "2026-09-19T02:23:26.618807+03:00",
-        "2026-09-19T02:23:26.618809+03:00",
-        "2026-09-19T02:23:26.618812+03:00",
-        "2026-09-19T02:23:26.618814+03:00",
-        "2026-09-19T02:23:26.618816+03:00",
-        "2026-09-19T02:23:26.618818+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1412
+  }
 }

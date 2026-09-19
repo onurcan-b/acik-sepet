@@ -2262,5 +2262,30 @@
       }
     ],
     "warnings": []
+  },
+  {
+    "date": "2026-09-20",
+    "rows": 1406,
+    "source_updated_today": 0,
+    "source_within_3_days": 1406,
+    "source_date_unknown": 0,
+    "source_date_future": 0,
+    "depot_observations": 1758,
+    "depot_source_updated_today": 0,
+    "depot_source_date_unknown": 0,
+    "single_source_skus": 1146,
+    "auditable_skus": 1406,
+    "source_age_days": {
+      "1": 1406
+    },
+    "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
+    "previous_date": "2026-09-19",
+    "matched_slots": 1403,
+    "missing_slots": 9,
+    "new_slots": 3,
+    "large_price_moves": [],
+    "warnings": [
+      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
+    ]
   }
 ]
