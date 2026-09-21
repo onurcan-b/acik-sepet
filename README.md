@@ -11,7 +11,7 @@ Markette fiyatlar gerçekten ne kadar oynuyor? “Bana öyle geliyor” kısmın
 
 <!-- STATUS_START -->
 > **Veri durumu: Kısmi güncelleme; bazı tiplerde gün içindeki önceki ölçüm korundu.** Son seri noktası: **2026-09-21**. Kategori ağırlığı kapsaması: **%74**.
-> Son tarama girişimi: 2026-09-21T13:55:09.449461+03:00.
+> Son tarama girişimi: 2026-09-21T21:52:28.572558+03:00.
 > Aynı günün önceki ölçümü kullanılan tipler: Portakal (2026-09-21T02:18:55.577287+03:00, 2026-09-21T02:18:55.577300+03:00). Diğer tipler son taramayla güncellendi.
 > Yayımlanamayan kategoriler: Et ve et ürünleri; Sebze.
 > Baz korunuyor: **2026-09-05 = 100**. 5–14 Eylül geçmişi kilitli; sınıflandırma düzeltmeleri 15 Eylül'den itibaren geçerli.
