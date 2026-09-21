@@ -2295,27 +2295,197 @@
   },
   {
     "date": "2026-09-21",
-    "rows": 1432,
-    "source_updated_today": 0,
-    "source_within_3_days": 1432,
+    "rows": 1451,
+    "source_updated_today": 1449,
+    "source_within_3_days": 1451,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 1799,
-    "depot_source_updated_today": 0,
+    "depot_observations": 1810,
+    "depot_source_updated_today": 1808,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1165,
-    "auditable_skus": 1432,
+    "single_source_skus": 1193,
+    "auditable_skus": 1451,
     "source_age_days": {
-      "1": 1432
+      "0": 1449,
+      "1": 2
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-09-20",
-    "matched_slots": 1411,
-    "missing_slots": 1,
-    "new_slots": 21,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1390,
+    "missing_slots": 22,
+    "new_slots": 61,
+    "large_price_moves": [
+      {
+        "slot_id": "id:0O96",
+        "title": "Süper Maylo Bambu Katkılı Tuvalet Kağıdı 40 Adet",
+        "change_pct": 126.4
+      },
+      {
+        "slot_id": "id:1KXE",
+        "title": "Bingo Ferah Evim Yüzey Temizleyici 2.5 Lt",
+        "change_pct": 75.09
+      },
+      {
+        "slot_id": "id:1ZGN",
+        "title": "Parex Klasik Yeşil Düz Sünger 5 Adet",
+        "change_pct": 62.58
+      },
+      {
+        "slot_id": "id:016M",
+        "title": "Maylo Süper Bambu Katkılı Kağıt Havlu 16 Adet",
+        "change_pct": -57.38
+      },
+      {
+        "slot_id": "id:0GJW",
+        "title": "Parex Güçlü Çöp Torbası Battal 10 Adet",
+        "change_pct": 53.89
+      },
+      {
+        "slot_id": "id:09LV",
+        "title": "Parex Büzgülü Çöp Torbası Orta Boy Limon Kokulu 15 Adet",
+        "change_pct": 53.78
+      },
+      {
+        "slot_id": "id:0LZL",
+        "title": "Sensodyne Nourish Sağlık Ve Temizlik Diş Fırçası 1 Adet",
+        "change_pct": 52.81
+      },
+      {
+        "slot_id": "id:1TBA",
+        "title": "Filiz Fırın Makarna 500 Gr",
+        "change_pct": 52.41
+      },
+      {
+        "slot_id": "id:0V8L",
+        "title": "Sensodyne Çok Yönlü Koruma Diş Macunu 75 Ml",
+        "change_pct": 50.54
+      },
+      {
+        "slot_id": "id:1EE6",
+        "title": "Sensodyne Tam Koruma Diş Macunu 75 Ml",
+        "change_pct": 50.54
+      },
+      {
+        "slot_id": "id:06QE",
+        "title": "Protex Sıvı Sabun Ultra 1.5 Lt",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:0FNZ",
+        "title": "Hacı Şakir Kalıp Sabun Leylak 4x150 Gr",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:0UDI",
+        "title": "Protex Cream Sıvı Sabun 300 Ml",
+        "change_pct": 42.85
+      },
+      {
+        "slot_id": "id:0QZ6",
+        "title": "Söke Un 5 Kg",
+        "change_pct": 37.55
+      },
+      {
+        "slot_id": "id:1JMC",
+        "title": "Nestlé Corn Flakes Kahvaltılık Gevrek 200 Gr",
+        "change_pct": 33.85
+      },
+      {
+        "slot_id": "id:0AXI",
+        "title": "Kahve Dünyası Kolombiya Filtre Kahve 250 Gr",
+        "change_pct": 33.33
+      },
+      {
+        "slot_id": "id:0RQP",
+        "title": "Sensodyne Beyazlatıcı Diş Macunu 75 Ml",
+        "change_pct": 33.33
+      },
+      {
+        "slot_id": "id:0VT3",
+        "title": "Parodontax Tam Koruma Diş Macunu 75 Ml",
+        "change_pct": 33.33
+      },
+      {
+        "slot_id": "id:1GYO",
+        "title": "Moliendo Breakfast Blend Filtre Kahve 250 Gr",
+        "change_pct": 33.33
+      },
+      {
+        "slot_id": "id:1OPU",
+        "title": "Tikveşli %18 Yağlı Krema 200 Ml",
+        "change_pct": 33.32
+      },
+      {
+        "slot_id": "id:00FM",
+        "title": "Domestos Çam Ferahlığı Yüzey Temizleyici 1.5 Lt",
+        "change_pct": 30.4
+      },
+      {
+        "slot_id": "id:0YXX",
+        "title": "Domestos Yüzey Temizleyici Okyanus 1.5 Lt",
+        "change_pct": 30.4
+      },
+      {
+        "slot_id": "id:217T",
+        "title": "Domestos Bahar Çiçekleri Yüzey Temizleyici 1.5 Lt",
+        "change_pct": 30.4
+      },
+      {
+        "slot_id": "id:1V49",
+        "title": "Duru Avokado Yağı Sıvı Sabun 1.5 Lt",
+        "change_pct": -30.0
+      },
+      {
+        "slot_id": "id:1ZAG",
+        "title": "Duru Sıvı Sabun Kiraz Çiçeği 500 Ml",
+        "change_pct": -30.0
+      },
+      {
+        "slot_id": "id:201M",
+        "title": "Kahve Dünyası Filtre Kahve 250 Gr",
+        "change_pct": 26.3
+      },
+      {
+        "slot_id": "id:0149",
+        "title": "File Sarımsak 200 Gr",
+        "change_pct": 25.32
+      },
+      {
+        "slot_id": "id:1K2A",
+        "title": "Filiz Tel Şehriye 500 Gr",
+        "change_pct": 23.45
+      },
+      {
+        "slot_id": "id:1NLE",
+        "title": "Nuh'un Ankara Arpa Şehriye 500 Gr",
+        "change_pct": 23.45
+      },
+      {
+        "slot_id": "id:1RU2",
+        "title": "Nuh'un Ankara Tel Şehriye 500 Gr",
+        "change_pct": 23.45
+      },
+      {
+        "slot_id": "id:1YZR",
+        "title": "Nuh'un Ankara Spagetti Makarna 500 Gr",
+        "change_pct": 23.45
+      },
+      {
+        "slot_id": "id:0LH1",
+        "title": "Migros Yüksük Makarna 500 Gr",
+        "change_pct": -22.01
+      },
+      {
+        "slot_id": "id:0M0B",
+        "title": "Migros Spagetti Makarna 500 Gr",
+        "change_pct": -22.01
+      },
+      {
+        "slot_id": "id:0VH6",
+        "title": "Migros Arpa Şehriye 500 Gr",
+        "change_pct": -22.01
+      }
+    ],
+    "warnings": []
   }
 ]

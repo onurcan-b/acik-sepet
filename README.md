@@ -10,10 +10,10 @@ Markette fiyatlar gerçekten ne kadar oynuyor? “Bana öyle geliyor” kısmın
 > Bu resmî TÜFE değil. Kira, ulaşım, sağlık, eğitim ve hizmetler yok. Burada yalnızca market rafındaki malların fiyat hareketini olabildiğince temiz ve denetlenebilir biçimde ölçüyoruz.
 
 <!-- STATUS_START -->
-> **Veri durumu: Eksik kapsam.** Son seri noktası: **2026-09-21**. Kategori ağırlığı kapsaması: **%74**.
-> Son tarama girişimi: 2026-09-21T02:23:43.271653+03:00.
+> **Veri durumu: Kısmi güncelleme; bazı tiplerde gün içindeki önceki ölçüm korundu.** Son seri noktası: **2026-09-21**. Kategori ağırlığı kapsaması: **%74**.
+> Son tarama girişimi: 2026-09-21T13:55:09.449461+03:00.
+> Aynı günün önceki ölçümü kullanılan tipler: Portakal (2026-09-21T02:18:55.577287+03:00, 2026-09-21T02:18:55.577300+03:00). Diğer tipler son taramayla güncellendi.
 > Yayımlanamayan kategoriler: Et ve et ürünleri; Sebze.
-> Kaynak tarihi seri günüyle aynı olan SKU: **0/1432**. Yatay çizgi, raf fiyatlarının bugün yeniden teyit edildiğini göstermez.
 > Baz korunuyor: **2026-09-05 = 100**. 5–14 Eylül geçmişi kilitli; sınıflandırma düzeltmeleri 15 Eylül'den itibaren geçerli.
 <!-- STATUS_END -->
 
@@ -22,7 +22,7 @@ Markette fiyatlar gerçekten ne kadar oynuyor? “Bana öyle geliyor” kısmın
 <!-- STATS_START -->
 | Endeks | Tarih | Aktif tip | Aktif tiplerde SKU | Kategori ağırlığı kapsaması | 7 gün | 30 gün | Baz |
 |---:|---|---:|---:|---:|---:|---:|---|
-| **100.07** | 2026-09-21 | 102 | 1365 | %74 | +0.35% | — | 2026-09-05 = 100 |
+| **100.62** | 2026-09-21 | 102 | 1345 | %74 | +0.90% | — | 2026-09-05 = 100 |
 <!-- STATS_END -->
 
 ## Kısaca ne yapıyor?
@@ -64,18 +64,18 @@ Kategori eşlemeleri açıkça [`config/api_categories.json`](config/api_categor
 <!-- CATEGORY_TABLE_START -->
 | Kategori | Endeks | Yeterli tip | Kapsama | SKU |
 |---|---:|---:|---:|---:|
-| Ekmek, tahıllar ve makarna | 100.75 | 10/12 | %83 | 138 |
-| Et ve et ürünleri | — | 6/10 | %60 | 91 |
-| Balık ve deniz ürünleri | 109.18 | 4/6 | %67 | 29 |
-| Süt ürünleri ve yumurta | 98.97 | 12/13 | %92 | 197 |
-| Yağlar | 100.40 | 4/5 | %80 | 68 |
-| Meyve | 99.54 | 9/13 | %69 | 32 |
-| Sebze | — | 9/17 | %53 | 44 |
-| Şeker, tatlı ve atıştırmalık | 100.70 | 12/12 | %100 | 208 |
-| Diğer gıda | 99.62 | 9/10 | %90 | 171 |
-| Alkolsüz içecekler | 101.15 | 8/11 | %73 | 143 |
-| Ev temizlik sarf malzemeleri | 100.00 | 9/10 | %90 | 125 |
-| Kişisel bakım ve kağıt ürünleri | 98.81 | 10/11 | %91 | 186 |
+| Ekmek, tahıllar ve makarna | 101.56 | 10/12 | %83 | 138 |
+| Et ve et ürünleri | — | 6/10 | %60 | 88 |
+| Balık ve deniz ürünleri | 109.18 | 4/6 | %67 | 31 |
+| Süt ürünleri ve yumurta | 99.10 | 12/13 | %92 | 202 |
+| Yağlar | 100.40 | 4/5 | %80 | 73 |
+| Meyve | 100.37 | 9/13 | %69 | 31 |
+| Sebze | — | 9/17 | %53 | 45 |
+| Şeker, tatlı ve atıştırmalık | 100.70 | 12/12 | %100 | 210 |
+| Diğer gıda | 99.62 | 9/10 | %90 | 175 |
+| Alkolsüz içecekler | 101.95 | 8/11 | %73 | 146 |
+| Ev temizlik sarf malzemeleri | 101.96 | 9/10 | %90 | 124 |
+| Kişisel bakım ve kağıt ürünleri | 99.63 | 10/11 | %91 | 188 |
 <!-- CATEGORY_TABLE_END -->
 
 ## Kapsama dürüstlüğü
@@ -90,9 +90,9 @@ v0.3 kategori kapsamasını yalnızca baseline’da hayatta kalan ürün tipleri
 | Ürün tipi | Gözlenen | Minimum | API kategori filtresi |
 |---|---:|---:|---|
 | Meyve suyu | 0 | 8 | Meyve Suyu |
-| Beyaz ekmek | 0 | 5 | Somun Ekmek |
 | Tavuk göğüs | 0 | 5 | Tavuk Göğüs |
 | Toz çamaşır deterjanı | 2 | 7 | Toz Deterjanlar |
+| Beyaz ekmek | 1 | 5 | Somun Ekmek |
 | Hindi eti | 0 | 4 | Hindi Eti |
 | Konserve sebze | 2 | 5 | Mısır Konservesi |
 | Balık parmak | 0 | 2 | Balık Kroket |
@@ -105,8 +105,8 @@ v0.3 kategori kapsamasını yalnızca baseline’da hayatta kalan ürün tipleri
 | Mısırözü yağı | 0 | 2 | Mısırözü Yağı |
 | Tavuk but / baget | 3 | 5 | Tavuk But |
 | Çilek | 0 | 2 | Çilek |
-| Çözünebilir kahve | 4 | 6 | Granül Kahve |
 | Havuç | 1 | 2 | Kök Sebzeler |
+| Konserve sardalya | 1 | 2 | Deniz Ürünleri |
 
 Tabloda en zayıf 18 tip var; toplam eksik tip sayısı 28.
 <!-- GAPS_END -->
@@ -114,33 +114,32 @@ Tabloda en zayıf 18 tip var; toplam eksik tip sayısı 28.
 ## Bugün ne oynadı?
 
 <!-- MOVERS_START -->
-2026-09-20 → 2026-09-21: **0 yukarı**, **0 aşağı**, **102 değişim gözlenmedi**. Karşılaştırılan tip: 102. Kaynak güncelliği aşağıda ayrıca gösterilir.
+2026-09-20 → 2026-09-21: **20 yukarı**, **4 aşağı**, **78 değişim gözlenmedi**. Karşılaştırılan tip: 102. Kaynak güncelliği aşağıda ayrıca gösterilir.
 
 | Ürün tipi | SKU | Değişim |
 |---|---:|---:|
-| Elma | 5 | +0.00% |
-| Avokado | 2 | +0.00% |
-| Ayran | 18 | +0.00% |
-| Muz | 2 | +0.00% |
-| Kuru fasulye | 21 | +0.00% |
-| Dana kuşbaşı / sote | 7 | +0.00% |
-| Bisküvi | 21 | +0.00% |
-| Siyah çay | 20 | +0.00% |
-| Çamaşır suyu | 13 | +0.00% |
-| Tost ekmeği | 6 | +0.00% |
+| Yüzey temizleyici | 16 | +8.85% |
+| Diş macunu | 19 | +8.43% |
+| Sarımsak | 3 | +7.81% |
+| Kağıt havlu | 13 | -6.35% |
+| Filtre kahve | 16 | +6.33% |
+| Üzüm | 5 | +5.50% |
+| Çöp torbası | 17 | +5.20% |
+| Dana kuşbaşı / sote | 7 | +4.53% |
+| Tuvalet kağıdı | 21 | +3.97% |
+| Bulaşık süngeri | 14 | +3.53% |
 <!-- MOVERS_END -->
 
 ## Veri kalitesi
 
 <!-- QUALITY_START -->
-- **Güncellik uyarısı:** Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor.
-- **0/1432** SKU için en yeni kaynak tarihi gözlem günüyle aynı; ayrıntı: [health.json](data/v0.4/health.json)
-- **1432** sıkı eşleşmiş SKU, **6** market etiketi
-- **1298/1432** miktar doğrudan API'nin normalize alanından
-- **1432/1432** satırda birim fiyat API değeriyle ayrıca kontrol edildi
-- **1432/1432** gözlem sabit depot relatifleriyle bağlı
-- **1165/1432** SKU yalnızca bir depot üzerinden izleniyor; market etiketleri ulusal temsiliyet sağlamaz
-- **1432/1432** SKU için depot fiyatları, kaynak tarihleri ve bağlantı girdileri saklanıyor (15 Eylül'den itibaren)
+- **1449/1451** SKU için en yeni kaynak tarihi gözlem günüyle aynı; ayrıntı: [health.json](data/v0.4/health.json)
+- **1451** sıkı eşleşmiş SKU, **7** market etiketi
+- **1319/1451** miktar doğrudan API'nin normalize alanından
+- **1451/1451** satırda birim fiyat API değeriyle ayrıca kontrol edildi
+- **1451/1451** gözlem sabit depot relatifleriyle bağlı
+- **1193/1451** SKU yalnızca bir depot üzerinden izleniyor; market etiketleri ulusal temsiliyet sağlamaz
+- **1451/1451** SKU için depot fiyatları, kaynak tarihleri ve bağlantı girdileri saklanıyor (15 Eylül'den itibaren)
 - **169** bridge edilmiş panel yenilemesi (yeni baseline'da doğal olarak sıfır)
 <!-- QUALITY_END -->
 
