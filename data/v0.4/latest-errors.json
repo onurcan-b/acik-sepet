@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-21",
-  "checked_at": "2026-09-21T21:52:28.572558+03:00",
-  "status": "published_with_retained_types",
+  "date": "2026-09-22",
+  "checked_at": "2026-09-22T03:17:27.870555+03:00",
+  "status": "published",
   "errors": [],
-  "source_updated_today": 1449,
-  "observed_skus": 1450,
+  "source_updated_today": 0,
+  "observed_skus": 1463,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -13,7 +13,7 @@
     "bread_wholewheat": 4,
     "flour_wheat": 19,
     "rice": 15,
-    "bulgur": 17,
+    "bulgur": 22,
     "pasta_spaghetti": 6,
     "pasta_other": 18,
     "vermicelli": 14,
@@ -21,7 +21,7 @@
     "breakfast_cereal": 15,
     "semolina": 12,
     "beef_mince": 7,
-    "beef_cubes": 7,
+    "beef_cubes": 8,
     "chicken_breast": 0,
     "chicken_thigh": 3,
     "whole_chicken": 11,
@@ -113,7 +113,7 @@
     "cola": 11,
     "fruit_juice": 0,
     "iced_tea": 17,
-    "mineral_water": 15,
+    "mineral_water": 18,
     "water": 20,
     "energy_drink": 12,
     "soda": 11,
@@ -135,22 +135,8 @@
     "toothbrush": 14,
     "deodorant": 20,
     "toilet_paper": 21,
-    "paper_towel": 15,
-    "wet_wipes": 7,
+    "paper_towel": 18,
+    "wet_wipes": 8,
     "tissues": 8
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "orange",
-      "label": "Portakal",
-      "reason": "Same-day coverage regression for orange: 2 -> 1",
-      "new_observed_skus": 1,
-      "retained_skus": 2,
-      "collected_at": [
-        "2026-09-21T02:18:55.577287+03:00",
-        "2026-09-21T02:18:55.577300+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1451
+  }
 }
