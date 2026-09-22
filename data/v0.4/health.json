@@ -2490,27 +2490,132 @@
   },
   {
     "date": "2026-09-22",
-    "rows": 1463,
-    "source_updated_today": 0,
-    "source_within_3_days": 1463,
+    "rows": 1456,
+    "source_updated_today": 1445,
+    "source_within_3_days": 1456,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 1836,
-    "depot_source_updated_today": 0,
+    "depot_observations": 1832,
+    "depot_source_updated_today": 1821,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1196,
-    "auditable_skus": 1463,
+    "single_source_skus": 1192,
+    "auditable_skus": 1456,
     "source_age_days": {
-      "1": 1463
+      "0": 1445,
+      "1": 11
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-09-21",
-    "matched_slots": 1450,
-    "missing_slots": 1,
-    "new_slots": 13,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1432,
+    "missing_slots": 19,
+    "new_slots": 24,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1YTT",
+        "title": "Gliss Ultimate Repair Şampuan 400 Ml",
+        "change_pct": 100.05
+      },
+      {
+        "slot_id": "id:1WRN",
+        "title": "Erikli Su 6 Lt",
+        "change_pct": 67.23
+      },
+      {
+        "slot_id": "id:1YSW",
+        "title": "Eti Keyfince Sütlü Çikolata 70 Gr",
+        "change_pct": 53.85
+      },
+      {
+        "slot_id": "id:1C4D",
+        "title": "Siyah Kavun 1 Kg",
+        "change_pct": -51.28
+      },
+      {
+        "slot_id": "id:0IPM",
+        "title": "Carrefour Bio Organik Yumurta 10 Adet",
+        "change_pct": 50.03
+      },
+      {
+        "slot_id": "id:1Y5T",
+        "title": "Oral-B Çocuk Diş Macunu 75 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:13F4",
+        "title": "Dove Güzellik Katı Sabun 90 Gr",
+        "change_pct": 45.87
+      },
+      {
+        "slot_id": "id:0AIR",
+        "title": "Kapya Biber 1 Kg",
+        "change_pct": 41.51
+      },
+      {
+        "slot_id": "id:1EOA",
+        "title": "Çekirdeksiz Üzüm 1 Kg",
+        "change_pct": 40.0
+      },
+      {
+        "slot_id": "id:1OL4",
+        "title": "Torku Miniki Sütlü Çikolata 72 Gr",
+        "change_pct": 37.82
+      },
+      {
+        "slot_id": "id:1O1J",
+        "title": "Yumoş Extra Çamaşır Yumuşatıcısı 1.44 Lt",
+        "change_pct": 36.53
+      },
+      {
+        "slot_id": "id:1J28",
+        "title": "Atıştırmalık Domates 1 Kg",
+        "change_pct": 34.48
+      },
+      {
+        "slot_id": "id:1MLB",
+        "title": "Duru Duş Katı Sabun 600 Gr",
+        "change_pct": -33.85
+      },
+      {
+        "slot_id": "id:04HR",
+        "title": "Sarımsak 1 Kg",
+        "change_pct": 30.87
+      },
+      {
+        "slot_id": "id:1ODU",
+        "title": "Head & Shoulders Şampuan 330 Ml",
+        "change_pct": -26.85
+      },
+      {
+        "slot_id": "id:20IP",
+        "title": "Eti Sütlü Çikolata 60 Gr",
+        "change_pct": 24.03
+      },
+      {
+        "slot_id": "id:002P",
+        "title": "Kerem Labne 300 Gr",
+        "change_pct": 23.19
+      },
+      {
+        "slot_id": "id:16JA",
+        "title": "Su 1.5 Lt",
+        "change_pct": 22.5
+      },
+      {
+        "slot_id": "id:016N",
+        "title": "Senfoni Sıvı Bulaşık Deterjanı 4 Lt",
+        "change_pct": -21.38
+      },
+      {
+        "slot_id": "id:1NCL",
+        "title": "Patates 1 Kg",
+        "change_pct": 20.69
+      },
+      {
+        "slot_id": "id:0FNW",
+        "title": "Uzman Kasap Dana Yağsız Kıyma 400 Gr",
+        "change_pct": -20.0
+      }
+    ],
+    "warnings": []
   }
 ]
