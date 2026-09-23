@@ -874,7 +874,7 @@ L 490.492395 125.103552
 L 519.597327 124.064188
 L 548.702259 71.380838
 L 577.807191 33.153227
-L 606.912124 33.153227
+L 606.912124 41.410925
 " clip-path="url(#p4df22b0da3)" style="fill: none; stroke: #2563eb; stroke-width: 2.4; stroke-linecap: square"/>
     <defs>
      <path id="mdeb18b5443" d="M 0 2.5
@@ -908,7 +908,7 @@ z
      <use xlink:href="#mdeb18b5443" x="519.597327" y="124.064188" style="fill: #2563eb; stroke: #2563eb"/>
      <use xlink:href="#mdeb18b5443" x="548.702259" y="71.380838" style="fill: #2563eb; stroke: #2563eb"/>
      <use xlink:href="#mdeb18b5443" x="577.807191" y="33.153227" style="fill: #2563eb; stroke: #2563eb"/>
-     <use xlink:href="#mdeb18b5443" x="606.912124" y="33.153227" style="fill: #2563eb; stroke: #2563eb"/>
+     <use xlink:href="#mdeb18b5443" x="606.912124" y="41.410925" style="fill: #2563eb; stroke: #2563eb"/>
     </g>
    </g>
    <g id="line2d_22">
