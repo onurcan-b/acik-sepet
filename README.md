@@ -11,7 +11,7 @@ Markette fiyatlar gerçekten ne kadar oynuyor? “Bana öyle geliyor” kısmın
 
 <!-- STATUS_START -->
 > **Veri durumu: Kısmi güncelleme; bazı tiplerde gün içindeki önceki ölçüm korundu.** Son seri noktası: **2026-09-23**. Kategori ağırlığı kapsaması: **%74**.
-> Son tarama girişimi: 2026-09-23T13:10:28.364241+03:00.
+> Son tarama girişimi: 2026-09-23T20:59:49.939129+03:00.
 > Aynı günün önceki ölçümü kullanılan tipler: Tam buğday ekmeği (2026-09-23T02:37:09.882503+03:00, 2026-09-23T02:37:09.882516+03:00, 2026-09-23T02:37:09.882518+03:00, 2026-09-23T02:37:09.882520+03:00, 2026-09-23T02:37:09.882522+03:00); Avokado (2026-09-23T02:39:46.167076+03:00, 2026-09-23T02:39:46.167090+03:00). Diğer tipler son taramayla güncellendi.
 > Yayımlanamayan kategoriler: Et ve et ürünleri; Sebze.
 > Baz korunuyor: **2026-09-05 = 100**. 5–14 Eylül geçmişi kilitli; sınıflandırma düzeltmeleri 15 Eylül'den itibaren geçerli.
