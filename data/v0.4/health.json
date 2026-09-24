@@ -2705,27 +2705,336 @@
   },
   {
     "date": "2026-09-24",
-    "rows": 1580,
-    "source_updated_today": 0,
-    "source_within_3_days": 1580,
+    "rows": 1586,
+    "source_updated_today": 1586,
+    "source_within_3_days": 1586,
     "source_date_unknown": 0,
     "source_date_future": 0,
     "depot_observations": 2080,
-    "depot_source_updated_today": 0,
+    "depot_source_updated_today": 2080,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1220,
-    "auditable_skus": 1580,
+    "single_source_skus": 1227,
+    "auditable_skus": 1586,
     "source_age_days": {
-      "1": 1580
+      "0": 1586
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-09-23",
-    "matched_slots": 1461,
-    "missing_slots": 2,
-    "new_slots": 119,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1448,
+    "missing_slots": 15,
+    "new_slots": 138,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1XP0",
+        "title": "Servet Şekerleme Antep Fıstıklı Tahin Helvası 200 Gr",
+        "change_pct": 79.02
+      },
+      {
+        "slot_id": "id:1ROP",
+        "title": "Filiz Mardin Pilavlık Bulgur 800 Gr",
+        "change_pct": 73.41
+      },
+      {
+        "slot_id": "id:0O5P",
+        "title": "Selpak Deluxe Pamuk Katkılı Tuvalet Kağıdı 32 Adet",
+        "change_pct": 71.44
+      },
+      {
+        "slot_id": "id:1PPI",
+        "title": "Servet Şekerleme Sade Tahin Helvası 200 Gr",
+        "change_pct": 67.85
+      },
+      {
+        "slot_id": "id:1SBV",
+        "title": "Macromax Açık Mikrofiber Bez 4 Adet",
+        "change_pct": 66.69
+      },
+      {
+        "slot_id": "id:1QTM",
+        "title": "Dove Men Clean Comfort Sprey Deodorant 150 Ml",
+        "change_pct": 57.91
+      },
+      {
+        "slot_id": "id:1M8O",
+        "title": "Nesfit Ballı Bademli Gevrek 480 Gr",
+        "change_pct": 53.62
+      },
+      {
+        "slot_id": "id:1TV1",
+        "title": "Nesfit Çikolatalı Gevrek 480 Gr",
+        "change_pct": 53.62
+      },
+      {
+        "slot_id": "id:1TAU",
+        "title": "Maylo Mendil 10 Adet",
+        "change_pct": -53.37
+      },
+      {
+        "slot_id": "id:0MJW",
+        "title": "Pol's Gurme Şeker İlavesiz Vişne Reçeli 285 Gr",
+        "change_pct": 50.58
+      },
+      {
+        "slot_id": "id:02UC",
+        "title": "Palmolive Body Butter Böğürtlen Duş Jeli 500 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:0O9J",
+        "title": "Palmolive Feel The Massage Duş Jeli 250 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:1RAB",
+        "title": "Duru Lux Perfumes Lotus Çiçeği Duş Jeli 450 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:1RBK",
+        "title": "Le Petit Marseillais Şeftali ve Nektarin Duş Jeli 400 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:1S1Q",
+        "title": "Le Petit Marseillais Akdeniz Çileği Duş Jeli 400 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:04MF",
+        "title": "Dove Nemlendirici Sıvı Sabun 450 Ml",
+        "change_pct": 38.9
+      },
+      {
+        "slot_id": "id:1TB2",
+        "title": "Duru Lux Perfumes Orkide Özleri Duş Jeli 450 Ml",
+        "change_pct": -38.77
+      },
+      {
+        "slot_id": "id:14PK",
+        "title": "Bupiliç Poşetli Bütün Piliç 1 Kg",
+        "change_pct": -33.7
+      },
+      {
+        "slot_id": "id:1S61",
+        "title": "La Vache Qui Rit Krem Peynir 270 Gr",
+        "change_pct": 33.61
+      },
+      {
+        "slot_id": "id:1H7O",
+        "title": "Milka Gofree Çikolatalı Gofret 28 Gr",
+        "change_pct": 33.44
+      },
+      {
+        "slot_id": "id:0Y6H",
+        "title": "Hisar Kahve Damla Sakızlı Türk Kahvesi 100 Gr",
+        "change_pct": 33.35
+      },
+      {
+        "slot_id": "id:12W5",
+        "title": "Mlife Bio Organik Nohut 1 Kg",
+        "change_pct": 33.34
+      },
+      {
+        "slot_id": "id:1X98",
+        "title": "Fersan Balsamik Sirke 250 Ml",
+        "change_pct": 33.34
+      },
+      {
+        "slot_id": "id:1YCC",
+        "title": "Fersan Detox Doğal Sirke Analı Elma Sirkesi 500 Ml",
+        "change_pct": 33.34
+      },
+      {
+        "slot_id": "id:20P2",
+        "title": "Fersan Detox Doğal Sirke Analı Üzüm Sirkesi 500 Ml",
+        "change_pct": 33.34
+      },
+      {
+        "slot_id": "id:1NEM",
+        "title": "Ace Klasik Çamaşır Suyu 4 Lt",
+        "change_pct": -32.81
+      },
+      {
+        "slot_id": "id:0OYZ",
+        "title": "Frosch Badem Sütlü Çamaşır Yumuşatıcısı 1 Lt",
+        "change_pct": -31.55
+      },
+      {
+        "slot_id": "id:0SL7",
+        "title": "Frosch Aloe Vera Sıvı Çamaşır Deterjanı 1.5 Lt",
+        "change_pct": -31.27
+      },
+      {
+        "slot_id": "id:1KUR",
+        "title": "Palmolive So Relaxed Duş Jeli 500 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1PQO",
+        "title": "Duru Body Scrub Duş Jeli Gold 450 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1QBI",
+        "title": "Duru Body Scrub Crystal Duş Jeli 450 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1ST6",
+        "title": "Duru Fresh Sensation Okyanus Ferahlığı Duş Jeli 450 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1UEY",
+        "title": "Duru Body Scrub Ice Light Duş Jeli 450 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1Z8B",
+        "title": "Duru Body Scrub Pink Delight Duş Jeli 450 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1LMP",
+        "title": "Master Potato Barbekü Çeşnili Patates Cipsi 160 Gr",
+        "change_pct": -28.4
+      },
+      {
+        "slot_id": "id:1T29",
+        "title": "Knorr Çabuk Çorba Kıtır Kremalı Tavuk 18 Gr",
+        "change_pct": -25.01
+      },
+      {
+        "slot_id": "id:21R6",
+        "title": "Knorr İşkembe Çorbası 63 Gr",
+        "change_pct": -25.01
+      },
+      {
+        "slot_id": "id:0T35",
+        "title": "Burcu Organik Haşlanmış Nohut 600 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:0T7O",
+        "title": "Söke Baklavalık Ve Böreklik Un 2 Kg",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:1RO8",
+        "title": "Knorr Ekşili Köfte Çorbası 79 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:1UUM",
+        "title": "Torku Portakal Çikolata Krema Kakaolu Gofret 142 Gr",
+        "change_pct": -24.54
+      },
+      {
+        "slot_id": "id:1T5W",
+        "title": "Tariş Riviera Zeytinyağı 2 Lt",
+        "change_pct": -24.19
+      },
+      {
+        "slot_id": "id:0ARD",
+        "title": "Züber Nutziila Kakaolu Fındık Kreması 315 Gr",
+        "change_pct": 24.04
+      },
+      {
+        "slot_id": "id:0EG7",
+        "title": "Pol's Gurme Antep Fıstıklı Tahin Helvası 300 Gr",
+        "change_pct": -23.98
+      },
+      {
+        "slot_id": "id:1HJF",
+        "title": "Pol's Gurme Serisi Yerli Susam Tahin Helvası 300 Gr",
+        "change_pct": -23.82
+      },
+      {
+        "slot_id": "id:124L",
+        "title": "Asperox Temizlik Kokusu Yüzey Temizleyici 2.5 Lt",
+        "change_pct": -23.63
+      },
+      {
+        "slot_id": "id:1ZC0",
+        "title": "Asperox Yüzey Temizleyici Okyanus Maviliği 2.5 Lt",
+        "change_pct": -23.63
+      },
+      {
+        "slot_id": "id:00FM",
+        "title": "Domestos Çam Ferahlığı Yüzey Temizleyici 1.5 Lt",
+        "change_pct": -23.31
+      },
+      {
+        "slot_id": "id:0YXX",
+        "title": "Domestos Yüzey Temizleyici Okyanus 1.5 Lt",
+        "change_pct": -23.31
+      },
+      {
+        "slot_id": "id:217T",
+        "title": "Domestos Bahar Çiçekleri Yüzey Temizleyici 1.5 Lt",
+        "change_pct": -23.31
+      },
+      {
+        "slot_id": "id:0KBE",
+        "title": "Haribo Ekşili Solucan Karışık Yumuşak Şekerleme 70 Gr",
+        "change_pct": 22.65
+      },
+      {
+        "slot_id": "id:0L4E",
+        "title": "Haribo Sour Goldbears Meyve Sulu Şekerleme 70 Gr",
+        "change_pct": 22.65
+      },
+      {
+        "slot_id": "id:1QXH",
+        "title": "Haribo Fizz Mix Karışık Yumuşak Şekerleme 70 Gr",
+        "change_pct": 22.65
+      },
+      {
+        "slot_id": "id:1ZJW",
+        "title": "Torku Labne 400 Gr",
+        "change_pct": -22.59
+      },
+      {
+        "slot_id": "id:1ZHR",
+        "title": "Tat Domates Salçası 1.5 Kg",
+        "change_pct": -22.55
+      },
+      {
+        "slot_id": "id:1W72",
+        "title": "Becel Zeytinyağlı Kase Margarin 250 Gr",
+        "change_pct": -22.51
+      },
+      {
+        "slot_id": "id:1QT6",
+        "title": "Pınar Ekonomik 10'lu Sosis 430 Gr",
+        "change_pct": 22.49
+      },
+      {
+        "slot_id": "id:20AX",
+        "title": "Fairy Platinum Bulaşık Makinesi Tableti 50 Adet",
+        "change_pct": -21.81
+      },
+      {
+        "slot_id": "id:1TX6",
+        "title": "Colgate Zigzag Aktif Kömür Diş Fırçası 2 Adet",
+        "change_pct": -21.06
+      },
+      {
+        "slot_id": "id:20M3",
+        "title": "Soslu Karışık Kuruyemiş 200 Gr",
+        "change_pct": -20.74
+      },
+      {
+        "slot_id": "id:1B3U",
+        "title": "Pınar Folyo Tereyağı 200 Gr",
+        "change_pct": -20.56
+      },
+      {
+        "slot_id": "id:1NNM",
+        "title": "Becel Tereyağı Keyfi Kase Margarin 500 Gr",
+        "change_pct": -20.27
+      }
+    ],
+    "warnings": []
   }
 ]
