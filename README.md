@@ -11,7 +11,7 @@ Markette fiyatlar gerçekten ne kadar oynuyor? “Bana öyle geliyor” kısmın
 
 <!-- STATUS_START -->
 > **Veri durumu: Eksik kapsam.** Son seri noktası: **2026-09-24**. Kategori ağırlığı kapsaması: **%66**.
-> Son tarama girişimi: 2026-09-24T13:13:32.635411+03:00.
+> Son tarama girişimi: 2026-09-24T21:00:35.993318+03:00.
 > Yayımlanamayan kategoriler: Et ve et ürünleri; Meyve; Sebze.
 > Baz korunuyor: **2026-09-05 = 100**. 5–14 Eylül geçmişi kilitli; sınıflandırma düzeltmeleri 15 Eylül'den itibaren geçerli.
 <!-- STATUS_END -->
