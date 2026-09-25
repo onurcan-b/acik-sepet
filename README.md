@@ -11,7 +11,7 @@ Markette fiyatlar gerçekten ne kadar oynuyor? “Bana öyle geliyor” kısmın
 
 <!-- STATUS_START -->
 > **Veri durumu: Kısmi güncelleme; bazı tiplerde gün içindeki önceki ölçüm korundu.** Son seri noktası: **2026-09-25**. Kategori ağırlığı kapsaması: **%74**.
-> Son tarama girişimi: 2026-09-25T13:21:52.854538+03:00.
+> Son tarama girişimi: 2026-09-25T21:06:11.431753+03:00.
 > Aynı günün önceki ölçümü kullanılan tipler: Limon (2026-09-25T02:56:27.427379+03:00, 2026-09-25T02:56:27.427390+03:00, 2026-09-25T02:56:27.427394+03:00); Kabak (2026-09-25T02:56:48.668277+03:00, 2026-09-25T02:56:48.668289+03:00); Temizlik bezi (2026-09-25T03:00:28.688758+03:00, 2026-09-25T03:00:28.688771+03:00, 2026-09-25T03:00:28.688775+03:00, 2026-09-25T03:00:28.688777+03:00, 2026-09-25T03:00:28.688779+03:00, 2026-09-25T03:00:28.688781+03:00, 2026-09-25T03:00:28.688784+03:00, 2026-09-25T03:00:28.688786+03:00, 2026-09-25T03:00:28.688788+03:00); Islak mendil (2026-09-25T03:01:18.699617+03:00, 2026-09-25T03:01:18.699630+03:00, 2026-09-25T03:01:18.699633+03:00, 2026-09-25T03:01:18.699636+03:00, 2026-09-25T03:01:18.699638+03:00, 2026-09-25T03:01:18.699640+03:00, 2026-09-25T03:01:18.699642+03:00). Diğer tipler son taramayla güncellendi.
 > Yayımlanamayan kategoriler: Et ve et ürünleri; Sebze.
 > Baz korunuyor: **2026-09-05 = 100**. 5–14 Eylül geçmişi kilitli; sınıflandırma düzeltmeleri 15 Eylül'den itibaren geçerli.
