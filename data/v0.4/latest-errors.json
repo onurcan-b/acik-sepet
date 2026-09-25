@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-24",
-  "checked_at": "2026-09-24T21:00:35.993318+03:00",
+  "date": "2026-09-25",
+  "checked_at": "2026-09-25T03:01:20.152125+03:00",
   "status": "published",
   "errors": [],
-  "source_updated_today": 1586,
-  "observed_skus": 1586,
+  "source_updated_today": 0,
+  "observed_skus": 1598,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -37,7 +37,7 @@
     "frozen_fish": 8,
     "fish_fingers": 0,
     "milk": 21,
-    "milk_lactosefree": 12,
+    "milk_lactosefree": 13,
     "yogurt": 21,
     "strained_yogurt": 7,
     "ayran": 20,
@@ -97,7 +97,7 @@
     "spread": 19,
     "candy": 17,
     "tomato_paste": 24,
-    "lentils": 17,
+    "lentils": 22,
     "beans": 22,
     "chickpeas": 21,
     "canned_veg": 2,
@@ -109,7 +109,7 @@
     "black_tea": 22,
     "turkish_coffee": 21,
     "instant_coffee": 7,
-    "filter_coffee": 17,
+    "filter_coffee": 21,
     "cola": 12,
     "fruit_juice": 0,
     "iced_tea": 16,
@@ -126,7 +126,7 @@
     "surface_cleaner": 19,
     "garbage_bags": 21,
     "sponge": 18,
-    "cleaning_cloth": 7,
+    "cleaning_cloth": 9,
     "shampoo": 19,
     "shower_gel": 24,
     "soap_liquid": 20,
@@ -138,7 +138,5 @@
     "paper_towel": 20,
     "wet_wipes": 7,
     "tissues": 9
-  },
-  "retained_same_day_types": [],
-  "published_skus": 1586
+  }
 }
