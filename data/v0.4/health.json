@@ -3039,27 +3039,132 @@
   },
   {
     "date": "2026-09-25",
-    "rows": 1598,
-    "source_updated_today": 0,
-    "source_within_3_days": 1598,
+    "rows": 1577,
+    "source_updated_today": 1556,
+    "source_within_3_days": 1577,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2093,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2061,
+    "depot_source_updated_today": 2037,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1238,
-    "auditable_skus": 1598,
+    "single_source_skus": 1223,
+    "auditable_skus": 1577,
     "source_age_days": {
-      "1": 1598
+      "0": 1556,
+      "1": 21
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-09-24",
-    "matched_slots": 1586,
-    "missing_slots": 0,
-    "new_slots": 12,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1541,
+    "missing_slots": 45,
+    "new_slots": 36,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1IQ0",
+        "title": "Salkım Domates 1 Kg",
+        "change_pct": 40.82
+      },
+      {
+        "slot_id": "id:0WW7",
+        "title": "Difaş Nano Soft Diş Fırçası 1 Adet",
+        "change_pct": -36.39
+      },
+      {
+        "slot_id": "id:167H",
+        "title": "Difaş Nano Polish Diş Fırçası 1 Adet",
+        "change_pct": -36.39
+      },
+      {
+        "slot_id": "id:1GTF",
+        "title": "Difaş Nano Slim Diş Fırçası 1 Adet",
+        "change_pct": -36.39
+      },
+      {
+        "slot_id": "id:056A",
+        "title": "Taze Bütün Poşet Piliç 1 Kg",
+        "change_pct": -34.07
+      },
+      {
+        "slot_id": "id:0TGS",
+        "title": "Galaxy Diş Fırçası 2 Adet",
+        "change_pct": -33.37
+      },
+      {
+        "slot_id": "id:1WT5",
+        "title": "Vernel Gülün Büyüsü Çamaşır Yumuşatıcısı 3 Lt",
+        "change_pct": -32.11
+      },
+      {
+        "slot_id": "id:1EOA",
+        "title": "Çekirdeksiz Üzüm 1 Kg",
+        "change_pct": -28.57
+      },
+      {
+        "slot_id": "id:1O1J",
+        "title": "Yumoş Extra Çamaşır Yumuşatıcısı 1.44 Lt",
+        "change_pct": -26.76
+      },
+      {
+        "slot_id": "id:07G3",
+        "title": "Piliç Salam 1 Kg",
+        "change_pct": -25.21
+      },
+      {
+        "slot_id": "id:01P5",
+        "title": "Süsse Finger Bisküvi 450 Gr",
+        "change_pct": 24.29
+      },
+      {
+        "slot_id": "id:04HR",
+        "title": "Sarımsak 1 Kg",
+        "change_pct": -23.59
+      },
+      {
+        "slot_id": "id:0TO8",
+        "title": "Migros Domates Salçası 830 Gr",
+        "change_pct": 23.24
+      },
+      {
+        "slot_id": "id:02YV",
+        "title": "Yurda Domates Salçası 830 Gr",
+        "change_pct": 22.73
+      },
+      {
+        "slot_id": "id:1W39",
+        "title": "Doğuş Karadeniz Siyah Çay 1 Kg",
+        "change_pct": 22.65
+      },
+      {
+        "slot_id": "id:1WZN",
+        "title": "Doğuş Tiryaki Siyah Çay 1 Kg",
+        "change_pct": 22.65
+      },
+      {
+        "slot_id": "id:0PIL",
+        "title": "Garnier Ekstra Ferahlık Sprey Deodorant 150 Ml",
+        "change_pct": -22.51
+      },
+      {
+        "slot_id": "id:0N0H",
+        "title": "Çatal Sucuk İlikli Dana Kangal Sucuk 450 Gr",
+        "change_pct": -21.11
+      },
+      {
+        "slot_id": "id:1M20",
+        "title": "Dana Fermente Mangal Sucuk 400 Gr",
+        "change_pct": -21.11
+      },
+      {
+        "slot_id": "id:1J2Q",
+        "title": "Dondurulmuş Piliç Kasap Köfte 1 Kg",
+        "change_pct": -21.05
+      },
+      {
+        "slot_id": "id:0CSH",
+        "title": "Antep Karası Üzüm 1 Kg",
+        "change_pct": -20.02
+      }
+    ],
+    "warnings": []
   }
 ]

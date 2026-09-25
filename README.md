@@ -10,10 +10,10 @@ Markette fiyatlar gerçekten ne kadar oynuyor? “Bana öyle geliyor” kısmın
 > Bu resmî TÜFE değil. Kira, ulaşım, sağlık, eğitim ve hizmetler yok. Burada yalnızca market rafındaki malların fiyat hareketini olabildiğince temiz ve denetlenebilir biçimde ölçüyoruz.
 
 <!-- STATUS_START -->
-> **Veri durumu: Eksik kapsam.** Son seri noktası: **2026-09-25**. Kategori ağırlığı kapsaması: **%66**.
-> Son tarama girişimi: 2026-09-25T03:01:20.152125+03:00.
-> Yayımlanamayan kategoriler: Et ve et ürünleri; Meyve; Sebze.
-> Kaynak tarihi seri günüyle aynı olan SKU: **0/1598**. Yatay çizgi, raf fiyatlarının bugün yeniden teyit edildiğini göstermez.
+> **Veri durumu: Kısmi güncelleme; bazı tiplerde gün içindeki önceki ölçüm korundu.** Son seri noktası: **2026-09-25**. Kategori ağırlığı kapsaması: **%74**.
+> Son tarama girişimi: 2026-09-25T13:21:52.854538+03:00.
+> Aynı günün önceki ölçümü kullanılan tipler: Limon (2026-09-25T02:56:27.427379+03:00, 2026-09-25T02:56:27.427390+03:00, 2026-09-25T02:56:27.427394+03:00); Kabak (2026-09-25T02:56:48.668277+03:00, 2026-09-25T02:56:48.668289+03:00); Temizlik bezi (2026-09-25T03:00:28.688758+03:00, 2026-09-25T03:00:28.688771+03:00, 2026-09-25T03:00:28.688775+03:00, 2026-09-25T03:00:28.688777+03:00, 2026-09-25T03:00:28.688779+03:00, 2026-09-25T03:00:28.688781+03:00, 2026-09-25T03:00:28.688784+03:00, 2026-09-25T03:00:28.688786+03:00, 2026-09-25T03:00:28.688788+03:00); Islak mendil (2026-09-25T03:01:18.699617+03:00, 2026-09-25T03:01:18.699630+03:00, 2026-09-25T03:01:18.699633+03:00, 2026-09-25T03:01:18.699636+03:00, 2026-09-25T03:01:18.699638+03:00, 2026-09-25T03:01:18.699640+03:00, 2026-09-25T03:01:18.699642+03:00). Diğer tipler son taramayla güncellendi.
+> Yayımlanamayan kategoriler: Et ve et ürünleri; Sebze.
 > Baz korunuyor: **2026-09-05 = 100**. 5–14 Eylül geçmişi kilitli; sınıflandırma düzeltmeleri 15 Eylül'den itibaren geçerli.
 <!-- STATUS_END -->
 
@@ -22,7 +22,7 @@ Markette fiyatlar gerçekten ne kadar oynuyor? “Bana öyle geliyor” kısmın
 <!-- STATS_START -->
 | Endeks | Tarih | Aktif tip | Aktif tiplerde SKU | Kategori ağırlığı kapsaması | 7 gün | 30 gün | Baz |
 |---:|---|---:|---:|---:|---:|---:|---|
-| **100.85** | 2026-09-25 | 102 | 1540 | %66 | +2.09% | — | 2026-09-05 = 100 |
+| **100.82** | 2026-09-25 | 103 | 1497 | %74 | +2.05% | — | 2026-09-05 = 100 |
 <!-- STATS_END -->
 
 ## Kısaca ne yapıyor?
@@ -64,18 +64,18 @@ Kategori eşlemeleri açıkça [`config/api_categories.json`](config/api_categor
 <!-- CATEGORY_TABLE_START -->
 | Kategori | Endeks | Yeterli tip | Kapsama | SKU |
 |---|---:|---:|---:|---:|
-| Ekmek, tahıllar ve makarna | 103.12 | 11/12 | %92 | 162 |
-| Et ve et ürünleri | — | 6/10 | %60 | 100 |
-| Balık ve deniz ürünleri | 108.69 | 4/6 | %67 | 30 |
-| Süt ürünleri ve yumurta | 99.39 | 12/13 | %92 | 213 |
-| Yağlar | 99.58 | 4/5 | %80 | 84 |
-| Meyve | — | 7/13 | %54 | 29 |
-| Sebze | — | 9/17 | %53 | 44 |
-| Şeker, tatlı ve atıştırmalık | 102.00 | 12/12 | %100 | 217 |
-| Diğer gıda | 99.55 | 9/10 | %90 | 192 |
-| Alkolsüz içecekler | 102.71 | 9/11 | %82 | 175 |
-| Ev temizlik sarf malzemeleri | 100.50 | 9/10 | %90 | 146 |
-| Kişisel bakım ve kağıt ürünleri | 97.67 | 10/11 | %91 | 206 |
+| Ekmek, tahıllar ve makarna | 103.41 | 11/12 | %92 | 158 |
+| Et ve et ürünleri | — | 6/10 | %60 | 101 |
+| Balık ve deniz ürünleri | 108.69 | 4/6 | %67 | 29 |
+| Süt ürünleri ve yumurta | 99.31 | 12/13 | %92 | 218 |
+| Yağlar | 99.58 | 4/5 | %80 | 82 |
+| Meyve | 97.16 | 8/13 | %62 | 30 |
+| Sebze | — | 9/17 | %53 | 45 |
+| Şeker, tatlı ve atıştırmalık | 102.30 | 12/12 | %100 | 214 |
+| Diğer gıda | 99.99 | 9/10 | %90 | 184 |
+| Alkolsüz içecekler | 102.72 | 9/11 | %82 | 173 |
+| Ev temizlik sarf malzemeleri | 99.85 | 9/10 | %90 | 143 |
+| Kişisel bakım ve kağıt ürünleri | 96.53 | 10/11 | %91 | 200 |
 <!-- CATEGORY_TABLE_END -->
 
 ## Kapsama dürüstlüğü
@@ -85,7 +85,7 @@ v0.3 kategori kapsamasını yalnızca baseline’da hayatta kalan ürün tipleri
 ![Kategori ürün tipi kapsaması](charts/coverage.svg)
 
 <!-- GAPS_START -->
-**28 ürün tipi** yeterli gözlem veya ortak panel bağlantısı olmadığı için yayımlanamadı. Tarama hataları ve kaynak güncelliği ayrıca raporlanır.
+**27 ürün tipi** yeterli gözlem veya ortak panel bağlantısı olmadığı için yayımlanamadı. Tarama hataları ve kaynak güncelliği ayrıca raporlanır.
 
 | Ürün tipi | Gözlenen | Minimum | API kategori filtresi |
 |---|---:|---:|---|
@@ -104,43 +104,42 @@ v0.3 kategori kapsamasını yalnızca baseline’da hayatta kalan ürün tipleri
 | Marul | 0 | 2 | Yeşillikler |
 | Mısırözü yağı | 0 | 2 | Mısırözü Yağı |
 | Çilek | 0 | 2 | Çilek |
-| Avokado | 1 | 2 | Avokado |
 | Havuç | 1 | 2 | Kök Sebzeler |
 | Konserve sardalya | 1 | 2 | Deniz Ürünleri |
+| Mandalina | 1 | 2 | Narenciye |
 
-Tabloda en zayıf 18 tip var; toplam eksik tip sayısı 28.
+Tabloda en zayıf 18 tip var; toplam eksik tip sayısı 27.
 <!-- GAPS_END -->
 
 ## Bugün ne oynadı?
 
 <!-- MOVERS_START -->
-2026-09-24 → 2026-09-25: **0 yukarı**, **0 aşağı**, **102 değişim gözlenmedi**. Karşılaştırılan tip: 102. Kaynak güncelliği aşağıda ayrıca gösterilir.
+2026-09-24 → 2026-09-25: **18 yukarı**, **26 aşağı**, **58 değişim gözlenmedi**. Karşılaştırılan tip: 102. Kaynak güncelliği aşağıda ayrıca gösterilir.
 
 | Ürün tipi | SKU | Değişim |
 |---|---:|---:|
-| Elma | 5 | +0.00% |
-| Ayran | 20 | +0.00% |
-| Muz | 2 | +0.00% |
-| Kuru fasulye | 22 | +0.00% |
-| Dana kuşbaşı / sote | 7 | +0.00% |
-| Bisküvi | 20 | +0.00% |
-| Siyah çay | 22 | +0.00% |
-| Çamaşır suyu | 19 | +0.00% |
-| Tost ekmeği | 6 | +0.00% |
-| Tam buğday ekmeği | 6 | +0.00% |
+| Üzüm | 5 | -10.59% |
+| Diş fırçası | 22 | -9.49% |
+| Sarımsak | 3 | -8.58% |
+| Yumuşatıcı | 10 | -6.75% |
+| Dana kuşbaşı / sote | 6 | -5.46% |
+| Patates | 4 | -5.15% |
+| Kültür mantarı | 6 | -4.41% |
+| Domates | 8 | +4.37% |
+| Bütün piliç | 10 | -4.08% |
+| Karpuz | 3 | -3.72% |
 <!-- MOVERS_END -->
 
 ## Veri kalitesi
 
 <!-- QUALITY_START -->
-- **Güncellik uyarısı:** Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor.
-- **0/1598** SKU için en yeni kaynak tarihi gözlem günüyle aynı; ayrıntı: [health.json](data/v0.4/health.json)
-- **1598** sıkı eşleşmiş SKU, **7** market etiketi
-- **1440/1598** miktar doğrudan API'nin normalize alanından
-- **1598/1598** satırda birim fiyat API değeriyle ayrıca kontrol edildi
-- **1598/1598** gözlem sabit depot relatifleriyle bağlı
-- **1238/1598** SKU yalnızca bir depot üzerinden izleniyor; market etiketleri ulusal temsiliyet sağlamaz
-- **1598/1598** SKU için depot fiyatları, kaynak tarihleri ve bağlantı girdileri saklanıyor (15 Eylül'den itibaren)
+- **1556/1577** SKU için en yeni kaynak tarihi gözlem günüyle aynı; ayrıntı: [health.json](data/v0.4/health.json)
+- **1577** sıkı eşleşmiş SKU, **7** market etiketi
+- **1417/1577** miktar doğrudan API'nin normalize alanından
+- **1577/1577** satırda birim fiyat API değeriyle ayrıca kontrol edildi
+- **1577/1577** gözlem sabit depot relatifleriyle bağlı
+- **1223/1577** SKU yalnızca bir depot üzerinden izleniyor; market etiketleri ulusal temsiliyet sağlamaz
+- **1577/1577** SKU için depot fiyatları, kaynak tarihleri ve bağlantı girdileri saklanıyor (15 Eylül'den itibaren)
 - **340** bridge edilmiş panel yenilemesi (yeni baseline'da doğal olarak sıfır)
 <!-- QUALITY_END -->
 
