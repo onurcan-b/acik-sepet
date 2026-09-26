@@ -1,5 +1,10 @@
 # Metodoloji — v0.4, 5 Eylül 2026 düzeltmesi
 
+> **Güncel uygulama notu:** 26 Eylül'e kadar yayımlanan bütün gözlemler ve endeks
+> satırları korunur. Aşağıdaki tarihli bölümler eski davranışı açıklar. Bölüm 15'teki
+> panel iyileştirmesi önce gölge ölçüm yapar; yedi doğrulanmış toplama günü ve açık
+> etkinleştirme olmadan yayımlanan panelin yerine geçmez. Baz: **2026-09-05 = 100**.
+
 Açık Sepet, zincir marketlerde satılan malların günlük fiyat hareketini izleyen deneysel bir çoklu-SKU panel endeksidir. Aktif serinin bazı **2026-09-05 = 100** olarak korunur. İlk v0.4 denemesi 2 Eylül'de başlamış, 5 Eylül'de sıfırlanmıştır. v0.3 geçmişi değiştirilmez.
 
 ## 1. Ürün tipi ve sınıflandırma
@@ -217,3 +222,85 @@ gerçek sorgu hataları ve kesinti nedeniyle hiç taranamayan tipler deneme kayd
 ayrı görünür. Kalıcı kesinti hâlâ başarısız Actions sonucu üretir; fiyatlar uydurulmaz,
 önceki başarılı yayın korunur. Ayrıca testler yeni günlük veri üretildikten sonra,
 commit öncesinde yeniden çalıştırılır. İlk gün **2026-09-05 = 100** olarak kalır.
+
+## 15. Kapsama onarımı ve günlük görsel rapor
+
+26 Eylül 2026 dahil bütün yayımlanmış gözlemler ve üç endeks tablosu kilitlenmiştir.
+130 ürün tanımı, kategori ağırlıkları ve baz korunur. Yeni politika önce
+`config/rollout.json` içindeki **shadow** modunda, mevcut yöntemle aynı kaynak
+yanıtlarını kullanarak değerlendirilir. Yedi ayrı, tam ve bütün yayın kontrollerinden
+geçmiş toplama günü incelenmeden etkinleştirilmez. Gölge sonuçlar ana endeks değildir.
+
+### Arama ve aday kanıtı
+
+Birincil taramalar ve hata toparlanması önceliklidir. Eksik panellerde en fazla iki
+incelenmiş sorgu alternatifi kullanılabilir. Ek keşif en fazla 50 HTTP isteği ve beş
+dakika kullanır; bunlar mevcut 25 dakikalık toplam bütçeye dahildir. En düşük kapsamlı
+gruplar öncelik alır; dönüşümlü sıra diğer tiplerin sürekli dışarıda kalmasını önler.
+Alternatifler de aynı kategori, başlık, birim ve pozitif fiyat kurallarından geçer.
+
+Aramanın başarılı tamamlanması ile katalog sonuçlarının tükenmesi ayrı kaydedilir.
+200 sonuç sınırına ulaşılmışsa katalog kapsamı kesiktir: bulunan geçerli ürünler gerçek
+gözlemdir, fakat bulunamayan bir ürünün yokluğu kanıtlanmış sayılmaz. Başarısız veya
+kesilmiş sorgu kayıp-gün sayacını ilerletmez. Tamamlanan birincil taramalardaki pozitif
+ürün kanıtı, isteğe bağlı aramanın başarısız olması nedeniyle silinmez.
+
+Her ürün için son 14 günlük aday fiyatları ve depot kanıtı saklanır. Yeni adaylar üç
+ayrı uygun gözlem gününden sonra hedef SKU sayısına kadar alınabilir; aynı günün üç
+çalışması üç gün sayılmaz. İlk panel kurulumu dışındaki ekleme ve ikamelerin toplamı,
+tipin hedef boyutunun yukarı yuvarlanmış %20'sini bir takvim gününde geçemez. Yeni slot
+ilk gün bir fiyat değişimi yaratmaz; sonraki geçerli ortak karşılaştırmada katkı verir.
+
+### Depot ve ürün bağlantıları
+
+Yeni depot üç uygun gözlem günü izlenir. Kabul günündeki değişim yalnızca yerleşik
+ortak depolardan hesaplanır; yeni depot kendi o günkü fiyatıyla sonraki karşılaştırmaya
+hazırlanır. Aynı gün tekrarlarında da yeni deponun mutlak fiyatı seviye sıçraması yaratmaz.
+
+Yeni SKU ikameleri için eski ve yeni ürünün aynı gün gözlendiği, kanıtı saklanmış bir
+bağlantı gerekir. Son 14 gündeki en yeni uygun örtüşmeden adayın kendi ortak-depot
+fiyat değişimleri bugüne taşınır; kayıp dönemin değişimi sıfır varsayılmaz. Güvenilir
+bağlantı yoksa ikame yapılmaz. Eski dönemdeki ikameler yeniden yazılmaz. Etkinleştirme
+yayımlanmış panelin son seviyesinden başlar; farklılaşmış gölge fiyat seviyeleri ana
+state'in üzerine kopyalanmaz.
+
+### Kalite raporu ve kapsamın anlamı
+
+Sürüm numaralı `quality.json` şu ayrımları yapar:
+
+- **Kısmi kapsam:** en az bir kategori yayımlanamıyor.
+- **Kapsama uyarısı:** kategori ağırlığı %90 altında veya et, meyve, sebze eksik.
+- **Güncellik uyarısı:** başlık değişimine katkı veren SKU'ların %90'ından azında
+  kaynak tarihi en fazla bir gün eski. Bilinmeyen güncellik ayrı gösterilir.
+- **Yayımlanamadı:** mevcut sayısal yayın ve bütünlük kuralları geçilemiyor.
+
+Mevcut kapsam, son geçerli ölçümle ortak kapsam ve toplam gözlem sayısı ayrı alanlardır.
+Başlık tip/SKU sayıları, ana endeks → kategori → tip zincirinin **üçünde de katkı veren**
+ortak üyeleri sayar. Dolayısıyla bir ürün gözlenmiş veya tip endeksi yayımlanmış olsa
+bile başlığın o günlük hareketine katılmamış olabilir. Mevcut CSV alanları geriye dönük
+uyumluluk için değişmez; yeni doğru katkı sayıları kalite raporu ve README'de yer alır.
+
+Market/depot katılımı ve tek depot payı da katkı veren gözlemler üzerinden hesaplanır.
+Eski tarihlerde bulunmayan depot kanıtı bilinmiyor olarak bırakılır. Sorgu tanıları,
+reddetme nedeni, minimum/ortak slot açığı, aday hazırlığı ve depot bağlantısı kaybını
+ürün tipi düzeyinde açıklar. Bütün %90 eşikleri operasyonel izleme içindir; ulusal
+temsiliyet veya ölçümün istatistiksel hata sınırı değildir.
+
+### Görseller, yayın ve toparlanma hedefi
+
+README altı SVG gösterir: bazdan günlük endeks, yedi günlük kategori değişimi, 30 günlük
+kategori ısı haritası, günlük ürün hareketleri ve dağılımı, 60 günlük kalite geçmişi,
+market/depot katılımı. Tarih eksikleri sıfır fiyat hareketi sayılmaz. Günlük, 7 ve 30
+günlük farklar tam takvim tarihini ister; kaynak güncelliği sınırlı kıyaslar ayrılır.
+Grafik önbelleği veri girdileriyle birlikte renderer sürümünü de izler.
+
+Toplama ve bütün çıktı üretimi geçici dizinde yapılır. Gözlem, panel, endeks, kalite
+raporu ve grafikler tüm kontrollerden sonra tek geri alınabilir işlemle kurulur.
+Hatalı çalışmalarda önceki yayın korunur, girişim durumu ayrı güncellenir. Gölge günün
+onayı ancak tüm yayın kontrollerinden sonra verilir; başarısız kurulum bu onayı dışarı
+sızdırmaz. Kurulumdan önceki kaynak kanıtı ayrı keşif dosyasında saklanabilir.
+
+Toparlanma hedefi yedi ardışık gün **en az %90 ağırlıklı kapsam ve yayımlanabilir et,
+meyve, sebze** ölçümüdür. Bu hedef sonuç verisinden doğrulanmadan başarı iddia edilmez.
+Mevsimsellik ve kaynağın gerçek ürün kıtlığı ortadan kaldırılamaz; ürünleri paydadan
+çıkarmak, eşleşme şartlarını gevşetmek veya bazı değiştirmek çözüm sayılmaz.

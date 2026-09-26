@@ -3,6 +3,7 @@ from __future__ import annotations
 import math
 import random
 import time
+from dataclasses import dataclass
 from datetime import timezone
 from email.utils import parsedate_to_datetime
 from typing import Any
@@ -37,6 +38,26 @@ class MarketFiyatiError(RuntimeError):
         super().__init__(message)
         self.retryable = retryable
         self.retry_after = retry_after
+
+
+@dataclass
+class RequestBudget:
+    """Shared hard ceiling, including retry requests, for optional discovery."""
+    deadline: float
+    max_requests: int | None = None
+    used: int = 0
+
+    def check(self) -> None:
+        if time.monotonic() >= self.deadline or (self.max_requests is not None and self.used >= self.max_requests):
+            raise MarketFiyatiError("Search request/time budget exhausted", retryable=False)
+
+
+class SearchResults(list):
+    """List-compatible results with honest pagination completeness metadata."""
+    def __init__(self):
+        super().__init__()
+        self.metadata = {"status": "incomplete", "pages": 0, "raw_results": 0,
+                         "unique_results": 0, "exhausted": False, "reason": ""}
 
 
 def _retry_after_seconds(value: str | None) -> float | None:
@@ -92,8 +113,19 @@ def _fetch_page(
         payload[category_level] = category_values
     for attempt in range(1, attempts + 1):
         try:
+            budget = getattr(client, "_marketfiyati_budget", None)
+            if budget:
+                budget.check()
+                delay = max(0.0, getattr(client, "_marketfiyati_next_request_at", 0.0) - time.monotonic())
+                if time.monotonic() + delay >= budget.deadline:
+                    raise MarketFiyatiError("Search time budget exhausted", retryable=False)
             _pace_request(client)
-            response = client.post(API_URL, headers=HEADERS, json=payload, timeout=timeout)
+            request_timeout = timeout
+            if budget:
+                budget.check()
+                budget.used += 1
+                request_timeout = min(timeout, max(0.01, budget.deadline - time.monotonic()))
+            response = client.post(API_URL, headers=HEADERS, json=payload, timeout=request_timeout)
             status = response.status_code
             if status >= 400:
                 retryable = status == 429 or 500 <= status < 600
@@ -146,8 +178,8 @@ def search_products(
     timeout: int = 30,
     attempts: int = 3,
     session: requests.Session | None = None,
-) -> list[dict[str, Any]]:
-    """Return a complete, deduplicated, category-filtered pool for one type.
+) -> SearchResults:
+    """Return a deduplicated pool and explicit exhaustion/truncation metadata.
 
     A failed page raises instead of returning earlier pages as a partial pool.
     Reusing a session shares request pacing across product types as well as
@@ -156,7 +188,7 @@ def search_products(
     if attempts < 1:
         raise ValueError("attempts must be positive")
     client = session if session is not None else requests.Session()
-    output: list[dict[str, Any]] = []
+    output = SearchResults()
     seen: set[str] = set()
 
     try:
@@ -171,6 +203,8 @@ def search_products(
                 category_level,
                 category_values,
             )
+            output.metadata["pages"] += 1
+            output.metadata["raw_results"] += len(content)
             new_count = 0
             for item in content:
                 item = dict(item)
@@ -186,9 +220,20 @@ def search_products(
                 seen.add(key)
                 output.append(item)
                 new_count += 1
-            if len(content) < page_size or new_count == 0:
+            output.metadata["unique_results"] = len(output)
+            if len(content) < page_size:
+                output.metadata.update(status="complete", exhausted=True, reason="exhausted")
                 break
+            if new_count == 0:
+                output.metadata.update(status="incomplete", reason="repeated_page")
+                break
+        else:
+            output.metadata.update(status="truncated", reason="result_limit")
         return output
+    except MarketFiyatiError as exc:
+        output.metadata.update(status="failed", reason=str(exc))
+        exc.search_metadata = dict(output.metadata)
+        raise
     finally:
         if session is None:
             client.close()
