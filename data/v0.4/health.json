@@ -3169,27 +3169,97 @@
   },
   {
     "date": "2026-09-26",
-    "rows": 1583,
-    "source_updated_today": 0,
-    "source_within_3_days": 1583,
+    "rows": 1605,
+    "source_updated_today": 1597,
+    "source_within_3_days": 1605,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2070,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2113,
+    "depot_source_updated_today": 2104,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1228,
-    "auditable_skus": 1583,
+    "single_source_skus": 1241,
+    "auditable_skus": 1605,
     "source_age_days": {
-      "1": 1583
+      "0": 1597,
+      "1": 8
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-09-25",
-    "matched_slots": 1572,
-    "missing_slots": 5,
-    "new_slots": 11,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1553,
+    "missing_slots": 24,
+    "new_slots": 52,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1NF1",
+        "title": "Nivea Kadın Deodorant Çeşitleri 150 Ml",
+        "change_pct": 124.81
+      },
+      {
+        "slot_id": "id:1UHP",
+        "title": "Rexona Kadın Deodorant 150 Ml",
+        "change_pct": 100.69
+      },
+      {
+        "slot_id": "id:1ODU",
+        "title": "Head & Shoulders Şampuan 330 Ml",
+        "change_pct": 82.57
+      },
+      {
+        "slot_id": "id:1L60",
+        "title": "Elidor Şampuan Çeşitleri 400 Ml",
+        "change_pct": 69.77
+      },
+      {
+        "slot_id": "id:1ISZ",
+        "title": "Emotion Deodorant 150 Ml",
+        "change_pct": 41.75
+      },
+      {
+        "slot_id": "id:1SVD",
+        "title": "Blade Deodorant 150 Ml",
+        "change_pct": 41.75
+      },
+      {
+        "slot_id": "id:01EP",
+        "title": "Ülker Gurme Kaymaklı Tereyağlı Kase Margarin 500 Gr",
+        "change_pct": -39.17
+      },
+      {
+        "slot_id": "id:1O4A",
+        "title": "Clear Şampuan 350 Ml",
+        "change_pct": 38.93
+      },
+      {
+        "slot_id": "id:10XY",
+        "title": "Cumhuriyet Parmak Sucuk 1 Kg",
+        "change_pct": -32.6
+      },
+      {
+        "slot_id": "id:21DO",
+        "title": "Axe Erkek Deodorant 150 Ml",
+        "change_pct": 26.12
+      },
+      {
+        "slot_id": "id:1RGC",
+        "title": "Sana Paket Margarin 250 Gr",
+        "change_pct": 25.99
+      },
+      {
+        "slot_id": "id:15PL",
+        "title": "Uzman Kasap Dana Kıyma %15 Yağlı 400 Gr",
+        "change_pct": 25.0
+      },
+      {
+        "slot_id": "id:011I",
+        "title": "Saban Yeşil Mercimek 1 Kg",
+        "change_pct": 23.85
+      },
+      {
+        "slot_id": "id:081N",
+        "title": "Güldal Ultra Çamaşır Suyu 1.25 Lt",
+        "change_pct": -20.61
+      }
+    ],
+    "warnings": []
   }
 ]
