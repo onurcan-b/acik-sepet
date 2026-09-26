@@ -229,11 +229,12 @@ def test_frozen_series_extends_from_original_level_and_cannot_be_rewritten(tmp_p
     monkeypatch.setattr(index, 'SNAPSHOT_DIR', data / 'snapshots')
     for attr, name in [('INDEX_PATH', 'index.csv'), ('TYPE_PATH', 'type_indices.csv'), ('CATEGORY_PATH', 'category_indices.csv')]:
         monkeypatch.setattr(index, attr, data / name)
-    rows = list(csv.DictReader((data / 'snapshots/2026-09-14.csv').open()))
+    cutoff = lock['locked_through']
+    rows = list(csv.DictReader((data / 'snapshots' / f'{cutoff}.csv').open(encoding='utf-8')))
     for row in rows:
         for field in ['price', 'unit_price', 'linked_unit_price']:
             row[field] = str(float(row[field]) * 1.01)
-    first_new_day = date(2026, 9, 15)
+    first_new_day = date.fromisoformat(cutoff) + timedelta(days=1)
     for offset in range(extra_days + 1):
         day = (first_new_day + timedelta(days=offset)).isoformat()
         for row in rows:
@@ -249,31 +250,30 @@ def test_frozen_series_extends_from_original_level_and_cannot_be_rewritten(tmp_p
     assert [row['date'] for row in extension] == [
         (first_new_day + timedelta(days=offset)).isoformat() for offset in range(extra_days + 1)]
     # A 1% move on the first new day, then unchanged prices on later days.
+    frozen_rows = list(csv.DictReader((data / f'frozen-{cutoff}' / 'index.csv').open(encoding='utf-8')))
+    old_level = float(frozen_rows[-1]['index'])
     assert [row['index'] for row in extension] == pytest.approx(
-        [99.7265 * 1.01] * (extra_days + 1), abs=0.0002)
+        [old_level * 1.01] * (extra_days + 1), abs=0.0002)
     for name in ['index.csv', 'type_indices.csv', 'category_indices.csv']:
-        frozen = (data / 'frozen-2026-09-14' / name).read_text()
+        frozen = (data / f'frozen-{cutoff}' / name).read_text()
         assert (data / name).read_text().startswith(frozen)
-    historical = data / 'snapshots/2026-09-14.csv'
-    historical.write_text(historical.read_text().replace('15.0', '16.0', 1))
+    historical = data / 'snapshots' / f'{cutoff}.csv'
+    historical.write_bytes(historical.read_bytes() + b'\n')
     with pytest.raises(ValueError, match='Protected historical file'):
         verify_files(tmp_path)
 
 
-def test_current_chart_bytes_are_preserved_but_new_data_extends_it(tmp_path, monkeypatch):
-    import hashlib
+def test_chart_repeats_identically_but_new_data_extends_it(tmp_path, monkeypatch):
     from acik_sepet import report
     repo = Path(__file__).resolve().parents[1]
     chart = tmp_path / 'index.svg'
-    original = (repo / 'charts/index.svg').read_bytes()
-    chart.write_bytes(original)
     data = tmp_path / 'index.csv'
     data.write_bytes((repo / 'data/v0.4/index.csv').read_bytes())
-    (tmp_path / 'index-input.sha256').write_text(hashlib.sha256(data.read_bytes()).hexdigest())
     monkeypatch.setattr(report, 'CHART_DIR', tmp_path)
     monkeypatch.setattr(report, 'INDEX_PATH', data)
-    monkeypatch.setattr(report, '_render_coverage_charts', lambda *args: None)
     rows = list(csv.DictReader(data.open()))
+    report.render_charts(rows, [], [])
+    original = chart.read_bytes()
     report.render_charts(rows, [], [])
     assert chart.read_bytes() == original
     new_row = dict(rows[-1])

@@ -28,8 +28,7 @@ jobs:
         run: pytest -q
       - name: Rebuild published series and chart offline
         run: |
-          python -m acik_sepet.index
-          python -m acik_sepet.report
+          python -m acik_sepet.publish --offline
       - name: Lock published v0.4 baseline
         shell: bash
         run: |
@@ -50,7 +49,8 @@ jobs:
               if abs(actual - expected) > 1e-4:
                   raise SystemExit(f"historical index changed on {day}: {actual} != {expected}")
 
-          for name in ("index.svg", "coverage.svg", "basket.svg"):
+          from acik_sepet.report import CHART_FILENAMES
+          for name in CHART_FILENAMES:
               chart = Path("charts") / name
               if not chart.exists() or chart.stat().st_size < 1000:
                   raise SystemExit(f"analytics chart was not generated correctly: {name}")

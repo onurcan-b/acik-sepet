@@ -41,7 +41,7 @@ jobs:
       - name: Collect strict category-aware multi-SKU panels
         id: collect
         continue-on-error: true
-        run: python -m acik_sepet.collect --refresh
+        run: python -m acik_sepet.publish
       - name: Restore published data after any collection failure
         if: always() && steps.collect.outcome == 'failure'
         run: |
@@ -62,7 +62,7 @@ jobs:
       - name: Report publication and collection status
         id: report
         if: always() && steps.tests.outcome == 'success'
-        run: python -m acik_sepet.report
+        run: python -m acik_sepet.report --status-only
       - name: Guard v0.4 baseline and analytics charts
         id: guard
         if: always() && steps.tests.outcome == 'success'
@@ -84,7 +84,8 @@ jobs:
               if abs(actual - expected) > 1e-4:
                   raise SystemExit(f"published history changed on {day}: {actual} != {expected}")
 
-          for name in ("index.svg", "coverage.svg", "basket.svg"):
+          from acik_sepet.report import CHART_FILENAMES
+          for name in CHART_FILENAMES:
               chart = Path("charts") / name
               if not chart.exists() or chart.stat().st_size < 1000:
                   raise SystemExit(f"analytics chart was not generated correctly: {name}")
@@ -105,9 +106,12 @@ jobs:
           git config user.name "acik-sepet-bot"
           git config user.email "actions@users.noreply.github.com"
           if [ "$COLLECTION_OUTCOME" = "success" ]; then
-            git add data/v0.4/ state/v0.4-panels.json
+            git add data/v0.4/ state/
           else
             git add --all -- data/v0.4/latest-errors.json data/v0.4/collection-status.json data/v0.4/attempts/
+            for path in state/v0.4-discovery.json data/v0.4/collection-diagnostics; do
+              if [ -e "$path" ]; then git add --all -- "$path"; fi
+            done
           fi
           git add charts/ README.md
           if git diff --cached --quiet; then
