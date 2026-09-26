@@ -203,3 +203,24 @@ def test_owned_session_is_closed_on_success_and_failure(monkeypatch, fails):
 def test_retryable_default_keeps_caller_test_doubles_compatible():
     assert MarketFiyatiError("temporary").retryable
     assert MarketFiyatiError("temporary").retry_after is None
+
+
+def test_pagination_reports_truncation_and_repeated_pages_honestly():
+    full = FakeResponse({"content": [{"id": "a"}, {"id": "b"}]})
+    truncated = search_products("q", page_size=2, max_pages=1, session=FakeSession([full]))
+    assert truncated.metadata["status"] == "truncated"
+    assert truncated.metadata["exhausted"] is False
+    repeated = search_products("q", page_size=2, session=FakeSession([full, full]))
+    assert repeated.metadata["status"] == "incomplete"
+    assert repeated.metadata["reason"] == "repeated_page"
+    assert repeated.metadata["pages"] == 2
+
+
+def test_request_budget_counts_retries_and_stops_before_extra_request(clock):
+    session = FakeSession([requests.ConnectionError("x"), requests.ConnectionError("x"), FakeResponse()])
+    session._marketfiyati_budget = api.RequestBudget(clock.now + 100, max_requests=2)
+    with pytest.raises(MarketFiyatiError, match="budget") as error:
+        search_products("q", session=session)
+    assert len(session.payloads) == 2
+    assert session._marketfiyati_budget.used == 2
+    assert error.value.search_metadata["status"] == "failed"

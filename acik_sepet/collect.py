@@ -16,7 +16,7 @@ from zoneinfo import ZoneInfo
 
 import requests
 
-from .api import MarketFiyatiError, search_products
+from .api import MarketFiyatiError, RequestBudget, search_products
 from .product_types import load_product_types_for_date
 from .units import Quantity, parse_quantity, unit_price
 
@@ -244,6 +244,24 @@ def _base_candidate(item: dict[str, Any], spec: dict[str, Any]) -> dict[str, Any
         "score": score,
         "offers": offers,
     }
+
+
+def _rejection_reason(item: dict[str, Any], spec: dict[str, Any]) -> str | None:
+    """Explain existing matching gates without relaxing any acceptance rule."""
+    if _matched_category(item, spec) is None:
+        return "category"
+    if not str(item.get("title") or "").strip() or not _title_matches(str(item.get("title") or ""), spec):
+        return "title"
+    quantity = _quantity(item, spec)
+    if quantity is None:
+        return "quantity"
+    offers = _offer_rows(item)
+    if not offers:
+        return "no_offers"
+    expected = _median_api_unit_price(offers)
+    if expected is not None and abs(unit_price(_median_price(offers), quantity[0]) / expected - 1) > 0.05:
+        return "unit_price"
+    return None
 
 
 def _prices_by_source(offers: list[dict[str, Any]]) -> dict[str, float]:
@@ -513,9 +531,11 @@ def _observe_type(
     claimed: set[str],
     today: str,
     historical_levels: dict[str, float],
+    *, complete: bool = True,
 ) -> list[dict[str, Any]]:
-    new_day = state.get("last_observed_date") != today
-    state["last_observed_date"] = today
+    new_day = complete and state.get("last_observed_date") != today
+    if complete:
+        state["last_observed_date"] = today
     for sku in state.get("skus") or []:
         _migrate_sku_state(sku, historical_levels)
 
@@ -523,7 +543,7 @@ def _observe_type(
     candidate_rows = [row for item in candidates if (row := _base_candidate(item, spec)) is not None]
     active = state.get("skus") or []
     active_keys = {str(sku.get("product_key") or "") for sku in active}
-    shadow_rows = _update_shadow_candidates(state, candidate_rows, active_keys, claimed, today)
+    shadow_rows = _update_shadow_candidates(state, candidate_rows, active_keys, claimed, today) if complete else {}
 
     observed: list[dict[str, Any]] = []
     observed_slots: set[str] = set()
@@ -544,6 +564,9 @@ def _observe_type(
         sku["last_linked_unit_price"] = row["linked_unit_price"]
         observed.append(row)
         observed_slots.add(row["slot_id"])
+
+    if not complete:
+        return observed  # A bounded/incomplete search is not evidence of absence.
 
     if len(active) < spec["min_skus"]:
         eligible_new = sorted(shadow_rows.values(), key=lambda r: (-r["score"], -r["offer_count"], r["product_key"]))
@@ -694,13 +717,13 @@ def _retain_same_day_types(previous, output_by_type, types_state, original_types
     return retained
 
 
-def _scan_with_recovery(specs, scan):
+def _scan_with_recovery(specs, scan, *, deadline=None):
     """Pause an unhealthy source and retry only unfinished, complete searches.
 
     Successful types stay in memory until *every* search and publication gate
     passes. A missing response is never treated as an empty product category.
     """
-    deadline = time.monotonic() + MAX_COLLECTION_SECONDS
+    deadline = deadline if deadline is not None else time.monotonic() + MAX_COLLECTION_SECONDS
     completed, failed = set(), set()
     errors, recovered, recovery = {}, [], []
     pending = list(specs)
@@ -763,6 +786,7 @@ def collect(refresh: bool = False) -> Path:
     from .history import verify_files
     from .health import summarize
     from .validate import validate_rows
+    from . import recovery as repair
 
     verify_files(ROOT)
     today = datetime.now(TR_TZ).date().isoformat()
@@ -792,18 +816,58 @@ def collect(refresh: bool = False) -> Path:
     historical_levels = _historical_levels()
     claimed = {str(sku["product_key"]) for state in types_state.values()
                for sku in state.get("skus", []) if sku.get("product_key")}
+    rollout = repair.load_rollout(ROOT)
+    active_recovery = rollout["mode"] == "active" and today >= rollout["activated_on"]
+    evidence_path = ROOT / "state/v0.4-discovery.json"
+    shadow_path = ROOT / "state/v0.4-shadow-panels.json"
+    evidence = repair.read_json(evidence_path, {"schema_version": 1, "types": {}, "shadow_days": {}})
+    shadow_panel = repair.read_json(shadow_path, copy.deepcopy(panel_state))
+    if active_recovery and panel_state.get("recovery_policy_version") != repair.POLICY_VERSION:
+        # Activation begins from the published chain, never a divergent shadow
+        # price level. Older bridges must refer to published same-day prices.
+        for product_type in evidence.get("types", {}).values():
+            for product in product_type.get("products", {}).values():
+                for record in product.get("dates", {}).values():
+                    record.pop("linked_unit_price", None)
+                    if "published_linked_unit_price" in record:
+                        record["linked_unit_price"] = record["published_linked_unit_price"]
+    pools, search_reports = {}, {}
+    discovery_report = {"schema_version": 1, "date": today, "status": "collected_unpublished",
+                        "mode": "active" if active_recovery else "shadow", "types": {}}
+    deadline = time.monotonic() + MAX_COLLECTION_SECONDS
     session = requests.Session()
+    session._marketfiyati_budget = RequestBudget(deadline)
     output_by_type: dict[str, list[dict]] = {}
 
     def scan(spec):
-        candidates = search_products(spec["query"], category_level=spec["api_category_level"],
-                                     category_values=spec["api_categories"], session=session)
+        try:
+            candidates = search_products(spec["query"], category_level=spec["api_category_level"],
+                                         category_values=spec["api_categories"], session=session)
+            meta = repair.search_metadata(candidates)
+            if meta["status"] == "incomplete":
+                # Repeated pagination cannot establish a successful required
+                # scan. Unlike an intentional result cap, retry it and retain
+                # the last publication if recovery does not complete.
+                failure = MarketFiyatiError(f"Incomplete primary search: {meta.get('reason', 'unknown')}")
+                failure.search_metadata = meta
+                raise failure
+        except MarketFiyatiError as exc:
+            search_reports[spec["id"]] = {"primary": getattr(exc, "search_metadata", {"status": "failed", "reason": str(exc)}), "aliases": []}
+            raise
+        pools[spec["id"]] = list(candidates)
+        search_reports[spec["id"]] = {"primary": meta, "aliases": []}
+        if active_recovery:
+            # Policy observation runs once after optional aliases have merged.
+            # Primary coverage for discovery priority uses accepted old slots.
+            output_by_type[spec["id"]] = [item for item in candidates if _base_candidate(item, spec) is not None]
+            return
         state = types_state.get(spec["id"])
         if not state or not state.get("skus"):
             state, observed = _initialize_type(candidates, spec, claimed, today)
             types_state[spec["id"]] = state
         else:
-            observed = _observe_type(candidates, spec, state, claimed, today, historical_levels)
+            observed = _observe_type(candidates, spec, state, claimed, today, historical_levels,
+                                     complete=meta["status"] == "complete")
         for row in observed:
             row.update({"date": today, "group": spec["group"], "type_id": spec["id"],
                         "type_label": spec["label"], "collected_at": datetime.now(TR_TZ).isoformat(),
@@ -811,13 +875,84 @@ def collect(refresh: bool = False) -> Path:
         output_by_type[spec["id"]] = observed
 
     try:
-        errors, recovered, recovery = _scan_with_recovery(specs, scan)
+        errors, recovered, recovery = _scan_with_recovery(specs, scan, deadline=deadline)
+        aliases = repair.read_json(ROOT / "config/discovery.json", {}).get("reviewed_aliases", {})
+        discovery_report["discovery"] = repair.discover_aliases(
+            specs, pools, search_reports, output_by_type, session, search_products, aliases, today, deadline) if not errors else {"status": "primary_incomplete", "requests": 0}
     finally:
         session.close()
+    proposed_types = types_state if active_recovery else shadow_panel.setdefault("types", {})
+    proposed_claimed = {str(sku["product_key"]) for state in proposed_types.values()
+                        for sku in state.get("skus", []) if sku.get("product_key")}
+    proposed_output = {}
+    for spec in specs:
+        key = spec["id"]
+        search_info = search_reports.get(key, {"primary": {"status": "incomplete", "reason": "not_scanned"}, "aliases": []})
+        # Observed products are positive evidence even when the result cap is
+        # reached. Absence needs an exhausted search; these are separate facts.
+        complete = search_info["primary"]["status"] in {"complete", "truncated"}
+        absence_complete = search_info["primary"]["status"] == "complete" and all(
+            row["status"] == "complete" for row in search_info["aliases"])
+        pool_report = repair.record_pool(evidence, spec, pools.get(key, []), today, complete)
+        state = proposed_types.get(key)
+        policy_report = {}
+        if key not in pools:
+            observed = []
+        elif not state or not state.get("skus"):
+            state, observed = _initialize_type(pools[key], spec, proposed_claimed, today)
+            proposed_types[key] = state
+            if complete:
+                for row in observed:
+                    repair._remember_link(evidence["types"][key], row, today)
+        else:
+            observed, policy_report = repair.observe_type(pools[key], spec, state, proposed_claimed,
+                today, historical_levels, evidence["types"][key], complete=complete,
+                absence_complete=absence_complete)
+        for row in observed:
+            row.update({"date": today, "group": spec["group"], "type_id": key,
+                        "type_label": spec["label"], "collected_at": datetime.now(TR_TZ).isoformat(),
+                        "match_score": row.pop("score")})
+        proposed_output[key] = observed
+        if state and not policy_report:
+            policy_report = {"panel_size": len(state.get("skus", [])), "target_skus": spec["target_skus"],
+                             "min_skus": spec["min_skus"], "observed_skus": len(observed),
+                             "below_target": len(state.get("skus", [])) < spec["target_skus"],
+                             "ready_candidates": 0, "lost_depot_connections": 0,
+                             "unavailable_replacements": 0}
+        discovery_report["types"][key] = {**search_info, **pool_report, **policy_report,
+                                         "absence_complete": absence_complete}
+    if active_recovery:
+        output_by_type = proposed_output
+        panel_state["recovery_policy_version"] = repair.POLICY_VERSION
+    proposed_rows = [row for spec in specs for row in proposed_output.get(spec["id"], [])]
+    shadow_validated = False
+    try:
+        validate_rows(proposed_rows, today, specs=specs)
+        proposed_health = summarize(proposed_rows)
+        shadow_validated = not proposed_health["source_date_future"] and proposed_health["source_within_3_days"] >= len(proposed_rows) * 0.60
+    except (ValueError, SystemExit) as exc:
+        discovery_report["shadow_validation_error"] = str(exc)
+    complete_day = not errors and all(value["complete"] for value in discovery_report["types"].values())
+    old_day = evidence.setdefault("shadow_days", {}).get(today, {})
+    evidence["shadow_days"][today] = {"complete": bool(old_day.get("complete") or complete_day),
+        "shadow_validated": bool(old_day.get("shadow_validated") or shadow_validated),
+        "validated": bool(old_day.get("validated")), "pending_qualified": complete_day and shadow_validated}
+    discovery_report["shadow"] = {**repair.eligibility(evidence), "validated": shadow_validated,
+        "comparison": {"legacy_observed_skus": sum(len(rows) for rows in output_by_type.values()),
+                       "proposed_observed_skus": len(proposed_rows),
+                       "additions_today": sum(state.get("additions_today", 0) for state in proposed_types.values()),
+                       "replacements_today": sum(state.get("replacements_today", 0) for state in proposed_types.values())}}
+    # Evidence is an audit stream, not published panel state: retain successful
+    # source observations even if another type or publication validation fails.
+    repair.write_json(evidence_path, evidence)
+    diagnostics_path = DATA_DIR / "collection-diagnostics" / f"{today}.json"
+    repair.write_collection_report(diagnostics_path, discovery_report)
     output_rows = [row for spec in specs for row in output_by_type.get(spec["id"], [])]
     details = {"observed_skus": len(output_rows), "recovered_types": recovered, "recovery": recovery,
                "observed_by_type": {s["id"]: len(output_by_type.get(s["id"], [])) for s in specs}}
     if errors:
+        discovery_report["status"] = "rejected"
+        repair.write_collection_report(diagnostics_path, discovery_report)
         _record_attempt(today, errors, "rejected", reason="Incomplete API collection; published observations and panel state preserved", **details)
         raise SystemExit("Toplama eksik: eski gözlemler ve panel state korundu; yeni endeks yayımlanmadı")
 
@@ -843,8 +978,21 @@ def collect(refresh: bool = False) -> Path:
             if reason:
                 raise ValueError(reason)
     except (ValueError, SystemExit) as exc:
+        discovery_report.update(status="rejected", publication_error=str(exc))
+        repair.write_collection_report(diagnostics_path, discovery_report)
         _record_attempt(today, [], "rejected", reason=str(exc), **details)
         raise SystemExit(f"Yayın kontrolü başarısız; eski gözlemler ve panel state korundu: {exc}") from exc
+
+    if not active_recovery:
+        comparison = repair.compare_policies(ROOT, today, output_rows, proposed_rows, specs)
+        discovery_report["shadow"]["comparison"].update(comparison)
+        if comparison["status"] == "shadow_unavailable":
+            shadow_validated = False
+            evidence["shadow_days"][today]["pending_qualified"] = False
+            if not old_day.get("validated"):
+                evidence["shadow_days"][today]["shadow_validated"] = False
+        discovery_report["shadow"]["validated"] = shadow_validated
+        repair.write_json(evidence_path, evidence)
 
     SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
     fields = ["date", "group", "type_id", "type_label", "slot_id", "product_key", "title",
@@ -868,6 +1016,16 @@ def collect(refresh: bool = False) -> Path:
     staged_state.write_text(json.dumps(panel_state, ensure_ascii=False, separators=(",", ":")) + "\n")
     staged.replace(existing)
     staged_state.replace(PANEL_PATH)
+    if shadow_validated and not active_recovery:
+        repair.write_json(shadow_path, shadow_panel)
+        shadow_snapshot = DATA_DIR / "shadow" / f"{today}.csv"
+        shadow_snapshot.parent.mkdir(parents=True, exist_ok=True)
+        with shadow_snapshot.open("w", encoding="utf-8", newline="") as handle:
+            writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n")
+            writer.writeheader()
+            writer.writerows(proposed_rows)
+    discovery_report["status"] = "published"
+    repair.write_collection_report(diagnostics_path, discovery_report)
     status = "published_with_retained_types" if retained else "published"
     _record_attempt(today, [], status, source_updated_today=health["source_updated_today"], **details)
     if retained:
