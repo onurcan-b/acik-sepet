@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-26",
-  "checked_at": "2026-09-26T20:21:41.012623+03:00",
-  "status": "published_with_retained_types",
+  "date": "2026-09-27",
+  "checked_at": "2026-09-27T01:06:26.196689+03:00",
+  "status": "published",
   "errors": [],
-  "source_updated_today": 1597,
-  "observed_skus": 1603,
+  "source_updated_today": 0,
+  "observed_skus": 1609,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -32,7 +32,7 @@
     "meatballs": 7,
     "tuna": 19,
     "sardine": 1,
-    "smoked_salmon": 2,
+    "smoked_salmon": 3,
     "salmon": 4,
     "frozen_fish": 6,
     "fish_fingers": 0,
@@ -94,7 +94,7 @@
     "nuts": 10,
     "icecream": 16,
     "halva": 19,
-    "spread": 19,
+    "spread": 24,
     "candy": 15,
     "tomato_paste": 22,
     "lentils": 19,
@@ -138,25 +138,5 @@
     "paper_towel": 19,
     "wet_wipes": 7,
     "tissues": 9
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "frozen_fish",
-      "label": "Dondurulmuş balık",
-      "reason": "Same-day coverage regression for frozen_fish: 8 -> 6",
-      "new_observed_skus": 6,
-      "retained_skus": 8,
-      "collected_at": [
-        "2026-09-26T02:59:38.140665+03:00",
-        "2026-09-26T02:59:38.140677+03:00",
-        "2026-09-26T02:59:38.140680+03:00",
-        "2026-09-26T02:59:38.140683+03:00",
-        "2026-09-26T02:59:38.140685+03:00",
-        "2026-09-26T02:59:38.140687+03:00",
-        "2026-09-26T02:59:38.140690+03:00",
-        "2026-09-26T02:59:38.140692+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1605
+  }
 }
