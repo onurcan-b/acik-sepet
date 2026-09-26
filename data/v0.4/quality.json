@@ -112356,10 +112356,16 @@
             "target_skus": 8,
             "min_skus": 2,
             "observed_skus": 2,
-            "below_target": true,
-            "ready_candidates": 0,
+            "missing_skus": 0,
             "lost_depot_connections": 0,
+            "ready_candidates": 0,
+            "depot_gaps": [],
+            "insufficient_observed_products": false,
             "unavailable_replacements": 0,
+            "below_target": true,
+            "additions_today": 0,
+            "replacements_today": 0,
+            "turnover_allowance": 2,
             "absence_complete": true
           },
           "candidate_readiness": 0,
@@ -194746,10 +194752,16 @@
           "target_skus": 8,
           "min_skus": 2,
           "observed_skus": 2,
-          "below_target": true,
-          "ready_candidates": 0,
+          "missing_skus": 0,
           "lost_depot_connections": 0,
+          "ready_candidates": 0,
+          "depot_gaps": [],
+          "insufficient_observed_products": false,
           "unavailable_replacements": 0,
+          "below_target": true,
+          "additions_today": 0,
+          "replacements_today": 0,
+          "turnover_allowance": 2,
           "absence_complete": true
         },
         "candidate_readiness": 0,
@@ -248727,7 +248739,7 @@
   },
   "latest_attempt": {
     "date": "2026-09-27",
-    "checked_at": "2026-09-27T01:06:26.196689+03:00",
+    "checked_at": "2026-09-27T02:48:18.058021+03:00",
     "status": "published",
     "errors": [],
     "source_updated_today": 0,
@@ -248865,6 +248877,8 @@
       "paper_towel": 19,
       "wet_wipes": 7,
       "tissues": 9
-    }
+    },
+    "retained_same_day_types": [],
+    "published_skus": 1609
   }
 }
