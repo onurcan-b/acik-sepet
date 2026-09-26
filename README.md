@@ -11,7 +11,7 @@ Markette fiyatlar gerçekten ne kadar oynuyor? “Bana öyle geliyor” kısmın
 
 <!-- STATUS_START -->
 > **Veri durumu: Kısmi güncelleme; bazı tiplerde gün içindeki önceki ölçüm korundu.** Son seri noktası: **2026-09-26**. Kategori ağırlığı kapsaması: **%66**.
-> Son tarama girişimi: 2026-09-26T13:03:38.676118+03:00.
+> Son tarama girişimi: 2026-09-26T20:21:41.012623+03:00.
 > Aynı günün önceki ölçümü kullanılan tipler: Dondurulmuş balık (2026-09-26T02:59:38.140665+03:00, 2026-09-26T02:59:38.140677+03:00, 2026-09-26T02:59:38.140680+03:00, 2026-09-26T02:59:38.140683+03:00, 2026-09-26T02:59:38.140685+03:00, 2026-09-26T02:59:38.140687+03:00, 2026-09-26T02:59:38.140690+03:00, 2026-09-26T02:59:38.140692+03:00). Diğer tipler son taramayla güncellendi.
 > Yayımlanamayan kategoriler: Et ve et ürünleri; Meyve; Sebze.
 > Baz korunuyor: **2026-09-05 = 100**. 5–14 Eylül geçmişi kilitli; sınıflandırma düzeltmeleri 15 Eylül'den itibaren geçerli.
