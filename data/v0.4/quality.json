@@ -91869,9 +91869,9 @@
                 "reason": "title",
                 "retailer_depot": [
                   {
-                    "source_id": "depot:tarim_kredi-5022",
+                    "source_id": "depot:tarim_kredi-7488",
                     "market": "tarim_kredi",
-                    "depot_name": "Istanbul Kadıköy Market"
+                    "depot_name": "Istanbul Kadıköy Kızıltoprak"
                   }
                 ]
               }
@@ -145999,14 +145999,14 @@
             "primary": {
               "status": "complete",
               "pages": 6,
-              "raw_results": 138,
-              "unique_results": 138,
+              "raw_results": 139,
+              "unique_results": 139,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 93,
+            "accepted_candidates": 94,
             "rejections": {
               "category": 0,
               "title": 40,
@@ -146030,22 +146030,6 @@
                 "product_key": "id:1IU0",
                 "reason": "quantity",
                 "retailer_depot": [
-                  {
-                    "source_id": "depot:carrefour-1012",
-                    "market": "carrefour",
-                    "depot_name": "Istanbul Acıbadem Hıper"
-                  }
-                ]
-              },
-              {
-                "product_key": "id:20KS",
-                "reason": "title",
-                "retailer_depot": [
-                  {
-                    "source_id": "depot:migros-1991",
-                    "market": "migros",
-                    "depot_name": "Çiçekçi M Migros"
-                  },
                   {
                     "source_id": "depot:carrefour-1012",
                     "market": "carrefour",
@@ -146098,27 +146082,6 @@
                 ]
               },
               {
-                "product_key": "id:21BB",
-                "reason": "title",
-                "retailer_depot": [
-                  {
-                    "source_id": "depot:bim-5712",
-                    "market": "bim",
-                    "depot_name": "Çiçekçi  Üsküdar"
-                  },
-                  {
-                    "source_id": "depot:a101-6815",
-                    "market": "a101",
-                    "depot_name": "Kostak Ümraniye"
-                  },
-                  {
-                    "source_id": "depot:migros-4479",
-                    "market": "migros",
-                    "depot_name": "Mjet Üsküdar Paşakapısı"
-                  }
-                ]
-              },
-              {
                 "product_key": "id:1C19",
                 "reason": "title",
                 "retailer_depot": [
@@ -146148,6 +146111,22 @@
                     "source_id": "depot:migros-3296",
                     "market": "migros",
                     "depot_name": "Kadıköy Caferağa M Migros"
+                  }
+                ]
+              },
+              {
+                "product_key": "id:20KS",
+                "reason": "title",
+                "retailer_depot": [
+                  {
+                    "source_id": "depot:migros-1991",
+                    "market": "migros",
+                    "depot_name": "Çiçekçi M Migros"
+                  },
+                  {
+                    "source_id": "depot:carrefour-1012",
+                    "market": "carrefour",
+                    "depot_name": "Istanbul Acıbadem Hıper"
                   }
                 ]
               },
@@ -146414,6 +146393,27 @@
                     "source_id": "depot:carrefour-1012",
                     "market": "carrefour",
                     "depot_name": "Istanbul Acıbadem Hıper"
+                  }
+                ]
+              },
+              {
+                "product_key": "id:21BB",
+                "reason": "title",
+                "retailer_depot": [
+                  {
+                    "source_id": "depot:bim-5712",
+                    "market": "bim",
+                    "depot_name": "Çiçekçi  Üsküdar"
+                  },
+                  {
+                    "source_id": "depot:a101-6815",
+                    "market": "a101",
+                    "depot_name": "Kostak Ümraniye"
+                  },
+                  {
+                    "source_id": "depot:migros-4479",
+                    "market": "migros",
+                    "depot_name": "Mjet Üsküdar Paşakapısı"
                   }
                 ]
               },
@@ -147169,6 +147169,12 @@
                 "source_id": "depot:migros-3296",
                 "market": "migros",
                 "depot_name": "Kadıköy Caferağa M Migros"
+              },
+              {
+                "product_key": "id:1K69",
+                "source_id": "depot:tarim_kredi-7488",
+                "market": "tarim_kredi",
+                "depot_name": "Istanbul Kadıköy Kızıltoprak"
               },
               {
                 "product_key": "id:21F6",
@@ -174304,9 +174310,9 @@
               "reason": "title",
               "retailer_depot": [
                 {
-                  "source_id": "depot:tarim_kredi-5022",
+                  "source_id": "depot:tarim_kredi-7488",
                   "market": "tarim_kredi",
-                  "depot_name": "Istanbul Kadıköy Market"
+                  "depot_name": "Istanbul Kadıköy Kızıltoprak"
                 }
               ]
             }
@@ -228434,14 +228440,14 @@
           "primary": {
             "status": "complete",
             "pages": 6,
-            "raw_results": 138,
-            "unique_results": 138,
+            "raw_results": 139,
+            "unique_results": 139,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 93,
+          "accepted_candidates": 94,
           "rejections": {
             "category": 0,
             "title": 40,
@@ -228465,22 +228471,6 @@
               "product_key": "id:1IU0",
               "reason": "quantity",
               "retailer_depot": [
-                {
-                  "source_id": "depot:carrefour-1012",
-                  "market": "carrefour",
-                  "depot_name": "Istanbul Acıbadem Hıper"
-                }
-              ]
-            },
-            {
-              "product_key": "id:20KS",
-              "reason": "title",
-              "retailer_depot": [
-                {
-                  "source_id": "depot:migros-1991",
-                  "market": "migros",
-                  "depot_name": "Çiçekçi M Migros"
-                },
                 {
                   "source_id": "depot:carrefour-1012",
                   "market": "carrefour",
@@ -228533,27 +228523,6 @@
               ]
             },
             {
-              "product_key": "id:21BB",
-              "reason": "title",
-              "retailer_depot": [
-                {
-                  "source_id": "depot:bim-5712",
-                  "market": "bim",
-                  "depot_name": "Çiçekçi  Üsküdar"
-                },
-                {
-                  "source_id": "depot:a101-6815",
-                  "market": "a101",
-                  "depot_name": "Kostak Ümraniye"
-                },
-                {
-                  "source_id": "depot:migros-4479",
-                  "market": "migros",
-                  "depot_name": "Mjet Üsküdar Paşakapısı"
-                }
-              ]
-            },
-            {
               "product_key": "id:1C19",
               "reason": "title",
               "retailer_depot": [
@@ -228583,6 +228552,22 @@
                   "source_id": "depot:migros-3296",
                   "market": "migros",
                   "depot_name": "Kadıköy Caferağa M Migros"
+                }
+              ]
+            },
+            {
+              "product_key": "id:20KS",
+              "reason": "title",
+              "retailer_depot": [
+                {
+                  "source_id": "depot:migros-1991",
+                  "market": "migros",
+                  "depot_name": "Çiçekçi M Migros"
+                },
+                {
+                  "source_id": "depot:carrefour-1012",
+                  "market": "carrefour",
+                  "depot_name": "Istanbul Acıbadem Hıper"
                 }
               ]
             },
@@ -228849,6 +228834,27 @@
                   "source_id": "depot:carrefour-1012",
                   "market": "carrefour",
                   "depot_name": "Istanbul Acıbadem Hıper"
+                }
+              ]
+            },
+            {
+              "product_key": "id:21BB",
+              "reason": "title",
+              "retailer_depot": [
+                {
+                  "source_id": "depot:bim-5712",
+                  "market": "bim",
+                  "depot_name": "Çiçekçi  Üsküdar"
+                },
+                {
+                  "source_id": "depot:a101-6815",
+                  "market": "a101",
+                  "depot_name": "Kostak Ümraniye"
+                },
+                {
+                  "source_id": "depot:migros-4479",
+                  "market": "migros",
+                  "depot_name": "Mjet Üsküdar Paşakapısı"
                 }
               ]
             },
@@ -229604,6 +229610,12 @@
               "source_id": "depot:migros-3296",
               "market": "migros",
               "depot_name": "Kadıköy Caferağa M Migros"
+            },
+            {
+              "product_key": "id:1K69",
+              "source_id": "depot:tarim_kredi-7488",
+              "market": "tarim_kredi",
+              "depot_name": "Istanbul Kadıköy Kızıltoprak"
             },
             {
               "product_key": "id:21F6",
@@ -248817,7 +248829,7 @@
   },
   "latest_attempt": {
     "date": "2026-09-27",
-    "checked_at": "2026-09-27T13:44:19.424809+03:00",
+    "checked_at": "2026-09-27T20:56:27.602681+03:00",
     "status": "published_with_retained_types",
     "errors": [],
     "source_updated_today": 1609,
