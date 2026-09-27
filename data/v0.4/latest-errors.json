@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-27",
-  "checked_at": "2026-09-27T20:56:27.602681+03:00",
-  "status": "published_with_retained_types",
+  "date": "2026-09-28",
+  "checked_at": "2026-09-28T02:58:31.677988+03:00",
+  "status": "published",
   "errors": [],
-  "source_updated_today": 1609,
-  "observed_skus": 1613,
+  "source_updated_today": 0,
+  "observed_skus": 1621,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -63,7 +63,7 @@
     "peach": 1,
     "grape": 5,
     "watermelon": 3,
-    "melon": 5,
+    "melon": 6,
     "strawberry": 0,
     "kiwi": 0,
     "avocado": 2,
@@ -91,7 +91,7 @@
     "biscuits": 20,
     "wafer": 20,
     "chips": 21,
-    "nuts": 11,
+    "nuts": 13,
     "icecream": 16,
     "halva": 17,
     "spread": 24,
@@ -110,9 +110,9 @@
     "turkish_coffee": 22,
     "instant_coffee": 6,
     "filter_coffee": 19,
-    "cola": 13,
+    "cola": 17,
     "fruit_juice": 0,
-    "iced_tea": 15,
+    "iced_tea": 16,
     "mineral_water": 17,
     "water": 22,
     "energy_drink": 21,
@@ -138,22 +138,5 @@
     "paper_towel": 19,
     "wet_wipes": 7,
     "tissues": 9
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "bread_wholewheat",
-      "label": "Tam buğday ekmeği",
-      "reason": "Same-day coverage regression for bread_wholewheat: 5 -> 4",
-      "new_observed_skus": 4,
-      "retained_skus": 5,
-      "collected_at": [
-        "2026-09-27T02:39:50.548100+03:00",
-        "2026-09-27T02:39:50.548112+03:00",
-        "2026-09-27T02:39:50.548114+03:00",
-        "2026-09-27T02:39:50.548116+03:00",
-        "2026-09-27T02:39:50.548118+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1614
+  }
 }
