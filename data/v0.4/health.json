@@ -3288,27 +3288,107 @@
   },
   {
     "date": "2026-09-28",
-    "rows": 1621,
-    "source_updated_today": 0,
-    "source_within_3_days": 1621,
+    "rows": 1615,
+    "source_updated_today": 1578,
+    "source_within_3_days": 1615,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2120,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2094,
+    "depot_source_updated_today": 2051,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1266,
-    "auditable_skus": 1621,
+    "single_source_skus": 1268,
+    "auditable_skus": 1615,
     "source_age_days": {
-      "1": 1621
+      "0": 1578,
+      "1": 37
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-09-27",
-    "matched_slots": 1613,
-    "missing_slots": 1,
-    "new_slots": 8,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1595,
+    "missing_slots": 19,
+    "new_slots": 20,
+    "large_price_moves": [
+      {
+        "slot_id": "id:016M",
+        "title": "Maylo Süper Bambu Katkılı Kağıt Havlu 16 Adet",
+        "change_pct": 134.61
+      },
+      {
+        "slot_id": "id:1Y5T",
+        "title": "Oral-B Çocuk Diş Macunu 75 Ml",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:0FT5",
+        "title": "Signal Clean Action Diş Fırçası 4 Adet",
+        "change_pct": 66.73
+      },
+      {
+        "slot_id": "id:056A",
+        "title": "Taze Bütün Poşet Piliç 1 Kg",
+        "change_pct": 51.69
+      },
+      {
+        "slot_id": "id:0C4H",
+        "title": "Activex Hassas Sıvı Sabun 1.5 Lt",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:1V49",
+        "title": "Duru Avokado Yağı Sıvı Sabun 1.5 Lt",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:1YVA",
+        "title": "Duru Sıvı Sabun Avokado 500 Ml",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:20O6",
+        "title": "Signal Ergonomik Diş Fırçası 2 Adet",
+        "change_pct": 41.48
+      },
+      {
+        "slot_id": "id:11TH",
+        "title": "Signal Nazik Diş Eti Bakımı Diş Fırçası 2 Adet",
+        "change_pct": 28.68
+      },
+      {
+        "slot_id": "id:0LH1",
+        "title": "Migros Yüksük Makarna 500 Gr",
+        "change_pct": 28.21
+      },
+      {
+        "slot_id": "id:0M0B",
+        "title": "Migros Spagetti Makarna 500 Gr",
+        "change_pct": 28.21
+      },
+      {
+        "slot_id": "id:0VH6",
+        "title": "Migros Arpa Şehriye 500 Gr",
+        "change_pct": 28.21
+      },
+      {
+        "slot_id": "id:0INV",
+        "title": "Signal Performans Siyah Orta Diş Fırçası 2 Adet",
+        "change_pct": 27.21
+      },
+      {
+        "slot_id": "id:1ZOR",
+        "title": "Signal White System Diş Macunu 75 Ml",
+        "change_pct": 24.54
+      },
+      {
+        "slot_id": "id:20PN",
+        "title": "Tukaş Domates Salçası 1.65 Kg",
+        "change_pct": 23.24
+      },
+      {
+        "slot_id": "id:0H2P",
+        "title": "İçim Tam Yağlı Taze Kaşar Peyniri 700 Gr",
+        "change_pct": 21.4
+      }
+    ],
+    "warnings": []
   }
 ]
