@@ -3393,27 +3393,172 @@
   },
   {
     "date": "2026-09-29",
-    "rows": 1606,
-    "source_updated_today": 0,
-    "source_within_3_days": 1606,
+    "rows": 1617,
+    "source_updated_today": 1609,
+    "source_within_3_days": 1617,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2084,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2097,
+    "depot_source_updated_today": 2088,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1260,
-    "auditable_skus": 1606,
+    "single_source_skus": 1272,
+    "auditable_skus": 1617,
     "source_age_days": {
-      "1": 1606
+      "0": 1609,
+      "1": 8
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-09-28",
-    "matched_slots": 1605,
-    "missing_slots": 10,
-    "new_slots": 1,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1586,
+    "missing_slots": 29,
+    "new_slots": 31,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1TYR",
+        "title": "Blendax Yasemin Şampuan 500 Ml",
+        "change_pct": 76.77
+      },
+      {
+        "slot_id": "id:1H9B",
+        "title": "İpek Dökülen Saçlar Şampuan 480 Ml",
+        "change_pct": 67.23
+      },
+      {
+        "slot_id": "id:0YEX",
+        "title": "Bioblas Şampuan 360 Ml",
+        "change_pct": 67.2
+      },
+      {
+        "slot_id": "id:1TXW",
+        "title": "Elidor Onarıcı Şampuan 400 Ml",
+        "change_pct": 67.18
+      },
+      {
+        "slot_id": "id:1WT5",
+        "title": "Vernel Gülün Büyüsü Çamaşır Yumuşatıcısı 3 Lt",
+        "change_pct": 47.29
+      },
+      {
+        "slot_id": "id:1WLN",
+        "title": "Dp Şampuan 425 Ml",
+        "change_pct": 43.2
+      },
+      {
+        "slot_id": "id:000A",
+        "title": "Yerli Avokado 1 Adet",
+        "change_pct": -42.92
+      },
+      {
+        "slot_id": "id:1EOA",
+        "title": "Çekirdeksiz Üzüm 1 Kg",
+        "change_pct": 40.0
+      },
+      {
+        "slot_id": "id:07G3",
+        "title": "Piliç Salam 1 Kg",
+        "change_pct": 33.71
+      },
+      {
+        "slot_id": "id:04HR",
+        "title": "Sarımsak 1 Kg",
+        "change_pct": 30.87
+      },
+      {
+        "slot_id": "id:1FID",
+        "title": "Kavun 1 Kg",
+        "change_pct": -29.93
+      },
+      {
+        "slot_id": "id:1EY3",
+        "title": "Meysu Kola 2.5 Lt",
+        "change_pct": 28.26
+      },
+      {
+        "slot_id": "id:0OCX",
+        "title": "Sprite Gazoz 1 Lt",
+        "change_pct": 27.27
+      },
+      {
+        "slot_id": "id:016N",
+        "title": "Senfoni Sıvı Bulaşık Deterjanı 4 Lt",
+        "change_pct": 27.2
+      },
+      {
+        "slot_id": "id:0N0H",
+        "title": "Çatal Sucuk İlikli Dana Kangal Sucuk 450 Gr",
+        "change_pct": 26.76
+      },
+      {
+        "slot_id": "id:1M20",
+        "title": "Dana Fermente Mangal Sucuk 400 Gr",
+        "change_pct": 26.76
+      },
+      {
+        "slot_id": "id:1J2Q",
+        "title": "Dondurulmuş Piliç Kasap Köfte 1 Kg",
+        "change_pct": 26.67
+      },
+      {
+        "slot_id": "id:0ZII",
+        "title": "Black Bruin Enerji İçeceği 1 Lt",
+        "change_pct": -26.58
+      },
+      {
+        "slot_id": "id:0PQM",
+        "title": "Eti Lifalif İnce Öğütülmüş Yulaf Ezmesi 350 Gr",
+        "change_pct": 25.79
+      },
+      {
+        "slot_id": "id:0SRF",
+        "title": "Coca-Cola Şekersiz Kola 2.5 Lt",
+        "change_pct": 25.16
+      },
+      {
+        "slot_id": "id:0R29",
+        "title": "Namet Kangal Sucuk 200 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:1DHO",
+        "title": "Pınar Sosis 430 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:0G6D",
+        "title": "Lezita Taze Poşetli Bütün Piliç 1 Kg",
+        "change_pct": 24.79
+      },
+      {
+        "slot_id": "id:1NAZ",
+        "title": "Blendax Şampuan 500 Ml",
+        "change_pct": -24.79
+      },
+      {
+        "slot_id": "id:12HG",
+        "title": "Su 5 Lt",
+        "change_pct": 22.03
+      },
+      {
+        "slot_id": "id:0LNH",
+        "title": "Banvit Poşetli Bütün Piliç 1 Kg",
+        "change_pct": 21.84
+      },
+      {
+        "slot_id": "id:112Q",
+        "title": "Banvit Bütün Piliç XL 1 Kg",
+        "change_pct": 21.84
+      },
+      {
+        "slot_id": "id:0ZND",
+        "title": "Coca-Cola Kola 1.75 Lt",
+        "change_pct": 21.43
+      },
+      {
+        "slot_id": "id:1YYM",
+        "title": "Kuru Soğan 1 Kg",
+        "change_pct": 20.08
+      }
+    ],
+    "warnings": []
   }
 ]

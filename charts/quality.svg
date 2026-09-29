@@ -149,7 +149,7 @@ L 425.496547 81.260031
 L 432.244669 93.077759
 L 438.99279 93.077759
 L 445.740911 93.077759
-L 452.489033 93.077759
+L 452.489033 70.919519
 " clip-path="url(#p0e1365a26f)" style="fill: none; stroke: #2563eb; stroke-width: 2; stroke-linecap: square"/>
    </g>
    <g id="line2d_19">
@@ -384,7 +384,7 @@ L 455.188281 390.834687
 " style="fill: none; stroke: #cbd5e1; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
    <g id="text_24">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #172554" x="51.650625" y="221.295361" transform="rotate(-0 51.650625 221.295361)">Başlığa katkı: 79 tip / 1402 SKU</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #172554" x="51.650625" y="221.295361" transform="rotate(-0 51.650625 221.295361)">Başlığa katkı: 80 tip / 1392 SKU</text>
    </g>
    <g id="legend_2">
     <g id="line2d_43">
@@ -495,7 +495,7 @@ L 425.496547 277.52035
 L 432.244669 276.507107
 L 438.99279 273.12963
 L 445.740911 272.791882
-L 452.489033 272.454135
+L 452.489033 273.298504
 " clip-path="url(#pd502d77126)" style="fill: none; stroke-dasharray: 4.44,1.92; stroke-dashoffset: 0; stroke: #64748b; stroke-width: 1.2"/>
    </g>
    <g id="patch_8">
