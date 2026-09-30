@@ -1,17 +1,17 @@
 {
-  "date": "2026-09-29",
-  "checked_at": "2026-09-29T21:48:51.882153+03:00",
-  "status": "published_with_retained_types",
+  "date": "2026-09-30",
+  "checked_at": "2026-09-30T03:40:24.506827+03:00",
+  "status": "published",
   "errors": [],
-  "source_updated_today": 1609,
-  "observed_skus": 1615,
+  "source_updated_today": 0,
+  "observed_skus": 1627,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
     "bread_white": 1,
     "bread_toast": 5,
     "bread_wholewheat": 5,
-    "flour_wheat": 18,
+    "flour_wheat": 22,
     "rice": 20,
     "bulgur": 24,
     "pasta_spaghetti": 5,
@@ -20,7 +20,7 @@
     "oats": 12,
     "breakfast_cereal": 19,
     "semolina": 11,
-    "beef_mince": 7,
+    "beef_mince": 8,
     "beef_cubes": 6,
     "chicken_breast": 0,
     "chicken_thigh": 5,
@@ -39,7 +39,7 @@
     "milk": 21,
     "milk_lactosefree": 13,
     "yogurt": 19,
-    "strained_yogurt": 6,
+    "strained_yogurt": 7,
     "ayran": 21,
     "kefir": 17,
     "white_cheese": 19,
@@ -110,10 +110,10 @@
     "turkish_coffee": 22,
     "instant_coffee": 6,
     "filter_coffee": 19,
-    "cola": 15,
+    "cola": 17,
     "fruit_juice": 0,
     "iced_tea": 14,
-    "mineral_water": 18,
+    "mineral_water": 22,
     "water": 23,
     "energy_drink": 21,
     "soda": 20,
@@ -138,34 +138,5 @@
     "paper_towel": 20,
     "wet_wipes": 8,
     "tissues": 10
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "pasta_spaghetti",
-      "label": "Spagetti makarna",
-      "reason": "Same-day coverage regression for pasta_spaghetti: 6 -> 5",
-      "new_observed_skus": 5,
-      "retained_skus": 6,
-      "collected_at": [
-        "2026-09-29T04:02:07.019560+03:00",
-        "2026-09-29T04:02:07.019572+03:00",
-        "2026-09-29T04:02:07.019575+03:00",
-        "2026-09-29T04:02:07.019577+03:00",
-        "2026-09-29T04:02:07.019580+03:00",
-        "2026-09-29T04:02:07.019582+03:00"
-      ]
-    },
-    {
-      "type_id": "zucchini",
-      "label": "Kabak",
-      "reason": "Same-day coverage regression for zucchini: 2 -> 1",
-      "new_observed_skus": 1,
-      "retained_skus": 2,
-      "collected_at": [
-        "2026-09-29T04:04:45.840544+03:00",
-        "2026-09-29T04:04:45.840555+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1617
+  }
 }
