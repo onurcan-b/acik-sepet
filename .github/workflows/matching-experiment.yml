@@ -1,0 +1,25 @@
+name: Matching Experiment
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install
+        run: pip install -r requirements.txt
+      - name: Matching gold tests
+        run: pytest -q tests/test_matching_experiment.py
+      - name: Compare current and strict matching on live API
+        run: python -m acik_sepet.matching_experiment --types banana carrot lemon zucchini tomato pear
