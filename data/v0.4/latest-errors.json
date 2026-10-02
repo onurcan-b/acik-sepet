@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-01",
-  "checked_at": "2026-10-01T22:03:56.742911+03:00",
-  "status": "published_with_retained_types",
+  "date": "2026-10-02",
+  "checked_at": "2026-10-02T03:59:13.855230+03:00",
+  "status": "published",
   "errors": [],
-  "source_updated_today": 1561,
-  "observed_skus": 1579,
+  "source_updated_today": 0,
+  "observed_skus": 1599,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -39,10 +39,10 @@
     "milk": 21,
     "milk_lactosefree": 12,
     "yogurt": 19,
-    "strained_yogurt": 7,
+    "strained_yogurt": 8,
     "ayran": 19,
     "kefir": 19,
-    "white_cheese": 18,
+    "white_cheese": 23,
     "kasar": 24,
     "labneh": 22,
     "cream_cheese": 13,
@@ -58,7 +58,7 @@
     "apple": 5,
     "orange": 1,
     "mandarin": 0,
-    "lemon": 1,
+    "lemon": 2,
     "pear": 2,
     "peach": 1,
     "grape": 4,
@@ -108,11 +108,11 @@
     "vinegar": 16,
     "black_tea": 22,
     "turkish_coffee": 20,
-    "instant_coffee": 6,
+    "instant_coffee": 8,
     "filter_coffee": 18,
-    "cola": 18,
+    "cola": 19,
     "fruit_juice": 0,
-    "iced_tea": 15,
+    "iced_tea": 16,
     "mineral_water": 21,
     "water": 23,
     "energy_drink": 22,
@@ -123,7 +123,7 @@
     "laundry_liquid": 20,
     "softener": 10,
     "bleach": 18,
-    "surface_cleaner": 18,
+    "surface_cleaner": 23,
     "garbage_bags": 21,
     "sponge": 20,
     "cleaning_cloth": 9,
@@ -133,65 +133,10 @@
     "soap_bar": 20,
     "toothpaste": 23,
     "toothbrush": 21,
-    "deodorant": 18,
+    "deodorant": 22,
     "toilet_paper": 23,
     "paper_towel": 19,
     "wet_wipes": 6,
     "tissues": 10
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "whole_chicken",
-      "label": "Bütün piliç",
-      "reason": "Same-day coverage regression for whole_chicken: 14 -> 11",
-      "new_observed_skus": 11,
-      "retained_skus": 14,
-      "collected_at": [
-        "2026-10-01T03:36:29.806950+03:00",
-        "2026-10-01T03:36:29.806964+03:00",
-        "2026-10-01T03:36:29.806967+03:00",
-        "2026-10-01T03:36:29.806969+03:00",
-        "2026-10-01T03:36:29.806972+03:00",
-        "2026-10-01T03:36:29.806974+03:00",
-        "2026-10-01T03:36:29.806976+03:00",
-        "2026-10-01T03:36:29.806978+03:00",
-        "2026-10-01T03:36:29.806980+03:00",
-        "2026-10-01T03:36:29.806982+03:00",
-        "2026-10-01T03:36:29.806984+03:00",
-        "2026-10-01T03:36:29.806986+03:00",
-        "2026-10-01T03:36:29.806988+03:00",
-        "2026-10-01T03:36:29.806991+03:00"
-      ]
-    },
-    {
-      "type_id": "smoked_salmon",
-      "label": "Somon füme",
-      "reason": "Same-day coverage regression for smoked_salmon: 4 -> 1",
-      "new_observed_skus": 1,
-      "retained_skus": 4,
-      "collected_at": [
-        "2026-10-01T03:36:53.564734+03:00",
-        "2026-10-01T03:36:53.564746+03:00",
-        "2026-10-01T03:36:53.564750+03:00",
-        "2026-10-01T03:36:53.564752+03:00"
-      ]
-    },
-    {
-      "type_id": "wet_wipes",
-      "label": "Islak mendil",
-      "reason": "Same-day coverage regression for wet_wipes: 7 -> 6",
-      "new_observed_skus": 6,
-      "retained_skus": 7,
-      "collected_at": [
-        "2026-10-01T03:43:22.377381+03:00",
-        "2026-10-01T03:43:22.377394+03:00",
-        "2026-10-01T03:43:22.377397+03:00",
-        "2026-10-01T03:43:22.377400+03:00",
-        "2026-10-01T03:43:22.377402+03:00",
-        "2026-10-01T03:43:22.377404+03:00",
-        "2026-10-01T03:43:22.377406+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1586
+  }
 }
