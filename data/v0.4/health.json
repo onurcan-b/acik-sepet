@@ -4048,27 +4048,147 @@
   },
   {
     "date": "2026-10-02",
-    "rows": 1599,
-    "source_updated_today": 0,
-    "source_within_3_days": 1599,
+    "rows": 1616,
+    "source_updated_today": 1603,
+    "source_within_3_days": 1616,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2049,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2072,
+    "depot_source_updated_today": 2057,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1277,
-    "auditable_skus": 1599,
+    "single_source_skus": 1295,
+    "auditable_skus": 1616,
     "source_age_days": {
-      "1": 1599
+      "0": 1603,
+      "1": 13
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-10-01",
-    "matched_slots": 1579,
-    "missing_slots": 7,
-    "new_slots": 20,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1530,
+    "missing_slots": 56,
+    "new_slots": 86,
+    "large_price_moves": [
+      {
+        "slot_id": "id:01VK",
+        "title": "Aktek Krem Peynir 500 Gr",
+        "change_pct": 203.48
+      },
+      {
+        "slot_id": "id:0TZ5",
+        "title": "Asperox Yüzey Temizleyici Çam & Sandal 2.5 Lt",
+        "change_pct": 100.04
+      },
+      {
+        "slot_id": "id:06WA",
+        "title": "Göynük Tam Yağlı Ayran 200 Ml",
+        "change_pct": 99.5
+      },
+      {
+        "slot_id": "id:09AF",
+        "title": "Haktat Kaşar Peyniri 400 Gr",
+        "change_pct": 94.97
+      },
+      {
+        "slot_id": "id:02SD",
+        "title": "Göynük Tam Yağlı Yoğurt 3 Kg",
+        "change_pct": 81.77
+      },
+      {
+        "slot_id": "id:0X2N",
+        "title": "Nestlé Corn Flakes Kahvaltılık Gevrek 650 Gr",
+        "change_pct": 47.07
+      },
+      {
+        "slot_id": "id:023K",
+        "title": "Sprite Gazoz 6x250 Ml",
+        "change_pct": -43.64
+      },
+      {
+        "slot_id": "id:1FID",
+        "title": "Kavun 1 Kg",
+        "change_pct": 42.72
+      },
+      {
+        "slot_id": "id:1ZC0",
+        "title": "Asperox Yüzey Temizleyici Okyanus Maviliği 2.5 Lt",
+        "change_pct": 41.44
+      },
+      {
+        "slot_id": "id:1SJT",
+        "title": "Torku Vakumlu Sucuk 225 Gr",
+        "change_pct": -41.41
+      },
+      {
+        "slot_id": "id:1S7V",
+        "title": "Filiz Kısa Kalem Makarna 500 Gr",
+        "change_pct": 35.78
+      },
+      {
+        "slot_id": "id:1VTR",
+        "title": "Filiz Dirsek Makarna 500 Gr",
+        "change_pct": 35.78
+      },
+      {
+        "slot_id": "id:145C",
+        "title": "Donuk Bütün Piliç 1 Kg",
+        "change_pct": 31.89
+      },
+      {
+        "slot_id": "id:01MZ",
+        "title": "Ekonomik Elma 1 Kg",
+        "change_pct": -29.09
+      },
+      {
+        "slot_id": "id:1EOA",
+        "title": "Çekirdeksiz Üzüm 1 Kg",
+        "change_pct": -28.57
+      },
+      {
+        "slot_id": "id:1VOA",
+        "title": "Asperox Manolya & Frezya Yüzey Temizleyici 2.5 Lt",
+        "change_pct": 26.0
+      },
+      {
+        "slot_id": "id:04HR",
+        "title": "Sarımsak 1 Kg",
+        "change_pct": -23.59
+      },
+      {
+        "slot_id": "id:1M71",
+        "title": "Şeftali 1 Kg",
+        "change_pct": -22.54
+      },
+      {
+        "slot_id": "id:1PV7",
+        "title": "Starking Elma 1 Kg",
+        "change_pct": -22.47
+      },
+      {
+        "slot_id": "id:1J33",
+        "title": "Ozmo Fun Figürlü Sütlü Çikolata 23 Gr",
+        "change_pct": -22.45
+      },
+      {
+        "slot_id": "id:0NMW",
+        "title": "Migros Limon Kokulu Sıvı Bulaşık Deterjanı 4 Lt",
+        "change_pct": -21.85
+      },
+      {
+        "slot_id": "id:0U0T",
+        "title": "Reis Yeşil Mercimek 1 Kg",
+        "change_pct": 21.54
+      },
+      {
+        "slot_id": "id:1OJD",
+        "title": "Karpuz Çekirdeksiz 1 Kg",
+        "change_pct": -21.49
+      },
+      {
+        "slot_id": "id:1C4D",
+        "title": "Siyah Kavun 1 Kg",
+        "change_pct": -21.05
+      }
+    ],
+    "warnings": []
   }
 ]
