@@ -3,8 +3,8 @@
 Türkiye'de market ürünlerinin günlük fiyat hareketini izleyen açık, deneysel gösterge.
 
 <!-- STATUS_START -->
-> **Veri durumu: Eksik kapsam.** Son seri noktası: **2026-10-03**. Kategori ağırlığı kapsaması: **%77**. Güncel kaynak (≤1 gün): **%100.0**.
-> **Kalite uyarısı: kapsama.** [Ayrıntı](data/v0.4/quality.json).
+> **Veri durumu: Eksik kapsam.** Son seri noktası: **2026-10-04**. Kategori ağırlığı kapsaması: **%77**. Güncel kaynak (≤1 gün): **%0.0**.
+> **Kalite uyarısı: kapsama ve güncellik.** [Ayrıntı](data/v0.4/quality.json).
 > Yayımlanamayan kategoriler: Balık ve deniz ürünleri; Meyve; Sebze.
 > Baz: **2026-09-05 = 100**.
 <!-- STATUS_END -->
@@ -18,7 +18,7 @@ Turuncu boş noktalar kısmi kapsamı; çizgideki boşluklar yayımlanamayan gü
 |---:|---:|---:|---:|---:|
 | **103.34** | +0.00% | +2.45% | — | +3.34% |
 
-**%77** kategori ağırlığı · **84 tip / 1489 SKU** başlığa katkı · **1615 SKU** toplandı.
+**%77** kategori ağırlığı · **84 tip / 1490 SKU** başlığa katkı · **1622 SKU** toplandı.
 <!-- STATS_END -->
 
 ### Kategorilerde son yedi gün
