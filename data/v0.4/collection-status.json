@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-02",
-  "checked_at": "2026-10-02T21:37:27.777776+03:00",
-  "status": "published_with_retained_types",
+  "date": "2026-10-03",
+  "checked_at": "2026-10-03T03:41:24.864822+03:00",
+  "status": "published",
   "errors": [],
-  "source_updated_today": 1603,
-  "observed_skus": 1612,
+  "source_updated_today": 0,
+  "observed_skus": 1615,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -34,12 +34,12 @@
     "sardine": 0,
     "smoked_salmon": 1,
     "salmon": 3,
-    "frozen_fish": 6,
+    "frozen_fish": 8,
     "fish_fingers": 0,
     "milk": 21,
     "milk_lactosefree": 14,
     "yogurt": 20,
-    "strained_yogurt": 7,
+    "strained_yogurt": 8,
     "ayran": 19,
     "kefir": 19,
     "white_cheese": 23,
@@ -138,48 +138,5 @@
     "paper_towel": 18,
     "wet_wipes": 6,
     "tissues": 12
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "avocado",
-      "label": "Avokado",
-      "reason": "Same-day coverage regression for avocado: 2 -> 1",
-      "new_observed_skus": 1,
-      "retained_skus": 2,
-      "collected_at": [
-        "2026-10-02T03:53:29.919002+03:00",
-        "2026-10-02T03:53:29.919014+03:00"
-      ]
-    },
-    {
-      "type_id": "carrot",
-      "label": "Havuç",
-      "reason": "Same-day coverage regression for carrot: 2 -> 1",
-      "new_observed_skus": 1,
-      "retained_skus": 2,
-      "collected_at": [
-        "2026-10-02T03:53:42.422487+03:00",
-        "2026-10-02T03:53:42.422498+03:00"
-      ]
-    },
-    {
-      "type_id": "cleaning_cloth",
-      "label": "Temizlik bezi",
-      "reason": "Same-day coverage regression for cleaning_cloth: 9 -> 7",
-      "new_observed_skus": 7,
-      "retained_skus": 9,
-      "collected_at": [
-        "2026-10-02T03:57:23.693785+03:00",
-        "2026-10-02T03:57:23.693797+03:00",
-        "2026-10-02T03:57:23.693800+03:00",
-        "2026-10-02T03:57:23.693802+03:00",
-        "2026-10-02T03:57:23.693804+03:00",
-        "2026-10-02T03:57:23.693806+03:00",
-        "2026-10-02T03:57:23.693809+03:00",
-        "2026-10-02T03:57:23.693811+03:00",
-        "2026-10-02T03:57:23.693814+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1616
+  }
 }
