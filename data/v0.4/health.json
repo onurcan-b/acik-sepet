@@ -4218,27 +4218,117 @@
   },
   {
     "date": "2026-10-04",
-    "rows": 1622,
-    "source_updated_today": 0,
-    "source_within_3_days": 1622,
+    "rows": 1617,
+    "source_updated_today": 1608,
+    "source_within_3_days": 1617,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2081,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2080,
+    "depot_source_updated_today": 2067,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1298,
-    "auditable_skus": 1622,
+    "single_source_skus": 1290,
+    "auditable_skus": 1617,
     "source_age_days": {
-      "2": 1622
+      "0": 1608,
+      "2": 9
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-10-03",
-    "matched_slots": 1615,
-    "missing_slots": 0,
-    "new_slots": 7,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1569,
+    "missing_slots": 46,
+    "new_slots": 48,
+    "large_price_moves": [
+      {
+        "slot_id": "id:01VK",
+        "title": "Aktek Krem Peynir 500 Gr",
+        "change_pct": -65.62
+      },
+      {
+        "slot_id": "id:01EP",
+        "title": "Ülker Gurme Kaymaklı Tereyağlı Kase Margarin 500 Gr",
+        "change_pct": 64.38
+      },
+      {
+        "slot_id": "id:0D5Y",
+        "title": "Dalan Sıvı Sabun Zeytin Mucizesi 3 Lt",
+        "change_pct": 55.05
+      },
+      {
+        "slot_id": "id:0S4F",
+        "title": "Palmolive Naturals Duş Jeli 500 Ml",
+        "change_pct": 50.63
+      },
+      {
+        "slot_id": "id:06WA",
+        "title": "Göynük Tam Yağlı Ayran 200 Ml",
+        "change_pct": -47.37
+      },
+      {
+        "slot_id": "id:09AF",
+        "title": "Haktat Kaşar Peyniri 400 Gr",
+        "change_pct": -45.85
+      },
+      {
+        "slot_id": "id:0ZEB",
+        "title": "Fax Sıvı Sabun 3 Lt",
+        "change_pct": 45.45
+      },
+      {
+        "slot_id": "id:02SD",
+        "title": "Göynük Tam Yağlı Yoğurt 3 Kg",
+        "change_pct": -42.98
+      },
+      {
+        "slot_id": "id:19HL",
+        "title": "Nesquik Çikolatalı Mısır Gevreği 1 Kg",
+        "change_pct": -39.97
+      },
+      {
+        "slot_id": "id:0K3L",
+        "title": "Keskinoğlu Dondurulmuş Piliç Kasap Köfte 1 Kg",
+        "change_pct": 34.84
+      },
+      {
+        "slot_id": "id:1FID",
+        "title": "Kavun 1 Kg",
+        "change_pct": -33.44
+      },
+      {
+        "slot_id": "id:02Q8",
+        "title": "Haktat Kaşar Peyniri 1 Kg",
+        "change_pct": 31.52
+      },
+      {
+        "slot_id": "id:13F4",
+        "title": "Dove Güzellik Katı Sabun 90 Gr",
+        "change_pct": -31.45
+      },
+      {
+        "slot_id": "id:1SZ2",
+        "title": "Eti Finger Bisküvi 900 Gr",
+        "change_pct": 25.0
+      },
+      {
+        "slot_id": "id:018B",
+        "title": "Bolbol Acı Ketçap 1 Kg",
+        "change_pct": 23.88
+      },
+      {
+        "slot_id": "id:054R",
+        "title": "Bolbol Ketçap 1 Kg",
+        "change_pct": 23.88
+      },
+      {
+        "slot_id": "id:1L5V",
+        "title": "Jacobs Selection Filtre Kahve 250 Gr",
+        "change_pct": -23.38
+      },
+      {
+        "slot_id": "id:2051",
+        "title": "Tchibo Türk Kahvesi 100 Gr",
+        "change_pct": 21.26
+      }
+    ],
+    "warnings": []
   }
 ]
