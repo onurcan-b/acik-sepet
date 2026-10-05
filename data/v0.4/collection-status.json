@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-05",
-  "checked_at": "2026-10-05T15:28:55.408435+03:00",
-  "status": "published_with_retained_types",
+  "date": "2026-10-06",
+  "checked_at": "2026-10-06T00:22:09.865843+03:00",
+  "status": "published",
   "errors": [],
-  "source_updated_today": 1594,
-  "observed_skus": 1605,
+  "source_updated_today": 0,
+  "observed_skus": 1614,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -19,7 +19,7 @@
     "vermicelli": 16,
     "oats": 12,
     "breakfast_cereal": 18,
-    "semolina": 7,
+    "semolina": 8,
     "beef_mince": 6,
     "beef_cubes": 7,
     "chicken_breast": 0,
@@ -75,7 +75,7 @@
     "onion": 6,
     "garlic": 3,
     "eggplant": 3,
-    "zucchini": 2,
+    "zucchini": 3,
     "carrot": 1,
     "lettuce": 0,
     "spinach": 0,
@@ -105,12 +105,12 @@
     "ketchup": 22,
     "mayonnaise": 20,
     "salt": 14,
-    "vinegar": 16,
+    "vinegar": 21,
     "black_tea": 21,
     "turkish_coffee": 20,
     "instant_coffee": 8,
     "filter_coffee": 20,
-    "cola": 17,
+    "cola": 19,
     "fruit_juice": 0,
     "iced_tea": 19,
     "mineral_water": 20,
@@ -138,52 +138,5 @@
     "paper_towel": 16,
     "wet_wipes": 7,
     "tissues": 11
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "bread_wholewheat",
-      "label": "Tam buğday ekmeği",
-      "reason": "Same-day coverage regression for bread_wholewheat: 5 -> 3",
-      "new_observed_skus": 3,
-      "retained_skus": 5,
-      "collected_at": [
-        "2026-10-05T02:59:41.354993+03:00",
-        "2026-10-05T02:59:41.355005+03:00",
-        "2026-10-05T02:59:41.355008+03:00",
-        "2026-10-05T02:59:41.355010+03:00",
-        "2026-10-05T02:59:41.355013+03:00"
-      ]
-    },
-    {
-      "type_id": "chicken_thigh",
-      "label": "Tavuk but / baget",
-      "reason": "Same-day coverage regression for chicken_thigh: 5 -> 3",
-      "new_observed_skus": 3,
-      "retained_skus": 5,
-      "collected_at": [
-        "2026-10-05T03:00:21.353805+03:00",
-        "2026-10-05T03:00:21.353817+03:00",
-        "2026-10-05T03:00:21.353820+03:00",
-        "2026-10-05T03:00:21.353823+03:00",
-        "2026-10-05T03:00:21.353825+03:00"
-      ]
-    },
-    {
-      "type_id": "tomato",
-      "label": "Domates",
-      "reason": "Same-day coverage regression for tomato: 7 -> 5",
-      "new_observed_skus": 5,
-      "retained_skus": 7,
-      "collected_at": [
-        "2026-10-05T03:02:26.421354+03:00",
-        "2026-10-05T03:02:26.421367+03:00",
-        "2026-10-05T03:02:26.421371+03:00",
-        "2026-10-05T03:02:26.421373+03:00",
-        "2026-10-05T03:02:26.421375+03:00",
-        "2026-10-05T03:02:26.421377+03:00",
-        "2026-10-05T03:02:26.421380+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1611
+  }
 }
