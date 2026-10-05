@@ -4333,27 +4333,57 @@
   },
   {
     "date": "2026-10-05",
-    "rows": 1617,
-    "source_updated_today": 0,
-    "source_within_3_days": 1617,
+    "rows": 1611,
+    "source_updated_today": 1594,
+    "source_within_3_days": 1611,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2080,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2069,
+    "depot_source_updated_today": 2046,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1290,
-    "auditable_skus": 1617,
+    "single_source_skus": 1293,
+    "auditable_skus": 1611,
     "source_age_days": {
-      "1": 1617
+      "0": 1594,
+      "1": 17
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-10-04",
-    "matched_slots": 1615,
-    "missing_slots": 2,
-    "new_slots": 2,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1593,
+    "missing_slots": 24,
+    "new_slots": 18,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1PEK",
+        "title": "Ülker Kakaolu Kremalı Bisküvi 244 Gr",
+        "change_pct": 33.34
+      },
+      {
+        "slot_id": "id:0R29",
+        "title": "Namet Kangal Sucuk 200 Gr",
+        "change_pct": 33.33
+      },
+      {
+        "slot_id": "id:1GYO",
+        "title": "Moliendo Breakfast Blend Filtre Kahve 250 Gr",
+        "change_pct": 33.33
+      },
+      {
+        "slot_id": "id:1OKN",
+        "title": "Davidoff Rich Aroma Filtre Kahve 250 Gr",
+        "change_pct": 33.33
+      },
+      {
+        "slot_id": "id:2NHS",
+        "title": "Jacobs Monarch Filtre Kahve 250 Gr",
+        "change_pct": 33.33
+      },
+      {
+        "slot_id": "id:1FID",
+        "title": "Kavun 1 Kg",
+        "change_pct": 20.1
+      }
+    ],
+    "warnings": []
   }
 ]
