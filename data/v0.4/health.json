@@ -4388,27 +4388,136 @@
   },
   {
     "date": "2026-10-06",
-    "rows": 1614,
-    "source_updated_today": 0,
-    "source_within_3_days": 1614,
+    "rows": 1613,
+    "source_updated_today": 1613,
+    "source_within_3_days": 1613,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2073,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2062,
+    "depot_source_updated_today": 2062,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1294,
-    "auditable_skus": 1614,
+    "single_source_skus": 1301,
+    "auditable_skus": 1613,
     "source_age_days": {
-      "1": 1614
+      "0": 1613
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-10-05",
-    "matched_slots": 1605,
-    "missing_slots": 6,
-    "new_slots": 9,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1588,
+    "missing_slots": 23,
+    "new_slots": 25,
+    "large_price_moves": [
+      {
+        "slot_id": "id:08W1",
+        "title": "D-Shine Yetişkin Orta Diş Fırçası 2 Adet",
+        "change_pct": 87.5
+      },
+      {
+        "slot_id": "id:1SJT",
+        "title": "Torku Vakumlu Sucuk 225 Gr",
+        "change_pct": 70.68
+      },
+      {
+        "slot_id": "id:1L60",
+        "title": "Elidor Şampuan Çeşitleri 400 Ml",
+        "change_pct": -50.23
+      },
+      {
+        "slot_id": "id:02JP",
+        "title": "Limon Taze 1 Kg",
+        "change_pct": 50.06
+      },
+      {
+        "slot_id": "id:1PPI",
+        "title": "Servet Şekerleme Sade Tahin Helvası 200 Gr",
+        "change_pct": -40.83
+      },
+      {
+        "slot_id": "id:0PVW",
+        "title": "Mor Soğan 1 Kg",
+        "change_pct": 40.08
+      },
+      {
+        "slot_id": "id:1EOA",
+        "title": "Çekirdeksiz Üzüm 1 Kg",
+        "change_pct": 40.0
+      },
+      {
+        "slot_id": "id:1O1J",
+        "title": "Yumoş Extra Çamaşır Yumuşatıcısı 1.44 Lt",
+        "change_pct": 36.53
+      },
+      {
+        "slot_id": "id:1O4A",
+        "title": "Clear Şampuan 350 Ml",
+        "change_pct": -33.84
+      },
+      {
+        "slot_id": "id:1NAZ",
+        "title": "Blendax Şampuan 500 Ml",
+        "change_pct": 32.95
+      },
+      {
+        "slot_id": "id:0577",
+        "title": "Saban Köftelik Bulgur 1 Kg",
+        "change_pct": 31.03
+      },
+      {
+        "slot_id": "id:06Y3",
+        "title": "Saban Pilavlık Bulgur 1 Kg",
+        "change_pct": 31.03
+      },
+      {
+        "slot_id": "id:04HR",
+        "title": "Sarımsak 1 Kg",
+        "change_pct": 30.87
+      },
+      {
+        "slot_id": "id:1J33",
+        "title": "Ozmo Fun Figürlü Sütlü Çikolata 23 Gr",
+        "change_pct": 28.95
+      },
+      {
+        "slot_id": "id:0NMW",
+        "title": "Migros Limon Kokulu Sıvı Bulaşık Deterjanı 4 Lt",
+        "change_pct": 27.96
+      },
+      {
+        "slot_id": "id:1J28",
+        "title": "Atıştırmalık Domates 1 Kg",
+        "change_pct": 25.64
+      },
+      {
+        "slot_id": "id:1ODU",
+        "title": "Head & Shoulders Şampuan 330 Ml",
+        "change_pct": 25.13
+      },
+      {
+        "slot_id": "id:056A",
+        "title": "Taze Bütün Poşet Piliç 1 Kg",
+        "change_pct": 23.85
+      },
+      {
+        "slot_id": "id:1IYP",
+        "title": "Master Potato Original Patates Cipsi 160 Gr",
+        "change_pct": 22.47
+      },
+      {
+        "slot_id": "id:016N",
+        "title": "Senfoni Sıvı Bulaşık Deterjanı 4 Lt",
+        "change_pct": -21.38
+      },
+      {
+        "slot_id": "id:0395",
+        "title": "Emin Dana Sote 400 Gr",
+        "change_pct": 20.4
+      },
+      {
+        "slot_id": "id:134Z",
+        "title": "Yeşil Biber 1 Kg",
+        "change_pct": 20.2
+      }
+    ],
+    "warnings": []
   }
 ]
