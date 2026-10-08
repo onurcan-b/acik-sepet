@@ -4313,7 +4313,7 @@ date,type_id,label,group,index,coverage,skus,baseline_skus,baseline_date
 2026-10-08,meatballs,Köfte,meat,102.1312,1.0,10,13,2026-09-05
 2026-10-08,tuna,Ton balığı,fish,100.8757,1.0,17,15,2026-09-05
 2026-10-08,sardine,Konserve sardalya,fish,,0.0,0,0,
-2026-10-08,smoked_salmon,Somon füme,fish,120.4253,0.5,2,2,2026-09-05
+2026-10-08,smoked_salmon,Somon füme,fish,120.4253,0.75,3,2,2026-09-05
 2026-10-08,salmon,Somon fileto,fish,119.7839,1.0,3,3,2026-09-05
 2026-10-08,frozen_fish,Dondurulmuş balık,fish,100.0,1.0,8,6,2026-09-05
 2026-10-08,fish_fingers,Balık parmak,fish,,0.0,0,0,

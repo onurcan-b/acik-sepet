@@ -1,10 +1,10 @@
 {
   "date": "2026-10-08",
-  "checked_at": "2026-10-08T15:13:31.279871+03:00",
+  "checked_at": "2026-10-08T22:26:59.882392+03:00",
   "status": "published_with_retained_types",
   "errors": [],
-  "source_updated_today": 1603,
-  "observed_skus": 1617,
+  "source_updated_today": 1604,
+  "observed_skus": 1618,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -32,7 +32,7 @@
     "meatballs": 10,
     "tuna": 17,
     "sardine": 0,
-    "smoked_salmon": 2,
+    "smoked_salmon": 3,
     "salmon": 3,
     "frozen_fish": 8,
     "fish_fingers": 0,
@@ -178,5 +178,5 @@
       ]
     }
   ],
-  "published_skus": 1622
+  "published_skus": 1623
 }

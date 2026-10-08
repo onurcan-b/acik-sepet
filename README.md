@@ -19,7 +19,7 @@ Turuncu boş noktalar kısmi kapsamı; çizgideki boşluklar yayımlanamayan gü
 |---:|---:|---:|---:|---:|
 | **103.96** | +0.17% | +1.01% | +3.51% | +3.96% |
 
-**%81** kategori ağırlığı · **82 tip / 1455 SKU** başlığa katkı · **1622 SKU** toplandı.
+**%81** kategori ağırlığı · **82 tip / 1455 SKU** başlığa katkı · **1623 SKU** toplandı.
 <!-- STATS_END -->
 
 ### Kategorilerde son yedi gün
