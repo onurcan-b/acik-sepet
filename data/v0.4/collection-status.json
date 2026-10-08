@@ -1,17 +1,17 @@
 {
-  "date": "2026-10-07",
-  "checked_at": "2026-10-07T22:31:51.371717+03:00",
-  "status": "published_with_retained_types",
+  "date": "2026-10-08",
+  "checked_at": "2026-10-08T04:11:52.367217+03:00",
+  "status": "published",
   "errors": [],
-  "source_updated_today": 1620,
-  "observed_skus": 1622,
+  "source_updated_today": 0,
+  "observed_skus": 1637,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
     "bread_white": 0,
     "bread_toast": 6,
     "bread_wholewheat": 4,
-    "flour_wheat": 16,
+    "flour_wheat": 19,
     "rice": 20,
     "bulgur": 21,
     "pasta_spaghetti": 8,
@@ -19,12 +19,12 @@
     "vermicelli": 16,
     "oats": 12,
     "breakfast_cereal": 18,
-    "semolina": 9,
+    "semolina": 10,
     "beef_mince": 8,
-    "beef_cubes": 7,
+    "beef_cubes": 8,
     "chicken_breast": 0,
     "chicken_thigh": 3,
-    "whole_chicken": 12,
+    "whole_chicken": 16,
     "turkey": 0,
     "sucuk": 20,
     "salami": 22,
@@ -32,7 +32,7 @@
     "meatballs": 10,
     "tuna": 17,
     "sardine": 0,
-    "smoked_salmon": 1,
+    "smoked_salmon": 2,
     "salmon": 3,
     "frozen_fish": 8,
     "fish_fingers": 0,
@@ -86,7 +86,7 @@
     "green_beans": 1,
     "sugar": 22,
     "honey": 13,
-    "jam": 18,
+    "jam": 23,
     "chocolate": 21,
     "biscuits": 22,
     "wafer": 22,
@@ -138,30 +138,5 @@
     "paper_towel": 15,
     "wet_wipes": 8,
     "tissues": 10
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "pear",
-      "label": "Armut",
-      "reason": "Same-day coverage regression for pear: 2 -> 1",
-      "new_observed_skus": 1,
-      "retained_skus": 2,
-      "collected_at": [
-        "2026-10-07T03:48:51.850942+03:00",
-        "2026-10-07T03:48:51.850955+03:00"
-      ]
-    },
-    {
-      "type_id": "carrot",
-      "label": "Havuç",
-      "reason": "Same-day coverage regression for carrot: 2 -> 1",
-      "new_observed_skus": 1,
-      "retained_skus": 2,
-      "collected_at": [
-        "2026-10-07T03:49:13.070841+03:00",
-        "2026-10-07T03:49:13.070854+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1624
+  }
 }
