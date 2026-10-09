@@ -5027,29 +5027,130 @@
   },
   {
     "date": "2026-10-09",
-    "rows": 1638,
-    "source_updated_today": 0,
-    "source_within_3_days": 1638,
+    "rows": 1629,
+    "source_updated_today": 1626,
+    "source_within_3_days": 1629,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2089,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2092,
+    "depot_source_updated_today": 2087,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1316,
-    "auditable_skus": 1638,
+    "single_source_skus": 1294,
+    "auditable_skus": 1629,
     "source_age_days": {
-      "1": 1638
+      "0": 1626,
+      "1": 3
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-10-08",
-    "matched_slots": 1618,
-    "missing_slots": 5,
-    "new_slots": 20,
+    "matched_slots": 1574,
+    "missing_slots": 49,
+    "new_slots": 55,
     "large_price_moves": [
+      {
+        "slot_id": "id:0F9A",
+        "title": "Parex Mega Comfort Oluklu Sünger 2 Adet",
+        "change_pct": -41.66
+      },
+      {
+        "slot_id": "id:1ZGN",
+        "title": "Parex Klasik Yeşil Düz Sünger 5 Adet",
+        "change_pct": -38.45
+      },
+      {
+        "slot_id": "id:1JE6",
+        "title": "Dardanel Kinoalı Ton Balığı Aç Ye 160 Gr",
+        "change_pct": -35.84
+      },
+      {
+        "slot_id": "id:0GJW",
+        "title": "Parex Güçlü Çöp Torbası Battal 10 Adet",
+        "change_pct": -34.99
+      },
+      {
+        "slot_id": "id:09LV",
+        "title": "Parex Büzgülü Çöp Torbası Orta Boy Limon Kokulu 15 Adet",
+        "change_pct": -34.78
+      },
+      {
+        "slot_id": "id:0HDH",
+        "title": "Taşköprü Sarımsak 1 Kg",
+        "change_pct": 33.34
+      },
+      {
+        "slot_id": "id:1NEP",
+        "title": "Macromax Rengarenk Mikrofiber Bez 4 Adet",
+        "change_pct": -33.34
+      },
       {
         "slot_id": "id:1HJF",
         "title": "Pol's Gurme Serisi Yerli Susam Tahin Helvası 300 Gr",
         "change_pct": 31.26
+      },
+      {
+        "slot_id": "id:1I5Z",
+        "title": "Fruko Gazoz 2.5 Lt",
+        "change_pct": -30.92
+      },
+      {
+        "slot_id": "id:1IZ1",
+        "title": "Dardanel Füme Ton Balığı 2x140 Gr",
+        "change_pct": -30.24
+      },
+      {
+        "slot_id": "id:0YCP",
+        "title": "Milka Sütlü Çikolata 80 Gr",
+        "change_pct": -28.88
+      },
+      {
+        "slot_id": "id:002E",
+        "title": "Emin %20 Yağlı Dana Kıyma 400 Gr",
+        "change_pct": -27.88
+      },
+      {
+        "slot_id": "id:016N",
+        "title": "Senfoni Sıvı Bulaşık Deterjanı 4 Lt",
+        "change_pct": 27.2
+      },
+      {
+        "slot_id": "id:081N",
+        "title": "Güldal Ultra Çamaşır Suyu 1.25 Lt",
+        "change_pct": 25.96
+      },
+      {
+        "slot_id": "id:04HR",
+        "title": "Sarımsak 1 Kg",
+        "change_pct": -25.64
+      },
+      {
+        "slot_id": "id:2AFN",
+        "title": "Head&Shoulders Şampuan 330 Ml",
+        "change_pct": 25.13
+      },
+      {
+        "slot_id": "id:1QJA",
+        "title": "Tamek Haşlanmış Nohut 800 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:0YXX",
+        "title": "Domestos Yüzey Temizleyici Okyanus 1.5 Lt",
+        "change_pct": -23.31
+      },
+      {
+        "slot_id": "id:217T",
+        "title": "Domestos Bahar Çiçekleri Yüzey Temizleyici 1.5 Lt",
+        "change_pct": -23.31
+      },
+      {
+        "slot_id": "id:0N0H",
+        "title": "Çatal Sucuk İlikli Dana Kangal Sucuk 450 Gr",
+        "change_pct": -21.11
+      },
+      {
+        "slot_id": "id:1M20",
+        "title": "Dana Fermente Mangal Sucuk 400 Gr",
+        "change_pct": -21.11
       },
       {
         "slot_id": "id:0EG7",
@@ -5057,8 +5158,6 @@
         "change_pct": -21.07
       }
     ],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "warnings": []
   }
 ]
