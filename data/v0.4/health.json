@@ -5024,5 +5024,41 @@
       }
     ],
     "warnings": []
+  },
+  {
+    "date": "2026-10-09",
+    "rows": 1638,
+    "source_updated_today": 0,
+    "source_within_3_days": 1638,
+    "source_date_unknown": 0,
+    "source_date_future": 0,
+    "depot_observations": 2089,
+    "depot_source_updated_today": 0,
+    "depot_source_date_unknown": 0,
+    "single_source_skus": 1316,
+    "auditable_skus": 1638,
+    "source_age_days": {
+      "1": 1638
+    },
+    "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
+    "previous_date": "2026-10-08",
+    "matched_slots": 1618,
+    "missing_slots": 5,
+    "new_slots": 20,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1HJF",
+        "title": "Pol's Gurme Serisi Yerli Susam Tahin Helvası 300 Gr",
+        "change_pct": 31.26
+      },
+      {
+        "slot_id": "id:0EG7",
+        "title": "Pol's Gurme Antep Fıstıklı Tahin Helvası 300 Gr",
+        "change_pct": -21.07
+      }
+    ],
+    "warnings": [
+      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
+    ]
   }
 ]
