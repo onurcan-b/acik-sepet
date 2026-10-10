@@ -5162,27 +5162,152 @@
   },
   {
     "date": "2026-10-10",
-    "rows": 1628,
-    "source_updated_today": 0,
-    "source_within_3_days": 1628,
+    "rows": 1621,
+    "source_updated_today": 1616,
+    "source_within_3_days": 1621,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2091,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2072,
+    "depot_source_updated_today": 2066,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1293,
-    "auditable_skus": 1628,
+    "single_source_skus": 1296,
+    "auditable_skus": 1621,
     "source_age_days": {
-      "1": 1628
+      "0": 1616,
+      "1": 5
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-10-09",
-    "matched_slots": 1628,
-    "missing_slots": 1,
-    "new_slots": 0,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1610,
+    "missing_slots": 19,
+    "new_slots": 11,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1L60",
+        "title": "Elidor Şampuan Çeşitleri 400 Ml",
+        "change_pct": 100.92
+      },
+      {
+        "slot_id": "id:19HL",
+        "title": "Nesquik Çikolatalı Mısır Gevreği 1 Kg",
+        "change_pct": 66.57
+      },
+      {
+        "slot_id": "id:1O4A",
+        "title": "Clear Şampuan 350 Ml",
+        "change_pct": 51.14
+      },
+      {
+        "slot_id": "id:1UHP",
+        "title": "Rexona Kadın Deodorant 150 Ml",
+        "change_pct": -50.17
+      },
+      {
+        "slot_id": "id:0YEX",
+        "title": "Bioblas Şampuan 360 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:1NF1",
+        "title": "Nivea Kadın Deodorant Çeşitleri 150 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:1TXW",
+        "title": "Elidor Onarıcı Şampuan 400 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:13F4",
+        "title": "Dove Güzellik Katı Sabun 90 Gr",
+        "change_pct": 45.87
+      },
+      {
+        "slot_id": "id:12RV",
+        "title": "Axe Cherry Spritz Erkek Sprey Deodorant 150 Ml",
+        "change_pct": 37.51
+      },
+      {
+        "slot_id": "id:1VC6",
+        "title": "Balmy Kabak Lifli Sabun Amber Wood & White Musk 125 Gr",
+        "change_pct": -37.32
+      },
+      {
+        "slot_id": "id:0ARX",
+        "title": "Balmy Çilek Limon Esanslı Katı Sabun 110 Gr",
+        "change_pct": -33.34
+      },
+      {
+        "slot_id": "id:0X6U",
+        "title": "Sırma Doğal Maden Suyu 6x200 Ml",
+        "change_pct": -32.64
+      },
+      {
+        "slot_id": "id:1ISZ",
+        "title": "Emotion Deodorant 150 Ml",
+        "change_pct": -30.01
+      },
+      {
+        "slot_id": "id:1SVD",
+        "title": "Blade Deodorant 150 Ml",
+        "change_pct": -30.01
+      },
+      {
+        "slot_id": "id:0ESF",
+        "title": "Sade Organik Domates Salçası 650 Gr",
+        "change_pct": -30.0
+      },
+      {
+        "slot_id": "id:20AX",
+        "title": "Fairy Platinum Bulaşık Makinesi Tableti 50 Adet",
+        "change_pct": -28.62
+      },
+      {
+        "slot_id": "id:01PZ",
+        "title": "Domestos Çamaşır Suyu 1.25 Lt",
+        "change_pct": -25.75
+      },
+      {
+        "slot_id": "id:1ZG8",
+        "title": "Dalan D'Olive Zeytinyağlı Besleyici Sıvı Sabun 400 Ml",
+        "change_pct": -25.02
+      },
+      {
+        "slot_id": "id:0XHH",
+        "title": "Nuh'un Ankara Vitaminli Spagetti Makarna 500 Gr",
+        "change_pct": 23.73
+      },
+      {
+        "slot_id": "id:0ZVZ",
+        "title": "Nuh'un Ankara Vitaminli Arpa Şehriye Makarna 500 Gr",
+        "change_pct": 23.73
+      },
+      {
+        "slot_id": "id:1WZN",
+        "title": "Doğuş Tiryaki Siyah Çay 1 Kg",
+        "change_pct": -21.11
+      },
+      {
+        "slot_id": "id:21DO",
+        "title": "Axe Erkek Deodorant 150 Ml",
+        "change_pct": -20.71
+      },
+      {
+        "slot_id": "id:0149",
+        "title": "File Sarımsak 200 Gr",
+        "change_pct": -20.2
+      },
+      {
+        "slot_id": "id:033E",
+        "title": "Komili Natürel Sızma Zeytinyağı 1 Lt",
+        "change_pct": 20.07
+      },
+      {
+        "slot_id": "id:0VIU",
+        "title": "Sebamed Clear Face Kompakt Sabun 100 Gr",
+        "change_pct": -20.0
+      }
+    ],
+    "warnings": []
   }
 ]
