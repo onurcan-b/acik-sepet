@@ -1,9 +1,9 @@
 {
-  "date": "2026-10-09",
-  "checked_at": "2026-10-09T22:00:06.117591+03:00",
-  "status": "published_with_retained_types",
+  "date": "2026-10-10",
+  "checked_at": "2026-10-10T04:05:02.619373+03:00",
+  "status": "published",
   "errors": [],
-  "source_updated_today": 1626,
+  "source_updated_today": 0,
   "observed_skus": 1628,
   "recovered_types": [],
   "recovery": [],
@@ -138,20 +138,5 @@
     "paper_towel": 19,
     "wet_wipes": 7,
     "tissues": 11
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "lemon",
-      "label": "Limon",
-      "reason": "Same-day coverage regression for lemon: 3 -> 2",
-      "new_observed_skus": 2,
-      "retained_skus": 3,
-      "collected_at": [
-        "2026-10-09T04:18:06.704640+03:00",
-        "2026-10-09T04:18:06.704651+03:00",
-        "2026-10-09T04:18:06.704655+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1629
+  }
 }
