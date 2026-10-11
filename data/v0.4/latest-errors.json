@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-10",
-  "checked_at": "2026-10-10T21:01:59.685700+03:00",
-  "status": "published_with_retained_types",
+  "date": "2026-10-11",
+  "checked_at": "2026-10-11T03:24:35.712312+03:00",
+  "status": "published",
   "errors": [],
-  "source_updated_today": 1616,
-  "observed_skus": 1620,
+  "source_updated_today": 0,
+  "observed_skus": 1624,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -25,7 +25,7 @@
     "chicken_breast": 0,
     "chicken_thigh": 3,
     "whole_chicken": 14,
-    "turkey": 0,
+    "turkey": 1,
     "sucuk": 20,
     "salami": 22,
     "sausage": 23,
@@ -33,7 +33,7 @@
     "tuna": 17,
     "sardine": 0,
     "smoked_salmon": 2,
-    "salmon": 3,
+    "salmon": 4,
     "frozen_fish": 8,
     "fish_fingers": 0,
     "milk": 20,
@@ -67,7 +67,7 @@
     "strawberry": 0,
     "kiwi": 0,
     "avocado": 2,
-    "tomato": 8,
+    "tomato": 10,
     "cherry_tomato": 0,
     "cucumber": 3,
     "pepper": 9,
@@ -138,22 +138,5 @@
     "paper_towel": 19,
     "wet_wipes": 7,
     "tissues": 11
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "bread_wholewheat",
-      "label": "Tam buğday ekmeği",
-      "reason": "Same-day coverage regression for bread_wholewheat: 5 -> 4",
-      "new_observed_skus": 4,
-      "retained_skus": 5,
-      "collected_at": [
-        "2026-10-10T03:56:31.570993+03:00",
-        "2026-10-10T03:56:31.571005+03:00",
-        "2026-10-10T03:56:31.571008+03:00",
-        "2026-10-10T03:56:31.571010+03:00",
-        "2026-10-10T03:56:31.571012+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1621
+  }
 }
