@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-11",
-  "checked_at": "2026-10-11T21:16:31.452644+03:00",
+  "date": "2026-10-12",
+  "checked_at": "2026-10-12T03:45:27.678372+03:00",
   "status": "published",
   "errors": [],
-  "source_updated_today": 1624,
-  "observed_skus": 1624,
+  "source_updated_today": 0,
+  "observed_skus": 1625,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -23,7 +23,7 @@
     "beef_mince": 6,
     "beef_cubes": 7,
     "chicken_breast": 0,
-    "chicken_thigh": 3,
+    "chicken_thigh": 4,
     "whole_chicken": 14,
     "turkey": 1,
     "sucuk": 20,
@@ -138,7 +138,5 @@
     "paper_towel": 19,
     "wet_wipes": 7,
     "tissues": 11
-  },
-  "retained_same_day_types": [],
-  "published_skus": 1624
+  }
 }
