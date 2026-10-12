@@ -5351,27 +5351,146 @@
   },
   {
     "date": "2026-10-12",
-    "rows": 1625,
-    "source_updated_today": 0,
-    "source_within_3_days": 1625,
+    "rows": 1615,
+    "source_updated_today": 1615,
+    "source_within_3_days": 1615,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2082,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2073,
+    "depot_source_updated_today": 2073,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1300,
-    "auditable_skus": 1625,
+    "single_source_skus": 1286,
+    "auditable_skus": 1615,
     "source_age_days": {
-      "1": 1625
+      "0": 1615
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-10-11",
-    "matched_slots": 1624,
-    "missing_slots": 0,
-    "new_slots": 1,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1605,
+    "missing_slots": 19,
+    "new_slots": 10,
+    "large_price_moves": [
+      {
+        "slot_id": "id:0YEX",
+        "title": "Bioblas Şampuan 360 Ml",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:1TXW",
+        "title": "Elidor Onarıcı Şampuan 400 Ml",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:039I",
+        "title": "Duru Okyanus Tazeliği Sıvı Sabun 1.5 Lt",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:0C4H",
+        "title": "Activex Hassas Sıvı Sabun 1.5 Lt",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:0FNZ",
+        "title": "Hacı Şakir Kalıp Sabun Leylak 4x150 Gr",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:0H73",
+        "title": "Activex Aktif Antibakteriyel Sıvı Sabun 500 Ml",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:1RYB",
+        "title": "Hacı Şakir Elegan Güzellik Sabunu 4x70 Gr",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:1V49",
+        "title": "Duru Avokado Yağı Sıvı Sabun 1.5 Lt",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:1WE4",
+        "title": "Dalan Botanica Frezya Sıvı Sabun 500 Ml",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:1ZCR",
+        "title": "Duru Zeytinyağlı Sıvı Sabun 1.5 Lt",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:20SL",
+        "title": "Dalan Antik Zeytinyağlı Argan Yağlı Banyo Sabunu 600 Gr",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:0UDI",
+        "title": "Protex Cream Sıvı Sabun 300 Ml",
+        "change_pct": 42.85
+      },
+      {
+        "slot_id": "id:3W9R",
+        "title": "Üzüm 1 Kg",
+        "change_pct": 37.88
+      },
+      {
+        "slot_id": "id:1YFX",
+        "title": "Uni Baby Çamaşır Yumuşatıcı 1.5 Lt",
+        "change_pct": -32.66
+      },
+      {
+        "slot_id": "id:1LQL",
+        "title": "Hesaplı Sabah Paket Margarin 250 Gr",
+        "change_pct": -32.1
+      },
+      {
+        "slot_id": "id:1NNP",
+        "title": "Veg & Bones Brokoli Çorbası 190 Gr",
+        "change_pct": -29.05
+      },
+      {
+        "slot_id": "id:0149",
+        "title": "File Sarımsak 200 Gr",
+        "change_pct": 25.32
+      },
+      {
+        "slot_id": "id:1SOX",
+        "title": "Polonez Fıstıklı Salam 90 Gr",
+        "change_pct": -24.46
+      },
+      {
+        "slot_id": "id:0IQ3",
+        "title": "Becel Zeytinyağlı Kase Margarin 500 Gr",
+        "change_pct": -23.92
+      },
+      {
+        "slot_id": "id:22W5",
+        "title": "Nesfit Kırmızı Meyveli Mısır Gevreği 400 Gr",
+        "change_pct": 22.23
+      },
+      {
+        "slot_id": "id:1POY",
+        "title": "Koroplast Trend Çöp Torbası Orta Boy 10 Adet",
+        "change_pct": -20.7
+      },
+      {
+        "slot_id": "id:1NNM",
+        "title": "Becel Tereyağı Keyfi Kase Margarin 500 Gr",
+        "change_pct": -20.23
+      },
+      {
+        "slot_id": "id:0ASX",
+        "title": "Carrefour Ton Balığı 160 Gr",
+        "change_pct": 20.1
+      },
+      {
+        "slot_id": "id:2AEB",
+        "title": "Becel Kase Margarin 250 Gr",
+        "change_pct": -20.04
+      }
+    ],
+    "warnings": []
   }
 ]
