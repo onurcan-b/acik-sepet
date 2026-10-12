@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-12",
-  "checked_at": "2026-10-12T16:23:10.433402+03:00",
+  "date": "2026-10-13",
+  "checked_at": "2026-10-13T00:55:15.001946+03:00",
   "status": "published",
   "errors": [],
-  "source_updated_today": 1615,
-  "observed_skus": 1615,
+  "source_updated_today": 0,
+  "observed_skus": 1618,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -67,7 +67,7 @@
     "strawberry": 0,
     "kiwi": 0,
     "avocado": 2,
-    "tomato": 7,
+    "tomato": 8,
     "cherry_tomato": 0,
     "cucumber": 3,
     "pepper": 9,
@@ -91,7 +91,7 @@
     "biscuits": 21,
     "wafer": 20,
     "chips": 18,
-    "nuts": 12,
+    "nuts": 14,
     "icecream": 19,
     "halva": 16,
     "spread": 24,
@@ -138,7 +138,5 @@
     "paper_towel": 19,
     "wet_wipes": 7,
     "tissues": 11
-  },
-  "retained_same_day_types": [],
-  "published_skus": 1615
+  }
 }
