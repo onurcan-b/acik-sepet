@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-13",
-  "checked_at": "2026-10-13T23:02:21.999482+03:00",
-  "status": "published_with_retained_types",
+  "date": "2026-10-14",
+  "checked_at": "2026-10-14T03:29:11.611300+03:00",
+  "status": "published",
   "errors": [],
-  "source_updated_today": 1599,
-  "observed_skus": 1612,
+  "source_updated_today": 0,
+  "observed_skus": 1622,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -23,7 +23,7 @@
     "beef_mince": 6,
     "beef_cubes": 6,
     "chicken_breast": 0,
-    "chicken_thigh": 3,
+    "chicken_thigh": 4,
     "whole_chicken": 14,
     "turkey": 1,
     "sucuk": 21,
@@ -48,7 +48,7 @@
     "cream_cheese": 13,
     "mozzarella": 6,
     "eggs": 19,
-    "cream": 14,
+    "cream": 18,
     "sunflower_oil": 21,
     "olive_oil": 15,
     "butter": 18,
@@ -59,7 +59,7 @@
     "orange": 1,
     "mandarin": 0,
     "lemon": 2,
-    "pear": 1,
+    "pear": 2,
     "peach": 1,
     "grape": 4,
     "watermelon": 3,
@@ -134,46 +134,9 @@
     "toothpaste": 23,
     "toothbrush": 20,
     "deodorant": 20,
-    "toilet_paper": 18,
+    "toilet_paper": 22,
     "paper_towel": 19,
     "wet_wipes": 6,
     "tissues": 11
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "cleaning_cloth",
-      "label": "Temizlik bezi",
-      "reason": "Same-day coverage regression for cleaning_cloth: 9 -> 7",
-      "new_observed_skus": 7,
-      "retained_skus": 9,
-      "collected_at": [
-        "2026-10-13T00:53:23.404010+03:00",
-        "2026-10-13T00:53:23.404023+03:00",
-        "2026-10-13T00:53:23.404025+03:00",
-        "2026-10-13T00:53:23.404026+03:00",
-        "2026-10-13T00:53:23.404028+03:00",
-        "2026-10-13T00:53:23.404029+03:00",
-        "2026-10-13T00:53:23.404030+03:00",
-        "2026-10-13T00:53:23.404031+03:00",
-        "2026-10-13T00:53:23.404032+03:00"
-      ]
-    },
-    {
-      "type_id": "wet_wipes",
-      "label": "Islak mendil",
-      "reason": "Same-day coverage regression for wet_wipes: 7 -> 6",
-      "new_observed_skus": 6,
-      "retained_skus": 7,
-      "collected_at": [
-        "2026-10-13T00:54:15.911492+03:00",
-        "2026-10-13T00:54:15.911505+03:00",
-        "2026-10-13T00:54:15.911507+03:00",
-        "2026-10-13T00:54:15.911508+03:00",
-        "2026-10-13T00:54:15.911509+03:00",
-        "2026-10-13T00:54:15.911511+03:00",
-        "2026-10-13T00:54:15.911512+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1615
+  }
 }
