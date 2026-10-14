@@ -5590,27 +5590,81 @@
   },
   {
     "date": "2026-10-14",
-    "rows": 1622,
-    "source_updated_today": 0,
-    "source_within_3_days": 1622,
+    "rows": 1619,
+    "source_updated_today": 1619,
+    "source_within_3_days": 1619,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2065,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2075,
+    "depot_source_updated_today": 2075,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1304,
-    "auditable_skus": 1622,
+    "single_source_skus": 1295,
+    "auditable_skus": 1619,
     "source_age_days": {
-      "1": 1622
+      "0": 1619
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-10-13",
-    "matched_slots": 1612,
-    "missing_slots": 3,
-    "new_slots": 10,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1586,
+    "missing_slots": 29,
+    "new_slots": 33,
+    "large_price_moves": [
+      {
+        "slot_id": "id:05MI",
+        "title": "Kırmızı Biber 1 Kg",
+        "change_pct": 40.04
+      },
+      {
+        "slot_id": "id:1K8K",
+        "title": "Ülker Caramio Sütlü Çikolata 32 Gr",
+        "change_pct": 37.84
+      },
+      {
+        "slot_id": "id:0G47",
+        "title": "Carrefour Yağlı Süt 1 Lt",
+        "change_pct": 33.34
+      },
+      {
+        "slot_id": "id:0KFH",
+        "title": "Sensodyne Komple Koruma Diş Macunu 75 Ml",
+        "change_pct": 32.67
+      },
+      {
+        "slot_id": "id:1ISV",
+        "title": "Domates Pembe 1 Kg",
+        "change_pct": 29.12
+      },
+      {
+        "slot_id": "id:0CQ0",
+        "title": "Tarım Kredi Un 2 Kg",
+        "change_pct": 28.99
+      },
+      {
+        "slot_id": "id:10UR",
+        "title": "Bolmix Çilek Reçeli 1.8 Kg",
+        "change_pct": 22.73
+      },
+      {
+        "slot_id": "id:1NXI",
+        "title": "Monster Energy Enerji İçeceği 500 Ml",
+        "change_pct": -21.02
+      },
+      {
+        "slot_id": "id:1OMF",
+        "title": "Domates 1 Kg",
+        "change_pct": 20.41
+      },
+      {
+        "slot_id": "id:1Y3H",
+        "title": "Ülker Çıtır Kadayıflı Antep Fıstıklı Sütlü Çikolata 35 Gr",
+        "change_pct": -20.1
+      },
+      {
+        "slot_id": "id:034L",
+        "title": "Kahvaltılık Domates 1 Kg",
+        "change_pct": 20.01
+      }
+    ],
+    "warnings": []
   }
 ]
