@@ -5774,27 +5774,192 @@
   },
   {
     "date": "2026-10-16",
-    "rows": 1634,
-    "source_updated_today": 0,
-    "source_within_3_days": 1634,
+    "rows": 1625,
+    "source_updated_today": 1598,
+    "source_within_3_days": 1625,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2097,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2073,
+    "depot_source_updated_today": 2043,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1311,
-    "auditable_skus": 1634,
+    "single_source_skus": 1301,
+    "auditable_skus": 1625,
     "source_age_days": {
-      "1": 1634
+      "0": 1598,
+      "1": 27
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-10-15",
-    "matched_slots": 1622,
-    "missing_slots": 1,
-    "new_slots": 12,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1590,
+    "missing_slots": 33,
+    "new_slots": 35,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1WRN",
+        "title": "Erikli Su 6 Lt",
+        "change_pct": 65.13
+      },
+      {
+        "slot_id": "id:1NEP",
+        "title": "Macromax Rengarenk Mikrofiber Bez 4 Adet",
+        "change_pct": 50.01
+      },
+      {
+        "slot_id": "id:01EP",
+        "title": "Ülker Gurme Kaymaklı Tereyağlı Kase Margarin 500 Gr",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:0V4P",
+        "title": "Damla Su 6 Lt",
+        "change_pct": -49.79
+      },
+      {
+        "slot_id": "id:0FF3",
+        "title": "Yudum Egemden Sızma Zeytinyağı Yumuşak Lezzet 2 Lt",
+        "change_pct": -40.11
+      },
+      {
+        "slot_id": "id:0GDD",
+        "title": "Söke Tam Buğday Unu 1 Kg",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:0R1U",
+        "title": "Söke Organik Un 1 Kg",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:0T7O",
+        "title": "Söke Baklavalık Ve Böreklik Un 2 Kg",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:0Y3L",
+        "title": "Söke Un 1 Kg",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:056A",
+        "title": "Taze Bütün Poşet Piliç 1 Kg",
+        "change_pct": -34.07
+      },
+      {
+        "slot_id": "id:1WT5",
+        "title": "Vernel Gülün Büyüsü Çamaşır Yumuşatıcısı 3 Lt",
+        "change_pct": -32.11
+      },
+      {
+        "slot_id": "id:00FM",
+        "title": "Domestos Çam Ferahlığı Yüzey Temizleyici 1.5 Lt",
+        "change_pct": 30.4
+      },
+      {
+        "slot_id": "id:0YXX",
+        "title": "Domestos Yüzey Temizleyici Okyanus 1.5 Lt",
+        "change_pct": 30.4
+      },
+      {
+        "slot_id": "id:217T",
+        "title": "Domestos Bahar Çiçekleri Yüzey Temizleyici 1.5 Lt",
+        "change_pct": 30.4
+      },
+      {
+        "slot_id": "id:0ZQG",
+        "title": "Polonez Acılı Sucuk 240 Gr",
+        "change_pct": 30.22
+      },
+      {
+        "slot_id": "id:1K9O",
+        "title": "Tariş Kuzey Ege Sızma Zeytinyağı 1 Lt",
+        "change_pct": -30.0
+      },
+      {
+        "slot_id": "id:1RYB",
+        "title": "Hacı Şakir Elegan Güzellik Sabunu 4x70 Gr",
+        "change_pct": -30.0
+      },
+      {
+        "slot_id": "id:1ZC5",
+        "title": "Yudum Egemden Riviera Zeytinyağı 2 Lt",
+        "change_pct": -30.0
+      },
+      {
+        "slot_id": "id:20AJ",
+        "title": "Ülker Caramio Karamel Dolgulu Sütlü Çikolata 32 Gr",
+        "change_pct": -29.63
+      },
+      {
+        "slot_id": "id:04HR",
+        "title": "Sarımsak 1 Kg",
+        "change_pct": -28.72
+      },
+      {
+        "slot_id": "id:1EOA",
+        "title": "Çekirdeksiz Üzüm 1 Kg",
+        "change_pct": -28.57
+      },
+      {
+        "slot_id": "id:103P",
+        "title": "Monster Mango Loco Enerji İçeceği 500 Ml",
+        "change_pct": -26.25
+      },
+      {
+        "slot_id": "id:00KP",
+        "title": "Aknaz Krem Peynir 500 Gr",
+        "change_pct": -25.83
+      },
+      {
+        "slot_id": "id:07G3",
+        "title": "Piliç Salam 1 Kg",
+        "change_pct": -25.21
+      },
+      {
+        "slot_id": "id:01P4",
+        "title": "Centro Muzlu Gofret 350 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:11IE",
+        "title": "Heinz Acılı Ketçap 375 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:1SBV",
+        "title": "Macromax Açık Mikrofiber Bez 4 Adet",
+        "change_pct": 22.48
+      },
+      {
+        "slot_id": "id:07HT",
+        "title": "Süsse Petibör Bisküvi 1 Kg",
+        "change_pct": -22.47
+      },
+      {
+        "slot_id": "id:08IT",
+        "title": "Fasulye Taze 1 Kg",
+        "change_pct": 22.25
+      },
+      {
+        "slot_id": "id:05VT",
+        "title": "Işıl Güzellik Katı Sabun 375 Gr",
+        "change_pct": -22.14
+      },
+      {
+        "slot_id": "id:059W",
+        "title": "Işıl Doğal Katı Sabun 800 Gr",
+        "change_pct": -22.02
+      },
+      {
+        "slot_id": "id:0LDS",
+        "title": "Çaykur Rize Turist Siyah Çay 1 Kg",
+        "change_pct": -20.49
+      },
+      {
+        "slot_id": "id:0NZJ",
+        "title": "Bostan Patlıcan 1 Kg",
+        "change_pct": 20.02
+      }
+    ],
+    "warnings": []
   }
 ]
