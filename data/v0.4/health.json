@@ -5961,5 +5961,36 @@
       }
     ],
     "warnings": []
+  },
+  {
+    "date": "2026-10-17",
+    "rows": 1635,
+    "source_updated_today": 0,
+    "source_within_3_days": 1635,
+    "source_date_unknown": 0,
+    "source_date_future": 0,
+    "depot_observations": 2085,
+    "depot_source_updated_today": 0,
+    "depot_source_date_unknown": 0,
+    "single_source_skus": 1309,
+    "auditable_skus": 1635,
+    "source_age_days": {
+      "1": 1635
+    },
+    "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
+    "previous_date": "2026-10-16",
+    "matched_slots": 1618,
+    "missing_slots": 7,
+    "new_slots": 17,
+    "large_price_moves": [
+      {
+        "slot_id": "id:002E",
+        "title": "Emin %20 Yağlı Dana Kıyma 400 Gr",
+        "change_pct": 38.66
+      }
+    ],
+    "warnings": [
+      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
+    ]
   }
 ]

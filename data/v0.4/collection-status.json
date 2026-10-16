@@ -1,16 +1,16 @@
 {
-  "date": "2026-10-16",
-  "checked_at": "2026-10-16T20:37:28.610595+03:00",
-  "status": "published_with_retained_types",
+  "date": "2026-10-17",
+  "checked_at": "2026-10-17T02:48:03.478378+03:00",
+  "status": "published",
   "errors": [],
-  "source_updated_today": 1598,
-  "observed_skus": 1618,
+  "source_updated_today": 0,
+  "observed_skus": 1635,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
     "bread_white": 0,
     "bread_toast": 6,
-    "bread_wholewheat": 4,
+    "bread_wholewheat": 5,
     "flour_wheat": 20,
     "rice": 21,
     "bulgur": 20,
@@ -21,7 +21,7 @@
     "breakfast_cereal": 19,
     "semolina": 11,
     "beef_mince": 6,
-    "beef_cubes": 7,
+    "beef_cubes": 9,
     "chicken_breast": 0,
     "chicken_thigh": 4,
     "whole_chicken": 13,
@@ -44,13 +44,13 @@
     "kefir": 17,
     "white_cheese": 21,
     "kasar": 23,
-    "labneh": 18,
+    "labneh": 22,
     "cream_cheese": 14,
     "mozzarella": 6,
     "eggs": 19,
     "cream": 16,
     "sunflower_oil": 20,
-    "olive_oil": 17,
+    "olive_oil": 22,
     "butter": 19,
     "margarine": 20,
     "corn_oil": 0,
@@ -107,7 +107,7 @@
     "salt": 16,
     "vinegar": 20,
     "black_tea": 22,
-    "turkish_coffee": 18,
+    "turkish_coffee": 23,
     "instant_coffee": 7,
     "filter_coffee": 18,
     "cola": 23,
@@ -138,62 +138,5 @@
     "paper_towel": 19,
     "wet_wipes": 8,
     "tissues": 11
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "beef_mince",
-      "label": "Dana kıyma",
-      "reason": "Same-day coverage regression for beef_mince: 8 -> 6",
-      "new_observed_skus": 6,
-      "retained_skus": 8,
-      "collected_at": [
-        "2026-10-16T02:42:59.372527+03:00",
-        "2026-10-16T02:42:59.372538+03:00",
-        "2026-10-16T02:42:59.372542+03:00",
-        "2026-10-16T02:42:59.372543+03:00",
-        "2026-10-16T02:42:59.372545+03:00",
-        "2026-10-16T02:42:59.372546+03:00",
-        "2026-10-16T02:42:59.372548+03:00",
-        "2026-10-16T02:42:59.372549+03:00"
-      ]
-    },
-    {
-      "type_id": "pear",
-      "label": "Armut",
-      "reason": "Same-day coverage regression for pear: 2 -> 1",
-      "new_observed_skus": 1,
-      "retained_skus": 2,
-      "collected_at": [
-        "2026-10-16T02:45:03.159739+03:00",
-        "2026-10-16T02:45:03.159751+03:00"
-      ]
-    },
-    {
-      "type_id": "halva",
-      "label": "Helva",
-      "reason": "Same-day coverage regression for halva: 17 -> 13",
-      "new_observed_skus": 13,
-      "retained_skus": 17,
-      "collected_at": [
-        "2026-10-16T02:46:34.408983+03:00",
-        "2026-10-16T02:46:34.408994+03:00",
-        "2026-10-16T02:46:34.408996+03:00",
-        "2026-10-16T02:46:34.408998+03:00",
-        "2026-10-16T02:46:34.409000+03:00",
-        "2026-10-16T02:46:34.409001+03:00",
-        "2026-10-16T02:46:34.409003+03:00",
-        "2026-10-16T02:46:34.409004+03:00",
-        "2026-10-16T02:46:34.409006+03:00",
-        "2026-10-16T02:46:34.409007+03:00",
-        "2026-10-16T02:46:34.409009+03:00",
-        "2026-10-16T02:46:34.409010+03:00",
-        "2026-10-16T02:46:34.409012+03:00",
-        "2026-10-16T02:46:34.409013+03:00",
-        "2026-10-16T02:46:34.409015+03:00",
-        "2026-10-16T02:46:34.409016+03:00",
-        "2026-10-16T02:46:34.409018+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1625
+  }
 }
