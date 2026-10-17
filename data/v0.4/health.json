@@ -5964,33 +5964,287 @@
   },
   {
     "date": "2026-10-17",
-    "rows": 1635,
-    "source_updated_today": 0,
-    "source_within_3_days": 1635,
+    "rows": 1596,
+    "source_updated_today": 1532,
+    "source_within_3_days": 1596,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2085,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2046,
+    "depot_source_updated_today": 1977,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1309,
-    "auditable_skus": 1635,
+    "single_source_skus": 1270,
+    "auditable_skus": 1596,
     "source_age_days": {
-      "1": 1635
+      "0": 1532,
+      "1": 64
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-10-16",
-    "matched_slots": 1618,
-    "missing_slots": 7,
-    "new_slots": 17,
+    "matched_slots": 1559,
+    "missing_slots": 66,
+    "new_slots": 37,
     "large_price_moves": [
+      {
+        "slot_id": "id:1UHP",
+        "title": "Rexona Kadın Deodorant 150 Ml",
+        "change_pct": 100.69
+      },
+      {
+        "slot_id": "id:1G1N",
+        "title": "Domestos Ultra Çamaşır Suyu 1.85 Lt",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:1NF1",
+        "title": "Nivea Kadın Deodorant Çeşitleri 150 Ml",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:20SM",
+        "title": "Scotch-Brite Renkli Bez 3 Adet",
+        "change_pct": -70.33
+      },
+      {
+        "slot_id": "id:14LU",
+        "title": "Carrefour Bio Organik Nohut 1 Kg",
+        "change_pct": -55.87
+      },
+      {
+        "slot_id": "id:21D1",
+        "title": "Rexona Deodorant 150 Ml",
+        "change_pct": -50.17
+      },
+      {
+        "slot_id": "id:1J33",
+        "title": "Ozmo Fun Figürlü Sütlü Çikolata 23 Gr",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:1L60",
+        "title": "Elidor Şampuan Çeşitleri 400 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:1TYR",
+        "title": "Blendax Yasemin Şampuan 500 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:07FQ",
+        "title": "Carrefour Bio Organik Dermason Fasulye 1 Kg",
+        "change_pct": -49.99
+      },
+      {
+        "slot_id": "id:1R6R",
+        "title": "Sarson's Malt Sirkesi 250 Ml",
+        "change_pct": -49.98
+      },
+      {
+        "slot_id": "id:17X8",
+        "title": "Parex Güçlü Çöp Torbası Büyük Boy 10 Adet",
+        "change_pct": -49.94
+      },
+      {
+        "slot_id": "id:0LKE",
+        "title": "Jacobs Monarch Filtre Kahve 500 Gr",
+        "change_pct": -49.77
+      },
+      {
+        "slot_id": "id:09R8",
+        "title": "City Farm Organik İrmik 500 Gr",
+        "change_pct": -47.31
+      },
+      {
+        "slot_id": "id:0DPB",
+        "title": "Carrefour Yeşil Düz Bulaşık Süngeri 5 Adet",
+        "change_pct": -47.3
+      },
+      {
+        "slot_id": "id:06ZY",
+        "title": "Monini Sarımsaklı Ve Acı Biberli Zeytinyağı 250 Ml",
+        "change_pct": -44.82
+      },
+      {
+        "slot_id": "id:1S72",
+        "title": "Pınar Tereyağı 1 Kg",
+        "change_pct": 42.92
+      },
+      {
+        "slot_id": "id:1R8U",
+        "title": "Le Petit Marseillais Vanilya Sütü Duş Jeli 400 Ml",
+        "change_pct": -42.85
+      },
+      {
+        "slot_id": "id:0Z49",
+        "title": "Veronelli Arpa Şehriye 500 Gr",
+        "change_pct": -41.12
+      },
+      {
+        "slot_id": "id:1MWL",
+        "title": "Sade Organik Kuru Fasulye 1 Kg",
+        "change_pct": -40.92
+      },
+      {
+        "slot_id": "id:167H",
+        "title": "Difaş Nano Polish Diş Fırçası 1 Adet",
+        "change_pct": -40.23
+      },
+      {
+        "slot_id": "id:0A8S",
+        "title": "Namet Kangal Sucuk Acılı 1 Kg",
+        "change_pct": -40.0
+      },
       {
         "slot_id": "id:002E",
         "title": "Emin %20 Yağlı Dana Kıyma 400 Gr",
         "change_pct": 38.66
+      },
+      {
+        "slot_id": "id:1MKC",
+        "title": "Starbucks Türk Kahvesi Veranda Blend 100 Gr",
+        "change_pct": -37.34
+      },
+      {
+        "slot_id": "id:1T7L",
+        "title": "Superfresh Klasik Ton Balığı 3x75 Gr",
+        "change_pct": -34.72
+      },
+      {
+        "slot_id": "id:1MLB",
+        "title": "Duru Duş Katı Sabun 600 Gr",
+        "change_pct": -33.85
+      },
+      {
+        "slot_id": "id:0WCD",
+        "title": "Duru Pilavlık Bulgur 2 Kg",
+        "change_pct": -32.89
+      },
+      {
+        "slot_id": "id:0Z2A",
+        "title": "Bolmix Reçel Çeşitleri 1 Kg",
+        "change_pct": 31.58
+      },
+      {
+        "slot_id": "id:13F4",
+        "title": "Dove Güzellik Katı Sabun 90 Gr",
+        "change_pct": -31.45
+      },
+      {
+        "slot_id": "id:15TJ",
+        "title": "Reis Osmancık Pirinç 1 Kg",
+        "change_pct": -30.54
+      },
+      {
+        "slot_id": "id:20GM",
+        "title": "St. Dalfour Kayısı Reçeli 284 Gr",
+        "change_pct": -30.54
+      },
+      {
+        "slot_id": "id:0D5Y",
+        "title": "Dalan Sıvı Sabun Zeytin Mucizesi 3 Lt",
+        "change_pct": -29.59
+      },
+      {
+        "slot_id": "id:0940",
+        "title": "Ülker Napoliten Sütlü Çikolata 33 Gr",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1NAZ",
+        "title": "Blendax Şampuan 500 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1O4A",
+        "title": "Clear Şampuan 350 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:21GA",
+        "title": "Barilla Kalem Makarna 500 Gr",
+        "change_pct": -29.01
+      },
+      {
+        "slot_id": "id:1UOH",
+        "title": "Carrefour Eco Planet Tuvalet Kağıdı 32'li",
+        "change_pct": -28.83
+      },
+      {
+        "slot_id": "id:0NK4",
+        "title": "Domestos Kar Beyazı Çamaşır Suyu 1.85 Lt",
+        "change_pct": -27.8
+      },
+      {
+        "slot_id": "id:1WZN",
+        "title": "Doğuş Tiryaki Siyah Çay 1 Kg",
+        "change_pct": 26.76
+      },
+      {
+        "slot_id": "id:04V8",
+        "title": "Carrefour Çilek Reçeli 2 Kg",
+        "change_pct": -26.73
+      },
+      {
+        "slot_id": "id:0ZEB",
+        "title": "Fax Sıvı Sabun 3 Lt",
+        "change_pct": -25.62
+      },
+      {
+        "slot_id": "id:1W39",
+        "title": "Doğuş Karadeniz Siyah Çay 1 Kg",
+        "change_pct": -25.33
+      },
+      {
+        "slot_id": "id:0TN2",
+        "title": "Nescafé 3'ü 1 Arada Sütlü Köpüklü Hazır Kahve 17 Gr",
+        "change_pct": 25.0
+      },
+      {
+        "slot_id": "id:1RGC",
+        "title": "Sana Paket Margarin 250 Gr",
+        "change_pct": 24.6
+      },
+      {
+        "slot_id": "id:20JZ",
+        "title": "Pınar Labne Peyniri 400 Gr",
+        "change_pct": 23.37
+      },
+      {
+        "slot_id": "id:19VH",
+        "title": "Niğde Gazoz 1.5 Lt",
+        "change_pct": 23.04
+      },
+      {
+        "slot_id": "id:0YZH",
+        "title": "Sütaş Beyaz Peynir 700 Gr",
+        "change_pct": 22.83
+      },
+      {
+        "slot_id": "id:1V0F",
+        "title": "Sarıkız Gazoz 6x200 Ml",
+        "change_pct": 22.64
+      },
+      {
+        "slot_id": "id:13QS",
+        "title": "Namet Kangal Sucuk 1 Kg",
+        "change_pct": -22.54
+      },
+      {
+        "slot_id": "id:0J59",
+        "title": "Carrefour Dermason Kuru Fasulye 1 Kg",
+        "change_pct": -22.18
+      },
+      {
+        "slot_id": "id:13WJ",
+        "title": "Biryağ Ayçiçek Yağı Pet 5 Lt",
+        "change_pct": -21.05
+      },
+      {
+        "slot_id": "id:1Y7J",
+        "title": "Blendax Isırgan Otlu Şampuan 500 Ml",
+        "change_pct": -20.63
       }
     ],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "warnings": []
   }
 ]

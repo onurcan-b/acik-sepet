@@ -5463,25 +5463,25 @@ date,type_id,label,group,index,coverage,skus,baseline_skus,baseline_date
 2026-10-17,bread_toast,Tost ekmeği,bread_cereals,104.288,1.0,6,9,2026-09-07
 2026-10-17,bread_wholewheat,Tam buğday ekmeği,bread_cereals,,0.8,4,6,2026-09-05
 2026-10-17,flour_wheat,Buğday unu,bread_cereals,97.1128,1.0,20,22,2026-09-07
-2026-10-17,rice,Pirinç,bread_cereals,109.0136,1.0,21,21,2026-09-05
-2026-10-17,bulgur,Bulgur,bread_cereals,111.3993,1.0,20,23,2026-09-05
+2026-10-17,rice,Pirinç,bread_cereals,106.943,0.9048,19,21,2026-09-05
+2026-10-17,bulgur,Bulgur,bread_cereals,109.2001,1.0,20,23,2026-09-05
 2026-10-17,pasta_spaghetti,Spagetti makarna,bread_cereals,,0.6667,4,10,2026-09-05
-2026-10-17,pasta_other,Diğer makarna,bread_cereals,111.4492,1.0,24,24,2026-09-05
-2026-10-17,vermicelli,Şehriye,bread_cereals,101.0594,1.0,16,18,2026-09-05
+2026-10-17,pasta_other,Diğer makarna,bread_cereals,108.7051,0.9583,23,24,2026-09-05
+2026-10-17,vermicelli,Şehriye,bread_cereals,98.7264,1.0,16,18,2026-09-05
 2026-10-17,oats,Yulaf ezmesi,bread_cereals,104.2116,1.0,13,14,2026-09-05
 2026-10-17,breakfast_cereal,Kahvaltılık gevrek,bread_cereals,109.7629,1.0,19,24,2026-09-05
-2026-10-17,semolina,İrmik,bread_cereals,108.3012,1.0,11,13,2026-09-05
-2026-10-17,beef_mince,Dana kıyma,meat,106.3335,0.75,6,7,2026-09-05
+2026-10-17,semolina,İrmik,bread_cereals,102.1724,1.0,11,13,2026-09-05
+2026-10-17,beef_mince,Dana kıyma,meat,104.6835,0.625,5,7,2026-09-05
 2026-10-17,beef_cubes,Dana kuşbaşı / sote,meat,112.1457,1.0,5,8,2026-09-05
 2026-10-17,chicken_breast,Tavuk göğüs,meat,,0.0,0,0,
 2026-10-17,chicken_thigh,Tavuk but / baget,meat,,0.8,4,5,2026-09-07
-2026-10-17,whole_chicken,Bütün piliç,meat,99.0456,1.0,13,13,2026-09-05
+2026-10-17,whole_chicken,Bütün piliç,meat,99.0456,0.8462,11,13,2026-09-05
 2026-10-17,turkey,Hindi eti,meat,,0.2,1,5,2026-09-05
-2026-10-17,sucuk,Sucuk,meat,108.7463,1.0,21,24,2026-09-05
-2026-10-17,salami,Salam,meat,102.3874,1.0,21,21,2026-09-05
-2026-10-17,sausage,Sosis,meat,101.4892,1.0,21,22,2026-09-05
-2026-10-17,meatballs,Köfte,meat,102.1312,1.0,11,13,2026-09-05
-2026-10-17,tuna,Ton balığı,fish,100.5204,1.0,17,15,2026-09-05
+2026-10-17,sucuk,Sucuk,meat,104.8497,1.0,21,24,2026-09-05
+2026-10-17,salami,Salam,meat,102.8636,0.9524,20,21,2026-09-05
+2026-10-17,sausage,Sosis,meat,101.6847,1.0,21,22,2026-09-05
+2026-10-17,meatballs,Köfte,meat,102.1312,0.9091,10,13,2026-09-05
+2026-10-17,tuna,Ton balığı,fish,96.8973,1.0,17,15,2026-09-05
 2026-10-17,sardine,Konserve sardalya,fish,,0.0,0,0,
 2026-10-17,smoked_salmon,Somon füme,fish,120.4253,1.0,3,2,2026-09-05
 2026-10-17,salmon,Somon fileto,fish,119.7839,1.0,3,3,2026-09-05
@@ -5489,21 +5489,21 @@ date,type_id,label,group,index,coverage,skus,baseline_skus,baseline_date
 2026-10-17,fish_fingers,Balık parmak,fish,,0.0,0,0,
 2026-10-17,milk,İçme sütü,dairy_eggs,100.7617,1.0,17,22,2026-09-05
 2026-10-17,milk_lactosefree,Laktozsuz süt,dairy_eggs,97.8441,1.0,13,15,2026-09-05
-2026-10-17,yogurt,Yoğurt,dairy_eggs,100.8724,1.0,17,19,2026-09-05
-2026-10-17,strained_yogurt,Süzme yoğurt,dairy_eggs,99.8055,1.0,10,10,2026-09-05
-2026-10-17,ayran,Ayran,dairy_eggs,101.729,1.0,20,22,2026-09-05
+2026-10-17,yogurt,Yoğurt,dairy_eggs,101.1618,0.8824,15,19,2026-09-05
+2026-10-17,strained_yogurt,Süzme yoğurt,dairy_eggs,99.8055,0.9,9,10,2026-09-05
+2026-10-17,ayran,Ayran,dairy_eggs,101.729,0.95,19,22,2026-09-05
 2026-10-17,kefir,Kefir,dairy_eggs,99.9766,1.0,17,19,2026-09-05
-2026-10-17,white_cheese,Beyaz peynir,dairy_eggs,99.2087,1.0,21,23,2026-09-05
-2026-10-17,kasar,Kaşar peyniri,dairy_eggs,101.7836,1.0,23,22,2026-09-05
-2026-10-17,labneh,Labne,dairy_eggs,101.0137,1.0,18,20,2026-09-05
-2026-10-17,cream_cheese,Krem peynir,dairy_eggs,103.1931,1.0,14,13,2026-09-05
+2026-10-17,white_cheese,Beyaz peynir,dairy_eggs,100.1849,1.0,21,23,2026-09-05
+2026-10-17,kasar,Kaşar peyniri,dairy_eggs,102.6372,1.0,23,22,2026-09-05
+2026-10-17,labneh,Labne,dairy_eggs,102.3086,1.0,18,20,2026-09-05
+2026-10-17,cream_cheese,Krem peynir,dairy_eggs,103.1931,0.9286,13,13,2026-09-05
 2026-10-17,mozzarella,Mozzarella,dairy_eggs,103.8792,1.0,6,6,2026-09-05
-2026-10-17,eggs,Yumurta,dairy_eggs,104.2702,1.0,19,18,2026-09-05
-2026-10-17,cream,Krema,dairy_eggs,99.6394,1.0,16,20,2026-09-05
-2026-10-17,sunflower_oil,Ayçiçek yağı,oils_fats,101.5306,1.0,20,21,2026-09-05
-2026-10-17,olive_oil,Zeytinyağı,oils_fats,90.2613,1.0,17,21,2026-09-05
-2026-10-17,butter,Tereyağı,oils_fats,98.371,1.0,19,20,2026-09-05
-2026-10-17,margarine,Margarin,oils_fats,90.7464,1.0,20,21,2026-09-05
+2026-10-17,eggs,Yumurta,dairy_eggs,104.2702,0.9474,18,18,2026-09-05
+2026-10-17,cream,Krema,dairy_eggs,99.6394,0.9375,15,20,2026-09-05
+2026-10-17,sunflower_oil,Ayçiçek yağı,oils_fats,100.7722,1.0,20,21,2026-09-05
+2026-10-17,olive_oil,Zeytinyağı,oils_fats,86.2006,0.9412,16,21,2026-09-05
+2026-10-17,butter,Tereyağı,oils_fats,100.3421,0.9474,18,20,2026-09-05
+2026-10-17,margarine,Margarin,oils_fats,91.9746,1.0,20,21,2026-09-05
 2026-10-17,corn_oil,Mısırözü yağı,oils_fats,,0.0,0,0,
 2026-10-17,banana,Muz,fruit,117.6488,1.0,2,2,2026-09-05
 2026-10-17,apple,Elma,fruit,86.2911,1.0,4,5,2026-09-05
@@ -5521,71 +5521,71 @@ date,type_id,label,group,index,coverage,skus,baseline_skus,baseline_date
 2026-10-17,tomato,Domates,vegetables,148.9755,1.0,8,9,2026-09-05
 2026-10-17,cherry_tomato,Cherry domates,vegetables,,0.0,0,0,
 2026-10-17,cucumber,Salatalık,vegetables,136.6113,1.0,2,3,2026-09-05
-2026-10-17,pepper,Biber,vegetables,131.0141,1.0,9,8,2026-09-05
+2026-10-17,pepper,Biber,vegetables,131.0141,0.8889,8,8,2026-09-05
 2026-10-17,potato,Patates,vegetables,97.8485,1.0,3,4,2026-09-05
 2026-10-17,onion,Kuru soğan,vegetables,98.527,1.0,5,6,2026-09-05
 2026-10-17,garlic,Sarımsak,vegetables,103.7736,1.0,2,4,2026-09-05
 2026-10-17,eggplant,Patlıcan,vegetables,135.7329,1.0,3,3,2026-09-05
-2026-10-17,zucchini,Kabak,vegetables,105.4142,1.0,3,3,2026-09-05
+2026-10-17,zucchini,Kabak,vegetables,110.2156,1.0,3,3,2026-09-05
 2026-10-17,carrot,Havuç,vegetables,,0.5,1,2,2026-09-05
 2026-10-17,lettuce,Marul,vegetables,,0.0,0,0,
 2026-10-17,spinach,Ispanak,vegetables,,0.0,0,0,
 2026-10-17,parsley,Maydanoz,vegetables,,0.5,1,2,2026-09-05
 2026-10-17,broccoli,Brokoli,vegetables,,0.0,0,0,
 2026-10-17,cauliflower,Karnabahar,vegetables,,0.0,0,0,
-2026-10-17,mushroom,Kültür mantarı,vegetables,101.2838,1.0,6,5,2026-09-05
+2026-10-17,mushroom,Kültür mantarı,vegetables,98.9244,0.8333,5,5,2026-09-05
 2026-10-17,green_beans,Taze fasulye,vegetables,,0.0,0,1,
-2026-10-17,sugar,Toz şeker,sugar_snacks,99.3006,1.0,20,21,2026-09-05
-2026-10-17,honey,Bal,sugar_snacks,100.6927,1.0,11,12,2026-09-05
-2026-10-17,jam,Reçel,sugar_snacks,102.2132,1.0,25,24,2026-09-05
-2026-10-17,chocolate,Çikolata,sugar_snacks,102.7869,1.0,23,24,2026-09-05
-2026-10-17,biscuits,Bisküvi,sugar_snacks,105.0396,1.0,21,21,2026-09-05
+2026-10-17,sugar,Toz şeker,sugar_snacks,99.7916,1.0,20,21,2026-09-05
+2026-10-17,honey,Bal,sugar_snacks,99.7495,1.0,11,12,2026-09-05
+2026-10-17,jam,Reçel,sugar_snacks,101.0486,1.0,25,24,2026-09-05
+2026-10-17,chocolate,Çikolata,sugar_snacks,98.0422,0.9565,22,24,2026-09-05
+2026-10-17,biscuits,Bisküvi,sugar_snacks,105.1261,1.0,21,21,2026-09-05
 2026-10-17,wafer,Gofret,sugar_snacks,107.7523,1.0,22,21,2026-09-05
-2026-10-17,chips,Patates cipsi,sugar_snacks,100.6614,1.0,22,22,2026-09-05
+2026-10-17,chips,Patates cipsi,sugar_snacks,99.3314,0.8636,19,22,2026-09-05
 2026-10-17,nuts,Kuruyemiş,sugar_snacks,96.9889,1.0,14,15,2026-09-05
 2026-10-17,icecream,Dondurma,sugar_snacks,100.0,1.0,19,20,2026-09-07
-2026-10-17,halva,Helva,sugar_snacks,96.4122,0.7647,13,16,2026-09-05
-2026-10-17,spread,Kakaolu fındık kreması,sugar_snacks,99.3824,1.0,24,21,2026-09-05
-2026-10-17,candy,Şekerleme,sugar_snacks,98.3327,1.0,16,15,2026-09-05
-2026-10-17,tomato_paste,Salça,other_food,101.0985,1.0,24,25,2026-09-05
-2026-10-17,lentils,Mercimek,other_food,102.5736,1.0,21,22,2026-09-05
-2026-10-17,beans,Kuru fasulye,other_food,110.7591,1.0,23,24,2026-09-05
-2026-10-17,chickpeas,Nohut,other_food,98.4525,1.0,22,19,2026-09-05
+2026-10-17,halva,Helva,sugar_snacks,96.4122,0.7059,12,16,2026-09-05
+2026-10-17,spread,Kakaolu fındık kreması,sugar_snacks,99.4641,0.875,21,21,2026-09-05
+2026-10-17,candy,Şekerleme,sugar_snacks,98.5413,1.0,16,15,2026-09-05
+2026-10-17,tomato_paste,Salça,other_food,100.7834,0.9583,23,25,2026-09-05
+2026-10-17,lentils,Mercimek,other_food,102.5736,0.9524,20,22,2026-09-05
+2026-10-17,beans,Kuru fasulye,other_food,102.2991,0.8696,20,24,2026-09-05
+2026-10-17,chickpeas,Nohut,other_food,94.475,0.9545,21,19,2026-09-05
 2026-10-17,canned_veg,Konserve sebze,other_food,,0.4,2,5,2026-09-05
-2026-10-17,soup,Hazır çorba,other_food,99.7217,1.0,19,21,2026-09-05
-2026-10-17,ketchup,Ketçap,other_food,100.6814,1.0,23,21,2026-09-05
-2026-10-17,mayonnaise,Mayonez,other_food,93.0611,1.0,22,22,2026-09-05
+2026-10-17,soup,Hazır çorba,other_food,101.281,0.8421,16,21,2026-09-05
+2026-10-17,ketchup,Ketçap,other_food,99.3334,1.0,23,21,2026-09-05
+2026-10-17,mayonnaise,Mayonez,other_food,92.3211,1.0,22,22,2026-09-05
 2026-10-17,salt,Tuz,other_food,94.9549,1.0,16,16,2026-09-05
-2026-10-17,vinegar,Sirke,other_food,87.9517,1.0,20,19,2026-09-05
-2026-10-17,black_tea,Siyah çay,drinks,107.7066,1.0,22,22,2026-09-05
-2026-10-17,turkish_coffee,Türk kahvesi,drinks,103.5197,1.0,18,20,2026-09-05
-2026-10-17,instant_coffee,Çözünebilir kahve,drinks,100.2425,1.0,7,7,2026-09-05
-2026-10-17,filter_coffee,Filtre kahve,drinks,108.6776,1.0,18,17,2026-09-05
-2026-10-17,cola,Kola,drinks,108.6863,1.0,23,20,2026-09-05
+2026-10-17,vinegar,Sirke,other_food,85.4516,1.0,20,19,2026-09-05
+2026-10-17,black_tea,Siyah çay,drinks,107.4249,0.9545,21,22,2026-09-05
+2026-10-17,turkish_coffee,Türk kahvesi,drinks,100.7117,0.9444,17,20,2026-09-05
+2026-10-17,instant_coffee,Çözünebilir kahve,drinks,103.4895,1.0,7,7,2026-09-05
+2026-10-17,filter_coffee,Filtre kahve,drinks,102.4378,0.8333,15,17,2026-09-05
+2026-10-17,cola,Kola,drinks,108.6863,0.8261,19,20,2026-09-05
 2026-10-17,fruit_juice,Meyve suyu,drinks,,0.0,0,0,
-2026-10-17,iced_tea,Soğuk çay,drinks,101.3619,1.0,19,16,2026-09-05
-2026-10-17,mineral_water,Maden suyu,drinks,99.1437,1.0,19,19,2026-09-05
-2026-10-17,water,İçme suyu,drinks,102.1648,1.0,23,20,2026-09-05
+2026-10-17,iced_tea,Soğuk çay,drinks,101.3619,0.7368,14,16,2026-09-05
+2026-10-17,mineral_water,Maden suyu,drinks,99.1437,0.8947,17,19,2026-09-05
+2026-10-17,water,İçme suyu,drinks,101.4609,0.9565,22,20,2026-09-05
 2026-10-17,energy_drink,Enerji içeceği,drinks,91.8526,1.0,18,21,2026-09-05
-2026-10-17,soda,Gazoz,drinks,95.4736,1.0,20,17,2026-09-05
-2026-10-17,dish_liquid,Elde bulaşık deterjanı,household_cleaning,97.6225,1.0,15,18,2026-09-05
-2026-10-17,dishwasher_tabs,Bulaşık makinesi tableti,household_cleaning,94.6983,1.0,11,10,2026-09-05
+2026-10-17,soda,Gazoz,drinks,97.4579,1.0,20,17,2026-09-05
+2026-10-17,dish_liquid,Elde bulaşık deterjanı,household_cleaning,97.6225,0.9333,14,18,2026-09-05
+2026-10-17,dishwasher_tabs,Bulaşık makinesi tableti,household_cleaning,94.6868,1.0,11,10,2026-09-05
 2026-10-17,laundry_powder,Toz çamaşır deterjanı,household_cleaning,,0.0,0,2,
 2026-10-17,laundry_liquid,Sıvı çamaşır deterjanı,household_cleaning,108.4532,1.0,20,23,2026-09-05
 2026-10-17,softener,Yumuşatıcı,household_cleaning,92.3462,1.0,9,11,2026-09-05
-2026-10-17,bleach,Çamaşır suyu,household_cleaning,101.4096,1.0,20,18,2026-09-05
-2026-10-17,surface_cleaner,Yüzey temizleyici,household_cleaning,99.0462,1.0,21,20,2026-09-05
-2026-10-17,garbage_bags,Çöp torbası,household_cleaning,100.386,1.0,21,23,2026-09-05
-2026-10-17,sponge,Bulaşık süngeri,household_cleaning,92.7625,1.0,17,18,2026-09-05
-2026-10-17,cleaning_cloth,Temizlik bezi,household_cleaning,138.128,1.0,7,9,2026-09-05
-2026-10-17,shampoo,Şampuan,personal_paper,113.7595,1.0,21,21,2026-09-05
-2026-10-17,shower_gel,Duş jeli,personal_paper,109.5578,1.0,25,28,2026-09-05
-2026-10-17,soap_liquid,Sıvı sabun,personal_paper,121.0853,1.0,21,20,2026-09-05
-2026-10-17,soap_bar,Kalıp sabun,personal_paper,95.6034,1.0,19,22,2026-09-05
+2026-10-17,bleach,Çamaşır suyu,household_cleaning,102.6978,1.0,20,18,2026-09-05
+2026-10-17,surface_cleaner,Yüzey temizleyici,household_cleaning,99.0462,0.9048,19,20,2026-09-05
+2026-10-17,garbage_bags,Çöp torbası,household_cleaning,96.9726,0.9524,20,23,2026-09-05
+2026-10-17,sponge,Bulaşık süngeri,household_cleaning,89.3324,1.0,17,18,2026-09-05
+2026-10-17,cleaning_cloth,Temizlik bezi,household_cleaning,116.1197,1.0,7,9,2026-09-05
+2026-10-17,shampoo,Şampuan,personal_paper,101.9073,1.0,21,21,2026-09-05
+2026-10-17,shower_gel,Duş jeli,personal_paper,106.2968,1.0,25,28,2026-09-05
+2026-10-17,soap_liquid,Sıvı sabun,personal_paper,117.2319,0.9524,20,20,2026-09-05
+2026-10-17,soap_bar,Kalıp sabun,personal_paper,91.7062,1.0,19,22,2026-09-05
 2026-10-17,toothpaste,Diş macunu,personal_paper,107.6103,1.0,23,21,2026-09-05
-2026-10-17,toothbrush,Diş fırçası,personal_paper,109.5724,1.0,22,24,2026-09-05
-2026-10-17,deodorant,Deodorant,personal_paper,87.0252,1.0,20,22,2026-09-05
-2026-10-17,toilet_paper,Tuvalet kağıdı,personal_paper,109.7821,1.0,22,21,2026-09-05
+2026-10-17,toothbrush,Diş fırçası,personal_paper,107.0387,1.0,22,24,2026-09-05
+2026-10-17,deodorant,Deodorant,personal_paper,90.3372,0.95,19,22,2026-09-05
+2026-10-17,toilet_paper,Tuvalet kağıdı,personal_paper,108.0978,1.0,22,21,2026-09-05
 2026-10-17,paper_towel,Kağıt havlu,personal_paper,99.2006,1.0,19,20,2026-09-05
 2026-10-17,wet_wipes,Islak mendil,personal_paper,,0.8571,6,8,2026-09-05
 2026-10-17,tissues,Kağıt mendil,personal_paper,92.9997,1.0,11,11,2026-09-05
