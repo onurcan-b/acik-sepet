@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-18",
-  "checked_at": "2026-10-18T19:43:44.625379+03:00",
+  "date": "2026-10-19",
+  "checked_at": "2026-10-19T02:27:13.740812+03:00",
   "status": "published",
   "errors": [],
-  "source_updated_today": 1595,
-  "observed_skus": 1595,
+  "source_updated_today": 0,
+  "observed_skus": 1601,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -20,8 +20,8 @@
     "oats": 13,
     "breakfast_cereal": 16,
     "semolina": 12,
-    "beef_mince": 6,
-    "beef_cubes": 7,
+    "beef_mince": 7,
+    "beef_cubes": 8,
     "chicken_breast": 0,
     "chicken_thigh": 4,
     "whole_chicken": 14,
@@ -85,7 +85,7 @@
     "mushroom": 6,
     "green_beans": 1,
     "sugar": 20,
-    "honey": 11,
+    "honey": 14,
     "jam": 24,
     "chocolate": 22,
     "biscuits": 20,
@@ -93,7 +93,7 @@
     "chips": 19,
     "nuts": 15,
     "icecream": 19,
-    "halva": 13,
+    "halva": 14,
     "spread": 21,
     "candy": 16,
     "tomato_paste": 21,
@@ -138,7 +138,5 @@
     "paper_towel": 19,
     "wet_wipes": 8,
     "tissues": 11
-  },
-  "retained_same_day_types": [],
-  "published_skus": 1595
+  }
 }
