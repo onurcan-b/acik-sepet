@@ -6249,29 +6249,49 @@
   },
   {
     "date": "2026-10-18",
-    "rows": 1583,
-    "source_updated_today": 0,
-    "source_within_3_days": 1583,
+    "rows": 1595,
+    "source_updated_today": 1595,
+    "source_within_3_days": 1595,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2036,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2050,
+    "depot_source_updated_today": 2050,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1255,
-    "auditable_skus": 1583,
+    "single_source_skus": 1266,
+    "auditable_skus": 1595,
     "source_age_days": {
-      "1": 1583
+      "0": 1595
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-10-17",
-    "matched_slots": 1578,
-    "missing_slots": 18,
-    "new_slots": 5,
+    "matched_slots": 1562,
+    "missing_slots": 34,
+    "new_slots": 33,
     "large_price_moves": [
+      {
+        "slot_id": "id:1ZQE",
+        "title": "Polonez Sucuk 240 Gr",
+        "change_pct": -54.02
+      },
       {
         "slot_id": "id:1IL3",
         "title": "Nestlé Gold Flakes Kahvaltılık Gevrek 225 Gr",
         "change_pct": -48.7
+      },
+      {
+        "slot_id": "id:02J6",
+        "title": "Carrefour Gezen Tavuk Yumurta 10 Adet",
+        "change_pct": 33.34
+      },
+      {
+        "slot_id": "id:0GWI",
+        "title": "Carrefour Bio Organik Yumurta 6 Adet",
+        "change_pct": 33.34
+      },
+      {
+        "slot_id": "id:0ZQG",
+        "title": "Polonez Acılı Sucuk 240 Gr",
+        "change_pct": -32.19
       },
       {
         "slot_id": "id:0EEI",
@@ -6279,8 +6299,6 @@
         "change_pct": 25.0
       }
     ],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "warnings": []
   }
 ]
