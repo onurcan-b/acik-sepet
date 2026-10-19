@@ -6303,27 +6303,116 @@
   },
   {
     "date": "2026-10-19",
-    "rows": 1601,
-    "source_updated_today": 0,
-    "source_within_3_days": 1601,
+    "rows": 1591,
+    "source_updated_today": 1591,
+    "source_within_3_days": 1591,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2058,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2034,
+    "depot_source_updated_today": 2034,
     "depot_source_date_unknown": 0,
     "single_source_skus": 1271,
-    "auditable_skus": 1601,
+    "auditable_skus": 1591,
     "source_age_days": {
-      "1": 1601
+      "0": 1591
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-10-18",
-    "matched_slots": 1595,
-    "missing_slots": 0,
-    "new_slots": 6,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1571,
+    "missing_slots": 24,
+    "new_slots": 20,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1J33",
+        "title": "Ozmo Fun Figürlü Sütlü Çikolata 23 Gr",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:0R1U",
+        "title": "Söke Organik Un 1 Kg",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:1VC6",
+        "title": "Balmy Kabak Lifli Sabun Amber Wood & White Musk 125 Gr",
+        "change_pct": 59.54
+      },
+      {
+        "slot_id": "id:1N5T",
+        "title": "Dove Original Cream Bar Katı Sabun 4x90 Gr",
+        "change_pct": 52.51
+      },
+      {
+        "slot_id": "id:025Q",
+        "title": "Uzman Kasap Poşetli Bütün Piliç 1 Kg",
+        "change_pct": 50.03
+      },
+      {
+        "slot_id": "id:03LZ",
+        "title": "Le Petit Marseillais Şeftali Sıvı Sabun 500 Ml",
+        "change_pct": 50.02
+      },
+      {
+        "slot_id": "id:0ARX",
+        "title": "Balmy Çilek Limon Esanslı Katı Sabun 110 Gr",
+        "change_pct": 50.02
+      },
+      {
+        "slot_id": "id:04MF",
+        "title": "Dove Nemlendirici Sıvı Sabun 450 Ml",
+        "change_pct": 50.01
+      },
+      {
+        "slot_id": "id:1K9O",
+        "title": "Tariş Kuzey Ege Sızma Zeytinyağı 1 Lt",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:1ZC5",
+        "title": "Yudum Egemden Riviera Zeytinyağı 2 Lt",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:1WPC",
+        "title": "Kristal Riviera Zeytinyağı 1 Lt",
+        "change_pct": 42.85
+      },
+      {
+        "slot_id": "id:0940",
+        "title": "Ülker Napoliten Sütlü Çikolata 33 Gr",
+        "change_pct": 41.42
+      },
+      {
+        "slot_id": "id:1ZG8",
+        "title": "Dalan D'Olive Zeytinyağlı Besleyici Sıvı Sabun 400 Ml",
+        "change_pct": 33.36
+      },
+      {
+        "slot_id": "id:1QJA",
+        "title": "Tamek Haşlanmış Nohut 800 Gr",
+        "change_pct": 33.34
+      },
+      {
+        "slot_id": "id:0149",
+        "title": "File Sarımsak 200 Gr",
+        "change_pct": 25.32
+      },
+      {
+        "slot_id": "id:0VIU",
+        "title": "Sebamed Clear Face Kompakt Sabun 100 Gr",
+        "change_pct": 25.0
+      },
+      {
+        "slot_id": "id:1Y90",
+        "title": "Duru Saf Doğal Lavanta Kalıp Sabun 600 Gr",
+        "change_pct": 24.04
+      },
+      {
+        "slot_id": "id:14PK",
+        "title": "Bupiliç Poşetli Bütün Piliç 1 Kg",
+        "change_pct": 23.85
+      }
+    ],
+    "warnings": []
   }
 ]
