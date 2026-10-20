@@ -6417,27 +6417,202 @@
   },
   {
     "date": "2026-10-20",
-    "rows": 1595,
-    "source_updated_today": 0,
-    "source_within_3_days": 1595,
+    "rows": 1586,
+    "source_updated_today": 1579,
+    "source_within_3_days": 1586,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2038,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2019,
+    "depot_source_updated_today": 2012,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1275,
-    "auditable_skus": 1595,
+    "single_source_skus": 1273,
+    "auditable_skus": 1586,
     "source_age_days": {
-      "1": 1595
+      "0": 1579,
+      "1": 7
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-10-19",
-    "matched_slots": 1591,
-    "missing_slots": 0,
-    "new_slots": 4,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1560,
+    "missing_slots": 31,
+    "new_slots": 26,
+    "large_price_moves": [
+      {
+        "slot_id": "id:01EP",
+        "title": "Ülker Gurme Kaymaklı Tereyağlı Kase Margarin 500 Gr",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:1L60",
+        "title": "Elidor Şampuan Çeşitleri 400 Ml",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:1TYR",
+        "title": "Blendax Yasemin Şampuan 500 Ml",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:0A8S",
+        "title": "Namet Kangal Sucuk Acılı 1 Kg",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:1T7L",
+        "title": "Superfresh Klasik Ton Balığı 3x75 Gr",
+        "change_pct": 53.18
+      },
+      {
+        "slot_id": "id:056A",
+        "title": "Taze Bütün Poşet Piliç 1 Kg",
+        "change_pct": 51.69
+      },
+      {
+        "slot_id": "id:1MLB",
+        "title": "Duru Duş Katı Sabun 600 Gr",
+        "change_pct": 51.16
+      },
+      {
+        "slot_id": "id:02UC",
+        "title": "Palmolive Body Butter Böğürtlen Duş Jeli 500 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:0O9J",
+        "title": "Palmolive Feel The Massage Duş Jeli 250 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:1RAB",
+        "title": "Duru Lux Perfumes Lotus Çiçeği Duş Jeli 450 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:1RBK",
+        "title": "Le Petit Marseillais Şeftali ve Nektarin Duş Jeli 400 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:1S1Q",
+        "title": "Le Petit Marseillais Akdeniz Çileği Duş Jeli 400 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:1Z8B",
+        "title": "Duru Body Scrub Pink Delight Duş Jeli 450 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:1WT5",
+        "title": "Vernel Gülün Büyüsü Çamaşır Yumuşatıcısı 3 Lt",
+        "change_pct": 47.29
+      },
+      {
+        "slot_id": "id:13F4",
+        "title": "Dove Güzellik Katı Sabun 90 Gr",
+        "change_pct": 45.87
+      },
+      {
+        "slot_id": "id:1NAZ",
+        "title": "Blendax Şampuan 500 Ml",
+        "change_pct": 41.42
+      },
+      {
+        "slot_id": "id:1O4A",
+        "title": "Clear Şampuan 350 Ml",
+        "change_pct": 41.42
+      },
+      {
+        "slot_id": "id:04HR",
+        "title": "Sarımsak 1 Kg",
+        "change_pct": 40.29
+      },
+      {
+        "slot_id": "id:0TF9",
+        "title": "Macromax Mercan Sünger 3 Adet",
+        "change_pct": -36.01
+      },
+      {
+        "slot_id": "id:00KP",
+        "title": "Aknaz Krem Peynir 500 Gr",
+        "change_pct": 34.83
+      },
+      {
+        "slot_id": "id:07G3",
+        "title": "Piliç Salam 1 Kg",
+        "change_pct": 33.71
+      },
+      {
+        "slot_id": "id:1R0P",
+        "title": "Colgate Optik Beyaz Diş Macunu 75 Ml",
+        "change_pct": -33.7
+      },
+      {
+        "slot_id": "id:0IPM",
+        "title": "Carrefour Bio Organik Yumurta 10 Adet",
+        "change_pct": 33.35
+      },
+      {
+        "slot_id": "id:0CPK",
+        "title": "Dove Deeply Nourishing Duş Jeli 450 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1NS9",
+        "title": "Le Petit Marseillais Duş Jeli Vanilya Sütü 650 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1PQO",
+        "title": "Duru Body Scrub Duş Jeli Gold 450 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1QBI",
+        "title": "Duru Body Scrub Crystal Duş Jeli 450 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1ST6",
+        "title": "Duru Fresh Sensation Okyanus Ferahlığı Duş Jeli 450 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1T73",
+        "title": "Le Petit Marseillais Duş Jeli Beyaz Şeftali & Nektarin 650 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1TB2",
+        "title": "Duru Lux Perfumes Orkide Özleri Duş Jeli 450 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1UEY",
+        "title": "Duru Body Scrub Ice Light Duş Jeli 450 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:13QS",
+        "title": "Namet Kangal Sucuk 1 Kg",
+        "change_pct": 29.1
+      },
+      {
+        "slot_id": "id:1ZTZ",
+        "title": "Macromax Extra Güçlü Çöp Torbası Orta Boy 15 Adet",
+        "change_pct": -26.99
+      },
+      {
+        "slot_id": "id:1Y7J",
+        "title": "Blendax Isırgan Otlu Şampuan 500 Ml",
+        "change_pct": 25.99
+      },
+      {
+        "slot_id": "id:0YWG",
+        "title": "Saban Yerli Kırmızı Mercimek 1 Kg",
+        "change_pct": 20.13
+      }
+    ],
+    "warnings": []
   }
 ]
