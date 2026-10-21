@@ -6617,27 +6617,141 @@
   },
   {
     "date": "2026-10-21",
-    "rows": 1584,
-    "source_updated_today": 0,
-    "source_within_3_days": 1584,
+    "rows": 1619,
+    "source_updated_today": 1619,
+    "source_within_3_days": 1619,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2017,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2058,
+    "depot_source_updated_today": 2058,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1271,
-    "auditable_skus": 1584,
+    "single_source_skus": 1308,
+    "auditable_skus": 1619,
     "source_age_days": {
-      "1": 1584
+      "0": 1619
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-10-20",
-    "matched_slots": 1583,
-    "missing_slots": 3,
-    "new_slots": 1,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1552,
+    "missing_slots": 34,
+    "new_slots": 67,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1ZGN",
+        "title": "Parex Klasik Yeşil Düz Sünger 5 Adet",
+        "change_pct": 62.48
+      },
+      {
+        "slot_id": "id:0GJW",
+        "title": "Parex Güçlü Çöp Torbası Battal 10 Adet",
+        "change_pct": 53.83
+      },
+      {
+        "slot_id": "id:0JGT",
+        "title": "Parex Ekstra Dayanıklı Çöp Torbası Battal 7 Adet",
+        "change_pct": 52.99
+      },
+      {
+        "slot_id": "id:0ZLF",
+        "title": "Duru Duş Jeli Deniz Esintisi 450 Ml",
+        "change_pct": 50.63
+      },
+      {
+        "slot_id": "id:0O96",
+        "title": "Süper Maylo Bambu Katkılı Tuvalet Kağıdı 40 Adet",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:1OJK",
+        "title": "Nivea Men Deodorant Fresh Active 75 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:1OTR",
+        "title": "Nivea Deodorant Fresh Natural Kadın 75 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:12R2",
+        "title": "Axe Deodorant Men Black 150 Ml",
+        "change_pct": 41.64
+      },
+      {
+        "slot_id": "id:0NXJ",
+        "title": "Freedo Dolce Mini Badem Dondurma 6x60 Ml",
+        "change_pct": -32.56
+      },
+      {
+        "slot_id": "id:0WHH",
+        "title": "Colgate Gentle Clean Diş Fırçası 2 Adet",
+        "change_pct": -31.43
+      },
+      {
+        "slot_id": "id:1TXJ",
+        "title": "Colgate Diş Macunu 150 Ml",
+        "change_pct": -30.3
+      },
+      {
+        "slot_id": "id:1SJT",
+        "title": "Torku Vakumlu Sucuk 225 Gr",
+        "change_pct": -29.65
+      },
+      {
+        "slot_id": "id:09LV",
+        "title": "Parex Büzgülü Çöp Torbası Orta Boy Limon Kokulu 15 Adet",
+        "change_pct": 28.68
+      },
+      {
+        "slot_id": "id:1NXI",
+        "title": "Monster Energy Enerji İçeceği 500 Ml",
+        "change_pct": 26.62
+      },
+      {
+        "slot_id": "id:1ZOR",
+        "title": "Signal White System Diş Macunu 75 Ml",
+        "change_pct": -26.19
+      },
+      {
+        "slot_id": "id:1Y3H",
+        "title": "Ülker Çıtır Kadayıflı Antep Fıstıklı Sütlü Çikolata 35 Gr",
+        "change_pct": 25.16
+      },
+      {
+        "slot_id": "id:0MO4",
+        "title": "Uzman Kasap Dana Yağsız Kıyma 400 Gr",
+        "change_pct": 25.0
+      },
+      {
+        "slot_id": "id:1O6W",
+        "title": "Domestos Yoğun Çamaşır Suyu 750 Ml",
+        "change_pct": -24.96
+      },
+      {
+        "slot_id": "id:0NK4",
+        "title": "Domestos Kar Beyazı Çamaşır Suyu 1.85 Lt",
+        "change_pct": 22.77
+      },
+      {
+        "slot_id": "id:0MOQ",
+        "title": "Ebru Klasik Kalıp Beyaz Sabun 4x200 Gr",
+        "change_pct": -22.02
+      },
+      {
+        "slot_id": "id:1QT2",
+        "title": "Sek Laktozsuz Pastörize Süt 1 Lt",
+        "change_pct": 21.01
+      },
+      {
+        "slot_id": "id:06E4",
+        "title": "Mantar Tabak 300 Gr",
+        "change_pct": -20.65
+      },
+      {
+        "slot_id": "id:1Y7J",
+        "title": "Blendax Isırgan Otlu Şampuan 500 Ml",
+        "change_pct": -20.63
+      }
+    ],
+    "warnings": []
   }
 ]
