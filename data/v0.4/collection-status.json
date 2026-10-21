@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-20",
-  "checked_at": "2026-10-20T21:09:43.996464+03:00",
-  "status": "published_with_retained_types",
+  "date": "2026-10-21",
+  "checked_at": "2026-10-21T03:05:25.126052+03:00",
+  "status": "published",
   "errors": [],
-  "source_updated_today": 1579,
-  "observed_skus": 1583,
+  "source_updated_today": 0,
+  "observed_skus": 1584,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -47,7 +47,7 @@
     "labneh": 22,
     "cream_cheese": 14,
     "mozzarella": 6,
-    "eggs": 19,
+    "eggs": 20,
     "cream": 18,
     "sunflower_oil": 21,
     "olive_oil": 21,
@@ -138,24 +138,5 @@
     "paper_towel": 17,
     "wet_wipes": 8,
     "tissues": 11
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "beef_cubes",
-      "label": "Dana kuşbaşı / sote",
-      "reason": "Same-day coverage regression for beef_cubes: 7 -> 4",
-      "new_observed_skus": 4,
-      "retained_skus": 7,
-      "collected_at": [
-        "2026-10-20T03:25:33.938010+03:00",
-        "2026-10-20T03:25:33.938022+03:00",
-        "2026-10-20T03:25:33.938024+03:00",
-        "2026-10-20T03:25:33.938026+03:00",
-        "2026-10-20T03:25:33.938028+03:00",
-        "2026-10-20T03:25:33.938029+03:00",
-        "2026-10-20T03:25:33.938030+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1586
+  }
 }
