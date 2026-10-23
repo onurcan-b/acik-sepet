@@ -7110,27 +7110,121 @@
   },
   {
     "date": "2026-10-23",
-    "rows": 1625,
-    "source_updated_today": 0,
-    "source_within_3_days": 1625,
+    "rows": 1617,
+    "source_updated_today": 1617,
+    "source_within_3_days": 1617,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2060,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2067,
+    "depot_source_updated_today": 2067,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1311,
-    "auditable_skus": 1625,
+    "single_source_skus": 1295,
+    "auditable_skus": 1617,
     "source_age_days": {
-      "1": 1625
+      "0": 1617
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-10-22",
-    "matched_slots": 1613,
-    "missing_slots": 0,
-    "new_slots": 12,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1580,
+    "missing_slots": 33,
+    "new_slots": 37,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1TW0",
+        "title": "Reis Royal Beyaz Nohut 500 Gr",
+        "change_pct": -47.37
+      },
+      {
+        "slot_id": "id:1I5Z",
+        "title": "Fruko Gazoz 2.5 Lt",
+        "change_pct": 44.76
+      },
+      {
+        "slot_id": "id:20AJ",
+        "title": "Ülker Caramio Karamel Dolgulu Sütlü Çikolata 32 Gr",
+        "change_pct": 42.11
+      },
+      {
+        "slot_id": "id:1T29",
+        "title": "Knorr Çabuk Çorba Kıtır Kremalı Tavuk 18 Gr",
+        "change_pct": 40.13
+      },
+      {
+        "slot_id": "id:1NEM",
+        "title": "Ace Klasik Çamaşır Suyu 4 Lt",
+        "change_pct": -34.62
+      },
+      {
+        "slot_id": "id:0CYW",
+        "title": "Ispanak 1 Kg",
+        "change_pct": 33.36
+      },
+      {
+        "slot_id": "id:01P4",
+        "title": "Centro Muzlu Gofret 350 Gr",
+        "change_pct": 33.33
+      },
+      {
+        "slot_id": "id:17YO",
+        "title": "Dardanel Ekonomik Ton Balığı 3x140 G",
+        "change_pct": -31.14
+      },
+      {
+        "slot_id": "id:07HT",
+        "title": "Süsse Petibör Bisküvi 1 Kg",
+        "change_pct": 28.99
+      },
+      {
+        "slot_id": "id:04HR",
+        "title": "Sarımsak 1 Kg",
+        "change_pct": -28.72
+      },
+      {
+        "slot_id": "id:14SG",
+        "title": "Hanımefendi Fındık Fıstık ve Sütlü Çikolata 300 Gr",
+        "change_pct": -27.4
+      },
+      {
+        "slot_id": "id:182O",
+        "title": "Kahverengi Yumurta 10 Adet",
+        "change_pct": -27.37
+      },
+      {
+        "slot_id": "id:04OE",
+        "title": "Master Potato Orijinal Cips 160 Gr",
+        "change_pct": 26.12
+      },
+      {
+        "slot_id": "id:1611",
+        "title": "Master Potato Soğanlı Ekşi Kremalı Cips 160 Gr",
+        "change_pct": 26.12
+      },
+      {
+        "slot_id": "id:0CWM",
+        "title": "Erşan Vakumlu Kangal Sucuk 200 Gr",
+        "change_pct": -25.67
+      },
+      {
+        "slot_id": "id:1OAH",
+        "title": "Dondurulmuş Dana Köfte 500 Gr",
+        "change_pct": -25.06
+      },
+      {
+        "slot_id": "id:1J2Q",
+        "title": "Dondurulmuş Piliç Kasap Köfte 1 Kg",
+        "change_pct": -23.92
+      },
+      {
+        "slot_id": "id:124L",
+        "title": "Asperox Temizlik Kokusu Yüzey Temizleyici 2.5 Lt",
+        "change_pct": -23.63
+      },
+      {
+        "slot_id": "id:0QE9",
+        "title": "Organik Yumurta 6 Adet",
+        "change_pct": -21.33
+      }
+    ],
+    "warnings": []
   }
 ]
