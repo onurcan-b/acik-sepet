@@ -2506947,7 +2506947,7 @@
   },
   "latest_attempt": {
     "date": "2026-10-24",
-    "checked_at": "2026-10-24T03:01:36.877951+03:00",
+    "checked_at": "2026-10-24T12:44:59.168962+03:00",
     "status": "published",
     "errors": [],
     "source_updated_today": 0,
@@ -2507085,6 +2507085,8 @@
       "paper_towel": 16,
       "wet_wipes": 9,
       "tissues": 11
-    }
+    },
+    "retained_same_day_types": [],
+    "published_skus": 1623
   }
 }
