@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-23",
-  "checked_at": "2026-10-23T21:02:34.501735+03:00",
+  "date": "2026-10-24",
+  "checked_at": "2026-10-24T03:01:36.877951+03:00",
   "status": "published",
   "errors": [],
-  "source_updated_today": 1617,
-  "observed_skus": 1617,
+  "source_updated_today": 0,
+  "observed_skus": 1623,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -12,7 +12,7 @@
     "bread_toast": 7,
     "bread_wholewheat": 5,
     "flour_wheat": 21,
-    "rice": 18,
+    "rice": 23,
     "bulgur": 21,
     "pasta_spaghetti": 7,
     "pasta_other": 24,
@@ -109,7 +109,7 @@
     "black_tea": 23,
     "turkish_coffee": 20,
     "instant_coffee": 8,
-    "filter_coffee": 18,
+    "filter_coffee": 19,
     "cola": 23,
     "fruit_juice": 0,
     "iced_tea": 17,
@@ -138,7 +138,5 @@
     "paper_towel": 16,
     "wet_wipes": 9,
     "tissues": 11
-  },
-  "retained_same_day_types": [],
-  "published_skus": 1617
+  }
 }
