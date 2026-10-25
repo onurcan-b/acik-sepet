@@ -16,9 +16,9 @@ Turuncu boş noktalar kısmi kapsamı; çizgideki boşluklar yayımlanamayan gü
 <!-- STATS_START -->
 | Endeks | Günlük | 7 gün | 30 gün | Bazdan beri |
 |---:|---:|---:|---:|---:|
-| **102.33** | +0.01% | +0.61% | +1.50% | +2.32% |
+| **101.80** | -0.51% | +0.10% | +0.97% | +1.80% |
 
-**%89** kategori ağırlığı · **97 tip / 1508 SKU** başlığa katkı · **1569 SKU** toplandı.
+**%89** kategori ağırlığı · **97 tip / 1492 SKU** başlığa katkı · **1569 SKU** toplandı.
 <!-- STATS_END -->
 
 ### Kategorilerde son yedi gün

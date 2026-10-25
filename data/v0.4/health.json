@@ -7350,24 +7350,114 @@
   {
     "date": "2026-10-25",
     "rows": 1569,
-    "source_updated_today": 0,
+    "source_updated_today": 1569,
     "source_within_3_days": 1569,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2004,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2011,
+    "depot_source_updated_today": 2011,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1252,
+    "single_source_skus": 1250,
     "auditable_skus": 1569,
     "source_age_days": {
-      "1": 1569
+      "0": 1569
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-10-24",
-    "matched_slots": 1568,
-    "missing_slots": 16,
-    "new_slots": 1,
+    "matched_slots": 1552,
+    "missing_slots": 32,
+    "new_slots": 17,
     "large_price_moves": [
+      {
+        "slot_id": "id:1SJF",
+        "title": "Damla Doğal Kaynak Suyu 5 Lt",
+        "change_pct": 104.11
+      },
+      {
+        "slot_id": "id:0CNK",
+        "title": "Superfresh Zeytinyağlı Ton Balığı 3x75 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:0GQ9",
+        "title": "Arbella İrmik 500 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:0MTF",
+        "title": "Filiz İrmik 500 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:0S63",
+        "title": "Fide Acılı Ton Balığı 320 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:1SYB",
+        "title": "Pastavilla Veggi Glutensiz Makarna 350 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:1TJE",
+        "title": "Dardanel Zeytinyağlı Ton Balığı 225 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:1ZRQ",
+        "title": "Dardanel Zeytinyağlı Ton Balığı 2x140 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:20OS",
+        "title": "Mutlu Tel Şehriye 500 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:211W",
+        "title": "Fide Zeytinyağlı Ton Balığı 3x80 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:0XUK",
+        "title": "Erikli Su 5 Lt",
+        "change_pct": 25.09
+      },
+      {
+        "slot_id": "id:1JE6",
+        "title": "Dardanel Kinoalı Ton Balığı Aç Ye 160 Gr",
+        "change_pct": -22.54
+      },
+      {
+        "slot_id": "id:1NLE",
+        "title": "Nuh'un Ankara Arpa Şehriye 500 Gr",
+        "change_pct": -22.54
+      },
+      {
+        "slot_id": "id:1YZR",
+        "title": "Nuh'un Ankara Spagetti Makarna 500 Gr",
+        "change_pct": -22.54
+      },
+      {
+        "slot_id": "id:1ZG5",
+        "title": "Dardanel Ayçiçekyağlı Ton Balığı 2x140 Gr",
+        "change_pct": -22.54
+      },
+      {
+        "slot_id": "id:20OR",
+        "title": "Pastavilla Tel Şehriye 500 Gr",
+        "change_pct": -22.54
+      },
+      {
+        "slot_id": "id:20PP",
+        "title": "Superfresh Ayçiçek Yağlı Ton Balığı 280 Gr",
+        "change_pct": -22.54
+      },
+      {
+        "slot_id": "id:2166",
+        "title": "Pastavilla Dirsek Makarna 500 Gr",
+        "change_pct": -22.54
+      },
       {
         "slot_id": "id:06VC",
         "title": "Kelly's Mısır Gevreği 500 Gr",
@@ -7377,10 +7467,13 @@
         "slot_id": "id:0SRF",
         "title": "Coca-Cola Şekersiz Kola 2.5 Lt",
         "change_pct": -20.1
+      },
+      {
+        "slot_id": "id:1TAU",
+        "title": "Maylo Mendil 10 Adet",
+        "change_pct": -20.01
       }
     ],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "warnings": []
   }
 ]
