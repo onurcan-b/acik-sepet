@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-25",
-  "checked_at": "2026-10-25T20:13:26.869267+03:00",
+  "date": "2026-10-26",
+  "checked_at": "2026-10-26T02:27:32.600296+03:00",
   "status": "published",
   "errors": [],
-  "source_updated_today": 1569,
-  "observed_skus": 1569,
+  "source_updated_today": 0,
+  "observed_skus": 1575,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -23,7 +23,7 @@
     "beef_mince": 7,
     "beef_cubes": 5,
     "chicken_breast": 0,
-    "chicken_thigh": 0,
+    "chicken_thigh": 1,
     "whole_chicken": 13,
     "turkey": 1,
     "sucuk": 20,
@@ -135,10 +135,8 @@
     "toothbrush": 21,
     "deodorant": 18,
     "toilet_paper": 21,
-    "paper_towel": 16,
+    "paper_towel": 21,
     "wet_wipes": 9,
     "tissues": 11
-  },
-  "retained_same_day_types": [],
-  "published_skus": 1569
+  }
 }
