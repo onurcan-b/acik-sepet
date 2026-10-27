@@ -7547,27 +7547,147 @@
   },
   {
     "date": "2026-10-27",
-    "rows": 1569,
-    "source_updated_today": 0,
-    "source_within_3_days": 1569,
+    "rows": 1555,
+    "source_updated_today": 1548,
+    "source_within_3_days": 1555,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2003,
-    "depot_source_updated_today": 0,
+    "depot_observations": 1983,
+    "depot_source_updated_today": 1976,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1262,
-    "auditable_skus": 1569,
+    "single_source_skus": 1250,
+    "auditable_skus": 1555,
     "source_age_days": {
-      "1": 1569
+      "0": 1548,
+      "1": 7
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-10-26",
-    "matched_slots": 1568,
-    "missing_slots": 0,
-    "new_slots": 1,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1543,
+    "missing_slots": 25,
+    "new_slots": 12,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1C4D",
+        "title": "Siyah Kavun 1 Kg",
+        "change_pct": 160.0
+      },
+      {
+        "slot_id": "id:0YEX",
+        "title": "Bioblas Şampuan 360 Ml",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:1TXW",
+        "title": "Elidor Onarıcı Şampuan 400 Ml",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:1DG2",
+        "title": "Polonez Tütsülenmiş Piliç Jumbo Sosis 320 Gr",
+        "change_pct": 80.13
+      },
+      {
+        "slot_id": "id:0OPV",
+        "title": "Familia Plus Natural Kağıt Havlu 12 Adet",
+        "change_pct": 50.01
+      },
+      {
+        "slot_id": "id:1L60",
+        "title": "Elidor Şampuan Çeşitleri 400 Ml",
+        "change_pct": 46.98
+      },
+      {
+        "slot_id": "id:13F4",
+        "title": "Dove Güzellik Katı Sabun 90 Gr",
+        "change_pct": 45.87
+      },
+      {
+        "slot_id": "id:1ZG5",
+        "title": "Dardanel Ayçiçekyağlı Ton Balığı 2x140 Gr",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:149F",
+        "title": "Dost %20 Yağlı Bitkisel Krema 200 Ml",
+        "change_pct": 38.71
+      },
+      {
+        "slot_id": "id:182O",
+        "title": "Kahverengi Yumurta 10 Adet",
+        "change_pct": 37.68
+      },
+      {
+        "slot_id": "id:1OAH",
+        "title": "Dondurulmuş Dana Köfte 500 Gr",
+        "change_pct": 33.44
+      },
+      {
+        "slot_id": "id:1J2Q",
+        "title": "Dondurulmuş Piliç Kasap Köfte 1 Kg",
+        "change_pct": 31.45
+      },
+      {
+        "slot_id": "id:1MLB",
+        "title": "Duru Duş Katı Sabun 600 Gr",
+        "change_pct": 30.87
+      },
+      {
+        "slot_id": "id:01PK",
+        "title": "Dalan Zeytinyağlı Katı Sabun 900 Gr",
+        "change_pct": 30.25
+      },
+      {
+        "slot_id": "id:0MU4",
+        "title": "Brokoli 1 Kg",
+        "change_pct": -30.02
+      },
+      {
+        "slot_id": "id:0QE9",
+        "title": "Organik Yumurta 6 Adet",
+        "change_pct": 27.12
+      },
+      {
+        "slot_id": "id:0NTX",
+        "title": "Kellogg's Çikolatalı Mısır Gevreği 400 Gr",
+        "change_pct": 26.46
+      },
+      {
+        "slot_id": "id:04HR",
+        "title": "Sarımsak 1 Kg",
+        "change_pct": 25.9
+      },
+      {
+        "slot_id": "id:3W9R",
+        "title": "Üzüm 1 Kg",
+        "change_pct": 25.03
+      },
+      {
+        "slot_id": "id:01P5",
+        "title": "Süsse Finger Bisküvi 450 Gr",
+        "change_pct": 24.29
+      },
+      {
+        "slot_id": "id:0YWG",
+        "title": "Saban Yerli Kırmızı Mercimek 1 Kg",
+        "change_pct": 21.77
+      },
+      {
+        "slot_id": "id:00OV",
+        "title": "Nesfit Kırmızı Meyveli Gevrek 400 Gr",
+        "change_pct": 20.09
+      },
+      {
+        "slot_id": "id:0G6N",
+        "title": "Maydanoz 1 Adet",
+        "change_pct": -20.04
+      },
+      {
+        "slot_id": "id:02JP",
+        "title": "Limon Taze 1 Kg",
+        "change_pct": -20.02
+      }
+    ],
+    "warnings": []
   }
 ]
