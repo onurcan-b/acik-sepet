@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-26",
-  "checked_at": "2026-10-26T22:30:59.813048+03:00",
+  "date": "2026-10-27",
+  "checked_at": "2026-10-27T03:39:11.791736+03:00",
   "status": "published",
   "errors": [],
-  "source_updated_today": 1568,
-  "observed_skus": 1568,
+  "source_updated_today": 0,
+  "observed_skus": 1569,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -57,7 +57,7 @@
     "banana": 2,
     "apple": 5,
     "orange": 2,
-    "mandarin": 0,
+    "mandarin": 1,
     "lemon": 3,
     "pear": 2,
     "peach": 1,
@@ -138,7 +138,5 @@
     "paper_towel": 21,
     "wet_wipes": 9,
     "tissues": 11
-  },
-  "retained_same_day_types": [],
-  "published_skus": 1568
+  }
 }
