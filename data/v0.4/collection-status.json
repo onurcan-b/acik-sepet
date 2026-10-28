@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-27",
-  "checked_at": "2026-10-27T21:52:14.614922+03:00",
-  "status": "published_with_retained_types",
+  "date": "2026-10-28",
+  "checked_at": "2026-10-28T03:41:49.759883+03:00",
+  "status": "published",
   "errors": [],
-  "source_updated_today": 1548,
-  "observed_skus": 1553,
+  "source_updated_today": 0,
+  "observed_skus": 1567,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -23,14 +23,14 @@
     "beef_mince": 5,
     "beef_cubes": 6,
     "chicken_breast": 1,
-    "chicken_thigh": 0,
+    "chicken_thigh": 1,
     "whole_chicken": 12,
     "turkey": 1,
     "sucuk": 20,
     "salami": 23,
     "sausage": 21,
     "meatballs": 10,
-    "tuna": 15,
+    "tuna": 18,
     "sardine": 0,
     "smoked_salmon": 4,
     "salmon": 2,
@@ -130,32 +130,13 @@
     "shampoo": 18,
     "shower_gel": 24,
     "soap_liquid": 18,
-    "soap_bar": 18,
+    "soap_bar": 23,
     "toothpaste": 21,
     "toothbrush": 21,
-    "deodorant": 17,
+    "deodorant": 22,
     "toilet_paper": 22,
     "paper_towel": 20,
     "wet_wipes": 9,
     "tissues": 11
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "beef_mince",
-      "label": "Dana kıyma",
-      "reason": "Same-day coverage regression for beef_mince: 7 -> 5",
-      "new_observed_skus": 5,
-      "retained_skus": 7,
-      "collected_at": [
-        "2026-10-27T03:31:27.910189+03:00",
-        "2026-10-27T03:31:27.910201+03:00",
-        "2026-10-27T03:31:27.910204+03:00",
-        "2026-10-27T03:31:27.910206+03:00",
-        "2026-10-27T03:31:27.910208+03:00",
-        "2026-10-27T03:31:27.910209+03:00",
-        "2026-10-27T03:31:27.910211+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1555
+  }
 }
