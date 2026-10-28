@@ -7692,27 +7692,272 @@
   },
   {
     "date": "2026-10-28",
-    "rows": 1567,
-    "source_updated_today": 0,
-    "source_within_3_days": 1567,
+    "rows": 1621,
+    "source_updated_today": 1612,
+    "source_within_3_days": 1621,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2008,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2076,
+    "depot_source_updated_today": 2066,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1254,
-    "auditable_skus": 1567,
+    "single_source_skus": 1304,
+    "auditable_skus": 1621,
     "source_age_days": {
-      "1": 1567
+      "0": 1612,
+      "1": 9
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-10-27",
-    "matched_slots": 1553,
-    "missing_slots": 2,
-    "new_slots": 14,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1535,
+    "missing_slots": 20,
+    "new_slots": 86,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1ZQE",
+        "title": "Polonez Sucuk 240 Gr",
+        "change_pct": 117.47
+      },
+      {
+        "slot_id": "id:0NZO",
+        "title": "Emotion Romance Deodorant Sprey 150 Ml",
+        "change_pct": 105.88
+      },
+      {
+        "slot_id": "id:1VRZ",
+        "title": "Emotion Ocean Fresh Deodorant 150 Ml",
+        "change_pct": 105.88
+      },
+      {
+        "slot_id": "id:1OJK",
+        "title": "Nivea Men Deodorant Fresh Active 75 Ml",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:1OTR",
+        "title": "Nivea Deodorant Fresh Natural Kadın 75 Ml",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:1SGZ",
+        "title": "Jacobs Monarch Filtre Kahve 250 Gr",
+        "change_pct": 79.35
+      },
+      {
+        "slot_id": "id:0CHX",
+        "title": "Fide Zeytinyağlı Ton Balığı 2x160 Gr",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:0CNK",
+        "title": "Superfresh Zeytinyağlı Ton Balığı 3x75 Gr",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:0GQ9",
+        "title": "Arbella İrmik 500 Gr",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:0MTF",
+        "title": "Filiz İrmik 500 Gr",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:0S63",
+        "title": "Fide Acılı Ton Balığı 320 Gr",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:0TLE",
+        "title": "Kalite Tonla Zeytinyağlı Ton Balığı 2x150 Gr",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:1SYB",
+        "title": "Pastavilla Veggi Glutensiz Makarna 350 Gr",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:20OS",
+        "title": "Mutlu Tel Şehriye 500 Gr",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:211W",
+        "title": "Fide Zeytinyağlı Ton Balığı 3x80 Gr",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:1O00",
+        "title": "Anna's Zencefilli Bisküvi 150 Gr",
+        "change_pct": 50.26
+      },
+      {
+        "slot_id": "id:0NXJ",
+        "title": "Freedo Dolce Mini Badem Dondurma 6x60 Ml",
+        "change_pct": 48.28
+      },
+      {
+        "slot_id": "id:0WHH",
+        "title": "Colgate Gentle Clean Diş Fırçası 2 Adet",
+        "change_pct": 45.83
+      },
+      {
+        "slot_id": "id:0NK4",
+        "title": "Domestos Kar Beyazı Çamaşır Suyu 1.85 Lt",
+        "change_pct": 38.51
+      },
+      {
+        "slot_id": "id:1S72",
+        "title": "Pınar Tereyağı 1 Kg",
+        "change_pct": -36.16
+      },
+      {
+        "slot_id": "id:1ZO1",
+        "title": "President %35 Yağlı Krema 200 Ml",
+        "change_pct": -33.35
+      },
+      {
+        "slot_id": "id:1O6W",
+        "title": "Domestos Yoğun Çamaşır Suyu 750 Ml",
+        "change_pct": 33.27
+      },
+      {
+        "slot_id": "id:1NLE",
+        "title": "Nuh'un Ankara Arpa Şehriye 500 Gr",
+        "change_pct": 29.1
+      },
+      {
+        "slot_id": "id:1TJE",
+        "title": "Dardanel Zeytinyağlı Ton Balığı 225 Gr",
+        "change_pct": 29.1
+      },
+      {
+        "slot_id": "id:1YZR",
+        "title": "Nuh'un Ankara Spagetti Makarna 500 Gr",
+        "change_pct": 29.1
+      },
+      {
+        "slot_id": "id:20PP",
+        "title": "Superfresh Ayçiçek Yağlı Ton Balığı 280 Gr",
+        "change_pct": 29.1
+      },
+      {
+        "slot_id": "id:0MOQ",
+        "title": "Ebru Klasik Kalıp Beyaz Sabun 4x200 Gr",
+        "change_pct": 28.24
+      },
+      {
+        "slot_id": "id:2CZ0",
+        "title": "Reis Kuru Fasulye 1 Kg",
+        "change_pct": 27.61
+      },
+      {
+        "slot_id": "id:025Q",
+        "title": "Uzman Kasap Poşetli Bütün Piliç 1 Kg",
+        "change_pct": -25.94
+      },
+      {
+        "slot_id": "id:0HR7",
+        "title": "Doyum Organik Bulgur Pilavlık 1 Kg",
+        "change_pct": 25.21
+      },
+      {
+        "slot_id": "id:0KFH",
+        "title": "Sensodyne Komple Koruma Diş Macunu 75 Ml",
+        "change_pct": -25.13
+      },
+      {
+        "slot_id": "id:050Z",
+        "title": "Pınar Labne 2x400 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:08JM",
+        "title": "Baltalı Keçi Kaşar Peyniri 300 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:0L0B",
+        "title": "Pınar Labne 750 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:0NGP",
+        "title": "İçim Krem Peynir 300 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:0R29",
+        "title": "Namet Kangal Sucuk 200 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:0Y5C",
+        "title": "Uzman Kasap Dana Kuşbaşı 400 Gr",
+        "change_pct": 25.0
+      },
+      {
+        "slot_id": "id:0ZQG",
+        "title": "Polonez Acılı Sucuk 240 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:0ZWG",
+        "title": "La Vache Qui Rit Krem Peynir 140 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:11BZ",
+        "title": "Président Kaşar Peyniri 600 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:19KX",
+        "title": "Kiri Labne 450 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:1KSH",
+        "title": "Pınar Labne 540 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:1LUQ",
+        "title": "Bahçıvan Suda Mozzarella 125 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:1RRI",
+        "title": "Pınar Labne 8x20 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:1T1K",
+        "title": "Kiri Labne Tam Yağlı Taze Peynir 300 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:1T6H",
+        "title": "Baltalı %100 Keçi Labneh 200 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:1Z93",
+        "title": "Ekici Krem Peynir 400 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:1ZE1",
+        "title": "President Mozzarella Peyniri 600 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:0P95",
+        "title": "Hasata Gönen Baldo Pirinç 2 Kg",
+        "change_pct": 20.51
+      }
+    ],
+    "warnings": []
   }
 ]
