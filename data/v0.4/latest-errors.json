@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-28",
-  "checked_at": "2026-10-28T22:02:12.742174+03:00",
-  "status": "published_with_retained_types",
+  "date": "2026-10-29",
+  "checked_at": "2026-10-29T04:09:47.774288+03:00",
+  "status": "published",
   "errors": [],
-  "source_updated_today": 1612,
-  "observed_skus": 1619,
+  "source_updated_today": 0,
+  "observed_skus": 1620,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -57,7 +57,7 @@
     "banana": 2,
     "apple": 5,
     "orange": 2,
-    "mandarin": 1,
+    "mandarin": 2,
     "lemon": 3,
     "pear": 2,
     "peach": 1,
@@ -138,26 +138,5 @@
     "paper_towel": 19,
     "wet_wipes": 7,
     "tissues": 11
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "wet_wipes",
-      "label": "Islak mendil",
-      "reason": "Same-day coverage regression for wet_wipes: 9 -> 7",
-      "new_observed_skus": 7,
-      "retained_skus": 9,
-      "collected_at": [
-        "2026-10-28T03:40:51.063728+03:00",
-        "2026-10-28T03:40:51.063741+03:00",
-        "2026-10-28T03:40:51.063744+03:00",
-        "2026-10-28T03:40:51.063746+03:00",
-        "2026-10-28T03:40:51.063748+03:00",
-        "2026-10-28T03:40:51.063750+03:00",
-        "2026-10-28T03:40:51.063753+03:00",
-        "2026-10-28T03:40:51.063755+03:00",
-        "2026-10-28T03:40:51.063757+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1621
+  }
 }
