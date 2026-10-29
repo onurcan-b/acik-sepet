@@ -7962,27 +7962,77 @@
   },
   {
     "date": "2026-10-29",
-    "rows": 1620,
-    "source_updated_today": 0,
-    "source_within_3_days": 1620,
+    "rows": 1605,
+    "source_updated_today": 1603,
+    "source_within_3_days": 1605,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2075,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2059,
+    "depot_source_updated_today": 2056,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1303,
-    "auditable_skus": 1620,
+    "single_source_skus": 1285,
+    "auditable_skus": 1605,
     "source_age_days": {
-      "1": 1620
+      "0": 1603,
+      "1": 2
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-10-28",
-    "matched_slots": 1619,
-    "missing_slots": 2,
-    "new_slots": 1,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1596,
+    "missing_slots": 25,
+    "new_slots": 9,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1W72",
+        "title": "Becel Zeytinyağlı Kase Margarin 250 Gr",
+        "change_pct": 53.7
+      },
+      {
+        "slot_id": "id:0EG7",
+        "title": "Pol's Gurme Antep Fıstıklı Tahin Helvası 300 Gr",
+        "change_pct": -34.81
+      },
+      {
+        "slot_id": "id:1QNS",
+        "title": "Becel Kase Margarin 500 Gr",
+        "change_pct": 33.33
+      },
+      {
+        "slot_id": "id:1UUM",
+        "title": "Torku Portakal Çikolata Krema Kakaolu Gofret 142 Gr",
+        "change_pct": -27.9
+      },
+      {
+        "slot_id": "id:1ZQY",
+        "title": "Torku Fındıklı Gofret 142 Gr",
+        "change_pct": -27.9
+      },
+      {
+        "slot_id": "id:12Y7",
+        "title": "Dana Kıyma 400 Gr",
+        "change_pct": -27.58
+      },
+      {
+        "slot_id": "id:0IQ3",
+        "title": "Becel Zeytinyağlı Kase Margarin 500 Gr",
+        "change_pct": 23.18
+      },
+      {
+        "slot_id": "id:20JZ",
+        "title": "Pınar Labne Peyniri 400 Gr",
+        "change_pct": -21.5
+      },
+      {
+        "slot_id": "id:0S63",
+        "title": "Fide Acılı Ton Balığı 320 Gr",
+        "change_pct": -20.53
+      },
+      {
+        "slot_id": "id:3W9R",
+        "title": "Üzüm 1 Kg",
+        "change_pct": -20.02
+      }
+    ],
+    "warnings": []
   }
 ]
