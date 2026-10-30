@@ -8037,27 +8037,151 @@
   },
   {
     "date": "2026-10-30",
-    "rows": 1616,
-    "source_updated_today": 0,
-    "source_within_3_days": 1616,
+    "rows": 1618,
+    "source_updated_today": 1618,
+    "source_within_3_days": 1618,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2071,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2077,
+    "depot_source_updated_today": 2077,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1295,
-    "auditable_skus": 1616,
+    "single_source_skus": 1296,
+    "auditable_skus": 1618,
     "source_age_days": {
-      "1": 1616
+      "0": 1618
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-10-29",
-    "matched_slots": 1604,
-    "missing_slots": 1,
-    "new_slots": 12,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1581,
+    "missing_slots": 24,
+    "new_slots": 37,
+    "large_price_moves": [
+      {
+        "slot_id": "id:02UC",
+        "title": "Palmolive Body Butter Böğürtlen Duş Jeli 500 Ml",
+        "change_pct": 99.99
+      },
+      {
+        "slot_id": "id:0O9J",
+        "title": "Palmolive Feel The Massage Duş Jeli 250 Ml",
+        "change_pct": 99.99
+      },
+      {
+        "slot_id": "id:1RBK",
+        "title": "Le Petit Marseillais Şeftali ve Nektarin Duş Jeli 400 Ml",
+        "change_pct": 99.99
+      },
+      {
+        "slot_id": "id:1S1Q",
+        "title": "Le Petit Marseillais Akdeniz Çileği Duş Jeli 400 Ml",
+        "change_pct": 99.99
+      },
+      {
+        "slot_id": "id:20TK",
+        "title": "Beeo Yayla Çiçek Balı Ham Bal 300 Gr",
+        "change_pct": 51.06
+      },
+      {
+        "slot_id": "id:1RAB",
+        "title": "Duru Lux Perfumes Lotus Çiçeği Duş Jeli 450 Ml",
+        "change_pct": 50.02
+      },
+      {
+        "slot_id": "id:1NF1",
+        "title": "Nivea Kadın Deodorant Çeşitleri 150 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:1Z8B",
+        "title": "Duru Body Scrub Pink Delight Duş Jeli 450 Ml",
+        "change_pct": 42.87
+      },
+      {
+        "slot_id": "id:0CPK",
+        "title": "Dove Deeply Nourishing Duş Jeli 450 Ml",
+        "change_pct": 41.42
+      },
+      {
+        "slot_id": "id:1T73",
+        "title": "Le Petit Marseillais Duş Jeli Beyaz Şeftali & Nektarin 650 Ml",
+        "change_pct": 41.42
+      },
+      {
+        "slot_id": "id:0EZ9",
+        "title": "Tamek Vişne Reçeli 380 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:0JDE",
+        "title": "Tamek Çilek Reçeli 380 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:1ZW1",
+        "title": "Tamek Çilek Reçeli 800 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:05W1",
+        "title": "Tat Sweet Chili Ketçap 390 Gr",
+        "change_pct": 33.34
+      },
+      {
+        "slot_id": "id:1L60",
+        "title": "Elidor Şampuan Çeşitleri 400 Ml",
+        "change_pct": -31.96
+      },
+      {
+        "slot_id": "id:13F4",
+        "title": "Dove Güzellik Katı Sabun 90 Gr",
+        "change_pct": -31.45
+      },
+      {
+        "slot_id": "id:1MLB",
+        "title": "Duru Duş Katı Sabun 600 Gr",
+        "change_pct": -23.59
+      },
+      {
+        "slot_id": "id:04HR",
+        "title": "Sarımsak 1 Kg",
+        "change_pct": -22.86
+      },
+      {
+        "slot_id": "id:1PSZ",
+        "title": "Tamek Portakal Reçeli 380 Gr",
+        "change_pct": -22.54
+      },
+      {
+        "slot_id": "id:20H5",
+        "title": "Tamek Vişne Reçeli 800 Gr",
+        "change_pct": -22.54
+      },
+      {
+        "slot_id": "id:1ST6",
+        "title": "Duru Fresh Sensation Okyanus Ferahlığı Duş Jeli 450 Ml",
+        "change_pct": 22.48
+      },
+      {
+        "slot_id": "id:1TB2",
+        "title": "Duru Lux Perfumes Orkide Özleri Duş Jeli 450 Ml",
+        "change_pct": 22.48
+      },
+      {
+        "slot_id": "id:0N0H",
+        "title": "Çatal Sucuk İlikli Dana Kangal Sucuk 450 Gr",
+        "change_pct": -21.11
+      },
+      {
+        "slot_id": "id:1M20",
+        "title": "Dana Fermente Mangal Sucuk 400 Gr",
+        "change_pct": -21.11
+      },
+      {
+        "slot_id": "id:1RGC",
+        "title": "Sana Paket Margarin 250 Gr",
+        "change_pct": -20.63
+      }
+    ],
+    "warnings": []
   }
 ]
