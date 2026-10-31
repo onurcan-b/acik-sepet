@@ -1,17 +1,17 @@
 {
-  "date": "2026-10-30",
-  "checked_at": "2026-10-30T21:47:50.821565+03:00",
+  "date": "2026-10-31",
+  "checked_at": "2026-10-31T03:59:43.458075+03:00",
   "status": "published",
   "errors": [],
-  "source_updated_today": 1618,
-  "observed_skus": 1618,
+  "source_updated_today": 0,
+  "observed_skus": 1621,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
     "bread_white": 0,
     "bread_toast": 7,
     "bread_wholewheat": 5,
-    "flour_wheat": 19,
+    "flour_wheat": 22,
     "rice": 22,
     "bulgur": 20,
     "pasta_spaghetti": 6,
@@ -138,7 +138,5 @@
     "paper_towel": 19,
     "wet_wipes": 8,
     "tissues": 11
-  },
-  "retained_same_day_types": [],
-  "published_skus": 1618
+  }
 }
