@@ -8318,5 +8318,49 @@
       }
     ],
     "warnings": []
+  },
+  {
+    "date": "2026-11-01",
+    "rows": 1594,
+    "source_updated_today": 1594,
+    "source_within_3_days": 1594,
+    "source_date_unknown": 0,
+    "source_date_future": 0,
+    "depot_observations": 2072,
+    "depot_source_updated_today": 2072,
+    "depot_source_date_unknown": 0,
+    "single_source_skus": 1260,
+    "auditable_skus": 1594,
+    "source_age_days": {
+      "0": 1594
+    },
+    "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
+    "previous_date": "2026-10-31",
+    "matched_slots": 1572,
+    "missing_slots": 25,
+    "new_slots": 22,
+    "large_price_moves": [
+      {
+        "slot_id": "id:17YO",
+        "title": "Dardanel Ekonomik Ton Balığı 3x140 G",
+        "change_pct": 45.23
+      },
+      {
+        "slot_id": "id:20JZ",
+        "title": "Pınar Labne Peyniri 400 Gr",
+        "change_pct": 27.39
+      },
+      {
+        "slot_id": "id:10LO",
+        "title": "Ekici Tam Yağlı Beyaz Peynir 1 Kg",
+        "change_pct": 23.67
+      },
+      {
+        "slot_id": "id:1RO6",
+        "title": "Tamek Domates Salçası Cam 700 Gr",
+        "change_pct": 21.32
+      }
+    ],
+    "warnings": []
   }
 ]
