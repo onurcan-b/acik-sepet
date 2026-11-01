@@ -213,7 +213,14 @@ def build(root: Path) -> dict:
                 "coverage": _number(published.get("coverage")), "common_coverage": round(common_coverage, 6),
                 "previous_date": previous[0] if previous else None,
                 "contributing_skus": 0, "headline_contributor": False,
-                "reasons": reasons, "collection": metadata,
+                # Detailed evidence stays in the linked per-day collection report.
+                # Repeating depot/product lists here makes this all-history
+                # dashboard payload grow beyond GitHub's file-size limit.
+                "reasons": reasons, "collection": (
+                    {key: value for key, value in metadata.items()
+                     if key not in {"retailer_depot", "rejected_products", "depot_gaps"}}
+                    if metadata is not None else None
+                ),
                 "candidate_readiness": metadata.get("ready_candidates") if metadata else None,
                 **_freshness(matched_rows, day),
             }

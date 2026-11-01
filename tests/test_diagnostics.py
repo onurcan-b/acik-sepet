@@ -186,3 +186,29 @@ def test_subpublication_gap_preserves_last_successful_type_comparison(tmp_path):
     assert result["latest"]["types"][0]["previous_date"] == d1
     assert result["latest"]["headline_skus"] == 2
     assert result["latest"]["daily_change_pct"] is None
+
+
+def test_quality_links_detailed_evidence_without_duplicating_it(tmp_path):
+    day = "2026-09-05"
+    data = _fixture(tmp_path, [_spec("a")], [(day, [_row(day, "a")])])
+    report = data / "collection-diagnostics" / f"{day}.json"
+    report.parent.mkdir()
+    metadata = {
+        "primary": {"status": "complete"}, "ready_candidates": 4,
+        "rejections": {"category": 1},
+        "retailer_depot": {"shop": {"depot": {"products": ["a"]}}},
+        "rejected_products": [{"id": "wrong", "reason": "category"}],
+        "depot_gaps": [{"source_id": "missing"}],
+    }
+    report.write_text(json.dumps({"types": {"a": metadata}}), encoding="utf-8")
+    original = report.read_bytes()
+    result = rebuild(tmp_path)
+    latest = result["latest"]
+    summary = latest["types"][0]["collection"]
+    assert summary == {key: value for key, value in metadata.items()
+                       if key not in {"retailer_depot", "rejected_products", "depot_gaps"}}
+    assert "rejected_category" in latest["types"][0]["reasons"]
+    assert latest["types"][0]["candidate_readiness"] == 4
+    assert (data / latest["collection_report"]) == report
+    assert report.read_bytes() == original
+    assert json.loads((data / "quality.json").read_text()) == result
