@@ -1,6 +1,6 @@
 {
   "date": "2026-11-01",
-  "checked_at": "2026-11-01T13:46:02.142591+03:00",
+  "checked_at": "2026-11-01T15:01:50.416713+03:00",
   "status": "published",
   "errors": [],
   "source_updated_today": 1594,
@@ -138,5 +138,7 @@
     "paper_towel": 18,
     "wet_wipes": 7,
     "tissues": 11
-  }
+  },
+  "retained_same_day_types": [],
+  "published_skus": 1594
 }
