@@ -183,7 +183,7 @@ L 425.496547 59.101791
 L 432.244669 59.101791
 L 438.99279 59.101791
 L 445.740911 59.101791
-L 452.489033 59.101791
+L 452.489033 65.010655
 " clip-path="url(#p0e1365a26f)" style="fill: none; stroke: #2563eb; stroke-width: 2; stroke-linecap: square"/>
    </g>
    <g id="line2d_19">
@@ -245,7 +245,7 @@ L 425.496547 59.101791
 L 432.244669 59.101791
 L 438.99279 59.101791
 L 445.740911 59.101791
-L 452.489033 59.101791
+L 452.489033 65.010655
 " clip-path="url(#p0e1365a26f)" style="fill: none; stroke-dasharray: 5.92,2.56; stroke-dashoffset: 0; stroke: #0f766e; stroke-width: 1.6"/>
    </g>
    <g id="line2d_20">
@@ -486,7 +486,7 @@ L 455.188281 390.834687
 " style="fill: none; stroke: #cbd5e1; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
    <g id="text_24">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #172554" x="51.650625" y="221.295361" transform="rotate(-0 51.650625 221.295361)">Başlığa katkı: 97 tip / 1529 SKU</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #172554" x="51.650625" y="221.295361" transform="rotate(-0 51.650625 221.295361)">Başlığa katkı: 93 tip / 1469 SKU</text>
    </g>
    <g id="legend_2">
     <g id="line2d_43">
@@ -631,7 +631,7 @@ L 425.496547 261.224025
 L 432.244669 262.321705
 L 438.99279 262.9972
 L 445.740911 263.588259
-L 452.489033 261.730647
+L 452.489033 266.796862
 " clip-path="url(#pd502d77126)" style="fill: none; stroke-dasharray: 4.44,1.92; stroke-dashoffset: 0; stroke: #64748b; stroke-width: 1.2"/>
    </g>
    <g id="patch_8">

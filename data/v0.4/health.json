@@ -8365,27 +8365,251 @@
   },
   {
     "date": "2026-11-02",
-    "rows": 1600,
-    "source_updated_today": 0,
-    "source_within_3_days": 1600,
+    "rows": 1570,
+    "source_updated_today": 1570,
+    "source_within_3_days": 1570,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2079,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2028,
+    "depot_source_updated_today": 2028,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1265,
-    "auditable_skus": 1600,
+    "single_source_skus": 1254,
+    "auditable_skus": 1570,
     "source_age_days": {
-      "1": 1600
+      "0": 1570
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-11-01",
-    "matched_slots": 1594,
-    "missing_slots": 0,
-    "new_slots": 6,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1554,
+    "missing_slots": 40,
+    "new_slots": 16,
+    "large_price_moves": [
+      {
+        "slot_id": "id:0F9A",
+        "title": "Parex Mega Comfort Oluklu Sünger 2 Adet",
+        "change_pct": 71.41
+      },
+      {
+        "slot_id": "id:1Z5E",
+        "title": "Tat Baldo Pirinç 2 Kg",
+        "change_pct": 63.17
+      },
+      {
+        "slot_id": "id:17N0",
+        "title": "Becel Tereyağı Keyfi Kase Margarin 250 Gr",
+        "change_pct": 56.41
+      },
+      {
+        "slot_id": "id:0TF9",
+        "title": "Macromax Mercan Sünger 3 Adet",
+        "change_pct": 56.29
+      },
+      {
+        "slot_id": "id:1L3Q",
+        "title": "Yudum Egemden Riviera Zeytinyağı 5 Lt",
+        "change_pct": 55.0
+      },
+      {
+        "slot_id": "id:1S72",
+        "title": "Pınar Tereyağı 1 Kg",
+        "change_pct": 53.79
+      },
+      {
+        "slot_id": "id:0TZ5",
+        "title": "Asperox Yüzey Temizleyici Çam & Sandal 2.5 Lt",
+        "change_pct": -45.84
+      },
+      {
+        "slot_id": "id:1ZC0",
+        "title": "Asperox Yüzey Temizleyici Okyanus Maviliği 2.5 Lt",
+        "change_pct": -45.84
+      },
+      {
+        "slot_id": "id:1DN2",
+        "title": "Banvit Kokteyl Piliç Sosis 500 Gr",
+        "change_pct": 41.97
+      },
+      {
+        "slot_id": "id:0631",
+        "title": "İzmir Satsuma Mandalina 1 Kg",
+        "change_pct": -41.17
+      },
+      {
+        "slot_id": "id:1ZGN",
+        "title": "Parex Klasik Yeşil Düz Sünger 5 Adet",
+        "change_pct": -38.49
+      },
+      {
+        "slot_id": "id:0I23",
+        "title": "İçim Tam Yağlı Taze Kaşar Peyniri 400 Gr",
+        "change_pct": 38.27
+      },
+      {
+        "slot_id": "id:12Y7",
+        "title": "Dana Kıyma 400 Gr",
+        "change_pct": 38.08
+      },
+      {
+        "slot_id": "id:17W4",
+        "title": "Parex Güçlü Çöp Torbası Mini 30 Adet",
+        "change_pct": -37.55
+      },
+      {
+        "slot_id": "id:1ZTZ",
+        "title": "Macromax Extra Güçlü Çöp Torbası Orta Boy 15 Adet",
+        "change_pct": 36.97
+      },
+      {
+        "slot_id": "id:1EV7",
+        "title": "Komili Lezzetlik Yumuşak Natürel Sızma Zeytinyağı 2 Lt",
+        "change_pct": -35.49
+      },
+      {
+        "slot_id": "id:1BCK",
+        "title": "Parex Natura Büzgülü Çöp Torbası Büyük Boy 10 Adet",
+        "change_pct": -35.31
+      },
+      {
+        "slot_id": "id:025Q",
+        "title": "Uzman Kasap Poşetli Bütün Piliç 1 Kg",
+        "change_pct": 35.02
+      },
+      {
+        "slot_id": "id:0GJW",
+        "title": "Parex Güçlü Çöp Torbası Battal 10 Adet",
+        "change_pct": -35.02
+      },
+      {
+        "slot_id": "id:1T7L",
+        "title": "Superfresh Klasik Ton Balığı 3x75 Gr",
+        "change_pct": -35.0
+      },
+      {
+        "slot_id": "id:0EG7",
+        "title": "Pol's Gurme Antep Fıstıklı Tahin Helvası 300 Gr",
+        "change_pct": -34.81
+      },
+      {
+        "slot_id": "id:0CWM",
+        "title": "Erşan Vakumlu Kangal Sucuk 200 Gr",
+        "change_pct": 34.53
+      },
+      {
+        "slot_id": "id:0NGP",
+        "title": "İçim Krem Peynir 300 Gr",
+        "change_pct": 33.34
+      },
+      {
+        "slot_id": "id:1RRI",
+        "title": "Pınar Labne 8x20 Gr",
+        "change_pct": 33.34
+      },
+      {
+        "slot_id": "id:0L0B",
+        "title": "Pınar Labne 750 Gr",
+        "change_pct": 33.33
+      },
+      {
+        "slot_id": "id:0R29",
+        "title": "Namet Kangal Sucuk 200 Gr",
+        "change_pct": 33.33
+      },
+      {
+        "slot_id": "id:0ZWG",
+        "title": "La Vache Qui Rit Krem Peynir 140 Gr",
+        "change_pct": 33.33
+      },
+      {
+        "slot_id": "id:1KSH",
+        "title": "Pınar Labne 540 Gr",
+        "change_pct": 33.33
+      },
+      {
+        "slot_id": "id:1LUQ",
+        "title": "Bahçıvan Suda Mozzarella 125 Gr",
+        "change_pct": 33.33
+      },
+      {
+        "slot_id": "id:1T6H",
+        "title": "Baltalı %100 Keçi Labneh 200 Gr",
+        "change_pct": 33.33
+      },
+      {
+        "slot_id": "id:1Z93",
+        "title": "Ekici Krem Peynir 400 Gr",
+        "change_pct": 33.33
+      },
+      {
+        "slot_id": "id:1ZDG",
+        "title": "Bahçıvan Rende Mozzarella Peyniri 200 Gr",
+        "change_pct": 33.33
+      },
+      {
+        "slot_id": "id:1ZK7",
+        "title": "Nesfit Çikolata Kahvaltılık Gevrek 400 Gr",
+        "change_pct": 33.3
+      },
+      {
+        "slot_id": "id:1SOX",
+        "title": "Polonez Fıstıklı Salam 90 Gr",
+        "change_pct": 32.38
+      },
+      {
+        "slot_id": "id:0IQ3",
+        "title": "Becel Zeytinyağlı Kase Margarin 500 Gr",
+        "change_pct": 31.44
+      },
+      {
+        "slot_id": "id:1JMC",
+        "title": "Nestlé Corn Flakes Kahvaltılık Gevrek 200 Gr",
+        "change_pct": -26.84
+      },
+      {
+        "slot_id": "id:1K2A",
+        "title": "Filiz Tel Şehriye 500 Gr",
+        "change_pct": -26.35
+      },
+      {
+        "slot_id": "id:1S7V",
+        "title": "Filiz Kısa Kalem Makarna 500 Gr",
+        "change_pct": -26.35
+      },
+      {
+        "slot_id": "id:1VTR",
+        "title": "Filiz Dirsek Makarna 500 Gr",
+        "change_pct": -26.35
+      },
+      {
+        "slot_id": "id:2167",
+        "title": "Humm Organic Tam Tahıllı Ballı Kahvaltılık Gevrek 80 Gr",
+        "change_pct": 26.33
+      },
+      {
+        "slot_id": "id:0VMI",
+        "title": "Koroplast Çöp Torbası Orta Boy 15 Adet",
+        "change_pct": -25.44
+      },
+      {
+        "slot_id": "id:1NNM",
+        "title": "Becel Tereyağı Keyfi Kase Margarin 500 Gr",
+        "change_pct": 25.37
+      },
+      {
+        "slot_id": "id:11IE",
+        "title": "Heinz Acılı Ketçap 375 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:17X8",
+        "title": "Parex Güçlü Çöp Torbası Büyük Boy 10 Adet",
+        "change_pct": 24.75
+      },
+      {
+        "slot_id": "id:09LV",
+        "title": "Parex Büzgülü Çöp Torbası Orta Boy Limon Kokulu 15 Adet",
+        "change_pct": -22.31
+      }
+    ],
+    "warnings": []
   }
 ]
