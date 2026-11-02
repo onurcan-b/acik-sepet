@@ -1,10 +1,10 @@
 {
-  "date": "2026-11-01",
-  "checked_at": "2026-11-01T21:36:14.089356+03:00",
+  "date": "2026-11-02",
+  "checked_at": "2026-11-02T03:57:34.765282+03:00",
   "status": "published",
   "errors": [],
-  "source_updated_today": 1594,
-  "observed_skus": 1594,
+  "source_updated_today": 0,
+  "observed_skus": 1600,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -33,7 +33,7 @@
     "tuna": 18,
     "sardine": 0,
     "smoked_salmon": 2,
-    "salmon": 3,
+    "salmon": 4,
     "frozen_fish": 6,
     "fish_fingers": 0,
     "milk": 19,
@@ -97,7 +97,7 @@
     "spread": 21,
     "candy": 14,
     "tomato_paste": 21,
-    "lentils": 16,
+    "lentils": 21,
     "beans": 20,
     "chickpeas": 20,
     "canned_veg": 2,
@@ -138,7 +138,5 @@
     "paper_towel": 18,
     "wet_wipes": 7,
     "tissues": 11
-  },
-  "retained_same_day_types": [],
-  "published_skus": 1594
+  }
 }
