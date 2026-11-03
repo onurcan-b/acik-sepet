@@ -3,12 +3,9 @@
 Türkiye'de market ürünlerinin günlük fiyat hareketini izleyen açık, deneysel gösterge.
 
 <!-- STATUS_START -->
-> **Veri durumu: Tarama başarısız; önceki yayın korundu.** Son seri noktası: **2026-11-03**. Kategori ağırlığı kapsaması: **%85**. Güncel kaynak (≤1 gün): **%100.0**.
+> **Veri durumu: Kısmi güncelleme; bazı tiplerde gün içindeki önceki ölçüm korundu.** Son seri noktası: **2026-11-03**. Kategori ağırlığı kapsaması: **%85**. Güncel kaynak (≤1 gün): **%100.0**.
 > **Kalite uyarısı: kapsama.** [Ayrıntı](data/v0.4/quality.json).
-> Son tarama girişimi: 2026-11-03T16:16:14.984315+03:00.
-> **3 ürün tipinde API hatası** var; bu, ürünlerin katalogda bulunmadığı anlamına gelmez.
-> **127 ürün tipi taranamadı**: kaynak hatası veya süre sınırı nedeniyle kalan sorgular durduruldu.
-> Başarısız tarama gözlemleri endekse eklenmedi; ayrıntı: [tarama durumu](data/v0.4/collection-status.json).
+> 1 tipte önceki ölçüm korundu; [tarama zamanı ve durum](data/v0.4/collection-status.json).
 > Yayımlanamayan kategoriler: Balık ve deniz ürünleri; Sebze.
 > Baz: **2026-09-05 = 100**.
 <!-- STATUS_END -->
@@ -20,9 +17,9 @@ Turuncu boş noktalar kısmi kapsamı; çizgideki boşluklar yayımlanamayan gü
 <!-- STATS_START -->
 | Endeks | Günlük | 7 gün | 30 gün | Bazdan beri |
 |---:|---:|---:|---:|---:|
-| **103.87** | +0.00% | +0.71% | +0.56% | +3.87% |
+| **104.42** | +0.53% | +1.24% | +1.09% | +4.42% |
 
-**%85** kategori ağırlığı · **93 tip / 1482 SKU** başlığa katkı · **1575 SKU** toplandı.
+**%85** kategori ağırlığı · **92 tip / 1455 SKU** başlığa katkı · **1565 SKU** toplandı.
 <!-- STATS_END -->
 
 ### Kategorilerde son yedi gün
