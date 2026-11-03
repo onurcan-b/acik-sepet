@@ -1,142 +1,1203 @@
 {
   "date": "2026-11-03",
-  "checked_at": "2026-11-03T06:05:52.218717+03:00",
-  "status": "published",
-  "errors": [],
-  "source_updated_today": 0,
-  "observed_skus": 1575,
+  "checked_at": "2026-11-03T16:16:14.984315+03:00",
+  "status": "rejected",
+  "errors": [
+    {
+      "type_id": "bread_white",
+      "error": "'somun ekmek' sayfa 0 başarısız: HTTPSConnectionPool(host='api.marketfiyati.org.tr', port=443): Max retries exceeded with url: /api/v2/search (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.marketfiyati.org.tr', port=443) at 0x734a196eaed0>, 'Connection to api.marketfiyati.org.tr timed out. (connect timeout=30)'))",
+      "retryable": true
+    },
+    {
+      "type_id": "bread_toast",
+      "error": "'tost ekmeği' sayfa 0 başarısız: Search request/time budget exhausted",
+      "retryable": false
+    },
+    {
+      "type_id": "bread_wholewheat",
+      "error": "'tam buğday ekmeği' sayfa 0 başarısız: HTTPSConnectionPool(host='api.marketfiyati.org.tr', port=443): Max retries exceeded with url: /api/v2/search (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.marketfiyati.org.tr', port=443) at 0x734a196e9eb0>, 'Connection to api.marketfiyati.org.tr timed out. (connect timeout=30)'))",
+      "retryable": true
+    },
+    {
+      "type_id": "flour_wheat",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "rice",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "bulgur",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "pasta_spaghetti",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "pasta_other",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "vermicelli",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "oats",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "breakfast_cereal",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "semolina",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "beef_mince",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "beef_cubes",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "chicken_breast",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "chicken_thigh",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "whole_chicken",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "turkey",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "sucuk",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "salami",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "sausage",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "meatballs",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "tuna",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "sardine",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "smoked_salmon",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "salmon",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "frozen_fish",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "fish_fingers",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "milk",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "milk_lactosefree",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "yogurt",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "strained_yogurt",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "ayran",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "kefir",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "white_cheese",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "kasar",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "labneh",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "cream_cheese",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "mozzarella",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "eggs",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "cream",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "sunflower_oil",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "olive_oil",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "butter",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "margarine",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "corn_oil",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "banana",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "apple",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "orange",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "mandarin",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "lemon",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "pear",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "peach",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "grape",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "watermelon",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "melon",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "strawberry",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "kiwi",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "avocado",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "tomato",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "cherry_tomato",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "cucumber",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "pepper",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "potato",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "onion",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "garlic",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "eggplant",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "zucchini",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "carrot",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "lettuce",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "spinach",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "parsley",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "broccoli",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "cauliflower",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "mushroom",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "green_beans",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "sugar",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "honey",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "jam",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "chocolate",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "biscuits",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "wafer",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "chips",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "nuts",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "icecream",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "halva",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "spread",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "candy",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "tomato_paste",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "lentils",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "beans",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "chickpeas",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "canned_veg",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "soup",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "ketchup",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "mayonnaise",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "salt",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "vinegar",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "black_tea",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "turkish_coffee",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "instant_coffee",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "filter_coffee",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "cola",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "fruit_juice",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "iced_tea",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "mineral_water",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "water",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "energy_drink",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "soda",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "dish_liquid",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "dishwasher_tabs",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "laundry_powder",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "laundry_liquid",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "softener",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "bleach",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "surface_cleaner",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "garbage_bags",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "sponge",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "cleaning_cloth",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "shampoo",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "shower_gel",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "soap_liquid",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "soap_bar",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "toothpaste",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "toothbrush",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "deodorant",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "toilet_paper",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "paper_towel",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "wet_wipes",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    },
+    {
+      "type_id": "tissues",
+      "error": "Non-retryable API response; collection stopped",
+      "not_scanned": true
+    }
+  ],
+  "reason": "Staged publication rejected: Command '['/opt/hostedtoolcache/Python/3.12.15/x64/bin/python', '-m', 'acik_sepet.collect', '--refresh']' returned non-zero exit status 1.",
+  "observed_skus": 0,
   "recovered_types": [],
-  "recovery": [],
+  "recovery": [
+    {
+      "round": 1,
+      "wait_seconds": 60,
+      "remaining_types": [
+        "bread_white",
+        "bread_toast",
+        "bread_wholewheat",
+        "flour_wheat",
+        "rice",
+        "bulgur",
+        "pasta_spaghetti",
+        "pasta_other",
+        "vermicelli",
+        "oats",
+        "breakfast_cereal",
+        "semolina",
+        "beef_mince",
+        "beef_cubes",
+        "chicken_breast",
+        "chicken_thigh",
+        "whole_chicken",
+        "turkey",
+        "sucuk",
+        "salami",
+        "sausage",
+        "meatballs",
+        "tuna",
+        "sardine",
+        "smoked_salmon",
+        "salmon",
+        "frozen_fish",
+        "fish_fingers",
+        "milk",
+        "milk_lactosefree",
+        "yogurt",
+        "strained_yogurt",
+        "ayran",
+        "kefir",
+        "white_cheese",
+        "kasar",
+        "labneh",
+        "cream_cheese",
+        "mozzarella",
+        "eggs",
+        "cream",
+        "sunflower_oil",
+        "olive_oil",
+        "butter",
+        "margarine",
+        "corn_oil",
+        "banana",
+        "apple",
+        "orange",
+        "mandarin",
+        "lemon",
+        "pear",
+        "peach",
+        "grape",
+        "watermelon",
+        "melon",
+        "strawberry",
+        "kiwi",
+        "avocado",
+        "tomato",
+        "cherry_tomato",
+        "cucumber",
+        "pepper",
+        "potato",
+        "onion",
+        "garlic",
+        "eggplant",
+        "zucchini",
+        "carrot",
+        "lettuce",
+        "spinach",
+        "parsley",
+        "broccoli",
+        "cauliflower",
+        "mushroom",
+        "green_beans",
+        "sugar",
+        "honey",
+        "jam",
+        "chocolate",
+        "biscuits",
+        "wafer",
+        "chips",
+        "nuts",
+        "icecream",
+        "halva",
+        "spread",
+        "candy",
+        "tomato_paste",
+        "lentils",
+        "beans",
+        "chickpeas",
+        "canned_veg",
+        "soup",
+        "ketchup",
+        "mayonnaise",
+        "salt",
+        "vinegar",
+        "black_tea",
+        "turkish_coffee",
+        "instant_coffee",
+        "filter_coffee",
+        "cola",
+        "fruit_juice",
+        "iced_tea",
+        "mineral_water",
+        "water",
+        "energy_drink",
+        "soda",
+        "dish_liquid",
+        "dishwasher_tabs",
+        "laundry_powder",
+        "laundry_liquid",
+        "softener",
+        "bleach",
+        "surface_cleaner",
+        "garbage_bags",
+        "sponge",
+        "cleaning_cloth",
+        "shampoo",
+        "shower_gel",
+        "soap_liquid",
+        "soap_bar",
+        "toothpaste",
+        "toothbrush",
+        "deodorant",
+        "toilet_paper",
+        "paper_towel",
+        "wet_wipes",
+        "tissues"
+      ]
+    },
+    {
+      "round": 2,
+      "wait_seconds": 180,
+      "remaining_types": [
+        "bread_white",
+        "bread_toast",
+        "bread_wholewheat",
+        "flour_wheat",
+        "rice",
+        "bulgur",
+        "pasta_spaghetti",
+        "pasta_other",
+        "vermicelli",
+        "oats",
+        "breakfast_cereal",
+        "semolina",
+        "beef_mince",
+        "beef_cubes",
+        "chicken_breast",
+        "chicken_thigh",
+        "whole_chicken",
+        "turkey",
+        "sucuk",
+        "salami",
+        "sausage",
+        "meatballs",
+        "tuna",
+        "sardine",
+        "smoked_salmon",
+        "salmon",
+        "frozen_fish",
+        "fish_fingers",
+        "milk",
+        "milk_lactosefree",
+        "yogurt",
+        "strained_yogurt",
+        "ayran",
+        "kefir",
+        "white_cheese",
+        "kasar",
+        "labneh",
+        "cream_cheese",
+        "mozzarella",
+        "eggs",
+        "cream",
+        "sunflower_oil",
+        "olive_oil",
+        "butter",
+        "margarine",
+        "corn_oil",
+        "banana",
+        "apple",
+        "orange",
+        "mandarin",
+        "lemon",
+        "pear",
+        "peach",
+        "grape",
+        "watermelon",
+        "melon",
+        "strawberry",
+        "kiwi",
+        "avocado",
+        "tomato",
+        "cherry_tomato",
+        "cucumber",
+        "pepper",
+        "potato",
+        "onion",
+        "garlic",
+        "eggplant",
+        "zucchini",
+        "carrot",
+        "lettuce",
+        "spinach",
+        "parsley",
+        "broccoli",
+        "cauliflower",
+        "mushroom",
+        "green_beans",
+        "sugar",
+        "honey",
+        "jam",
+        "chocolate",
+        "biscuits",
+        "wafer",
+        "chips",
+        "nuts",
+        "icecream",
+        "halva",
+        "spread",
+        "candy",
+        "tomato_paste",
+        "lentils",
+        "beans",
+        "chickpeas",
+        "canned_veg",
+        "soup",
+        "ketchup",
+        "mayonnaise",
+        "salt",
+        "vinegar",
+        "black_tea",
+        "turkish_coffee",
+        "instant_coffee",
+        "filter_coffee",
+        "cola",
+        "fruit_juice",
+        "iced_tea",
+        "mineral_water",
+        "water",
+        "energy_drink",
+        "soda",
+        "dish_liquid",
+        "dishwasher_tabs",
+        "laundry_powder",
+        "laundry_liquid",
+        "softener",
+        "bleach",
+        "surface_cleaner",
+        "garbage_bags",
+        "sponge",
+        "cleaning_cloth",
+        "shampoo",
+        "shower_gel",
+        "soap_liquid",
+        "soap_bar",
+        "toothpaste",
+        "toothbrush",
+        "deodorant",
+        "toilet_paper",
+        "paper_towel",
+        "wet_wipes",
+        "tissues"
+      ]
+    },
+    {
+      "round": 3,
+      "wait_seconds": 300,
+      "remaining_types": [
+        "bread_white",
+        "bread_toast",
+        "bread_wholewheat",
+        "flour_wheat",
+        "rice",
+        "bulgur",
+        "pasta_spaghetti",
+        "pasta_other",
+        "vermicelli",
+        "oats",
+        "breakfast_cereal",
+        "semolina",
+        "beef_mince",
+        "beef_cubes",
+        "chicken_breast",
+        "chicken_thigh",
+        "whole_chicken",
+        "turkey",
+        "sucuk",
+        "salami",
+        "sausage",
+        "meatballs",
+        "tuna",
+        "sardine",
+        "smoked_salmon",
+        "salmon",
+        "frozen_fish",
+        "fish_fingers",
+        "milk",
+        "milk_lactosefree",
+        "yogurt",
+        "strained_yogurt",
+        "ayran",
+        "kefir",
+        "white_cheese",
+        "kasar",
+        "labneh",
+        "cream_cheese",
+        "mozzarella",
+        "eggs",
+        "cream",
+        "sunflower_oil",
+        "olive_oil",
+        "butter",
+        "margarine",
+        "corn_oil",
+        "banana",
+        "apple",
+        "orange",
+        "mandarin",
+        "lemon",
+        "pear",
+        "peach",
+        "grape",
+        "watermelon",
+        "melon",
+        "strawberry",
+        "kiwi",
+        "avocado",
+        "tomato",
+        "cherry_tomato",
+        "cucumber",
+        "pepper",
+        "potato",
+        "onion",
+        "garlic",
+        "eggplant",
+        "zucchini",
+        "carrot",
+        "lettuce",
+        "spinach",
+        "parsley",
+        "broccoli",
+        "cauliflower",
+        "mushroom",
+        "green_beans",
+        "sugar",
+        "honey",
+        "jam",
+        "chocolate",
+        "biscuits",
+        "wafer",
+        "chips",
+        "nuts",
+        "icecream",
+        "halva",
+        "spread",
+        "candy",
+        "tomato_paste",
+        "lentils",
+        "beans",
+        "chickpeas",
+        "canned_veg",
+        "soup",
+        "ketchup",
+        "mayonnaise",
+        "salt",
+        "vinegar",
+        "black_tea",
+        "turkish_coffee",
+        "instant_coffee",
+        "filter_coffee",
+        "cola",
+        "fruit_juice",
+        "iced_tea",
+        "mineral_water",
+        "water",
+        "energy_drink",
+        "soda",
+        "dish_liquid",
+        "dishwasher_tabs",
+        "laundry_powder",
+        "laundry_liquid",
+        "softener",
+        "bleach",
+        "surface_cleaner",
+        "garbage_bags",
+        "sponge",
+        "cleaning_cloth",
+        "shampoo",
+        "shower_gel",
+        "soap_liquid",
+        "soap_bar",
+        "toothpaste",
+        "toothbrush",
+        "deodorant",
+        "toilet_paper",
+        "paper_towel",
+        "wet_wipes",
+        "tissues"
+      ]
+    }
+  ],
   "observed_by_type": {
-    "bread_white": 1,
-    "bread_toast": 5,
-    "bread_wholewheat": 3,
-    "flour_wheat": 18,
-    "rice": 23,
-    "bulgur": 21,
-    "pasta_spaghetti": 6,
-    "pasta_other": 22,
-    "vermicelli": 18,
-    "oats": 14,
-    "breakfast_cereal": 18,
-    "semolina": 12,
-    "beef_mince": 6,
-    "beef_cubes": 6,
+    "bread_white": 0,
+    "bread_toast": 0,
+    "bread_wholewheat": 0,
+    "flour_wheat": 0,
+    "rice": 0,
+    "bulgur": 0,
+    "pasta_spaghetti": 0,
+    "pasta_other": 0,
+    "vermicelli": 0,
+    "oats": 0,
+    "breakfast_cereal": 0,
+    "semolina": 0,
+    "beef_mince": 0,
+    "beef_cubes": 0,
     "chicken_breast": 0,
-    "chicken_thigh": 1,
-    "whole_chicken": 12,
+    "chicken_thigh": 0,
+    "whole_chicken": 0,
     "turkey": 0,
-    "sucuk": 20,
-    "salami": 23,
-    "sausage": 19,
-    "meatballs": 9,
-    "tuna": 16,
+    "sucuk": 0,
+    "salami": 0,
+    "sausage": 0,
+    "meatballs": 0,
+    "tuna": 0,
     "sardine": 0,
-    "smoked_salmon": 2,
-    "salmon": 3,
-    "frozen_fish": 6,
+    "smoked_salmon": 0,
+    "salmon": 0,
+    "frozen_fish": 0,
     "fish_fingers": 0,
-    "milk": 18,
-    "milk_lactosefree": 13,
-    "yogurt": 18,
-    "strained_yogurt": 8,
-    "ayran": 18,
-    "kefir": 17,
-    "white_cheese": 23,
-    "kasar": 23,
-    "labneh": 20,
-    "cream_cheese": 14,
-    "mozzarella": 5,
-    "eggs": 20,
-    "cream": 16,
-    "sunflower_oil": 19,
-    "olive_oil": 21,
-    "butter": 23,
-    "margarine": 17,
+    "milk": 0,
+    "milk_lactosefree": 0,
+    "yogurt": 0,
+    "strained_yogurt": 0,
+    "ayran": 0,
+    "kefir": 0,
+    "white_cheese": 0,
+    "kasar": 0,
+    "labneh": 0,
+    "cream_cheese": 0,
+    "mozzarella": 0,
+    "eggs": 0,
+    "cream": 0,
+    "sunflower_oil": 0,
+    "olive_oil": 0,
+    "butter": 0,
+    "margarine": 0,
     "corn_oil": 0,
-    "banana": 2,
-    "apple": 5,
-    "orange": 2,
-    "mandarin": 2,
-    "lemon": 3,
-    "pear": 2,
-    "peach": 1,
-    "grape": 4,
-    "watermelon": 3,
-    "melon": 6,
+    "banana": 0,
+    "apple": 0,
+    "orange": 0,
+    "mandarin": 0,
+    "lemon": 0,
+    "pear": 0,
+    "peach": 0,
+    "grape": 0,
+    "watermelon": 0,
+    "melon": 0,
     "strawberry": 0,
     "kiwi": 0,
-    "avocado": 1,
-    "tomato": 7,
+    "avocado": 0,
+    "tomato": 0,
     "cherry_tomato": 0,
-    "cucumber": 2,
-    "pepper": 7,
-    "potato": 5,
-    "onion": 5,
-    "garlic": 4,
-    "eggplant": 3,
-    "zucchini": 3,
-    "carrot": 1,
+    "cucumber": 0,
+    "pepper": 0,
+    "potato": 0,
+    "onion": 0,
+    "garlic": 0,
+    "eggplant": 0,
+    "zucchini": 0,
+    "carrot": 0,
     "lettuce": 0,
     "spinach": 0,
-    "parsley": 1,
-    "broccoli": 1,
+    "parsley": 0,
+    "broccoli": 0,
     "cauliflower": 0,
-    "mushroom": 5,
+    "mushroom": 0,
     "green_beans": 0,
-    "sugar": 21,
-    "honey": 14,
-    "jam": 23,
-    "chocolate": 19,
-    "biscuits": 21,
-    "wafer": 21,
-    "chips": 20,
-    "nuts": 15,
-    "icecream": 19,
-    "halva": 15,
-    "spread": 21,
-    "candy": 13,
-    "tomato_paste": 21,
-    "lentils": 21,
-    "beans": 20,
-    "chickpeas": 20,
-    "canned_veg": 2,
-    "soup": 18,
-    "ketchup": 20,
-    "mayonnaise": 20,
-    "salt": 14,
-    "vinegar": 17,
-    "black_tea": 22,
-    "turkish_coffee": 18,
-    "instant_coffee": 7,
-    "filter_coffee": 19,
-    "cola": 18,
+    "sugar": 0,
+    "honey": 0,
+    "jam": 0,
+    "chocolate": 0,
+    "biscuits": 0,
+    "wafer": 0,
+    "chips": 0,
+    "nuts": 0,
+    "icecream": 0,
+    "halva": 0,
+    "spread": 0,
+    "candy": 0,
+    "tomato_paste": 0,
+    "lentils": 0,
+    "beans": 0,
+    "chickpeas": 0,
+    "canned_veg": 0,
+    "soup": 0,
+    "ketchup": 0,
+    "mayonnaise": 0,
+    "salt": 0,
+    "vinegar": 0,
+    "black_tea": 0,
+    "turkish_coffee": 0,
+    "instant_coffee": 0,
+    "filter_coffee": 0,
+    "cola": 0,
     "fruit_juice": 0,
-    "iced_tea": 13,
-    "mineral_water": 21,
-    "water": 22,
-    "energy_drink": 19,
-    "soda": 19,
-    "dish_liquid": 17,
-    "dishwasher_tabs": 12,
-    "laundry_powder": 2,
-    "laundry_liquid": 20,
-    "softener": 10,
-    "bleach": 18,
-    "surface_cleaner": 18,
-    "garbage_bags": 19,
-    "sponge": 17,
-    "cleaning_cloth": 6,
-    "shampoo": 22,
-    "shower_gel": 23,
-    "soap_liquid": 19,
-    "soap_bar": 22,
-    "toothpaste": 22,
-    "toothbrush": 23,
-    "deodorant": 23,
-    "toilet_paper": 20,
-    "paper_towel": 19,
-    "wet_wipes": 7,
-    "tissues": 11
-  }
+    "iced_tea": 0,
+    "mineral_water": 0,
+    "water": 0,
+    "energy_drink": 0,
+    "soda": 0,
+    "dish_liquid": 0,
+    "dishwasher_tabs": 0,
+    "laundry_powder": 0,
+    "laundry_liquid": 0,
+    "softener": 0,
+    "bleach": 0,
+    "surface_cleaner": 0,
+    "garbage_bags": 0,
+    "sponge": 0,
+    "cleaning_cloth": 0,
+    "shampoo": 0,
+    "shower_gel": 0,
+    "soap_liquid": 0,
+    "soap_bar": 0,
+    "toothpaste": 0,
+    "toothbrush": 0,
+    "deodorant": 0,
+    "toilet_paper": 0,
+    "paper_towel": 0,
+    "wet_wipes": 0,
+    "tissues": 0
+  },
+  "publication_failed": true
 }
