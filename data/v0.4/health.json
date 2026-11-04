@@ -8784,27 +8784,57 @@
   },
   {
     "date": "2026-11-04",
-    "rows": 1565,
-    "source_updated_today": 0,
-    "source_within_3_days": 1565,
+    "rows": 1510,
+    "source_updated_today": 1358,
+    "source_within_3_days": 1510,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2017,
-    "depot_source_updated_today": 0,
+    "depot_observations": 1905,
+    "depot_source_updated_today": 1737,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1255,
-    "auditable_skus": 1565,
+    "single_source_skus": 1213,
+    "auditable_skus": 1510,
     "source_age_days": {
-      "1": 1565
+      "0": 1358,
+      "1": 152
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-11-03",
-    "matched_slots": 1564,
-    "missing_slots": 1,
-    "new_slots": 1,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1459,
+    "missing_slots": 106,
+    "new_slots": 51,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1YHN",
+        "title": "Axe Dark Temptation Deodorant 150 Ml",
+        "change_pct": -50.16
+      },
+      {
+        "slot_id": "id:1ZOR",
+        "title": "Signal White System Diş Macunu 75 Ml",
+        "change_pct": 35.48
+      },
+      {
+        "slot_id": "id:12R2",
+        "title": "Axe Deodorant Men Black 150 Ml",
+        "change_pct": -29.4
+      },
+      {
+        "slot_id": "id:1ZJJ",
+        "title": "Axe Apollo Deodorant 150 Ml",
+        "change_pct": -29.4
+      },
+      {
+        "slot_id": "id:1V23",
+        "title": "Peros Bakım Renkliler Sıvı Çamaşır Deterjanı 3 Lt",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1YNX",
+        "title": "Peros Siyahlar İçin Sıvı Çamaşır Deterjanı Bakım 3 Lt",
+        "change_pct": -20.63
+      }
+    ],
+    "warnings": []
   }
 ]
