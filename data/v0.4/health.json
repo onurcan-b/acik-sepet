@@ -8836,5 +8836,36 @@
       }
     ],
     "warnings": []
+  },
+  {
+    "date": "2026-11-05",
+    "rows": 1472,
+    "source_updated_today": 0,
+    "source_within_3_days": 1472,
+    "source_date_unknown": 0,
+    "source_date_future": 0,
+    "depot_observations": 1863,
+    "depot_source_updated_today": 0,
+    "depot_source_date_unknown": 0,
+    "single_source_skus": 1177,
+    "auditable_skus": 1472,
+    "source_age_days": {
+      "1": 1472
+    },
+    "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
+    "previous_date": "2026-11-04",
+    "matched_slots": 1463,
+    "missing_slots": 47,
+    "new_slots": 9,
+    "large_price_moves": [
+      {
+        "slot_id": "id:20PV",
+        "title": "Fibril Sedir Ağacı Islak Mendil 90 Adet",
+        "change_pct": -20.02
+      }
+    ],
+    "warnings": [
+      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
+    ]
   }
 ]
