@@ -266,11 +266,16 @@ def _chart(rows, output: Path):
 def run(snapshot_dir: Path, categories_path: Path, output_dir: Path):
     categories = json.loads(categories_path.read_text(encoding="utf-8"))["categories"]
     observations = load_observations(snapshot_dir)
-    observations, excluded_count = exclude_confirmed_sales(observations)
     headline_rows = []
     category_rows = []
+    excluded_count = 0
+    # Compute each historical estimate using only information available by
+    # that date; never use a future rebound to classify an earlier sale.
     for day in sorted(observations):
-        headline, per_category = compute_day(observations, categories, day)
+        as_known = {observed_day: quotes for observed_day, quotes in observations.items()
+                    if observed_day <= day}
+        cleaned, excluded_count = exclude_confirmed_sales(as_known)
+        headline, per_category = compute_day(cleaned, categories, day)
         if headline:
             headline_rows.append(headline)
             category_rows.extend(per_category)
