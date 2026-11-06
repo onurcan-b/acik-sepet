@@ -9214,27 +9214,77 @@
   },
   {
     "date": "2026-11-06",
-    "rows": 1474,
-    "source_updated_today": 0,
-    "source_within_3_days": 1474,
+    "rows": 1489,
+    "source_updated_today": 1472,
+    "source_within_3_days": 1489,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 1858,
-    "depot_source_updated_today": 0,
+    "depot_observations": 1881,
+    "depot_source_updated_today": 1864,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1185,
-    "auditable_skus": 1474,
+    "single_source_skus": 1190,
+    "auditable_skus": 1489,
     "source_age_days": {
-      "1": 1474
+      "0": 1472,
+      "1": 17
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-11-05",
-    "matched_slots": 1472,
-    "missing_slots": 1,
-    "new_slots": 2,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1454,
+    "missing_slots": 19,
+    "new_slots": 35,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1L3Q",
+        "title": "Yudum Egemden Riviera Zeytinyağı 5 Lt",
+        "change_pct": -35.48
+      },
+      {
+        "slot_id": "id:07G3",
+        "title": "Piliç Salam 1 Kg",
+        "change_pct": -33.61
+      },
+      {
+        "slot_id": "id:0EVV",
+        "title": "Yapraklı Mandalina 1 Kg",
+        "change_pct": 33.39
+      },
+      {
+        "slot_id": "id:04HR",
+        "title": "Sarımsak 1 Kg",
+        "change_pct": -28.57
+      },
+      {
+        "slot_id": "id:1DG3",
+        "title": "Hindi Sosis 130 Gr",
+        "change_pct": -27.78
+      },
+      {
+        "slot_id": "id:0ARD",
+        "title": "Züber Nutziila Kakaolu Fındık Kreması 315 Gr",
+        "change_pct": 23.69
+      },
+      {
+        "slot_id": "id:134Z",
+        "title": "Yeşil Biber 1 Kg",
+        "change_pct": -23.26
+      },
+      {
+        "slot_id": "id:1I5Z",
+        "title": "Fruko Gazoz 2.5 Lt",
+        "change_pct": -21.71
+      },
+      {
+        "slot_id": "id:02XX",
+        "title": "Karlıtepe Limon Aromalı Maden Suyu 1.2 Lt",
+        "change_pct": -20.16
+      },
+      {
+        "slot_id": "id:1HJF",
+        "title": "Pol's Gurme Serisi Yerli Susam Tahin Helvası 300 Gr",
+        "change_pct": 20.0
+      }
+    ],
+    "warnings": []
   }
 ]
