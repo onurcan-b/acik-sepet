@@ -1,0 +1,67 @@
+name: ECB Repricing Research (offline)
+
+# GitHub Actions schedules only start from the default branch.
+# This small scheduler checks out research/ecb-repricing and never scrapes or
+# updates the published main-branch price index.
+on:
+  schedule:
+    - cron: "47 9 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: acik-sepet-ecb-repricing
+  cancel-in-progress: false
+
+jobs:
+  repricing:
+    if: github.repository == 'onurcan-b/acik-sepet'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Check out isolated research code
+        uses: actions/checkout@v7
+        with:
+          ref: research/ecb-repricing
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install test and rendering dependencies
+        run: pip install -r requirements.txt
+      - name: Test methodology
+        run: pytest -q tests/test_ecb_repricing.py
+      - name: Analyze the latest main-branch snapshots without API calls
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          mkdir -p "$RUNNER_TEMP/acik-sepet-main"
+          git archive origin/main -- data/v0.4/snapshots config/categories.json | tar -x -C "$RUNNER_TEMP/acik-sepet-main"
+          python -m acik_sepet.ecb_repricing \
+            --snapshots-dir "$RUNNER_TEMP/acik-sepet-main/data/v0.4/snapshots" \
+            --categories "$RUNNER_TEMP/acik-sepet-main/config/categories.json" \
+            --output-dir research/ecb/output
+          git diff --check -- research/ecb/output
+      - name: Publish only to the research branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "acik-sepet-research-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add research/ecb/output/
+          if git diff --cached --quiet; then
+            echo "No new research output"
+            exit 0
+          fi
+          git commit -m "research: güncel ECB fiyat değiştirme göstergeleri"
+          git fetch origin research/ecb-repricing
+          test "$(git rev-parse HEAD^)" = "$(git rev-parse origin/research/ecb-repricing)" || {
+            echo "Research branch changed during analysis; retry on latest research code"
+            exit 1
+          }
+          git push origin HEAD:research/ecb-repricing
