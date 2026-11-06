@@ -1,10 +1,10 @@
 {
-  "date": "2026-11-05",
-  "checked_at": "2026-11-05T23:52:39.401575+03:00",
-  "status": "published_with_retained_types",
+  "date": "2026-11-06",
+  "checked_at": "2026-11-06T04:44:43.178158+03:00",
+  "status": "published",
   "errors": [],
-  "source_updated_today": 1468,
-  "observed_skus": 1472,
+  "source_updated_today": 0,
+  "observed_skus": 1474,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -70,7 +70,7 @@
     "tomato": 7,
     "cherry_tomato": 0,
     "cucumber": 3,
-    "pepper": 6,
+    "pepper": 8,
     "potato": 4,
     "onion": 6,
     "garlic": 2,
@@ -138,22 +138,5 @@
     "paper_towel": 16,
     "wet_wipes": 8,
     "tissues": 10
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "bread_toast",
-      "label": "Tost ekmeği",
-      "reason": "Same-day coverage regression for bread_toast: 5 -> 4",
-      "new_observed_skus": 4,
-      "retained_skus": 5,
-      "collected_at": [
-        "2026-11-05T04:29:58.999637+03:00",
-        "2026-11-05T04:29:58.999649+03:00",
-        "2026-11-05T04:29:58.999652+03:00",
-        "2026-11-05T04:29:58.999653+03:00",
-        "2026-11-05T04:29:58.999655+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1473
+  }
 }
