@@ -14,7 +14,7 @@
 
 **Quality warning:** 277 / 1837 raw matched quotations (15.1%) changed by ≥20%; 4 almost doubled. Promotions and other outliers remain under investigation.
 
-**Matched previous-month same-day change:** -0.80 pp (versus 2026-10-06).
+**All-basket matched previous-month same-day change:** -0.80 pp (versus 2026-10-06).
 
 
 | Category | Quotes | Increases | Decreases | Avg rise | Avg fall |
@@ -34,9 +34,9 @@
 
 Method: matched product **and** store, normalized price, same pack size;
 fresh source (≤1 day), previous month-end price within seven days,
-short-lived reductions excluded **only when a rebound confirms a sale**.
-Current unconfirmed promotions may remain. Excludes extreme changes
-(below −50% or above +100%). Category weighting uses Açık Sepet
+Sale-like V-shaped reductions suppressed only after an observed rebound;
+this heuristic does not prove any promotion. Current sales may remain.
+Excludes extreme changes(below −50% or above +100%). Category weighting uses Açık Sepet
 **research weights**, not official TÜİK/HICP weights.
 Coverage is based on categories with at least five comparable quotes.
 This is not official inflation or the ECB Daily Price Dataset.

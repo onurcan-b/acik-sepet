@@ -1,7 +1,7 @@
 {
   "method": "ECB-inspired matched-store-SKU month-on-month repricing proxy",
   "source": "Açık Sepet v0.4 snapshots from main; no independent scraping",
-  "excluded_confirmed_temporary_sale_quotes": 3170,
+  "excluded_v_shaped_reduction_quote_days": 3170,
   "provisional": true,
   "quality_warning": "Large jumps may be promotion starts/ends or source errors; the dataset cannot independently identify active promotions.",
   "large_moves_20pct_share_unfiltered": 15.079,

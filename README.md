@@ -17,7 +17,7 @@
 | Food repricing breadth (≥10% increases in category) | 43.82% |
 | Research-category weight represented | 100.00% |
 
-**Like-for-like calendar comparison:** -0.80 percentage points versus 2026-10-06
+**Like-for-like calendar comparison (all-basket increase frequency):** -0.80 percentage points versus 2026-10-06
 
 ### Repricing frequency (monthly baseline, daily updates)
 
