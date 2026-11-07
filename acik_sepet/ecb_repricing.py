@@ -171,7 +171,7 @@ def _metrics(returns):
 
 def compute_day(observations, categories, as_of: date, min_category_quotes: int = 5):
     """Produce category rows and weighted food-scope headline, no missing-as-zero."""
-     prev_end = as_of.replace(day=1) - timedelta(days=1)
+    prev_end = as_of.replace(day=1) - timedelta(days=1)
     prev_start = max(prev_end.replace(day=1), prev_end - timedelta(days=7))
     baseline = _latest_quotes(observations, prev_end, prev_start)
     current = _latest_quotes(observations, as_of, max(as_of.replace(day=1),
@@ -229,12 +229,10 @@ def compute_day(observations, categories, as_of: date, min_category_quotes: int 
         relevant = [(weight, stats[field]) for weight, stats in included if stats[field] is not None]
         headline[field] = (sum(weight * value for weight, value in relevant) /
                            sum(weight for weight, _ in relevant)) if relevant else None
-    food = [(weight, stats) for (weight, stats), category in zip(included, [c for c in categories if c["id"] in {row["group_id"] for row in category_rows}]) if category.get("scope") == "food"]
     # Keep the food-only aggregation separate: ECB's comparison concerns food,
     # whereas Açık Sepet's research basket also contains household products.
     food_ids = {c["id"] for c in categories if c.get("scope") == "food"}
     food_rows = [(float(c["weight"]), next(row for row in category_rows if row["group_id"] == c["id"])) for c in categories if c["id"] in food_ids and any(row["group_id"] == c["id"] for row in category_rows)]
-    food_total = sum(w for w, _ in food_rows)
     for field in ("up_frequency_pct", "down_frequency_pct", "avg_increase_pct", "avg_decrease_pct"):
         selected = [(w, row[field]) for w, row in food_rows if row[field] is not None]
         headline["food_" + field] = sum(w * v for w, v in selected) / sum(w for w, _ in selected) if selected else None
@@ -385,7 +383,7 @@ def _refresh_root_readme(latest: dict, quality: dict):
         "Promotion reversals are plausible but not confirmed. "
         "Price-change magnitudes are **not validated as structural repricing**.",
         "",
-        "The 100% category-coverage figure means all 12 categories pass the minimum",
+        "Category-weight coverage means represented categories passed the minimum",
         "of five matched quotes; it **does not** mean a representative full basket.",
         "The sample covers specific supermarket depots, not the Turkish population.",
         "Do not interpret the series as official inflation or as an established",
@@ -423,8 +421,8 @@ def run(snapshot_dir: Path, categories_path: Path, output_dir: Path, update_root
             category_rows.extend(per_category)
     if not headline_rows:
         raise ValueError("No month-on-month matched quotes available; need snapshots in two months")
-    # Compare month-to-date repricing frequency with the immediately prior
-    # completed month's last estimate, where available.
+    # Compare equally elapsed day-of-month windows (e.g. Nov 6 vs Oct 6),
+    # rather than day 6 of a month against the previous month's final day.
     by_date = {row["as_of"]: row for row in headline_rows}
     for row in headline_rows:
         current_day = date.fromisoformat(row["as_of"])
