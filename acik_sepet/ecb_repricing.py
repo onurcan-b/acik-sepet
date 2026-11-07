@@ -297,14 +297,19 @@ def _chart(rows, output: Path):
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
-    dates = [date.fromisoformat(row["as_of"]) for row in rows]
     fig, ax = plt.subplots(figsize=(10, 4.3))
-    ax.plot(dates, [row["up_frequency_pct"] for row in rows],
-            label="Price increases", linewidth=2)
-    ax.plot(dates, [row["down_frequency_pct"] for row in rows],
-            label="Price decreases", linewidth=2)
-    ax.set_title("Açık Sepet · ECB-inspired repricing frequencies (month-to-date)")
-    ax.set_ylabel("% of matched quotes (category-weighted)")
+    # Never join a day in October to the reset at the start of November.
+    for i, month in enumerate(sorted({row["month"] for row in rows})):
+        points = [row for row in rows if row["month"] == month]
+        dates = [date.fromisoformat(row["as_of"]) for row in points]
+        ax.plot(dates, [row["food_up_frequency_pct"] for row in points],
+                label="Food: increased" if i == 0 else None, linewidth=2,
+                marker=".", markersize=4)
+        ax.plot(dates, [row["food_down_frequency_pct"] for row in points],
+                label="Food: decreased" if i == 0 else None, linewidth=2,
+                marker=".", markersize=4)
+    ax.set_title("Food repricing vs prior month-end · each month resets")
+    ax.set_ylabel("Category-weighted % of matched food quotes")
     ax.set_ylim(bottom=0)
     ax.grid(alpha=0.2)
     ax.legend(loc="upper left")
@@ -319,9 +324,11 @@ def _breadth_chart(rows, output: Path):
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
     fig, ax = plt.subplots(figsize=(10, 3.7))
-    dates = [date.fromisoformat(row["as_of"]) for row in rows]
-    ax.plot(dates, [row["breadth_10pct_food_pct"] for row in rows],
-            linewidth=2, color="#1b7666")
+    for month in sorted({row["month"] for row in rows}):
+        points = [row for row in rows if row["month"] == month]
+        dates = [date.fromisoformat(row["as_of"]) for row in points]
+        ax.plot(dates, [row["breadth_10pct_food_pct"] for row in points],
+                linewidth=2, marker=".", markersize=4, color="#1b7666")
     ax.set_title("Food basket weight in categories with 10%+ rising quotes")
     ax.set_ylabel("% of configured food weight")
     ax.set_ylim(0, 100)
@@ -363,7 +370,7 @@ def _refresh_root_readme(latest: dict, quality: dict):
         f"| Food repricing breadth (≥10% increases in category) | {num(latest.get('breadth_10pct_food_pct'))} |",
         f"| Research-category weight represented | {num(latest.get('category_coverage_pct'))} |",
         "",
-        f"**Like-for-like calendar comparison:** {trend}",
+        f"**Like-for-like calendar comparison (all-basket increase frequency):** {trend}",
         "",
         "### Repricing frequency (monthly baseline, daily updates)",
         "",
@@ -445,7 +452,7 @@ def run(snapshot_dir: Path, categories_path: Path, output_dir: Path, update_root
     payload = {
         "method": "ECB-inspired matched-store-SKU month-on-month repricing proxy",
         "source": "Açık Sepet v0.4 snapshots from main; no independent scraping",
-        "excluded_confirmed_temporary_sale_quotes": excluded_count,
+        "excluded_v_shaped_reduction_quote_days": excluded_count,
         "provisional": True,
         "quality_warning": quality["warning"],
         "large_moves_20pct_share_unfiltered": quality["large_moves_20pct_share"],
@@ -482,7 +489,7 @@ def run(snapshot_dir: Path, categories_path: Path, output_dir: Path, update_root
         f"{quality['near_exact_2x_count']} almost doubled. "
         "Promotions and other outliers remain under investigation.",
         "",
-        f"**Matched previous-month same-day change:** "
+        f"**All-basket matched previous-month same-day change:** "
         f"{latest['up_vs_prior_month_same_day_pp']:+.2f} pp "
         f"(versus {latest['prior_month_comparison_date']})."
         if latest['up_vs_prior_month_same_day_pp'] is not None
@@ -504,8 +511,9 @@ def run(snapshot_dir: Path, categories_path: Path, output_dir: Path, update_root
         "",
         "Method: matched product **and** store, normalized price, same pack size;",
         "fresh source (≤1 day), previous month-end price within seven days,",
-        "short-lived reductions excluded **only when a rebound confirms a sale**.",
-        "Current unconfirmed promotions may remain. Excludes extreme changes",
+        "Sale-like V-shaped reductions suppressed only after an observed rebound;",
+        "this heuristic does not prove any promotion. Current sales may remain.",
+        "Excludes extreme changes"
         "(below −50% or above +100%). Category weighting uses Açık Sepet",
         "**research weights**, not official TÜİK/HICP weights.",
         "Coverage is based on categories with at least five comparable quotes.",
