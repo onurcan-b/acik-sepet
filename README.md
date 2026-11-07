@@ -1,4 +1,30 @@
-# Açık Sepet
+# Açık Sepet — ECB Repricing Research
+
+> **Experimental branch:** ECB-inspired daily supermarket price-setting analysis. This branch is separate from the official Açık Sepet v0.4 publication. The results are **provisional**, and large observed price moves require promotion/source verification.
+
+<!-- ECB_RESEARCH_START -->
+## ECB-style repricing indicators
+
+This branch tracks the share of prices going up, down or remaining unchanged, separates frequency and magnitude, and evaluates breadth by food category. Outputs are generated daily from the original main-branch observations with **zero extra supermarket API requests**.
+
+### Repricing frequency
+
+![Price increases and decreases](research/ecb/output/repricing.svg)
+
+### Food repricing breadth
+
+![Food repricing breadth](research/ecb/output/breadth.svg)
+
+**[Research methodology](research/ecb/README.md)** · **[Latest analysis](research/ecb/output/latest.md)** · **[Diagnostics](research/ecb/output/quality.json)** · **[Original ECB study](https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20261102~871cc494e2.en.html)**
+
+<!-- ECB_RESEARCH_END -->
+
+---
+
+## Reference: original Açık Sepet price index
+
+The existing v0.4 index below is a **snapshot of the production project at this branch point**, not the ECB-style research result. [See current production README](https://github.com/onurcan-b/acik-sepet/tree/main#readme).
+
 
 Türkiye'de market ürünlerinin günlük fiyat hareketini izleyen açık, deneysel gösterge.
 
