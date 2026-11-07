@@ -12,6 +12,8 @@ Reference: Osbat, Höynck, Maglione & Wieland (ECB, 2 November 2026),
 - **Breadth:** percentage of the **total configured food-category weight** whose categories have at least 10% increasing quotes (minimum five matched quotes per represented category). A missing category contributes no breadth but remains in the total food-weight denominator.
 - **Early warning:** a provisional month-to-date estimate recalculated for each observed day, plus its difference versus the **same elapsed calendar day in the preceding month** (e.g., November 6 versus October 6), when available. Unmatched periods are never compared.
 
+The frequency chart plots **food-only** movements and does not connect observations across month boundaries: the denominator and previous-month baseline reset at each month start. This is not a continuous daily inflation trend. The food-breadth chart also separates months.
+
 Outputs: [latest report](output/latest.md), [chart](output/repricing.svg), [daily CSV](output/daily_repricing.csv), [category CSV](output/category_repricing.csv), [JSON](output/latest.json), [source-quality audit](output/quality.json), [food breadth chart](output/breadth.svg).
 
 ## Comparison and cleaning rules
