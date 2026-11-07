@@ -54,7 +54,12 @@ jobs:
             --categories "$RUNNER_TEMP/acik-sepet-main/config/categories.json" \
             --output-dir research/ecb/output \
             --update-root-readme
-          git diff --check -- research/ecb/output README.md
+          # Matplotlib SVG path definitions intentionally contain trailing spaces.
+          # Validate text/CSV/JSON only; generated SVG vectors are not prose.
+          git diff --check -- README.md research/ecb/output/latest.md \
+            research/ecb/output/latest.json research/ecb/output/quality.json \
+            research/ecb/output/daily_repricing.csv \
+            research/ecb/output/category_repricing.csv
       - name: Publish only to the research branch
         shell: bash
         run: |
