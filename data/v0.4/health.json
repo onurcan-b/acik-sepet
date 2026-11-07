@@ -9289,27 +9289,91 @@
   },
   {
     "date": "2026-11-07",
-    "rows": 1496,
-    "source_updated_today": 0,
-    "source_within_3_days": 1496,
+    "rows": 1499,
+    "source_updated_today": 1499,
+    "source_within_3_days": 1499,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 1890,
-    "depot_source_updated_today": 0,
+    "depot_observations": 1886,
+    "depot_source_updated_today": 1886,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1195,
-    "auditable_skus": 1496,
+    "single_source_skus": 1203,
+    "auditable_skus": 1499,
     "source_age_days": {
-      "1": 1496
+      "0": 1499
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-11-06",
-    "matched_slots": 1484,
-    "missing_slots": 5,
-    "new_slots": 12,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1478,
+    "missing_slots": 11,
+    "new_slots": 21,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1W9H",
+        "title": "Finish Quantum Özel Seri Bulaşık Makinesi Tableti 50 Adet",
+        "change_pct": 62.64
+      },
+      {
+        "slot_id": "id:0LKE",
+        "title": "Jacobs Monarch Filtre Kahve 500 Gr",
+        "change_pct": 59.99
+      },
+      {
+        "slot_id": "id:01EP",
+        "title": "Ülker Gurme Kaymaklı Tereyağlı Kase Margarin 500 Gr",
+        "change_pct": -39.17
+      },
+      {
+        "slot_id": "id:22N4",
+        "title": "Filiz Mantı Makarna 500 Gr",
+        "change_pct": 32.73
+      },
+      {
+        "slot_id": "id:13F4",
+        "title": "Dove Güzellik Katı Sabun 90 Gr",
+        "change_pct": -31.45
+      },
+      {
+        "slot_id": "id:1MLB",
+        "title": "Duru Duş Katı Sabun 600 Gr",
+        "change_pct": -30.77
+      },
+      {
+        "slot_id": "id:1ODU",
+        "title": "Head & Shoulders Şampuan 330 Ml",
+        "change_pct": -24.9
+      },
+      {
+        "slot_id": "id:1SOX",
+        "title": "Polonez Fıstıklı Salam 90 Gr",
+        "change_pct": -24.46
+      },
+      {
+        "slot_id": "id:1DG2",
+        "title": "Polonez Tütsülenmiş Piliç Jumbo Sosis 320 Gr",
+        "change_pct": -24.33
+      },
+      {
+        "slot_id": "id:19VH",
+        "title": "Niğde Gazoz 1.5 Lt",
+        "change_pct": 23.04
+      },
+      {
+        "slot_id": "id:1V0F",
+        "title": "Sarıkız Gazoz 6x200 Ml",
+        "change_pct": 22.64
+      },
+      {
+        "slot_id": "id:1H8T",
+        "title": "Omo Sıvı Çamaşır Deterjanı 1.5 Lt",
+        "change_pct": -20.08
+      },
+      {
+        "slot_id": "id:033E",
+        "title": "Komili Natürel Sızma Zeytinyağı 1 Lt",
+        "change_pct": 20.07
+      }
+    ],
+    "warnings": []
   }
 ]
