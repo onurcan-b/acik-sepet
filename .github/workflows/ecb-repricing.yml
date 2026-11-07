@@ -7,6 +7,12 @@ on:
   schedule:
     - cron: "47 9 * * *"
   workflow_dispatch:
+  # Also run after scheduler edits, so the first real report is generated
+  # immediately without changing the main collection cron or calling APIs.
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/ecb-repricing.yml'
 
 permissions:
   contents: write
@@ -45,15 +51,16 @@ jobs:
           python -m acik_sepet.ecb_repricing \
             --snapshots-dir "$RUNNER_TEMP/acik-sepet-main/data/v0.4/snapshots" \
             --categories "$RUNNER_TEMP/acik-sepet-main/config/categories.json" \
-            --output-dir research/ecb/output
-          git diff --check -- research/ecb/output
+            --output-dir research/ecb/output \
+            --update-root-readme
+          git diff --check -- research/ecb/output README.md
       - name: Publish only to the research branch
         shell: bash
         run: |
           set -euo pipefail
           git config user.name "acik-sepet-research-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add research/ecb/output/
+          git add research/ecb/output/ README.md
           if git diff --cached --quiet; then
             echo "No new research output"
             exit 0
