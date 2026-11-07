@@ -3,6 +3,7 @@ name: ECB Repricing Research (offline)
 # GitHub Actions schedules only start from the default branch.
 # This small scheduler checks out research/ecb-repricing and never scrapes or
 # updates the published main-branch price index.
+# Charts use food-only repricing and break lines at month boundaries.
 on:
   schedule:
     - cron: "47 9 * * *"
