@@ -132,3 +132,55 @@ def test_full_offline_rebuild_writes_csv_json_and_svg(tmp_path):
     assert (output / "category_repricing.csv").exists()
     assert (output / "repricing.svg").exists()
     assert (output / "latest.md").exists()
+
+
+def test_raw_quality_audit_flags_large_jumps_and_source_concentration():
+    from acik_sepet.ecb_repricing import audit_current_month
+    obs = {
+        date(2026, 10, 31): {
+            _key("a", "depot:migros-1"): ("bread_cereals", 100),
+            _key("b", "depot:migros-1"): ("bread_cereals", 100),
+        },
+        date(2026, 11, 6): {
+            _key("a", "depot:migros-1"): ("bread_cereals", 200),
+            _key("b", "depot:migros-1"): ("bread_cereals", 100),
+        },
+    }
+    audit = audit_current_month(obs, date(2026, 11, 6))
+    assert audit["matched_quotes_before_outlier_exclusion"] == 2
+    assert audit["large_moves_20pct_count"] == 1
+    assert audit["large_moves_20pct_share"] == pytest.approx(50)
+    assert audit["near_exact_2x_count"] == 1
+    assert audit["by_retailer"]["migros"]["matched"] == 2
+
+
+def test_equal_elapsed_month_comparison_and_root_readme_not_mutated(tmp_path):
+    from acik_sepet.ecb_repricing import run
+    snapshots = tmp_path / "snapshots"
+    snapshots.mkdir()
+    categories_file = tmp_path / "categories.json"
+    categories_file.write_text(json.dumps({"categories": CATEGORIES}))
+    cols = ["group", "type_id", "product_key", "quantity", "unit",
+            "source_count", "source_observations"]
+    for day, factor in [
+        ("2026-09-30", 1), ("2026-10-06", 1.2),
+        ("2026-10-31", 1.2), ("2026-11-06", 1.3),
+    ]:
+        with (snapshots / (day + ".csv")).open("w", encoding="utf-8", newline="") as f:
+            writer = csv.DictWriter(f, cols)
+            writer.writeheader()
+            for i in range(5):
+                writer.writerow({
+                    "group": "bread_cereals", "type_id": "rice",
+                    "product_key": f"p{i}", "quantity": 1, "unit": "kg",
+                    "source_count": 1, "source_observations": json.dumps([{
+                        "source_id": f"depot:{i}", "api_unit_price": 100 * factor,
+                        "index_time": day[8:10] + "." + day[5:7] + "." + day[:4] + " 08:00",
+                    }]),
+                })
+    result = run(snapshots, categories_file, tmp_path / "out")
+    latest = result["latest"]
+    assert latest["prior_month_comparison_date"] == "2026-10-06"
+    assert latest["up_vs_prior_month_same_day_pp"] is not None
+    assert (tmp_path / "out" / "breadth.svg").exists()
+    assert (tmp_path / "out" / "quality.json").exists()
