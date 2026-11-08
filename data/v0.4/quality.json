@@ -517583,8 +517583,8 @@
       "common_coverage": 0.7,
       "previous_date": "2026-11-07",
       "headline_types": 81,
-      "headline_skus": 1282,
-      "collected_skus": 1500,
+      "headline_skus": 1271,
+      "collected_skus": 1504,
       "available_types": 99,
       "configured_types": 130,
       "missing_categories": [
@@ -517612,11 +517612,11 @@
           "available_types": 8,
           "contributing_types": 8,
           "configured_types": 12,
-          "contributing_skus": 132,
+          "contributing_skus": 131,
           "previous_date": "2026-11-07",
           "headline_contributor": true,
           "fresh_within_1_day_share": 1.0,
-          "fresh_within_1_day_skus": 132,
+          "fresh_within_1_day_skus": 131,
           "freshness_unknown_skus": 0,
           "source_within_3_days_share": 1.0,
           "future_source_skus": 0
@@ -517669,11 +517669,11 @@
           "available_types": 12,
           "contributing_types": 12,
           "configured_types": 13,
-          "contributing_skus": 199,
+          "contributing_skus": 197,
           "previous_date": "2026-11-07",
           "headline_contributor": true,
           "fresh_within_1_day_share": 1.0,
-          "fresh_within_1_day_skus": 199,
+          "fresh_within_1_day_skus": 197,
           "freshness_unknown_skus": 0,
           "source_within_3_days_share": 1.0,
           "future_source_skus": 0
@@ -517688,11 +517688,11 @@
           "available_types": 4,
           "contributing_types": 4,
           "configured_types": 5,
-          "contributing_skus": 78,
+          "contributing_skus": 76,
           "previous_date": "2026-11-07",
           "headline_contributor": true,
           "fresh_within_1_day_share": 1.0,
-          "fresh_within_1_day_skus": 78,
+          "fresh_within_1_day_skus": 76,
           "freshness_unknown_skus": 0,
           "source_within_3_days_share": 1.0,
           "future_source_skus": 0
@@ -517745,11 +517745,11 @@
           "available_types": 12,
           "contributing_types": 12,
           "configured_types": 12,
-          "contributing_skus": 204,
+          "contributing_skus": 203,
           "previous_date": "2026-11-07",
           "headline_contributor": true,
           "fresh_within_1_day_share": 1.0,
-          "fresh_within_1_day_skus": 204,
+          "fresh_within_1_day_skus": 203,
           "freshness_unknown_skus": 0,
           "source_within_3_days_share": 1.0,
           "future_source_skus": 0
@@ -517764,11 +517764,11 @@
           "available_types": 9,
           "contributing_types": 9,
           "configured_types": 10,
-          "contributing_skus": 161,
+          "contributing_skus": 159,
           "previous_date": "2026-11-07",
           "headline_contributor": true,
           "fresh_within_1_day_share": 1.0,
-          "fresh_within_1_day_skus": 161,
+          "fresh_within_1_day_skus": 159,
           "freshness_unknown_skus": 0,
           "source_within_3_days_share": 1.0,
           "future_source_skus": 0
@@ -517821,11 +517821,11 @@
           "available_types": 10,
           "contributing_types": 10,
           "configured_types": 11,
-          "contributing_skus": 189,
+          "contributing_skus": 186,
           "previous_date": "2026-11-07",
           "headline_contributor": true,
           "fresh_within_1_day_share": 1.0,
-          "fresh_within_1_day_skus": 189,
+          "fresh_within_1_day_skus": 186,
           "freshness_unknown_skus": 0,
           "source_within_3_days_share": 1.0,
           "future_source_skus": 0
@@ -517859,8 +517859,8 @@
             "primary": {
               "status": "complete",
               "pages": 3,
-              "raw_results": 51,
-              "unique_results": 51,
+              "raw_results": 54,
+              "unique_results": 54,
               "exhausted": true,
               "reason": "exhausted"
             },
@@ -517888,7 +517888,7 @@
             "accepted_candidates": 1,
             "rejections": {
               "category": 0,
-              "title": 44,
+              "title": 47,
               "quantity": 5,
               "unit_price": 1,
               "no_offers": 0
@@ -517920,7 +517920,7 @@
           "label": "Tost ekmeği",
           "group": "bread_cereals",
           "index": null,
-          "observed_skus": 5,
+          "observed_skus": 6,
           "matched_skus": 4,
           "min_skus": 5,
           "target_skus": 20,
@@ -517940,14 +517940,14 @@
             "primary": {
               "status": "complete",
               "pages": 1,
-              "raw_results": 11,
-              "unique_results": 11,
+              "raw_results": 12,
+              "unique_results": 12,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 9,
+            "accepted_candidates": 10,
             "rejections": {
               "category": 0,
               "title": 2,
@@ -517958,8 +517958,8 @@
             "panel_size": 13,
             "target_skus": 20,
             "min_skus": 5,
-            "observed_skus": 5,
-            "missing_skus": 8,
+            "observed_skus": 6,
+            "missing_skus": 7,
             "lost_depot_connections": 4,
             "ready_candidates": 0,
             "insufficient_observed_products": false,
@@ -518002,18 +518002,18 @@
             "primary": {
               "status": "complete",
               "pages": 2,
-              "raw_results": 27,
-              "unique_results": 27,
+              "raw_results": 29,
+              "unique_results": 29,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 13,
+            "accepted_candidates": 14,
             "rejections": {
               "category": 0,
               "title": 12,
-              "quantity": 2,
+              "quantity": 3,
               "unit_price": 0,
               "no_offers": 0
             },
@@ -518022,7 +518022,7 @@
             "min_skus": 5,
             "observed_skus": 6,
             "missing_skus": 4,
-            "lost_depot_connections": 1,
+            "lost_depot_connections": 2,
             "ready_candidates": 10,
             "insufficient_observed_products": false,
             "unavailable_replacements": 0,
@@ -518045,13 +518045,13 @@
           "group": "bread_cereals",
           "index": 98.1761,
           "observed_skus": 20,
-          "matched_skus": 20,
+          "matched_skus": 19,
           "min_skus": 6,
           "target_skus": 24,
-          "coverage": 1.0,
-          "common_coverage": 1.0,
+          "coverage": 0.95,
+          "common_coverage": 0.95,
           "previous_date": "2026-11-07",
-          "contributing_skus": 20,
+          "contributing_skus": 19,
           "headline_contributor": true,
           "reasons": [
             "lost_depot_connections",
@@ -518061,14 +518061,14 @@
             "primary": {
               "status": "complete",
               "pages": 2,
-              "raw_results": 40,
-              "unique_results": 40,
+              "raw_results": 41,
+              "unique_results": 41,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 40,
+            "accepted_candidates": 41,
             "rejections": {
               "category": 0,
               "title": 0,
@@ -518093,7 +518093,7 @@
           },
           "candidate_readiness": 23,
           "fresh_within_1_day_share": 1.0,
-          "fresh_within_1_day_skus": 20,
+          "fresh_within_1_day_skus": 19,
           "freshness_unknown_skus": 0,
           "source_within_3_days_share": 1.0,
           "future_source_skus": 0
@@ -518120,14 +518120,14 @@
             "primary": {
               "status": "complete",
               "pages": 5,
-              "raw_results": 113,
-              "unique_results": 113,
+              "raw_results": 111,
+              "unique_results": 111,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 113,
+            "accepted_candidates": 111,
             "rejections": {
               "category": 0,
               "title": 0,
@@ -518141,7 +518141,7 @@
             "observed_skus": 21,
             "missing_skus": 9,
             "lost_depot_connections": 7,
-            "ready_candidates": 91,
+            "ready_candidates": 89,
             "insufficient_observed_products": false,
             "unavailable_replacements": 0,
             "below_target": false,
@@ -518150,7 +518150,7 @@
             "turnover_allowance": 6,
             "absence_complete": true
           },
-          "candidate_readiness": 91,
+          "candidate_readiness": 89,
           "fresh_within_1_day_share": 1.0,
           "fresh_within_1_day_skus": 18,
           "freshness_unknown_skus": 0,
@@ -518162,7 +518162,7 @@
           "label": "Bulgur",
           "group": "bread_cereals",
           "index": 110.4037,
-          "observed_skus": 19,
+          "observed_skus": 21,
           "matched_skus": 19,
           "min_skus": 7,
           "target_skus": 26,
@@ -518173,21 +518173,20 @@
           "headline_contributor": true,
           "reasons": [
             "lost_depot_connections",
-            "unavailable_replacements",
             "below_target"
           ],
           "collection": {
             "primary": {
               "status": "complete",
               "pages": 3,
-              "raw_results": 65,
-              "unique_results": 65,
+              "raw_results": 67,
+              "unique_results": 67,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 65,
+            "accepted_candidates": 67,
             "rejections": {
               "category": 0,
               "title": 0,
@@ -518198,19 +518197,19 @@
             "panel_size": 26,
             "target_skus": 26,
             "min_skus": 7,
-            "observed_skus": 21,
-            "missing_skus": 5,
-            "lost_depot_connections": 4,
-            "ready_candidates": 42,
+            "observed_skus": 23,
+            "missing_skus": 3,
+            "lost_depot_connections": 2,
+            "ready_candidates": 44,
             "insufficient_observed_products": false,
-            "unavailable_replacements": 1,
+            "unavailable_replacements": 0,
             "below_target": false,
             "additions_today": 1,
             "replacements_today": 1,
             "turnover_allowance": 6,
             "absence_complete": true
           },
-          "candidate_readiness": 42,
+          "candidate_readiness": 44,
           "fresh_within_1_day_share": 1.0,
           "fresh_within_1_day_skus": 19,
           "freshness_unknown_skus": 0,
@@ -518323,7 +518322,7 @@
             "observed_skus": 29,
             "missing_skus": 1,
             "lost_depot_connections": 1,
-            "ready_candidates": 106,
+            "ready_candidates": 105,
             "insufficient_observed_products": false,
             "unavailable_replacements": 0,
             "below_target": false,
@@ -518332,7 +518331,7 @@
             "turnover_allowance": 6,
             "absence_complete": false
           },
-          "candidate_readiness": 106,
+          "candidate_readiness": 105,
           "fresh_within_1_day_share": 1.0,
           "fresh_within_1_day_skus": 21,
           "freshness_unknown_skus": 0,
@@ -518606,8 +518605,8 @@
             "primary": {
               "status": "complete",
               "pages": 1,
-              "raw_results": 13,
-              "unique_results": 13,
+              "raw_results": 14,
+              "unique_results": 14,
               "exhausted": true,
               "reason": "exhausted"
             },
@@ -518615,15 +518614,15 @@
               {
                 "status": "complete",
                 "pages": 1,
-                "raw_results": 13,
-                "unique_results": 13,
+                "raw_results": 14,
+                "unique_results": 14,
                 "exhausted": true,
                 "reason": "exhausted",
                 "query": "kıyma"
               }
             ],
             "complete": true,
-            "accepted_candidates": 9,
+            "accepted_candidates": 10,
             "rejections": {
               "category": 0,
               "title": 4,
@@ -518634,8 +518633,8 @@
             "panel_size": 11,
             "target_skus": 20,
             "min_skus": 5,
-            "observed_skus": 8,
-            "missing_skus": 4,
+            "observed_skus": 9,
+            "missing_skus": 3,
             "lost_depot_connections": 1,
             "ready_candidates": 2,
             "insufficient_observed_products": false,
@@ -518685,8 +518684,8 @@
               {
                 "status": "complete",
                 "pages": 1,
-                "raw_results": 2,
-                "unique_results": 2,
+                "raw_results": 3,
+                "unique_results": 3,
                 "exhausted": true,
                 "reason": "exhausted",
                 "query": "dana sote"
@@ -518710,22 +518709,22 @@
               "unit_price": 0,
               "no_offers": 0
             },
-            "panel_size": 13,
+            "panel_size": 12,
             "target_skus": 20,
             "min_skus": 5,
             "observed_skus": 7,
-            "missing_skus": 6,
+            "missing_skus": 5,
             "lost_depot_connections": 4,
-            "ready_candidates": 3,
+            "ready_candidates": 2,
             "insufficient_observed_products": false,
             "unavailable_replacements": 0,
             "below_target": true,
-            "additions_today": 3,
+            "additions_today": 2,
             "replacements_today": 0,
             "turnover_allowance": 4,
             "absence_complete": true
           },
-          "candidate_readiness": 3,
+          "candidate_readiness": 2,
           "fresh_within_1_day_share": null,
           "fresh_within_1_day_skus": null,
           "freshness_unknown_skus": 0,
@@ -518756,27 +518755,27 @@
           "collection": {
             "primary": {
               "status": "complete",
-              "pages": 2,
-              "raw_results": 25,
-              "unique_results": 25,
+              "pages": 1,
+              "raw_results": 24,
+              "unique_results": 24,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [
               {
                 "status": "complete",
-                "pages": 2,
-                "raw_results": 25,
-                "unique_results": 25,
+                "pages": 1,
+                "raw_results": 24,
+                "unique_results": 24,
                 "exhausted": true,
                 "reason": "exhausted",
                 "query": "göğüs"
               },
               {
                 "status": "complete",
-                "pages": 2,
-                "raw_results": 25,
-                "unique_results": 25,
+                "pages": 1,
+                "raw_results": 24,
+                "unique_results": 24,
                 "exhausted": true,
                 "reason": "exhausted",
                 "query": "tavuk"
@@ -518786,7 +518785,7 @@
             "accepted_candidates": 1,
             "rejections": {
               "category": 0,
-              "title": 24,
+              "title": 23,
               "quantity": 0,
               "unit_price": 0,
               "no_offers": 0
@@ -518837,8 +518836,8 @@
             "primary": {
               "status": "complete",
               "pages": 2,
-              "raw_results": 33,
-              "unique_results": 33,
+              "raw_results": 34,
+              "unique_results": 34,
               "exhausted": true,
               "reason": "exhausted"
             },
@@ -518866,7 +518865,7 @@
             "accepted_candidates": 3,
             "rejections": {
               "category": 0,
-              "title": 30,
+              "title": 31,
               "quantity": 0,
               "unit_price": 0,
               "no_offers": 0
@@ -518908,7 +518907,6 @@
           "contributing_skus": 0,
           "headline_contributor": false,
           "reasons": [
-            "lost_depot_connections",
             "unavailable_replacements",
             "rejected_title",
             "below_target",
@@ -518955,9 +518953,9 @@
             "panel_size": 16,
             "target_skus": 16,
             "min_skus": 4,
-            "observed_skus": 12,
-            "missing_skus": 4,
-            "lost_depot_connections": 1,
+            "observed_skus": 13,
+            "missing_skus": 3,
+            "lost_depot_connections": 0,
             "ready_candidates": 4,
             "insufficient_observed_products": false,
             "unavailable_replacements": 1,
@@ -519007,8 +519005,8 @@
               {
                 "status": "complete",
                 "pages": 1,
-                "raw_results": 20,
-                "unique_results": 20,
+                "raw_results": 19,
+                "unique_results": 19,
                 "exhausted": true,
                 "reason": "exhausted",
                 "query": "hindi"
@@ -519024,7 +519022,7 @@
               }
             ],
             "complete": true,
-            "accepted_candidates": 13,
+            "accepted_candidates": 12,
             "rejections": {
               "category": 0,
               "title": 7,
@@ -519038,7 +519036,7 @@
             "observed_skus": 4,
             "missing_skus": 5,
             "lost_depot_connections": 2,
-            "ready_candidates": 11,
+            "ready_candidates": 10,
             "insufficient_observed_products": false,
             "unavailable_replacements": 0,
             "below_target": true,
@@ -519047,7 +519045,7 @@
             "turnover_allowance": 4,
             "absence_complete": true
           },
-          "candidate_readiness": 11,
+          "candidate_readiness": 10,
           "fresh_within_1_day_share": null,
           "fresh_within_1_day_skus": null,
           "freshness_unknown_skus": 0,
@@ -519098,7 +519096,7 @@
             "observed_skus": 23,
             "missing_skus": 5,
             "lost_depot_connections": 2,
-            "ready_candidates": 124,
+            "ready_candidates": 123,
             "insufficient_observed_products": false,
             "unavailable_replacements": 0,
             "below_target": false,
@@ -519107,7 +519105,7 @@
             "turnover_allowance": 6,
             "absence_complete": true
           },
-          "candidate_readiness": 124,
+          "candidate_readiness": 123,
           "fresh_within_1_day_share": 1.0,
           "fresh_within_1_day_skus": 20,
           "freshness_unknown_skus": 0,
@@ -519119,12 +519117,12 @@
           "label": "Salam",
           "group": "meat",
           "index": 102.4258,
-          "observed_skus": 23,
-          "matched_skus": 23,
+          "observed_skus": 22,
+          "matched_skus": 22,
           "min_skus": 6,
           "target_skus": 24,
-          "coverage": 1.0,
-          "common_coverage": 1.0,
+          "coverage": 0.9565,
+          "common_coverage": 0.956522,
           "previous_date": "2026-11-07",
           "contributing_skus": 0,
           "headline_contributor": false,
@@ -519138,14 +519136,14 @@
             "primary": {
               "status": "complete",
               "pages": 4,
-              "raw_results": 89,
-              "unique_results": 89,
+              "raw_results": 88,
+              "unique_results": 88,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 89,
+            "accepted_candidates": 88,
             "rejections": {
               "category": 0,
               "title": 0,
@@ -519156,10 +519154,10 @@
             "panel_size": 24,
             "target_skus": 24,
             "min_skus": 6,
-            "observed_skus": 21,
-            "missing_skus": 3,
-            "lost_depot_connections": 3,
-            "ready_candidates": 65,
+            "observed_skus": 20,
+            "missing_skus": 4,
+            "lost_depot_connections": 4,
+            "ready_candidates": 64,
             "insufficient_observed_products": false,
             "unavailable_replacements": 1,
             "below_target": false,
@@ -519168,9 +519166,9 @@
             "turnover_allowance": 5,
             "absence_complete": true
           },
-          "candidate_readiness": 65,
+          "candidate_readiness": 64,
           "fresh_within_1_day_share": 1.0,
-          "fresh_within_1_day_skus": 23,
+          "fresh_within_1_day_skus": 22,
           "freshness_unknown_skus": 0,
           "source_within_3_days_share": 1.0,
           "future_source_skus": 0
@@ -519180,12 +519178,12 @@
           "label": "Sosis",
           "group": "meat",
           "index": 103.2137,
-          "observed_skus": 20,
-          "matched_skus": 20,
+          "observed_skus": 19,
+          "matched_skus": 19,
           "min_skus": 6,
           "target_skus": 24,
-          "coverage": 1.0,
-          "common_coverage": 1.0,
+          "coverage": 0.95,
+          "common_coverage": 0.95,
           "previous_date": "2026-11-07",
           "contributing_skus": 0,
           "headline_contributor": false,
@@ -519199,14 +519197,14 @@
             "primary": {
               "status": "complete",
               "pages": 2,
-              "raw_results": 45,
-              "unique_results": 45,
+              "raw_results": 46,
+              "unique_results": 46,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 45,
+            "accepted_candidates": 46,
             "rejections": {
               "category": 0,
               "title": 0,
@@ -519217,10 +519215,10 @@
             "panel_size": 24,
             "target_skus": 24,
             "min_skus": 6,
-            "observed_skus": 21,
-            "missing_skus": 3,
-            "lost_depot_connections": 3,
-            "ready_candidates": 21,
+            "observed_skus": 19,
+            "missing_skus": 5,
+            "lost_depot_connections": 4,
+            "ready_candidates": 23,
             "insufficient_observed_products": false,
             "unavailable_replacements": 1,
             "below_target": false,
@@ -519229,9 +519227,9 @@
             "turnover_allowance": 5,
             "absence_complete": true
           },
-          "candidate_readiness": 21,
+          "candidate_readiness": 23,
           "fresh_within_1_day_share": 1.0,
-          "fresh_within_1_day_skus": 20,
+          "fresh_within_1_day_skus": 19,
           "freshness_unknown_skus": 0,
           "source_within_3_days_share": 1.0,
           "future_source_skus": 0
@@ -519432,7 +519430,7 @@
           "label": "Somon füme",
           "group": "fish",
           "index": null,
-          "observed_skus": 3,
+          "observed_skus": 2,
           "matched_skus": 1,
           "min_skus": 2,
           "target_skus": 10,
@@ -519469,7 +519467,7 @@
             "target_skus": 10,
             "min_skus": 2,
             "observed_skus": 4,
-            "missing_skus": 4,
+            "missing_skus": 3,
             "lost_depot_connections": 1,
             "ready_candidates": 3,
             "insufficient_observed_products": false,
@@ -519525,22 +519523,22 @@
               "unit_price": 0,
               "no_offers": 0
             },
-            "panel_size": 6,
+            "panel_size": 7,
             "target_skus": 10,
             "min_skus": 2,
-            "observed_skus": 4,
+            "observed_skus": 5,
             "missing_skus": 2,
             "lost_depot_connections": 1,
-            "ready_candidates": 1,
+            "ready_candidates": 2,
             "insufficient_observed_products": false,
             "unavailable_replacements": 0,
             "below_target": true,
-            "additions_today": 1,
+            "additions_today": 2,
             "replacements_today": 0,
             "turnover_allowance": 2,
             "absence_complete": true
           },
-          "candidate_readiness": 1,
+          "candidate_readiness": 2,
           "fresh_within_1_day_share": 1.0,
           "fresh_within_1_day_skus": 4,
           "freshness_unknown_skus": 0,
@@ -519668,7 +519666,7 @@
           "label": "İçme sütü",
           "group": "dairy_eggs",
           "index": 99.6848,
-          "observed_skus": 18,
+          "observed_skus": 19,
           "matched_skus": 18,
           "min_skus": 8,
           "target_skus": 30,
@@ -519695,10 +519693,10 @@
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 111,
+            "accepted_candidates": 110,
             "rejections": {
               "category": 0,
-              "title": 89,
+              "title": 90,
               "quantity": 0,
               "unit_price": 0,
               "no_offers": 0
@@ -519709,16 +519707,16 @@
             "observed_skus": 23,
             "missing_skus": 7,
             "lost_depot_connections": 3,
-            "ready_candidates": 90,
+            "ready_candidates": 89,
             "insufficient_observed_products": false,
-            "unavailable_replacements": 3,
+            "unavailable_replacements": 2,
             "below_target": false,
             "additions_today": 5,
             "replacements_today": 0,
             "turnover_allowance": 6,
             "absence_complete": false
           },
-          "candidate_readiness": 90,
+          "candidate_readiness": 89,
           "fresh_within_1_day_share": 1.0,
           "fresh_within_1_day_skus": 18,
           "freshness_unknown_skus": 0,
@@ -519730,7 +519728,7 @@
           "label": "Laktozsuz süt",
           "group": "dairy_eggs",
           "index": 100.5786,
-          "observed_skus": 11,
+          "observed_skus": 12,
           "matched_skus": 11,
           "min_skus": 5,
           "target_skus": 20,
@@ -519767,9 +519765,9 @@
             "panel_size": 17,
             "target_skus": 20,
             "min_skus": 5,
-            "observed_skus": 10,
-            "missing_skus": 7,
-            "lost_depot_connections": 6,
+            "observed_skus": 11,
+            "missing_skus": 6,
+            "lost_depot_connections": 5,
             "ready_candidates": 1,
             "insufficient_observed_products": false,
             "unavailable_replacements": 3,
@@ -519932,14 +519930,14 @@
             "primary": {
               "status": "complete",
               "pages": 3,
-              "raw_results": 57,
-              "unique_results": 57,
+              "raw_results": 58,
+              "unique_results": 58,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 57,
+            "accepted_candidates": 58,
             "rejections": {
               "category": 0,
               "title": 0,
@@ -519953,7 +519951,7 @@
             "observed_skus": 18,
             "missing_skus": 6,
             "lost_depot_connections": 5,
-            "ready_candidates": 34,
+            "ready_candidates": 35,
             "insufficient_observed_products": false,
             "unavailable_replacements": 1,
             "below_target": false,
@@ -519962,7 +519960,7 @@
             "turnover_allowance": 5,
             "absence_complete": true
           },
-          "candidate_readiness": 34,
+          "candidate_readiness": 35,
           "fresh_within_1_day_share": 1.0,
           "fresh_within_1_day_skus": 18,
           "freshness_unknown_skus": 0,
@@ -519993,17 +519991,17 @@
             "primary": {
               "status": "complete",
               "pages": 6,
-              "raw_results": 132,
-              "unique_results": 132,
+              "raw_results": 135,
+              "unique_results": 135,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 67,
+            "accepted_candidates": 68,
             "rejections": {
               "category": 0,
-              "title": 65,
+              "title": 67,
               "quantity": 0,
               "unit_price": 0,
               "no_offers": 0
@@ -520096,14 +520094,14 @@
           "label": "Kaşar peyniri",
           "group": "dairy_eggs",
           "index": 102.995,
-          "observed_skus": 21,
-          "matched_skus": 21,
+          "observed_skus": 20,
+          "matched_skus": 20,
           "min_skus": 8,
           "target_skus": 30,
-          "coverage": 1.0,
-          "common_coverage": 1.0,
+          "coverage": 0.9524,
+          "common_coverage": 0.952381,
           "previous_date": "2026-11-07",
-          "contributing_skus": 21,
+          "contributing_skus": 20,
           "headline_contributor": true,
           "reasons": [
             "lost_depot_connections",
@@ -520113,15 +520111,15 @@
           "collection": {
             "primary": {
               "status": "complete",
-              "pages": 4,
-              "raw_results": 99,
-              "unique_results": 99,
+              "pages": 5,
+              "raw_results": 100,
+              "unique_results": 100,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 95,
+            "accepted_candidates": 96,
             "rejections": {
               "category": 0,
               "title": 4,
@@ -520132,10 +520130,10 @@
             "panel_size": 30,
             "target_skus": 30,
             "min_skus": 8,
-            "observed_skus": 27,
-            "missing_skus": 3,
-            "lost_depot_connections": 3,
-            "ready_candidates": 71,
+            "observed_skus": 26,
+            "missing_skus": 4,
+            "lost_depot_connections": 4,
+            "ready_candidates": 72,
             "insufficient_observed_products": false,
             "unavailable_replacements": 0,
             "below_target": false,
@@ -520144,9 +520142,9 @@
             "turnover_allowance": 6,
             "absence_complete": true
           },
-          "candidate_readiness": 71,
+          "candidate_readiness": 72,
           "fresh_within_1_day_share": 1.0,
-          "fresh_within_1_day_skus": 21,
+          "fresh_within_1_day_skus": 20,
           "freshness_unknown_skus": 0,
           "source_within_3_days_share": 1.0,
           "future_source_skus": 0
@@ -520235,8 +520233,8 @@
             "primary": {
               "status": "complete",
               "pages": 3,
-              "raw_results": 51,
-              "unique_results": 51,
+              "raw_results": 52,
+              "unique_results": 52,
               "exhausted": true,
               "reason": "exhausted"
             },
@@ -520245,7 +520243,7 @@
             "accepted_candidates": 15,
             "rejections": {
               "category": 0,
-              "title": 36,
+              "title": 37,
               "quantity": 0,
               "unit_price": 0,
               "no_offers": 0
@@ -520338,14 +520336,14 @@
           "label": "Yumurta",
           "group": "dairy_eggs",
           "index": 109.1896,
-          "observed_skus": 21,
-          "matched_skus": 21,
+          "observed_skus": 20,
+          "matched_skus": 20,
           "min_skus": 8,
           "target_skus": 30,
-          "coverage": 1.0,
-          "common_coverage": 1.0,
+          "coverage": 0.9524,
+          "common_coverage": 0.952381,
           "previous_date": "2026-11-07",
-          "contributing_skus": 21,
+          "contributing_skus": 20,
           "headline_contributor": true,
           "reasons": [
             "rejected_unit_price",
@@ -520355,14 +520353,14 @@
             "primary": {
               "status": "complete",
               "pages": 3,
-              "raw_results": 53,
-              "unique_results": 53,
+              "raw_results": 50,
+              "unique_results": 50,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 52,
+            "accepted_candidates": 49,
             "rejections": {
               "category": 0,
               "title": 0,
@@ -520373,10 +520371,10 @@
             "panel_size": 30,
             "target_skus": 30,
             "min_skus": 8,
-            "observed_skus": 29,
-            "missing_skus": 5,
+            "observed_skus": 27,
+            "missing_skus": 6,
             "lost_depot_connections": 0,
-            "ready_candidates": 28,
+            "ready_candidates": 27,
             "insufficient_observed_products": false,
             "unavailable_replacements": 0,
             "below_target": false,
@@ -520385,9 +520383,9 @@
             "turnover_allowance": 6,
             "absence_complete": true
           },
-          "candidate_readiness": 28,
+          "candidate_readiness": 27,
           "fresh_within_1_day_share": 1.0,
-          "fresh_within_1_day_skus": 21,
+          "fresh_within_1_day_skus": 20,
           "freshness_unknown_skus": 0,
           "source_within_3_days_share": 1.0,
           "future_source_skus": 0
@@ -520458,14 +520456,14 @@
           "label": "Ayçiçek yağı",
           "group": "oils_fats",
           "index": 98.8889,
-          "observed_skus": 22,
-          "matched_skus": 22,
+          "observed_skus": 21,
+          "matched_skus": 21,
           "min_skus": 8,
           "target_skus": 30,
-          "coverage": 1.0,
-          "common_coverage": 1.0,
+          "coverage": 0.9545,
+          "common_coverage": 0.954545,
           "previous_date": "2026-11-07",
-          "contributing_skus": 22,
+          "contributing_skus": 21,
           "headline_contributor": true,
           "reasons": [
             "lost_depot_connections",
@@ -520476,14 +520474,14 @@
             "primary": {
               "status": "complete",
               "pages": 2,
-              "raw_results": 45,
-              "unique_results": 45,
+              "raw_results": 44,
+              "unique_results": 44,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 44,
+            "accepted_candidates": 43,
             "rejections": {
               "category": 0,
               "title": 1,
@@ -520496,19 +520494,19 @@
             "min_skus": 8,
             "observed_skus": 27,
             "missing_skus": 5,
-            "lost_depot_connections": 2,
-            "ready_candidates": 20,
+            "lost_depot_connections": 3,
+            "ready_candidates": 19,
             "insufficient_observed_products": false,
             "unavailable_replacements": 0,
             "below_target": false,
             "additions_today": 5,
-            "replacements_today": 0,
+            "replacements_today": 1,
             "turnover_allowance": 6,
             "absence_complete": true
           },
-          "candidate_readiness": 20,
+          "candidate_readiness": 19,
           "fresh_within_1_day_share": 1.0,
-          "fresh_within_1_day_skus": 22,
+          "fresh_within_1_day_skus": 21,
           "freshness_unknown_skus": 0,
           "source_within_3_days_share": 1.0,
           "future_source_skus": 0
@@ -520519,13 +520517,13 @@
           "group": "oils_fats",
           "index": 91.3101,
           "observed_skus": 19,
-          "matched_skus": 19,
+          "matched_skus": 18,
           "min_skus": 8,
           "target_skus": 30,
-          "coverage": 1.0,
-          "common_coverage": 1.0,
+          "coverage": 0.9474,
+          "common_coverage": 0.947368,
           "previous_date": "2026-11-07",
-          "contributing_skus": 19,
+          "contributing_skus": 18,
           "headline_contributor": true,
           "reasons": [
             "lost_depot_connections",
@@ -520535,14 +520533,14 @@
             "primary": {
               "status": "complete",
               "pages": 3,
-              "raw_results": 73,
-              "unique_results": 73,
+              "raw_results": 72,
+              "unique_results": 72,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 73,
+            "accepted_candidates": 72,
             "rejections": {
               "category": 0,
               "title": 0,
@@ -520553,8 +520551,8 @@
             "panel_size": 30,
             "target_skus": 30,
             "min_skus": 8,
-            "observed_skus": 22,
-            "missing_skus": 8,
+            "observed_skus": 21,
+            "missing_skus": 9,
             "lost_depot_connections": 5,
             "ready_candidates": 52,
             "insufficient_observed_products": false,
@@ -520567,7 +520565,7 @@
           },
           "candidate_readiness": 52,
           "fresh_within_1_day_share": 1.0,
-          "fresh_within_1_day_skus": 19,
+          "fresh_within_1_day_skus": 18,
           "freshness_unknown_skus": 0,
           "source_within_3_days_share": 1.0,
           "future_source_skus": 0
@@ -520577,7 +520575,7 @@
           "label": "Tereyağı",
           "group": "oils_fats",
           "index": 99.1811,
-          "observed_skus": 19,
+          "observed_skus": 20,
           "matched_skus": 19,
           "min_skus": 8,
           "target_skus": 30,
@@ -520588,21 +520586,22 @@
           "headline_contributor": true,
           "reasons": [
             "lost_depot_connections",
+            "unavailable_replacements",
             "rejected_title",
             "below_target"
           ],
           "collection": {
             "primary": {
               "status": "complete",
-              "pages": 4,
-              "raw_results": 75,
-              "unique_results": 75,
+              "pages": 3,
+              "raw_results": 74,
+              "unique_results": 74,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 64,
+            "accepted_candidates": 63,
             "rejections": {
               "category": 0,
               "title": 11,
@@ -520615,17 +520614,17 @@
             "min_skus": 8,
             "observed_skus": 24,
             "missing_skus": 6,
-            "lost_depot_connections": 7,
-            "ready_candidates": 39,
+            "lost_depot_connections": 6,
+            "ready_candidates": 38,
             "insufficient_observed_products": false,
-            "unavailable_replacements": 0,
+            "unavailable_replacements": 1,
             "below_target": false,
             "additions_today": 5,
-            "replacements_today": 1,
+            "replacements_today": 0,
             "turnover_allowance": 6,
             "absence_complete": true
           },
-          "candidate_readiness": 39,
+          "candidate_readiness": 38,
           "fresh_within_1_day_share": 1.0,
           "fresh_within_1_day_skus": 19,
           "freshness_unknown_skus": 0,
@@ -520656,14 +520655,14 @@
             "primary": {
               "status": "complete",
               "pages": 2,
-              "raw_results": 49,
-              "unique_results": 49,
+              "raw_results": 48,
+              "unique_results": 48,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 43,
+            "accepted_candidates": 42,
             "rejections": {
               "category": 0,
               "title": 5,
@@ -520677,7 +520676,7 @@
             "observed_skus": 18,
             "missing_skus": 4,
             "lost_depot_connections": 2,
-            "ready_candidates": 23,
+            "ready_candidates": 22,
             "insufficient_observed_products": false,
             "unavailable_replacements": 0,
             "below_target": false,
@@ -520686,7 +520685,7 @@
             "turnover_allowance": 5,
             "absence_complete": true
           },
-          "candidate_readiness": 23,
+          "candidate_readiness": 22,
           "fresh_within_1_day_share": 1.0,
           "fresh_within_1_day_skus": 18,
           "freshness_unknown_skus": 0,
@@ -520843,8 +520842,8 @@
             "primary": {
               "status": "complete",
               "pages": 1,
-              "raw_results": 9,
-              "unique_results": 9,
+              "raw_results": 8,
+              "unique_results": 8,
               "exhausted": true,
               "reason": "exhausted"
             },
@@ -520852,15 +520851,15 @@
               {
                 "status": "complete",
                 "pages": 1,
-                "raw_results": 9,
-                "unique_results": 9,
+                "raw_results": 8,
+                "unique_results": 8,
                 "exhausted": true,
                 "reason": "exhausted",
                 "query": "elma"
               }
             ],
             "complete": true,
-            "accepted_candidates": 9,
+            "accepted_candidates": 8,
             "rejections": {
               "category": 0,
               "title": 0,
@@ -520874,7 +520873,7 @@
             "observed_skus": 8,
             "missing_skus": 0,
             "lost_depot_connections": 0,
-            "ready_candidates": 4,
+            "ready_candidates": 3,
             "insufficient_observed_products": false,
             "unavailable_replacements": 0,
             "below_target": true,
@@ -520883,7 +520882,7 @@
             "turnover_allowance": 3,
             "absence_complete": true
           },
-          "candidate_readiness": 4,
+          "candidate_readiness": 3,
           "fresh_within_1_day_share": 1.0,
           "fresh_within_1_day_skus": 5,
           "freshness_unknown_skus": 0,
@@ -521882,8 +521881,8 @@
             "primary": {
               "status": "complete",
               "pages": 1,
-              "raw_results": 12,
-              "unique_results": 12,
+              "raw_results": 13,
+              "unique_results": 13,
               "exhausted": true,
               "reason": "exhausted"
             },
@@ -521891,15 +521890,15 @@
               {
                 "status": "complete",
                 "pages": 1,
-                "raw_results": 12,
-                "unique_results": 12,
+                "raw_results": 13,
+                "unique_results": 13,
                 "exhausted": true,
                 "reason": "exhausted",
                 "query": "biber"
               }
             ],
             "complete": true,
-            "accepted_candidates": 11,
+            "accepted_candidates": 12,
             "rejections": {
               "category": 0,
               "title": 0,
@@ -521913,7 +521912,7 @@
             "observed_skus": 8,
             "missing_skus": 4,
             "lost_depot_connections": 1,
-            "ready_candidates": 4,
+            "ready_candidates": 5,
             "insufficient_observed_products": false,
             "unavailable_replacements": 1,
             "below_target": false,
@@ -521922,7 +521921,7 @@
             "turnover_allowance": 3,
             "absence_complete": true
           },
-          "candidate_readiness": 4,
+          "candidate_readiness": 5,
           "fresh_within_1_day_share": 1.0,
           "fresh_within_1_day_skus": 8,
           "freshness_unknown_skus": 0,
@@ -522775,7 +522774,7 @@
           "label": "Toz şeker",
           "group": "sugar_snacks",
           "index": 108.4382,
-          "observed_skus": 17,
+          "observed_skus": 18,
           "matched_skus": 17,
           "min_skus": 6,
           "target_skus": 24,
@@ -522812,9 +522811,9 @@
             "panel_size": 24,
             "target_skus": 24,
             "min_skus": 6,
-            "observed_skus": 20,
-            "missing_skus": 4,
-            "lost_depot_connections": 6,
+            "observed_skus": 21,
+            "missing_skus": 3,
+            "lost_depot_connections": 5,
             "ready_candidates": 21,
             "insufficient_observed_products": false,
             "unavailable_replacements": 1,
@@ -522957,7 +522956,7 @@
           "label": "Çikolata",
           "group": "sugar_snacks",
           "index": 105.9188,
-          "observed_skus": 19,
+          "observed_skus": 20,
           "matched_skus": 19,
           "min_skus": 8,
           "target_skus": 30,
@@ -522992,9 +522991,9 @@
             "panel_size": 30,
             "target_skus": 30,
             "min_skus": 8,
-            "observed_skus": 25,
-            "missing_skus": 5,
-            "lost_depot_connections": 3,
+            "observed_skus": 26,
+            "missing_skus": 4,
+            "lost_depot_connections": 2,
             "ready_candidates": 61,
             "insufficient_observed_products": false,
             "unavailable_replacements": 0,
@@ -523200,14 +523199,14 @@
           "label": "Kuruyemiş",
           "group": "sugar_snacks",
           "index": 100.0375,
-          "observed_skus": 11,
-          "matched_skus": 11,
+          "observed_skus": 10,
+          "matched_skus": 10,
           "min_skus": 6,
           "target_skus": 24,
-          "coverage": 1.0,
-          "common_coverage": 1.0,
+          "coverage": 0.9091,
+          "common_coverage": 0.909091,
           "previous_date": "2026-11-07",
-          "contributing_skus": 11,
+          "contributing_skus": 10,
           "headline_contributor": true,
           "reasons": [
             "lost_depot_connections",
@@ -523236,9 +523235,9 @@
             "panel_size": 21,
             "target_skus": 24,
             "min_skus": 6,
-            "observed_skus": 13,
-            "missing_skus": 10,
-            "lost_depot_connections": 5,
+            "observed_skus": 12,
+            "missing_skus": 11,
+            "lost_depot_connections": 6,
             "ready_candidates": 4,
             "insufficient_observed_products": false,
             "unavailable_replacements": 5,
@@ -523250,7 +523249,7 @@
           },
           "candidate_readiness": 4,
           "fresh_within_1_day_share": 1.0,
-          "fresh_within_1_day_skus": 11,
+          "fresh_within_1_day_skus": 10,
           "freshness_unknown_skus": 0,
           "source_within_3_days_share": 1.0,
           "future_source_skus": 0
@@ -523322,7 +523321,7 @@
           "label": "Helva",
           "group": "sugar_snacks",
           "index": 95.3189,
-          "observed_skus": 17,
+          "observed_skus": 19,
           "matched_skus": 17,
           "min_skus": 6,
           "target_skus": 22,
@@ -523340,14 +523339,14 @@
             "primary": {
               "status": "complete",
               "pages": 1,
-              "raw_results": 21,
-              "unique_results": 21,
+              "raw_results": 23,
+              "unique_results": 23,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 21,
+            "accepted_candidates": 23,
             "rejections": {
               "category": 0,
               "title": 0,
@@ -523358,8 +523357,8 @@
             "panel_size": 22,
             "target_skus": 22,
             "min_skus": 6,
-            "observed_skus": 13,
-            "missing_skus": 9,
+            "observed_skus": 15,
+            "missing_skus": 7,
             "lost_depot_connections": 2,
             "ready_candidates": 6,
             "insufficient_observed_products": false,
@@ -523627,14 +523626,14 @@
           "label": "Kuru fasulye",
           "group": "other_food",
           "index": 103.5666,
-          "observed_skus": 21,
-          "matched_skus": 21,
+          "observed_skus": 20,
+          "matched_skus": 20,
           "min_skus": 6,
           "target_skus": 24,
-          "coverage": 1.0,
-          "common_coverage": 1.0,
+          "coverage": 0.9524,
+          "common_coverage": 0.952381,
           "previous_date": "2026-11-07",
-          "contributing_skus": 21,
+          "contributing_skus": 20,
           "headline_contributor": true,
           "reasons": [
             "lost_depot_connections",
@@ -523677,7 +523676,7 @@
           },
           "candidate_readiness": 15,
           "fresh_within_1_day_share": 1.0,
-          "fresh_within_1_day_skus": 21,
+          "fresh_within_1_day_skus": 20,
           "freshness_unknown_skus": 0,
           "source_within_3_days_share": 1.0,
           "future_source_skus": 0
@@ -523807,14 +523806,14 @@
           "label": "Hazır çorba",
           "group": "other_food",
           "index": 96.8267,
-          "observed_skus": 18,
-          "matched_skus": 18,
+          "observed_skus": 17,
+          "matched_skus": 17,
           "min_skus": 6,
           "target_skus": 24,
-          "coverage": 1.0,
-          "common_coverage": 1.0,
+          "coverage": 0.9444,
+          "common_coverage": 0.944444,
           "previous_date": "2026-11-07",
-          "contributing_skus": 18,
+          "contributing_skus": 17,
           "headline_contributor": true,
           "reasons": [
             "lost_depot_connections",
@@ -523826,14 +523825,14 @@
             "primary": {
               "status": "complete",
               "pages": 3,
-              "raw_results": 51,
-              "unique_results": 51,
+              "raw_results": 50,
+              "unique_results": 50,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 46,
+            "accepted_candidates": 45,
             "rejections": {
               "category": 0,
               "title": 0,
@@ -523844,8 +523843,8 @@
             "panel_size": 24,
             "target_skus": 24,
             "min_skus": 6,
-            "observed_skus": 20,
-            "missing_skus": 4,
+            "observed_skus": 19,
+            "missing_skus": 5,
             "lost_depot_connections": 1,
             "ready_candidates": 27,
             "insufficient_observed_products": false,
@@ -523858,7 +523857,7 @@
           },
           "candidate_readiness": 27,
           "fresh_within_1_day_share": 1.0,
-          "fresh_within_1_day_skus": 18,
+          "fresh_within_1_day_skus": 17,
           "freshness_unknown_skus": 0,
           "source_within_3_days_share": 1.0,
           "future_source_skus": 0
@@ -523888,14 +523887,14 @@
             "primary": {
               "status": "complete",
               "pages": 3,
-              "raw_results": 58,
-              "unique_results": 58,
+              "raw_results": 59,
+              "unique_results": 59,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 52,
+            "accepted_candidates": 53,
             "rejections": {
               "category": 0,
               "title": 0,
@@ -523906,10 +523905,10 @@
             "panel_size": 24,
             "target_skus": 24,
             "min_skus": 6,
-            "observed_skus": 21,
-            "missing_skus": 3,
-            "lost_depot_connections": 4,
-            "ready_candidates": 28,
+            "observed_skus": 22,
+            "missing_skus": 2,
+            "lost_depot_connections": 3,
+            "ready_candidates": 29,
             "insufficient_observed_products": false,
             "unavailable_replacements": 1,
             "below_target": false,
@@ -523918,7 +523917,7 @@
             "turnover_allowance": 5,
             "absence_complete": true
           },
-          "candidate_readiness": 28,
+          "candidate_readiness": 29,
           "fresh_within_1_day_share": 1.0,
           "fresh_within_1_day_skus": 20,
           "freshness_unknown_skus": 0,
@@ -523930,7 +523929,7 @@
           "label": "Mayonez",
           "group": "other_food",
           "index": 92.9503,
-          "observed_skus": 17,
+          "observed_skus": 18,
           "matched_skus": 17,
           "min_skus": 6,
           "target_skus": 24,
@@ -523949,8 +523948,8 @@
             "primary": {
               "status": "complete",
               "pages": 3,
-              "raw_results": 51,
-              "unique_results": 51,
+              "raw_results": 52,
+              "unique_results": 52,
               "exhausted": true,
               "reason": "exhausted"
             },
@@ -523959,7 +523958,7 @@
             "accepted_candidates": 46,
             "rejections": {
               "category": 0,
-              "title": 4,
+              "title": 5,
               "quantity": 1,
               "unit_price": 0,
               "no_offers": 0
@@ -524029,9 +524028,9 @@
             "panel_size": 22,
             "target_skus": 22,
             "min_skus": 6,
-            "observed_skus": 14,
-            "missing_skus": 8,
-            "lost_depot_connections": 3,
+            "observed_skus": 13,
+            "missing_skus": 9,
+            "lost_depot_connections": 4,
             "ready_candidates": 3,
             "insufficient_observed_products": false,
             "unavailable_replacements": 2,
@@ -524073,14 +524072,14 @@
             "primary": {
               "status": "complete",
               "pages": 4,
-              "raw_results": 79,
-              "unique_results": 79,
+              "raw_results": 78,
+              "unique_results": 78,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 76,
+            "accepted_candidates": 75,
             "rejections": {
               "category": 0,
               "title": 1,
@@ -524094,7 +524093,7 @@
             "observed_skus": 14,
             "missing_skus": 8,
             "lost_depot_connections": 4,
-            "ready_candidates": 58,
+            "ready_candidates": 57,
             "insufficient_observed_products": false,
             "unavailable_replacements": 2,
             "below_target": false,
@@ -524103,7 +524102,7 @@
             "turnover_allowance": 5,
             "absence_complete": true
           },
-          "candidate_readiness": 58,
+          "candidate_readiness": 57,
           "fresh_within_1_day_share": 1.0,
           "fresh_within_1_day_skus": 18,
           "freshness_unknown_skus": 0,
@@ -524135,8 +524134,8 @@
             "primary": {
               "status": "complete",
               "pages": 6,
-              "raw_results": 125,
-              "unique_results": 125,
+              "raw_results": 126,
+              "unique_results": 126,
               "exhausted": true,
               "reason": "exhausted"
             },
@@ -524145,7 +524144,7 @@
             "accepted_candidates": 50,
             "rejections": {
               "category": 0,
-              "title": 70,
+              "title": 71,
               "quantity": 4,
               "unit_price": 1,
               "no_offers": 0
@@ -524300,7 +524299,7 @@
           "label": "Filtre kahve",
           "group": "drinks",
           "index": 110.2309,
-          "observed_skus": 17,
+          "observed_skus": 18,
           "matched_skus": 17,
           "min_skus": 6,
           "target_skus": 24,
@@ -524320,14 +524319,14 @@
             "primary": {
               "status": "complete",
               "pages": 4,
-              "raw_results": 83,
-              "unique_results": 83,
+              "raw_results": 82,
+              "unique_results": 82,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 39,
+            "accepted_candidates": 38,
             "rejections": {
               "category": 0,
               "title": 42,
@@ -524338,10 +524337,10 @@
             "panel_size": 24,
             "target_skus": 24,
             "min_skus": 6,
-            "observed_skus": 12,
-            "missing_skus": 12,
-            "lost_depot_connections": 8,
-            "ready_candidates": 20,
+            "observed_skus": 13,
+            "missing_skus": 11,
+            "lost_depot_connections": 7,
+            "ready_candidates": 19,
             "insufficient_observed_products": false,
             "unavailable_replacements": 1,
             "below_target": false,
@@ -524350,7 +524349,7 @@
             "turnover_allowance": 5,
             "absence_complete": true
           },
-          "candidate_readiness": 20,
+          "candidate_readiness": 19,
           "fresh_within_1_day_share": 1.0,
           "fresh_within_1_day_skus": 17,
           "freshness_unknown_skus": 0,
@@ -524586,8 +524585,8 @@
             "min_skus": 6,
             "observed_skus": 17,
             "missing_skus": 7,
-            "lost_depot_connections": 5,
-            "ready_candidates": 81,
+            "lost_depot_connections": 4,
+            "ready_candidates": 82,
             "insufficient_observed_products": false,
             "unavailable_replacements": 0,
             "below_target": false,
@@ -524596,7 +524595,7 @@
             "turnover_allowance": 5,
             "absence_complete": true
           },
-          "candidate_readiness": 81,
+          "candidate_readiness": 82,
           "fresh_within_1_day_share": 1.0,
           "fresh_within_1_day_skus": 19,
           "freshness_unknown_skus": 0,
@@ -524627,14 +524626,14 @@
             "primary": {
               "status": "complete",
               "pages": 5,
-              "raw_results": 108,
-              "unique_results": 108,
+              "raw_results": 109,
+              "unique_results": 109,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 103,
+            "accepted_candidates": 104,
             "rejections": {
               "category": 0,
               "title": 5,
@@ -524870,8 +524869,8 @@
             "primary": {
               "status": "complete",
               "pages": 2,
-              "raw_results": 47,
-              "unique_results": 47,
+              "raw_results": 48,
+              "unique_results": 48,
               "exhausted": true,
               "reason": "exhausted"
             },
@@ -524880,7 +524879,7 @@
             "accepted_candidates": 17,
             "rejections": {
               "category": 0,
-              "title": 29,
+              "title": 30,
               "quantity": 0,
               "unit_price": 1,
               "no_offers": 0
@@ -524990,14 +524989,14 @@
             "primary": {
               "status": "complete",
               "pages": 2,
-              "raw_results": 32,
-              "unique_results": 32,
+              "raw_results": 31,
+              "unique_results": 31,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 31,
+            "accepted_candidates": 30,
             "rejections": {
               "category": 0,
               "title": 0,
@@ -525011,7 +525010,7 @@
             "observed_skus": 24,
             "missing_skus": 4,
             "lost_depot_connections": 2,
-            "ready_candidates": 10,
+            "ready_candidates": 9,
             "insufficient_observed_products": false,
             "unavailable_replacements": 1,
             "below_target": false,
@@ -525020,7 +525019,7 @@
             "turnover_allowance": 6,
             "absence_complete": true
           },
-          "candidate_readiness": 10,
+          "candidate_readiness": 9,
           "fresh_within_1_day_share": 1.0,
           "fresh_within_1_day_skus": 19,
           "freshness_unknown_skus": 0,
@@ -525111,8 +525110,8 @@
             "primary": {
               "status": "complete",
               "pages": 4,
-              "raw_results": 79,
-              "unique_results": 79,
+              "raw_results": 80,
+              "unique_results": 80,
               "exhausted": true,
               "reason": "exhausted"
             },
@@ -525121,7 +525120,7 @@
             "accepted_candidates": 60,
             "rejections": {
               "category": 0,
-              "title": 6,
+              "title": 7,
               "quantity": 13,
               "unit_price": 0,
               "no_offers": 0
@@ -525153,7 +525152,7 @@
           "label": "Yüzey temizleyici",
           "group": "household_cleaning",
           "index": 90.5737,
-          "observed_skus": 18,
+          "observed_skus": 19,
           "matched_skus": 18,
           "min_skus": 7,
           "target_skus": 26,
@@ -525190,9 +525189,9 @@
             "panel_size": 26,
             "target_skus": 26,
             "min_skus": 7,
-            "observed_skus": 20,
-            "missing_skus": 7,
-            "lost_depot_connections": 7,
+            "observed_skus": 22,
+            "missing_skus": 5,
+            "lost_depot_connections": 5,
             "ready_candidates": 25,
             "insufficient_observed_products": false,
             "unavailable_replacements": 0,
@@ -525413,14 +525412,14 @@
             "primary": {
               "status": "complete",
               "pages": 6,
-              "raw_results": 137,
-              "unique_results": 137,
+              "raw_results": 136,
+              "unique_results": 136,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 137,
+            "accepted_candidates": 136,
             "rejections": {
               "category": 0,
               "title": 0,
@@ -525434,7 +525433,7 @@
             "observed_skus": 23,
             "missing_skus": 8,
             "lost_depot_connections": 7,
-            "ready_candidates": 114,
+            "ready_candidates": 113,
             "insufficient_observed_products": false,
             "unavailable_replacements": 0,
             "below_target": true,
@@ -525443,7 +525442,7 @@
             "turnover_allowance": 7,
             "absence_complete": true
           },
-          "candidate_readiness": 114,
+          "candidate_readiness": 113,
           "fresh_within_1_day_share": 1.0,
           "fresh_within_1_day_skus": 17,
           "freshness_unknown_skus": 0,
@@ -525475,14 +525474,14 @@
             "primary": {
               "status": "complete",
               "pages": 5,
-              "raw_results": 101,
-              "unique_results": 101,
+              "raw_results": 104,
+              "unique_results": 104,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 94,
+            "accepted_candidates": 97,
             "rejections": {
               "category": 0,
               "title": 6,
@@ -525495,8 +525494,8 @@
             "min_skus": 7,
             "observed_skus": 22,
             "missing_skus": 6,
-            "lost_depot_connections": 5,
-            "ready_candidates": 68,
+            "lost_depot_connections": 6,
+            "ready_candidates": 69,
             "insufficient_observed_products": false,
             "unavailable_replacements": 3,
             "below_target": false,
@@ -525505,7 +525504,7 @@
             "turnover_allowance": 6,
             "absence_complete": true
           },
-          "candidate_readiness": 68,
+          "candidate_readiness": 69,
           "fresh_within_1_day_share": 1.0,
           "fresh_within_1_day_skus": 22,
           "freshness_unknown_skus": 0,
@@ -525517,7 +525516,7 @@
           "label": "Sıvı sabun",
           "group": "personal_paper",
           "index": 122.8914,
-          "observed_skus": 20,
+          "observed_skus": 21,
           "matched_skus": 20,
           "min_skus": 7,
           "target_skus": 28,
@@ -525536,14 +525535,14 @@
             "primary": {
               "status": "complete",
               "pages": 4,
-              "raw_results": 87,
-              "unique_results": 87,
+              "raw_results": 88,
+              "unique_results": 88,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 82,
+            "accepted_candidates": 83,
             "rejections": {
               "category": 0,
               "title": 5,
@@ -525554,8 +525553,8 @@
             "panel_size": 28,
             "target_skus": 28,
             "min_skus": 7,
-            "observed_skus": 23,
-            "missing_skus": 5,
+            "observed_skus": 24,
+            "missing_skus": 4,
             "lost_depot_connections": 2,
             "ready_candidates": 60,
             "insufficient_observed_products": false,
@@ -525597,14 +525596,14 @@
             "primary": {
               "status": "complete",
               "pages": 5,
-              "raw_results": 107,
-              "unique_results": 107,
+              "raw_results": 108,
+              "unique_results": 108,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 98,
+            "accepted_candidates": 99,
             "rejections": {
               "category": 0,
               "title": 8,
@@ -525639,14 +525638,14 @@
           "label": "Diş macunu",
           "group": "personal_paper",
           "index": 103.5765,
-          "observed_skus": 19,
-          "matched_skus": 19,
+          "observed_skus": 18,
+          "matched_skus": 18,
           "min_skus": 7,
           "target_skus": 28,
-          "coverage": 1.0,
-          "common_coverage": 1.0,
+          "coverage": 0.9474,
+          "common_coverage": 0.947368,
           "previous_date": "2026-11-07",
-          "contributing_skus": 19,
+          "contributing_skus": 18,
           "headline_contributor": true,
           "reasons": [
             "lost_depot_connections",
@@ -525676,10 +525675,10 @@
             "panel_size": 28,
             "target_skus": 28,
             "min_skus": 7,
-            "observed_skus": 24,
-            "missing_skus": 4,
+            "observed_skus": 23,
+            "missing_skus": 5,
             "lost_depot_connections": 2,
-            "ready_candidates": 71,
+            "ready_candidates": 72,
             "insufficient_observed_products": false,
             "unavailable_replacements": 0,
             "below_target": false,
@@ -525688,9 +525687,9 @@
             "turnover_allowance": 6,
             "absence_complete": true
           },
-          "candidate_readiness": 71,
+          "candidate_readiness": 72,
           "fresh_within_1_day_share": 1.0,
-          "fresh_within_1_day_skus": 19,
+          "fresh_within_1_day_skus": 18,
           "freshness_unknown_skus": 0,
           "source_within_3_days_share": 1.0,
           "future_source_skus": 0
@@ -525720,14 +525719,14 @@
             "primary": {
               "status": "complete",
               "pages": 5,
-              "raw_results": 114,
-              "unique_results": 114,
+              "raw_results": 115,
+              "unique_results": 115,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 106,
+            "accepted_candidates": 107,
             "rejections": {
               "category": 0,
               "title": 7,
@@ -525741,7 +525740,7 @@
             "observed_skus": 23,
             "missing_skus": 1,
             "lost_depot_connections": 1,
-            "ready_candidates": 82,
+            "ready_candidates": 83,
             "insufficient_observed_products": false,
             "unavailable_replacements": 1,
             "below_target": false,
@@ -525750,7 +525749,7 @@
             "turnover_allowance": 5,
             "absence_complete": true
           },
-          "candidate_readiness": 82,
+          "candidate_readiness": 83,
           "fresh_within_1_day_share": 1.0,
           "fresh_within_1_day_skus": 23,
           "freshness_unknown_skus": 0,
@@ -525823,14 +525822,14 @@
           "label": "Tuvalet kağıdı",
           "group": "personal_paper",
           "index": 109.2084,
-          "observed_skus": 17,
-          "matched_skus": 17,
+          "observed_skus": 16,
+          "matched_skus": 15,
           "min_skus": 8,
           "target_skus": 30,
-          "coverage": 1.0,
-          "common_coverage": 1.0,
+          "coverage": 0.8824,
+          "common_coverage": 0.882353,
           "previous_date": "2026-11-07",
-          "contributing_skus": 17,
+          "contributing_skus": 15,
           "headline_contributor": true,
           "reasons": [
             "lost_depot_connections",
@@ -525858,21 +525857,21 @@
             "panel_size": 30,
             "target_skus": 30,
             "min_skus": 8,
-            "observed_skus": 19,
-            "missing_skus": 11,
+            "observed_skus": 20,
+            "missing_skus": 10,
             "lost_depot_connections": 6,
             "ready_candidates": 22,
             "insufficient_observed_products": false,
             "unavailable_replacements": 0,
             "below_target": false,
             "additions_today": 5,
-            "replacements_today": 0,
+            "replacements_today": 1,
             "turnover_allowance": 6,
             "absence_complete": true
           },
           "candidate_readiness": 22,
           "fresh_within_1_day_share": 1.0,
-          "fresh_within_1_day_skus": 17,
+          "fresh_within_1_day_skus": 15,
           "freshness_unknown_skus": 0,
           "source_within_3_days_share": 1.0,
           "future_source_skus": 0
@@ -525882,7 +525881,7 @@
           "label": "Kağıt havlu",
           "group": "personal_paper",
           "index": 100.1324,
-          "observed_skus": 16,
+          "observed_skus": 17,
           "matched_skus": 16,
           "min_skus": 7,
           "target_skus": 28,
@@ -525902,14 +525901,14 @@
             "primary": {
               "status": "complete",
               "pages": 2,
-              "raw_results": 45,
-              "unique_results": 45,
+              "raw_results": 48,
+              "unique_results": 48,
               "exhausted": true,
               "reason": "exhausted"
             },
             "aliases": [],
             "complete": true,
-            "accepted_candidates": 28,
+            "accepted_candidates": 31,
             "rejections": {
               "category": 0,
               "title": 14,
@@ -525920,19 +525919,19 @@
             "panel_size": 28,
             "target_skus": 28,
             "min_skus": 7,
-            "observed_skus": 18,
-            "missing_skus": 12,
+            "observed_skus": 19,
+            "missing_skus": 11,
             "lost_depot_connections": 5,
-            "ready_candidates": 11,
+            "ready_candidates": 12,
             "insufficient_observed_products": false,
             "unavailable_replacements": 0,
             "below_target": false,
             "additions_today": 5,
-            "replacements_today": 1,
+            "replacements_today": 0,
             "turnover_allowance": 6,
             "absence_complete": true
           },
-          "candidate_readiness": 11,
+          "candidate_readiness": 12,
           "fresh_within_1_day_share": 1.0,
           "fresh_within_1_day_skus": 16,
           "freshness_unknown_skus": 0,
@@ -526063,27 +526062,27 @@
         }
       ],
       "sources": {
-        "skus": 1282,
+        "skus": 1271,
         "retailer_count": 7,
         "depot_count": 19,
-        "single_depot_skus": 1015,
-        "single_depot_share": 0.791732,
-        "auditable_skus": 1282,
+        "single_depot_skus": 1007,
+        "single_depot_share": 0.79229,
+        "auditable_skus": 1271,
         "source_evidence_share": 1.0,
         "retailers": [
           {
             "market": "a101",
-            "skus": 27,
+            "skus": 24,
             "depots": 3
           },
           {
             "market": "bim",
-            "skus": 266,
+            "skus": 265,
             "depots": 1
           },
           {
             "market": "carrefour",
-            "skus": 441,
+            "skus": 433,
             "depots": 3
           },
           {
@@ -526103,7 +526102,7 @@
           },
           {
             "market": "tarim_kredi",
-            "skus": 62,
+            "skus": 63,
             "depots": 2
           }
         ],
@@ -526118,7 +526117,7 @@
             "source_id": "depot:a101-6815",
             "market": "a101",
             "depot_name": "Kostak Ümraniye",
-            "skus": 16
+            "skus": 13
           },
           {
             "source_id": "depot:a101-9324",
@@ -526130,13 +526129,13 @@
             "source_id": "depot:bim-5712",
             "market": "bim",
             "depot_name": "Çiçekçi  Üsküdar",
-            "skus": 266
+            "skus": 265
           },
           {
             "source_id": "depot:carrefour-1012",
             "market": "carrefour",
             "depot_name": "Istanbul Acıbadem Hıper",
-            "skus": 307
+            "skus": 299
           },
           {
             "source_id": "depot:carrefour-5036",
@@ -526160,7 +526159,7 @@
             "source_id": "depot:migros-1991",
             "market": "migros",
             "depot_name": "Çiçekçi M Migros",
-            "skus": 306
+            "skus": 310
           },
           {
             "source_id": "depot:migros-3296",
@@ -526172,19 +526171,19 @@
             "source_id": "depot:migros-4479",
             "market": "migros",
             "depot_name": "Mjet Üsküdar Paşakapısı",
-            "skus": 36
+            "skus": 32
           },
           {
             "source_id": "depot:migros-564",
             "market": "migros",
             "depot_name": "Kadıköy Çarşı M Migros",
-            "skus": 41
+            "skus": 42
           },
           {
             "source_id": "depot:migros-6679",
             "market": "migros",
             "depot_name": "Mjet Kadıköy Rasımpaşa Istanbu",
-            "skus": 16
+            "skus": 15
           },
           {
             "source_id": "depot:sok-1017",
@@ -526214,7 +526213,7 @@
             "source_id": "depot:tarim_kredi-5022",
             "market": "tarim_kredi",
             "depot_name": "Istanbul Kadıköy Market",
-            "skus": 17
+            "skus": 18
           },
           {
             "source_id": "depot:tarim_kredi-7488",
@@ -526225,22 +526224,22 @@
         ]
       },
       "collected_sources": {
-        "skus": 1500,
+        "skus": 1504,
         "retailer_count": 7,
         "depot_count": 23,
-        "single_depot_skus": 1204,
-        "single_depot_share": 0.802667,
-        "auditable_skus": 1500,
+        "single_depot_skus": 1209,
+        "single_depot_share": 0.803856,
+        "auditable_skus": 1504,
         "source_evidence_share": 1.0,
         "retailers": [
           {
             "market": "a101",
-            "skus": 33,
+            "skus": 34,
             "depots": 5
           },
           {
             "market": "bim",
-            "skus": 317,
+            "skus": 316,
             "depots": 1
           },
           {
@@ -526255,7 +526254,7 @@
           },
           {
             "market": "migros",
-            "skus": 468,
+            "skus": 473,
             "depots": 5
           },
           {
@@ -526265,7 +526264,7 @@
           },
           {
             "market": "tarim_kredi",
-            "skus": 83,
+            "skus": 84,
             "depots": 2
           }
         ],
@@ -526280,7 +526279,7 @@
             "source_id": "depot:a101-4141",
             "market": "a101",
             "depot_name": "Doğanevler Ümraniye Istanbul",
-            "skus": 1
+            "skus": 2
           },
           {
             "source_id": "depot:a101-6815",
@@ -526304,13 +526303,13 @@
             "source_id": "depot:bim-5712",
             "market": "bim",
             "depot_name": "Çiçekçi  Üsküdar",
-            "skus": 317
+            "skus": 316
           },
           {
             "source_id": "depot:carrefour-1012",
             "market": "carrefour",
             "depot_name": "Istanbul Acıbadem Hıper",
-            "skus": 353
+            "skus": 349
           },
           {
             "source_id": "depot:carrefour-5036",
@@ -526322,7 +526321,7 @@
             "source_id": "depot:carrefour-5254",
             "market": "carrefour",
             "depot_name": "Istanbul Üsküdar Salacak Mını",
-            "skus": 146
+            "skus": 150
           },
           {
             "source_id": "depot:hakmar-5200",
@@ -526340,7 +526339,7 @@
             "source_id": "depot:migros-1991",
             "market": "migros",
             "depot_name": "Çiçekçi M Migros",
-            "skus": 341
+            "skus": 350
           },
           {
             "source_id": "depot:migros-3296",
@@ -526352,19 +526351,19 @@
             "source_id": "depot:migros-4479",
             "market": "migros",
             "depot_name": "Mjet Üsküdar Paşakapısı",
-            "skus": 41
+            "skus": 36
           },
           {
             "source_id": "depot:migros-564",
             "market": "migros",
             "depot_name": "Kadıköy Çarşı M Migros",
-            "skus": 46
+            "skus": 48
           },
           {
             "source_id": "depot:migros-6679",
             "market": "migros",
             "depot_name": "Mjet Kadıköy Rasımpaşa Istanbu",
-            "skus": 17
+            "skus": 16
           },
           {
             "source_id": "depot:sok-1017",
@@ -526400,7 +526399,7 @@
             "source_id": "depot:tarim_kredi-5022",
             "market": "tarim_kredi",
             "depot_name": "Istanbul Kadıköy Market",
-            "skus": 19
+            "skus": 20
           },
           {
             "source_id": "depot:tarim_kredi-7488",
@@ -526421,8 +526420,8 @@
         "policy_version": 1,
         "validated": false,
         "comparison": {
-          "legacy_observed_skus": 1500,
-          "proposed_observed_skus": 1616,
+          "legacy_observed_skus": 1504,
+          "proposed_observed_skus": 1623,
           "additions_today": 212,
           "replacements_today": 35,
           "status": "valid",
@@ -526522,8 +526521,8 @@
                 "publishable": false
               },
               "flour_wheat": {
-                "coverage": 1.0,
-                "matched_slots": 20,
+                "coverage": 0.95,
+                "matched_slots": 19,
                 "publishable": true
               },
               "rice": {
@@ -526602,13 +526601,13 @@
                 "publishable": true
               },
               "salami": {
-                "coverage": 1.0,
-                "matched_slots": 23,
+                "coverage": 0.9565,
+                "matched_slots": 22,
                 "publishable": true
               },
               "sausage": {
-                "coverage": 1.0,
-                "matched_slots": 20,
+                "coverage": 0.95,
+                "matched_slots": 19,
                 "publishable": true
               },
               "meatballs": {
@@ -526682,8 +526681,8 @@
                 "publishable": true
               },
               "kasar": {
-                "coverage": 1.0,
-                "matched_slots": 21,
+                "coverage": 0.9524,
+                "matched_slots": 20,
                 "publishable": true
               },
               "labneh": {
@@ -526702,8 +526701,8 @@
                 "publishable": false
               },
               "eggs": {
-                "coverage": 1.0,
-                "matched_slots": 21,
+                "coverage": 0.9524,
+                "matched_slots": 20,
                 "publishable": true
               },
               "cream": {
@@ -526712,13 +526711,13 @@
                 "publishable": true
               },
               "sunflower_oil": {
-                "coverage": 1.0,
-                "matched_slots": 22,
+                "coverage": 0.9545,
+                "matched_slots": 21,
                 "publishable": true
               },
               "olive_oil": {
-                "coverage": 1.0,
-                "matched_slots": 19,
+                "coverage": 0.9474,
+                "matched_slots": 18,
                 "publishable": true
               },
               "butter": {
@@ -526922,8 +526921,8 @@
                 "publishable": true
               },
               "nuts": {
-                "coverage": 1.0,
-                "matched_slots": 11,
+                "coverage": 0.9091,
+                "matched_slots": 10,
                 "publishable": true
               },
               "icecream": {
@@ -526957,8 +526956,8 @@
                 "publishable": true
               },
               "beans": {
-                "coverage": 1.0,
-                "matched_slots": 21,
+                "coverage": 0.9524,
+                "matched_slots": 20,
                 "publishable": true
               },
               "chickpeas": {
@@ -526972,8 +526971,8 @@
                 "publishable": false
               },
               "soup": {
-                "coverage": 1.0,
-                "matched_slots": 18,
+                "coverage": 0.9444,
+                "matched_slots": 17,
                 "publishable": true
               },
               "ketchup": {
@@ -527122,8 +527121,8 @@
                 "publishable": true
               },
               "toothpaste": {
-                "coverage": 1.0,
-                "matched_slots": 19,
+                "coverage": 0.9474,
+                "matched_slots": 18,
                 "publishable": true
               },
               "toothbrush": {
@@ -527137,8 +527136,8 @@
                 "publishable": true
               },
               "toilet_paper": {
-                "coverage": 1.0,
-                "matched_slots": 17,
+                "coverage": 0.8824,
+                "matched_slots": 15,
                 "publishable": true
               },
               "paper_towel": {
@@ -527159,8 +527158,8 @@
             }
           },
           "proposed": {
-            "index": 104.2686,
-            "daily_change_pct": 0.26906743803178923,
+            "index": 104.358,
+            "daily_change_pct": 0.3550382348868508,
             "weighted_coverage": 0.62,
             "weighted_comparison_overlap": 0.62,
             "publishable_categories": [
@@ -527175,7 +527174,7 @@
             ],
             "categories": {
               "bread_cereals": {
-                "index": 106.0392,
+                "index": 106.085,
                 "available_coverage": 0.6667,
                 "comparison_overlap": 0.6666666666666666
               },
@@ -527190,12 +527189,12 @@
                 "comparison_overlap": 0.5
               },
               "dairy_eggs": {
-                "index": 102.6072,
+                "index": 102.6773,
                 "available_coverage": 0.9231,
                 "comparison_overlap": 0.9230769230769231
               },
               "oils_fats": {
-                "index": 99.0439,
+                "index": 99.3906,
                 "available_coverage": 0.8,
                 "comparison_overlap": 0.8
               },
@@ -527210,27 +527209,27 @@
                 "comparison_overlap": 0.47058823529411764
               },
               "sugar_snacks": {
-                "index": 104.1527,
+                "index": 104.1445,
                 "available_coverage": 1.0,
                 "comparison_overlap": 1.0
               },
               "other_food": {
-                "index": 98.9765,
+                "index": 99.4447,
                 "available_coverage": 0.9,
                 "comparison_overlap": 0.9
               },
               "drinks": {
-                "index": 102.6233,
+                "index": 102.6386,
                 "available_coverage": 0.8182,
                 "comparison_overlap": 0.7272727272727273
               },
               "household_cleaning": {
-                "index": 102.4845,
+                "index": 102.0819,
                 "available_coverage": 0.8,
                 "comparison_overlap": 0.8
               },
               "personal_paper": {
-                "index": 105.9398,
+                "index": 106.6083,
                 "available_coverage": 0.9091,
                 "comparison_overlap": 0.9090909090909091
               }
@@ -527317,8 +527316,8 @@
                 "publishable": false
               },
               "whole_chicken": {
-                "coverage": 0.8571,
-                "matched_slots": 12,
+                "coverage": 0.9286,
+                "matched_slots": 13,
                 "publishable": true
               },
               "turkey": {
@@ -527332,13 +527331,13 @@
                 "publishable": true
               },
               "salami": {
-                "coverage": 0.913,
-                "matched_slots": 21,
+                "coverage": 0.8696,
+                "matched_slots": 20,
                 "publishable": true
               },
               "sausage": {
-                "coverage": 1.0,
-                "matched_slots": 20,
+                "coverage": 0.95,
+                "matched_slots": 19,
                 "publishable": true
               },
               "meatballs": {
@@ -527357,8 +527356,8 @@
                 "publishable": false
               },
               "smoked_salmon": {
-                "coverage": 0.0,
-                "matched_slots": 0,
+                "coverage": 0.5,
+                "matched_slots": 1,
                 "publishable": false
               },
               "salmon": {
@@ -527377,8 +527376,8 @@
                 "publishable": false
               },
               "milk": {
-                "coverage": 1.0,
-                "matched_slots": 18,
+                "coverage": 0.9444,
+                "matched_slots": 17,
                 "publishable": true
               },
               "milk_lactosefree": {
@@ -527412,8 +527411,8 @@
                 "publishable": true
               },
               "kasar": {
-                "coverage": 1.0,
-                "matched_slots": 21,
+                "coverage": 0.9524,
+                "matched_slots": 20,
                 "publishable": true
               },
               "labneh": {
@@ -527432,8 +527431,8 @@
                 "publishable": false
               },
               "eggs": {
-                "coverage": 1.0,
-                "matched_slots": 21,
+                "coverage": 0.9524,
+                "matched_slots": 20,
                 "publishable": true
               },
               "cream": {
@@ -527447,8 +527446,8 @@
                 "publishable": true
               },
               "olive_oil": {
-                "coverage": 0.8421,
-                "matched_slots": 16,
+                "coverage": 0.7895,
+                "matched_slots": 15,
                 "publishable": true
               },
               "butter": {
@@ -527652,8 +527651,8 @@
                 "publishable": true
               },
               "nuts": {
-                "coverage": 0.8182,
-                "matched_slots": 9,
+                "coverage": 0.7273,
+                "matched_slots": 8,
                 "publishable": true
               },
               "icecream": {
@@ -527702,8 +527701,8 @@
                 "publishable": false
               },
               "soup": {
-                "coverage": 1.0,
-                "matched_slots": 18,
+                "coverage": 0.9444,
+                "matched_slots": 17,
                 "publishable": true
               },
               "ketchup": {
@@ -527717,8 +527716,8 @@
                 "publishable": true
               },
               "salt": {
-                "coverage": 1.0,
-                "matched_slots": 13,
+                "coverage": 0.9231,
+                "matched_slots": 12,
                 "publishable": true
               },
               "vinegar": {
@@ -527812,8 +527811,8 @@
                 "publishable": true
               },
               "surface_cleaner": {
-                "coverage": 0.9444,
-                "matched_slots": 17,
+                "coverage": 1.0,
+                "matched_slots": 18,
                 "publishable": true
               },
               "garbage_bags": {
@@ -527852,8 +527851,8 @@
                 "publishable": true
               },
               "toothpaste": {
-                "coverage": 1.0,
-                "matched_slots": 19,
+                "coverage": 0.9474,
+                "matched_slots": 18,
                 "publishable": true
               },
               "toothbrush": {
@@ -527872,8 +527871,8 @@
                 "publishable": true
               },
               "paper_towel": {
-                "coverage": 0.75,
-                "matched_slots": 12,
+                "coverage": 0.8125,
+                "matched_slots": 13,
                 "publishable": true
               },
               "wet_wipes": {
@@ -527888,7 +527887,7 @@
               }
             }
           },
-          "index_difference_points": 0.23520000000000607,
+          "index_difference_points": 0.3246000000000038,
           "weighted_coverage_difference": -0.07999999999999996
         }
       },
@@ -527896,7 +527895,7 @@
       "change_7d_pct": 0.925794,
       "change_30d_pct": 0.541688,
       "fresh_within_1_day_share": 1.0,
-      "fresh_within_1_day_skus": 1282,
+      "fresh_within_1_day_skus": 1271,
       "freshness_unknown_skus": 0,
       "source_within_3_days_share": 1.0,
       "future_source_skus": 0
@@ -527909,8 +527908,8 @@
     "common_coverage": 0.7,
     "previous_date": "2026-11-07",
     "headline_types": 81,
-    "headline_skus": 1282,
-    "collected_skus": 1500,
+    "headline_skus": 1271,
+    "collected_skus": 1504,
     "available_types": 99,
     "configured_types": 130,
     "missing_categories": [
@@ -527938,11 +527937,11 @@
         "available_types": 8,
         "contributing_types": 8,
         "configured_types": 12,
-        "contributing_skus": 132,
+        "contributing_skus": 131,
         "previous_date": "2026-11-07",
         "headline_contributor": true,
         "fresh_within_1_day_share": 1.0,
-        "fresh_within_1_day_skus": 132,
+        "fresh_within_1_day_skus": 131,
         "freshness_unknown_skus": 0,
         "source_within_3_days_share": 1.0,
         "future_source_skus": 0
@@ -527995,11 +527994,11 @@
         "available_types": 12,
         "contributing_types": 12,
         "configured_types": 13,
-        "contributing_skus": 199,
+        "contributing_skus": 197,
         "previous_date": "2026-11-07",
         "headline_contributor": true,
         "fresh_within_1_day_share": 1.0,
-        "fresh_within_1_day_skus": 199,
+        "fresh_within_1_day_skus": 197,
         "freshness_unknown_skus": 0,
         "source_within_3_days_share": 1.0,
         "future_source_skus": 0
@@ -528014,11 +528013,11 @@
         "available_types": 4,
         "contributing_types": 4,
         "configured_types": 5,
-        "contributing_skus": 78,
+        "contributing_skus": 76,
         "previous_date": "2026-11-07",
         "headline_contributor": true,
         "fresh_within_1_day_share": 1.0,
-        "fresh_within_1_day_skus": 78,
+        "fresh_within_1_day_skus": 76,
         "freshness_unknown_skus": 0,
         "source_within_3_days_share": 1.0,
         "future_source_skus": 0
@@ -528071,11 +528070,11 @@
         "available_types": 12,
         "contributing_types": 12,
         "configured_types": 12,
-        "contributing_skus": 204,
+        "contributing_skus": 203,
         "previous_date": "2026-11-07",
         "headline_contributor": true,
         "fresh_within_1_day_share": 1.0,
-        "fresh_within_1_day_skus": 204,
+        "fresh_within_1_day_skus": 203,
         "freshness_unknown_skus": 0,
         "source_within_3_days_share": 1.0,
         "future_source_skus": 0
@@ -528090,11 +528089,11 @@
         "available_types": 9,
         "contributing_types": 9,
         "configured_types": 10,
-        "contributing_skus": 161,
+        "contributing_skus": 159,
         "previous_date": "2026-11-07",
         "headline_contributor": true,
         "fresh_within_1_day_share": 1.0,
-        "fresh_within_1_day_skus": 161,
+        "fresh_within_1_day_skus": 159,
         "freshness_unknown_skus": 0,
         "source_within_3_days_share": 1.0,
         "future_source_skus": 0
@@ -528147,11 +528146,11 @@
         "available_types": 10,
         "contributing_types": 10,
         "configured_types": 11,
-        "contributing_skus": 189,
+        "contributing_skus": 186,
         "previous_date": "2026-11-07",
         "headline_contributor": true,
         "fresh_within_1_day_share": 1.0,
-        "fresh_within_1_day_skus": 189,
+        "fresh_within_1_day_skus": 186,
         "freshness_unknown_skus": 0,
         "source_within_3_days_share": 1.0,
         "future_source_skus": 0
@@ -528185,8 +528184,8 @@
           "primary": {
             "status": "complete",
             "pages": 3,
-            "raw_results": 51,
-            "unique_results": 51,
+            "raw_results": 54,
+            "unique_results": 54,
             "exhausted": true,
             "reason": "exhausted"
           },
@@ -528214,7 +528213,7 @@
           "accepted_candidates": 1,
           "rejections": {
             "category": 0,
-            "title": 44,
+            "title": 47,
             "quantity": 5,
             "unit_price": 1,
             "no_offers": 0
@@ -528246,7 +528245,7 @@
         "label": "Tost ekmeği",
         "group": "bread_cereals",
         "index": null,
-        "observed_skus": 5,
+        "observed_skus": 6,
         "matched_skus": 4,
         "min_skus": 5,
         "target_skus": 20,
@@ -528266,14 +528265,14 @@
           "primary": {
             "status": "complete",
             "pages": 1,
-            "raw_results": 11,
-            "unique_results": 11,
+            "raw_results": 12,
+            "unique_results": 12,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 9,
+          "accepted_candidates": 10,
           "rejections": {
             "category": 0,
             "title": 2,
@@ -528284,8 +528283,8 @@
           "panel_size": 13,
           "target_skus": 20,
           "min_skus": 5,
-          "observed_skus": 5,
-          "missing_skus": 8,
+          "observed_skus": 6,
+          "missing_skus": 7,
           "lost_depot_connections": 4,
           "ready_candidates": 0,
           "insufficient_observed_products": false,
@@ -528328,18 +528327,18 @@
           "primary": {
             "status": "complete",
             "pages": 2,
-            "raw_results": 27,
-            "unique_results": 27,
+            "raw_results": 29,
+            "unique_results": 29,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 13,
+          "accepted_candidates": 14,
           "rejections": {
             "category": 0,
             "title": 12,
-            "quantity": 2,
+            "quantity": 3,
             "unit_price": 0,
             "no_offers": 0
           },
@@ -528348,7 +528347,7 @@
           "min_skus": 5,
           "observed_skus": 6,
           "missing_skus": 4,
-          "lost_depot_connections": 1,
+          "lost_depot_connections": 2,
           "ready_candidates": 10,
           "insufficient_observed_products": false,
           "unavailable_replacements": 0,
@@ -528371,13 +528370,13 @@
         "group": "bread_cereals",
         "index": 98.1761,
         "observed_skus": 20,
-        "matched_skus": 20,
+        "matched_skus": 19,
         "min_skus": 6,
         "target_skus": 24,
-        "coverage": 1.0,
-        "common_coverage": 1.0,
+        "coverage": 0.95,
+        "common_coverage": 0.95,
         "previous_date": "2026-11-07",
-        "contributing_skus": 20,
+        "contributing_skus": 19,
         "headline_contributor": true,
         "reasons": [
           "lost_depot_connections",
@@ -528387,14 +528386,14 @@
           "primary": {
             "status": "complete",
             "pages": 2,
-            "raw_results": 40,
-            "unique_results": 40,
+            "raw_results": 41,
+            "unique_results": 41,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 40,
+          "accepted_candidates": 41,
           "rejections": {
             "category": 0,
             "title": 0,
@@ -528419,7 +528418,7 @@
         },
         "candidate_readiness": 23,
         "fresh_within_1_day_share": 1.0,
-        "fresh_within_1_day_skus": 20,
+        "fresh_within_1_day_skus": 19,
         "freshness_unknown_skus": 0,
         "source_within_3_days_share": 1.0,
         "future_source_skus": 0
@@ -528446,14 +528445,14 @@
           "primary": {
             "status": "complete",
             "pages": 5,
-            "raw_results": 113,
-            "unique_results": 113,
+            "raw_results": 111,
+            "unique_results": 111,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 113,
+          "accepted_candidates": 111,
           "rejections": {
             "category": 0,
             "title": 0,
@@ -528467,7 +528466,7 @@
           "observed_skus": 21,
           "missing_skus": 9,
           "lost_depot_connections": 7,
-          "ready_candidates": 91,
+          "ready_candidates": 89,
           "insufficient_observed_products": false,
           "unavailable_replacements": 0,
           "below_target": false,
@@ -528476,7 +528475,7 @@
           "turnover_allowance": 6,
           "absence_complete": true
         },
-        "candidate_readiness": 91,
+        "candidate_readiness": 89,
         "fresh_within_1_day_share": 1.0,
         "fresh_within_1_day_skus": 18,
         "freshness_unknown_skus": 0,
@@ -528488,7 +528487,7 @@
         "label": "Bulgur",
         "group": "bread_cereals",
         "index": 110.4037,
-        "observed_skus": 19,
+        "observed_skus": 21,
         "matched_skus": 19,
         "min_skus": 7,
         "target_skus": 26,
@@ -528499,21 +528498,20 @@
         "headline_contributor": true,
         "reasons": [
           "lost_depot_connections",
-          "unavailable_replacements",
           "below_target"
         ],
         "collection": {
           "primary": {
             "status": "complete",
             "pages": 3,
-            "raw_results": 65,
-            "unique_results": 65,
+            "raw_results": 67,
+            "unique_results": 67,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 65,
+          "accepted_candidates": 67,
           "rejections": {
             "category": 0,
             "title": 0,
@@ -528524,19 +528522,19 @@
           "panel_size": 26,
           "target_skus": 26,
           "min_skus": 7,
-          "observed_skus": 21,
-          "missing_skus": 5,
-          "lost_depot_connections": 4,
-          "ready_candidates": 42,
+          "observed_skus": 23,
+          "missing_skus": 3,
+          "lost_depot_connections": 2,
+          "ready_candidates": 44,
           "insufficient_observed_products": false,
-          "unavailable_replacements": 1,
+          "unavailable_replacements": 0,
           "below_target": false,
           "additions_today": 1,
           "replacements_today": 1,
           "turnover_allowance": 6,
           "absence_complete": true
         },
-        "candidate_readiness": 42,
+        "candidate_readiness": 44,
         "fresh_within_1_day_share": 1.0,
         "fresh_within_1_day_skus": 19,
         "freshness_unknown_skus": 0,
@@ -528649,7 +528647,7 @@
           "observed_skus": 29,
           "missing_skus": 1,
           "lost_depot_connections": 1,
-          "ready_candidates": 106,
+          "ready_candidates": 105,
           "insufficient_observed_products": false,
           "unavailable_replacements": 0,
           "below_target": false,
@@ -528658,7 +528656,7 @@
           "turnover_allowance": 6,
           "absence_complete": false
         },
-        "candidate_readiness": 106,
+        "candidate_readiness": 105,
         "fresh_within_1_day_share": 1.0,
         "fresh_within_1_day_skus": 21,
         "freshness_unknown_skus": 0,
@@ -528932,8 +528930,8 @@
           "primary": {
             "status": "complete",
             "pages": 1,
-            "raw_results": 13,
-            "unique_results": 13,
+            "raw_results": 14,
+            "unique_results": 14,
             "exhausted": true,
             "reason": "exhausted"
           },
@@ -528941,15 +528939,15 @@
             {
               "status": "complete",
               "pages": 1,
-              "raw_results": 13,
-              "unique_results": 13,
+              "raw_results": 14,
+              "unique_results": 14,
               "exhausted": true,
               "reason": "exhausted",
               "query": "kıyma"
             }
           ],
           "complete": true,
-          "accepted_candidates": 9,
+          "accepted_candidates": 10,
           "rejections": {
             "category": 0,
             "title": 4,
@@ -528960,8 +528958,8 @@
           "panel_size": 11,
           "target_skus": 20,
           "min_skus": 5,
-          "observed_skus": 8,
-          "missing_skus": 4,
+          "observed_skus": 9,
+          "missing_skus": 3,
           "lost_depot_connections": 1,
           "ready_candidates": 2,
           "insufficient_observed_products": false,
@@ -529011,8 +529009,8 @@
             {
               "status": "complete",
               "pages": 1,
-              "raw_results": 2,
-              "unique_results": 2,
+              "raw_results": 3,
+              "unique_results": 3,
               "exhausted": true,
               "reason": "exhausted",
               "query": "dana sote"
@@ -529036,22 +529034,22 @@
             "unit_price": 0,
             "no_offers": 0
           },
-          "panel_size": 13,
+          "panel_size": 12,
           "target_skus": 20,
           "min_skus": 5,
           "observed_skus": 7,
-          "missing_skus": 6,
+          "missing_skus": 5,
           "lost_depot_connections": 4,
-          "ready_candidates": 3,
+          "ready_candidates": 2,
           "insufficient_observed_products": false,
           "unavailable_replacements": 0,
           "below_target": true,
-          "additions_today": 3,
+          "additions_today": 2,
           "replacements_today": 0,
           "turnover_allowance": 4,
           "absence_complete": true
         },
-        "candidate_readiness": 3,
+        "candidate_readiness": 2,
         "fresh_within_1_day_share": null,
         "fresh_within_1_day_skus": null,
         "freshness_unknown_skus": 0,
@@ -529082,27 +529080,27 @@
         "collection": {
           "primary": {
             "status": "complete",
-            "pages": 2,
-            "raw_results": 25,
-            "unique_results": 25,
+            "pages": 1,
+            "raw_results": 24,
+            "unique_results": 24,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [
             {
               "status": "complete",
-              "pages": 2,
-              "raw_results": 25,
-              "unique_results": 25,
+              "pages": 1,
+              "raw_results": 24,
+              "unique_results": 24,
               "exhausted": true,
               "reason": "exhausted",
               "query": "göğüs"
             },
             {
               "status": "complete",
-              "pages": 2,
-              "raw_results": 25,
-              "unique_results": 25,
+              "pages": 1,
+              "raw_results": 24,
+              "unique_results": 24,
               "exhausted": true,
               "reason": "exhausted",
               "query": "tavuk"
@@ -529112,7 +529110,7 @@
           "accepted_candidates": 1,
           "rejections": {
             "category": 0,
-            "title": 24,
+            "title": 23,
             "quantity": 0,
             "unit_price": 0,
             "no_offers": 0
@@ -529163,8 +529161,8 @@
           "primary": {
             "status": "complete",
             "pages": 2,
-            "raw_results": 33,
-            "unique_results": 33,
+            "raw_results": 34,
+            "unique_results": 34,
             "exhausted": true,
             "reason": "exhausted"
           },
@@ -529192,7 +529190,7 @@
           "accepted_candidates": 3,
           "rejections": {
             "category": 0,
-            "title": 30,
+            "title": 31,
             "quantity": 0,
             "unit_price": 0,
             "no_offers": 0
@@ -529234,7 +529232,6 @@
         "contributing_skus": 0,
         "headline_contributor": false,
         "reasons": [
-          "lost_depot_connections",
           "unavailable_replacements",
           "rejected_title",
           "below_target",
@@ -529281,9 +529278,9 @@
           "panel_size": 16,
           "target_skus": 16,
           "min_skus": 4,
-          "observed_skus": 12,
-          "missing_skus": 4,
-          "lost_depot_connections": 1,
+          "observed_skus": 13,
+          "missing_skus": 3,
+          "lost_depot_connections": 0,
           "ready_candidates": 4,
           "insufficient_observed_products": false,
           "unavailable_replacements": 1,
@@ -529333,8 +529330,8 @@
             {
               "status": "complete",
               "pages": 1,
-              "raw_results": 20,
-              "unique_results": 20,
+              "raw_results": 19,
+              "unique_results": 19,
               "exhausted": true,
               "reason": "exhausted",
               "query": "hindi"
@@ -529350,7 +529347,7 @@
             }
           ],
           "complete": true,
-          "accepted_candidates": 13,
+          "accepted_candidates": 12,
           "rejections": {
             "category": 0,
             "title": 7,
@@ -529364,7 +529361,7 @@
           "observed_skus": 4,
           "missing_skus": 5,
           "lost_depot_connections": 2,
-          "ready_candidates": 11,
+          "ready_candidates": 10,
           "insufficient_observed_products": false,
           "unavailable_replacements": 0,
           "below_target": true,
@@ -529373,7 +529370,7 @@
           "turnover_allowance": 4,
           "absence_complete": true
         },
-        "candidate_readiness": 11,
+        "candidate_readiness": 10,
         "fresh_within_1_day_share": null,
         "fresh_within_1_day_skus": null,
         "freshness_unknown_skus": 0,
@@ -529424,7 +529421,7 @@
           "observed_skus": 23,
           "missing_skus": 5,
           "lost_depot_connections": 2,
-          "ready_candidates": 124,
+          "ready_candidates": 123,
           "insufficient_observed_products": false,
           "unavailable_replacements": 0,
           "below_target": false,
@@ -529433,7 +529430,7 @@
           "turnover_allowance": 6,
           "absence_complete": true
         },
-        "candidate_readiness": 124,
+        "candidate_readiness": 123,
         "fresh_within_1_day_share": 1.0,
         "fresh_within_1_day_skus": 20,
         "freshness_unknown_skus": 0,
@@ -529445,12 +529442,12 @@
         "label": "Salam",
         "group": "meat",
         "index": 102.4258,
-        "observed_skus": 23,
-        "matched_skus": 23,
+        "observed_skus": 22,
+        "matched_skus": 22,
         "min_skus": 6,
         "target_skus": 24,
-        "coverage": 1.0,
-        "common_coverage": 1.0,
+        "coverage": 0.9565,
+        "common_coverage": 0.956522,
         "previous_date": "2026-11-07",
         "contributing_skus": 0,
         "headline_contributor": false,
@@ -529464,14 +529461,14 @@
           "primary": {
             "status": "complete",
             "pages": 4,
-            "raw_results": 89,
-            "unique_results": 89,
+            "raw_results": 88,
+            "unique_results": 88,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 89,
+          "accepted_candidates": 88,
           "rejections": {
             "category": 0,
             "title": 0,
@@ -529482,10 +529479,10 @@
           "panel_size": 24,
           "target_skus": 24,
           "min_skus": 6,
-          "observed_skus": 21,
-          "missing_skus": 3,
-          "lost_depot_connections": 3,
-          "ready_candidates": 65,
+          "observed_skus": 20,
+          "missing_skus": 4,
+          "lost_depot_connections": 4,
+          "ready_candidates": 64,
           "insufficient_observed_products": false,
           "unavailable_replacements": 1,
           "below_target": false,
@@ -529494,9 +529491,9 @@
           "turnover_allowance": 5,
           "absence_complete": true
         },
-        "candidate_readiness": 65,
+        "candidate_readiness": 64,
         "fresh_within_1_day_share": 1.0,
-        "fresh_within_1_day_skus": 23,
+        "fresh_within_1_day_skus": 22,
         "freshness_unknown_skus": 0,
         "source_within_3_days_share": 1.0,
         "future_source_skus": 0
@@ -529506,12 +529503,12 @@
         "label": "Sosis",
         "group": "meat",
         "index": 103.2137,
-        "observed_skus": 20,
-        "matched_skus": 20,
+        "observed_skus": 19,
+        "matched_skus": 19,
         "min_skus": 6,
         "target_skus": 24,
-        "coverage": 1.0,
-        "common_coverage": 1.0,
+        "coverage": 0.95,
+        "common_coverage": 0.95,
         "previous_date": "2026-11-07",
         "contributing_skus": 0,
         "headline_contributor": false,
@@ -529525,14 +529522,14 @@
           "primary": {
             "status": "complete",
             "pages": 2,
-            "raw_results": 45,
-            "unique_results": 45,
+            "raw_results": 46,
+            "unique_results": 46,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 45,
+          "accepted_candidates": 46,
           "rejections": {
             "category": 0,
             "title": 0,
@@ -529543,10 +529540,10 @@
           "panel_size": 24,
           "target_skus": 24,
           "min_skus": 6,
-          "observed_skus": 21,
-          "missing_skus": 3,
-          "lost_depot_connections": 3,
-          "ready_candidates": 21,
+          "observed_skus": 19,
+          "missing_skus": 5,
+          "lost_depot_connections": 4,
+          "ready_candidates": 23,
           "insufficient_observed_products": false,
           "unavailable_replacements": 1,
           "below_target": false,
@@ -529555,9 +529552,9 @@
           "turnover_allowance": 5,
           "absence_complete": true
         },
-        "candidate_readiness": 21,
+        "candidate_readiness": 23,
         "fresh_within_1_day_share": 1.0,
-        "fresh_within_1_day_skus": 20,
+        "fresh_within_1_day_skus": 19,
         "freshness_unknown_skus": 0,
         "source_within_3_days_share": 1.0,
         "future_source_skus": 0
@@ -529758,7 +529755,7 @@
         "label": "Somon füme",
         "group": "fish",
         "index": null,
-        "observed_skus": 3,
+        "observed_skus": 2,
         "matched_skus": 1,
         "min_skus": 2,
         "target_skus": 10,
@@ -529795,7 +529792,7 @@
           "target_skus": 10,
           "min_skus": 2,
           "observed_skus": 4,
-          "missing_skus": 4,
+          "missing_skus": 3,
           "lost_depot_connections": 1,
           "ready_candidates": 3,
           "insufficient_observed_products": false,
@@ -529851,22 +529848,22 @@
             "unit_price": 0,
             "no_offers": 0
           },
-          "panel_size": 6,
+          "panel_size": 7,
           "target_skus": 10,
           "min_skus": 2,
-          "observed_skus": 4,
+          "observed_skus": 5,
           "missing_skus": 2,
           "lost_depot_connections": 1,
-          "ready_candidates": 1,
+          "ready_candidates": 2,
           "insufficient_observed_products": false,
           "unavailable_replacements": 0,
           "below_target": true,
-          "additions_today": 1,
+          "additions_today": 2,
           "replacements_today": 0,
           "turnover_allowance": 2,
           "absence_complete": true
         },
-        "candidate_readiness": 1,
+        "candidate_readiness": 2,
         "fresh_within_1_day_share": 1.0,
         "fresh_within_1_day_skus": 4,
         "freshness_unknown_skus": 0,
@@ -529994,7 +529991,7 @@
         "label": "İçme sütü",
         "group": "dairy_eggs",
         "index": 99.6848,
-        "observed_skus": 18,
+        "observed_skus": 19,
         "matched_skus": 18,
         "min_skus": 8,
         "target_skus": 30,
@@ -530021,10 +530018,10 @@
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 111,
+          "accepted_candidates": 110,
           "rejections": {
             "category": 0,
-            "title": 89,
+            "title": 90,
             "quantity": 0,
             "unit_price": 0,
             "no_offers": 0
@@ -530035,16 +530032,16 @@
           "observed_skus": 23,
           "missing_skus": 7,
           "lost_depot_connections": 3,
-          "ready_candidates": 90,
+          "ready_candidates": 89,
           "insufficient_observed_products": false,
-          "unavailable_replacements": 3,
+          "unavailable_replacements": 2,
           "below_target": false,
           "additions_today": 5,
           "replacements_today": 0,
           "turnover_allowance": 6,
           "absence_complete": false
         },
-        "candidate_readiness": 90,
+        "candidate_readiness": 89,
         "fresh_within_1_day_share": 1.0,
         "fresh_within_1_day_skus": 18,
         "freshness_unknown_skus": 0,
@@ -530056,7 +530053,7 @@
         "label": "Laktozsuz süt",
         "group": "dairy_eggs",
         "index": 100.5786,
-        "observed_skus": 11,
+        "observed_skus": 12,
         "matched_skus": 11,
         "min_skus": 5,
         "target_skus": 20,
@@ -530093,9 +530090,9 @@
           "panel_size": 17,
           "target_skus": 20,
           "min_skus": 5,
-          "observed_skus": 10,
-          "missing_skus": 7,
-          "lost_depot_connections": 6,
+          "observed_skus": 11,
+          "missing_skus": 6,
+          "lost_depot_connections": 5,
           "ready_candidates": 1,
           "insufficient_observed_products": false,
           "unavailable_replacements": 3,
@@ -530258,14 +530255,14 @@
           "primary": {
             "status": "complete",
             "pages": 3,
-            "raw_results": 57,
-            "unique_results": 57,
+            "raw_results": 58,
+            "unique_results": 58,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 57,
+          "accepted_candidates": 58,
           "rejections": {
             "category": 0,
             "title": 0,
@@ -530279,7 +530276,7 @@
           "observed_skus": 18,
           "missing_skus": 6,
           "lost_depot_connections": 5,
-          "ready_candidates": 34,
+          "ready_candidates": 35,
           "insufficient_observed_products": false,
           "unavailable_replacements": 1,
           "below_target": false,
@@ -530288,7 +530285,7 @@
           "turnover_allowance": 5,
           "absence_complete": true
         },
-        "candidate_readiness": 34,
+        "candidate_readiness": 35,
         "fresh_within_1_day_share": 1.0,
         "fresh_within_1_day_skus": 18,
         "freshness_unknown_skus": 0,
@@ -530319,17 +530316,17 @@
           "primary": {
             "status": "complete",
             "pages": 6,
-            "raw_results": 132,
-            "unique_results": 132,
+            "raw_results": 135,
+            "unique_results": 135,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 67,
+          "accepted_candidates": 68,
           "rejections": {
             "category": 0,
-            "title": 65,
+            "title": 67,
             "quantity": 0,
             "unit_price": 0,
             "no_offers": 0
@@ -530422,14 +530419,14 @@
         "label": "Kaşar peyniri",
         "group": "dairy_eggs",
         "index": 102.995,
-        "observed_skus": 21,
-        "matched_skus": 21,
+        "observed_skus": 20,
+        "matched_skus": 20,
         "min_skus": 8,
         "target_skus": 30,
-        "coverage": 1.0,
-        "common_coverage": 1.0,
+        "coverage": 0.9524,
+        "common_coverage": 0.952381,
         "previous_date": "2026-11-07",
-        "contributing_skus": 21,
+        "contributing_skus": 20,
         "headline_contributor": true,
         "reasons": [
           "lost_depot_connections",
@@ -530439,15 +530436,15 @@
         "collection": {
           "primary": {
             "status": "complete",
-            "pages": 4,
-            "raw_results": 99,
-            "unique_results": 99,
+            "pages": 5,
+            "raw_results": 100,
+            "unique_results": 100,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 95,
+          "accepted_candidates": 96,
           "rejections": {
             "category": 0,
             "title": 4,
@@ -530458,10 +530455,10 @@
           "panel_size": 30,
           "target_skus": 30,
           "min_skus": 8,
-          "observed_skus": 27,
-          "missing_skus": 3,
-          "lost_depot_connections": 3,
-          "ready_candidates": 71,
+          "observed_skus": 26,
+          "missing_skus": 4,
+          "lost_depot_connections": 4,
+          "ready_candidates": 72,
           "insufficient_observed_products": false,
           "unavailable_replacements": 0,
           "below_target": false,
@@ -530470,9 +530467,9 @@
           "turnover_allowance": 6,
           "absence_complete": true
         },
-        "candidate_readiness": 71,
+        "candidate_readiness": 72,
         "fresh_within_1_day_share": 1.0,
-        "fresh_within_1_day_skus": 21,
+        "fresh_within_1_day_skus": 20,
         "freshness_unknown_skus": 0,
         "source_within_3_days_share": 1.0,
         "future_source_skus": 0
@@ -530561,8 +530558,8 @@
           "primary": {
             "status": "complete",
             "pages": 3,
-            "raw_results": 51,
-            "unique_results": 51,
+            "raw_results": 52,
+            "unique_results": 52,
             "exhausted": true,
             "reason": "exhausted"
           },
@@ -530571,7 +530568,7 @@
           "accepted_candidates": 15,
           "rejections": {
             "category": 0,
-            "title": 36,
+            "title": 37,
             "quantity": 0,
             "unit_price": 0,
             "no_offers": 0
@@ -530664,14 +530661,14 @@
         "label": "Yumurta",
         "group": "dairy_eggs",
         "index": 109.1896,
-        "observed_skus": 21,
-        "matched_skus": 21,
+        "observed_skus": 20,
+        "matched_skus": 20,
         "min_skus": 8,
         "target_skus": 30,
-        "coverage": 1.0,
-        "common_coverage": 1.0,
+        "coverage": 0.9524,
+        "common_coverage": 0.952381,
         "previous_date": "2026-11-07",
-        "contributing_skus": 21,
+        "contributing_skus": 20,
         "headline_contributor": true,
         "reasons": [
           "rejected_unit_price",
@@ -530681,14 +530678,14 @@
           "primary": {
             "status": "complete",
             "pages": 3,
-            "raw_results": 53,
-            "unique_results": 53,
+            "raw_results": 50,
+            "unique_results": 50,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 52,
+          "accepted_candidates": 49,
           "rejections": {
             "category": 0,
             "title": 0,
@@ -530699,10 +530696,10 @@
           "panel_size": 30,
           "target_skus": 30,
           "min_skus": 8,
-          "observed_skus": 29,
-          "missing_skus": 5,
+          "observed_skus": 27,
+          "missing_skus": 6,
           "lost_depot_connections": 0,
-          "ready_candidates": 28,
+          "ready_candidates": 27,
           "insufficient_observed_products": false,
           "unavailable_replacements": 0,
           "below_target": false,
@@ -530711,9 +530708,9 @@
           "turnover_allowance": 6,
           "absence_complete": true
         },
-        "candidate_readiness": 28,
+        "candidate_readiness": 27,
         "fresh_within_1_day_share": 1.0,
-        "fresh_within_1_day_skus": 21,
+        "fresh_within_1_day_skus": 20,
         "freshness_unknown_skus": 0,
         "source_within_3_days_share": 1.0,
         "future_source_skus": 0
@@ -530784,14 +530781,14 @@
         "label": "Ayçiçek yağı",
         "group": "oils_fats",
         "index": 98.8889,
-        "observed_skus": 22,
-        "matched_skus": 22,
+        "observed_skus": 21,
+        "matched_skus": 21,
         "min_skus": 8,
         "target_skus": 30,
-        "coverage": 1.0,
-        "common_coverage": 1.0,
+        "coverage": 0.9545,
+        "common_coverage": 0.954545,
         "previous_date": "2026-11-07",
-        "contributing_skus": 22,
+        "contributing_skus": 21,
         "headline_contributor": true,
         "reasons": [
           "lost_depot_connections",
@@ -530802,14 +530799,14 @@
           "primary": {
             "status": "complete",
             "pages": 2,
-            "raw_results": 45,
-            "unique_results": 45,
+            "raw_results": 44,
+            "unique_results": 44,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 44,
+          "accepted_candidates": 43,
           "rejections": {
             "category": 0,
             "title": 1,
@@ -530822,19 +530819,19 @@
           "min_skus": 8,
           "observed_skus": 27,
           "missing_skus": 5,
-          "lost_depot_connections": 2,
-          "ready_candidates": 20,
+          "lost_depot_connections": 3,
+          "ready_candidates": 19,
           "insufficient_observed_products": false,
           "unavailable_replacements": 0,
           "below_target": false,
           "additions_today": 5,
-          "replacements_today": 0,
+          "replacements_today": 1,
           "turnover_allowance": 6,
           "absence_complete": true
         },
-        "candidate_readiness": 20,
+        "candidate_readiness": 19,
         "fresh_within_1_day_share": 1.0,
-        "fresh_within_1_day_skus": 22,
+        "fresh_within_1_day_skus": 21,
         "freshness_unknown_skus": 0,
         "source_within_3_days_share": 1.0,
         "future_source_skus": 0
@@ -530845,13 +530842,13 @@
         "group": "oils_fats",
         "index": 91.3101,
         "observed_skus": 19,
-        "matched_skus": 19,
+        "matched_skus": 18,
         "min_skus": 8,
         "target_skus": 30,
-        "coverage": 1.0,
-        "common_coverage": 1.0,
+        "coverage": 0.9474,
+        "common_coverage": 0.947368,
         "previous_date": "2026-11-07",
-        "contributing_skus": 19,
+        "contributing_skus": 18,
         "headline_contributor": true,
         "reasons": [
           "lost_depot_connections",
@@ -530861,14 +530858,14 @@
           "primary": {
             "status": "complete",
             "pages": 3,
-            "raw_results": 73,
-            "unique_results": 73,
+            "raw_results": 72,
+            "unique_results": 72,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 73,
+          "accepted_candidates": 72,
           "rejections": {
             "category": 0,
             "title": 0,
@@ -530879,8 +530876,8 @@
           "panel_size": 30,
           "target_skus": 30,
           "min_skus": 8,
-          "observed_skus": 22,
-          "missing_skus": 8,
+          "observed_skus": 21,
+          "missing_skus": 9,
           "lost_depot_connections": 5,
           "ready_candidates": 52,
           "insufficient_observed_products": false,
@@ -530893,7 +530890,7 @@
         },
         "candidate_readiness": 52,
         "fresh_within_1_day_share": 1.0,
-        "fresh_within_1_day_skus": 19,
+        "fresh_within_1_day_skus": 18,
         "freshness_unknown_skus": 0,
         "source_within_3_days_share": 1.0,
         "future_source_skus": 0
@@ -530903,7 +530900,7 @@
         "label": "Tereyağı",
         "group": "oils_fats",
         "index": 99.1811,
-        "observed_skus": 19,
+        "observed_skus": 20,
         "matched_skus": 19,
         "min_skus": 8,
         "target_skus": 30,
@@ -530914,21 +530911,22 @@
         "headline_contributor": true,
         "reasons": [
           "lost_depot_connections",
+          "unavailable_replacements",
           "rejected_title",
           "below_target"
         ],
         "collection": {
           "primary": {
             "status": "complete",
-            "pages": 4,
-            "raw_results": 75,
-            "unique_results": 75,
+            "pages": 3,
+            "raw_results": 74,
+            "unique_results": 74,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 64,
+          "accepted_candidates": 63,
           "rejections": {
             "category": 0,
             "title": 11,
@@ -530941,17 +530939,17 @@
           "min_skus": 8,
           "observed_skus": 24,
           "missing_skus": 6,
-          "lost_depot_connections": 7,
-          "ready_candidates": 39,
+          "lost_depot_connections": 6,
+          "ready_candidates": 38,
           "insufficient_observed_products": false,
-          "unavailable_replacements": 0,
+          "unavailable_replacements": 1,
           "below_target": false,
           "additions_today": 5,
-          "replacements_today": 1,
+          "replacements_today": 0,
           "turnover_allowance": 6,
           "absence_complete": true
         },
-        "candidate_readiness": 39,
+        "candidate_readiness": 38,
         "fresh_within_1_day_share": 1.0,
         "fresh_within_1_day_skus": 19,
         "freshness_unknown_skus": 0,
@@ -530982,14 +530980,14 @@
           "primary": {
             "status": "complete",
             "pages": 2,
-            "raw_results": 49,
-            "unique_results": 49,
+            "raw_results": 48,
+            "unique_results": 48,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 43,
+          "accepted_candidates": 42,
           "rejections": {
             "category": 0,
             "title": 5,
@@ -531003,7 +531001,7 @@
           "observed_skus": 18,
           "missing_skus": 4,
           "lost_depot_connections": 2,
-          "ready_candidates": 23,
+          "ready_candidates": 22,
           "insufficient_observed_products": false,
           "unavailable_replacements": 0,
           "below_target": false,
@@ -531012,7 +531010,7 @@
           "turnover_allowance": 5,
           "absence_complete": true
         },
-        "candidate_readiness": 23,
+        "candidate_readiness": 22,
         "fresh_within_1_day_share": 1.0,
         "fresh_within_1_day_skus": 18,
         "freshness_unknown_skus": 0,
@@ -531169,8 +531167,8 @@
           "primary": {
             "status": "complete",
             "pages": 1,
-            "raw_results": 9,
-            "unique_results": 9,
+            "raw_results": 8,
+            "unique_results": 8,
             "exhausted": true,
             "reason": "exhausted"
           },
@@ -531178,15 +531176,15 @@
             {
               "status": "complete",
               "pages": 1,
-              "raw_results": 9,
-              "unique_results": 9,
+              "raw_results": 8,
+              "unique_results": 8,
               "exhausted": true,
               "reason": "exhausted",
               "query": "elma"
             }
           ],
           "complete": true,
-          "accepted_candidates": 9,
+          "accepted_candidates": 8,
           "rejections": {
             "category": 0,
             "title": 0,
@@ -531200,7 +531198,7 @@
           "observed_skus": 8,
           "missing_skus": 0,
           "lost_depot_connections": 0,
-          "ready_candidates": 4,
+          "ready_candidates": 3,
           "insufficient_observed_products": false,
           "unavailable_replacements": 0,
           "below_target": true,
@@ -531209,7 +531207,7 @@
           "turnover_allowance": 3,
           "absence_complete": true
         },
-        "candidate_readiness": 4,
+        "candidate_readiness": 3,
         "fresh_within_1_day_share": 1.0,
         "fresh_within_1_day_skus": 5,
         "freshness_unknown_skus": 0,
@@ -532208,8 +532206,8 @@
           "primary": {
             "status": "complete",
             "pages": 1,
-            "raw_results": 12,
-            "unique_results": 12,
+            "raw_results": 13,
+            "unique_results": 13,
             "exhausted": true,
             "reason": "exhausted"
           },
@@ -532217,15 +532215,15 @@
             {
               "status": "complete",
               "pages": 1,
-              "raw_results": 12,
-              "unique_results": 12,
+              "raw_results": 13,
+              "unique_results": 13,
               "exhausted": true,
               "reason": "exhausted",
               "query": "biber"
             }
           ],
           "complete": true,
-          "accepted_candidates": 11,
+          "accepted_candidates": 12,
           "rejections": {
             "category": 0,
             "title": 0,
@@ -532239,7 +532237,7 @@
           "observed_skus": 8,
           "missing_skus": 4,
           "lost_depot_connections": 1,
-          "ready_candidates": 4,
+          "ready_candidates": 5,
           "insufficient_observed_products": false,
           "unavailable_replacements": 1,
           "below_target": false,
@@ -532248,7 +532246,7 @@
           "turnover_allowance": 3,
           "absence_complete": true
         },
-        "candidate_readiness": 4,
+        "candidate_readiness": 5,
         "fresh_within_1_day_share": 1.0,
         "fresh_within_1_day_skus": 8,
         "freshness_unknown_skus": 0,
@@ -533101,7 +533099,7 @@
         "label": "Toz şeker",
         "group": "sugar_snacks",
         "index": 108.4382,
-        "observed_skus": 17,
+        "observed_skus": 18,
         "matched_skus": 17,
         "min_skus": 6,
         "target_skus": 24,
@@ -533138,9 +533136,9 @@
           "panel_size": 24,
           "target_skus": 24,
           "min_skus": 6,
-          "observed_skus": 20,
-          "missing_skus": 4,
-          "lost_depot_connections": 6,
+          "observed_skus": 21,
+          "missing_skus": 3,
+          "lost_depot_connections": 5,
           "ready_candidates": 21,
           "insufficient_observed_products": false,
           "unavailable_replacements": 1,
@@ -533283,7 +533281,7 @@
         "label": "Çikolata",
         "group": "sugar_snacks",
         "index": 105.9188,
-        "observed_skus": 19,
+        "observed_skus": 20,
         "matched_skus": 19,
         "min_skus": 8,
         "target_skus": 30,
@@ -533318,9 +533316,9 @@
           "panel_size": 30,
           "target_skus": 30,
           "min_skus": 8,
-          "observed_skus": 25,
-          "missing_skus": 5,
-          "lost_depot_connections": 3,
+          "observed_skus": 26,
+          "missing_skus": 4,
+          "lost_depot_connections": 2,
           "ready_candidates": 61,
           "insufficient_observed_products": false,
           "unavailable_replacements": 0,
@@ -533526,14 +533524,14 @@
         "label": "Kuruyemiş",
         "group": "sugar_snacks",
         "index": 100.0375,
-        "observed_skus": 11,
-        "matched_skus": 11,
+        "observed_skus": 10,
+        "matched_skus": 10,
         "min_skus": 6,
         "target_skus": 24,
-        "coverage": 1.0,
-        "common_coverage": 1.0,
+        "coverage": 0.9091,
+        "common_coverage": 0.909091,
         "previous_date": "2026-11-07",
-        "contributing_skus": 11,
+        "contributing_skus": 10,
         "headline_contributor": true,
         "reasons": [
           "lost_depot_connections",
@@ -533562,9 +533560,9 @@
           "panel_size": 21,
           "target_skus": 24,
           "min_skus": 6,
-          "observed_skus": 13,
-          "missing_skus": 10,
-          "lost_depot_connections": 5,
+          "observed_skus": 12,
+          "missing_skus": 11,
+          "lost_depot_connections": 6,
           "ready_candidates": 4,
           "insufficient_observed_products": false,
           "unavailable_replacements": 5,
@@ -533576,7 +533574,7 @@
         },
         "candidate_readiness": 4,
         "fresh_within_1_day_share": 1.0,
-        "fresh_within_1_day_skus": 11,
+        "fresh_within_1_day_skus": 10,
         "freshness_unknown_skus": 0,
         "source_within_3_days_share": 1.0,
         "future_source_skus": 0
@@ -533648,7 +533646,7 @@
         "label": "Helva",
         "group": "sugar_snacks",
         "index": 95.3189,
-        "observed_skus": 17,
+        "observed_skus": 19,
         "matched_skus": 17,
         "min_skus": 6,
         "target_skus": 22,
@@ -533666,14 +533664,14 @@
           "primary": {
             "status": "complete",
             "pages": 1,
-            "raw_results": 21,
-            "unique_results": 21,
+            "raw_results": 23,
+            "unique_results": 23,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 21,
+          "accepted_candidates": 23,
           "rejections": {
             "category": 0,
             "title": 0,
@@ -533684,8 +533682,8 @@
           "panel_size": 22,
           "target_skus": 22,
           "min_skus": 6,
-          "observed_skus": 13,
-          "missing_skus": 9,
+          "observed_skus": 15,
+          "missing_skus": 7,
           "lost_depot_connections": 2,
           "ready_candidates": 6,
           "insufficient_observed_products": false,
@@ -533953,14 +533951,14 @@
         "label": "Kuru fasulye",
         "group": "other_food",
         "index": 103.5666,
-        "observed_skus": 21,
-        "matched_skus": 21,
+        "observed_skus": 20,
+        "matched_skus": 20,
         "min_skus": 6,
         "target_skus": 24,
-        "coverage": 1.0,
-        "common_coverage": 1.0,
+        "coverage": 0.9524,
+        "common_coverage": 0.952381,
         "previous_date": "2026-11-07",
-        "contributing_skus": 21,
+        "contributing_skus": 20,
         "headline_contributor": true,
         "reasons": [
           "lost_depot_connections",
@@ -534003,7 +534001,7 @@
         },
         "candidate_readiness": 15,
         "fresh_within_1_day_share": 1.0,
-        "fresh_within_1_day_skus": 21,
+        "fresh_within_1_day_skus": 20,
         "freshness_unknown_skus": 0,
         "source_within_3_days_share": 1.0,
         "future_source_skus": 0
@@ -534133,14 +534131,14 @@
         "label": "Hazır çorba",
         "group": "other_food",
         "index": 96.8267,
-        "observed_skus": 18,
-        "matched_skus": 18,
+        "observed_skus": 17,
+        "matched_skus": 17,
         "min_skus": 6,
         "target_skus": 24,
-        "coverage": 1.0,
-        "common_coverage": 1.0,
+        "coverage": 0.9444,
+        "common_coverage": 0.944444,
         "previous_date": "2026-11-07",
-        "contributing_skus": 18,
+        "contributing_skus": 17,
         "headline_contributor": true,
         "reasons": [
           "lost_depot_connections",
@@ -534152,14 +534150,14 @@
           "primary": {
             "status": "complete",
             "pages": 3,
-            "raw_results": 51,
-            "unique_results": 51,
+            "raw_results": 50,
+            "unique_results": 50,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 46,
+          "accepted_candidates": 45,
           "rejections": {
             "category": 0,
             "title": 0,
@@ -534170,8 +534168,8 @@
           "panel_size": 24,
           "target_skus": 24,
           "min_skus": 6,
-          "observed_skus": 20,
-          "missing_skus": 4,
+          "observed_skus": 19,
+          "missing_skus": 5,
           "lost_depot_connections": 1,
           "ready_candidates": 27,
           "insufficient_observed_products": false,
@@ -534184,7 +534182,7 @@
         },
         "candidate_readiness": 27,
         "fresh_within_1_day_share": 1.0,
-        "fresh_within_1_day_skus": 18,
+        "fresh_within_1_day_skus": 17,
         "freshness_unknown_skus": 0,
         "source_within_3_days_share": 1.0,
         "future_source_skus": 0
@@ -534214,14 +534212,14 @@
           "primary": {
             "status": "complete",
             "pages": 3,
-            "raw_results": 58,
-            "unique_results": 58,
+            "raw_results": 59,
+            "unique_results": 59,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 52,
+          "accepted_candidates": 53,
           "rejections": {
             "category": 0,
             "title": 0,
@@ -534232,10 +534230,10 @@
           "panel_size": 24,
           "target_skus": 24,
           "min_skus": 6,
-          "observed_skus": 21,
-          "missing_skus": 3,
-          "lost_depot_connections": 4,
-          "ready_candidates": 28,
+          "observed_skus": 22,
+          "missing_skus": 2,
+          "lost_depot_connections": 3,
+          "ready_candidates": 29,
           "insufficient_observed_products": false,
           "unavailable_replacements": 1,
           "below_target": false,
@@ -534244,7 +534242,7 @@
           "turnover_allowance": 5,
           "absence_complete": true
         },
-        "candidate_readiness": 28,
+        "candidate_readiness": 29,
         "fresh_within_1_day_share": 1.0,
         "fresh_within_1_day_skus": 20,
         "freshness_unknown_skus": 0,
@@ -534256,7 +534254,7 @@
         "label": "Mayonez",
         "group": "other_food",
         "index": 92.9503,
-        "observed_skus": 17,
+        "observed_skus": 18,
         "matched_skus": 17,
         "min_skus": 6,
         "target_skus": 24,
@@ -534275,8 +534273,8 @@
           "primary": {
             "status": "complete",
             "pages": 3,
-            "raw_results": 51,
-            "unique_results": 51,
+            "raw_results": 52,
+            "unique_results": 52,
             "exhausted": true,
             "reason": "exhausted"
           },
@@ -534285,7 +534283,7 @@
           "accepted_candidates": 46,
           "rejections": {
             "category": 0,
-            "title": 4,
+            "title": 5,
             "quantity": 1,
             "unit_price": 0,
             "no_offers": 0
@@ -534355,9 +534353,9 @@
           "panel_size": 22,
           "target_skus": 22,
           "min_skus": 6,
-          "observed_skus": 14,
-          "missing_skus": 8,
-          "lost_depot_connections": 3,
+          "observed_skus": 13,
+          "missing_skus": 9,
+          "lost_depot_connections": 4,
           "ready_candidates": 3,
           "insufficient_observed_products": false,
           "unavailable_replacements": 2,
@@ -534399,14 +534397,14 @@
           "primary": {
             "status": "complete",
             "pages": 4,
-            "raw_results": 79,
-            "unique_results": 79,
+            "raw_results": 78,
+            "unique_results": 78,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 76,
+          "accepted_candidates": 75,
           "rejections": {
             "category": 0,
             "title": 1,
@@ -534420,7 +534418,7 @@
           "observed_skus": 14,
           "missing_skus": 8,
           "lost_depot_connections": 4,
-          "ready_candidates": 58,
+          "ready_candidates": 57,
           "insufficient_observed_products": false,
           "unavailable_replacements": 2,
           "below_target": false,
@@ -534429,7 +534427,7 @@
           "turnover_allowance": 5,
           "absence_complete": true
         },
-        "candidate_readiness": 58,
+        "candidate_readiness": 57,
         "fresh_within_1_day_share": 1.0,
         "fresh_within_1_day_skus": 18,
         "freshness_unknown_skus": 0,
@@ -534461,8 +534459,8 @@
           "primary": {
             "status": "complete",
             "pages": 6,
-            "raw_results": 125,
-            "unique_results": 125,
+            "raw_results": 126,
+            "unique_results": 126,
             "exhausted": true,
             "reason": "exhausted"
           },
@@ -534471,7 +534469,7 @@
           "accepted_candidates": 50,
           "rejections": {
             "category": 0,
-            "title": 70,
+            "title": 71,
             "quantity": 4,
             "unit_price": 1,
             "no_offers": 0
@@ -534626,7 +534624,7 @@
         "label": "Filtre kahve",
         "group": "drinks",
         "index": 110.2309,
-        "observed_skus": 17,
+        "observed_skus": 18,
         "matched_skus": 17,
         "min_skus": 6,
         "target_skus": 24,
@@ -534646,14 +534644,14 @@
           "primary": {
             "status": "complete",
             "pages": 4,
-            "raw_results": 83,
-            "unique_results": 83,
+            "raw_results": 82,
+            "unique_results": 82,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 39,
+          "accepted_candidates": 38,
           "rejections": {
             "category": 0,
             "title": 42,
@@ -534664,10 +534662,10 @@
           "panel_size": 24,
           "target_skus": 24,
           "min_skus": 6,
-          "observed_skus": 12,
-          "missing_skus": 12,
-          "lost_depot_connections": 8,
-          "ready_candidates": 20,
+          "observed_skus": 13,
+          "missing_skus": 11,
+          "lost_depot_connections": 7,
+          "ready_candidates": 19,
           "insufficient_observed_products": false,
           "unavailable_replacements": 1,
           "below_target": false,
@@ -534676,7 +534674,7 @@
           "turnover_allowance": 5,
           "absence_complete": true
         },
-        "candidate_readiness": 20,
+        "candidate_readiness": 19,
         "fresh_within_1_day_share": 1.0,
         "fresh_within_1_day_skus": 17,
         "freshness_unknown_skus": 0,
@@ -534912,8 +534910,8 @@
           "min_skus": 6,
           "observed_skus": 17,
           "missing_skus": 7,
-          "lost_depot_connections": 5,
-          "ready_candidates": 81,
+          "lost_depot_connections": 4,
+          "ready_candidates": 82,
           "insufficient_observed_products": false,
           "unavailable_replacements": 0,
           "below_target": false,
@@ -534922,7 +534920,7 @@
           "turnover_allowance": 5,
           "absence_complete": true
         },
-        "candidate_readiness": 81,
+        "candidate_readiness": 82,
         "fresh_within_1_day_share": 1.0,
         "fresh_within_1_day_skus": 19,
         "freshness_unknown_skus": 0,
@@ -534953,14 +534951,14 @@
           "primary": {
             "status": "complete",
             "pages": 5,
-            "raw_results": 108,
-            "unique_results": 108,
+            "raw_results": 109,
+            "unique_results": 109,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 103,
+          "accepted_candidates": 104,
           "rejections": {
             "category": 0,
             "title": 5,
@@ -535196,8 +535194,8 @@
           "primary": {
             "status": "complete",
             "pages": 2,
-            "raw_results": 47,
-            "unique_results": 47,
+            "raw_results": 48,
+            "unique_results": 48,
             "exhausted": true,
             "reason": "exhausted"
           },
@@ -535206,7 +535204,7 @@
           "accepted_candidates": 17,
           "rejections": {
             "category": 0,
-            "title": 29,
+            "title": 30,
             "quantity": 0,
             "unit_price": 1,
             "no_offers": 0
@@ -535316,14 +535314,14 @@
           "primary": {
             "status": "complete",
             "pages": 2,
-            "raw_results": 32,
-            "unique_results": 32,
+            "raw_results": 31,
+            "unique_results": 31,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 31,
+          "accepted_candidates": 30,
           "rejections": {
             "category": 0,
             "title": 0,
@@ -535337,7 +535335,7 @@
           "observed_skus": 24,
           "missing_skus": 4,
           "lost_depot_connections": 2,
-          "ready_candidates": 10,
+          "ready_candidates": 9,
           "insufficient_observed_products": false,
           "unavailable_replacements": 1,
           "below_target": false,
@@ -535346,7 +535344,7 @@
           "turnover_allowance": 6,
           "absence_complete": true
         },
-        "candidate_readiness": 10,
+        "candidate_readiness": 9,
         "fresh_within_1_day_share": 1.0,
         "fresh_within_1_day_skus": 19,
         "freshness_unknown_skus": 0,
@@ -535437,8 +535435,8 @@
           "primary": {
             "status": "complete",
             "pages": 4,
-            "raw_results": 79,
-            "unique_results": 79,
+            "raw_results": 80,
+            "unique_results": 80,
             "exhausted": true,
             "reason": "exhausted"
           },
@@ -535447,7 +535445,7 @@
           "accepted_candidates": 60,
           "rejections": {
             "category": 0,
-            "title": 6,
+            "title": 7,
             "quantity": 13,
             "unit_price": 0,
             "no_offers": 0
@@ -535479,7 +535477,7 @@
         "label": "Yüzey temizleyici",
         "group": "household_cleaning",
         "index": 90.5737,
-        "observed_skus": 18,
+        "observed_skus": 19,
         "matched_skus": 18,
         "min_skus": 7,
         "target_skus": 26,
@@ -535516,9 +535514,9 @@
           "panel_size": 26,
           "target_skus": 26,
           "min_skus": 7,
-          "observed_skus": 20,
-          "missing_skus": 7,
-          "lost_depot_connections": 7,
+          "observed_skus": 22,
+          "missing_skus": 5,
+          "lost_depot_connections": 5,
           "ready_candidates": 25,
           "insufficient_observed_products": false,
           "unavailable_replacements": 0,
@@ -535739,14 +535737,14 @@
           "primary": {
             "status": "complete",
             "pages": 6,
-            "raw_results": 137,
-            "unique_results": 137,
+            "raw_results": 136,
+            "unique_results": 136,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 137,
+          "accepted_candidates": 136,
           "rejections": {
             "category": 0,
             "title": 0,
@@ -535760,7 +535758,7 @@
           "observed_skus": 23,
           "missing_skus": 8,
           "lost_depot_connections": 7,
-          "ready_candidates": 114,
+          "ready_candidates": 113,
           "insufficient_observed_products": false,
           "unavailable_replacements": 0,
           "below_target": true,
@@ -535769,7 +535767,7 @@
           "turnover_allowance": 7,
           "absence_complete": true
         },
-        "candidate_readiness": 114,
+        "candidate_readiness": 113,
         "fresh_within_1_day_share": 1.0,
         "fresh_within_1_day_skus": 17,
         "freshness_unknown_skus": 0,
@@ -535801,14 +535799,14 @@
           "primary": {
             "status": "complete",
             "pages": 5,
-            "raw_results": 101,
-            "unique_results": 101,
+            "raw_results": 104,
+            "unique_results": 104,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 94,
+          "accepted_candidates": 97,
           "rejections": {
             "category": 0,
             "title": 6,
@@ -535821,8 +535819,8 @@
           "min_skus": 7,
           "observed_skus": 22,
           "missing_skus": 6,
-          "lost_depot_connections": 5,
-          "ready_candidates": 68,
+          "lost_depot_connections": 6,
+          "ready_candidates": 69,
           "insufficient_observed_products": false,
           "unavailable_replacements": 3,
           "below_target": false,
@@ -535831,7 +535829,7 @@
           "turnover_allowance": 6,
           "absence_complete": true
         },
-        "candidate_readiness": 68,
+        "candidate_readiness": 69,
         "fresh_within_1_day_share": 1.0,
         "fresh_within_1_day_skus": 22,
         "freshness_unknown_skus": 0,
@@ -535843,7 +535841,7 @@
         "label": "Sıvı sabun",
         "group": "personal_paper",
         "index": 122.8914,
-        "observed_skus": 20,
+        "observed_skus": 21,
         "matched_skus": 20,
         "min_skus": 7,
         "target_skus": 28,
@@ -535862,14 +535860,14 @@
           "primary": {
             "status": "complete",
             "pages": 4,
-            "raw_results": 87,
-            "unique_results": 87,
+            "raw_results": 88,
+            "unique_results": 88,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 82,
+          "accepted_candidates": 83,
           "rejections": {
             "category": 0,
             "title": 5,
@@ -535880,8 +535878,8 @@
           "panel_size": 28,
           "target_skus": 28,
           "min_skus": 7,
-          "observed_skus": 23,
-          "missing_skus": 5,
+          "observed_skus": 24,
+          "missing_skus": 4,
           "lost_depot_connections": 2,
           "ready_candidates": 60,
           "insufficient_observed_products": false,
@@ -535923,14 +535921,14 @@
           "primary": {
             "status": "complete",
             "pages": 5,
-            "raw_results": 107,
-            "unique_results": 107,
+            "raw_results": 108,
+            "unique_results": 108,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 98,
+          "accepted_candidates": 99,
           "rejections": {
             "category": 0,
             "title": 8,
@@ -535965,14 +535963,14 @@
         "label": "Diş macunu",
         "group": "personal_paper",
         "index": 103.5765,
-        "observed_skus": 19,
-        "matched_skus": 19,
+        "observed_skus": 18,
+        "matched_skus": 18,
         "min_skus": 7,
         "target_skus": 28,
-        "coverage": 1.0,
-        "common_coverage": 1.0,
+        "coverage": 0.9474,
+        "common_coverage": 0.947368,
         "previous_date": "2026-11-07",
-        "contributing_skus": 19,
+        "contributing_skus": 18,
         "headline_contributor": true,
         "reasons": [
           "lost_depot_connections",
@@ -536002,10 +536000,10 @@
           "panel_size": 28,
           "target_skus": 28,
           "min_skus": 7,
-          "observed_skus": 24,
-          "missing_skus": 4,
+          "observed_skus": 23,
+          "missing_skus": 5,
           "lost_depot_connections": 2,
-          "ready_candidates": 71,
+          "ready_candidates": 72,
           "insufficient_observed_products": false,
           "unavailable_replacements": 0,
           "below_target": false,
@@ -536014,9 +536012,9 @@
           "turnover_allowance": 6,
           "absence_complete": true
         },
-        "candidate_readiness": 71,
+        "candidate_readiness": 72,
         "fresh_within_1_day_share": 1.0,
-        "fresh_within_1_day_skus": 19,
+        "fresh_within_1_day_skus": 18,
         "freshness_unknown_skus": 0,
         "source_within_3_days_share": 1.0,
         "future_source_skus": 0
@@ -536046,14 +536044,14 @@
           "primary": {
             "status": "complete",
             "pages": 5,
-            "raw_results": 114,
-            "unique_results": 114,
+            "raw_results": 115,
+            "unique_results": 115,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 106,
+          "accepted_candidates": 107,
           "rejections": {
             "category": 0,
             "title": 7,
@@ -536067,7 +536065,7 @@
           "observed_skus": 23,
           "missing_skus": 1,
           "lost_depot_connections": 1,
-          "ready_candidates": 82,
+          "ready_candidates": 83,
           "insufficient_observed_products": false,
           "unavailable_replacements": 1,
           "below_target": false,
@@ -536076,7 +536074,7 @@
           "turnover_allowance": 5,
           "absence_complete": true
         },
-        "candidate_readiness": 82,
+        "candidate_readiness": 83,
         "fresh_within_1_day_share": 1.0,
         "fresh_within_1_day_skus": 23,
         "freshness_unknown_skus": 0,
@@ -536149,14 +536147,14 @@
         "label": "Tuvalet kağıdı",
         "group": "personal_paper",
         "index": 109.2084,
-        "observed_skus": 17,
-        "matched_skus": 17,
+        "observed_skus": 16,
+        "matched_skus": 15,
         "min_skus": 8,
         "target_skus": 30,
-        "coverage": 1.0,
-        "common_coverage": 1.0,
+        "coverage": 0.8824,
+        "common_coverage": 0.882353,
         "previous_date": "2026-11-07",
-        "contributing_skus": 17,
+        "contributing_skus": 15,
         "headline_contributor": true,
         "reasons": [
           "lost_depot_connections",
@@ -536184,21 +536182,21 @@
           "panel_size": 30,
           "target_skus": 30,
           "min_skus": 8,
-          "observed_skus": 19,
-          "missing_skus": 11,
+          "observed_skus": 20,
+          "missing_skus": 10,
           "lost_depot_connections": 6,
           "ready_candidates": 22,
           "insufficient_observed_products": false,
           "unavailable_replacements": 0,
           "below_target": false,
           "additions_today": 5,
-          "replacements_today": 0,
+          "replacements_today": 1,
           "turnover_allowance": 6,
           "absence_complete": true
         },
         "candidate_readiness": 22,
         "fresh_within_1_day_share": 1.0,
-        "fresh_within_1_day_skus": 17,
+        "fresh_within_1_day_skus": 15,
         "freshness_unknown_skus": 0,
         "source_within_3_days_share": 1.0,
         "future_source_skus": 0
@@ -536208,7 +536206,7 @@
         "label": "Kağıt havlu",
         "group": "personal_paper",
         "index": 100.1324,
-        "observed_skus": 16,
+        "observed_skus": 17,
         "matched_skus": 16,
         "min_skus": 7,
         "target_skus": 28,
@@ -536228,14 +536226,14 @@
           "primary": {
             "status": "complete",
             "pages": 2,
-            "raw_results": 45,
-            "unique_results": 45,
+            "raw_results": 48,
+            "unique_results": 48,
             "exhausted": true,
             "reason": "exhausted"
           },
           "aliases": [],
           "complete": true,
-          "accepted_candidates": 28,
+          "accepted_candidates": 31,
           "rejections": {
             "category": 0,
             "title": 14,
@@ -536246,19 +536244,19 @@
           "panel_size": 28,
           "target_skus": 28,
           "min_skus": 7,
-          "observed_skus": 18,
-          "missing_skus": 12,
+          "observed_skus": 19,
+          "missing_skus": 11,
           "lost_depot_connections": 5,
-          "ready_candidates": 11,
+          "ready_candidates": 12,
           "insufficient_observed_products": false,
           "unavailable_replacements": 0,
           "below_target": false,
           "additions_today": 5,
-          "replacements_today": 1,
+          "replacements_today": 0,
           "turnover_allowance": 6,
           "absence_complete": true
         },
-        "candidate_readiness": 11,
+        "candidate_readiness": 12,
         "fresh_within_1_day_share": 1.0,
         "fresh_within_1_day_skus": 16,
         "freshness_unknown_skus": 0,
@@ -536389,27 +536387,27 @@
       }
     ],
     "sources": {
-      "skus": 1282,
+      "skus": 1271,
       "retailer_count": 7,
       "depot_count": 19,
-      "single_depot_skus": 1015,
-      "single_depot_share": 0.791732,
-      "auditable_skus": 1282,
+      "single_depot_skus": 1007,
+      "single_depot_share": 0.79229,
+      "auditable_skus": 1271,
       "source_evidence_share": 1.0,
       "retailers": [
         {
           "market": "a101",
-          "skus": 27,
+          "skus": 24,
           "depots": 3
         },
         {
           "market": "bim",
-          "skus": 266,
+          "skus": 265,
           "depots": 1
         },
         {
           "market": "carrefour",
-          "skus": 441,
+          "skus": 433,
           "depots": 3
         },
         {
@@ -536429,7 +536427,7 @@
         },
         {
           "market": "tarim_kredi",
-          "skus": 62,
+          "skus": 63,
           "depots": 2
         }
       ],
@@ -536444,7 +536442,7 @@
           "source_id": "depot:a101-6815",
           "market": "a101",
           "depot_name": "Kostak Ümraniye",
-          "skus": 16
+          "skus": 13
         },
         {
           "source_id": "depot:a101-9324",
@@ -536456,13 +536454,13 @@
           "source_id": "depot:bim-5712",
           "market": "bim",
           "depot_name": "Çiçekçi  Üsküdar",
-          "skus": 266
+          "skus": 265
         },
         {
           "source_id": "depot:carrefour-1012",
           "market": "carrefour",
           "depot_name": "Istanbul Acıbadem Hıper",
-          "skus": 307
+          "skus": 299
         },
         {
           "source_id": "depot:carrefour-5036",
@@ -536486,7 +536484,7 @@
           "source_id": "depot:migros-1991",
           "market": "migros",
           "depot_name": "Çiçekçi M Migros",
-          "skus": 306
+          "skus": 310
         },
         {
           "source_id": "depot:migros-3296",
@@ -536498,19 +536496,19 @@
           "source_id": "depot:migros-4479",
           "market": "migros",
           "depot_name": "Mjet Üsküdar Paşakapısı",
-          "skus": 36
+          "skus": 32
         },
         {
           "source_id": "depot:migros-564",
           "market": "migros",
           "depot_name": "Kadıköy Çarşı M Migros",
-          "skus": 41
+          "skus": 42
         },
         {
           "source_id": "depot:migros-6679",
           "market": "migros",
           "depot_name": "Mjet Kadıköy Rasımpaşa Istanbu",
-          "skus": 16
+          "skus": 15
         },
         {
           "source_id": "depot:sok-1017",
@@ -536540,7 +536538,7 @@
           "source_id": "depot:tarim_kredi-5022",
           "market": "tarim_kredi",
           "depot_name": "Istanbul Kadıköy Market",
-          "skus": 17
+          "skus": 18
         },
         {
           "source_id": "depot:tarim_kredi-7488",
@@ -536551,22 +536549,22 @@
       ]
     },
     "collected_sources": {
-      "skus": 1500,
+      "skus": 1504,
       "retailer_count": 7,
       "depot_count": 23,
-      "single_depot_skus": 1204,
-      "single_depot_share": 0.802667,
-      "auditable_skus": 1500,
+      "single_depot_skus": 1209,
+      "single_depot_share": 0.803856,
+      "auditable_skus": 1504,
       "source_evidence_share": 1.0,
       "retailers": [
         {
           "market": "a101",
-          "skus": 33,
+          "skus": 34,
           "depots": 5
         },
         {
           "market": "bim",
-          "skus": 317,
+          "skus": 316,
           "depots": 1
         },
         {
@@ -536581,7 +536579,7 @@
         },
         {
           "market": "migros",
-          "skus": 468,
+          "skus": 473,
           "depots": 5
         },
         {
@@ -536591,7 +536589,7 @@
         },
         {
           "market": "tarim_kredi",
-          "skus": 83,
+          "skus": 84,
           "depots": 2
         }
       ],
@@ -536606,7 +536604,7 @@
           "source_id": "depot:a101-4141",
           "market": "a101",
           "depot_name": "Doğanevler Ümraniye Istanbul",
-          "skus": 1
+          "skus": 2
         },
         {
           "source_id": "depot:a101-6815",
@@ -536630,13 +536628,13 @@
           "source_id": "depot:bim-5712",
           "market": "bim",
           "depot_name": "Çiçekçi  Üsküdar",
-          "skus": 317
+          "skus": 316
         },
         {
           "source_id": "depot:carrefour-1012",
           "market": "carrefour",
           "depot_name": "Istanbul Acıbadem Hıper",
-          "skus": 353
+          "skus": 349
         },
         {
           "source_id": "depot:carrefour-5036",
@@ -536648,7 +536646,7 @@
           "source_id": "depot:carrefour-5254",
           "market": "carrefour",
           "depot_name": "Istanbul Üsküdar Salacak Mını",
-          "skus": 146
+          "skus": 150
         },
         {
           "source_id": "depot:hakmar-5200",
@@ -536666,7 +536664,7 @@
           "source_id": "depot:migros-1991",
           "market": "migros",
           "depot_name": "Çiçekçi M Migros",
-          "skus": 341
+          "skus": 350
         },
         {
           "source_id": "depot:migros-3296",
@@ -536678,19 +536676,19 @@
           "source_id": "depot:migros-4479",
           "market": "migros",
           "depot_name": "Mjet Üsküdar Paşakapısı",
-          "skus": 41
+          "skus": 36
         },
         {
           "source_id": "depot:migros-564",
           "market": "migros",
           "depot_name": "Kadıköy Çarşı M Migros",
-          "skus": 46
+          "skus": 48
         },
         {
           "source_id": "depot:migros-6679",
           "market": "migros",
           "depot_name": "Mjet Kadıköy Rasımpaşa Istanbu",
-          "skus": 17
+          "skus": 16
         },
         {
           "source_id": "depot:sok-1017",
@@ -536726,7 +536724,7 @@
           "source_id": "depot:tarim_kredi-5022",
           "market": "tarim_kredi",
           "depot_name": "Istanbul Kadıköy Market",
-          "skus": 19
+          "skus": 20
         },
         {
           "source_id": "depot:tarim_kredi-7488",
@@ -536747,8 +536745,8 @@
       "policy_version": 1,
       "validated": false,
       "comparison": {
-        "legacy_observed_skus": 1500,
-        "proposed_observed_skus": 1616,
+        "legacy_observed_skus": 1504,
+        "proposed_observed_skus": 1623,
         "additions_today": 212,
         "replacements_today": 35,
         "status": "valid",
@@ -536848,8 +536846,8 @@
               "publishable": false
             },
             "flour_wheat": {
-              "coverage": 1.0,
-              "matched_slots": 20,
+              "coverage": 0.95,
+              "matched_slots": 19,
               "publishable": true
             },
             "rice": {
@@ -536928,13 +536926,13 @@
               "publishable": true
             },
             "salami": {
-              "coverage": 1.0,
-              "matched_slots": 23,
+              "coverage": 0.9565,
+              "matched_slots": 22,
               "publishable": true
             },
             "sausage": {
-              "coverage": 1.0,
-              "matched_slots": 20,
+              "coverage": 0.95,
+              "matched_slots": 19,
               "publishable": true
             },
             "meatballs": {
@@ -537008,8 +537006,8 @@
               "publishable": true
             },
             "kasar": {
-              "coverage": 1.0,
-              "matched_slots": 21,
+              "coverage": 0.9524,
+              "matched_slots": 20,
               "publishable": true
             },
             "labneh": {
@@ -537028,8 +537026,8 @@
               "publishable": false
             },
             "eggs": {
-              "coverage": 1.0,
-              "matched_slots": 21,
+              "coverage": 0.9524,
+              "matched_slots": 20,
               "publishable": true
             },
             "cream": {
@@ -537038,13 +537036,13 @@
               "publishable": true
             },
             "sunflower_oil": {
-              "coverage": 1.0,
-              "matched_slots": 22,
+              "coverage": 0.9545,
+              "matched_slots": 21,
               "publishable": true
             },
             "olive_oil": {
-              "coverage": 1.0,
-              "matched_slots": 19,
+              "coverage": 0.9474,
+              "matched_slots": 18,
               "publishable": true
             },
             "butter": {
@@ -537248,8 +537246,8 @@
               "publishable": true
             },
             "nuts": {
-              "coverage": 1.0,
-              "matched_slots": 11,
+              "coverage": 0.9091,
+              "matched_slots": 10,
               "publishable": true
             },
             "icecream": {
@@ -537283,8 +537281,8 @@
               "publishable": true
             },
             "beans": {
-              "coverage": 1.0,
-              "matched_slots": 21,
+              "coverage": 0.9524,
+              "matched_slots": 20,
               "publishable": true
             },
             "chickpeas": {
@@ -537298,8 +537296,8 @@
               "publishable": false
             },
             "soup": {
-              "coverage": 1.0,
-              "matched_slots": 18,
+              "coverage": 0.9444,
+              "matched_slots": 17,
               "publishable": true
             },
             "ketchup": {
@@ -537448,8 +537446,8 @@
               "publishable": true
             },
             "toothpaste": {
-              "coverage": 1.0,
-              "matched_slots": 19,
+              "coverage": 0.9474,
+              "matched_slots": 18,
               "publishable": true
             },
             "toothbrush": {
@@ -537463,8 +537461,8 @@
               "publishable": true
             },
             "toilet_paper": {
-              "coverage": 1.0,
-              "matched_slots": 17,
+              "coverage": 0.8824,
+              "matched_slots": 15,
               "publishable": true
             },
             "paper_towel": {
@@ -537485,8 +537483,8 @@
           }
         },
         "proposed": {
-          "index": 104.2686,
-          "daily_change_pct": 0.26906743803178923,
+          "index": 104.358,
+          "daily_change_pct": 0.3550382348868508,
           "weighted_coverage": 0.62,
           "weighted_comparison_overlap": 0.62,
           "publishable_categories": [
@@ -537501,7 +537499,7 @@
           ],
           "categories": {
             "bread_cereals": {
-              "index": 106.0392,
+              "index": 106.085,
               "available_coverage": 0.6667,
               "comparison_overlap": 0.6666666666666666
             },
@@ -537516,12 +537514,12 @@
               "comparison_overlap": 0.5
             },
             "dairy_eggs": {
-              "index": 102.6072,
+              "index": 102.6773,
               "available_coverage": 0.9231,
               "comparison_overlap": 0.9230769230769231
             },
             "oils_fats": {
-              "index": 99.0439,
+              "index": 99.3906,
               "available_coverage": 0.8,
               "comparison_overlap": 0.8
             },
@@ -537536,27 +537534,27 @@
               "comparison_overlap": 0.47058823529411764
             },
             "sugar_snacks": {
-              "index": 104.1527,
+              "index": 104.1445,
               "available_coverage": 1.0,
               "comparison_overlap": 1.0
             },
             "other_food": {
-              "index": 98.9765,
+              "index": 99.4447,
               "available_coverage": 0.9,
               "comparison_overlap": 0.9
             },
             "drinks": {
-              "index": 102.6233,
+              "index": 102.6386,
               "available_coverage": 0.8182,
               "comparison_overlap": 0.7272727272727273
             },
             "household_cleaning": {
-              "index": 102.4845,
+              "index": 102.0819,
               "available_coverage": 0.8,
               "comparison_overlap": 0.8
             },
             "personal_paper": {
-              "index": 105.9398,
+              "index": 106.6083,
               "available_coverage": 0.9091,
               "comparison_overlap": 0.9090909090909091
             }
@@ -537643,8 +537641,8 @@
               "publishable": false
             },
             "whole_chicken": {
-              "coverage": 0.8571,
-              "matched_slots": 12,
+              "coverage": 0.9286,
+              "matched_slots": 13,
               "publishable": true
             },
             "turkey": {
@@ -537658,13 +537656,13 @@
               "publishable": true
             },
             "salami": {
-              "coverage": 0.913,
-              "matched_slots": 21,
+              "coverage": 0.8696,
+              "matched_slots": 20,
               "publishable": true
             },
             "sausage": {
-              "coverage": 1.0,
-              "matched_slots": 20,
+              "coverage": 0.95,
+              "matched_slots": 19,
               "publishable": true
             },
             "meatballs": {
@@ -537683,8 +537681,8 @@
               "publishable": false
             },
             "smoked_salmon": {
-              "coverage": 0.0,
-              "matched_slots": 0,
+              "coverage": 0.5,
+              "matched_slots": 1,
               "publishable": false
             },
             "salmon": {
@@ -537703,8 +537701,8 @@
               "publishable": false
             },
             "milk": {
-              "coverage": 1.0,
-              "matched_slots": 18,
+              "coverage": 0.9444,
+              "matched_slots": 17,
               "publishable": true
             },
             "milk_lactosefree": {
@@ -537738,8 +537736,8 @@
               "publishable": true
             },
             "kasar": {
-              "coverage": 1.0,
-              "matched_slots": 21,
+              "coverage": 0.9524,
+              "matched_slots": 20,
               "publishable": true
             },
             "labneh": {
@@ -537758,8 +537756,8 @@
               "publishable": false
             },
             "eggs": {
-              "coverage": 1.0,
-              "matched_slots": 21,
+              "coverage": 0.9524,
+              "matched_slots": 20,
               "publishable": true
             },
             "cream": {
@@ -537773,8 +537771,8 @@
               "publishable": true
             },
             "olive_oil": {
-              "coverage": 0.8421,
-              "matched_slots": 16,
+              "coverage": 0.7895,
+              "matched_slots": 15,
               "publishable": true
             },
             "butter": {
@@ -537978,8 +537976,8 @@
               "publishable": true
             },
             "nuts": {
-              "coverage": 0.8182,
-              "matched_slots": 9,
+              "coverage": 0.7273,
+              "matched_slots": 8,
               "publishable": true
             },
             "icecream": {
@@ -538028,8 +538026,8 @@
               "publishable": false
             },
             "soup": {
-              "coverage": 1.0,
-              "matched_slots": 18,
+              "coverage": 0.9444,
+              "matched_slots": 17,
               "publishable": true
             },
             "ketchup": {
@@ -538043,8 +538041,8 @@
               "publishable": true
             },
             "salt": {
-              "coverage": 1.0,
-              "matched_slots": 13,
+              "coverage": 0.9231,
+              "matched_slots": 12,
               "publishable": true
             },
             "vinegar": {
@@ -538138,8 +538136,8 @@
               "publishable": true
             },
             "surface_cleaner": {
-              "coverage": 0.9444,
-              "matched_slots": 17,
+              "coverage": 1.0,
+              "matched_slots": 18,
               "publishable": true
             },
             "garbage_bags": {
@@ -538178,8 +538176,8 @@
               "publishable": true
             },
             "toothpaste": {
-              "coverage": 1.0,
-              "matched_slots": 19,
+              "coverage": 0.9474,
+              "matched_slots": 18,
               "publishable": true
             },
             "toothbrush": {
@@ -538198,8 +538196,8 @@
               "publishable": true
             },
             "paper_towel": {
-              "coverage": 0.75,
-              "matched_slots": 12,
+              "coverage": 0.8125,
+              "matched_slots": 13,
               "publishable": true
             },
             "wet_wipes": {
@@ -538214,7 +538212,7 @@
             }
           }
         },
-        "index_difference_points": 0.23520000000000607,
+        "index_difference_points": 0.3246000000000038,
         "weighted_coverage_difference": -0.07999999999999996
       }
     },
@@ -538222,7 +538220,7 @@
     "change_7d_pct": 0.925794,
     "change_30d_pct": 0.541688,
     "fresh_within_1_day_share": 1.0,
-    "fresh_within_1_day_skus": 1282,
+    "fresh_within_1_day_skus": 1271,
     "freshness_unknown_skus": 0,
     "source_within_3_days_share": 1.0,
     "future_source_skus": 0
@@ -538238,11 +538236,11 @@
       "available_types": 8,
       "contributing_types": 8,
       "configured_types": 12,
-      "contributing_skus": 132,
+      "contributing_skus": 131,
       "previous_date": "2026-11-07",
       "headline_contributor": true,
       "fresh_within_1_day_share": 1.0,
-      "fresh_within_1_day_skus": 132,
+      "fresh_within_1_day_skus": 131,
       "freshness_unknown_skus": 0,
       "source_within_3_days_share": 1.0,
       "future_source_skus": 0
@@ -538295,11 +538293,11 @@
       "available_types": 12,
       "contributing_types": 12,
       "configured_types": 13,
-      "contributing_skus": 199,
+      "contributing_skus": 197,
       "previous_date": "2026-11-07",
       "headline_contributor": true,
       "fresh_within_1_day_share": 1.0,
-      "fresh_within_1_day_skus": 199,
+      "fresh_within_1_day_skus": 197,
       "freshness_unknown_skus": 0,
       "source_within_3_days_share": 1.0,
       "future_source_skus": 0
@@ -538314,11 +538312,11 @@
       "available_types": 4,
       "contributing_types": 4,
       "configured_types": 5,
-      "contributing_skus": 78,
+      "contributing_skus": 76,
       "previous_date": "2026-11-07",
       "headline_contributor": true,
       "fresh_within_1_day_share": 1.0,
-      "fresh_within_1_day_skus": 78,
+      "fresh_within_1_day_skus": 76,
       "freshness_unknown_skus": 0,
       "source_within_3_days_share": 1.0,
       "future_source_skus": 0
@@ -538371,11 +538369,11 @@
       "available_types": 12,
       "contributing_types": 12,
       "configured_types": 12,
-      "contributing_skus": 204,
+      "contributing_skus": 203,
       "previous_date": "2026-11-07",
       "headline_contributor": true,
       "fresh_within_1_day_share": 1.0,
-      "fresh_within_1_day_skus": 204,
+      "fresh_within_1_day_skus": 203,
       "freshness_unknown_skus": 0,
       "source_within_3_days_share": 1.0,
       "future_source_skus": 0
@@ -538390,11 +538388,11 @@
       "available_types": 9,
       "contributing_types": 9,
       "configured_types": 10,
-      "contributing_skus": 161,
+      "contributing_skus": 159,
       "previous_date": "2026-11-07",
       "headline_contributor": true,
       "fresh_within_1_day_share": 1.0,
-      "fresh_within_1_day_skus": 161,
+      "fresh_within_1_day_skus": 159,
       "freshness_unknown_skus": 0,
       "source_within_3_days_share": 1.0,
       "future_source_skus": 0
@@ -538447,38 +538445,38 @@
       "available_types": 10,
       "contributing_types": 10,
       "configured_types": 11,
-      "contributing_skus": 189,
+      "contributing_skus": 186,
       "previous_date": "2026-11-07",
       "headline_contributor": true,
       "fresh_within_1_day_share": 1.0,
-      "fresh_within_1_day_skus": 189,
+      "fresh_within_1_day_skus": 186,
       "freshness_unknown_skus": 0,
       "source_within_3_days_share": 1.0,
       "future_source_skus": 0
     }
   ],
   "sources": {
-    "skus": 1282,
+    "skus": 1271,
     "retailer_count": 7,
     "depot_count": 19,
-    "single_depot_skus": 1015,
-    "single_depot_share": 0.791732,
-    "auditable_skus": 1282,
+    "single_depot_skus": 1007,
+    "single_depot_share": 0.79229,
+    "auditable_skus": 1271,
     "source_evidence_share": 1.0,
     "retailers": [
       {
         "market": "a101",
-        "skus": 27,
+        "skus": 24,
         "depots": 3
       },
       {
         "market": "bim",
-        "skus": 266,
+        "skus": 265,
         "depots": 1
       },
       {
         "market": "carrefour",
-        "skus": 441,
+        "skus": 433,
         "depots": 3
       },
       {
@@ -538498,7 +538496,7 @@
       },
       {
         "market": "tarim_kredi",
-        "skus": 62,
+        "skus": 63,
         "depots": 2
       }
     ],
@@ -538513,7 +538511,7 @@
         "source_id": "depot:a101-6815",
         "market": "a101",
         "depot_name": "Kostak Ümraniye",
-        "skus": 16
+        "skus": 13
       },
       {
         "source_id": "depot:a101-9324",
@@ -538525,13 +538523,13 @@
         "source_id": "depot:bim-5712",
         "market": "bim",
         "depot_name": "Çiçekçi  Üsküdar",
-        "skus": 266
+        "skus": 265
       },
       {
         "source_id": "depot:carrefour-1012",
         "market": "carrefour",
         "depot_name": "Istanbul Acıbadem Hıper",
-        "skus": 307
+        "skus": 299
       },
       {
         "source_id": "depot:carrefour-5036",
@@ -538555,7 +538553,7 @@
         "source_id": "depot:migros-1991",
         "market": "migros",
         "depot_name": "Çiçekçi M Migros",
-        "skus": 306
+        "skus": 310
       },
       {
         "source_id": "depot:migros-3296",
@@ -538567,19 +538565,19 @@
         "source_id": "depot:migros-4479",
         "market": "migros",
         "depot_name": "Mjet Üsküdar Paşakapısı",
-        "skus": 36
+        "skus": 32
       },
       {
         "source_id": "depot:migros-564",
         "market": "migros",
         "depot_name": "Kadıköy Çarşı M Migros",
-        "skus": 41
+        "skus": 42
       },
       {
         "source_id": "depot:migros-6679",
         "market": "migros",
         "depot_name": "Mjet Kadıköy Rasımpaşa Istanbu",
-        "skus": 16
+        "skus": 15
       },
       {
         "source_id": "depot:sok-1017",
@@ -538609,7 +538607,7 @@
         "source_id": "depot:tarim_kredi-5022",
         "market": "tarim_kredi",
         "depot_name": "Istanbul Kadıköy Market",
-        "skus": 17
+        "skus": 18
       },
       {
         "source_id": "depot:tarim_kredi-7488",
@@ -538621,20 +538619,20 @@
   },
   "latest_attempt": {
     "date": "2026-11-08",
-    "checked_at": "2026-11-08T03:51:39.964465+03:00",
+    "checked_at": "2026-11-08T15:07:20.033752+03:00",
     "status": "published",
     "errors": [],
-    "source_updated_today": 0,
-    "observed_skus": 1500,
+    "source_updated_today": 1504,
+    "observed_skus": 1504,
     "recovered_types": [],
     "recovery": [],
     "observed_by_type": {
       "bread_white": 0,
-      "bread_toast": 5,
+      "bread_toast": 6,
       "bread_wholewheat": 3,
       "flour_wheat": 20,
       "rice": 18,
-      "bulgur": 19,
+      "bulgur": 21,
       "pasta_spaghetti": 4,
       "pasta_other": 21,
       "vermicelli": 14,
@@ -538648,31 +538646,31 @@
       "whole_chicken": 14,
       "turkey": 0,
       "sucuk": 20,
-      "salami": 23,
-      "sausage": 20,
+      "salami": 22,
+      "sausage": 19,
       "meatballs": 6,
       "tuna": 18,
       "sardine": 0,
-      "smoked_salmon": 3,
+      "smoked_salmon": 2,
       "salmon": 4,
       "frozen_fish": 8,
       "fish_fingers": 0,
-      "milk": 18,
-      "milk_lactosefree": 11,
+      "milk": 19,
+      "milk_lactosefree": 12,
       "yogurt": 18,
       "strained_yogurt": 9,
       "ayran": 18,
       "kefir": 16,
       "white_cheese": 21,
-      "kasar": 21,
+      "kasar": 20,
       "labneh": 19,
       "cream_cheese": 11,
       "mozzarella": 3,
-      "eggs": 21,
+      "eggs": 20,
       "cream": 16,
-      "sunflower_oil": 22,
+      "sunflower_oil": 21,
       "olive_oil": 19,
-      "butter": 19,
+      "butter": 20,
       "margarine": 18,
       "corn_oil": 0,
       "banana": 2,
@@ -538705,32 +538703,32 @@
       "cauliflower": 0,
       "mushroom": 4,
       "green_beans": 0,
-      "sugar": 17,
+      "sugar": 18,
       "honey": 13,
       "jam": 20,
-      "chocolate": 19,
+      "chocolate": 20,
       "biscuits": 19,
       "wafer": 19,
       "chips": 19,
-      "nuts": 11,
+      "nuts": 10,
       "icecream": 17,
-      "halva": 17,
+      "halva": 19,
       "spread": 19,
       "candy": 14,
       "tomato_paste": 18,
       "lentils": 19,
-      "beans": 21,
+      "beans": 20,
       "chickpeas": 17,
       "canned_veg": 2,
-      "soup": 18,
+      "soup": 17,
       "ketchup": 20,
-      "mayonnaise": 17,
+      "mayonnaise": 18,
       "salt": 13,
       "vinegar": 18,
       "black_tea": 23,
       "turkish_coffee": 20,
       "instant_coffee": 7,
-      "filter_coffee": 17,
+      "filter_coffee": 18,
       "cola": 12,
       "fruit_juice": 0,
       "iced_tea": 18,
@@ -538744,21 +538742,23 @@
       "laundry_liquid": 19,
       "softener": 10,
       "bleach": 17,
-      "surface_cleaner": 18,
+      "surface_cleaner": 19,
       "garbage_bags": 20,
       "sponge": 17,
       "cleaning_cloth": 3,
       "shampoo": 17,
       "shower_gel": 22,
-      "soap_liquid": 20,
+      "soap_liquid": 21,
       "soap_bar": 24,
-      "toothpaste": 19,
+      "toothpaste": 18,
       "toothbrush": 23,
       "deodorant": 22,
-      "toilet_paper": 17,
-      "paper_towel": 16,
+      "toilet_paper": 16,
+      "paper_towel": 17,
       "wet_wipes": 8,
       "tissues": 9
-    }
+    },
+    "retained_same_day_types": [],
+    "published_skus": 1504
   }
 }
