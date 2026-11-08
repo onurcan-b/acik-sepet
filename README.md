@@ -5,19 +5,19 @@
 <!-- ECB_RESEARCH_START -->
 ## ECB-style supermarket repricing research — provisional
 
-**Last observation:** 2026-11-07 · **1,809 comparable store–SKU quotes**. This experiment uses the existing main-branch snapshots, without additional scraping.
+**Last observation:** 2026-11-08 · **1,810 comparable store–SKU quotes**. This experiment uses the existing main-branch snapshots, without additional scraping.
 
 | Metric | Result |
 |:--|--:|
-| Food-only increasing quotations | **9.31%** |
-| Food-only decreasing quotations | **17.42%** |
-| All-basket increasing quotations | 9.88% |
-| All-basket decreasing quotations | 16.60% |
-| All-basket unchanged quotations | 73.51% |
+| Food-only increasing quotations | **9.49%** |
+| Food-only decreasing quotations | **17.09%** |
+| All-basket increasing quotations | 10.06% |
+| All-basket decreasing quotations | 16.31% |
+| All-basket unchanged quotations | 73.63% |
 | Food repricing breadth (≥10% increases in category) | 43.82% |
 | Research-category weight represented | 100.00% |
 
-**Like-for-like calendar comparison (all-basket increase frequency):** -2.59 percentage points versus 2026-10-07
+**Like-for-like calendar comparison (all-basket increase frequency):** -5.07 percentage points versus 2026-10-08
 
 ### Repricing frequency (monthly baseline, daily updates)
 
@@ -29,7 +29,7 @@
 
 ### Important quality warning
 
-**280 of 1812 raw matched store-SKU prices (15.5%) moved ≥20%** between previous month-end and latest observation; 4 approximately doubled. Promotion reversals are plausible but not confirmed. Price-change magnitudes are **not validated as structural repricing**.
+**284 of 1813 raw matched store-SKU prices (15.7%) moved ≥20%** between previous month-end and latest observation; 4 approximately doubled. Promotion reversals are plausible but not confirmed. Price-change magnitudes are **not validated as structural repricing**.
 
 Category-weight coverage means represented categories passed the minimum
 of five matched quotes; it **does not** mean a representative full basket.
