@@ -46,13 +46,13 @@ z
     <g id="xtick_2">
      <g id="line2d_2"/>
      <g id="text_2">
-      <text style="font-size: 11.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="165.927344" y="305.331211" transform="rotate(-0 165.927344 305.331211)">221</text>
+      <text style="font-size: 11.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="165.737757" y="305.331211" transform="rotate(-0 165.737757 305.331211)">216</text>
      </g>
     </g>
     <g id="xtick_3">
      <g id="line2d_3"/>
      <g id="text_3">
-      <text style="font-size: 11.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="248.018594" y="305.331211" transform="rotate(-0 248.018594 305.331211)">442</text>
+      <text style="font-size: 11.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="248.018594" y="305.331211" transform="rotate(-0 248.018594 305.331211)">433</text>
      </g>
     </g>
     <g id="text_4">
@@ -113,48 +113,48 @@ z
    </g>
    <g id="patch_4">
     <path d="M 83.836094 95.562423
-L 242.075336 95.562423
-L 242.075336 114.607652
+L 241.193455 95.562423
+L 241.193455 114.607652
 L 83.836094 114.607652
 z
 " clip-path="url(#p7150c4acc0)" style="fill: #2563eb"/>
    </g>
    <g id="patch_5">
     <path d="M 83.836094 128.399025
-L 182.271303 128.399025
-L 182.271303 147.444254
+L 184.3173 128.399025
+L 184.3173 147.444254
 L 83.836094 147.444254
 z
 " clip-path="url(#p7150c4acc0)" style="fill: #2563eb"/>
    </g>
    <g id="patch_6">
     <path d="M 83.836094 161.235627
-L 161.4699 161.235627
-L 161.4699 180.280857
+L 162.704362 161.235627
+L 162.704362 180.280857
 L 83.836094 180.280857
 z
 " clip-path="url(#p7150c4acc0)" style="fill: #2563eb"/>
    </g>
    <g id="patch_7">
     <path d="M 83.836094 194.07223
-L 161.098447 194.07223
-L 161.098447 213.117459
+L 162.704362 194.07223
+L 162.704362 213.117459
 L 83.836094 213.117459
 z
 " clip-path="url(#p7150c4acc0)" style="fill: #2563eb"/>
    </g>
    <g id="patch_8">
     <path d="M 83.836094 226.908832
-L 107.237672 226.908832
-L 107.237672 245.954062
+L 106.96573 226.908832
+L 106.96573 245.954062
 L 83.836094 245.954062
 z
 " clip-path="url(#p7150c4acc0)" style="fill: #2563eb"/>
    </g>
    <g id="patch_9">
     <path d="M 83.836094 259.745435
-L 94.236795 259.745435
-L 94.236795 278.790664
+L 94.452976 259.745435
+L 94.452976 278.790664
 L 83.836094 278.790664
 z
 " clip-path="url(#p7150c4acc0)" style="fill: #2563eb"/>
@@ -170,22 +170,22 @@ L 494.292344 289.593906
 " style="fill: none; stroke: #cbd5e1; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
    <g id="text_12">
-    <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #172554" x="252.944069" y="74.846091" transform="rotate(-0 252.944069 74.846091)">442 (-18)  ·  3 (-2)</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #172554" x="252.944069" y="74.846091" transform="rotate(-0 252.944069 74.846091)">433 (-27)  ·  3 (-2)</text>
    </g>
    <g id="text_13">
-    <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #172554" x="252.944069" y="107.682694" transform="rotate(-0 252.944069 107.682694)">426 (-6)  ·  5 (+0)</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #172554" x="252.944069" y="107.682694" transform="rotate(-0 252.944069 107.682694)">415 (-17)  ·  5 (+0)</text>
    </g>
    <g id="text_14">
     <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #172554" x="252.944069" y="140.519296" transform="rotate(-0 252.944069 140.519296)">265 (-39)  ·  1 (+0)</text>
    </g>
    <g id="text_15">
-    <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #172554" x="252.944069" y="173.355898" transform="rotate(-0 252.944069 173.355898)">209 (-5)  ·  1 (+0)</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #172554" x="252.944069" y="173.355898" transform="rotate(-0 252.944069 173.355898)">208 (-6)  ·  1 (+0)</text>
    </g>
    <g id="text_16">
     <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #172554" x="252.944069" y="206.192501" transform="rotate(-0 252.944069 206.192501)">208 (-20)  ·  4 (+0)</text>
    </g>
    <g id="text_17">
-    <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #172554" x="252.944069" y="239.029103" transform="rotate(-0 252.944069 239.029103)">63 (+12)  ·  2 (+1)</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #172554" x="252.944069" y="239.029103" transform="rotate(-0 252.944069 239.029103)">61 (+10)  ·  2 (+1)</text>
    </g>
    <g id="text_18">
     <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #172554" x="252.944069" y="271.865706" transform="rotate(-0 252.944069 271.865706)">28 (-178)  ·  4 (-1)</text>
@@ -195,7 +195,7 @@ L 494.292344 289.593906
    </g>
    <g id="text_20">
     <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #172554" transform="translate(83.836094 17.519297)">Market / depot katılımı · 2026-11-09</text>
-    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #172554" transform="translate(83.836094 31.922578)">Tek depot SKU payı: %79.3 · 7 market / 20 depot</text>
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #172554" transform="translate(83.836094 31.922578)">Tek depot SKU payı: %79.1 · 7 market / 20 depot</text>
    </g>
   </g>
  </g>
