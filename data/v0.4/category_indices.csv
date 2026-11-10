@@ -791,3 +791,15 @@ date,group_id,label,scope,weight,index,coverage,types,baseline_types
 2026-11-09,drinks,Alkolsüz içecekler,food,0.05,102.4176,0.8182,9,11
 2026-11-09,household_cleaning,Ev temizlik sarf malzemeleri,nonfood,0.07,101.437,0.8,8,10
 2026-11-09,personal_paper,Kişisel bakım ve kağıt ürünleri,nonfood,0.04,106.4091,0.9091,10,11
+2026-11-10,bread_cereals,"Ekmek, tahıllar ve makarna",food,0.14,106.794,0.6667,8,12
+2026-11-10,meat,Et ve et ürünleri,food,0.15,,0.6,6,10
+2026-11-10,fish,Balık ve deniz ürünleri,food,0.04,110.0232,0.6667,4,6
+2026-11-10,dairy_eggs,Süt ürünleri ve yumurta,food,0.14,102.4563,0.9231,12,13
+2026-11-10,oils_fats,Yağlar,food,0.06,99.27,0.8,4,5
+2026-11-10,fruit,Meyve,food,0.08,87.9903,0.6154,8,13
+2026-11-10,vegetables,Sebze,food,0.11,,0.5882,10,17
+2026-11-10,sugar_snacks,"Şeker, tatlı ve atıştırmalık",food,0.08,104.237,1.0,12,12
+2026-11-10,other_food,Diğer gıda,food,0.04,98.5817,0.9,9,10
+2026-11-10,drinks,Alkolsüz içecekler,food,0.05,102.4176,0.8182,9,11
+2026-11-10,household_cleaning,Ev temizlik sarf malzemeleri,nonfood,0.07,101.437,0.8,8,10
+2026-11-10,personal_paper,Kişisel bakım ve kağıt ürünleri,nonfood,0.04,106.4091,0.9091,10,11
