@@ -9466,27 +9466,137 @@
   },
   {
     "date": "2026-11-10",
-    "rows": 1505,
-    "source_updated_today": 0,
-    "source_within_3_days": 1505,
+    "rows": 1495,
+    "source_updated_today": 1487,
+    "source_within_3_days": 1495,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 1900,
-    "depot_source_updated_today": 0,
+    "depot_observations": 1883,
+    "depot_source_updated_today": 1875,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1206,
-    "auditable_skus": 1505,
+    "single_source_skus": 1203,
+    "auditable_skus": 1495,
     "source_age_days": {
-      "1": 1505
+      "0": 1487,
+      "1": 8
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-11-09",
-    "matched_slots": 1498,
-    "missing_slots": 1,
-    "new_slots": 7,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1479,
+    "missing_slots": 20,
+    "new_slots": 16,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1L3Q",
+        "title": "Yudum Egemden Riviera Zeytinyağı 5 Lt",
+        "change_pct": 54.91
+      },
+      {
+        "slot_id": "id:07G3",
+        "title": "Piliç Salam 1 Kg",
+        "change_pct": 50.63
+      },
+      {
+        "slot_id": "id:1NF1",
+        "title": "Nivea Kadın Deodorant Çeşitleri 150 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:13F4",
+        "title": "Dove Güzellik Katı Sabun 90 Gr",
+        "change_pct": 45.87
+      },
+      {
+        "slot_id": "id:1MLB",
+        "title": "Duru Duş Katı Sabun 600 Gr",
+        "change_pct": 44.44
+      },
+      {
+        "slot_id": "id:0FNZ",
+        "title": "Hacı Şakir Kalıp Sabun Leylak 4x150 Gr",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:1WE4",
+        "title": "Dalan Botanica Frezya Sıvı Sabun 500 Ml",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:20SL",
+        "title": "Dalan Antik Zeytinyağlı Argan Yağlı Banyo Sabunu 600 Gr",
+        "change_pct": 42.86
+      },
+      {
+        "slot_id": "id:1P11",
+        "title": "Savon De Royal Bordo İnci Sıvı Sabun 500 Ml",
+        "change_pct": 42.85
+      },
+      {
+        "slot_id": "id:1UHP",
+        "title": "Rexona Kadın Deodorant 150 Ml",
+        "change_pct": -41.52
+      },
+      {
+        "slot_id": "id:04HR",
+        "title": "Sarımsak 1 Kg",
+        "change_pct": 40.0
+      },
+      {
+        "slot_id": "id:1DG3",
+        "title": "Hindi Sosis 130 Gr",
+        "change_pct": 38.46
+      },
+      {
+        "slot_id": "id:0QZ6",
+        "title": "Söke Un 5 Kg",
+        "change_pct": 37.51
+      },
+      {
+        "slot_id": "id:0C4H",
+        "title": "Activex Hassas Sıvı Sabun 1.5 Lt",
+        "change_pct": -30.0
+      },
+      {
+        "slot_id": "id:21DO",
+        "title": "Axe Erkek Deodorant 150 Ml",
+        "change_pct": -29.4
+      },
+      {
+        "slot_id": "id:1SOA",
+        "title": "Cafe Crown Latte Kahve 17 Gr",
+        "change_pct": 25.0
+      },
+      {
+        "slot_id": "id:1VQG",
+        "title": "Drancor Plombir Kakaolu Soslu Dondurma 80 Gr",
+        "change_pct": 24.94
+      },
+      {
+        "slot_id": "id:1Z5A",
+        "title": "Drancor Plombir Vanilya Külahlı Dondurma 80 Gr",
+        "change_pct": 24.94
+      },
+      {
+        "slot_id": "id:201X",
+        "title": "Drancor Vanilla With Condensed Milk Dondurma 80 Gr",
+        "change_pct": 24.94
+      },
+      {
+        "slot_id": "id:201Z",
+        "title": "Drancor Plombir Sandviç Dondurma 70 Gr",
+        "change_pct": 24.94
+      },
+      {
+        "slot_id": "id:056A",
+        "title": "Taze Bütün Poşet Piliç 1 Kg",
+        "change_pct": 23.85
+      },
+      {
+        "slot_id": "id:00NC",
+        "title": "Mr. Green Oluklu Bulaşık Süngeri 5 Adet",
+        "change_pct": 23.53
+      }
+    ],
+    "warnings": []
   }
 ]
