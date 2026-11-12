@@ -1,10 +1,10 @@
 {
-  "date": "2026-11-11",
-  "checked_at": "2026-11-11T23:23:05.505642+03:00",
-  "status": "published_with_retained_types",
+  "date": "2026-11-12",
+  "checked_at": "2026-11-12T05:27:02.035705+03:00",
+  "status": "published",
   "errors": [],
-  "source_updated_today": 1556,
-  "observed_skus": 1557,
+  "source_updated_today": 0,
+  "observed_skus": 1566,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -94,7 +94,7 @@
     "nuts": 13,
     "icecream": 17,
     "halva": 14,
-    "spread": 19,
+    "spread": 24,
     "candy": 14,
     "tomato_paste": 23,
     "lentils": 20,
@@ -109,7 +109,7 @@
     "black_tea": 22,
     "turkish_coffee": 21,
     "instant_coffee": 7,
-    "filter_coffee": 16,
+    "filter_coffee": 20,
     "cola": 23,
     "fruit_juice": 0,
     "iced_tea": 18,
@@ -138,19 +138,5 @@
     "paper_towel": 21,
     "wet_wipes": 9,
     "tissues": 8
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "orange",
-      "label": "Portakal",
-      "reason": "Same-day coverage regression for orange: 2 -> 1",
-      "new_observed_skus": 1,
-      "retained_skus": 2,
-      "collected_at": [
-        "2026-11-11T04:18:48.468553+03:00",
-        "2026-11-11T04:18:48.468565+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1558
+  }
 }
