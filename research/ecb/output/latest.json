@@ -1,0 +1,27 @@
+{
+  "method": "ECB-inspired matched-store-SKU month-on-month repricing proxy",
+  "source": "Açık Sepet v0.4 snapshots from main; no independent scraping",
+  "excluded_v_shaped_reduction_quote_days": 3491,
+  "provisional": true,
+  "quality_warning": "Large jumps may be promotion starts/ends or source errors; the dataset cannot independently identify active promotions.",
+  "large_moves_20pct_share_unfiltered": 18.311,
+  "latest": {
+    "as_of": "2026-11-13",
+    "month": "2026-11",
+    "comparable_quotes": 1759,
+    "category_coverage_pct": 100.0,
+    "breadth_10pct_food_pct": 77.5281,
+    "up_vs_prior_month_same_day_pp": 0.5381,
+    "prior_month_comparison_date": "2026-10-13",
+    "up_frequency_pct": 19.2921,
+    "down_frequency_pct": 18.9043,
+    "unchanged_frequency_pct": 61.8036,
+    "net_change_pct": 0.2687,
+    "avg_increase_pct": 21.162,
+    "avg_decrease_pct": -20.3895,
+    "food_up_frequency_pct": 19.0043,
+    "food_down_frequency_pct": 19.2933,
+    "food_avg_increase_pct": 20.2698,
+    "food_avg_decrease_pct": -18.6137
+  }
+}
