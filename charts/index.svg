@@ -242,7 +242,7 @@ L 455.015291 83.195081
 L 461.182946 69.175575
 L 467.350602 67.304132
 L 473.518257 68.884522
-L 479.685912 68.647872
+L 479.685912 84.938678
 " clip-path="url(#p096c27aa25)" style="fill: none; stroke: #2563eb; stroke-width: 2.4; stroke-linecap: square"/>
    </g>
    <g id="line2d_25">
@@ -342,11 +342,11 @@ z
      <use xlink:href="#m3957c04aab" x="461.182946" y="69.175575" style="fill: #ffffff; stroke: #ea580c; stroke-width: 1.4"/>
      <use xlink:href="#m3957c04aab" x="467.350602" y="67.304132" style="fill: #ffffff; stroke: #ea580c; stroke-width: 1.4"/>
      <use xlink:href="#m3957c04aab" x="473.518257" y="68.884522" style="fill: #ffffff; stroke: #ea580c; stroke-width: 1.4"/>
-     <use xlink:href="#m3957c04aab" x="479.685912" y="68.647872" style="fill: #ffffff; stroke: #ea580c; stroke-width: 1.4"/>
+     <use xlink:href="#m3957c04aab" x="479.685912" y="84.938678" style="fill: #ffffff; stroke: #ea580c; stroke-width: 1.4"/>
     </g>
    </g>
    <g id="text_16">
-    <text style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #2563eb" x="475.685912" y="57.647872" transform="rotate(-0 475.685912 57.647872)">104.80</text>
+    <text style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #2563eb" x="475.685912" y="73.938678" transform="rotate(-0 475.685912 73.938678)">104.20</text>
    </g>
    <g id="text_17">
     <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #172554" x="51.650625" y="18.034688" transform="rotate(-0 51.650625 18.034688)">Açık Sepet · günlük fiyat endeksi</text>

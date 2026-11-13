@@ -9711,33 +9711,246 @@
   },
   {
     "date": "2026-11-13",
-    "rows": 1411,
-    "source_updated_today": 0,
-    "source_within_3_days": 1411,
+    "rows": 1575,
+    "source_updated_today": 1575,
+    "source_within_3_days": 1575,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 1724,
-    "depot_source_updated_today": 0,
+    "depot_observations": 1970,
+    "depot_source_updated_today": 1970,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1144,
-    "auditable_skus": 1411,
+    "single_source_skus": 1274,
+    "auditable_skus": 1575,
     "source_age_days": {
-      "1": 1411
+      "0": 1575
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-11-12",
-    "matched_slots": 1398,
-    "missing_slots": 51,
-    "new_slots": 13,
+    "matched_slots": 1422,
+    "missing_slots": 27,
+    "new_slots": 153,
     "large_price_moves": [
+      {
+        "slot_id": "id:3X5R",
+        "title": "Tat Domates Salçası Cam 710 Gr",
+        "change_pct": 62.09
+      },
+      {
+        "slot_id": "id:20OS",
+        "title": "Mutlu Tel Şehriye 500 Gr",
+        "change_pct": 58.92
+      },
+      {
+        "slot_id": "id:1ISZ",
+        "title": "Emotion Deodorant 150 Ml",
+        "change_pct": -51.43
+      },
+      {
+        "slot_id": "id:1SVD",
+        "title": "Blade Deodorant 150 Ml",
+        "change_pct": -51.43
+      },
+      {
+        "slot_id": "id:02UC",
+        "title": "Palmolive Body Butter Böğürtlen Duş Jeli 500 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:0O9J",
+        "title": "Palmolive Feel The Massage Duş Jeli 250 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:1PP0",
+        "title": "Duru Fresh Sensations Kaktüs Duş Jeli 450 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:1RBK",
+        "title": "Le Petit Marseillais Şeftali ve Nektarin Duş Jeli 400 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:1S1Q",
+        "title": "Le Petit Marseillais Akdeniz Çileği Duş Jeli 400 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:1Z8B",
+        "title": "Duru Body Scrub Pink Delight Duş Jeli 450 Ml",
+        "change_pct": -50.0
+      },
       {
         "slot_id": "id:1R0P",
         "title": "Colgate Optik Beyaz Diş Macunu 75 Ml",
         "change_pct": -41.53
+      },
+      {
+        "slot_id": "id:12A1",
+        "title": "Patlıcan 1 Kg",
+        "change_pct": 41.46
+      },
+      {
+        "slot_id": "id:07OT",
+        "title": "Ariel Dağ Esintisi Sıvı Çamaşır Deterjanı 16 Yıkama 720 Ml",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:1GEW",
+        "title": "Ariel Oxi Sıvı Çamaşır Deterjanı 24 Yıkama 1.08 Lt",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:1JCY",
+        "title": "Ace Klasik Çamaşır Suyu 4.3 Lt",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:3WRZ",
+        "title": "Ariel Renkliler Sıvı Çamaşır Deterjanı 21 Yıkama 945 Ml",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:3WS1",
+        "title": "Ariel Renkliler Sıvı Çamaşır Deterjanı 32 Yıkama 1.44 Lt",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:056A",
+        "title": "Taze Bütün Poşet Piliç 1 Kg",
+        "change_pct": -34.07
+      },
+      {
+        "slot_id": "id:1L60",
+        "title": "Elidor Şampuan Çeşitleri 400 Ml",
+        "change_pct": -31.96
+      },
+      {
+        "slot_id": "id:0D47",
+        "title": "Nuh'un Ankara Vitaminli Arpa Şehriye 500 Gr",
+        "change_pct": -31.51
+      },
+      {
+        "slot_id": "id:3X2H",
+        "title": "Fiskobirlik Nuga Kakaolu Fındık Kreması 700 Gr",
+        "change_pct": -30.0
+      },
+      {
+        "slot_id": "id:0X8O",
+        "title": "Palmolive Soft Essence Badem Duş Jeli 500 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1NS9",
+        "title": "Le Petit Marseillais Duş Jeli Vanilya Sütü 650 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1QBI",
+        "title": "Duru Body Scrub Crystal Duş Jeli 450 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1RAB",
+        "title": "Duru Lux Perfumes Lotus Çiçeği Duş Jeli 450 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1T73",
+        "title": "Le Petit Marseillais Duş Jeli Beyaz Şeftali & Nektarin 650 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1TB2",
+        "title": "Duru Lux Perfumes Orkide Özleri Duş Jeli 450 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1UEY",
+        "title": "Duru Body Scrub Ice Light Duş Jeli 450 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1I5Z",
+        "title": "Fruko Gazoz 2.5 Lt",
+        "change_pct": 27.73
+      },
+      {
+        "slot_id": "id:05L8",
+        "title": "Emin Dondurulmuş Hamburger Köftesi 225 Gr",
+        "change_pct": -26.29
+      },
+      {
+        "slot_id": "id:201N",
+        "title": "Mutlu Arpa Şehriye 500 Gr",
+        "change_pct": 26.07
+      },
+      {
+        "slot_id": "id:1KUR",
+        "title": "Palmolive So Relaxed Duş Jeli 500 Ml",
+        "change_pct": -26.01
+      },
+      {
+        "slot_id": "id:02XX",
+        "title": "Karlıtepe Limon Aromalı Maden Suyu 1.2 Lt",
+        "change_pct": 25.25
+      },
+      {
+        "slot_id": "id:1H8T",
+        "title": "Omo Sıvı Çamaşır Deterjanı 1.5 Lt",
+        "change_pct": 25.13
+      },
+      {
+        "slot_id": "id:0ZLP",
+        "title": "Pepsi Kola 330 Ml",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:1J2Q",
+        "title": "Dondurulmuş Piliç Kasap Köfte 1 Kg",
+        "change_pct": -23.92
+      },
+      {
+        "slot_id": "id:05YV",
+        "title": "Poliner Oluklu Bulaşık Süngeri 5 Adet",
+        "change_pct": 23.53
+      },
+      {
+        "slot_id": "id:06PY",
+        "title": "Domestos Kar Beyazı Çamaşır Suyu 750 Ml",
+        "change_pct": -22.54
+      },
+      {
+        "slot_id": "id:08NJ",
+        "title": "Ace Klasik Çamaşır Suyu 2 Lt",
+        "change_pct": -22.54
+      },
+      {
+        "slot_id": "id:1IC7",
+        "title": "Domestos Bio Active Mutfak Çamaşır Suyu 750 Ml",
+        "change_pct": -22.54
+      },
+      {
+        "slot_id": "id:1IYP",
+        "title": "Master Potato Original Patates Cipsi 160 Gr",
+        "change_pct": -22.48
+      },
+      {
+        "slot_id": "id:22N4",
+        "title": "Filiz Mantı Makarna 500 Gr",
+        "change_pct": -21.92
+      },
+      {
+        "slot_id": "id:06D7",
+        "title": "Pepsi Zero Sugar Kola 1 Lt",
+        "change_pct": -21.05
+      },
+      {
+        "slot_id": "id:03FV",
+        "title": "Emin Dondurulmuş Kaşarlı Kasap Köfte 500 Gr",
+        "change_pct": -20.06
       }
     ],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "warnings": []
   }
 ]
