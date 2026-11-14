@@ -9955,27 +9955,107 @@
   },
   {
     "date": "2026-11-14",
-    "rows": 1578,
-    "source_updated_today": 0,
-    "source_within_3_days": 1578,
+    "rows": 1517,
+    "source_updated_today": 1470,
+    "source_within_3_days": 1517,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 1973,
-    "depot_source_updated_today": 0,
+    "depot_observations": 1877,
+    "depot_source_updated_today": 1829,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1277,
-    "auditable_skus": 1578,
+    "single_source_skus": 1229,
+    "auditable_skus": 1517,
     "source_age_days": {
-      "1": 1578
+      "0": 1470,
+      "1": 47
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-11-13",
-    "matched_slots": 1575,
-    "missing_slots": 0,
-    "new_slots": 3,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1511,
+    "missing_slots": 64,
+    "new_slots": 6,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1NF1",
+        "title": "Nivea Kadın Deodorant Çeşitleri 150 Ml",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:1UHP",
+        "title": "Rexona Kadın Deodorant 150 Ml",
+        "change_pct": 71.01
+      },
+      {
+        "slot_id": "id:01EP",
+        "title": "Ülker Gurme Kaymaklı Tereyağlı Kase Margarin 500 Gr",
+        "change_pct": 64.38
+      },
+      {
+        "slot_id": "id:1QE9",
+        "title": "Nestlé Nesquik Çokokare Mısır Gevreği 310 Gr",
+        "change_pct": 50.51
+      },
+      {
+        "slot_id": "id:1Q9E",
+        "title": "Nivea Double Effect Kadın Deodorant 150 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:21DO",
+        "title": "Axe Erkek Deodorant 150 Ml",
+        "change_pct": 41.64
+      },
+      {
+        "slot_id": "id:1WLN",
+        "title": "Daily Perfection Şampuan 425 Ml",
+        "change_pct": -33.56
+      },
+      {
+        "slot_id": "id:03NK",
+        "title": "Kiri Labne Tam Yağlı Taze Peynir 150 Gr",
+        "change_pct": -30.02
+      },
+      {
+        "slot_id": "id:01PZ",
+        "title": "Domestos Çamaşır Suyu 1.25 Lt",
+        "change_pct": -25.75
+      },
+      {
+        "slot_id": "id:1VVZ",
+        "title": "Çarliston Biber 1 Kg",
+        "change_pct": -25.01
+      },
+      {
+        "slot_id": "id:1W39",
+        "title": "Doğuş Karadeniz Siyah Çay 1 Kg",
+        "change_pct": 24.26
+      },
+      {
+        "slot_id": "id:018B",
+        "title": "Bolbol Acı Ketçap 1 Kg",
+        "change_pct": 23.88
+      },
+      {
+        "slot_id": "id:054R",
+        "title": "Bolbol Ketçap 1 Kg",
+        "change_pct": 23.88
+      },
+      {
+        "slot_id": "id:1C7N",
+        "title": "İpek Normal Saçlar İçin Şampuan 480 Ml",
+        "change_pct": -22.67
+      },
+      {
+        "slot_id": "id:1RGC",
+        "title": "Sana Paket Margarin 250 Gr",
+        "change_pct": -20.63
+      },
+      {
+        "slot_id": "id:1NFI",
+        "title": "Maden Suyu 6x200 Ml",
+        "change_pct": 20.0
+      }
+    ],
+    "warnings": []
   }
 ]
