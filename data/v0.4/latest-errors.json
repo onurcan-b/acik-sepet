@@ -1,10 +1,10 @@
 {
-  "date": "2026-11-13",
-  "checked_at": "2026-11-13T23:39:17.861140+03:00",
+  "date": "2026-11-14",
+  "checked_at": "2026-11-14T04:37:30.072547+03:00",
   "status": "published",
   "errors": [],
-  "source_updated_today": 1575,
-  "observed_skus": 1575,
+  "source_updated_today": 0,
+  "observed_skus": 1578,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -118,7 +118,7 @@
     "energy_drink": 19,
     "soda": 22,
     "dish_liquid": 17,
-    "dishwasher_tabs": 10,
+    "dishwasher_tabs": 13,
     "laundry_powder": 3,
     "laundry_liquid": 24,
     "softener": 11,
@@ -138,7 +138,5 @@
     "paper_towel": 21,
     "wet_wipes": 9,
     "tissues": 11
-  },
-  "retained_same_day_types": [],
-  "published_skus": 1575
+  }
 }
