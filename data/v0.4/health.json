@@ -10057,5 +10057,41 @@
       }
     ],
     "warnings": []
+  },
+  {
+    "date": "2026-11-15",
+    "rows": 1509,
+    "source_updated_today": 0,
+    "source_within_3_days": 1509,
+    "source_date_unknown": 0,
+    "source_date_future": 0,
+    "depot_observations": 1872,
+    "depot_source_updated_today": 0,
+    "depot_source_date_unknown": 0,
+    "single_source_skus": 1219,
+    "auditable_skus": 1509,
+    "source_age_days": {
+      "1": 1509
+    },
+    "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
+    "previous_date": "2026-11-14",
+    "matched_slots": 1502,
+    "missing_slots": 15,
+    "new_slots": 7,
+    "large_price_moves": [
+      {
+        "slot_id": "id:0Y5C",
+        "title": "Uzman Kasap Dana Sote 300 Gr",
+        "change_pct": 25.0
+      },
+      {
+        "slot_id": "id:12Y7",
+        "title": "Uzman Kasap Dana Yağsız Kıyma 400 Gr",
+        "change_pct": 25.0
+      }
+    ],
+    "warnings": [
+      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
+    ]
   }
 ]
