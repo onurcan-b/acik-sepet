@@ -10061,24 +10061,30 @@
   {
     "date": "2026-11-15",
     "rows": 1509,
-    "source_updated_today": 0,
+    "source_updated_today": 1502,
     "source_within_3_days": 1509,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 1872,
-    "depot_source_updated_today": 0,
+    "depot_observations": 1890,
+    "depot_source_updated_today": 1880,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1219,
+    "single_source_skus": 1212,
     "auditable_skus": 1509,
     "source_age_days": {
-      "1": 1509
+      "0": 1502,
+      "1": 7
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-11-14",
-    "matched_slots": 1502,
-    "missing_slots": 15,
-    "new_slots": 7,
+    "matched_slots": 1483,
+    "missing_slots": 34,
+    "new_slots": 26,
     "large_price_moves": [
+      {
+        "slot_id": "id:0SGA",
+        "title": "Peros Limon Sıvı Bulaşık Deterjanı 3.88 Lt",
+        "change_pct": -47.54
+      },
       {
         "slot_id": "id:0Y5C",
         "title": "Uzman Kasap Dana Sote 300 Gr",
@@ -10088,10 +10094,18 @@
         "slot_id": "id:12Y7",
         "title": "Uzman Kasap Dana Yağsız Kıyma 400 Gr",
         "change_pct": 25.0
+      },
+      {
+        "slot_id": "id:1MRO",
+        "title": "Sensodyne Ferah Nefes Diş Macunu 100 Ml",
+        "change_pct": 22.35
+      },
+      {
+        "slot_id": "id:1PMO",
+        "title": "Sensodyne-F Diş Macunu 100 Ml",
+        "change_pct": 22.35
       }
     ],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "warnings": []
   }
 ]
