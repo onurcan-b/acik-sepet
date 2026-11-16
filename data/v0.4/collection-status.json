@@ -1,10 +1,10 @@
 {
-  "date": "2026-11-15",
-  "checked_at": "2026-11-15T22:32:25.138178+03:00",
-  "status": "published_with_retained_types",
+  "date": "2026-11-16",
+  "checked_at": "2026-11-16T04:14:17.005708+03:00",
+  "status": "published",
   "errors": [],
-  "source_updated_today": 1502,
-  "observed_skus": 1507,
+  "source_updated_today": 0,
+  "observed_skus": 1528,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -26,7 +26,7 @@
     "chicken_thigh": 0,
     "whole_chicken": 13,
     "turkey": 0,
-    "sucuk": 19,
+    "sucuk": 24,
     "salami": 21,
     "sausage": 19,
     "meatballs": 6,
@@ -41,7 +41,7 @@
     "yogurt": 18,
     "strained_yogurt": 9,
     "ayran": 16,
-    "kefir": 14,
+    "kefir": 18,
     "white_cheese": 20,
     "kasar": 18,
     "labneh": 21,
@@ -93,7 +93,7 @@
     "chips": 23,
     "nuts": 13,
     "icecream": 17,
-    "halva": 13,
+    "halva": 16,
     "spread": 23,
     "candy": 13,
     "tomato_paste": 20,
@@ -114,7 +114,7 @@
     "fruit_juice": 0,
     "iced_tea": 14,
     "mineral_water": 17,
-    "water": 17,
+    "water": 21,
     "energy_drink": 19,
     "soda": 19,
     "dish_liquid": 17,
@@ -123,7 +123,7 @@
     "laundry_liquid": 23,
     "softener": 11,
     "bleach": 17,
-    "surface_cleaner": 15,
+    "surface_cleaner": 20,
     "garbage_bags": 19,
     "sponge": 16,
     "cleaning_cloth": 5,
@@ -138,33 +138,5 @@
     "paper_towel": 20,
     "wet_wipes": 9,
     "tissues": 11
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "bread_toast",
-      "label": "Tost ekmeği",
-      "reason": "Same-day coverage regression for bread_toast: 5 -> 4",
-      "new_observed_skus": 4,
-      "retained_skus": 5,
-      "collected_at": [
-        "2026-11-15T04:05:59.705454+03:00",
-        "2026-11-15T04:05:59.705467+03:00",
-        "2026-11-15T04:05:59.705471+03:00",
-        "2026-11-15T04:05:59.705473+03:00",
-        "2026-11-15T04:05:59.705475+03:00"
-      ]
-    },
-    {
-      "type_id": "parsley",
-      "label": "Maydanoz",
-      "reason": "Same-day coverage regression for parsley: 2 -> 1",
-      "new_observed_skus": 1,
-      "retained_skus": 2,
-      "collected_at": [
-        "2026-11-15T04:08:54.724480+03:00",
-        "2026-11-15T04:08:54.724491+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1509
+  }
 }
