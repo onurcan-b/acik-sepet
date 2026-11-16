@@ -5,19 +5,19 @@
 <!-- ECB_RESEARCH_START -->
 ## ECB-style supermarket repricing research — provisional
 
-**Last observation:** 2026-11-15 · **1,692 comparable store–SKU quotes**. This experiment uses the existing main-branch snapshots, without additional scraping.
+**Last observation:** 2026-11-16 · **1,674 comparable store–SKU quotes**. This experiment uses the existing main-branch snapshots, without additional scraping.
 
 | Metric | Result |
 |:--|--:|
-| Food-only increasing quotations | **20.79%** |
-| Food-only decreasing quotations | **20.65%** |
-| All-basket increasing quotations | 21.02% |
-| All-basket decreasing quotations | 20.27% |
-| All-basket unchanged quotations | 58.71% |
+| Food-only increasing quotations | **21.27%** |
+| Food-only decreasing quotations | **21.53%** |
+| All-basket increasing quotations | 21.43% |
+| All-basket decreasing quotations | 21.05% |
+| All-basket unchanged quotations | 57.52% |
 | Food repricing breadth (≥10% increases in category) | 94.38% |
 | Research-category weight represented | 100.00% |
 
-**Like-for-like calendar comparison (all-basket increase frequency):** -0.75 percentage points versus 2026-10-15
+**Like-for-like calendar comparison (all-basket increase frequency):** -0.65 percentage points versus 2026-10-16
 
 ### Repricing frequency (monthly baseline, daily updates)
 
@@ -29,7 +29,7 @@
 
 ### Important quality warning
 
-**324 of 1691 raw matched store-SKU prices (19.2%) moved ≥20%** between previous month-end and latest observation; 3 approximately doubled. Promotion reversals are plausible but not confirmed. Price-change magnitudes are **not validated as structural repricing**.
+**337 of 1674 raw matched store-SKU prices (20.1%) moved ≥20%** between previous month-end and latest observation; 3 approximately doubled. Promotion reversals are plausible but not confirmed. Price-change magnitudes are **not validated as structural repricing**.
 
 Category-weight coverage means represented categories passed the minimum
 of five matched quotes; it **does not** mean a representative full basket.
