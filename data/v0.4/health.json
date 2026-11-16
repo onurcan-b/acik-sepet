@@ -10110,27 +10110,172 @@
   },
   {
     "date": "2026-11-16",
-    "rows": 1528,
-    "source_updated_today": 0,
-    "source_within_3_days": 1528,
+    "rows": 1530,
+    "source_updated_today": 1523,
+    "source_within_3_days": 1530,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 1924,
-    "depot_source_updated_today": 0,
+    "depot_observations": 1919,
+    "depot_source_updated_today": 1912,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1219,
-    "auditable_skus": 1528,
+    "single_source_skus": 1225,
+    "auditable_skus": 1530,
     "source_age_days": {
-      "1": 1528
+      "0": 1523,
+      "1": 7
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-11-15",
-    "matched_slots": 1507,
-    "missing_slots": 2,
-    "new_slots": 21,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1498,
+    "missing_slots": 11,
+    "new_slots": 32,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1MJO",
+        "title": "Yudum Egemden Sızma Zeytinyağı Yumuşak Lezzet 5 Lt",
+        "change_pct": -42.16
+      },
+      {
+        "slot_id": "id:0CHX",
+        "title": "Fide Zeytinyağlı Ton Balığı 2x160 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:0CNK",
+        "title": "SuperFresh Zeytinyağlı Ton Balığı 3x75 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:0MP2",
+        "title": "Tat Sarımsaklı Mayonez 205 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:0S63",
+        "title": "Fide Acılı Ton Balığı 320 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:0TLE",
+        "title": "Tonla Kalite Zeytinyağlı Ton Balığı 2x150 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:10Q7",
+        "title": "SuperFresh Zeytinyağlı Ton Balığı 2x140 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:1Q02",
+        "title": "Hellmann's Trüflü Mayonez 235 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:1QJH",
+        "title": "Calvé Trüflü Mayonez 235 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:1YQN",
+        "title": "Tat Yoğun Lezzet Mayonez 550 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:1Z57",
+        "title": "Hellmann's Ketçap 460 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:20WK",
+        "title": "Calvé Ketçap 610 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:211W",
+        "title": "Fide Zeytinyağlı Ton Balığı 3x80 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:21H3",
+        "title": "Hellmann's Mayonez 385 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:1V68",
+        "title": "Nustil Organik Glutensiz Yulaf Ezmesi 250 Gr",
+        "change_pct": -34.82
+      },
+      {
+        "slot_id": "id:1NEP",
+        "title": "Macromax Rengarenk Mikrofiber Bez 4 Adet",
+        "change_pct": 34.7
+      },
+      {
+        "slot_id": "id:20VD",
+        "title": "Knorr Çabuk Çorba Kıtırlı Mercimek 22 Gr",
+        "change_pct": -29.98
+      },
+      {
+        "slot_id": "id:1ZTZ",
+        "title": "Macromax Extra Güçlü Çöp Torbası Orta Boy 15 Adet",
+        "change_pct": -22.56
+      },
+      {
+        "slot_id": "id:0H6O",
+        "title": "Calvé Mayonez 540 Gr",
+        "change_pct": -22.54
+      },
+      {
+        "slot_id": "id:10OJ",
+        "title": "Tat Acılı Ketçap 390 Gr",
+        "change_pct": -22.54
+      },
+      {
+        "slot_id": "id:1FGB",
+        "title": "Tat Ketçap Pickle 390 Gr",
+        "change_pct": -22.54
+      },
+      {
+        "slot_id": "id:1GT3",
+        "title": "Hellmann's Ketçap 610 Gr",
+        "change_pct": -22.54
+      },
+      {
+        "slot_id": "id:1OAY",
+        "title": "Tat Tatlı Ketçap 390 Gr",
+        "change_pct": -22.54
+      },
+      {
+        "slot_id": "id:1SMH",
+        "title": "Calvé Sriracha Mayonez 240 Gr",
+        "change_pct": -22.54
+      },
+      {
+        "slot_id": "id:1TJE",
+        "title": "Dardanel Zeytinyağlı Ton Balığı 225 Gr",
+        "change_pct": -22.54
+      },
+      {
+        "slot_id": "id:1ZG5",
+        "title": "Dardanel Ayçiçekyağlı Ton Balığı 2x140 Gr",
+        "change_pct": -22.54
+      },
+      {
+        "slot_id": "id:20PP",
+        "title": "SuperFresh Ayçiçek Yağlı Ton Balığı 280 Gr",
+        "change_pct": -22.54
+      },
+      {
+        "slot_id": "id:20YI",
+        "title": "Calvé Cam Mayonez 500 Gr",
+        "change_pct": -22.54
+      },
+      {
+        "slot_id": "id:19KX",
+        "title": "Kiri Labne 450 Gr",
+        "change_pct": 21.34
+      }
+    ],
+    "warnings": []
   }
 ]
