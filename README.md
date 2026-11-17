@@ -5,19 +5,19 @@
 <!-- ECB_RESEARCH_START -->
 ## ECB-style supermarket repricing research — provisional
 
-**Last observation:** 2026-11-16 · **1,674 comparable store–SKU quotes**. This experiment uses the existing main-branch snapshots, without additional scraping.
+**Last observation:** 2026-11-17 · **1,677 comparable store–SKU quotes**. This experiment uses the existing main-branch snapshots, without additional scraping.
 
 | Metric | Result |
 |:--|--:|
-| Food-only increasing quotations | **21.27%** |
-| Food-only decreasing quotations | **21.53%** |
-| All-basket increasing quotations | 21.43% |
-| All-basket decreasing quotations | 21.05% |
-| All-basket unchanged quotations | 57.52% |
-| Food repricing breadth (≥10% increases in category) | 94.38% |
+| Food-only increasing quotations | **23.12%** |
+| Food-only decreasing quotations | **17.59%** |
+| All-basket increasing quotations | 23.11% |
+| All-basket decreasing quotations | 17.71% |
+| All-basket unchanged quotations | 59.18% |
+| Food repricing breadth (≥10% increases in category) | 89.89% |
 | Research-category weight represented | 100.00% |
 
-**Like-for-like calendar comparison (all-basket increase frequency):** -0.65 percentage points versus 2026-10-16
+**Like-for-like calendar comparison (all-basket increase frequency):** +1.56 percentage points versus 2026-10-17
 
 ### Repricing frequency (monthly baseline, daily updates)
 
@@ -29,7 +29,7 @@
 
 ### Important quality warning
 
-**337 of 1674 raw matched store-SKU prices (20.1%) moved ≥20%** between previous month-end and latest observation; 3 approximately doubled. Promotion reversals are plausible but not confirmed. Price-change magnitudes are **not validated as structural repricing**.
+**336 of 1678 raw matched store-SKU prices (20.0%) moved ≥20%** between previous month-end and latest observation; 3 approximately doubled. Promotion reversals are plausible but not confirmed. Price-change magnitudes are **not validated as structural repricing**.
 
 Category-weight coverage means represented categories passed the minimum
 of five matched quotes; it **does not** mean a representative full basket.
