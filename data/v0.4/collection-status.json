@@ -1,10 +1,10 @@
 {
-  "date": "2026-11-17",
-  "checked_at": "2026-11-17T17:40:32.005507+03:00",
+  "date": "2026-11-18",
+  "checked_at": "2026-11-18T06:04:45.900563+03:00",
   "status": "published",
   "errors": [],
-  "source_updated_today": 1544,
-  "observed_skus": 1544,
+  "source_updated_today": 0,
+  "observed_skus": 1558,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -40,7 +40,7 @@
     "milk_lactosefree": 10,
     "yogurt": 18,
     "strained_yogurt": 10,
-    "ayran": 19,
+    "ayran": 22,
     "kefir": 18,
     "white_cheese": 20,
     "kasar": 19,
@@ -51,7 +51,7 @@
     "cream": 16,
     "sunflower_oil": 24,
     "olive_oil": 23,
-    "butter": 18,
+    "butter": 23,
     "margarine": 18,
     "corn_oil": 0,
     "banana": 2,
@@ -93,7 +93,7 @@
     "chips": 24,
     "nuts": 11,
     "icecream": 16,
-    "halva": 17,
+    "halva": 18,
     "spread": 22,
     "candy": 13,
     "tomato_paste": 20,
@@ -134,11 +134,9 @@
     "toothpaste": 22,
     "toothbrush": 23,
     "deodorant": 20,
-    "toilet_paper": 17,
+    "toilet_paper": 22,
     "paper_towel": 20,
     "wet_wipes": 9,
     "tissues": 11
-  },
-  "retained_same_day_types": [],
-  "published_skus": 1544
+  }
 }
