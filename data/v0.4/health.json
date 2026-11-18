@@ -10464,27 +10464,287 @@
   },
   {
     "date": "2026-11-18",
-    "rows": 1558,
-    "source_updated_today": 0,
-    "source_within_3_days": 1558,
+    "rows": 1582,
+    "source_updated_today": 1576,
+    "source_within_3_days": 1582,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 1966,
-    "depot_source_updated_today": 0,
+    "depot_observations": 2012,
+    "depot_source_updated_today": 2003,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1241,
-    "auditable_skus": 1558,
+    "single_source_skus": 1253,
+    "auditable_skus": 1582,
     "source_age_days": {
-      "1": 1558
+      "0": 1576,
+      "1": 6
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-11-17",
-    "matched_slots": 1544,
-    "missing_slots": 0,
-    "new_slots": 14,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1522,
+    "missing_slots": 22,
+    "new_slots": 60,
+    "large_price_moves": [
+      {
+        "slot_id": "id:1Q9E",
+        "title": "Nivea Double Effect Kadın Deodorant 150 Ml",
+        "change_pct": 100.0
+      },
+      {
+        "slot_id": "id:1MWL",
+        "title": "Sade Organik Kuru Fasulye 1 Kg",
+        "change_pct": 71.97
+      },
+      {
+        "slot_id": "id:1GEW",
+        "title": "Ariel Oxi Sıvı Çamaşır Deterjanı 24 Yıkama 1.08 Lt",
+        "change_pct": 67.03
+      },
+      {
+        "slot_id": "id:07OT",
+        "title": "Ariel Dağ Esintisi Sıvı Çamaşır Deterjanı 16 Yıkama 720 Ml",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:0CNK",
+        "title": "SuperFresh Zeytinyağlı Ton Balığı 3x75 Gr",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:0MP2",
+        "title": "Tat Sarımsaklı Mayonez 205 Gr",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:0S63",
+        "title": "Fide Acılı Ton Balığı 320 Gr",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:0TLE",
+        "title": "Tonla Kalite Zeytinyağlı Ton Balığı 2x150 Gr",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:0VWY",
+        "title": "Tukaş Ketçap 400 Gr",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:10Q7",
+        "title": "SuperFresh Zeytinyağlı Ton Balığı 2x140 Gr",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:1JCY",
+        "title": "Ace Klasik Çamaşır Suyu 4.3 Lt",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:1Q02",
+        "title": "Hellmann's Trüflü Mayonez 235 Gr",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:1QJH",
+        "title": "Calvé Trüflü Mayonez 235 Gr",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:1YQN",
+        "title": "Tat Yoğun Lezzet Mayonez 550 Gr",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:1Z57",
+        "title": "Hellmann's Ketçap 460 Gr",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:20WK",
+        "title": "Calvé Ketçap 610 Gr",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:211W",
+        "title": "Fide Zeytinyağlı Ton Balığı 3x80 Gr",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:21H3",
+        "title": "Hellmann's Mayonez 385 Gr",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:3WRZ",
+        "title": "Ariel Renkliler Sıvı Çamaşır Deterjanı 21 Yıkama 945 Ml",
+        "change_pct": 66.67
+      },
+      {
+        "slot_id": "id:1YFX",
+        "title": "Uni Baby Çamaşır Yumuşatıcı 1.5 Lt",
+        "change_pct": 48.5
+      },
+      {
+        "slot_id": "id:1ZOR",
+        "title": "Signal White System Diş Macunu 75 Ml",
+        "change_pct": -46.77
+      },
+      {
+        "slot_id": "id:08RH",
+        "title": "Uni Baby Aile Islak Mendil 90 Adet",
+        "change_pct": 45.01
+      },
+      {
+        "slot_id": "id:1T1E",
+        "title": "Fanta Zero Portakal Aromalı Gazoz 1 Lt",
+        "change_pct": 40.0
+      },
+      {
+        "slot_id": "id:2JMQ",
+        "title": "Master Potato Acılı Baharatlı Cips 160 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:0ZLF",
+        "title": "Duru Duş Jeli Deniz Esintisi 450 Ml",
+        "change_pct": -33.61
+      },
+      {
+        "slot_id": "id:160O",
+        "title": "Master Potato Soğanlı Ekşi Kremalı Cips 60 Gr",
+        "change_pct": -33.28
+      },
+      {
+        "slot_id": "id:0WHH",
+        "title": "Colgate Gentle Clean Diş Fırçası 2 Adet",
+        "change_pct": -31.43
+      },
+      {
+        "slot_id": "id:1RAB",
+        "title": "Duru Lux Perfumes Lotus Çiçeği Duş Jeli 450 Ml",
+        "change_pct": -30.79
+      },
+      {
+        "slot_id": "id:1ST6",
+        "title": "Duru Fresh Sensation Okyanus Ferahlığı Duş Jeli 450 Ml",
+        "change_pct": -30.79
+      },
+      {
+        "slot_id": "id:1TB2",
+        "title": "Duru Lux Perfumes Orkide Özleri Duş Jeli 450 Ml",
+        "change_pct": -30.79
+      },
+      {
+        "slot_id": "id:1TXJ",
+        "title": "Colgate Diş Macunu 150 Ml",
+        "change_pct": -30.3
+      },
+      {
+        "slot_id": "id:04MF",
+        "title": "Dove Nemlendirici Sıvı Sabun 450 Ml",
+        "change_pct": -29.3
+      },
+      {
+        "slot_id": "id:0YXX",
+        "title": "Domestos Yüzey Temizleyici Okyanus 1.5 Lt",
+        "change_pct": 29.11
+      },
+      {
+        "slot_id": "id:217T",
+        "title": "Domestos Bahar Çiçekleri Yüzey Temizleyici 1.5 Lt",
+        "change_pct": 29.11
+      },
+      {
+        "slot_id": "id:08NJ",
+        "title": "Ace Klasik Çamaşır Suyu 2 Lt",
+        "change_pct": 29.1
+      },
+      {
+        "slot_id": "id:0H6O",
+        "title": "Calvé Mayonez 540 Gr",
+        "change_pct": 29.1
+      },
+      {
+        "slot_id": "id:10OJ",
+        "title": "Tat Acılı Ketçap 390 Gr",
+        "change_pct": 29.1
+      },
+      {
+        "slot_id": "id:1FGB",
+        "title": "Tat Ketçap Pickle 390 Gr",
+        "change_pct": 29.1
+      },
+      {
+        "slot_id": "id:1GT3",
+        "title": "Hellmann's Ketçap 610 Gr",
+        "change_pct": 29.1
+      },
+      {
+        "slot_id": "id:1OAY",
+        "title": "Tat Tatlı Ketçap 390 Gr",
+        "change_pct": 29.1
+      },
+      {
+        "slot_id": "id:1SMH",
+        "title": "Calvé Sriracha Mayonez 240 Gr",
+        "change_pct": 29.1
+      },
+      {
+        "slot_id": "id:1TJE",
+        "title": "Dardanel Zeytinyağlı Ton Balığı 225 Gr",
+        "change_pct": 29.1
+      },
+      {
+        "slot_id": "id:1ZG5",
+        "title": "Dardanel Ayçiçekyağlı Ton Balığı 2x140 Gr",
+        "change_pct": 29.1
+      },
+      {
+        "slot_id": "id:20PP",
+        "title": "SuperFresh Ayçiçek Yağlı Ton Balığı 280 Gr",
+        "change_pct": 29.1
+      },
+      {
+        "slot_id": "id:20YI",
+        "title": "Calvé Cam Mayonez 500 Gr",
+        "change_pct": 29.1
+      },
+      {
+        "slot_id": "id:0FF3",
+        "title": "Komili Meyvemsi Sızma Zeytinyağı 500 Ml",
+        "change_pct": -25.36
+      },
+      {
+        "slot_id": "id:0DPB",
+        "title": "Carrefour Yeşil Düz Bulaşık Süngeri 5 Adet",
+        "change_pct": 25.0
+      },
+      {
+        "slot_id": "id:15PL",
+        "title": "Uzman Kasap Dana Kıyma %15 Yağlı 400 Gr",
+        "change_pct": 25.0
+      },
+      {
+        "slot_id": "id:11LQ",
+        "title": "Orkide Ayçiçek Yağı 1 Lt",
+        "change_pct": -24.15
+      },
+      {
+        "slot_id": "id:198H",
+        "title": "Rexona Shower Fresh Kadın Deodorant Yasemin 150 Ml",
+        "change_pct": -23.53
+      },
+      {
+        "slot_id": "id:2MR2",
+        "title": "Dalin Klasik Katı Sabun 225 Gr",
+        "change_pct": -23.26
+      },
+      {
+        "slot_id": "id:025Q",
+        "title": "Uzman Kasap Poşetli Bütün Piliç 1 Kg",
+        "change_pct": 22.74
+      }
+    ],
+    "warnings": []
   }
 ]
