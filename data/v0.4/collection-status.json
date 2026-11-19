@@ -1,10 +1,10 @@
 {
-  "date": "2026-11-18",
-  "checked_at": "2026-11-18T17:16:41.685080+03:00",
-  "status": "published_with_retained_types",
+  "date": "2026-11-19",
+  "checked_at": "2026-11-19T05:46:06.693752+03:00",
+  "status": "published",
   "errors": [],
-  "source_updated_today": 1576,
-  "observed_skus": 1581,
+  "source_updated_today": 0,
+  "observed_skus": 1587,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -28,7 +28,7 @@
     "turkey": 1,
     "sucuk": 22,
     "salami": 21,
-    "sausage": 19,
+    "sausage": 23,
     "meatballs": 6,
     "tuna": 18,
     "sardine": 0,
@@ -113,7 +113,7 @@
     "cola": 16,
     "fruit_juice": 0,
     "iced_tea": 16,
-    "mineral_water": 19,
+    "mineral_water": 21,
     "water": 24,
     "energy_drink": 19,
     "soda": 21,
@@ -138,23 +138,5 @@
     "paper_towel": 20,
     "wet_wipes": 9,
     "tissues": 11
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "instant_coffee",
-      "label": "Çözünebilir kahve",
-      "reason": "Same-day coverage regression for instant_coffee: 6 -> 5",
-      "new_observed_skus": 5,
-      "retained_skus": 6,
-      "collected_at": [
-        "2026-11-18T06:01:35.273403+03:00",
-        "2026-11-18T06:01:35.273416+03:00",
-        "2026-11-18T06:01:35.273420+03:00",
-        "2026-11-18T06:01:35.273422+03:00",
-        "2026-11-18T06:01:35.273423+03:00",
-        "2026-11-18T06:01:35.273425+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1582
+  }
 }
