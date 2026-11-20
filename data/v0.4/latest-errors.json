@@ -1,10 +1,10 @@
 {
-  "date": "2026-11-19",
-  "checked_at": "2026-11-19T17:37:56.193807+03:00",
-  "status": "published_with_retained_types",
+  "date": "2026-11-20",
+  "checked_at": "2026-11-20T05:31:13.026366+03:00",
+  "status": "published",
   "errors": [],
-  "source_updated_today": 1556,
-  "observed_skus": 1569,
+  "source_updated_today": 0,
+  "observed_skus": 1574,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -124,7 +124,7 @@
     "softener": 9,
     "bleach": 16,
     "surface_cleaner": 17,
-    "garbage_bags": 18,
+    "garbage_bags": 23,
     "sponge": 14,
     "cleaning_cloth": 5,
     "shampoo": 22,
@@ -138,63 +138,5 @@
     "paper_towel": 20,
     "wet_wipes": 7,
     "tissues": 11
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "bread_toast",
-      "label": "Tost ekmeği",
-      "reason": "Same-day coverage regression for bread_toast: 5 -> 4",
-      "new_observed_skus": 4,
-      "retained_skus": 5,
-      "collected_at": [
-        "2026-11-19T05:37:33.178489+03:00",
-        "2026-11-19T05:37:33.178503+03:00",
-        "2026-11-19T05:37:33.178506+03:00",
-        "2026-11-19T05:37:33.178508+03:00",
-        "2026-11-19T05:37:33.178510+03:00"
-      ]
-    },
-    {
-      "type_id": "smoked_salmon",
-      "label": "Somon füme",
-      "reason": "Same-day coverage regression for smoked_salmon: 3 -> 1",
-      "new_observed_skus": 1,
-      "retained_skus": 3,
-      "collected_at": [
-        "2026-11-19T05:38:38.196312+03:00",
-        "2026-11-19T05:38:38.196325+03:00",
-        "2026-11-19T05:38:38.196327+03:00"
-      ]
-    },
-    {
-      "type_id": "parsley",
-      "label": "Maydanoz",
-      "reason": "Same-day coverage regression for parsley: 2 -> 1",
-      "new_observed_skus": 1,
-      "retained_skus": 2,
-      "collected_at": [
-        "2026-11-19T05:40:34.459581+03:00",
-        "2026-11-19T05:40:34.459594+03:00"
-      ]
-    },
-    {
-      "type_id": "wet_wipes",
-      "label": "Islak mendil",
-      "reason": "Same-day coverage regression for wet_wipes: 9 -> 7",
-      "new_observed_skus": 7,
-      "retained_skus": 9,
-      "collected_at": [
-        "2026-11-19T05:45:09.507137+03:00",
-        "2026-11-19T05:45:09.507149+03:00",
-        "2026-11-19T05:45:09.507151+03:00",
-        "2026-11-19T05:45:09.507154+03:00",
-        "2026-11-19T05:45:09.507156+03:00",
-        "2026-11-19T05:45:09.507157+03:00",
-        "2026-11-19T05:45:09.507159+03:00",
-        "2026-11-19T05:45:09.507160+03:00",
-        "2026-11-19T05:45:09.507162+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1575
+  }
 }
