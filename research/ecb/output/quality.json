@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-21",
+  "denominator_note": "Unfiltered matched current versus prior month-end store × actual SKU quotes; different from sale-cleaned headline.",
+  "previous_month_end_candidate_quotes": 2326,
+  "current_fresh_quotes": 2065,
+  "matched_quotes_before_outlier_exclusion": 1706,
+  "matched_within_reasonableness_bounds": 1680,
+  "outliers_excluded_by_bounds": 26,
+  "large_moves_20pct_count": 282,
+  "large_moves_20pct_share": 16.786,
+  "near_exact_2x_count": 3,
+  "near_exact_5to3_count": 4,
+  "by_retailer": {
+    "a101": {
+      "matched": 28,
+      "large_moves": 1
+    },
+    "bim": {
+      "matched": 307,
+      "large_moves": 44
+    },
+    "carrefour": {
+      "matched": 398,
+      "large_moves": 94
+    },
+    "hakmar": {
+      "matched": 234,
+      "large_moves": 8
+    },
+    "migros": {
+      "matched": 422,
+      "large_moves": 106
+    },
+    "sok": {
+      "matched": 227,
+      "large_moves": 21
+    },
+    "tarim_kredi": {
+      "matched": 64,
+      "large_moves": 8
+    }
+  },
+  "warning": "Large jumps may be promotion starts/ends or source errors; the dataset cannot independently identify active promotions."
+}
