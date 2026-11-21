@@ -11599,27 +11599,127 @@
   },
   {
     "date": "2026-11-21",
-    "rows": 1614,
-    "source_updated_today": 0,
-    "source_within_3_days": 1614,
+    "rows": 1566,
+    "source_updated_today": 1536,
+    "source_within_3_days": 1566,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 2043,
-    "depot_source_updated_today": 0,
+    "depot_observations": 1958,
+    "depot_source_updated_today": 1926,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1289,
-    "auditable_skus": 1614,
+    "single_source_skus": 1261,
+    "auditable_skus": 1566,
     "source_age_days": {
-      "1": 1614
+      "0": 1536,
+      "1": 30
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-11-20",
-    "matched_slots": 1584,
-    "missing_slots": 2,
-    "new_slots": 30,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1528,
+    "missing_slots": 58,
+    "new_slots": 38,
+    "large_price_moves": [
+      {
+        "slot_id": "id:0LKE",
+        "title": "Jacobs Monarch Filtre Kahve 500 Gr",
+        "change_pct": 98.99
+      },
+      {
+        "slot_id": "id:1WLN",
+        "title": "Daily Perfection Şampuan 425 Ml",
+        "change_pct": 50.51
+      },
+      {
+        "slot_id": "id:1RGC",
+        "title": "Sana Paket Margarin 250 Gr",
+        "change_pct": 41.42
+      },
+      {
+        "slot_id": "id:1Z93",
+        "title": "Ekici Krem Peynir 400 Gr",
+        "change_pct": -31.04
+      },
+      {
+        "slot_id": "id:12MM",
+        "title": "Dalin Atopik Cilt Sıvı Çamaşır Deterjanı 1.5 Lt",
+        "change_pct": -30.62
+      },
+      {
+        "slot_id": "id:1C7N",
+        "title": "İpek Normal Saçlar İçin Şampuan 480 Ml",
+        "change_pct": 29.32
+      },
+      {
+        "slot_id": "id:033E",
+        "title": "Komili Natürel Sızma Zeytinyağı 1 Lt",
+        "change_pct": -26.18
+      },
+      {
+        "slot_id": "id:025Q",
+        "title": "Uzman Kasap Poşetli Bütün Piliç 1 Kg",
+        "change_pct": -25.94
+      },
+      {
+        "slot_id": "id:11IE",
+        "title": "Heinz Acılı Ketçap 375 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:12Y7",
+        "title": "Uzman Kasap Dana Yağsız Kıyma 400 Gr",
+        "change_pct": 25.0
+      },
+      {
+        "slot_id": "id:15PL",
+        "title": "Uzman Kasap Dana Kıyma %15 Yağlı 400 Gr",
+        "change_pct": 25.0
+      },
+      {
+        "slot_id": "id:0D47",
+        "title": "Nuh'un Ankara Vitaminli Arpa Şehriye 500 Gr",
+        "change_pct": -21.92
+      },
+      {
+        "slot_id": "id:06TO",
+        "title": "Black Eagle Enerji İçeceği 500 Ml",
+        "change_pct": 20.83
+      },
+      {
+        "slot_id": "id:1C7T",
+        "title": "Hotline Enerji İçeceği 500 Ml",
+        "change_pct": 20.83
+      },
+      {
+        "slot_id": "id:1F0F",
+        "title": "Pantene Onarım Ve Koruma Şampuan 400 Ml",
+        "change_pct": -20.74
+      },
+      {
+        "slot_id": "id:1H9B",
+        "title": "Pantene Kepek Karşıtı Şampuan 400 Ml",
+        "change_pct": -20.74
+      },
+      {
+        "slot_id": "id:1NZ2",
+        "title": "Pantene Dökülme Karşıtı Şampuan 400 Ml",
+        "change_pct": -20.74
+      },
+      {
+        "slot_id": "id:1TYR",
+        "title": "Head & Shoulders Dökülme Karşıtı Şampuan 330 Ml",
+        "change_pct": -20.74
+      },
+      {
+        "slot_id": "id:0XRZ",
+        "title": "Eti Lifalif İnce Öğütülmüş Yulaf Ezmesi 350 Gr",
+        "change_pct": -20.5
+      },
+      {
+        "slot_id": "id:0YWG",
+        "title": "Saban Yerli Kırmızı Mercimek 1 Kg",
+        "change_pct": 20.13
+      }
+    ],
+    "warnings": []
   }
 ]
