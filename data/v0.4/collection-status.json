@@ -1,10 +1,10 @@
 {
-  "date": "2026-11-22",
-  "checked_at": "2026-11-22T16:33:21.296503+03:00",
+  "date": "2026-11-23",
+  "checked_at": "2026-11-23T04:56:26.929036+03:00",
   "status": "published",
   "errors": [],
-  "source_updated_today": 1553,
-  "observed_skus": 1553,
+  "source_updated_today": 0,
+  "observed_skus": 1558,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -18,10 +18,10 @@
     "pasta_other": 21,
     "vermicelli": 17,
     "oats": 11,
-    "breakfast_cereal": 18,
+    "breakfast_cereal": 19,
     "semolina": 6,
     "beef_mince": 7,
-    "beef_cubes": 6,
+    "beef_cubes": 7,
     "chicken_breast": 0,
     "chicken_thigh": 0,
     "whole_chicken": 10,
@@ -57,7 +57,7 @@
     "banana": 2,
     "apple": 4,
     "orange": 2,
-    "mandarin": 0,
+    "mandarin": 1,
     "lemon": 3,
     "pear": 2,
     "peach": 1,
@@ -91,7 +91,7 @@
     "biscuits": 19,
     "wafer": 19,
     "chips": 24,
-    "nuts": 9,
+    "nuts": 10,
     "icecream": 15,
     "halva": 16,
     "spread": 22,
@@ -126,7 +126,7 @@
     "surface_cleaner": 17,
     "garbage_bags": 23,
     "sponge": 14,
-    "cleaning_cloth": 3,
+    "cleaning_cloth": 4,
     "shampoo": 20,
     "shower_gel": 28,
     "soap_liquid": 20,
@@ -138,7 +138,5 @@
     "paper_towel": 20,
     "wet_wipes": 7,
     "tissues": 11
-  },
-  "retained_same_day_types": [],
-  "published_skus": 1553
+  }
 }
