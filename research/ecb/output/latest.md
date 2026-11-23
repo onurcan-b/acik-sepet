@@ -1,10 +1,10 @@
 # Açık Sepet · ECB repricing experiment
 
-**Latest: 2026-11-22 (provisional month-to-date)** · 1618 comparable store-SKU quotes · 100.0% basket-weight coverage.
+**Latest: 2026-11-23 (provisional month-to-date)** · 1602 comparable store-SKU quotes · 100.0% basket-weight coverage.
 
-**Increased:** 24.12% · **Decreased:** 19.66% · **Unchanged:** 56.23%.
+**Increased:** 23.80% · **Decreased:** 19.21% · **Unchanged:** 56.99%.
 
-**Food-only increase frequency:** 24.24% · decrease frequency: 19.82%.
+**Food-only increase frequency:** 23.76% · decrease frequency: 19.40%.
 
 **Food breadth (categories with ≥10% increasing):** 100.0% of configured food weight.
 
@@ -12,25 +12,25 @@
 
 ![Food breadth over time](breadth.svg)
 
-**Quality warning:** 271 / 1622 raw matched quotations (16.7%) changed by ≥20%; 3 almost doubled. Promotions and other outliers remain under investigation.
+**Quality warning:** 269 / 1606 raw matched quotations (16.8%) changed by ≥20%; 3 almost doubled. Promotions and other outliers remain under investigation.
 
-**All-basket matched previous-month same-day change:** -0.41 pp (versus 2026-10-22).
+**All-basket matched previous-month same-day change:** -1.18 pp (versus 2026-10-23).
 
 
 | Category | Quotes | Increases | Decreases | Avg rise | Avg fall |
 |---|---:|---:|---:|---:|---:|
-| Ekmek, tahıllar ve makarna | 172 | 36.0% | 19.2% | +17.42% | -19.13% |
-| Et ve et ürünleri | 91 | 13.2% | 24.2% | +12.21% | -23.06% |
-| Balık ve deniz ürünleri | 32 | 18.8% | 6.2% | +34.82% | -26.45% |
-| Süt ürünleri ve yumurta | 229 | 38.4% | 9.2% | +6.88% | -13.32% |
-| Yağlar | 96 | 15.6% | 16.7% | +35.05% | -14.01% |
-| Meyve | 37 | 10.8% | 29.7% | +11.55% | -22.54% |
-| Sebze | 51 | 31.4% | 39.2% | +31.52% | -20.00% |
-| Şeker, tatlı ve atıştırmalık | 237 | 19.0% | 13.9% | +16.84% | -20.07% |
-| Diğer gıda | 174 | 20.7% | 14.4% | +20.17% | -18.51% |
-| Alkolsüz içecekler | 171 | 16.4% | 8.2% | +10.27% | -17.79% |
-| Ev temizlik sarf malzemeleri | 130 | 23.1% | 20.8% | +21.94% | -22.40% |
-| Kişisel bakım ve kağıt ürünleri | 198 | 23.2% | 14.1% | +16.35% | -27.98% |
+| Ekmek, tahıllar ve makarna | 167 | 34.7% | 20.4% | +17.94% | -19.30% |
+| Et ve et ürünleri | 91 | 14.3% | 23.1% | +14.64% | -22.92% |
+| Balık ve deniz ürünleri | 30 | 20.0% | 3.3% | +34.82% | -42.86% |
+| Süt ürünleri ve yumurta | 223 | 36.8% | 9.4% | +7.83% | -13.32% |
+| Yağlar | 95 | 14.7% | 16.8% | +33.84% | -14.01% |
+| Meyve | 36 | 11.1% | 30.6% | +11.55% | -21.74% |
+| Sebze | 52 | 28.8% | 36.5% | +33.61% | -20.03% |
+| Şeker, tatlı ve atıştırmalık | 232 | 20.3% | 12.9% | +16.93% | -18.66% |
+| Diğer gıda | 173 | 20.8% | 14.5% | +20.85% | -18.51% |
+| Alkolsüz içecekler | 170 | 15.9% | 8.2% | +6.99% | -17.79% |
+| Ev temizlik sarf malzemeleri | 130 | 23.8% | 20.8% | +21.28% | -22.40% |
+| Kişisel bakım ve kağıt ürünleri | 203 | 24.6% | 12.3% | +17.24% | -27.74% |
 
 Method: matched product **and** store, normalized price, same pack size;
 fresh source (≤1 day), previous month-end price within seven days,
