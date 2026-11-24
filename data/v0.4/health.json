@@ -11859,5 +11859,221 @@
     "warnings": [
       "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
     ]
+  },
+  {
+    "date": "2026-11-25",
+    "rows": 1535,
+    "source_updated_today": 0,
+    "source_within_3_days": 1535,
+    "source_date_unknown": 0,
+    "source_date_future": 0,
+    "depot_observations": 1904,
+    "depot_source_updated_today": 0,
+    "depot_source_date_unknown": 0,
+    "single_source_skus": 1255,
+    "auditable_skus": 1535,
+    "source_age_days": {
+      "1": 1535
+    },
+    "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
+    "previous_date": "2026-11-24",
+    "matched_slots": 1502,
+    "missing_slots": 46,
+    "new_slots": 33,
+    "large_price_moves": [
+      {
+        "slot_id": "id:0O9J",
+        "title": "Palmolive Feel The Massage Duş Jeli 250 Ml",
+        "change_pct": 153.41
+      },
+      {
+        "slot_id": "id:1RBK",
+        "title": "Le Petit Marseillais Şeftali ve Nektarin Duş Jeli 400 Ml",
+        "change_pct": 150.0
+      },
+      {
+        "slot_id": "id:1S1Q",
+        "title": "Le Petit Marseillais Akdeniz Çileği Duş Jeli 400 Ml",
+        "change_pct": 150.0
+      },
+      {
+        "slot_id": "id:1Z8B",
+        "title": "Duru Body Scrub Pink Delight Duş Jeli 450 Ml",
+        "change_pct": 150.0
+      },
+      {
+        "slot_id": "id:1NF1",
+        "title": "Nivea Kadın Deodorant Çeşitleri 150 Ml",
+        "change_pct": 124.81
+      },
+      {
+        "slot_id": "id:1ISZ",
+        "title": "Emotion Deodorant 150 Ml",
+        "change_pct": 105.88
+      },
+      {
+        "slot_id": "id:1SVD",
+        "title": "Blade Deodorant 150 Ml",
+        "change_pct": 105.88
+      },
+      {
+        "slot_id": "id:1L60",
+        "title": "Elidor Şampuan Çeşitleri 400 Ml",
+        "change_pct": 100.92
+      },
+      {
+        "slot_id": "id:1ODU",
+        "title": "Head & Shoulders Şampuan 330 Ml",
+        "change_pct": 100.81
+      },
+      {
+        "slot_id": "id:1UHP",
+        "title": "Rexona Kadın Deodorant 150 Ml",
+        "change_pct": 100.69
+      },
+      {
+        "slot_id": "id:1O1F",
+        "title": "Colgate Diş Macunu 50 Ml",
+        "change_pct": 67.8
+      },
+      {
+        "slot_id": "id:0X8O",
+        "title": "Palmolive Soft Essence Badem Duş Jeli 500 Ml",
+        "change_pct": 58.83
+      },
+      {
+        "slot_id": "id:02UC",
+        "title": "Palmolive Body Butter Böğürtlen Duş Jeli 500 Ml",
+        "change_pct": 58.75
+      },
+      {
+        "slot_id": "id:1QBI",
+        "title": "Duru Body Scrub Crystal Duş Jeli 450 Ml",
+        "change_pct": 58.11
+      },
+      {
+        "slot_id": "id:1L3Q",
+        "title": "Yudum Egemden Riviera Zeytinyağı Teneke 5 Lt",
+        "change_pct": 54.91
+      },
+      {
+        "slot_id": "id:00IR",
+        "title": "Colgate Max White Fresh Diş Fırçası 1 Adet",
+        "change_pct": 43.48
+      },
+      {
+        "slot_id": "id:1O4A",
+        "title": "Clear Şampuan 350 Ml",
+        "change_pct": 41.71
+      },
+      {
+        "slot_id": "id:21DO",
+        "title": "Axe Erkek Deodorant 150 Ml",
+        "change_pct": 41.64
+      },
+      {
+        "slot_id": "id:1NAZ",
+        "title": "Blendax Şampuan 500 Ml",
+        "change_pct": 41.42
+      },
+      {
+        "slot_id": "id:1EOA",
+        "title": "Çekirdeksiz Üzüm 1 Kg",
+        "change_pct": -40.82
+      },
+      {
+        "slot_id": "id:2AFN",
+        "title": "Head & Shoulders Şampuan 330 Ml",
+        "change_pct": -40.16
+      },
+      {
+        "slot_id": "id:01EP",
+        "title": "Ülker Gurme Kaymaklı Tereyağlı Kase Margarin 500 Gr",
+        "change_pct": -40.0
+      },
+      {
+        "slot_id": "id:002E",
+        "title": "Emin %20 Yağlı Dana Kıyma 400 Gr",
+        "change_pct": 39.24
+      },
+      {
+        "slot_id": "id:1GID",
+        "title": "Nestlé Nesquik Çilek Kare Mısır Gevreği 310 Gr",
+        "change_pct": -37.48
+      },
+      {
+        "slot_id": "id:01MZ",
+        "title": "Ekonomik Elma 1 Kg",
+        "change_pct": 34.48
+      },
+      {
+        "slot_id": "id:1X2U",
+        "title": "Limon 1 Kg",
+        "change_pct": 34.48
+      },
+      {
+        "slot_id": "id:1IOQ",
+        "title": "Fairy Sıvı Bulaşık Deterjanı 650 Ml",
+        "change_pct": -34.09
+      },
+      {
+        "slot_id": "id:07G3",
+        "title": "Piliç Salam 1 Kg",
+        "change_pct": 33.71
+      },
+      {
+        "slot_id": "id:1KUR",
+        "title": "Palmolive So Relaxed Duş Jeli 500 Ml",
+        "change_pct": 29.98
+      },
+      {
+        "slot_id": "id:0QE9",
+        "title": "Organik Yumurta 6 Adet",
+        "change_pct": 27.12
+      },
+      {
+        "slot_id": "id:1J0K",
+        "title": "Ruffles Orijinal Peynirli Soğan Ketçap Patates Cipsi 125 Gr",
+        "change_pct": 27.12
+      },
+      {
+        "slot_id": "id:0N0H",
+        "title": "Çatal Sucuk İlikli Dana Kangal Sucuk 450 Gr",
+        "change_pct": 26.76
+      },
+      {
+        "slot_id": "id:1M20",
+        "title": "Dana Fermente Mangal Sucuk 400 Gr",
+        "change_pct": 26.76
+      },
+      {
+        "slot_id": "id:1PJY",
+        "title": "İthal Muz 1 Kg",
+        "change_pct": 25.25
+      },
+      {
+        "slot_id": "id:056A",
+        "title": "Taze Bütün Poşet Piliç 1 Kg",
+        "change_pct": 23.85
+      },
+      {
+        "slot_id": "id:1J33",
+        "title": "Şölen Ozmo Fun Figürlü Sütlü Çikolata 23 Gr",
+        "change_pct": 20.41
+      },
+      {
+        "slot_id": "id:1Y3T",
+        "title": "Siyah Üzüm 1 Kg",
+        "change_pct": 20.41
+      },
+      {
+        "slot_id": "id:182O",
+        "title": "Kahverengi Yumurta 10 Adet",
+        "change_pct": 20.25
+      }
+    ],
+    "warnings": [
+      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
+    ]
   }
 ]
