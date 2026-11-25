@@ -11862,24 +11862,25 @@
   },
   {
     "date": "2026-11-25",
-    "rows": 1535,
-    "source_updated_today": 0,
-    "source_within_3_days": 1535,
+    "rows": 1539,
+    "source_updated_today": 1534,
+    "source_within_3_days": 1539,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 1904,
-    "depot_source_updated_today": 0,
+    "depot_observations": 1900,
+    "depot_source_updated_today": 1894,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1255,
-    "auditable_skus": 1535,
+    "single_source_skus": 1268,
+    "auditable_skus": 1539,
     "source_age_days": {
-      "1": 1535
+      "0": 1534,
+      "1": 5
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-11-24",
-    "matched_slots": 1502,
-    "missing_slots": 46,
-    "new_slots": 33,
+    "matched_slots": 1482,
+    "missing_slots": 66,
+    "new_slots": 57,
     "large_price_moves": [
       {
         "slot_id": "id:0O9J",
@@ -11932,9 +11933,19 @@
         "change_pct": 100.69
       },
       {
+        "slot_id": "id:1W9H",
+        "title": "Finish Quantum Özel Seri Bulaşık Makinesi Tableti 50 Adet",
+        "change_pct": 71.68
+      },
+      {
         "slot_id": "id:1O1F",
         "title": "Colgate Diş Macunu 50 Ml",
         "change_pct": 67.8
+      },
+      {
+        "slot_id": "id:1ZOR",
+        "title": "Signal White System Diş Macunu 75 Ml",
+        "change_pct": 65.38
       },
       {
         "slot_id": "id:0X8O",
@@ -11957,8 +11968,23 @@
         "change_pct": 54.91
       },
       {
+        "slot_id": "id:0ZLF",
+        "title": "Duru Duş Jeli Deniz Esintisi 450 Ml",
+        "change_pct": 50.63
+      },
+      {
+        "slot_id": "id:0WHH",
+        "title": "Colgate Gentle Clean Diş Fırçası 2 Adet",
+        "change_pct": 45.83
+      },
+      {
         "slot_id": "id:00IR",
         "title": "Colgate Max White Fresh Diş Fırçası 1 Adet",
+        "change_pct": 43.48
+      },
+      {
+        "slot_id": "id:1TXJ",
+        "title": "Colgate Diş Macunu 150 Ml",
         "change_pct": 43.48
       },
       {
@@ -11977,6 +12003,11 @@
         "change_pct": 41.42
       },
       {
+        "slot_id": "id:0H3D",
+        "title": "Colgate Max Beyazlık Diş Macunu 50 Ml",
+        "change_pct": 41.21
+      },
+      {
         "slot_id": "id:1EOA",
         "title": "Çekirdeksiz Üzüm 1 Kg",
         "change_pct": -40.82
@@ -11992,6 +12023,11 @@
         "change_pct": -40.0
       },
       {
+        "slot_id": "id:0GYU",
+        "title": "Uzman Kasap Dana Kıyma 400 Gr",
+        "change_pct": 39.27
+      },
+      {
         "slot_id": "id:002E",
         "title": "Emin %20 Yağlı Dana Kıyma 400 Gr",
         "change_pct": 39.24
@@ -12000,6 +12036,11 @@
         "slot_id": "id:1GID",
         "title": "Nestlé Nesquik Çilek Kare Mısır Gevreği 310 Gr",
         "change_pct": -37.48
+      },
+      {
+        "slot_id": "id:0ZEQ",
+        "title": "Oral-B Pro-3DW Çay & Kahve İçenler İçin Diş Macunu 75 Ml",
+        "change_pct": 36.37
       },
       {
         "slot_id": "id:01MZ",
@@ -12022,9 +12063,29 @@
         "change_pct": 33.71
       },
       {
+        "slot_id": "id:11LQ",
+        "title": "Orkide Ayçiçek Yağı 1 Lt",
+        "change_pct": 31.83
+      },
+      {
+        "slot_id": "id:198H",
+        "title": "Rexona Shower Fresh Kadın Deodorant Yasemin 150 Ml",
+        "change_pct": 30.77
+      },
+      {
+        "slot_id": "id:2MR2",
+        "title": "Dalin Klasik Katı Sabun 225 Gr",
+        "change_pct": 30.3
+      },
+      {
         "slot_id": "id:1KUR",
         "title": "Palmolive So Relaxed Duş Jeli 500 Ml",
         "change_pct": 29.98
+      },
+      {
+        "slot_id": "id:1SLD",
+        "title": "Colgate Max White Diş Macunu 75 Ml",
+        "change_pct": 29.44
       },
       {
         "slot_id": "id:0QE9",
@@ -12052,9 +12113,24 @@
         "change_pct": 25.25
       },
       {
+        "slot_id": "id:1PEG",
+        "title": "İpek Yağ Hazinesi Şampuan 480 Ml",
+        "change_pct": -25.13
+      },
+      {
         "slot_id": "id:056A",
         "title": "Taze Bütün Poşet Piliç 1 Kg",
         "change_pct": 23.85
+      },
+      {
+        "slot_id": "id:3X2H",
+        "title": "Fiskobirlik Nuga Kakaolu Fındık Kreması 700 Gr",
+        "change_pct": -22.92
+      },
+      {
+        "slot_id": "id:1K8K",
+        "title": "Ülker Caramio Sütlü Çikolata 32 Gr",
+        "change_pct": -21.82
       },
       {
         "slot_id": "id:1J33",
@@ -12070,10 +12146,13 @@
         "slot_id": "id:182O",
         "title": "Kahverengi Yumurta 10 Adet",
         "change_pct": 20.25
+      },
+      {
+        "slot_id": "id:1Y3H",
+        "title": "Ülker Çıtır Kadayıflı Antep Fıstıklı Sütlü Çikolata 35 Gr",
+        "change_pct": -20.1
       }
     ],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "warnings": []
   }
 ]
