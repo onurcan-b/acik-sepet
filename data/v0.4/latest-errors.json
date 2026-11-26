@@ -1,10 +1,10 @@
 {
-  "date": "2026-11-25",
-  "checked_at": "2026-11-25T18:50:37.922607+03:00",
-  "status": "published_with_retained_types",
+  "date": "2026-11-26",
+  "checked_at": "2026-11-26T06:45:32.749773+03:00",
+  "status": "published",
   "errors": [],
-  "source_updated_today": 1534,
-  "observed_skus": 1538,
+  "source_updated_today": 0,
+  "observed_skus": 1548,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -24,7 +24,7 @@
     "beef_cubes": 4,
     "chicken_breast": 0,
     "chicken_thigh": 2,
-    "whole_chicken": 10,
+    "whole_chicken": 13,
     "turkey": 1,
     "sucuk": 20,
     "salami": 21,
@@ -32,13 +32,13 @@
     "meatballs": 6,
     "tuna": 17,
     "sardine": 0,
-    "smoked_salmon": 2,
+    "smoked_salmon": 3,
     "salmon": 3,
     "frozen_fish": 8,
     "fish_fingers": 0,
     "milk": 19,
     "milk_lactosefree": 10,
-    "yogurt": 18,
+    "yogurt": 20,
     "strained_yogurt": 9,
     "ayran": 21,
     "kefir": 18,
@@ -47,7 +47,7 @@
     "labneh": 20,
     "cream_cheese": 11,
     "mozzarella": 3,
-    "eggs": 18,
+    "eggs": 21,
     "cream": 16,
     "sunflower_oil": 24,
     "olive_oil": 18,
@@ -136,24 +136,7 @@
     "deodorant": 20,
     "toilet_paper": 20,
     "paper_towel": 20,
-    "wet_wipes": 7,
+    "wet_wipes": 8,
     "tissues": 11
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "bread_toast",
-      "label": "Tost ekmeği",
-      "reason": "Same-day coverage regression for bread_toast: 5 -> 4",
-      "new_observed_skus": 4,
-      "retained_skus": 5,
-      "collected_at": [
-        "2026-11-25T02:03:38.615047+03:00",
-        "2026-11-25T02:03:38.615055+03:00",
-        "2026-11-25T02:03:38.615057+03:00",
-        "2026-11-25T02:03:38.615058+03:00",
-        "2026-11-25T02:03:38.615059+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1539
+  }
 }
