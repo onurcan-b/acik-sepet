@@ -12157,27 +12157,62 @@
   },
   {
     "date": "2026-11-26",
-    "rows": 1548,
-    "source_updated_today": 0,
-    "source_within_3_days": 1548,
+    "rows": 1546,
+    "source_updated_today": 1544,
+    "source_within_3_days": 1546,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 1914,
-    "depot_source_updated_today": 0,
+    "depot_observations": 1912,
+    "depot_source_updated_today": 1910,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1274,
-    "auditable_skus": 1548,
+    "single_source_skus": 1272,
+    "auditable_skus": 1546,
     "source_age_days": {
-      "1": 1548
+      "0": 1544,
+      "1": 2
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-11-25",
-    "matched_slots": 1538,
-    "missing_slots": 1,
-    "new_slots": 10,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1520,
+    "missing_slots": 19,
+    "new_slots": 26,
+    "large_price_moves": [
+      {
+        "slot_id": "id:20SM",
+        "title": "Scotch-Brite Renkli Bez 3 Adet",
+        "change_pct": -60.44
+      },
+      {
+        "slot_id": "id:1W72",
+        "title": "Becel Zeytinyağlı Kase Margarin 250 Gr",
+        "change_pct": 53.7
+      },
+      {
+        "slot_id": "id:016M",
+        "title": "Maylo Süper Bambu Katkılı Kağıt Havlu 16 Adet",
+        "change_pct": -50.01
+      },
+      {
+        "slot_id": "id:0O96",
+        "title": "Maylo Süper Bambu Katkılı Tuvalet Kağıdı 40 Adet",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:02UC",
+        "title": "Palmolive Body Butter Böğürtlen Duş Jeli 500 Ml",
+        "change_pct": 49.37
+      },
+      {
+        "slot_id": "id:17N0",
+        "title": "Becel Tereyağı Keyfi Kase Margarin 250 Gr",
+        "change_pct": 43.33
+      },
+      {
+        "slot_id": "id:1I8K",
+        "title": "Red Globe Üzüm 1 Kg",
+        "change_pct": -20.65
+      }
+    ],
+    "warnings": []
   }
 ]
