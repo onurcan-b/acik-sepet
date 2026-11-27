@@ -1,10 +1,10 @@
 {
-  "date": "2026-11-26",
-  "checked_at": "2026-11-26T18:32:16.137542+03:00",
-  "status": "published_with_retained_types",
+  "date": "2026-11-27",
+  "checked_at": "2026-11-27T06:48:29.305132+03:00",
+  "status": "published",
   "errors": [],
-  "source_updated_today": 1544,
-  "observed_skus": 1545,
+  "source_updated_today": 0,
+  "observed_skus": 1556,
   "recovered_types": [],
   "recovery": [],
   "observed_by_type": {
@@ -36,7 +36,7 @@
     "salmon": 3,
     "frozen_fish": 9,
     "fish_fingers": 0,
-    "milk": 19,
+    "milk": 24,
     "milk_lactosefree": 10,
     "yogurt": 21,
     "strained_yogurt": 9,
@@ -77,7 +77,7 @@
     "eggplant": 2,
     "zucchini": 2,
     "carrot": 1,
-    "lettuce": 0,
+    "lettuce": 1,
     "spinach": 1,
     "parsley": 1,
     "broccoli": 0,
@@ -105,7 +105,7 @@
     "ketchup": 24,
     "mayonnaise": 22,
     "salt": 14,
-    "vinegar": 15,
+    "vinegar": 20,
     "black_tea": 22,
     "turkish_coffee": 19,
     "instant_coffee": 8,
@@ -138,19 +138,5 @@
     "paper_towel": 20,
     "wet_wipes": 9,
     "tissues": 11
-  },
-  "retained_same_day_types": [
-    {
-      "type_id": "parsley",
-      "label": "Maydanoz",
-      "reason": "Same-day coverage regression for parsley: 2 -> 1",
-      "new_observed_skus": 1,
-      "retained_skus": 2,
-      "collected_at": [
-        "2026-11-26T06:40:12.931087+03:00",
-        "2026-11-26T06:40:12.931100+03:00"
-      ]
-    }
-  ],
-  "published_skus": 1546
+  }
 }
