@@ -1,38 +1,38 @@
 {
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "denominator_note": "Unfiltered matched current versus prior month-end store × actual SKU quotes; different from sale-cleaned headline.",
   "previous_month_end_candidate_quotes": 2326,
-  "current_fresh_quotes": 1951,
-  "matched_quotes_before_outlier_exclusion": 1595,
-  "matched_within_reasonableness_bounds": 1587,
-  "outliers_excluded_by_bounds": 8,
-  "large_moves_20pct_count": 268,
-  "large_moves_20pct_share": 16.887,
-  "near_exact_2x_count": 4,
-  "near_exact_5to3_count": 4,
+  "current_fresh_quotes": 1989,
+  "matched_quotes_before_outlier_exclusion": 1607,
+  "matched_within_reasonableness_bounds": 1596,
+  "outliers_excluded_by_bounds": 11,
+  "large_moves_20pct_count": 290,
+  "large_moves_20pct_share": 18.17,
+  "near_exact_2x_count": 3,
+  "near_exact_5to3_count": 5,
   "by_retailer": {
     "a101": {
-      "matched": 28,
-      "large_moves": 4
+      "matched": 26,
+      "large_moves": 3
     },
     "bim": {
-      "matched": 311,
-      "large_moves": 50
+      "matched": 309,
+      "large_moves": 48
     },
     "carrefour": {
-      "matched": 370,
-      "large_moves": 82
+      "matched": 390,
+      "large_moves": 101
     },
     "hakmar": {
       "matched": 234,
-      "large_moves": 9
+      "large_moves": 10
     },
     "migros": {
-      "matched": 405,
-      "large_moves": 98
+      "matched": 401,
+      "large_moves": 103
     },
     "sok": {
-      "matched": 217,
+      "matched": 214,
       "large_moves": 18
     },
     "tarim_kredi": {
