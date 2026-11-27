@@ -12217,27 +12217,202 @@
   },
   {
     "date": "2026-11-27",
-    "rows": 1556,
-    "source_updated_today": 0,
-    "source_within_3_days": 1556,
+    "rows": 1555,
+    "source_updated_today": 1551,
+    "source_within_3_days": 1555,
     "source_date_unknown": 0,
     "source_date_future": 0,
-    "depot_observations": 1931,
-    "depot_source_updated_today": 0,
+    "depot_observations": 1928,
+    "depot_source_updated_today": 1924,
     "depot_source_date_unknown": 0,
-    "single_source_skus": 1276,
-    "auditable_skus": 1556,
+    "single_source_skus": 1269,
+    "auditable_skus": 1555,
     "source_age_days": {
-      "1": 1556
+      "0": 1551,
+      "1": 4
     },
     "freshness_basis": "Her SKU'nun kullanılan depotları arasındaki en yeni kaynak tarihi; tüm depotların güncelliğini kanıtlamaz.",
     "previous_date": "2026-11-26",
-    "matched_slots": 1545,
-    "missing_slots": 1,
-    "new_slots": 11,
-    "large_price_moves": [],
-    "warnings": [
-      "Gözlemlerin çoğunda kaynak güncelleme tarihi bugünden eski veya bilinmiyor."
-    ]
+    "matched_slots": 1513,
+    "missing_slots": 33,
+    "new_slots": 42,
+    "large_price_moves": [
+      {
+        "slot_id": "id:0XAH",
+        "title": "Coca-Cola Gazlı İçecek Kola Zero 1.5 Lt",
+        "change_pct": 77.42
+      },
+      {
+        "slot_id": "id:0ZI9",
+        "title": "Coca-Cola Kola Gazlı İçecek 6x250 Ml",
+        "change_pct": 77.42
+      },
+      {
+        "slot_id": "id:1NF1",
+        "title": "Nivea Kadın Deodorant Çeşitleri 150 Ml",
+        "change_pct": -55.52
+      },
+      {
+        "slot_id": "id:20O6",
+        "title": "Signal Ergonomik Diş Fırçası 2 Adet",
+        "change_pct": -52.45
+      },
+      {
+        "slot_id": "id:1UHP",
+        "title": "Rexona Kadın Deodorant 150 Ml",
+        "change_pct": -50.17
+      },
+      {
+        "slot_id": "id:11TH",
+        "title": "Signal Nazik Diş Eti Bakımı Diş Fırçası 2 Adet",
+        "change_pct": -50.01
+      },
+      {
+        "slot_id": "id:03LZ",
+        "title": "Le Petit Marseillais Şeftali Sıvı Sabun 500 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:0UDI",
+        "title": "Protex Cream Sıvı Sabun 300 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:1ZAG",
+        "title": "Duru Sıvı Sabun Kiraz Çiçeği 500 Ml",
+        "change_pct": -50.0
+      },
+      {
+        "slot_id": "id:160O",
+        "title": "Master Potato Soğanlı Ekşi Kremalı Cips 60 Gr",
+        "change_pct": 49.88
+      },
+      {
+        "slot_id": "id:1ISZ",
+        "title": "Emotion Deodorant 150 Ml",
+        "change_pct": -48.98
+      },
+      {
+        "slot_id": "id:1SVD",
+        "title": "Blade Deodorant 150 Ml",
+        "change_pct": -48.98
+      },
+      {
+        "slot_id": "id:0FT5",
+        "title": "Signal Clean Action Diş Fırçası 4 Adet",
+        "change_pct": -40.6
+      },
+      {
+        "slot_id": "id:20BV",
+        "title": "Kahve Dünyası Tambol Fındıklı Sütlü Çikolata 77 Gr",
+        "change_pct": -36.61
+      },
+      {
+        "slot_id": "id:1Z5K",
+        "title": "Torku Kakaolu Tahin Helvası 200 Gr",
+        "change_pct": -35.1
+      },
+      {
+        "slot_id": "id:0INV",
+        "title": "Signal Performans Siyah Orta Diş Fırçası 2 Adet",
+        "change_pct": -34.31
+      },
+      {
+        "slot_id": "id:21DO",
+        "title": "Axe Erkek Deodorant 150 Ml",
+        "change_pct": -29.4
+      },
+      {
+        "slot_id": "id:039I",
+        "title": "Duru Okyanus Tazeliği Sıvı Sabun 1.5 Lt",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:04MF",
+        "title": "Dove Nemlendirici Sıvı Sabun 450 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1KWR",
+        "title": "Activex Hassas Sıvı Sabun 500 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1MLC",
+        "title": "Dove Pink Cream Bar Sabun 90 Gr",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:1ZG8",
+        "title": "Dalan D'Olive Zeytinyağlı Besleyici Sıvı Sabun 400 Ml",
+        "change_pct": -29.29
+      },
+      {
+        "slot_id": "id:056A",
+        "title": "Taze Bütün Poşet Piliç 1 Kg",
+        "change_pct": -26.67
+      },
+      {
+        "slot_id": "id:0OQ4",
+        "title": "Migros Oluklu Bulaşık Süngeri 5 Adet",
+        "change_pct": 26.35
+      },
+      {
+        "slot_id": "id:02JP",
+        "title": "Limon Taze 1 Kg",
+        "change_pct": -25.03
+      },
+      {
+        "slot_id": "id:20TK",
+        "title": "Bee'o Yayla Çiçek Balı Ham Bal 300 Gr",
+        "change_pct": -25.0
+      },
+      {
+        "slot_id": "id:0VFU",
+        "title": "Fairy Mucize Bulaşık Makinesi Tableti 50 Adet",
+        "change_pct": 24.95
+      },
+      {
+        "slot_id": "id:01P5",
+        "title": "Süsse Finger Bisküvi 450 Gr",
+        "change_pct": 24.29
+      },
+      {
+        "slot_id": "id:1ODU",
+        "title": "Head & Shoulders Şampuan 330 Ml",
+        "change_pct": -24.1
+      },
+      {
+        "slot_id": "id:1J2Q",
+        "title": "Dondurulmuş Piliç Kasap Köfte 1 Kg",
+        "change_pct": -23.92
+      },
+      {
+        "slot_id": "id:0I4Y",
+        "title": "Portakal Sıkmalık 1 Kg",
+        "change_pct": -21.44
+      },
+      {
+        "slot_id": "id:2B4A",
+        "title": "Master Potato Patates Cipsi 160 Gr",
+        "change_pct": -20.8
+      },
+      {
+        "slot_id": "id:0TCX",
+        "title": "Dove Fresh Touch Cream Bar Sabun 90 Gr",
+        "change_pct": -20.63
+      },
+      {
+        "slot_id": "id:1Z23",
+        "title": "Dove Original Cream Bar Sabun 90 Gr",
+        "change_pct": -20.63
+      },
+      {
+        "slot_id": "id:0PTQ",
+        "title": "Arpacık Soğan 1 Kg",
+        "change_pct": 20.01
+      }
+    ],
+    "warnings": []
   }
 ]
